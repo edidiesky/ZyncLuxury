@@ -18,7 +18,7 @@ const MainContent = () => {
   return (
     <div
       data-scroll-section
-      className="w-full overflow-hidden flex flex-col gap-2"
+      className="w-full overflow-hidden flex flex-col"
     >
       <Hero />
       <Listing />
