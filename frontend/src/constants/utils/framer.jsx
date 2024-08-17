@@ -22,7 +22,7 @@ export const smallslideup2 = {
   animate: (i) => ({
     opacity: 1,
     y: "0",
-    transition: { duration: 0.6, delay: i * 0.2 },
+    transition: { duration: 0.6, delay: i * 0.4 },
   }),
   exit: {
     opacity: 0,

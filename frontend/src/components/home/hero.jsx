@@ -137,7 +137,7 @@ const Hero = () => {
             <Popover>
               <PopoverTrigger>
                 <div className="w-full flex lg:flex-row lg:items-center gap-3">
-                  <span className="pr-3 lg:pr-8 border-r">
+                  <span className="pr-3 lg:pr-8 border-r flex flex-col gap-4">
                     <span
                       style={{ letterSpacing: "4px" }}
                       className="text-[10px] lg:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
@@ -148,7 +148,7 @@ const Hero = () => {
                     <div className="flex items-center gap-2">
                       <span
                         style={{ letterSpacing: "4px" }}
-                        className="text-3xl pt-3 lg:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
+                        className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
                       >
                         {moment(startdate)?.date()}
                       </span>
@@ -161,7 +161,7 @@ const Hero = () => {
                       </span>
                     </div>
                   </span>
-                  <span className="px-4 lg:px-8 border-r">
+                  <span className="px-4 lg:px-8 border-r flex flex-col gap-4">
                     <span
                       style={{ letterSpacing: "4px" }}
                       className="text-[10px] lg:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
@@ -172,7 +172,7 @@ const Hero = () => {
                     <div className="flex items-center gap-2">
                       <span
                         style={{ letterSpacing: "4px" }}
-                        className="text-3xl pt-3 lg:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
+                        className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
                       >
                         {moment(enddate)?.date()}
                       </span>
@@ -210,7 +210,7 @@ const Hero = () => {
                 <div className="flex pt-1 items-center gap-2">
                   <span
                     style={{ letterSpacing: "4px" }}
-                    className="text-3xl pt-3 lg:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
+                    className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
                   >
                     {guests}
                   </span>
@@ -236,7 +236,7 @@ const Hero = () => {
                   </span>
                 </div>
               </span>
-              <button className="btn text-white family1 font-bold px-6 text-sm lg:text-lg lg:px-12 py-4 lg:py-6">
+              <button className="btn text-white family1 font-bold px-6 text-sm lg:text-base lg:px-12 py-4 lg:py-6">
                 Search for Homes
               </button>
             </div>

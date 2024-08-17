@@ -142,7 +142,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  line-height: 1.4;
+  line-height: 1.6;
   color: var(--dark-1);
   font-family: "Mulish";
 }
@@ -195,6 +195,12 @@ input::placeholder {
   transition: all 0.5s;
   color: var(--dark-1) !important;
   background-color: #fff !important;
+}
+
+.btn.btn_3 {
+  transition: all 0.5s;
+  background-color: var(--grey-1) !important;
+  color: #fff !important;
 }
 
 .btn.btn_2:hover {
