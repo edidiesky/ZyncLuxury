@@ -66,6 +66,9 @@
   }
 }
 
+a.active {
+  color: var(--grey-1) !important;
+}
 @layer base {
   * {
     @apply border-border;
@@ -77,7 +80,7 @@
 }
 
 .ql-container {
-  font-family: "Work Sans", sans-serif !important;
+  font-family: "Mulish", sans-serif !important;
 }
 
 * {
@@ -90,9 +93,10 @@
 }
 
 @font-face {
-  font-family: "playfair";
-  src: url("./assets/fonts/playfair.ttf") format("truetype");
+  font-family: "Bold";
+  src: url("./assets/fonts/bold.ttf") format("truetype");
 }
+
 
 *,
 *::after,
@@ -114,17 +118,23 @@ button:disabled {
 }
 
 :root {
-  --grey-1: #eae5df;
-  --dark-1: #000000;
+  --grey-1: #4f578d;
+  --dark-1: #22253d;
   --primary: #f73760;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
-  --green-1: #00383c;
-  --red: rgb(255, 56, 92);
+  --red: #f73760;
 }
 
 .text-grey {
   color: rgb(141, 141, 141) !important;
+}
+.family1 {
+  font-family: "Mulish";
+}
+
+.family2 {
+  font-family: "Bold";
 }
 
 body {
@@ -133,7 +143,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   line-height: 1.4;
-  font-family: Work Sans, Arial, Helvetica, sans-serif;
+  color: var(--dark-1);
+  font-family: "Mulish";
 }
 
 .hide {
@@ -143,14 +154,14 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Work Sans";
+  font-family: "Mulish";
   border-radius: 10px;
 }
 
 input {
   border: none;
   outline: none;
-  font-family: "Work Sans";
+  font-family: "Mulish";
 }
 
 input::placeholder {
@@ -165,27 +176,32 @@ input::placeholder {
   height: 45px;
   padding: 0 1rem;
   border-radius: 10px;
-  font-family: "Work Sans";
+  font-family: "Mulish";
 }
 
 .btn {
   transition: all 0.5s;
-  background: var(--green-1) !important;
+  background: var(--primary) !important;
   cursor: pointer;
+  border-radius: 40px !important;
   /* font-family: "Bebas Neue", sans-serif; */
 }
-
 .btn:hover {
-  opacity: 0.7;
+  background: var(--grey-1) !important;
+  
 }
 
 .btn.btn_2 {
   transition: all 0.5s;
-  background-color: var(--green-1) !important;
+  color: var(--dark-1) !important;
+  background-color: #fff !important;
 }
 
 .btn.btn_2:hover {
-  opacity: 0.6;
+   background: var(--primary) !important;
+  color:#fff!important;
+
+
 }
 
 .hide {
@@ -218,7 +234,7 @@ html.lenis body {
 #reactSchedulerOutsideWrapper *,
 #reactSchedulerOutsideWrapper ::before,
 #reactSchedulerOutsideWrapper ::after {
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
 }
 
 .sc-iuOPfm.eiWmqu {
@@ -228,12 +244,12 @@ html.lenis body {
 }
 
 .sc-gjLKRp.gqsWwT {
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
   font-weight: 600;
 }
 
 .sc-cCzKKE.bwVOYM {
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
   /* font-weight: normal !important; */
   font-size: 12px !important;
 }
@@ -249,7 +265,7 @@ html.lenis body {
 }
 
 .sc-gjLKRp.eAzhgx {
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
   font-size: 12px !important;
 }
 
@@ -297,7 +313,7 @@ html.lenis body {
 
 .sc-cCzKKE.bwVOYM {
   display: block !important;
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
 }
 
 .sc-cCzKKE.fOgBaC::after {
@@ -310,7 +326,7 @@ html.lenis body {
 
 .sc-cCzKKE.dxSqfu {
   display: block !important;
-  font-family: "Work Sans" !important;
+  font-family: "Mulish" !important;
 }
 
 .sc-cCzKKE.dxSqfw::after {
@@ -370,7 +386,7 @@ html.lenis body {
 
 .sc-csKIKE.bnXJxV:hover,
 .sc-csKIKE.eDuCga:hover {
-  background-color: var(--green-1) !important;
+  background-color: var(--primary) !important;
   color: #fff;
 }
 

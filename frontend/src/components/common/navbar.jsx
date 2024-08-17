@@ -13,7 +13,7 @@ const linkData = [
     path: "",
   },
   {
-    title: "Search",
+    title: "Our Lisitings",
     path: "search",
   },
   {
@@ -24,10 +24,11 @@ const linkData = [
     title: "My Trips",
     path: "trips",
   },
-  // {
-  //   title: "About & FAQ",
-  //   path: "about",
-  // },
+
+  {
+    title: "Contact",
+    path: "trips",
+  },
 ];
 
 const Navbar = () => {

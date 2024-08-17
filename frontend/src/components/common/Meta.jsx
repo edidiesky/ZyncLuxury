@@ -12,7 +12,7 @@ export default function Meta({ title, keyword, description }) {
 }
 
 Meta.defaultProps = {
-  title: "Zyra&Stones - Home of Afforadble and durable homes",
+  title: "ZyncLuxury - Home of Afforadble and durable homes",
   description: "We offer qualtiy Homes",
   keyword: "Homes, buy quality Homes, rare ones",
 };

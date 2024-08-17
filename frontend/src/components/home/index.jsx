@@ -6,12 +6,12 @@ import Newsletter from "../common/Newsletter";
 const HomeIndex = () => {
   return (
     <div className="bg-[var(--light-grey)] w-full flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="w-full flex relative gap-4">
         <MainContent />
       </div>
-      <Newsletter/>
-      <Footer/>
+      {/* <Newsletter/>
+      <Footer/> */}
     </div>
   );
 };

@@ -1,12 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import moment from "moment";
-import { addDays } from "date-fns";
+
 import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../../common/RoomCard";
@@ -15,189 +8,30 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { slideup, clipPathLeft, smallslideup2 } from "@/constants/utils/framer";
 import AnimateText from "@/animations/AnimateText";
 import { Link } from "react-router-dom";
+import Hero from "../hero";
+import Listing from "../Listing";
+import About from "../About";
+import RecentListing from "../RecentListing";
+import Expert from "../Expert";
+import Choice from "../Choice";
 const MainContent = () => {
-  return (
-    <div data-scroll-section className="w-full overflow-hidden flex flex-col gap-2">
-      <Hero />
-      <RoomFlex />
-      {/* <About /> */}
-      <Collections />
-      {/* <RoomsPrice /> */}
-      <RoomStructure />
-      <RoomsBanner />
-    </div>
-  );
-};
-
-const Hero = () => {
-  const today = new Date();
-  const [guests, setGuests] = React.useState(2);
-  const [date, setDate] = React.useState({
-    from: today,
-    to: addDays(today, 3),
-  });
-  const startdate = date?.from;
-  const enddate = date?.to;
-  let date1 = moment(startdate);
-  let date2 = moment(enddate);
-  const differenceInDays = date2?.diff(date1, "days"); // Convert milliseconds to days
-  // console.log(moment(startdate)?.date());
-
   return (
     <div
       data-scroll-section
-      className="w-full min-h-[100vh] py-32 relative flex items-center justify-center
-   gap-8"
+      className="w-full overflow-hidden flex flex-col gap-2"
     >
-      <div className="w-full h-full z-30 bg-[rgba(0,0,0,.5)] absolute top-0 left-0"></div>
-      <img
-        src="/images/hazel_1.jpeg"
-        alt=""
-        className="absolute z-10 object-cover top-0 left-0 h-full w-full"
-      />
-      <div
-        className="w-[95%] md:w-full z-40 flex items-center justify-center flex-col
-       gap-4"
-      >
-        <h1 className="text-white text-center leading-[1.1] md:leading-[1.3] text-5xl md:text-7xl font-booking_font4 font-bold font-bold">
-          <span
-            style={{ letterSpacing: "3px" }}
-            className="text-[10px] md:text-xs pb-12 font-semibold uppercase block font-booking_font"
-          >
-            Luxury Home & Best Resort
-          </span>
-          Enjoy A Luxury <br /> Experience
-        </h1>
-        <div className="w-full items-center justify-center flex">
-          <Link
-            to={"/search"}
-            style={{ letterSpacing: "4px" }}
-            className="btn btn_2 text-xs font-bold text-white uppercase px-12 py-6"
-          >
-            <AnimateText children={"Book & Flex"} />
-          </Link>
-        </div>
-
-        <div className="w-full py-4 lg:flex-row flex-col items-center justify-center flex">
-          <div className="w-full lg:w-[700px] py-8  min-h-[160px] bg-white flex items-center justify-center">
-            <Popover>
-              <PopoverTrigger>
-                <div className="w-full flex items-center gap-3">
-                  <span className="pr-3 md:pr-8 border-r">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[8px] md:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-                    >
-                      CHECK IN
-                    </span>
-
-                    <div className="flex items-center gap-2">
-                      <span
-                        style={{ letterSpacing: "4px" }}
-                        className="text-3xl pt-3 md:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                      >
-                        {moment(startdate)?.date()}
-                      </span>
-                      <span
-                        style={{ letterSpacing: "4px" }}
-                        className="text-[8px] md:text-xs uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                      >
-                        {moment(startdate).format("MMM").toUpperCase()}
-                        <BiChevronDown fontSize={"24px"} />
-                      </span>
-                    </div>
-                  </span>
-                  <span className="px-4 md:px-8 border-r">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[8px] md:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-                    >
-                      CHECK OUT
-                    </span>
-
-                    <div className="flex items-center gap-2">
-                      <span
-                        style={{ letterSpacing: "4px" }}
-                        className="text-3xl pt-3 md:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                      >
-                        {moment(enddate)?.date()}
-                      </span>
-                      <span
-                        style={{ letterSpacing: "4px" }}
-                        className="text-[8px] md:text-xs uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                      >
-                        {moment(enddate).format("MMM").toUpperCase()}
-                        <BiChevronDown fontSize={"24px"} />
-                      </span>
-                    </div>
-                  </span>
-                </div>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
-                  initialFocus
-                  mode="range"
-                  defaultMonth={date?.from}
-                  selected={date}
-                  onSelect={setDate}
-                  numberOfMonths={2}
-                />
-              </PopoverContent>
-            </Popover>
-            <span className="px-4 md:px-8">
-              <span
-                style={{ letterSpacing: "4px" }}
-                className="text-[8px] md:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-              >
-                Guests
-              </span>
-
-              <div className="flex pt-1 items-center gap-2">
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-3xl pt-3 md:text-6xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                >
-                  {guests}
-                </span>
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-[8px] uppercase leading-[1.5] flex flex-col gap-[4px] text-dark font-normal"
-                >
-                  <button
-                    disabled={guests === 1}
-                    onClick={() => setGuests(guests - 1)}
-                    className="w-8 hover:bg-[#eee] rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiChevronDown fontSize={"16px"} />
-                  </button>
-                  <button
-                    disabled={guests === 4}
-                    onClick={() => setGuests(guests + 1)}
-                    className="w-8 hover:bg-[#eee] rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiChevronUp fontSize={"16px"} />
-                  </button>
-                  {/* <BiChevronUp fontSize={"16px"} /> */}
-                </span>
-              </div>
-            </span>
-          </div>
-          <div
-            style={{ transition: "all .6s" }}
-            className="w-full lg:w-[250px] hover:opacity-[.8] cursor-pointer bg-[var(--dark-1)] min-h-[100px] md:min-h-[160px] flex items-center justify-center"
-          >
-            <h5
-              style={{ letterSpacing: "5px" }}
-              className="text-[10px] md:text-base uppercase leading-[1.5] text-center text-white font-semibold"
-            >
-              <AnimateText children={"Search"} />
-            </h5>
-          </div>
-        </div>
-      </div>
+      <Hero />
+      <Listing />
+      <About />
+      <RecentListing />
+      <Expert/>
+      <Choice/>
+    
     </div>
   );
 };
+
+
 
 const RoomFlex = () => {
   const RoomFlex_text_ref_1 = useRef(null);

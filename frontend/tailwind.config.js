@@ -20,22 +20,12 @@ module.exports = {
       gridTemplateColumns: {
         // Simple 16 column grid
         custom: "1fr auto",
-        custom_5: "1fr auto",
-        custom_2: "30% 1fr",
-        custom_6: "1fr 45%",
-        custom_4: "auto 1fr",
-        custom_3: "15% 1fr",
+        custom_2: "auto 1fr",
       },
       maxWidth: {
         custom: "1204px",
         custom_1: "1204px",
         custom_2: "1304px",
-      },
-      fontFamily: {
-        booking_font: ["Work Sans", "sans-serif"],
-        booking_font_bold: ["Work Sans", "sans-serif"],
-        booking_font_normal: ["Work Sans", "sans-serif"],
-        booking_font4: ["Montserrat", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
