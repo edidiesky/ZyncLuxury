@@ -23,7 +23,7 @@ const Listing = () => {
               Passionate – Dedicated – Professional
             </h4>
             <h4 className="text-4xl md:text-5xl family2 text-[var(--dark-1)]">
-              Our Recent Listings
+              Our New Listings
             </h4>
           </div>
           <div className="flex lg:items-center justify-end">

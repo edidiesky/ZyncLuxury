@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { DeleteReservation } from "@/features/reservation/reservationReducer";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
+import Image from "./Image";
 
 const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
   const [tabindex, setTabIndex] = useState(0);
@@ -338,7 +339,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               }}
               className="w-full h-full relative"
             >
-              <img
+              <Image
                 src={apartment?.images[0]}
                 className="w-full z-10 h-[100%] relative object-cover"
               />
@@ -355,7 +356,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               }}
               className="w-full z-[30] h-full absolute top-0"
             >
-              <img
+              <Image
                 src={apartment?.images[1]}
                 className="w-full z-10 h-[100%] relative object-cover"
               />
@@ -363,17 +364,17 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col bg-[#f4f5fa] p-6 gap-2">
-          <h3 className="text-2xl md:text-3xl family2 w-full">
+        <div className="w-full flex flex-col justify-center p-6">
+          <h3 className="text-2xl md:text-3xl text-center family2 w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
-          <div className="flex mt-6 w-full items-center justify-between gap-4">
-            <div className="flex flex-col">
+          <div className="flex mt-4 w-full items-center justify-center gap-4">
+            {/* <div className="flex flex-col">
               <p className="text-base font-semibold text-grey family1">from</p>
               <p className="text-2xl font-bold family1">₦{apartment?.price}</p>
-            </div>
-            <div className="btn px-8 py-4 family1 font-bold text-white text-sm">
+            </div> */}
+            <div className="btn px-8 py-4 family1 font-bold text-white text-base">
               Book Now
             </div>
           </div>
