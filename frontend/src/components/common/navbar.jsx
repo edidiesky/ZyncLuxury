@@ -13,7 +13,7 @@ const linkData = [
     path: "",
   },
   {
-    title: "Our Lisitings",
+    title: "Our Listings",
     path: "search",
   },
   {

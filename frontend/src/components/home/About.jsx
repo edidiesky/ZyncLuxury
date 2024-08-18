@@ -70,7 +70,7 @@ const About = () => {
               </span>
             </div>
           </div>
-          <div className="w-full grid grid-cols-3 gap-y-16 gap-x-12">
+          <div className="w-full grid md:grid-cols-3 gap-y-16 gap-x-12">
             {whychooseList?.map((data, index) => {
               return (
                 <div className="w-full cursor-pointer flex flex-col">

@@ -17,7 +17,7 @@ const RecentListing = () => {
   return (
     <div data-scroll-section className="w-full flex py-32 flex-col">
       <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-20">
-        <div className="grid lg:grid-cols-2 items-start md:items-center w-full">
+        <div className="grid lg:grid-cols-2 gap-8 items-start md:items-center w-full">
           <div className="flex flex-col gap-4">
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
@@ -26,7 +26,7 @@ const RecentListing = () => {
               Our Recent Listings
             </h4>
           </div>
-          <div className="flex lg:items-center justify-end">
+          <div className="flex lg:items-center md:justify-end">
             <button className="btn btn_3 px-8 py-4 text-base md:text-lg family1 text-dark font-bold">
               Browse all Homes
             </button>

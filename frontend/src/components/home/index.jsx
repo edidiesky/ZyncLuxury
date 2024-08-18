@@ -10,6 +10,7 @@ const HomeIndex = () => {
       <div className="w-full flex relative gap-4">
         <MainContent />
       </div>
+      <Footer />
       {/* <Newsletter/>
       <Footer/> */}
     </div>

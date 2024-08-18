@@ -25,7 +25,7 @@ const MainContent = () => {
       <About />
       <RecentListing />
       <Expert/>
-      <Choice/>
+      {/* <Choice/> */}
     
     </div>
   );

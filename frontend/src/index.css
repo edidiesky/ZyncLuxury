@@ -200,11 +200,16 @@ input::placeholder {
 }
 
 .input {
-  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   height: 45px;
-  padding: 0 1rem;
-  border-radius: 10px;
+  padding: 0 1.8rem;
   font-family: "Mulish";
+  transition: all 0.4s;
+}
+
+.input:hover,
+.input:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8) !important;
 }
 
 .btn {
@@ -226,7 +231,7 @@ input::placeholder {
 
 .btn.btn_3 {
   transition: all 0.5s;
-  background-color: var(--grey-1) !important;
+  background-color: rgba(41, 45, 72, 0.894) !important;
   color: #fff !important;
 }
 
