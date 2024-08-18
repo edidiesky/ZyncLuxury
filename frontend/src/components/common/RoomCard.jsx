@@ -102,192 +102,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       </Link>
     );
   }
-  if (type === "Search") {
-    return (
-      <Link
-        onMouseEnter={() => {
-          setMousePosition({
-            active: true,
-            index: index,
-          });
-        }}
-        onMouseLeave={() =>
-          setMousePosition({
-            active: false,
-          })
-        }
-        to={`/room/${apartment?.id}`}
-        className="w-full flex flex-col gap-4"
-      >
-        <div className="w-full h-[440px] overflow-hidden relative">
-          {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
-          <Link
-            to={"#"}
-            onClick={() => handleFavouriteRooms()}
-            className="absolute z-[50] top-[10%] left-[5%]"
-          >
-            <Heart active={active} />
-          </Link>
-          <motion.div
-            initial="initial"
-            whileHover={"hover"}
-            className="w-full h-full relative"
-          >
-            <motion.div
-              variants={{
-                initial: { opacity: 1 },
-                hover: { opacity: 0 },
-              }}
-              transition={{
-                delay: 0.025,
-                duration: 0.25,
-                ease: "easeInOut",
-              }}
-              className="w-full h-full relative"
-            >
-              <img
-                src={apartment?.images[0]}
-                className="w-full z-10 h-[100%] relative object-cover"
-              />
-            </motion.div>
-            <motion.div
-              variants={{
-                initial: { opacity: 0 },
-                hover: { opacity: 1 },
-              }}
-              transition={{
-                delay: 0.035,
-                duration: 0.25,
-                ease: "easeInOut",
-              }}
-              className="w-full z-[30] h-full absolute top-0"
-            >
-              <img
-                src={apartment?.images[1]}
-                className="w-full z-10 h-[100%] relative object-cover"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-
-        <div className="w-full flex flex-col py-4 gap-2">
-          <h3 className="text-4xl md:text-5xl family2 w-full text-center text-text_dark_1 ">
-            {apartment?.subtitle}
-            {/* Amazon */}
-          </h3>
-          <p className="text-center max-w-[500px] text-grey mx-auto text-base font-normal">
-            Sleep {apartment?.guests} adults - Includes {apartment?.bedroom}{" "}
-            bedroom
-          </p>
-        </div>
-      </Link>
-    );
-  }
-  // return (
-  //   <motion.div
-  //     variants={smallslideup2}
-  //     custom={index}
-  //     initial="initial"
-  //     key={index}
-  //     className="w-full"
-  //     animate={inView ? "animate" : "exit"}
-  //   >
-  //     <Link
-  //       to={`/room/${apartment?.id}`}
-  //       className="w-full flex flex-col gap-8"
-  //     >
-  //       <div className="w-full h-[270px] overflow-hidden relative">
-  //         <div className="w-full h-full absolute bg-[rgba(0,0,0,.4)] z-[30]"></div>
-  //         <div className="w-full absolute justify-end h-full flex-col gap-1 flex items-start p-6 pb-8 px-8 z-[40]">
-  //           <h3 className="text-2xl font-normal text-white font-booking_font4">
-  //             {apartment?.title}
-  //           </h3>
-  //           <span className="flex items-center gap-4">
-  //             <span className="flex text-white gap-3 items-center text-sm font-normal uppercase">
-  //               <FaRegUserCircle fontSize={"20px"} />
-  //               {apartment?.guests} Guests
-  //             </span>
-  //             <span className="flex text-white gap-3 items-center text-sm font-normal uppercase">
-  //               <FaWifi fontSize={"20px"} /> Free Wifi
-  //             </span>
-  //           </span>
-  //         </div>
-  //         <Link
-  //           to={"#"}
-  //           onClick={handleFavouriteRooms}
-  //           className="absolute z-[59] top-[10%] left-[5%]"
-  //         >
-  //           <Heart active={active} />
-  //         </Link>
-  //         <div className="h-full z-[40] absolute left-0 w-[80px] flex items-center justify-center">
-  //           <Link
-  //             to={"#"}
-  //             onClick={() => handleImagePosition("left")}
-  //             className="w-12 h-12 text-lg bg-[#00000013] hover:bg-[#00000072] hover:scale-[1.09] cursor-pointer text-white flex items-center justify-center z-[40]"
-  //           >
-  //             <BiChevronLeft fontSize={"30px"} />
-  //           </Link>
-  //         </div>
-  //         <div className="h-full z-[40] absolute right-0 w-[80px] flex items-center justify-center">
-  //           <Link
-  //             to={"#"}
-  //             onClick={() => handleImagePosition("right")}
-  //             className="w-12 h-12 text-lg bg-[#00000013] hover:bg-[#00000072] hover:scale-[1.09] cursor-pointer text-white flex items-center justify-center"
-  //           >
-  //             <BiChevronRight fontSize={"30px"} />
-  //           </Link>
-  //         </div>
-  //         <div
-  //           style={{ gridTemplateColumns: "repeat(4, 100%)" }}
-  //           className="w-full h-full absolute top-0 left-0 overflow-hidden grid"
-  //         >
-  //           {apartment.images.map((image, index) => {
-  //             return (
-  //               <div
-  //                 style={{
-  //                   transform: `translateX(-${tabindex * 100}%)`,
-  //                   transition: "all .4s ease",
-  //                 }}
-  //                 key={index}
-  //                 className="w-full h-full"
-  //               >
-  //                 <img
-  //                   key={index}
-  //                   style={{
-  //                     transition:
-  //                       "filter 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-  //                   }}
-  //                   //   blurDataURL={image}
-  //                   src={image}
-  //                   className="w-full z-10 h-[100%] object-cover hover:grayscale-[1] grayscale-0"
-  //                 />
-  //               </div>
-  //             );
-  //           })}
-  //         </div>
-  //         <div className="absolute z-[40] left-0 bottom-[5%] w-full flex items-center justify-center">
-  //           <div className="w-full flex items-center justify-center gap-1">
-  //             {Array(apartment?.images?.length)
-  //               .fill("")
-  //               .map((tab, index) => {
-  //                 const active = tabindex === index;
-  //                 return (
-  //                   <span
-  //                     key={index}
-  //                     className={`w-[7px] ${
-  //                       active ? "bg-[#fff]" : "bg-[#7b797972]"
-  //                     }  h-[7px] cursor-pointer hover:scale-[1.09] rounded-full`}
-  //                   ></span>
-  //                 );
-  //               })}
-  //           </div>
-  //         </div>
-  //         {/* <img src= alt="" /> */}
-  //       </div>
-  //     </Link>
-  //   </motion.div>
-  // );
 
   return (
     <motion.div
@@ -298,21 +113,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       custom={index}
     >
       <Link
-        // onMouseEnter={() => {
-        //   setMousePosition({
-        //     active: true,
-        //     index: index,
-        //   });
-        // }}
-        // onMouseLeave={() =>
-        //   setMousePosition({
-        //     active: false,
-        //   })
-        // }
+    
         to={`/room/${apartment?.id}`}
         className="w-full flex flex-col"
       >
-        <div className="w-full h-[400px] overflow-hidden relative">
+        <div className="w-full h-[260px] overflow-hidden relative">
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
           <Link
@@ -364,17 +169,19 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col justify-center p-6">
-          <h3 className="text-2xl md:text-3xl text-center family2 w-full">
+        <div className="w-full flex flex-col border rounded-b-xl p-6">
+          <h3 className="text-2xl md:text-3xl family2 w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
-          <div className="flex mt-4 w-full items-center justify-center gap-4">
-            {/* <div className="flex flex-col">
-              <p className="text-base font-semibold text-grey family1">from</p>
-              <p className="text-2xl font-bold family1">₦{apartment?.price}</p>
-            </div> */}
-            <div className="btn px-8 py-4 family1 font-bold text-white text-base">
+          <div className="flex mt-4 justify-between w-full items-center  gap-4">
+            <div className="flex itec flex-col">
+              {/* <p className="text-base font-semibold text-grey family1">from</p> */}
+              <p className="text-2xl font-bold family1">
+                ₦{apartment?.price} <span className="text-sm font-normal">/night</span>
+              </p>
+            </div>
+            <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
               Book Now
             </div>
           </div>
