@@ -5,8 +5,12 @@ import RoomGallery from "./RoomGallery";
 import RoomTitleAndDescription from "./RoomTitleAndDescription";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { useSelector } from "react-redux";
+import { FaShower } from "react-icons/fa";
 import RoomFeatures from "./RoomFeatures";
 import RoomPaymentTab from "./RoomPaymentTab";
+import { Bed, Bookmark } from "lucide-react";
+import { BsThreeDots } from "react-icons/bs";
+import { LiaChartAreaSolid } from "react-icons/lia";
 const RoomLists = () => {
   const [datemodal, setDateModal] = useState(false);
   const [guestsmodal, setGuestsModal] = useState(false);
@@ -30,77 +34,75 @@ const RoomLists = () => {
   return (
     <>
       <div
-        className="w-full relative py-12 md:py-24 border-b flex items-center justify-center
+        className="w-full relative py-12 border-b flex items-center justify-center
    gap-8"
       >
         <div
-          className="w-[90%] relative mx-auto max-w-custom_1 z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
-       gap-12"
+          className="w-[95%] relative mx-auto max-w-custom z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
+       gap-8"
         >
           <div className="w-full">
-            <div className="flex flex-col gap-6 w-full">
-              {/* room title */}
-              <h3 className="text-5xl font-booking_font4 font-bold">
-                {room?.title}
-
-                <span className="text-base text-dark font-normal font-booking_font_bold flex items-center gap-3">
-                  Room, London{" "}
-                  <span className="flex items-center gap-1">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </span>
-                </span>
-              </h3>
-              {/* room image */}
+            <div className="flex flex-col gap-12 w-full">
               <RoomGallery room={room} />
-              {/* room basic features */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 md:items-center gap-8">
-                <div className="flex flex-col items-center justify-center gap-1 text-sm font-booking_font4 text-dark">
-                  <img
-                    src="https://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/plugins/nd-booking/templates/icon-bed-grey.svg"
-                    alt=""
-                    className="w-12"
-                  />
-                  <div className="flex items-center gap-3">
-                    <span className="text-base">
-                      {" "}
-                      ₦ {Number(room?.price).toLocaleString()}{" "}
+              {/* room title */}
+              <div className="flex md:items-center justify-between gap-4">
+                <h3 className="text-4xl w-full family1 font-bold">
+                  {room?.title}
+
+                  <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
+                    Room, London{" "}
+                    <span className="flex items-center gap-1">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
                     </span>
-                    <span className="font-booking_font text-xs">
-                      {" "}
-                      / PER NIGHT
-                    </span>
+                  </span>
+                </h3>
+                <div className="flex items-center justify-end gap-4">
+                  <div className="w-14 h-14 bg-[#f4f5fa] flex text-3xl items-center rounded-full text-dark justify-center">
+                    <Bookmark />
+                  </div>
+                  <div className="w-14 h-14 bg-[#f4f5fa] flex text-xl items-center rounded-full text-dark justify-center">
+                    <BsThreeDots />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-2 text-sm font-booking_font4 text-dark">
-                  <img
-                    src="https://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/plugins/nd-booking/templates/icon-user-grey.svg"
-                    alt=""
-                    className="w-10"
-                  />
-                  {room?.guests} GUESTS
-                </div>
+              </div>
+              {/* room image */}
 
-                <div className="flex flex-col items-center justify-center gap-2 uppercase text-sm font-booking_font4 text-dark">
-                  <img
-                    src="https://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/television.png"
-                    alt=""
-                    className="w-10"
-                  />
-                  PS5 Console
+              {/* room basic features */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
+                <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                  <span className="text-lg font-bold">Bedroom</span>
+                  <div className="flex items-center gap-4">
+                    <span className="text-base">{room?.bedroom} </span>
+                    <Bed fontSize={"32px"} />
+                  </div>
                 </div>
+                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                  <span className="text-lg font-bold">Bathroom</span>
+                  <div className="flex items-center gap-4">
+                    <span className="text-base">{room?.bathroom} </span>
+                    <FaShower fontSize={"30px"} />
+                  </div>
+                </div>
+                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                  <span className="text-lg font-bold">Bedroom</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-base">1220 sq.ft </span>
 
-                <div className="flex flex-col items-center justify-center uppercase gap-1 text-sm font-booking_font4 text-dark">
-                  <img
-                    src="https://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/private-bathroom.png"
-                    alt=""
-                    className="w-12"
-                  />
-                  1 Bathroom
+                    <LiaChartAreaSolid fontSize={"30px"} />
+                  </div>
                 </div>
+                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                  <Bed />
+                  <div className="flex items-center gap-3">
+                    <span className="text-base">{room?.bedroom} </span>
+                    <span className="text-lg font-bold">Bedroom</span>
+                  </div>
+                </div>
+               
               </div>
 
               {/* room description */}

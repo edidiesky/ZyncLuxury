@@ -113,7 +113,7 @@ export default function RoomPaymentTab({
 
   return (
     <div className="w-[100%] lg:sticky top-[10%] flex flex-col gap-8">
-      <div className="w-full py-8 flex flex-col items-center gap-4 justify-center md:w-[400px] bg-[#1C1C1C]">
+      <div className="w-full py-8 flex flex-col items-center gap-4 justify-center md:w-[360px] bg-[#f4f5fa]">
         <div className="w-[90%] mx-auto grid grid-cols-1 gap-4">
           <Popover>
             <PopoverTrigger>
@@ -233,7 +233,7 @@ export default function RoomPaymentTab({
                 Caution Fees
               </span>
               <span>
-                <span className="text-lg">₦</span>  {room?.cautionfee}
+                <span className="text-lg">₦</span> {room?.cautionfee}
               </span>
             </div>
             {/* total */}

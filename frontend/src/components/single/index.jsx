@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Hero from "./Hero";
 import RoomLists from "./RoomLists";
 import RecommendedList from "./RecommendedList";
 import Navbar from "../common/navbar";
@@ -26,7 +25,6 @@ export default function BookingItem() {
   return (
     <div>
       <Navbar />
-      <Hero />
       <RoomLists />
       <RecommendedList roomid={id} />
       <Footer />
