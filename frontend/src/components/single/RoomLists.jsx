@@ -37,117 +37,123 @@ const RoomLists = () => {
         className="w-full relative py-12 border-b flex items-center justify-center
    gap-8"
       >
-        <div
-          className="w-[95%] relative mx-auto max-w-custom z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
+        <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
+          <div className="flex w-full flex-col gap-4">
+            {/* <h3 className="text-4xl w-full family1 font-bold">
+              {room?.subtitle}
+            </h3> */}
+            <RoomGallery room={room} />
+          </div>
+          <div
+            className="w-full z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
        gap-8"
-        >
-          <div className="w-full">
-            <div className="flex flex-col gap-12 w-full">
-              <RoomGallery room={room} />
-              {/* room title */}
-              <div className="flex md:items-center justify-between gap-4">
-                <h3 className="text-4xl w-full family1 font-bold">
-                  {room?.title}
+          >
+            <div className="w-full">
+              <div className="flex flex-col gap-12 w-full">
+                {/* room title */}
+                <div className="flex md:items-center justify-between gap-4">
+                  <h3 className="text-4xl w-full family1 font-bold">
+                    {room?.title}
 
-                  <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
-                    Room, London{" "}
-                    <span className="flex items-center gap-1">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
+                    <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
+                      Room, London{" "}
+                      <span className="flex items-center gap-1">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </span>
                     </span>
-                  </span>
-                </h3>
-                <div className="flex items-center justify-end gap-4">
-                  <div className="w-14 h-14 bg-[#f4f5fa] flex text-3xl items-center rounded-full text-dark justify-center">
-                    <Bookmark />
-                  </div>
-                  <div className="w-14 h-14 bg-[#f4f5fa] flex text-xl items-center rounded-full text-dark justify-center">
-                    <BsThreeDots />
+                  </h3>
+                  <div className="flex items-center justify-end gap-4">
+                    <div className="w-14 h-14 bg-[#f4f5fa] flex text-3xl items-center rounded-full text-dark justify-center">
+                      <Bookmark />
+                    </div>
+                    <div className="w-14 h-14 bg-[#f4f5fa] flex text-xl items-center rounded-full text-dark justify-center">
+                      <BsThreeDots />
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* room image */}
+                {/* room image */}
 
-              {/* room basic features */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
-                <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                  <span className="text-lg font-bold">Bedroom</span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-base">{room?.bedroom} </span>
-                    <Bed fontSize={"32px"} />
-                  </div>
-                </div>
-                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                  <span className="text-lg font-bold">Bathroom</span>
-                  <div className="flex items-center gap-4">
-                    <span className="text-base">{room?.bathroom} </span>
-                    <FaShower fontSize={"30px"} />
-                  </div>
-                </div>
-                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                  <span className="text-lg font-bold">Bedroom</span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-base">1220 sq.ft </span>
-
-                    <LiaChartAreaSolid fontSize={"30px"} />
-                  </div>
-                </div>
-                <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                  <Bed />
-                  <div className="flex items-center gap-3">
-                    <span className="text-base">{room?.bedroom} </span>
+                {/* room basic features */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
+                  <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
                     <span className="text-lg font-bold">Bedroom</span>
+                    <div className="flex items-center gap-4">
+                      <span className="text-base">{room?.bedroom} </span>
+                      <Bed fontSize={"32px"} />
+                    </div>
+                  </div>
+                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                    <span className="text-lg font-bold">Bathroom</span>
+                    <div className="flex items-center gap-4">
+                      <span className="text-base">{room?.bathroom} </span>
+                      <FaShower fontSize={"30px"} />
+                    </div>
+                  </div>
+                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                    <span className="text-lg font-bold">Bedroom</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-base">1220 sq.ft </span>
+
+                      <LiaChartAreaSolid fontSize={"30px"} />
+                    </div>
+                  </div>
+                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                    <Bed />
+                    <div className="flex items-center gap-3">
+                      <span className="text-base">{room?.bedroom} </span>
+                      <span className="text-lg font-bold">Bedroom</span>
+                    </div>
                   </div>
                 </div>
-               
-              </div>
 
-              {/* room description */}
-              <RoomTitleAndDescription room={room} />
-              {/* room services */}
-              <RoomFeatures />
+                {/* room description */}
+                <RoomTitleAndDescription room={room} />
+                {/* room services */}
+                <RoomFeatures />
 
-              {/* room images */}
-              <div className="w-full py-12 flex flex-col gap-4">
-                <h3 className="text-3xl font-booking_font4 font-bold">
-                  Room Photos
-                  <span className="block pt-3 text-base font-booking_font font-normal text-grey">
-                    Enjoy the comforts of home and beyond with these distinctive
-                    features.
-                  </span>
-                </h3>
-                <div className="w-full py-4 grid grid-cols-2 md:grid-cols-3 gap-6">
-                  {room?.images?.slice(0, 6).map((image, index) => {
-                    return (
-                      <img
-                        key={index}
-                        src={image}
-                        alt="room"
-                        className="h-[170px] w-full md:h-[300px] object-cover"
-                      />
-                    );
-                  })}
+                {/* room images */}
+                <div className="w-full py-12 flex flex-col gap-4">
+                  <h3 className="text-3xl font-booking_font4 font-bold">
+                    Room Photos
+                    <span className="block pt-3 text-base font-booking_font font-normal text-grey">
+                      Enjoy the comforts of home and beyond with these
+                      distinctive features.
+                    </span>
+                  </h3>
+                  <div className="w-full py-4 grid grid-cols-2 md:grid-cols-3 gap-6">
+                    {room?.images?.slice(0, 6).map((image, index) => {
+                      return (
+                        <img
+                          key={index}
+                          src={image}
+                          alt="room"
+                          className="h-[170px] w-full md:h-[300px] object-cover"
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
+            {/* <div className="w"></div> */}
+            <RoomPaymentTab
+              setAdults={setAdults}
+              datemodal={datemodal}
+              setDateModal={setDateModal}
+              adults={adults}
+              setChildrens={setChildrens}
+              childrens={childrens}
+              guestsmodal={guestsmodal}
+              setGuestsModal={setGuestsModal}
+              loginmodal={loginmodal}
+              setLoginModal={setLoginModal}
+              room={room}
+            />
           </div>
-          {/* <div className="w"></div> */}
-          <RoomPaymentTab
-            setAdults={setAdults}
-            datemodal={datemodal}
-            setDateModal={setDateModal}
-            adults={adults}
-            setChildrens={setChildrens}
-            childrens={childrens}
-            guestsmodal={guestsmodal}
-            setGuestsModal={setGuestsModal}
-            loginmodal={loginmodal}
-            setLoginModal={setLoginModal}
-            room={room}
-          />
         </div>
       </div>
     </>

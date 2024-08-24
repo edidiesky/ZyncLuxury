@@ -97,10 +97,10 @@ a.active {
   scroll-behavior: smooth;
 }
 
-/* @font-face {
+@font-face {
   font-family: "Bold";
   src: url("./assets/fonts/bold.ttf") format("truetype");
-} */
+}
 
 *,
 *::after,
@@ -121,6 +121,9 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.family3 {
+  font-family: "Bold", sans-serif;
+}
 :root {
   --grey-1: #4f578d;
   --dark-1: #22253d;

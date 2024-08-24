@@ -1,14 +1,9 @@
 import { useState, useCallback } from "react";
 import moment from "moment";
 import { motion, useInView } from "framer-motion";
-import { smallslideup2 } from "@/constants/utils/framer";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Heart from "../../assets/svg/heart";
-import { FaRegUserCircle } from "react-icons/fa";
-import { FaWifi } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteReservation } from "@/features/reservation/reservationReducer";
 import { onLoginModal } from "@/features/modals/modalSlice";
@@ -170,14 +165,14 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col border rounded-b-xl p-6">
-          <h3 className="text-2xl md:text-3xl family2 w-full">
+          <h3 className="text-2xl md:text-3xl font-bold w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
           <div className="flex mt-4 justify-between w-full items-center  gap-4">
             <div className="flex itec flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-              <p className="text-2xl font-bold family1">
+              <p className="text-xl font-bold">
                 ₦{apartment?.price} <span className="text-sm font-normal">/night</span>
               </p>
             </div>
