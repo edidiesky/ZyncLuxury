@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React, { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -84,17 +84,20 @@ const LoginModal = () => {
         exit="exit"
         className="guestModalCard"
       >
-        <div className="w-full mx-auto overflow-hidden flex flex-col">
-          <div className="w-full sticky top-0 left-0 p-6 px-8 border-b flex border-[rgba(0,0,0,.2)] items-center justify-between">
+        <div className="w-full mx-auto overflow-hidden relative flex flex-col">
+          <div
+            className="cross absolute top-5 right-5"
+            onClick={handleClearAlert}
+          >
+            <RxCross2 />
+          </div>
+          <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
             <h3 className="text-3xl font-booking_font4 font-bold">
               Sign In
-              <span className="block text-sm font-normal font-booking_font">
-                Login to your account and check out your bookings
+              <span className="block text-sm font-normal pt-3 font-booking_font">
+                {/* Login to your account and check out your bookings */}
               </span>
             </h3>
-            <div className="cross" onClick={handleClearAlert}>
-              <RxCross2 />
-            </div>
           </div>
           <div className="w-full overflow-auto h-[350px]  flex">
             <form
@@ -107,11 +110,11 @@ const LoginModal = () => {
                     <label
                       key={index}
                       htmlFor={input.label}
-                      className="text-sm font-booking_font rounded-[10px] flex flex-col gap-2 text-dark"
+                      className="text-sm font-booking_font flex flex-col gap-2 text-dark"
                     >
                       <span className="text-dark">{input.label}</span>
                       <input
-                        className="w-full input rounded-2xl text-dark
+                        className="w-full rounded-md inputs text-dark
                            font-normal text-sm"
                         required={true}
                         name={input?.name}
@@ -129,7 +132,7 @@ const LoginModal = () => {
                 <button
                   type="submit"
                   className="p-4 px-8 text-base flex items-center justify-center w-full cursor-pointer 
-                  btn bg-[#000] rounded-[40px] font-booking_font_bold text-white"
+                  btn btn_2 bg-[#000] rounded-[40px] font-booking_font_bold text-white"
                 >
                   <AnimateText children={"Sign In"} />
                 </button>
@@ -148,7 +151,7 @@ const LoginModal = () => {
                 </div>
               </div>
 
-              <div className="option text-dark">Or </div>
+              {/* <div className="option text-dark">Or </div>
 
               <div
                 // onClick={() => signIn("google")}
@@ -157,7 +160,7 @@ const LoginModal = () => {
               >
                 <FcGoogle fontSize={"24px"} />
                 <AnimateText children={"Continue with Google"} />
-              </div>
+              </div> */}
 
               {/* <div className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#000] rounded-[10px] font-booking_font font-normal border border-[rgba(0,0,0,.9)]">
                 <FaGithub fontSize={"28px"} />
@@ -209,10 +212,10 @@ const LoginModalStyles = styled(motion.div)`
     }
   }
   .guestModalCard {
-    max-width: 400px;
-    min-width: 540px;
+    max-width: 420px;
+    min-width: 400px;
     display: flex;
-    height: 500px;
+    height: 480px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -226,8 +229,8 @@ const LoginModalStyles = styled(motion.div)`
       min-width: 90%;
     }
     .cross {
-      width: 3rem;
-      height: 3rem;
+      width: 2.3rem;
+      height: 2.3rem;
       border-radius: 50%;
       display: flex;
       align-items: center;

@@ -199,6 +199,17 @@ input::placeholder {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   height: 45px;
   padding: 0 1.8rem;
+  /* outline: auto; */
+  font-family: Archivo, Arial, Helvetica, sans-serif;
+  transition: all 0.4s;
+}
+
+.inputs {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  height: 55px;
+
+
+  padding: 0 1.8rem;
   font-family: Archivo, Arial, Helvetica, sans-serif;
   transition: all 0.4s;
 }
@@ -206,6 +217,9 @@ input::placeholder {
 .input:hover,
 .input:focus {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8) !important;
+}
+.inputs:focus {
+    outline: auto !important;
 }
 
 .btn {
