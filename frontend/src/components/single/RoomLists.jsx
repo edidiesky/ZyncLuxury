@@ -37,7 +37,7 @@ const RoomLists = () => {
         className="w-full relative py-12 border-b flex items-center justify-center
    gap-8"
       >
-        <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
+        <div className="w-[85%] max-auto max-w-custom flex flex-col gap-12">
           <div className="flex w-full flex-col gap-4">
             {/* <h3 className="text-4xl w-full family1 font-bold">
               {room?.subtitle}
@@ -49,7 +49,7 @@ const RoomLists = () => {
        gap-8"
           >
             <div className="w-full">
-              <div className="flex flex-col gap-12 w-full">
+              <div className="flex flex-col gap-4 w-full">
                 {/* room title */}
                 <div className="flex md:items-center justify-between gap-4">
                   <h3 className="text-4xl w-full family1 font-bold">
@@ -114,29 +114,6 @@ const RoomLists = () => {
                 <RoomTitleAndDescription room={room} />
                 {/* room services */}
                 <RoomFeatures />
-
-                {/* room images */}
-                <div className="w-full py-12 flex flex-col gap-4">
-                  <h3 className="text-3xl font-booking_font4 font-bold">
-                    Room Photos
-                    <span className="block pt-3 text-base font-booking_font font-normal text-grey">
-                      Enjoy the comforts of home and beyond with these
-                      distinctive features.
-                    </span>
-                  </h3>
-                  <div className="w-full py-4 grid grid-cols-2 md:grid-cols-3 gap-6">
-                    {room?.images?.slice(0, 6).map((image, index) => {
-                      return (
-                        <img
-                          key={index}
-                          src={image}
-                          alt="room"
-                          className="h-[170px] w-full md:h-[300px] object-cover"
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
               </div>
             </div>
             {/* <div className="w"></div> */}
