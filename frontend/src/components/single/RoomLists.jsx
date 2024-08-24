@@ -37,7 +37,7 @@ const RoomLists = () => {
         className="w-full relative py-12 flex items-center justify-center
    gap-8"
       >
-        <div className="w-[85%] max-auto max-w-custom flex flex-col gap-12">
+        <div className="w-[95%] md:w-[85%]  max-auto max-w-custom flex flex-col gap-12">
           <div className="flex w-full flex-col gap-4">
             {/* <h3 className="text-4xl w-full family1 font-bold">
               {room?.subtitle}

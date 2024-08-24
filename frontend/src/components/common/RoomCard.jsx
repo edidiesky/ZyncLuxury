@@ -107,11 +107,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       className="w-full"
       custom={index}
     >
-      <Link
-    
-        to={`/room/${apartment?.id}`}
-        className="w-full flex flex-col"
-      >
+      <Link to={`/room/${apartment?.id}`} className="w-full flex flex-col">
         <div className="w-full h-[260px] overflow-hidden relative">
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
@@ -165,7 +161,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col border rounded-b-xl p-6">
-          <h3 className="text-2xl md:text-3xl font-bold w-full">
+          <h3 className="text-2xl md:text-3xl font-extrabold w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
@@ -173,7 +169,8 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             <div className="flex itec flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
               <p className="text-xl font-bold">
-                ₦{apartment?.price} <span className="text-sm font-normal">/night</span>
+                ₦{apartment?.price}{" "}
+                <span className="text-sm font-normal">/night</span>
               </p>
             </div>
             <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">

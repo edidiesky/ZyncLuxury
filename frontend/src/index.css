@@ -220,10 +220,8 @@ input::placeholder {
 
 .btn.btn_2 {
   transition: all 0.5s;
-  color: var(--dark-1) !important;
-  background-color: #fff !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-
+ background: var(--grey-1) !important;
+ color:#fff !important;
 }
 
 .btn.btn_3 {

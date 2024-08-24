@@ -199,7 +199,7 @@ export default function RoomPaymentTab({ room }) {
               onClick={handleReservationBooking}
               className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
             >
-              Sign in to Book
+              Sign in to Reserve
             </button>
           )}
         </div>
