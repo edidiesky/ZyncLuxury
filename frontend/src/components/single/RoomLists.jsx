@@ -34,7 +34,7 @@ const RoomLists = () => {
   return (
     <>
       <div
-        className="w-full relative py-12 border-b flex items-center justify-center
+        className="w-full relative py-12 flex items-center justify-center
    gap-8"
       >
         <div className="w-[85%] max-auto max-w-custom flex flex-col gap-12">
@@ -46,7 +46,7 @@ const RoomLists = () => {
           </div>
           <div
             className="w-full z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
-       gap-8"
+       gap-20"
           >
             <div className="w-full">
               <div className="flex flex-col gap-12 w-full">

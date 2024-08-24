@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { BiCheck, BiChevronDown, BiChevronUp, BiStar } from "react-icons/bi";
+import { BiCheck, BiPlus, BiMinus, BiStar } from "react-icons/bi";
 import moment from "moment";
 import { addDays, format } from "date-fns";
 import axios from "axios";
@@ -17,9 +17,7 @@ import Loader from "../home/loader";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import AnimateText from "@/animations/AnimateText";
 import { CreateNotifications } from "@/features/notification/notificationReducer";
-export default function RoomPaymentTab({
-  room,
-}) {
+export default function RoomPaymentTab({ room }) {
   // states of the reservation booking either loading or
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -59,7 +57,7 @@ export default function RoomPaymentTab({
     startDate: moment(startdate).format("MMMM Do YYYY"),
     endDate: moment(enddate).format("MMMM Do YYYY"),
     guests: guests,
-    status: 'PENDING'
+    status: "PENDING",
   };
 
   // console.log(reservationData);
@@ -84,10 +82,11 @@ export default function RoomPaymentTab({
             reservationData,
             config
           );
-          dispatch(CreateNotifications({
-            action: `has booked ${room?.title}`,
-
-          }))
+          dispatch(
+            CreateNotifications({
+              action: `has booked ${room?.title}`,
+            })
+          );
           toast.success("Room has been succesfully booked!!");
           setBookingData(data);
         } catch (error) {
@@ -113,46 +112,27 @@ export default function RoomPaymentTab({
 
   return (
     <div className="w-[100%] lg:sticky top-[10%] flex flex-col gap-8">
-      <div className="w-full border rounded-lg py-8 flex flex-col items-center gap-4 justify-center md:w-[360px] bg-[#fff] shadows">
-        <div className="w-[90%] mx-auto grid grid-cols-1 gap-4">
+      <div className="w-full border rounded-lg py-8 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
+        <h4 className="text-3xl p-4 font-bold">
+          ₦{room?.price} <span className="font-normal text-sm">/night</span>
+        </h4>
+        <div className="w-[90%] mx-auto grid grid-cols-1">
           <Popover>
             <PopoverTrigger>
-              <div className="grid w-full grid-cols-2 gap-4">
-                <div className="py-8 cursor-pointer bg-[#151515] flex items-center justify-center flex-col gap-4">
-                  <span className="uppercase text-sm text-white">CHECK-IN</span>
-                  <div className="flex items-center gap-2">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-3xl text-[var(--gold-1)] pt-3 md:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                    >
-                      {moment(startdate)?.date()}
-                    </span>
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[8px] text-[var(--gold-1)] uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                    >
-                      {moment(startdate).format("MMM").toUpperCase()}
-                      <BiChevronDown fontSize={"24px"} />
+              <div className="grid rounded-t-xl px-3 border border-[rgba(0,0,0,.4)] min-h-[80px]  w-full grid-cols-2 gap-4">
+                <div className="cursor-pointer flex items-start py-3 border-r border-[rgba(0,0,0,.4)] justify-center flex-col gap-2">
+                  <span className="text-xs text-dark uppercase">CHECK-IN</span>
+                  <div className="flex items-start gap-2">
+                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                      {moment(startdate).format("DD MMMM YYYY")}
                     </span>
                   </div>
                 </div>
-                <div className="py-8 cursor-pointer bg-[#151515] flex items-center justify-center flex-col gap-4">
-                  <span className="uppercase text-xs text-white">
-                    CHECK-Out
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-3xl text-[var(--gold-1)] pt-3 md:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                    >
-                      {moment(enddate)?.date()}
-                    </span>
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[8px] text-[var(--gold-1)] uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                    >
-                      {moment(enddate).format("MMM").toUpperCase()}
-                      <BiChevronDown fontSize={"16px"} />
+                <div className="cursor-pointer flex items-start py-3 justify-center flex-col gap-2">
+                  <span className="text-xs text-dark uppercase">CHECK-Out</span>
+                  <div className="flex items-start gap-2">
+                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                      {moment(startdate).format("DD MMMM YYYY")}
                     </span>
                   </div>
                 </div>
@@ -169,109 +149,46 @@ export default function RoomPaymentTab({
               />
             </PopoverContent>
           </Popover>
-          <div className="w-full grid grid-cols-2 gap-4">
-            <div className="py-8 cursor-pointer bg-[#151515] flex items-center justify-center flex-col gap-4">
-              <span className="uppercase text-xs text-white">GUEsTS</span>
+          <div className="w-full rounded-b-xl border border-t-0 border-[rgba(0,0,0,.4)] min-h-[40px] grid grid-cols-1 gap-4">
+            <div className="flex p-3 flex-col">
+              <span className="text-xs text-dark">GUESTS</span>
               <div className="flex items-center gap-2">
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-3xl text-[var(--gold-1)] pt-3 md:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                >
-                  {guests}
+                <span className="text-base font-bold leading-[1.5] text-center text-dark">
+                  {guests} guests
                 </span>
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-[8px] text-[var(--gold-1)] uppercase leading-[1.5] flex flex-col gap-[4px] text-dark font-normal"
-                >
-                  <button
-                    disabled={guests === 1}
-                    onClick={() => setGuests(guests - 1)}
-                    className="w-8 hover:bg-[#1C1C1C] rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiChevronDown fontSize={"16px"} />
-                  </button>
+                <span className="text-[8px] leading-[1.5] flex items-center justify-end flex-1 gap-[4px] text-dark font-normal">
                   <button
                     disabled={guests === room?.guests}
                     onClick={() => setGuests(guests + 1)}
-                    className="w-8 hover:bg-[#1C1C1C] rounded-full cursor-pointer h-8 flex items-center justify-center"
+                    className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
                   >
-                    <BiChevronUp fontSize={"16px"} />
+                    <BiPlus fontSize={"16px"} />
                   </button>
-                  {/* <BiChevronUp fontSize={"16px"} /> */}
-                </span>
-              </div>
-            </div>
-            <div className="py-8 cursor-pointer bg-[#151515] flex items-center justify-center flex-col gap-4">
-              <span className="uppercase text-xs text-white">Nights</span>
-              <div className="flex items-center gap-2">
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-3xl text-[var(--gold-1)] pt-3 md:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                >
-                  {differenceInDays}
+                  <button
+                    disabled={guests === 1}
+                    onClick={() => setGuests(guests - 1)}
+                    className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
+                  >
+                    <BiMinus fontSize={"16px"} />
+                  </button>
+                  {/* <BiMinus fontSize={"16px"} /> */}
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[90%] p-4 mx-auto flex flex-col gap-4">
-          <div className="w-full flex flex-col gap-2">
-            {/* price */}
-            <div className="w-full text-base  font-booking_font4 font-bold text-[var(--gold-1)] flex items-center justify-between">
-              <span className="text-white text-lg block font-booking_font font-normal">
-                ₦ {Number(room?.price).toLocaleString()} x {differenceInDays}{" "}
-                nights
-              </span>
-              <span>
-                <span className="text-base">₦</span>{" "}
-                {Number(price * differenceInDays).toLocaleString()}{" "}
-              </span>
-            </div>
-            {/* taxes */}
-            <div className="w-full  font-booking_font4 font-bold text-[var(--gold-1)] flex items-center justify-between">
-              <span className="text-white text-lg block font-booking_font font-normal">
-                Caution Fees
-              </span>
-              <span>
-                <span className="text-lg">₦</span> {room?.cautionfee}
-              </span>
-            </div>
-            {/* total */}
-            <div className="w-full  font-booking_font4 font-bold text-[var(--gold-1)] flex items-center justify-between">
-              <span className="text-white text-lg block font-booking_font font-normal">
-                Total
-              </span>
-              <span>
-                <span className="text-lg">₦</span>{" "}
-                {Number(totalPrice).toLocaleString()}
-              </span>
-            </div>
-          </div>
-          {/* summary */}
-          <div
-            className="w-full text-xl  text-white font-booking_font4 font-bold
-                    flex items-center justify-between"
-          >
-            <span className="text-base font-booking_font font-normal">
-              You Pay
-            </span>
-            <span className="text-[var(--gold-1)] ">
-              <span className="text-base">₦</span>{" "}
-              {Number(totalPrice).toLocaleString()}
-            </span>
-          </div>
+        <div className="w-[90%] mx-auto">
           {currentUser ? (
             <button
               type="submit"
               disabled={bookingloading}
               onClick={handleReservationBooking}
-              style={{ letterSpacing: "4px" }}
-              className="btn flex items-center justify-center text-sm uppercase text-white py-6 px-8 w-full"
+              className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
             >
               {bookingloading ? (
                 <span className="flex items-center justify-center gap-2">
                   <Loader type="dots" />
-                  <AnimateText children={" Placing Reservation"} />
+                  Placing Reservation
                 </span>
               ) : (
                 "Place Reservation"
@@ -280,12 +197,39 @@ export default function RoomPaymentTab({
           ) : (
             <button
               onClick={handleReservationBooking}
-              style={{ letterSpacing: "4px" }}
-              className="btn flex items-center justify-center text-sm uppercase text-white py-6 px-8 w-full"
+              className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
             >
-              <AnimateText children={" Sign in to Book"} />
+              Sign in to Book
             </button>
           )}
+        </div>
+        <div className="w-[90%] p-4 mx-auto flex flex-col gap-4">
+          <div className="w-full flex flex-col gap-4">
+            {/* price */}
+            <div className="w-full text-xl font-bold flex items-center justify-between">
+              <span className="text-dark text-lg block font-booking_font font-normal">
+                ₦ {room?.price} x {differenceInDays} nights
+              </span>
+              <span>
+                <span className="text-base">₦</span>{" "}
+                {Number(price * differenceInDays).toLocaleString()}{" "}
+              </span>
+            </div>
+            {/* taxes */}
+            <div className="w-full text-xl font-bold flex items-center justify-between">
+              <span className="text-dark text-lg block font-booking_font font-normal">
+                Caution Fees
+              </span>
+              <span>{room?.cautionfee}</span>
+            </div>
+            {/* total */}
+            <div className="w-full text-xl font-bold flex items-center justify-between">
+              <span className="text-dark text-lg block font-booking_font font-normal">
+                Total
+              </span>
+              <span>{Number(totalPrice).toLocaleString()}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

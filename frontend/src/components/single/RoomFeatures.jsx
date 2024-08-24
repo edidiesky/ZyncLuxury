@@ -6,7 +6,7 @@ export default function RoomFeatures() {
   return (
     <>
       <div className="w-full">
-        <div className="w-full flex flex-col gap-12 border-b pb-8">
+        <div className="w-full flex flex-col gap-8">
           <h3 className="text-4xl font-bold">
             Room Services
             <span className="block pt-3 text-base font-normal font-booking_font">
