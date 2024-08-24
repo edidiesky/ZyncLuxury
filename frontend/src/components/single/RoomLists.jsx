@@ -49,63 +49,60 @@ const RoomLists = () => {
        gap-8"
           >
             <div className="w-full">
-              <div className="flex flex-col gap-4 w-full">
+              <div className="flex flex-col gap-12 w-full">
                 {/* room title */}
-                <div className="flex md:items-center justify-between gap-4">
-                  <h3 className="text-4xl w-full family1 font-bold">
-                    {room?.title}
+                <div className="w-full flex flex-col gap-4">
+                  <div className="flex md:items-center justify-between gap-4">
+                    <h3 className="text-4xl w-full family1 font-bold">
+                      {room?.title}
 
-                    <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
-                      Room, London{" "}
-                      <span className="flex items-center gap-1">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
+                      <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
+                        Room, London{" "}
+                        <span className="flex items-center gap-1">
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                        </span>
                       </span>
-                    </span>
-                  </h3>
-                  <div className="flex items-center justify-end gap-4">
-                    <div className="w-14 h-14 bg-[#f4f5fa] flex text-3xl items-center rounded-full text-dark justify-center">
-                      <Bookmark />
-                    </div>
-                    <div className="w-14 h-14 bg-[#f4f5fa] flex text-xl items-center rounded-full text-dark justify-center">
-                      <BsThreeDots />
+                    </h3>
+                    <div className="flex items-center justify-end gap-4">
+                      <div className=" flex text-lg cursor-pointer items-center gap-2 text-dark justify-center">
+                        <Bookmark />
+                        Save
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* room image */}
-
-                {/* room basic features */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
-                  <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                    <span className="text-lg font-bold">Bedroom</span>
-                    <div className="flex items-center gap-4">
-                      <span className="text-base">{room?.bedroom} </span>
-                      <Bed fontSize={"32px"} />
-                    </div>
-                  </div>
-                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                    <span className="text-lg font-bold">Bathroom</span>
-                    <div className="flex items-center gap-4">
-                      <span className="text-base">{room?.bathroom} </span>
-                      <FaShower fontSize={"30px"} />
-                    </div>
-                  </div>
-                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                    <span className="text-lg font-bold">Bedroom</span>
-                    <div className="flex items-center gap-3">
-                      <span className="text-base">1220 sq.ft </span>
-
-                      <LiaChartAreaSolid fontSize={"30px"} />
-                    </div>
-                  </div>
-                  <div className="flex flex-col pr-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                    <Bed />
-                    <div className="flex items-center gap-3">
-                      <span className="text-base">{room?.bedroom} </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
+                    <div className="flex flex-col p-4 pl-8 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
                       <span className="text-lg font-bold">Bedroom</span>
+                      <div className="flex items-center gap-4">
+                        <span className="text-base">{room?.bedroom} </span>
+                        <Bed fontSize={"32px"} />
+                      </div>
+                    </div>
+                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                      <span className="text-lg font-bold">Bathroom</span>
+                      <div className="flex items-center gap-4">
+                        <span className="text-base">{room?.bathroom} </span>
+                        <FaShower fontSize={"30px"} />
+                      </div>
+                    </div>
+                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                      <span className="text-lg font-bold">Bedroom</span>
+                      <div className="flex items-center gap-3">
+                        <span className="text-base">1220 sq.ft </span>
+
+                        <LiaChartAreaSolid fontSize={"30px"} />
+                      </div>
+                    </div>
+                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                      <Bed />
+                      <div className="flex items-center gap-3">
+                        <span className="text-base">{room?.bedroom} </span>
+                        <span className="text-lg font-bold">Bedroom</span>
+                      </div>
                     </div>
                   </div>
                 </div>
