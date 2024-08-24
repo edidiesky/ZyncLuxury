@@ -8,12 +8,9 @@ import AnimateText from "@/animations/AnimateText";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
 const linkData = [
+
   {
-    title: "Home",
-    path: "",
-  },
-  {
-    title: "Our Lisitings",
+    title: "Rooms",
     path: "search",
   },
   {
@@ -43,21 +40,21 @@ const Navbar = () => {
     <>
       <div className="p-6 z-[50] #fff border-b px-2 md:px-8 min-h-[80px] flex items-center justify-center">
         <div
-          className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between
+          className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
         >
-          <h4 className="family1 font-black text-2xl text-dark">
+          <h4 className="family1 font-bold text-3xl text-dark">
             Zync<span className="text-[var(--primary)]">Luxury</span>
           </h4>
 
-          <div className="hidden lg:flex items-center justify-center gap-4">
+          <div className="hidden lg:flex items-center justify-center gap-6">
             {linkData?.map((list, index) => {
               return (
                 <NavLink
                   end
                   to={`/${list.path}`}
                   key={index}
-                  className={`text-base font-normal family1 text-dark flex items-center
+                  className={`text-xl font-normal family1 text-dark flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
                 >
                   {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -68,7 +65,7 @@ const Navbar = () => {
           </div>
           <Link
             to={"/search"}
-            className="btn btn_2 text-base family1 font-semibold text-dark px-8 py-3"
+            className="btn text-lg family1 font-semibold text-white px-12 py-4"
           >
             <AnimateText children={"Sign Up"} />
           </Link>

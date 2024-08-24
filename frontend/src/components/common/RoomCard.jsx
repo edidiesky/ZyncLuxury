@@ -105,10 +105,10 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
 
 
   return (
-    <motion.div
-      variants={smallslideup2}
-      initial={"initial"}
-      animate={inView ? "animate" : "exit"}
+    <div
+      // variants={smallslideup2}
+      // initial={"initial"}
+      // animate={inView ? "animate" : "exit"}
       className="w-full"
       custom={index}
     >
@@ -187,7 +187,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 

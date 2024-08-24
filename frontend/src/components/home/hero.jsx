@@ -101,7 +101,7 @@ const Hero = () => {
        gap-12"
         >
           <h1
-            className="text-white text-center capitalize leading-[1.1] lg:leading-[1.3] text-5xl lg:text-6xl
+            className="text-white text-center capitalize font-extrabold leading-[1.1] lg:leading-[1.3] text-5xl lg:text-6xl
           family2"
           >
             Where Serenity Meets{" "}
@@ -110,7 +110,7 @@ const Hero = () => {
               <Dash />
             </span>{" "}
             <br /> Book Your Resort Experience
-            <span className="text-xl lg:text-2xl font-semibold capitalize pt-8 block family1">
+            <span className="text-xl lg:text-2xl font-normal capitalize pt-8 block family1">
               We set the pace Inspiring homes beyond boundaries
             </span>
           </h1>

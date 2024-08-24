@@ -59,7 +59,7 @@ const About = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h4 className="text-4xl md:text-5xl family2 text-[var(--dark-1)]">
+              <h4 className="text-4xl md:text-5xl font-bold text-[var(--dark-1)]">
                 Why you should <br /> Choose ZyncLuxury?
               </h4>
             </div>
@@ -80,7 +80,7 @@ const About = () => {
                     className="w-full z-20 hover:-translate-y-10 p-12 bg-[#f4f5fa] rounded-xl
                      flex flex-col gap-4"
                   >
-                    <h3 className="text-2xl family1 font-extrabold text-dark">
+                    <h3 className="text-2xl family1 font-semibold text-dark">
                       {data?.title}
                     </h3>
                     <h4 className="text-sm md:text-base family1 font-normal text-grey">

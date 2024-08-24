@@ -22,12 +22,12 @@ const RecentListing = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl family2 text-[var(--dark-1)]">
+            <h4 className="text-4xl md:text-5xl font-bold text-[var(--dark-1)]">
               Our Recent Listings
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">
-            <button className="btn btn_3 px-8 py-4 text-base md:text-lg family1 text-dark font-bold">
+            <button className="btn btn_3 px-8 py-4 text-base md:text-lg family1 text-dark font-normal">
               Browse all Homes
             </button>
           </div>
