@@ -132,7 +132,7 @@ export default function RoomPaymentTab({ room }) {
                   <span className="text-xs text-dark uppercase">CHECK-Out</span>
                   <div className="flex items-start gap-2">
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
-                      {moment(startdate).format("DD MMMM YYYY")}
+                      {moment(enddate).format("DD MMMM YYYY")}
                     </span>
                   </div>
                 </div>
@@ -203,11 +203,11 @@ export default function RoomPaymentTab({ room }) {
             </button>
           )}
         </div>
-        <div className="w-[90%] p-4 mx-auto flex flex-col gap-4">
+        <div className="w-[90%] py-2 mx-auto flex flex-col gap-4">
           <div className="w-full flex flex-col gap-4">
             {/* price */}
-            <div className="w-full text-xl font-bold flex items-center justify-between">
-              <span className="text-dark text-lg block font-booking_font font-normal">
+            <div className="w-full text-lg font-bold flex items-center justify-between">
+              <span className="text-dark text-base block font-booking_font font-normal">
                 ₦ {room?.price} x {differenceInDays} nights
               </span>
               <span>
@@ -216,18 +216,18 @@ export default function RoomPaymentTab({ room }) {
               </span>
             </div>
             {/* taxes */}
-            <div className="w-full text-xl font-bold flex items-center justify-between">
-              <span className="text-dark text-lg block font-booking_font font-normal">
+            <div className="w-full text-lg font-bold flex items-center justify-between">
+              <span className="text-dark text-base block font-booking_font font-normal">
                 Caution Fees
               </span>
-              <span>{room?.cautionfee}</span>
+              <span> ₦ {room?.cautionfee}</span>
             </div>
             {/* total */}
-            <div className="w-full text-xl font-bold flex items-center justify-between">
-              <span className="text-dark text-lg block font-booking_font font-normal">
+            <div className="w-full text-lg font-bold flex items-center justify-between">
+              <span className="text-dark text-base block font-booking_font font-normal">
                 Total
               </span>
-              <span>{Number(totalPrice).toLocaleString()}</span>
+              <span> ₦ {Number(totalPrice).toLocaleString()}</span>
             </div>
           </div>
         </div>

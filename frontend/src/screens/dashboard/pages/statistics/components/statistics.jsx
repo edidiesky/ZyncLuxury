@@ -8,11 +8,11 @@ import ReservationList from "./ReservationList";
 
 const Statistics = () => {
   return (
-    <div className="w-full grid md:grid-cols-custom items-start gap-4">
+    <div className="w-full grid md:grid-cols-custom items-start gap-8">
       <div className="flex w-full">
         <GrowthStat />
       </div>
-      <div className="flex md:w-[500px]">
+      <div className="flex md:w-[400px]">
         <ReservationList />
       </div>
     </div>
