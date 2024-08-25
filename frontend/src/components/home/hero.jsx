@@ -24,7 +24,7 @@ const linkData = [
     path: "",
   },
   {
-    title: "Our Lisitings",
+    title: "Our Listings",
     path: "search",
   },
   {
@@ -79,7 +79,7 @@ const Hero = () => {
             className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between
        gap-12"
           >
-            <h4 className="family2 text-2xl text-white">ZyncLuxury</h4>
+            <h4 className="family2 text-2xl uppercase font-bold text-white">ZyncLuxury</h4>
 
             <div className="hidden lg:flex items-center justify-center gap-2">
               {linkData?.map((list, index) => {
@@ -263,11 +263,11 @@ const Hero = () => {
           </div>
         </div>
         <div
-          className="w-[90%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-center flex-col
+          className="w-[90%] max-w-custom mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
        gap-12"
         >
           <h1
-            className="text-white text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-5xl lg:text-6xl
+            className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl lg:text-6xl
           family2"
           >
             Where Serenity Meets{" "}
@@ -280,17 +280,17 @@ const Hero = () => {
               We set the pace Inspiring homes beyond boundaries
             </span>
           </h1>
-          <div className="w-full items-center lg:flex-row flex-col justify-center gap-4 flex">
+          <div className="w-full items-center flex-row md:justify-center gap-4 flex">
             <Link
               to={"/search"}
-              className="btn text-lg family1 font-semibold text-white rounded-[40px] px-12 py-6"
+              className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-8 py-4 md:px-12 md:py-6"
             >
               <AnimateText children={"Book Your Home"} />
             </Link>
 
             <Link
               to={"/search"}
-              className="btn btn_2 text-lg family1 font-semibold text-white px-12 py-6"
+              className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-8 py-4 md:px-12 md:py-6"
             >
               <AnimateText children={"Learn More"} />
             </Link>
