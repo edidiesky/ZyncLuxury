@@ -251,12 +251,12 @@ const Navbar = () => {
               </ProfileDropdownStyles>
             ) : (
               <div className="flex justify-end items-center">
-                <Link
-                  to={"/search"}
+                <button
+                  onClick={() => dispatch(onLoginModal())}
                   className="btn min-w-[130px] text-center text-base family1 font-semibold text-white px-8 py-4"
                 >
                   Sign Up
-                </Link>
+                </button>
               </div>
             )}
           </div>

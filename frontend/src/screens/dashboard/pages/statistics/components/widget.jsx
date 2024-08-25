@@ -53,7 +53,8 @@ const Widget = () => {
             onClick={() => setWidgetTab(index)}
             key={index}
             style={{ transition: "all .3s" }}
-            className={`p-6 md:p-8 font-booking_font4 w-full rounded-[10px] hover:shadow-2xl flex-col-reverse md:flex-row justify-between cursor-pointer border flex bg-white md:items-center gap-4 h-48`}
+            className={`p-6 md:p-8 font-booking_font4 w-full rounded-[20px] 
+              hover:shadow-2xl flex-col-reverse md:flex-row justify-between cursor-pointer border flex bg-white md:items-center gap-4 h-40`}
           >
             <div className="flex flex-col">
               <h3 className="text-4xl font-bold font-booking_font4">

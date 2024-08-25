@@ -204,9 +204,9 @@ const TableCard = ({ x, type }) => {
           <td className=" font-semibold">
             <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
           </td>
-          <td className=" font-semibold">
+          {/* <td className=" font-semibold">
             <span>{x?.rooms?.city}</span>
-          </td>
+          </td> */}
           <td className=" font-semibold">
             <span>
               {" "}

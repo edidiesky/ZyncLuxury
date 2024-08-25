@@ -198,7 +198,7 @@ input::placeholder {
 .input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   height: 45px;
-  padding: 0 1.8rem;
+  padding: 0 1rem;
   /* outline: auto; */
   font-family: "Work Sans", sans-serif;
   transition: all 0.4s;
@@ -208,7 +208,7 @@ input::placeholder {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   height: 55px;
 
-  padding: 0 1.8rem;
+  padding: 0 1rem;
   font-family: "Work Sans", sans-serif;
   transition: all 0.4s;
 }

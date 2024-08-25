@@ -27,7 +27,7 @@ const ReservationList = () => {
                 <th>Booking Name</th>
                 <th>Status</th>
                 <th>Price</th>
-                <th>Venue</th>
+                {/* <th>Venue</th> */}
                 <th>Checkin - CheckOut</th>
               </tr>
             </thead>
