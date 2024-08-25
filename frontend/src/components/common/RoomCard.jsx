@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import moment from "moment";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { TiLocation } from "react-icons/ti";
 import Heart from "../../assets/svg/heart";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
@@ -108,7 +109,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       custom={index}
     >
       <Link to={`/room/${apartment?.id}`} className="w-full flex flex-col">
-        <div className="w-full h-[360px] overflow-hidden relative">
+        <div className="w-full h-[270px] rounded-xl overflow-hidden relative">
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
           <Link
@@ -160,22 +161,26 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col rounded-b-xl p-6">
-          <h3 className="text-3xl font-bold w-full">
-            {apartment?.subtitle}
+        <div className="w-full flex flex-col rounded-b-xl py-6">
+          <h3 className="text-xl font-semibold w-full">
+            {apartment?.subtitle} Apartment
+            <span className="flex text-sm pt-1 items-center gap-2">
+              <TiLocation fontSize={"16px"} />
+              Houston
+            </span>
             {/* Amazon */}
           </h3>
           <div className="flex mt-2 justify-between w-full items-center  gap-4">
             <div className="flex itec flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-              <p className="text-xl md:text-2xl font-bold">
+              <p className="text-xl md:text-xl font-semibold">
                 ₦{apartment?.price}{" "}
                 <span className="text-sm font-normal">/night</span>
               </p>
             </div>
-            <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
+            {/* <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
               Book Now
-            </div>
+            </div> */}
           </div>
         </div>
       </Link>

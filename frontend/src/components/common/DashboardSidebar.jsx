@@ -1,15 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import styled from "styled-components";
-// import { usePathname } from "next/navigation";
-import { TiHome } from "react-icons/ti";
 import { FiSettings } from "react-icons/fi";
 import { LuBedDouble } from "react-icons/lu";
 import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
-// import { NavLink } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { BiChart } from "react-icons/bi";
 import { Layout } from "lucide-react";
 
 const AdminSidebarData = [
@@ -195,7 +191,7 @@ export const HeaderStyles = styled.div`
     align-items: center;
     gap: 1rem;
     position: relative;
-    color: #6e6e6e;
+    color: #b9b9b9;
     &:hover {
       background: #eee;
       color: #000;

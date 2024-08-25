@@ -34,7 +34,7 @@ const Listing = () => {
         </div>
         <div
           ref={collection_ref_1}
-          className="w-full gap-4 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
+          className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
         >
           {rooms?.slice(0, 3)?.map((apartment, index) => {
             return (
