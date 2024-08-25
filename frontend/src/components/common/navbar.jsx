@@ -38,37 +38,48 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="p-6 z-[50] #fff border-b px-2 md:px-8 min-h-[80px] flex items-center justify-center">
+      <div className="p-4 z-[50] #fff border-b min-h-[70px] flex items-center justify-center">
         <div
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
         >
-          <h4 className="family1 font-bold text-3xl text-dark">
+          <h4 className="family1 font-bold text-2xl uppercase text-dark">
             Zync<span className="text-[var(--primary)]">Luxury</span>
           </h4>
 
-          <div className="hidden lg:flex items-center justify-center gap-6">
-            {linkData?.map((list, index) => {
-              return (
-                <NavLink
-                  end
-                  to={`/${list.path}`}
-                  key={index}
-                  className={`text-xl font-normal family1 text-dark flex items-center
-                     gap-2 p-3 px-3 rounded-[40px]`}
-                >
-                  {/* <img src={list?.icon} className="w-4" alt="" /> */}
-                  <AnimateText children={list?.title} />
-                </NavLink>
-              );
-            })}
+          <div className="hidden flex-1 sm:flex items-center justify-center gap-6">
+            <input
+              type="text"
+              placeholder="Search for homes"
+              className="inputs text-base w-full rounded-full"
+            />
           </div>
-          <Link
-            to={"/search"}
-            className="btn text-lg family1 font-semibold text-white px-12 py-4"
-          >
-            <AnimateText children={"Sign Up"} />
-          </Link>
+          <div className="flex-1 flex items-center justify-end gap-4">
+            <div className="hidden lg:flex items-center gap-4">
+              {linkData?.map((list, index) => {
+                return (
+                  <NavLink
+                    end
+                    to={`/${list.path}`}
+                    key={index}
+                    className={`text-base font-normal family1 text-dark flex items-center
+                     gap-2 p-3 px-3 rounded-[40px]`}
+                  >
+                    {/* <img src={list?.icon} className="w-4" alt="" /> */}
+                    <AnimateText children={list?.title} />
+                  </NavLink>
+                );
+              })}
+            </div>
+            <div className='flex justify-end items-center'>
+              <Link
+                to={"/search"}
+                className="btn min-w-[130px] text-center text-base family1 font-semibold text-white px-8 py-4"
+              >
+                Sign Up
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div

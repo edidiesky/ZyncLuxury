@@ -58,7 +58,6 @@ model User {
   reviews        Review[]        @relation("SellerReviews")
   reviewsMade    Review[]        @relation("UserReview")
   notifications  Notifications[]
-  Payment        Payment[]
   Rooms          Rooms[]
 }
 
@@ -134,6 +133,7 @@ model Payment {
   id            String        @id @default(auto()) @map("_id") @db.ObjectId
   amount        Int?
   currency      String
+   guests      Int?
   status        PaymentStatus @default(PENDING)
   userid        String        @db.ObjectId // Customer ID
   sellerId      String        @db.ObjectId // Seller ID
@@ -143,9 +143,7 @@ model Payment {
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
   cartItems     Json?
-  User          User?         @relation(fields: [userId], references: [id])
   Reservation   Reservations? @relation(fields: [reservationId], references: [id])
-  userId        String?       @db.ObjectId
 }
 
 model Conversations {

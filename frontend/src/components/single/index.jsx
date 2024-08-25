@@ -24,7 +24,7 @@ export default function BookingItem() {
   }
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <RoomLists />
       <RecommendedList roomid={id} />
       <Footer />
