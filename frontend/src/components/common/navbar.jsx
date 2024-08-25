@@ -22,10 +22,10 @@ const linkData = [
     path: "trips",
   },
 
-  {
-    title: "Contact",
-    path: "trips",
-  },
+  // {
+  //   title: "Contact",
+  //   path: "trips",
+  // },
 ];
 
 const Navbar = () => {
@@ -65,7 +65,7 @@ const Navbar = () => {
                     end
                     to={`/${list.path}`}
                     key={index}
-                    className={`text-base font-normal family1 text-dark flex items-center
+                    className={`text-base font-bold family1 text-dark flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
                   >
                     {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -192,7 +192,7 @@ const Navbar = () => {
                           )}
                         </div>
                       </div>
-                      <div className="flex min-w-[80px] items-center gap-2">
+                      <div className="flex min-w-[50px] md:min-w-[80px] items-center gap-2">
                         {currentUser?.image ? (
                           <img
                             src={currentUser?.image}
@@ -227,7 +227,7 @@ const Navbar = () => {
                     </div>
                     <span
                       onClick={() => setBar(true)}
-                      className="flex text-3xl text-[#fff] lg:hidden"
+                      className="flex text-3xl text-[#000] lg:hidden"
                     >
                       <HiBars3BottomRight />
                     </span>

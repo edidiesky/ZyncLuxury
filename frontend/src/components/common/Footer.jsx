@@ -26,17 +26,17 @@ const navbarCenterList = [
 ];
 const Footer = () => {
   return (
-    <div className="w-full flex mt-40 flex-col">
-      <div className="w-[90%] md:w-[900px] shadows py-20 px-16 rounded-bl-2xl z-[50] gap-8 -mb-12 bg-white mx-auto flex flex-col">
+    <div className="w-full flex md:mt-20 flex-col">
+      <div className="w-[90%] lg:w-[900px] shadows py-20 px-8 md:px-16 rounded-bl-2xl z-[50] gap-8 -mb-12 bg-white mx-auto flex flex-col">
         <div className="flex flex-col gap-2">
-          <h3 className="text-3xl md:text-4xl capitalize family1 font-extrabold">
+          <h3 className="text-3xl md:text-4xl capitalize family1 font-bold">
             keep updated & don’t miss anything!
           </h3>
           <span className="block text-lg text-grey">
             Setus vitae pharetra auctor kasu mattiy sed interdum
           </span>
         </div>
-        <div className="flex items-center gap-8">
+        <div className="flex md:flex-row flex-col md:items-center gap-8">
           <input
             type="text"
             placeholder="Enter your email"
@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
       <div className="w-full bg-[#22253d] flex px-4 md:px-8 flex-col pt-36 pb-20">
         <div className="w-[95%] max-w-custom mx-auto md:items-center md:justify-center z-40 flex flex-col gap-12">
-          <h3 className="family2 text-5xl md:text-center text-white font-extrabold">
+          <h3 className="family2 text-4xl md:text-5xl md:text-center text-white font-extrabold">
             <span className="family1 text-lg block text-[var(--primary)] font-normal">
               Home of Luxury
             </span>

@@ -47,7 +47,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         to={`/reservation/payment/${apartment?.id}`}
         className="w-full flex flex-col"
       >
-        <div className="h-[240px] group w-full relative">
+        <div className="h-[240px] overflow-hidden rounded-xl group w-full relative">
           <Link
             to={"#"}
             style={{ transition: "all .4s" }}
@@ -68,29 +68,22 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             className="w-full h-[240px] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
           />
         </div>
-        <div className="w-full flex flex-col py-3 bg-white gap-2">
-          <h4
-            style={{ letterSpacing: "3px" }}
-            className="text-xs text-grey uppercase font-booking_font_bold font-bold"
-          >
-            for settling in castle
-          </h4>
-          <h3 className="text-2xl font-booking_font4 font-normal text-text_dark_1 ">
-            {apartment?.rooms?.title}
-          </h3>
+        <div className="w-full flex flex-col py-6 bg-white gap-2">
+          <h3 className="text-2xl font-bold">{apartment?.rooms?.subtitle}</h3>
 
           <div
             style={{ letterSpacing: "1px" }}
-            className="flex items-center justify-between gap-2 pb-2 uppercase border-b border-[rgba(0,0,0,.6)] text-xs font-bold font-booking_font_bold"
+            className="flex items-center justify-between gap-2 pb-2 uppercase 
+            text-xs font-semibold"
           >
-            <span className="flex uppercase items-center gap-2">
-              Date: <span>{startDate}</span> - <span>{endDate}</span>
+            <span className="flex uppercase items-center">
+              <span>{startDate}</span> - <span>{endDate}</span>
             </span>
 
-            <span className="flex text-xs text-grey font-normal font-booking_font flex-col">
-              price
-              <span className="block text-lg text-stone-950 font-bold font-booking_font_bold">
-                ₦{Number(apartment?.rooms?.price).toLocaleString()}
+            <span className="flex text-xs font-normal font-booking_font flex-col">
+           
+              <span className="block text-lg md:text-xl font-bold font-booking_font_bold">
+                ₦{apartment?.rooms?.price}
               </span>
             </span>
           </div>
@@ -98,7 +91,6 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       </Link>
     );
   }
-
 
   return (
     <div

@@ -36,10 +36,10 @@ const linkData = [
     path: "trips",
   },
 
-  {
-    title: "Contact",
-    path: "trips",
-  },
+  // {
+  //   title: "Contact",
+  //   path: "trips",
+  // },
 ];
 const Hero = () => {
   const today = new Date();
