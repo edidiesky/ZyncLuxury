@@ -119,6 +119,7 @@ model Reservations {
   totalPrice  Int?
   guests      Int?
   patchguests Json?
+  partpaymentPrice Int?
   createdAt   DateTime          @default(now())
   updatedAt   DateTime          @updatedAt
   status      ReservationStatus @default(PENDING)

@@ -28,14 +28,12 @@ export default function RoomInfo() {
       <div className="w-full py-20 flex flex-col gap-24 justify-end items-end">
         <div className="w-[90%] relative lg:w-[85%] mx-auto max-w-custom_1 justify-end items-end flex flex-col">
           <div className="w-full relative flex flex-col gap-20 justify-end">
-            <div className="w-full grid relative grid-cols-1 md:items-center lg:grid-cols-custom_5 gap-4 lg:gap-24">
+            <div className="w-full grid relative grid-cols-1 lg:grid-cols-custom gap-4 lg:gap-24">
               <div className="flex pr-2 lg:pr-12 flex-col gap-12 w-full">
                 {/* description */}
                 <div className="w-full flex flex-col gap-8">
                   <div className="w-full flex flex-col md:flex-row md:items-center">
-                    {/* <div className="w-8 md:-ml-8 h-8 bg-[#d8d8d8] rounded-full flex items-center justify-center text-xl">
-                      <BiChevronLeft />
-                    </div> */}
+        
                     <h2
                       ref={ctaText_1}
                       className="text-3xl lg:text-5xl font-bold font-booking_font4 flex flex-wrap gap-x-[8px] gap-y-[8px]  leading-[1] 
