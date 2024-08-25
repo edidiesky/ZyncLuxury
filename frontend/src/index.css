@@ -67,7 +67,7 @@
 }
 
 a.active {
-  color: #eee;
+  color: var(--primary);
 }
 @layer base {
   * {

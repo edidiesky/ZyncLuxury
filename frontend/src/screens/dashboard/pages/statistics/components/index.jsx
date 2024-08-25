@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAdminStat } from "@/features/stat/statReducer";
 import Loader from "@/components/home/loader";
 import { GetAllUsers } from "@/features/auth/authReducer";
+import { NavLink } from "react-router-dom";
+import Nav from "@/components/common/Nav";
 const DashboardIndex = () => {
   const { currentUser } = useSelector((store) => store.auth);
   const { getStatisLoading } = useSelector((store) => store.stat);
@@ -22,9 +24,7 @@ const DashboardIndex = () => {
       <div className="w-full flex flex-col gap-8">
         <h2 className="text-4xl font-bold font-booking_font4">
           Dashboard
-          <span className="flex text-base font-normal text-[#777]">
-            ZyncLuxury / Overview
-          </span>
+          <Nav path={"/dashboard"} title={"Overview"} />
         </h2>
         <div className="w-full grid gap-8 md:grid-cols-custom">
           <Widget />

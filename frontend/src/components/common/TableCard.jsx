@@ -179,8 +179,52 @@ const TableCard = ({ x, type }) => {
     const endDate = moment(x?.endDate).format("DD MMM YYYY");
     return (
       <>
-        <tr key={x?.id}>
-          <td className=" font-semibold">{x?.rooms?.title}</td>
+        <tr key={x?.id} className="px-4">
+          <td>
+            <div className="flex items-center font-semibold gap-3">
+              <img
+                src={x?.rooms?.images[0]}
+                alt=""
+                className="w-20 h-20 object-cover"
+              />
+              {x?.rooms?.subtitle}
+            </div>
+          </td>
+
+          <td>
+            <div className="flex items-center font-semibold gap-3">
+              {x?.user?.image ? (
+                <div className="flex items-center gap-3">
+                  <img
+                    src={x?.user?.image}
+                    alt=""
+                    className="w-14 h-14 rounded-full"
+                  />
+                  <span>
+                    {x?.user?.name}
+
+                    <span className="block text-xs text-grey">
+                      {" "}
+                      @{x?.user?.username}
+                    </span>
+                  </span>
+                </div>
+              ) : (
+                <div className="w-10 h-10 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
+                  {x?.user?.name[0]}
+                </div>
+              )}
+            </div>
+          </td>
+          <td className=" font-semibold">
+            <span>
+              {" "}
+              {startDate} - {endDate}
+            </span>
+          </td>
+          <td className=" font-semibold">
+            <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
+          </td>
           <td>
             {/* <span className="p-4">
               {x?.status}
@@ -196,18 +240,9 @@ const TableCard = ({ x, type }) => {
               </span>
             )}
           </td>
-          <td className=" font-semibold">
-            <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
-          </td>
-          {/* <td className=" font-semibold">
-            <span>{x?.rooms?.city}</span>
-          </td> */}
-          {/* <td className=" font-semibold">
-            <span>
-              {" "}
-              {startDate} - {endDate}
-            </span>
-          </td> */}
+
+          <td className=" font-semibold">{/* <span>{x?.rooms}</span> */}</td>
+
           {/* <td className=" font-semibold">
             <span> {moment(x?.createdAt).format("DD MMM YYYY")}</span>
           </td> */}

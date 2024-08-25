@@ -65,7 +65,7 @@ export const Table = styled.div`
           z-index: 200;
           text-align: start;
           transition: all 0.4s;
-          background-color: #f5f5f5;
+          background-color: #fafafa;
           border-radius: 40px;
           padding: 1rem;
           /* text-transform: uppercase; */
