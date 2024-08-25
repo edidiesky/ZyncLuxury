@@ -28,7 +28,7 @@ const DashboardIndex = () => {
         </h2>
         <div className="w-full grid gap-8 md:grid-cols-custom">
           <Widget />
-          <div className="w-[400px]">
+          <div className="md:w-[400px]">
             <SalesStat />
           </div>
         </div>

@@ -29,7 +29,7 @@ const ReservationList = () => {
           View All
         </Link>
       </div>
-      {reservations?.length !== 0 ? (
+      {reservations?.length === 0 ? (
         <span
           className="block px-6 font-booking_font font-normal
        text-sm"
@@ -47,14 +47,14 @@ const ReservationList = () => {
                     <img
                       src={data?.user?.image}
                       alt=""
-                      className="w-14 h-14 rounded-full"
+                      className="w-12 h-12 rounded-full"
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
+                    <div className="w-12 h-12 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
                       {data?.user?.name[0]}
                     </div>
                   )}
-                  <span className="text-sm ">
+                  <span className="text-base ">
                     <span className="capitalize">{data?.user?.username}</span>
 
                     <div className="block font-booking_font  font-normal text-xs text-grey">
@@ -62,7 +62,21 @@ const ReservationList = () => {
                     </div>
                   </span>
                 </div>
-                <span>₦{data?.totalPrice}</span>
+
+                <span className="text-lg">
+                  ₦{data?.totalPrice}
+                  <span className="block">
+                    {data?.status === "CONFIRMED" ? (
+                      <span className=" font-semibold text-[10px] px-3 py-2 bg-[#dcf6d9] text-center success">
+                        {data?.status}
+                      </span>
+                    ) : (
+                      <span className=" font-semibold text-[10px] px-3 py-2 bg-[#f3efe5] text-center danger">
+                        {data?.status}
+                      </span>
+                    )}
+                  </span>
+                </span>
               </li>
             );
           })}

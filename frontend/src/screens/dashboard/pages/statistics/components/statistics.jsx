@@ -118,17 +118,17 @@ export const SalesStat = () => {
                 className="text-base py-2 px-6 cursor-pointer hover:bg-[#fafafa] font-booking_font4 font-bold flex items-center justify-between w-full"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
+                  <div className="w-14 h-14 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
                     {data?.user?.name[0]}
                   </div>
-                  <span className="text-sm">
-                    {data?.user?.username}
-                    <div className="block font-booking_font font-normal text-xs text-grey">
+                  <span className="text-base">
+                    <span className="capitalize">{data?.user?.username}</span>
+                    <div className="block font-booking_font font-normal text-sm text-grey">
                       {data?.user?.email}
                     </div>
                   </span>
                 </div>
-                <span>₦{Number(data?.amount).toLocaleString()}</span>
+                <span className="text-lg">₦{Number(data?.amount).toLocaleString()}</span>
               </li>
             );
           })}
