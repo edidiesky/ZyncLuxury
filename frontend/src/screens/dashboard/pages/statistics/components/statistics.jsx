@@ -25,7 +25,7 @@ const GrowthStat = () => {
     chart: {
       height: 350,
       type: "bar",
-      fontFamily: "Karla",
+      fontFamily: "Work Sans",
       foreColor: "#333",
       fontSize: "30px",
       textTransform: "capitalize",
@@ -89,7 +89,7 @@ const GrowthStat = () => {
   );
 };
 
-const SalesStat = () => {
+export const SalesStat = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {

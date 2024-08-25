@@ -213,9 +213,9 @@ const TableCard = ({ x, type }) => {
               {startDate} - {endDate}
             </span>
           </td>
-          <td className=" font-semibold">
+          {/* <td className=" font-semibold">
             <span> {moment(x?.createdAt).format("DD MMM YYYY")}</span>
-          </td>
+          </td> */}
         </tr>
       </>
     );

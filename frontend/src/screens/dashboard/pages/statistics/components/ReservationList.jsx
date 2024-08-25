@@ -29,7 +29,6 @@ const ReservationList = () => {
                 <th>Price</th>
                 <th>Venue</th>
                 <th>Checkin - CheckOut</th>
-                <th>Time</th>
               </tr>
             </thead>
             <tbody>
