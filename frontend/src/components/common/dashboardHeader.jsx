@@ -21,7 +21,7 @@ const AdminSidebarData = [
     tab: {
       icon: <LuBedDouble fontSize={"16px"} />,
       title: "Reservations",
-      path: "",
+      path: "reservation",
     },
     list: [],
   },
@@ -29,7 +29,7 @@ const AdminSidebarData = [
     id: 1,
     tab: {
       title: "Overview",
-      path: "/stat",
+      path: "",
       icon: <BiChart fontSize={"20px"} />,
     },
     list: [],
@@ -82,7 +82,8 @@ const DashboardHeader = () => {
   return (
     <>
       <NotificationSidebar setNotificationActiveBar={setNotificationActiveBar} notificationactivebar={notificationactivebar} />
-      <HeaderStyles className="w-full z-[10] bg-[#151515] border-b flex relative items-center justify-center">
+      <HeaderStyles className="w-full z-[10] bg-[#151515] border-b flex relative items-center 
+      justify-center">
         <div className="Header_wrapper w-[95%] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
@@ -263,8 +264,8 @@ const DashboardHeader = () => {
 };
 
 export const HeaderStyles = styled.div`
-  padding: 0.5rem 0;
-  min-height: 4.8rem;
+  padding: 0.7rem 0;
+  min-height: 5.4rem;
   width: 100%;
   position: sticky;
   top: 0;

@@ -79,7 +79,7 @@ export const Table = styled.div`
             font-size: 15px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1.7rem 1rem;
-            font-family: "Work Sans";
+            font-family: "Work Sans", Arial, Helvetica, sans-serif;
             font-weight: bold !important;
           }
         }
@@ -99,6 +99,7 @@ export const Table = styled.div`
             padding: 1.6rem 1rem !important;
             font-size: 14px !important;
             font-weight: normal !important;
+            font-family: "Work Sans", Arial, Helvetica, sans-serif;
             border-bottom: 1px solid rgba(0, 0, 0, 0.07);
             color: #000;
 

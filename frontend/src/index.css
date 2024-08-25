@@ -67,7 +67,7 @@
 }
 
 a.active {
-  color: var(--grey-1) !important;
+  color: #eee;
 }
 @layer base {
   * {
@@ -80,7 +80,7 @@ a.active {
 }
 
 .ql-container {
-  font-family: Archivo, Arial, Helvetica, sans-serif, sans-serif !important;
+  font-family: Archivo, sans-serif, sans-serif !important;
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded img {
   width: 100% !important;
@@ -168,7 +168,7 @@ body {
   background-color: #fff;
   line-height: 1.6;
   color: var(--dark-1);
-  font-family: Archivo, Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .hide {
@@ -178,14 +178,14 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: Archivo, Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
   border-radius: 10px;
 }
 
 input {
   border: none;
   outline: none;
-  font-family: Archivo, Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 input::placeholder {
@@ -200,7 +200,7 @@ input::placeholder {
   height: 45px;
   padding: 0 1.8rem;
   /* outline: auto; */
-  font-family: Archivo, Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
   transition: all 0.4s;
 }
 
@@ -208,9 +208,8 @@ input::placeholder {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   height: 55px;
 
-
   padding: 0 1.8rem;
-  font-family: Archivo, Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
   transition: all 0.4s;
 }
 
@@ -219,7 +218,7 @@ input::placeholder {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8) !important;
 }
 .inputs:focus {
-    outline: auto !important;
+  outline: auto !important;
 }
 
 .btn {
@@ -234,8 +233,8 @@ input::placeholder {
 
 .btn.btn_2 {
   transition: all 0.5s;
- background: var(--grey-1) !important;
- color:#fff !important;
+  background: var(--grey-1) !important;
+  color: #fff !important;
 }
 
 .btn.btn_3 {
@@ -279,7 +278,7 @@ html.lenis body {
 #reactSchedulerOutsideWrapper *,
 #reactSchedulerOutsideWrapper ::before,
 #reactSchedulerOutsideWrapper ::after {
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
 }
 
 .sc-iuOPfm.eiWmqu {
@@ -289,12 +288,12 @@ html.lenis body {
 }
 
 .sc-gjLKRp.gqsWwT {
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
   font-weight: 600;
 }
 
 .sc-cCzKKE.bwVOYM {
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
   /* font-weight: normal !important; */
   font-size: 12px !important;
 }
@@ -310,7 +309,7 @@ html.lenis body {
 }
 
 .sc-gjLKRp.eAzhgx {
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -358,7 +357,7 @@ html.lenis body {
 
 .sc-cCzKKE.bwVOYM {
   display: block !important;
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
 }
 
 .sc-cCzKKE.fOgBaC::after {
@@ -371,7 +370,7 @@ html.lenis body {
 
 .sc-cCzKKE.dxSqfu {
   display: block !important;
-  font-family: Archivo, Arial, Helvetica, sans-serif !important;
+  font-family: Archivo, sans-serif !important;
 }
 
 .sc-cCzKKE.dxSqfw::after {

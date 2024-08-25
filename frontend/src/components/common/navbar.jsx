@@ -43,9 +43,12 @@ const Navbar = () => {
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
         >
-          <h4 className="family1 font-bold text-2xl uppercase text-dark">
+          <Link
+            to={"/"}
+            className="family1 font-bold text-2xl uppercase text-dark"
+          >
             Zync<span className="text-[var(--primary)]">Luxury</span>
-          </h4>
+          </Link>
 
           <div className="hidden flex-1 sm:flex items-center justify-center gap-6">
             <input
@@ -135,20 +138,18 @@ const Navbar = () => {
                                 to={"/dashboard"}
                                 className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
                               >
-                         
                                 Dashboard
                               </Link>
                               <Link
                                 to={"/dashboard/settings"}
                                 className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
                               >
-                             Profile
+                                Profile
                               </Link>
                               <div
                                 onClick={() => handleLogOut()}
                                 className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
                               >
-                             
                                 Log Out
                               </div>
                             </div>
@@ -191,7 +192,7 @@ const Navbar = () => {
                           )}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex min-w-[80px] items-center gap-2">
                         {currentUser?.image ? (
                           <img
                             src={currentUser?.image}

@@ -57,7 +57,7 @@ const RoomLists = () => {
                       {room?.title}
 
                       <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
-                        Room, London{" "}
+                        {room?.city}
                         <span className="flex items-center gap-1">
                           <FaStar />
                           <FaStar />

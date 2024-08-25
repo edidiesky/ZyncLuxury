@@ -7,7 +7,7 @@ import DashboardLayout from "./screens/DashboardLayout";
 import {
   Statistics,
   Rooms,
-  Customers,  
+  Customers,
   CreateRoom,
   Reservation,
   Orders,
@@ -56,7 +56,7 @@ export default function App() {
               </Suspense>
             }
           />
-           <Route
+          <Route
             path="profile"
             element={
               <Suspense fallback={<Loader />}>
@@ -108,7 +108,7 @@ export default function App() {
         >
           <Route
             exact
-            index
+            path="reservation"
             element={
               <Suspense fallback={<></>}>
                 <Reservation />
@@ -145,7 +145,7 @@ export default function App() {
           {/* Settings */}
           <Route
             exact
-            path="stat"
+            index
             element={
               <Suspense fallback={<Loader />}>
                 <Statistics />

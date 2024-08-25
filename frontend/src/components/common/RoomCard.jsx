@@ -108,7 +108,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       custom={index}
     >
       <Link to={`/room/${apartment?.id}`} className="w-full flex flex-col">
-        <div className="w-full h-[260px] overflow-hidden relative">
+        <div className="w-full h-[360px] overflow-hidden relative">
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
           <Link
@@ -160,8 +160,8 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col border rounded-b-xl p-6">
-          <h3 className="text-2xl md:text-3xl font-extrabold w-full">
+        <div className="w-full flex flex-col rounded-b-xl p-6">
+          <h3 className="text-2xl md:text-3xl font-bold w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
