@@ -63,7 +63,7 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[300px] overflow-hidden border-r hidden lg:flex  column gap-2`}
+      className={`w-[300px] overflow-hidden border-r bg-white hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] pb-4 border-b flex flex-col gap-8">
@@ -170,7 +170,7 @@ const DashboardSidebar = () => {
 
 export const HeaderStyles = styled.div`
   /* width: 100px; */
-  z-index: 3000000;
+  /* z-index: 3000000; */
   position: sticky;
   top: 0;
   height: 100vh;

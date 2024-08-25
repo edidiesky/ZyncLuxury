@@ -19,7 +19,6 @@ const TableCard = ({ x, type }) => {
       <>
         {/* <Delete /> */}
         <tr key={x?.id}>
-          
           <td>
             <span className="flex items-center gap-2">
               Payment Received from{" "}
@@ -28,9 +27,7 @@ const TableCard = ({ x, type }) => {
               </span>
             </span>
           </td>
-          <td>
-           {x?.reservation?.id}
-          </td>
+          <td>{x?.reservation?.id}</td>
           <td>₦{Number(x?.amount).toLocaleString()}</td>
           <td>{x?.currency}</td>
           <td>
@@ -87,7 +84,7 @@ const TableCard = ({ x, type }) => {
           <td>
             {x?.isAdmin ? (
               <span className=" font-semibold text-xs font-booking_font_bold text-center success">
-               Admin
+                Admin
               </span>
             ) : (
               <span className=" font-semibold text-xs font-booking_font_bold text-center danger">
@@ -138,13 +135,13 @@ const TableCard = ({ x, type }) => {
         </AnimatePresence>
         <tr key={x?._id}>
           <td>
-            <div className="flex w-full justify-start items-center gap-4">
+            <div className="flex w-full justify-start items-center gap-2">
               <img
                 src={x?.images[0]}
                 alt=""
                 className="w-20 h-16 object-cover rounded-lg"
               />
-              <span className="text-base font-semibold family1 text-center text-dark">
+              <span className="text-sm font-semibold family1 text-dark">
                 {x?.title}
               </span>
             </div>
@@ -152,9 +149,7 @@ const TableCard = ({ x, type }) => {
           {/* <td className=" font-semibold">{x?.address}</td> */}
 
           <td className=" font-semibold">{x?.city}</td>
-          <td className=" font-semibold">
-            ₦{Number(x?.price).toLocaleString()}
-          </td>
+          <td className=" font-semibold">₦{x?.price}</td>
 
           <td className=" font-semibold">{startDate}</td>
 

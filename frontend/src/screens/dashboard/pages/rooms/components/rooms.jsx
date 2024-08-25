@@ -16,7 +16,7 @@ const RoomsList = () => {
   return (
     <>
       {getallRoomisLoading && <Loader />}
-      <div className="w-full bg-white shadows p-4 px-6 border rounded-[20px]">
+      <div className="w-full bg-white py-4">
         {/* <label
           htmlFor=""
           className="hidden md:flex text-xl text-dark w-[200px] lg:w-[250px]
@@ -41,8 +41,8 @@ const RoomsList = () => {
                   {/* <th>Location</th> */}
                   <th>City</th>
                   <th>Price</th>
-                  <th>Date Created</th>
-                  <th>Manage Room</th>
+                  <th>Date</th>
+                  <th>Manage</th>
                 </tr>
               </thead>
               <tbody>

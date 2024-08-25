@@ -12,9 +12,14 @@ import { handleClearRoomAlert } from "@/features/room/roomSlice";
 import { DeleteRoom } from "@/features/room/roomReducer";
 import { DeleteReservation } from "@/features/reservation/reservationReducer";
 import { handleClearReservationAlert } from "@/features/reservation/reservationSlice";
-export default function DeleteModal({ type, modal,
+export default function DeleteModal({
+  type,
+  modal,
   reservation,
-  setModal, room, id }) {
+  setModal,
+  room,
+  id,
+}) {
   const { deleteRoomisLoading, deleteRoomisSuccess } = useSelector(
     (store) => store.room
   );
@@ -32,7 +37,7 @@ export default function DeleteModal({ type, modal,
   }, []);
   // onClick={() => dispatch(DeleteReservation(reservation?.id))}
   const handleDeleteReservation = useCallback(() => {
-    dispatch(DeleteReservation(reservation?.id))
+    dispatch(DeleteReservation(reservation?.id));
   }, []);
   const handleDeleteUser = useCallback(() => {
     // console.log(id)
@@ -42,14 +47,22 @@ export default function DeleteModal({ type, modal,
   useEffect(() => {
     dispatch(handleClearRoomAlert());
     dispatch(handleClearUserAlert());
-    if (deleteRoomisSuccess || deleteUserisSuccess || deleteReservationisSuccess) {
+    if (
+      deleteRoomisSuccess ||
+      deleteUserisSuccess ||
+      deleteReservationisSuccess
+    ) {
       setModal(false);
       dispatch(handleClearRoomAlert());
       dispatch(handleClearUserAlert());
-      dispatch(handleClearReservationAlert())
+      dispatch(handleClearReservationAlert());
     }
-  }, [setModal, deleteRoomisSuccess, deleteUserisSuccess, deleteReservationisSuccess]);
-
+  }, [
+    setModal,
+    deleteRoomisSuccess,
+    deleteUserisSuccess,
+    deleteReservationisSuccess,
+  ]);
 
   if (type === "reservation") {
     return (
@@ -83,8 +96,8 @@ export default function DeleteModal({ type, modal,
             <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
               Delete this Reservation?
               <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
-                By deleting this reservation,It cannot be retrieved back
-                if this action you carry has been taken.
+                By deleting this reservation,It cannot be retrieved back if this
+                action you carry has been taken.
               </span>
             </h3>
           </div>
@@ -100,7 +113,7 @@ export default function DeleteModal({ type, modal,
               disabled={deleteReservationisLoading}
               onClick={handleDeleteReservation}
               className="deleteBtn family1 font-booking_font_bold flex items-center justify-center text-sm"
-            // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
+              // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
             >
               {deleteReservationisLoading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -148,9 +161,8 @@ export default function DeleteModal({ type, modal,
             <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
               Delete this room?
               <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
-                By deleting this product, you are directly removing the product
-                form the database and the website. It cannot be retrieved back
-                if this action you carry has been taken.
+                By deleting this product, It cannot be retrieved if this action
+                you carry has been taken.
               </span>
             </h3>
           </div>
@@ -166,7 +178,7 @@ export default function DeleteModal({ type, modal,
               disabled={deleteRoomisLoading}
               onClick={handleDeleteRoom}
               className="deleteBtn family1 font-booking_font_bold flex items-center justify-center text-sm"
-            // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
+              // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
             >
               {deleteRoomisLoading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -213,9 +225,8 @@ export default function DeleteModal({ type, modal,
           <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
             Delete this user?
             <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
-              By deleting this user, you are directly removing the product form
-              the database and the website. It cannot be retrieved back if this
-              action you carry has been taken.
+              By deleting this user, It cannot be retrieved if this action you
+              carry has been taken.
             </span>
           </h3>
         </div>
@@ -231,7 +242,7 @@ export default function DeleteModal({ type, modal,
             disabled={deleteUserisLoading}
             onClick={handleDeleteUser}
             className="deleteBtn family1 font-booking_font_bold flex items-center justify-center text-sm"
-          // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
+            // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
           >
             {deleteUserisLoading ? (
               <span className="flex items-center justify-center gap-2">
@@ -260,14 +271,14 @@ const DeleteContainer = styled(motion.div)`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   .deleteCard {
-    max-width: 500px;
-    min-width: 400px;
+    max-width: 400px;
+    min-width: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
     position: relative;
     @media (max-width: 780px) {
@@ -277,7 +288,7 @@ const DeleteContainer = styled(motion.div)`
     .cross {
       position: absolute;
       right: 15px;
-      top: 2%;
+      top: 4%;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
