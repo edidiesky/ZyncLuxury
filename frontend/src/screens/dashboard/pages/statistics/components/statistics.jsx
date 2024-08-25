@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import ReservationList from "./ReservationList";
 
 const Statistics = () => {
   return (
@@ -11,8 +12,8 @@ const Statistics = () => {
       <div className="flex w-full">
         <GrowthStat />
       </div>
-      <div className="flex md:w-[400px]">
-        <SalesStat />
+      <div className="flex md:w-[500px]">
+        <ReservationList />
       </div>
     </div>
   );

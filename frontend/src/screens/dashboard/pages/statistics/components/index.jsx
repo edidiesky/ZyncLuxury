@@ -33,7 +33,7 @@ const DashboardIndex = () => {
           </div>
         </div>
         <Statistics />
-        <ReservationList />
+     
       </div>
       {/* <DashboardBanner/> */}
     </div>
