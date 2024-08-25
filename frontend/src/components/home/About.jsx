@@ -88,8 +88,10 @@ const About = () => {
                     </h4>
                   </div>
                   <div className="w-full z-10">
-                    <div className="w-[90%] capitalize font-bold -mt-20 text-base text-center py-4 pt-12 px-4
-                     rounded-xl text-white mx-auto bg-[var(--primary)]">
+                    <div
+                      className="w-[90%] capitalize font-bold -mt-20 text-base text-center py-4 pt-12 px-4
+                     rounded-xl text-white mx-auto bg-[var(--primary)]"
+                    >
                       {data?.text}
                     </div>
                   </div>
@@ -113,10 +115,10 @@ const About = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h3 className="text-4xl md:text-5xl leading-[2] capitalize family2 text-white">
+            <h3 className="text-4xl md:text-5xl font-bold capitalize family2 text-white">
               its’ not about business, <br /> <span>it’s about ‘YOU’!</span>
             </h3>
-            <div className="flex items-center py-8 gap-8">
+            <div className="flex items-center py-4 gap-8">
               <div className="family2 text-xl md:text-xl font-bold text-white">
                 The Mission
               </div>

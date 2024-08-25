@@ -17,7 +17,7 @@ const AdminSidebarData = [
     id: 1,
     tab: {
       title: "Dashboard",
-      path: "/stat",
+      path: "",
       icon: <Layout fontSize={"20px"} />,
     },
     list: [],
@@ -27,7 +27,7 @@ const AdminSidebarData = [
     tab: {
       icon: <LuBedDouble fontSize={"16px"} />,
       title: "Reservations",
-      path: "",
+      path: "/reservation",
     },
     list: [],
   },

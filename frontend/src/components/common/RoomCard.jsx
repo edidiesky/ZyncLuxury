@@ -161,14 +161,14 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col rounded-b-xl p-6">
-          <h3 className="text-2xl md:text-3xl font-bold w-full">
+          <h3 className="text-3xl font-bold w-full">
             {apartment?.subtitle}
             {/* Amazon */}
           </h3>
-          <div className="flex mt-4 justify-between w-full items-center  gap-4">
+          <div className="flex mt-2 justify-between w-full items-center  gap-4">
             <div className="flex itec flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-              <p className="text-xl font-bold">
+              <p className="text-xl md:text-2xl font-bold">
                 ₦{apartment?.price}{" "}
                 <span className="text-sm font-normal">/night</span>
               </p>
