@@ -8,8 +8,8 @@ import { getAllRooms } from "@/features/room/roomReducer";
 import Loader from "@/components/home/loader";
 const MainContent = () => {
   return (
-    <div className="w-full relative min-h-[100vh] flex flex-col">
-      {/* <Hero /> */}
+    <div className="w-full relative min-h-[100vh] flex flex-col gap-8">
+      <Hero />
       <RoomLists />
     </div>
   );
@@ -18,63 +18,42 @@ const MainContent = () => {
 const Hero = () => {
   return (
     <div
-      className="w-full min-h-[47vh] py-32 relative flex items-center justify-center
+      className="w-full relative pt-20 flex items-center justify-center
    gap-8"
     >
-      <div className="w-full h-full z-30 bg-[rgba(0,0,0,.6)] absolute top-0 left-0"></div>
-      <img
-        src="/images/hazel_8.jpeg"
-        alt=""
-        className="absolute z-10 object-cover top-0 left-0 h-full w-full"
-      />
-      <div
-        className="w-[90%] mx-auto z-40 flex items-center justify-center flex-col
-       gap-4"
-      >
-        <h1 className="text-white font-bold text-center leading-[1.3] text-5xl md:text-6xl font-booking_font4">
-         Our Collections
+      <div className="w-[90%] max-w-custom mx-auto z-40 flex items-center gap-16 justify-center flex-col">
+        <h1 className="text-[#000] font-bold md:text-center leading-[1] text-5xl md:text-6xl font-booking_font4">
+          Best <span className="text-[var(--primary)]">Properites</span> of the Year
+          <span className="block font-normal py-4 text-lg text-grey">
+            Here is a list of our room collections
+          </span>
         </h1>
-        <div className="w-full absolute bottom-0 left-0 z-[35] flex items-center justify-center py-8">
-          <div className="w-[90%] lg:w-[50%] mx-auto grid grid-cols-2  sm:grid-cols-4 items-center justify-center gap-4 max-w-custom_1 h-full">
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full bg-white text-dark flex items-center justify-center">
-                1
-              </div>{" "}
-              <span className="text-white">Search</span>
-            </span>
+        <div className="flex w-full flex-col gap-6">
+          <h1 className="text-[#000] font-semibold leading-[1.3] text-2xl md:text-3xl font-booking_font4">
+            Rent an Apartment
+          </h1>
+          <div className="w-full bg-[#fafafa] flex flex-col py-12 rounded-xl">
+            <div className="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex flex-col gap-2 text-base font-semibold">
+                Type of Property
+                <div className="w-full p-6 bg-white"></div>
+              </div>
 
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                2
-              </div>{" "}
-              <span className="text-white">BOOKING</span>
-            </span>
+              <div className="flex flex-col gap-2 text-base font-semibold">
+                Rate for all per month
+                <div className="w-full p-6 bg-white"></div>
+              </div>
 
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                3
-              </div>{" "}
-              <span className="text-white">CHECKOUT</span>
-            </span>
+              <div className="flex flex-col gap-2 text-base font-semibold">
+                Area
+                <div className="w-full p-6 bg-white"></div>
+              </div>
 
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                4
-              </div>{" "}
-              <span className="text-white">THANK YOU</span>
-            </span>
+              <div className="flex flex-col gap-2 text-base font-semibold">
+                Location
+                <div className="w-full p-6 bg-white"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -91,21 +70,19 @@ const RoomLists = () => {
   }, []);
   return (
     <div
-      className="w-full relative py-24 flex items-center justify-center
+      className="w-full relative py-16 flex items-center justify-center
    gap-8"
     >
       <div
-        className="w-[90%] relative mx-auto max-w-custom_1 z-40 grid lg:grid-cols-1 items-start lg:justify-center flex-col
+        className="w-[90%] relative mx-auto max-w-custom_1 z-40 items-start lg:justify-center flex-col
        gap-12"
       >
         {getallRoomisLoading ? (
           <Loader />
         ) : (
-          <div className=" gap-8 w-full grid md:grid-cols-3">
+          <div className=" gap-8 w-full grid md:grid-cols-2 lg:grid-cols-3">
             {rooms?.map((apartment, index) => {
-              return (
-                <RoomCard key={index} apartment={apartment} />
-              );
+              return <RoomCard key={index} apartment={apartment} />;
             })}
           </div>
         )}

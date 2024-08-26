@@ -86,7 +86,7 @@ export default function DeleteModal({
             y: "100vh",
             transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
           }}
-          className={"deleteCard z-[40000] relative gap-2"}
+          className={"deleteCard z-[400000] relative gap-2"}
         >
           <div className="cross" onClick={handleClearAlert}>
             <RxCross2 />

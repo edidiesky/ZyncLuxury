@@ -126,7 +126,7 @@ button:disabled {
 }
 :root {
   --grey-1: #4f578d;
-  --dark-1: #22253d;
+  --dark-1: #000;
   --primary: #f73760;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
