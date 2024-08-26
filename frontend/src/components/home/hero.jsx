@@ -271,7 +271,7 @@ const Hero = () => {
        gap-6 md:gap-12"
           >
             <h1
-              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl lg:text-6xl
+              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
           family2"
             >
               Where Serenity Meets{" "}
