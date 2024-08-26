@@ -280,8 +280,8 @@ const Hero = () => {
                 <Dash />
               </span>{" "}
               <br /> Book Your Resort Experience
-              <span className="text-lg lg:text-2xl font-normal capitalize pt-4 md:pt-8 block family1">
-                We set the pace Inspiring homes beyond boundaries
+              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] mx-auto font-normal capitalize pt-4 md:pt-8 block family1">
+                We are experts who set the pace Inspiring homes beyond boundaries. We help you get the best out of your finance in getting a home
               </span>
             </h1>
             <div className="w-full sm:items-center flex-col sm:flex-row sm:justify-center gap-4 flex">
