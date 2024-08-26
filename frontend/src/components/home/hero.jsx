@@ -79,7 +79,9 @@ const Hero = () => {
             className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between
        gap-12"
           >
-            <h4 className="family2 text-2xl uppercase font-bold text-white">ZyncLuxury</h4>
+            <h4 className="family2 text-2xl uppercase font-bold text-white">
+              ZyncLuxury
+            </h4>
 
             <div className="hidden lg:flex items-center justify-center gap-2">
               {linkData?.map((list, index) => {
@@ -192,7 +194,7 @@ const Hero = () => {
                             )}
                           </div>
                         </div>
-                        <div className="flex min-w-[80px] items-center gap-2">
+                        <div className="flex min-w-[60px] md:min-w-[80px] items-center gap-2">
                           {currentUser?.image ? (
                             <img
                               src={currentUser?.image}
@@ -264,7 +266,7 @@ const Hero = () => {
         </div>
         <div
           className="w-[90%] max-w-custom mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
-       gap-12"
+       gap-6 md:gap-12"
         >
           <h1
             className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl lg:text-6xl
@@ -276,24 +278,28 @@ const Hero = () => {
               <Dash />
             </span>{" "}
             <br /> Book Your Resort Experience
-            <span className="text-xl lg:text-2xl font-normal capitalize pt-8 block family1">
+            <span className="text-lg lg:text-2xl font-normal capitalize pt-4 md:pt-8 block family1">
               We set the pace Inspiring homes beyond boundaries
             </span>
           </h1>
-          <div className="w-full items-center flex-row md:justify-center gap-4 flex">
-            <Link
-              to={"/search"}
-              className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-8 py-4 md:px-12 md:py-6"
-            >
-              <AnimateText children={"Book Your Home"} />
-            </Link>
+          <div className="w-full md:items-center flex-col md:flex-row md:justify-center gap-4 flex">
+            <div className="flex">
+              <Link
+                to={"/search"}
+                className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-8 py-4 md:px-12 md:py-6"
+              >
+                <AnimateText children={"Book Your Home"} />
+              </Link>
+            </div>
 
-            <Link
-              to={"/search"}
-              className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-8 py-4 md:px-12 md:py-6"
-            >
-              <AnimateText children={"Learn More"} />
-            </Link>
+            <div className="flex items-center">
+              <Link
+                to={"/search"}
+                className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-8 py-4 md:px-12 md:py-6"
+              >
+                <AnimateText children={"Learn More"} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

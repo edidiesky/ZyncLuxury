@@ -37,6 +37,7 @@ model User {
   location        String?
   about           String?
   phone           String?
+  favourites      String[]
   experience      Int?
   email           String?         @unique
   emailVerified   DateTime?
@@ -64,7 +65,7 @@ model User {
 model Rooms {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  subtitle       String
+  subtitle    String
   description String
   price       String?
   city        String
@@ -112,28 +113,28 @@ model Notifications {
 }
 
 model Reservations {
-  id          String            @id @default(auto()) @map("_id") @db.ObjectId
-  startDate   DateTime
-  endDate     DateTime
-  totalPrice  Int?
-  guests      Int?
-  patchguests Json?
+  id               String            @id @default(auto()) @map("_id") @db.ObjectId
+  startDate        DateTime
+  endDate          DateTime
+  totalPrice       Int?
+  guests           Int?
+  patchguests      Json?
   partpaymentPrice Int?
-  createdAt   DateTime          @default(now())
-  updatedAt   DateTime          @updatedAt
-  status      ReservationStatus @default(PENDING)
-  roomid      String            @db.ObjectId
-  userid      String            @db.ObjectId
-  payment     Payment[]
-  rooms       Rooms?            @relation(fields: [roomid], references: [id], onDelete: Cascade)
-  user        User?             @relation(fields: [userid], references: [id], onDelete: Cascade)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  status           ReservationStatus @default(PENDING)
+  roomid           String            @db.ObjectId
+  userid           String            @db.ObjectId
+  payment          Payment[]
+  rooms            Rooms?            @relation(fields: [roomid], references: [id], onDelete: Cascade)
+  user             User?             @relation(fields: [userid], references: [id], onDelete: Cascade)
 }
 
 model Payment {
   id            String        @id @default(auto()) @map("_id") @db.ObjectId
   amount        Int?
   currency      String
-   guests      Int?
+  guests        Int?
   status        PaymentStatus @default(PENDING)
   userid        String        @db.ObjectId // Customer ID
   sellerId      String        @db.ObjectId // Seller ID
