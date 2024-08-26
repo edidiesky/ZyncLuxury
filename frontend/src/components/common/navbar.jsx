@@ -41,7 +41,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="px-4 z-[50] #fff border-b min-h-[85px] flex items-center justify-center">
+      <div className="px-4 #fff border-b min-h-[85px] flex items-center justify-center">
         <div
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
@@ -356,7 +356,7 @@ const Navbar = () => {
 };
 
 export const ProfileDropdownStyles = styled.div`
-z-index: 4000000;
+z-index: 400;
   .profile_wrapper:hover .profile_dropdown {
     opacity: 1;
     transform: scale(1);

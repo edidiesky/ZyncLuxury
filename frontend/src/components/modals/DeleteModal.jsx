@@ -37,8 +37,9 @@ export default function DeleteModal({
   }, []);
   // onClick={() => dispatch(DeleteReservation(reservation?.id))}
   const handleDeleteReservation = useCallback(() => {
-    dispatch(DeleteReservation(reservation?.id));
+    dispatch(DeleteReservation(room?.id));
   }, []);
+
   const handleDeleteUser = useCallback(() => {
     // console.log(id)
     dispatch(DeleteSingleUser(id));
@@ -71,6 +72,7 @@ export default function DeleteModal({
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        className="z-[400000]"
       >
         <motion.div
           initial={{
@@ -84,7 +86,7 @@ export default function DeleteModal({
             y: "100vh",
             transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
           }}
-          className={"deleteCard gap-2"}
+          className={"deleteCard z-[40000] relative gap-2"}
         >
           <div className="cross" onClick={handleClearAlert}>
             <RxCross2 />
@@ -93,7 +95,7 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"60px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
+            <h3 className="text-xl md:text-2xl text-center font-bold font-booking_font_bold family1">
               Delete this Reservation?
               <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
                 By deleting this reservation,It cannot be retrieved back if this
@@ -121,7 +123,7 @@ export default function DeleteModal({
                   Deleting in progress
                 </span>
               ) : (
-                " Delete Reservation"
+                " Delete"
               )}
             </button>
           </div>
@@ -265,7 +267,7 @@ const DeleteContainer = styled(motion.div)`
   position: fixed;
   left: 0;
   display: flex;
-  z-index: 4900;
+  z-index: 490000000;
   align-items: center;
   justify-content: center;
   top: 0;
@@ -281,7 +283,7 @@ const DeleteContainer = styled(motion.div)`
     border-radius: 10px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
     position: relative;
-    @media (max-width: 780px) {
+    @media (max-width: 480px) {
       max-width: 95%;
       min-width: 95%;
     }

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import moment from "moment";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
 import Heart from "../../assets/svg/heart";
@@ -10,9 +10,11 @@ import { DeleteReservation } from "@/features/reservation/reservationReducer";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
 import Image from "./Image";
+import DeleteModal from "../modals/DeleteModal";
 
 const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
   const [tabindex, setTabIndex] = useState(0);
+    const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const handleImagePosition = (position) => {
     if (position === "left") {
@@ -43,52 +45,63 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
 
     const endDate = moment(apartment?.endDate).format("MMMM Do");
     return (
-      <Link
-        to={`/reservation/payment/${apartment?.id}`}
-        className="w-full flex flex-col"
-      >
-        <div className="h-[240px] overflow-hidden rounded-xl group w-full relative">
-          <Link
-            to={"#"}
-            style={{ transition: "all .4s" }}
-            onClick={() => dispatch(DeleteReservation(apartment?.id))}
-            className="absolute group-hover:scale-100 scale-0 top-5 right-5 rounded-full w-12 h-12 z-[50] bg-white shadow-lg flex
+      <>
+        <AnimatePresence>
+          {userdeletemodal && (
+            <DeleteModal
+              type="reservation"
+              room={apartment}
+              modal={userdeletemodal}
+              setModal={setUserDeleteModal}
+            />
+          )}
+        </AnimatePresence>
+        <Link
+          to={`/reservation/payment/${apartment?.id}`}
+          className="w-full flex flex-col"
+        >
+          <div className="h-[240px] overflow-hidden rounded-xl group w-full relative">
+            <Link
+              to={"#"}
+              style={{ transition: "all .4s" }}
+              onClick={() => setUserDeleteModal(true)}
+              className="absolute group-hover:scale-100 scale-0 top-5 right-5 rounded-full w-12 h-12 z-[50] bg-white shadow-lg flex
            items-center justify-center text-xl"
-          >
-            <RxCross1 />
-          </Link>
-          <img
-            alt="Cotion"
-            placeholder="blur"
-            style={{
-              transition:
-                "filter 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-            }}
-            src={apartment?.rooms?.images[0]}
-            className="w-full h-[240px] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
-          />
-        </div>
-        <div className="w-full flex flex-col py-6 bg-white gap-2">
-          <h3 className="text-2xl font-bold">{apartment?.rooms?.subtitle}</h3>
-
-          <div
-            style={{ letterSpacing: "1px" }}
-            className="flex items-center justify-between gap-2 pb-2 uppercase 
-            text-xs font-semibold"
-          >
-            <span className="flex uppercase items-center">
-              <span>{startDate}</span> - <span>{endDate}</span>
-            </span>
-
-            <span className="flex text-xs font-normal font-booking_font flex-col">
-           
-              <span className="block text-lg md:text-xl font-bold font-booking_font_bold">
-                ₦{apartment?.rooms?.price}
-              </span>
-            </span>
+            >
+              <RxCross1 />
+            </Link>
+            <img
+              alt="Cotion"
+              placeholder="blur"
+              style={{
+                transition:
+                  "filter 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+              }}
+              src={apartment?.rooms?.images[0]}
+              className="w-full h-[240px] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
+            />
           </div>
-        </div>
-      </Link>
+          <div className="w-full flex flex-col py-6 bg-white gap-2">
+            <h3 className="text-2xl font-bold">{apartment?.rooms?.subtitle}</h3>
+
+            <div
+              style={{ letterSpacing: "1px" }}
+              className="flex items-center justify-between gap-2 pb-2 uppercase 
+            text-xs font-semibold"
+            >
+              <span className="flex uppercase items-center">
+                <span>{startDate}</span> - <span>{endDate}</span>
+              </span>
+
+              <span className="flex text-xs font-normal font-booking_font flex-col">
+                <span className="block text-lg md:text-xl font-bold font-booking_font_bold">
+                  ₦{apartment?.rooms?.price}
+                </span>
+              </span>
+            </div>
+          </div>
+        </Link>
+      </>
     );
   }
 

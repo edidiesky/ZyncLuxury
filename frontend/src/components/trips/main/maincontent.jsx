@@ -23,12 +23,26 @@ const RoomLists = () => {
    gap-8"
     >
       <div className="w-[90%] md:w-[80%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
-        <h3 className="text-4xl md:text-5xl font-bold">My Reservations
-          <span className="block pt-3 font-normal text-base md:text-xl">
-            Here is your list of your luxurious booked homes
+        {reservations?.length === 0 ? (
+          <h3 className="text-dark text-start leading-[1.3] text-4xl md:text-5xl font-bold font-booking_font4">
+            You have an empty Trips
+            <Link
+              to={"/search"}
+              style={{ letterSpacing: "4px" }}
+              className="text-[9px] md:text-xs font-normal pb-1 pt-3 w-fit border-b border-[rgba(0,0,0,.5)] uppercase flex items-center gap-4 font-booking_font"
+            >
+              Visit our rooms collections
+            </Link>
+          </h3>
+        ) : (
+          <h3 className="text-4xl md:text-5xl font-bold">
+            My Reservations
+            <span className="block pt-3 font-normal text-base md:text-xl">
+              Here is your list of your luxurious booked homes
             </span>
+          </h3>
+        )}
 
-        </h3>
         <div
           className="w-full  z-40 items-start justify-center flex-col
        gap-12"
@@ -59,16 +73,7 @@ const RoomLists = () => {
           ) : (
             <div className="w-full">
               {reservations?.length === 0 ? (
-                <h1 className="text-dark text-start leading-[1.3] text-4xl font-booking_font4">
-                  You have an empty Trips
-                  <Link
-                    to={"/search"}
-                    style={{ letterSpacing: "4px" }}
-                    className="text-[9px] md:text-xs font-normal pb-1 pt-3 w-[300px] border-b border-[rgba(0,0,0,.5)] uppercase flex items-center gap-4 font-booking_font"
-                  >
-                    Visit our rooms collections
-                  </Link>
-                </h1>
+                ""
               ) : (
                 <div className="w-full gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
                   {reservations?.map((apartment, index) => {
