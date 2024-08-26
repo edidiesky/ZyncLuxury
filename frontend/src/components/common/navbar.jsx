@@ -266,19 +266,25 @@ const Navbar = () => {
         style={{ zIndex: "200" }}
         className={`${
           bar ? "left-0" : "-left-[100%]"
-        } w-[300px] h-full transition-all ease duration-700 fixed flex lg:hidden top-0 bg-[#fff] shadow-2xl column gap-2`}
+        } w-[300px] h-full transition-all ease duration-700 fixed flex lg:hidden top-0 shadow-2xl column gap-2`}
       >
         <div
+          style={{
+            background: "#22253d",
+          }}
+          className="w-full h-full z-30 absolute top-0 left-0"
+        ></div>
+        <div
           onClick={() => setBar(!bar)}
-          style={{ zIndex: "200" }}
+          style={{ zIndex: "100" }}
           className={`${
             bar ? "left-0" : "-left-[100%]"
-          } w-full h-full transition-all ease duration-300 fixed flex lg:hidden top-0 bg-[#42424227] column gap-2`}
+          } w-full h-full transition-all ease duration-300 fixed flex lg:hidden top-0 bg-[#424242b0] column gap-2`}
         ></div>
 
         <div
           style={{ zIndex: "200" }}
-          className="w-full Header_wrapper h-full bg-white flex item-center flex-col gap-4"
+          className="w-full Header_wrapper bg-[#22253d] shadows border-r border-[#22253d] h-full  flex item-center flex-col gap-4"
         >
           {currentUser && (
             <div className="flex p-4 items-center gap-2">
@@ -305,7 +311,7 @@ const Navbar = () => {
                 />
               )}
               {currentUser && (
-                <h4 className="text-base font-booking_font4 text-dark family1">
+                <h4 className="text-base font-bold font-booking_font4 text-[#fff] family1">
                   {currentUser?.name}
                   <span className="block font-normal font-booking_font text-sm text-grey">
                     {currentUser?.email}
@@ -321,8 +327,8 @@ const Navbar = () => {
                     <Link
                       to={`/${x.path}`}
                       key={index}
-                      className="text-dark font-booking_font4
-                        hover:bg-[rgba(0,0,0,.1)] py-[20px] border-b text-sm px-8"
+                      className="text-[#fff] font-booking_font4
+                        hover:bg-[#42424227] py-[20px] border-b border-[#424242a8] text-sm px-8"
                     >
                       {x.title}
                     </Link>
@@ -333,7 +339,7 @@ const Navbar = () => {
                     <Link
                       to={`/${x.path}`}
                       key={index}
-                      className="text-dark font-booking_font4  hover:bg-[rgba(0,0,0,.1)] py-[20px] border-b text-sm px-8"
+                      className="text-[#fff] font-booking_font4  hover:bg-[#42424227] py-[20px] border-b border-[#42424299] text-sm px-8"
                     >
                       {x.title}
                     </Link>
