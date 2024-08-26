@@ -54,7 +54,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search for homes"
-              className="inputs text-base w-full rounded-full"
+              className="inputs text-base font-semibold w-full rounded-full"
             />
           </div>
           <div className="flex-1 flex items-center justify-end gap-4">

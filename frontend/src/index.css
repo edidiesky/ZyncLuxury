@@ -190,7 +190,7 @@ input {
 
 input::placeholder {
   font-size: inherit;
-  font-weight: normal;
+  font-weight: inherit;
   color: #7777;
   font-family: inherit;
 }
