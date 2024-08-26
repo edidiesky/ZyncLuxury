@@ -8,7 +8,10 @@ import AnimateText from "@/animations/AnimateText";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
 const linkData = [
-
+  {
+    title: "Home",
+    path: "",
+  },
   {
     title: "Rooms",
     path: "search",
