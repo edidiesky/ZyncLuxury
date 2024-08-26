@@ -52,7 +52,7 @@ const RoomLists = () => {
               <div className="flex flex-col gap-12 w-full">
                 {/* room title */}
                 <div className="w-full flex flex-col gap-4">
-                  <div className="flex md:items-center justify-between gap-4">
+                  <div className="flex lg:items-center justify-between gap-4">
                     <h3 className="text-4xl w-full family1 font-bold">
                       {room?.title}
 
@@ -67,29 +67,29 @@ const RoomLists = () => {
                         </span>
                       </span>
                     </h3>
-                    <div className="flex items-center justify-end gap-4">
+                    <div className="flex lg:items-center md:justify-end gap-4">
                       <div className=" flex text-lg cursor-pointer items-center gap-2 text-dark justify-center">
                         <Bookmark />
                         Save
                       </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] gap-8">
-                    <div className="flex flex-col p-4 pl-8 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 border rounded-[10px] md:gap-8">
+                    <div className="flex flex-col p-4 pl-4 md:pl-8 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
                       <span className="text-lg font-bold">Bedroom</span>
                       <div className="flex items-center gap-4">
                         <span className="text-base">{room?.bedroom} </span>
                         <Bed fontSize={"32px"} />
                       </div>
                     </div>
-                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                    <div className="flex flex-col  p-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
                       <span className="text-lg font-bold">Bathroom</span>
                       <div className="flex items-center gap-4">
                         <span className="text-base">{room?.bathroom} </span>
                         <FaShower fontSize={"30px"} />
                       </div>
                     </div>
-                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                    <div className="flex flex-col p-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
                       <span className="text-lg font-bold">Bedroom</span>
                       <div className="flex items-center gap-3">
                         <span className="text-base">1220 sq.ft </span>
@@ -97,11 +97,12 @@ const RoomLists = () => {
                         <LiaChartAreaSolid fontSize={"30px"} />
                       </div>
                     </div>
-                    <div className="flex flex-col pr-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                      <Bed />
+                    <div className="flex flex-col p-4 border-r min-h-[100px] justify-center gap-1 text-sm font-booking_font4 text-dark">
+                      <span className="text-lg font-bold">Bedroom</span>
                       <div className="flex items-center gap-3">
-                        <span className="text-base">{room?.bedroom} </span>
-                        <span className="text-lg font-bold">Bedroom</span>
+                        <span className="text-base">1220 sq.ft </span>
+
+                        <LiaChartAreaSolid fontSize={"30px"} />
                       </div>
                     </div>
                   </div>
