@@ -267,7 +267,7 @@ const Hero = () => {
        gap-6 md:gap-12"
           >
             <h1
-              className="text-white md:text-center capitalize font-semibold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
+              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
           family2"
             >
               Where Serenity Meets{" "}
@@ -276,7 +276,7 @@ const Hero = () => {
                 <Dash />
               </span>{" "}
               <br /> Book Your Resort Experience
-              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] mx-auto font-normal capitalize pt-4 md:pt-8 block family1">
+              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] mx-auto font-semibold capitalize pt-4 md:pt-8 block family1">
                 We are experts who set the pace Inspiring homes beyond
                 boundaries. We help you get the best out of your finance in
                 getting a home
@@ -346,7 +346,10 @@ const SearchHomes = () => {
   return (
     <div className="w-full -mt-20">
       <div className="max-w-[1200px] w-[90%] rounded-[20px] mx-auto py-8 lg:flex-row min-h-[160px] bg-white shadows z-40  relative flex-col items-center justify-center flex">
-        <div className="flex flex-col md:px-4 gap-4 w-full">
+        <div
+          onClick={() => setCountryModal(false)}
+          className="flex flex-col md:px-4 gap-4 w-full"
+        >
           <div className="p-4 rounded-full flex-wrap  flex items-center gap-4">
             <div className="py-3 px-6 text-center rounded-full bg-gray-200 text-dark font-bold text-sm">
               All Accomodations
@@ -384,7 +387,7 @@ const SearchHomes = () => {
                         <span
                           onClick={() => {
                             setCountry(data);
-                           setCountryModal(false); 
+                            setCountryModal(false);
                           }}
                           key={index}
                           className="text-sm cursor-pointer font-semibold py-3 px-4 hover:bg-[#f7f7f7]"

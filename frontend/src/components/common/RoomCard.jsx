@@ -2,11 +2,12 @@ import { useState, useCallback } from "react";
 import moment from "moment";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { TiLocation } from "react-icons/ti";
+import { CiCalendar } from "react-icons/ci";
 import Heart from "../../assets/svg/heart";
+import { TbLocation } from "react-icons/tb";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
-import { DeleteReservation } from "@/features/reservation/reservationReducer";
+import { CiStar } from "react-icons/ci";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
 import Image from "./Image";
@@ -14,7 +15,7 @@ import DeleteModal from "../modals/DeleteModal";
 
 const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
   const [tabindex, setTabIndex] = useState(0);
-    const [userdeletemodal, setUserDeleteModal] = useState(false);
+  const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const handleImagePosition = (position) => {
     if (position === "left") {
@@ -166,26 +167,37 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col rounded-b-xl py-6">
-          <h3 className="text-xl font-semibold w-full">
-            {apartment?.subtitle} Apartment
-            <span className="flex text-sm pt-1 items-center gap-2">
+        <div className="w-full flex flex-col gap-3 rounded-b-xl py-6">
+          <h3 className="text-xl md:text-2xl font-bold w-full">
+            {apartment?.title}
+            {/* <span className="flex text-sm pt-1 items-center gap-2">
               <TiLocation fontSize={"16px"} />
               Houston
-            </span>
+            </span> */}
             {/* Amazon */}
           </h3>
+          <div className="w-full flex items-center gap-1 justify-between">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r text-base gap-1 text-dark">
+              <CiStar /> 5 Rating
+            </div>
+            <div className="flex items-center flex-1 justify-center pr-4 border-r text-base gap-1 text-dark">
+              <TbLocation /> Nigeria
+            </div>
+            <div className="flex items-center flex-1 justify-center text-base gap-1 text-dark">
+              <CiCalendar /> Jan 2-4
+            </div>
+          </div>
           <div className="flex mt-2 justify-between w-full items-center  gap-4">
-            <div className="flex itec flex-col">
+            <div className="flex flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
               <p className="text-xl md:text-xl font-semibold">
                 ₦{apartment?.price}{" "}
                 <span className="text-sm font-normal">/night</span>
               </p>
             </div>
-            {/* <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
-              Book Now
-            </div> */}
+            <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
+              View Room
+            </div>
           </div>
         </div>
       </Link>
