@@ -8,7 +8,7 @@ import {
 import moment from "moment";
 import AnimateText from "@/animations/AnimateText";
 import { HiBars3BottomRight } from "react-icons/hi2";
-import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
+import { BiCheck, BiChevronDown, BiChevronUp, BiSearch } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
@@ -74,9 +74,7 @@ const Hero = () => {
           ></div> */}
           <TopContent bar={bar} setBar={setBar} currentUser={currentUser} />
           <div className="w-full z-[40000] absolute top-0 left-0 py-8">
-            <div
-              className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between gap-12"
-            >
+            <div className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between gap-12">
               <h4 className="family2 text-2xl uppercase font-bold text-white">
                 ZyncLuxury
               </h4>
@@ -328,111 +326,77 @@ const SearchHomes = () => {
   return (
     <div className="w-full -mt-20">
       <div className="max-w-[1100px] w-[90%] rounded-[20px] mx-auto py-4 lg:flex-row min-h-[160px] bg-white shadows z-40  relative flex-col items-center justify-center flex">
-        <div className="p-8 bg-white flex gap-8 lg:flex-row flex-col lg:items-center justify-center">
-          <Popover>
-            <PopoverTrigger>
-              <div className="w-full flex lg:flex-row lg:items-center gap-3">
-                <span className="pr-3 lg:pr-8 border-r flex flex-col gap-4">
-                  <span
-                    style={{ letterSpacing: "4px" }}
-                    className="text-[10px] lg:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-                  >
-                    CHECK IN
-                  </span>
-
-                  <div className="flex items-center gap-2">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                    >
-                      {moment(startdate)?.date()}
-                    </span>
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[10px] lg:text-xs uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                    >
-                      {moment(startdate).format("MMM").toUpperCase()}
-                      <BiChevronDown fontSize={"24px"} />
-                    </span>
-                  </div>
-                </span>
-                <span className="px-4 lg:px-8 border-r flex flex-col gap-4">
-                  <span
-                    style={{ letterSpacing: "4px" }}
-                    className="text-[10px] lg:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-                  >
-                    CHECK OUT
-                  </span>
-
-                  <div className="flex items-center gap-2">
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                    >
-                      {moment(enddate)?.date()}
-                    </span>
-                    <span
-                      style={{ letterSpacing: "4px" }}
-                      className="text-[10px] lg:text-xs uppercase leading-[1.5] flex flex-col text-dark font-normal"
-                    >
-                      {moment(enddate).format("MMM").toUpperCase()}
-                      <BiChevronDown fontSize={"24px"} />
-                    </span>
-                  </div>
-                </span>
-              </div>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
-              <Calendar
-                initialFocus
-                mode="range"
-                defaultMonth={date?.from}
-                selected={date}
-                onSelect={setDate}
-                numberOfMonths={2}
+        <div className="flex flex-col px-4 gap-8 w-full">
+          <div className="p-4 rounded-full flex-wrap flex items-center gap-4">
+            <div className="py-3 px-6 text-center rounded-full bg-gray-200 text-dark font-bold text-sm">
+              All Accomodations
+            </div>
+            {/* <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+             Villa
+            </div>
+            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+             Hotel
+            </div>
+            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+           Apartment
+            </div> */}
+          </div>
+          <div className="w-full px-8 flex items-start gap-4">
+            <div className="flex flex-col md:w-1/4 gap-2 text-base font-bold">
+              <span>Location</span>
+              <input
+                type="text"
+                placeholder="Type the destination"
+                className="w-full rounded-md inputs text-dark font-normal text-sm"
               />
-            </PopoverContent>
-          </Popover>
-          <div className="flex items-center gap-4">
-            <span className="px-4 lg:px-8">
-              <span
-                style={{ letterSpacing: "4px" }}
-                className="text-[10px] lg:text-xs block uppercase leading-[1.5] text-center text-dark font-normal"
-              >
-                Guests
-              </span>
-
-              <div className="flex pt-1 items-center gap-2">
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-3xl pt-3 lg:text-4xl block font-booking_font4 font-bold uppercase leading-[1.5] text-center text-dark"
-                >
-                  {guests}
-                </span>
-                <span
-                  style={{ letterSpacing: "4px" }}
-                  className="text-[8px] uppercase leading-[1.5] flex flex-col gap-[4px] text-dark font-normal"
-                >
-                  <button
-                    disabled={guests === 1}
-                    onClick={() => setGuests(guests - 1)}
-                    className="w-8 hover:bg-[#eee] rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiChevronDown fontSize={"16px"} />
-                  </button>
-                  <button
-                    disabled={guests === 4}
-                    onClick={() => setGuests(guests + 1)}
-                    className="w-8 hover:bg-[#eee] rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiChevronUp fontSize={"16px"} />
-                  </button>
-                  {/* <BiChevronUp fontSize={"16px"} /> */}
-                </span>
-              </div>
-            </span>
-            <button className="btn text-white family1 font-bold px-6 text-sm lg:text-base lg:px-12 py-4 lg:py-6">
-              Search for Homes
+            </div>
+            <Popover>
+              {" "}
+              <PopoverTrigger>
+                <div className="md:w-[500px] flex items-start gap-4">
+                  <div className="flex flex-col w-full items-start gap-2 text-base font-bold">
+                    <span>Check In</span>
+                    <input
+                      type="text"
+                      placeholder="Add Date"
+                      value={moment(startdate)?.format("DD MMMM YYYY")}
+                      className="w-full rounded-md inputs text-dark font-normal text-sm"
+                    />
+                  </div>
+                  <div className="flex flex-col w-full items-start gap-2 text-base font-bold">
+                    <span>Check Out</span>
+                    <input
+                      type="text"
+                      placeholder="Add Date"
+                      value={moment(enddate)?.format("DD MMMM YYYY")}
+                      className="w-full rounded-md inputs text-dark font-normal text-sm"
+                    />
+                  </div>
+                </div>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  initialFocus
+                  mode="range"
+                  defaultMonth={date?.from}
+                  selected={date}
+                  onSelect={setDate}
+                  numberOfMonths={2}
+                />
+              </PopoverContent>
+            </Popover>
+            <div className="flex md:w-1/4 flex-col gap-2 text-base font-bold">
+              <span>Participant</span>
+              <input
+                type="text"
+                placeholder="Add Guests"
+                className="w-full rounded-md inputs text-dark font-normal text-sm"
+              />
+            </div>
+          </div>
+          <div className="w-full flex items-center md:justify-end">
+            <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-8 py-4">
+              <BiSearch /> Search for Accomodations
             </button>
           </div>
         </div>
