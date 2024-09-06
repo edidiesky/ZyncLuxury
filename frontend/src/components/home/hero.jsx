@@ -69,13 +69,19 @@ const Hero = () => {
           className="w-full min-h-[700px] z-30 py-40 relative flex items-center justify-center
    gap-8"
         >
-          <div
+          <img
+            src="/hero.jpg"
+            alt=""
+            className="w-full h-full absolute z-20 object-cover"
+          />
+          <div className="w-full h-full absolute z-30 bg-[rgba(0,0,0,.5)]"></div>
+          {/* <div
             style={{
               backgroundImage:
-                "linear-gradient(rgb(255 255 255 / 0%) 0%, rgb(13 32 135 / 90%) 100%), url(https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/dream-houses.jpg)",
+                "linear-gradient(rgb(255 255 255 / 0%) 0%, rgb(13 32 135 / 90%) 100%), url('/hero.jpg')",
             }}
             className="w-full h-full z-30 absolute top-0 left-0"
-          ></div>
+          ></div> */}
           <div className="w-full z-[40000] absolute top-0 left-0 py-8">
             <div
               className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between
@@ -267,11 +273,11 @@ const Hero = () => {
             </div>
           </div>
           <div
-            className="w-[90%] max-w-custom mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
+            className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
        gap-6 md:gap-12"
           >
             <h1
-              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
+              className="text-white md:text-center capitalize font-semibold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
           family2"
             >
               Where Serenity Meets{" "}
@@ -280,8 +286,10 @@ const Hero = () => {
                 <Dash />
               </span>{" "}
               <br /> Book Your Resort Experience
-              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] mx-auto font-normal capitalize pt-4 md:pt-8 block family1">
-                We are experts who set the pace Inspiring homes beyond boundaries. We help you get the best out of your finance in getting a home
+              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] mx-auto font-normal capitalize pt-4 md:pt-8 block family1">
+                We are experts who set the pace Inspiring homes beyond
+                boundaries. We help you get the best out of your finance in
+                getting a home
               </span>
             </h1>
             <div className="w-full sm:items-center flex-col sm:flex-row sm:justify-center gap-4 flex">

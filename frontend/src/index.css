@@ -225,7 +225,7 @@ input::placeholder {
   transition: all 0.5s;
   background: var(--primary) !important;
   cursor: pointer;
-  border-radius: 5px !important;
+  border-radius: 100px !important;
 }
 .btn:hover {
   background: var(--grey-1) !important;
