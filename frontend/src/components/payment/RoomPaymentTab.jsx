@@ -61,7 +61,7 @@ export default function RoomPaymentTab() {
                   {reservation?.rooms?.bedroom} Bedroom |{" "}
                   {reservation?.rooms?.guests} Guests
                 </span>
-                <h1 className="text-3xl w-full font-medium font-booking_font4">
+                <h1 className="text-2xl w-full font-bold font-booking_font4">
                   {reservation?.rooms?.title}
                 </h1>
                 <span className="text-sm font-booking_font font-normal">

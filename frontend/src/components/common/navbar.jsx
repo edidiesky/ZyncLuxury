@@ -48,7 +48,7 @@ const Navbar = () => {
         >
           <Link
             to={"/"}
-            className="family1 font-bold text-2xl uppercase text-dark"
+            className="family1 font-bold text-2xl text-dark"
           >
             Zync<span className="text-[var(--primary)]">Luxury</span>
           </Link>

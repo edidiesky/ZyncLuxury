@@ -60,7 +60,7 @@ export default function RoomInfo() {
                   </div>
                   <ul className="flex flex-col gap-8 pb-6 border-b">
                     <li className="text-base font-booking_font font-normal">
-                      One more step to complete your booking with Zyra&Stones
+                      One more step to complete your booking with ZyncLuxury
                       Living. Our payment platform ensures your payment details
                       are safe and secured.
                     </li>
