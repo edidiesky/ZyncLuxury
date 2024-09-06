@@ -126,7 +126,7 @@ button:disabled {
 }
 :root {
   --grey-1: #4f578d;
-  --dark-1: #000;
+  --dark-1: rgb(34, 37, 61);
   --primary: #f73760;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
@@ -166,9 +166,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  line-height: 1.6;
+  line-height: 1.6 !important;
   color: var(--dark-1);
-  font-family: "Work Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .hide {
@@ -178,14 +178,14 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
   border-radius: 10px;
 }
 
 input {
   border: none;
   outline: none;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   border-radius: 100px !important;
 }
 
@@ -201,7 +201,7 @@ input::placeholder {
   height: 45px;
   padding: 0 1rem;
   /* outline: auto; */
-  font-family: "Work Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   transition: all 0.4s;
 }
 
@@ -210,7 +210,7 @@ input::placeholder {
   height: 55px;
 
   padding: 0 1rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   transition: all 0.4s;
 }
 

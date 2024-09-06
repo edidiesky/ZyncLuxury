@@ -14,6 +14,7 @@ import About from "../About";
 import RecentListing from "../RecentListing";
 import Expert from "../Expert";
 import Choice from "../Choice";
+import Blog from "../Blog";
 const MainContent = () => {
   return (
     <div
@@ -25,6 +26,7 @@ const MainContent = () => {
       <About />
       <RecentListing />
       <Expert/>
+      <Blog/>
       {/* <Choice/> */}
     
     </div>
