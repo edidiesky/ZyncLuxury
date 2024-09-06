@@ -59,7 +59,7 @@ const About = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h4 className="text-4xl md:text-5xl font-bold text-[var(--dark-1)]">
+              <h4 className="text-4xl md:text-5xl font-semibold text-[var(--dark-1)]">
                 Why you should <br /> Choose ZyncLuxury?
               </h4>
             </div>
@@ -89,7 +89,7 @@ const About = () => {
                   </div>
                   <div className="w-full z-10">
                     <div
-                      className="w-[90%] capitalize font-bold -mt-20 text-base text-center py-4 pt-12 px-4
+                      className="w-[90%] capitalize font-semibold -mt-20 text-base text-center py-4 pt-12 px-4
                      rounded-xl text-white mx-auto bg-[var(--primary)]"
                     >
                       {data?.text}
@@ -115,17 +115,17 @@ const About = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h3 className="text-4xl md:text-5xl font-bold capitalize family2 text-white">
+            <h3 className="text-4xl md:text-5xl font-semibold capitalize family2 text-white">
               its’ not about business, <br /> <span>it’s about ‘YOU’!</span>
             </h3>
             <div className="flex items-center py-4 gap-8">
-              <div className="family2 text-xl md:text-xl font-bold text-white">
+              <div className="family2 text-xl md:text-xl font-semibold text-white">
                 The Mission
               </div>
-              <div className="family2 text-xl md:text-xl font-bold text-white">
+              <div className="family2 text-xl md:text-xl font-semibold text-white">
                 The Mission
               </div>
-              <div className="family2 text-xl md:text-xl font-bold text-white">
+              <div className="family2 text-xl md:text-xl font-semibold text-white">
                 The Mission
               </div>
             </div>
@@ -142,7 +142,7 @@ const About = () => {
                 <div className="w-14 h-14 flex items-center bg-[var(--primary)] justify-center rounded-full text-white text-xl">
                   <Phone />
                 </div>
-                <h4 className="text-white text-2xl md:text-3xl font-bold">
+                <h4 className="text-white text-2xl md:text-3xl font-semibold">
                   +1 (800) 555 555{" "}
                 </h4>
               </div>

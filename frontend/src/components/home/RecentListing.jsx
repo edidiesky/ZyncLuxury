@@ -22,8 +22,8 @@ const RecentListing = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl font-bold text-[var(--dark-1)]">
-              Our Recent Listings
+            <h4 className="text-4xl md:text-5xl font-semibold text-[var(--dark-1)]">
+              Check out our <br /> favourite listings
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">
@@ -36,7 +36,7 @@ const RecentListing = () => {
           ref={collection_ref_1}
           className="w-full gap-4 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
         >
-          {rooms?.slice(0, 3)?.map((apartment, index) => {
+          {rooms?.slice(3, 6)?.map((apartment, index) => {
             return (
               <RoomCard
                 index={index}
