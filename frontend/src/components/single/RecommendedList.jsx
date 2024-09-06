@@ -12,7 +12,7 @@ const RecommendedList = ({ roomid }) => {
   const newRooms = rooms?.filter((room, index) => room?.id !== roomid);
   return (
     <div className="w-full md:mt-8 flex flex-col gap-8">
-      <div className="w-[95%] md:w-[85%]  max-w-custom mx-auto flex flex-col gap-8">
+      <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-8">
         <h3 className="text-4xl md:text-4xl font-booking_font4 font-bold">
           Similar Rooms
         </h3>
