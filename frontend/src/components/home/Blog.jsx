@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Image from "../common/Image";
-
+import { FaLongArrowAltRight } from "react-icons/fa";
 const blogList = [
   {
     title: "How to have a fantastic career opportunity with minimal spending",
@@ -47,15 +47,46 @@ const Blog = () => {
         <div className="w-full grid md:grid-cols-3 gap-12">
           {blogList?.map((blog, index) => {
             return (
-              <Link to={"/"} className="w-full flex flex-col gap-4">
+              <Link to={"/"} className="w-full group flex flex-col gap-4">
                 <div className="w-full overflow-hidden rounded-xl">
                   <Image src={blog?.image} />
                 </div>
                 <div className="py-8 border-b border-dotted px-4 flex flex-col gap-4">
                   <h5 className="text-base font-normal">
-                    Categories: <span className="text-[var(--primary)]">Luxury Living</span>
+                    Categories:{" "}
+                    <span className="text-[var(--primary)]">Luxury Living</span>
                   </h5>
-                  <h4 className="text-2xl md:text-3xl font-bold">{blog?.title}</h4>
+                  <h4 className="text-2xl group-hover:text-[var(--primary)] group-hover:underline md:text-3xl font-bold">
+                    {blog?.title}
+                  </h4>
+                </div>
+                <div className="px-2 py-2">
+                  <h4 className="flex  items-center gap-4 text-lg">
+                    <span
+                      style={{
+                        transition: "all .4s",
+                      }}
+                      className="group-hover:opacity-[1] group-hover:translate-x-6 opacity-0"
+                    >
+                      <FaLongArrowAltRight />
+                    </span>
+                    <span
+                      style={{
+                        transition: "all .4s",
+                      }}
+                      className="text-[var(--primary)] group-hover:translate-x-6"
+                    >
+                      Read More
+                    </span>
+                    <span
+                      style={{
+                        transition: "all .3s",
+                      }}
+                      className="group-hover:opacity-[0] opacity-1"
+                    >
+                      <FaLongArrowAltRight />
+                    </span>
+                  </h4>
                 </div>
               </Link>
             );
