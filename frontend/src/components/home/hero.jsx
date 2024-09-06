@@ -17,6 +17,7 @@ import { Link, NavLink } from "react-router-dom";
 import { addDays } from "date-fns";
 import Dash from "@/assets/svg/dash";
 import { ProfileDropdownStyles } from "../common/navbar";
+import { countries } from "@/data/countries";
 
 const linkData = [
   {
@@ -51,6 +52,7 @@ const Hero = () => {
     dispatch(ClearUserInfo());
     window.location.reload();
   };
+
   return (
     <>
       <div className="w-full">
@@ -313,7 +315,10 @@ const Hero = () => {
 const SearchHomes = () => {
   const today = new Date();
   const [guests, setGuests] = React.useState(2);
-  const [bar, setBar] = React.useState(false);
+  const [countrylist, setCountryList] = React.useState([...countries]);
+  const [newcountrylist, setNewCountryList] = React.useState([]);
+  const [country, setCountry] = React.useState("");
+  const [countrymodal, setCountryModal] = React.useState(false);
   const [date, setDate] = React.useState({
     from: today,
     to: addDays(today, 3),
@@ -323,11 +328,26 @@ const SearchHomes = () => {
   let date1 = moment(startdate);
   let date2 = moment(enddate);
   const differenceInDays = date2?.diff(date1, "days"); // Convert milliseconds to days
+
+  const handleCountryData = (e) => {
+    const newcountry = countries?.filter((data) =>
+      data.toLowerCase().includes(country.toLowerCase())
+    );
+    setNewCountryList(newcountry);
+  };
+
+  useEffect(() => {
+    if (country) {
+      handleCountryData();
+    }
+  }, [country]);
+
+  // console.log(newcountrylist);
   return (
     <div className="w-full -mt-20">
-      <div className="max-w-[1100px] w-[90%] rounded-[20px] mx-auto py-4 lg:flex-row min-h-[160px] bg-white shadows z-40  relative flex-col items-center justify-center flex">
-        <div className="flex flex-col px-4 gap-8 w-full">
-          <div className="p-4 rounded-full flex-wrap flex items-center gap-4">
+      <div className="max-w-[1200px] w-[90%] rounded-[20px] mx-auto py-8 lg:flex-row min-h-[160px] bg-white shadows z-40  relative flex-col items-center justify-center flex">
+        <div className="flex flex-col md:px-4 gap-4 w-full">
+          <div className="p-4 rounded-full flex-wrap  flex items-center gap-4">
             <div className="py-3 px-6 text-center rounded-full bg-gray-200 text-dark font-bold text-sm">
               All Accomodations
             </div>
@@ -341,14 +361,41 @@ const SearchHomes = () => {
            Apartment
             </div> */}
           </div>
-          <div className="w-full px-8 flex items-start gap-4">
-            <div className="flex flex-col md:w-1/4 gap-2 text-base font-bold">
+          <div className="w-full px-8 flex flex-wrap md:flex-nowrap items-start gap-4">
+            <div className="flex flex-col relative md:w-1/4 gap-2 text-base font-bold">
               <span>Location</span>
               <input
                 type="text"
+                value={country}
+                name="country"
+                onChange={(e) => {
+                  // handleCountryData(e);
+                  setCountry(e.target.value);
+                  setCountryModal(true);
+                }}
                 placeholder="Type the destination"
                 className="w-full rounded-md inputs text-dark font-normal text-sm"
               />
+              {countrymodal && (
+                <div className="absolute top-[110%] rounded-xl overflow-hidden border flex flex-col bg-white shadow-sm">
+                  <div className="flex max-h-[250px] overflow-auto w-full min-w-[200px]  flex-col ">
+                    {newcountrylist?.map((data, index) => {
+                      return (
+                        <span
+                          onClick={() => {
+                            setCountry(data);
+                           setCountryModal(false); 
+                          }}
+                          key={index}
+                          className="text-sm cursor-pointer font-semibold py-3 px-4 hover:bg-[#f7f7f7]"
+                        >
+                          {data}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
             <Popover>
               {" "}
@@ -394,7 +441,7 @@ const SearchHomes = () => {
               />
             </div>
           </div>
-          <div className="w-full flex items-center md:justify-end">
+          <div className="w-full px-4 flex items-center md:justify-end">
             <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-8 py-4">
               <BiSearch /> Search for Accomodations
             </button>
