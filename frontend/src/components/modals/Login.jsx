@@ -84,9 +84,9 @@ const LoginModal = () => {
         exit="exit"
         className="guestModalCard"
       >
-        <div className="w-full mx-auto overflow-hidden relative flex flex-col">
+        <div className="w-full mx-auto relative flex gap-8 flex-col">
           <div
-            className="cross absolute top-5 right-5"
+            className="cross absolute -top-5 z-[500] right-5"
             onClick={handleClearAlert}
           >
             <RxCross2 />
@@ -94,15 +94,15 @@ const LoginModal = () => {
           <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
             <h3 className="text-3xl font-booking_font4 font-bold">
               Sign In
-              <span className="block text-sm font-normal pt-3 font-booking_font">
-                {/* Login to your account and check out your bookings */}
+              <span className="block text-sm font-normal max-w-[250px] pt-1 font-booking_font">
+                Login to your account and check out your bookings
               </span>
             </h3>
           </div>
           <div className="w-full overflow-auto h-[350px]  flex">
             <form
               onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto p-4 md:px-8 pb-8 flex flex-col gap-6"
+              className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-6"
             >
               <div className="w-full flex flex-col gap-2">
                 {LoginFormInputData?.map((input, index) => {
@@ -215,7 +215,7 @@ const LoginModalStyles = styled(motion.div)`
     max-width: 420px;
     min-width: 400px;
     display: flex;
-    height: 480px;
+    height: 580px;
     align-items: center;
     justify-content: center;
     flex-direction: column;

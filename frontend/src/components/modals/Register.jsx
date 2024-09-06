@@ -76,7 +76,7 @@ const RegisterModal = () => {
   }, [registerisSuccess]);
   return (
     <RegisterModalStyles
-    className="w-full h-screen"
+      className="w-full h-screen"
       as={motion.div}
       initial={{ opacity: 0, visibility: "hidden" }}
       exit={{ opacity: 0, visibility: "hidden" }}
@@ -90,8 +90,8 @@ const RegisterModal = () => {
         exit="exit"
         className="guestModalCard"
       >
-        <div className="w-full mx-auto h-[550px] flex flex-col">
-          <div className="w-full sticky top-0 left-0 p-8 px-8 border-b flex border-[rgba(0,0,0,.2)] items-center justify-between">
+        <div className="w-full mx-auto flex flex-col">
+          <div className="w-full sticky top-0 left-0 p-8 px-8 flex  items-center justify-between">
             <h3 className="text-2xl md:text-3xl font-bold font-booking_font4">
               Sign Up
               <span className="block text-sm font-normal font-booking_font">
@@ -102,33 +102,35 @@ const RegisterModal = () => {
               <RxCross2 />
             </div>
           </div>
-          <div className="w-full overflow-auto h-[400px] pb-6 flex">
+          <div className="w-full pb-6 flex">
             <form
               onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto p-4 md:px-8 pb-4 flex flex-col gap-2"
+              className="w-[90%] mx-auto p-4 pb-4 grid md:grid-cols-1 gap-8"
             >
-              {RegisterFormInputData?.map((input, index) => {
-                return (
-                  <label
-                    key={index}
-                    htmlFor={input.label}
-                    className="text-sm font-booking_font rounded-[10px] flex flex-col gap-2 text-dark"
-                  >
-                    <span className="text-dark ">{input.label}</span>
-                    <input
-                      className="w-full input rounded-2xl text-dark
+              <div className="w-full grid md:grid-cols-2 gap-4">
+                {RegisterFormInputData?.map((input, index) => {
+                  return (
+                    <label
+                      key={index}
+                      htmlFor={input.label}
+                      className="text-sm font-booking_font flex flex-col gap-2 text-dark"
+                    >
+                      <span className="text-dark">{input.label}</span>
+                      <input
+                        className="w-full rounded-md inputs text-dark
                            font-normal text-sm"
-                      required={true}
-                      name={input?.name}
-                      id={input.label}
-                      value={formvalue[input.name]}
-                      type={input.type}
-                      placeholder={input.label}
-                      onChange={handleFormChange}
-                    ></input>
-                  </label>
-                );
-              })}
+                        required={true}
+                        name={input?.name}
+                        id={input.label}
+                        value={formvalue[input.name]}
+                        type={input.type}
+                        placeholder={input.label}
+                        onChange={handleFormChange}
+                      ></input>
+                    </label>
+                  );
+                })}
+              </div>
               <div className="w-full flex items-center justify-center flex-col gap-3">
                 <button
                   type="submit"
@@ -150,15 +152,14 @@ const RegisterModal = () => {
                   </span>
                 </div>
               </div>
-              <div className="option text-dark">or</div>
+              {/* <div className="option text-dark">or</div>
               <div
                 // onClick={() => signIn("google")}
                 className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#fff] rounded-[40px] font-booking_font_bold font-bold border border-[rgba(0,0,0,.9)]"
               >
                 <FcGoogle fontSize={"24px"} />
                 <AnimateText children={"Continue with Google"} />
-                
-              </div>
+              </div> */}
               {/* <div className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#000] rounded-[10px] font-booking_font font-bold border border-[rgba(0,0,0,.9)]">
                 <FaGithub fontSize={"28px"} />
                 Continue with Github
@@ -210,12 +211,13 @@ const RegisterModalStyles = styled(motion.div)`
   }
   .guestModalCard {
     max-width: 400px;
-    min-width: 540px;
+    min-width: 460px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background: #fff;
+    height: 580px;
     gap: 2rem;
     border-radius: 20px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
