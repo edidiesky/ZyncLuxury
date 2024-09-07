@@ -1,16 +1,25 @@
 import { Phone } from "lucide-react";
 import Image from "../common/Image";
+import { GrSecure } from "react-icons/gr";
+import { MdOutlineElectricalServices } from "react-icons/md";
+import { SiInfluxdb } from "react-icons/si";
+import { MdCleaningServices } from "react-icons/md";
+import { MdPrivacyTip } from "react-icons/md";
+import { GiConsoleController } from "react-icons/gi";
+import { FaKitchenSet } from "react-icons/fa6";
 const whychooseList = [
   {
     text: "Gateway to a full luxury lifestyle",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
-    title: "Secuirty",
+    icons: <GrSecure />,
+    title: "Security",
   },
   {
     text: "Gateway to a full luxury lifestyle",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
+    icons: <MdOutlineElectricalServices />,
     title: "24 / 7 Electricity",
   },
   ,
@@ -18,25 +27,29 @@ const whychooseList = [
     text: "Gateway to a full luxury lifestyle",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
+    icons: <SiInfluxdb />,
     title: "House Keeping",
   },
   {
     text: "Gateway to a full luxury lifestyle",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
+    icons: <MdCleaningServices />,
     title: "Serene Environment",
   },
   {
     text: "Gateway to a full luxury lifestyle",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
-    title: "Privacy",
+    icons: <FaKitchenSet />,
+    title: "Equipped Kitchen",
   },
   {
-    text: "Gateway to a full luxury lifestyle",
+    text: "Equipped Gaming Console",
     subText:
       "Dynamically recapitalize bleeding-edge leadership skills for all apps.",
-    title: "Equipped Kitchen",
+    icons: <GiConsoleController />,
+    title: "Gaming Console",
   },
 ];
 
@@ -59,7 +72,7 @@ const About = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h4 className="text-4xl md:text-5xl font-semibold text-[var(--dark-1)]">
+              <h4 className="text-4xl md:text-5xl font-bold text-[var(--dark-1)]">
                 Why you should <br /> Choose ZyncLuxury?
               </h4>
             </div>
@@ -75,12 +88,15 @@ const About = () => {
               return (
                 <div className="w-full cursor-pointer flex flex-col">
                   <div
-                    style={{ transition: "all .5s" }}
+                    style={{ transition: "all .3s" }}
                     key={index}
-                    className="w-full z-20 hover:-translate-y-10 p-12 bg-[#f4f5fa] rounded-xl
+                    className="w-full z-20 group hover:-translate-y-10 p-12 bg-[#f4f5fa] rounded-xl
                      flex flex-col gap-4"
                   >
-                    <h3 className="text-2xl family1 font-semibold text-dark">
+                    <div className="w-36 h-36 mb-4 border-8 group-hover:bg-[var(--primary)] border-[hsla(232, 28%, 73%,calc(100% - 80%))] md:text-6xl flex items-center justify-center rounded-full bg-white text-4xl">
+                      {data?.icons}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl family1 font-bold text-dark">
                       {data?.title}
                     </h3>
                     <h4 className="text-sm md:text-base family1 font-normal text-grey">
@@ -89,7 +105,7 @@ const About = () => {
                   </div>
                   <div className="w-full z-10">
                     <div
-                      className="w-[90%] capitalize font-semibold -mt-20 text-base text-center py-4 pt-12 px-4
+                      className="w-[90%] capitalize font-normal -mt-20 text-base text-center py-4 pt-12 px-4
                      rounded-xl text-white mx-auto bg-[var(--primary)]"
                     >
                       {data?.text}
@@ -115,17 +131,17 @@ const About = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h3 className="text-4xl md:text-5xl font-semibold capitalize family2 text-white">
+            <h3 className="text-4xl md:text-5xl font-bold capitalize family2 text-white">
               its’ not about business, <br /> <span>it’s about ‘YOU’!</span>
             </h3>
             <div className="flex items-center py-4 gap-8">
-              <div className="family2 text-xl md:text-xl font-semibold text-white">
+              <div className="family2 text-xl md:text-xl font-bold text-white">
                 The Mission
               </div>
-              <div className="family2 text-xl md:text-xl font-semibold text-white">
+              <div className="family2 text-xl md:text-xl font-bold text-white">
                 The Mission
               </div>
-              <div className="family2 text-xl md:text-xl font-semibold text-white">
+              <div className="family2 text-xl md:text-xl font-bold text-white">
                 The Mission
               </div>
             </div>
@@ -142,7 +158,7 @@ const About = () => {
                 <div className="w-14 h-14 flex items-center bg-[var(--primary)] justify-center rounded-full text-white text-xl">
                   <Phone />
                 </div>
-                <h4 className="text-white text-2xl md:text-3xl font-semibold">
+                <h4 className="text-white text-2xl md:text-3xl font-bold">
                   +1 (800) 555 555{" "}
                 </h4>
               </div>

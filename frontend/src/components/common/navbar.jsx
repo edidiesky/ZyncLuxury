@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
           <div className="flex-1 flex items-center justify-end gap-4">
             <div className="hidden lg:flex items-center gap-4">
-              {linkData?.map((list, index) => {
+              {linkData?.map((list, index) =>{
                 return (
                   <NavLink
                     end
