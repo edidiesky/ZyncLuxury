@@ -10,6 +10,7 @@ import RoomFeatures from "./RoomFeatures";
 import RoomPaymentTab from "./RoomPaymentTab";
 import { Bed, Bookmark } from "lucide-react";
 import { BsThreeDots } from "react-icons/bs";
+import { CiHeart } from "react-icons/ci";
 import { LiaChartAreaSolid } from "react-icons/lia";
 const RoomLists = () => {
   const [datemodal, setDateModal] = useState(false);
@@ -53,7 +54,7 @@ const RoomLists = () => {
                 {/* room title */}
                 <div className="w-full flex flex-col gap-4">
                   <div className="flex lg:items-center justify-between gap-4">
-                    <h3 className="text-4xl w-full family1 font-bold">
+                    <h3 className="text-4xl family1 font-bold">
                       {room?.title}
 
                       <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
@@ -68,9 +69,9 @@ const RoomLists = () => {
                       </span>
                     </h3>
                     <div className="flex lg:items-center md:justify-end gap-4">
-                      <div className=" flex text-lg cursor-pointer items-center gap-2 text-dark justify-center">
-                        <Bookmark />
-                        Save
+                      <div className=" flex text-lg font-bold cursor-pointer items-center gap-2 text-dark justify-center">
+                        <CiHeart fontSize={'30px'} />
+                        Add to Favourites
                       </div>
                     </div>
                   </div>

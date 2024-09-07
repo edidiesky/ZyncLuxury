@@ -183,7 +183,7 @@ export default function RoomPaymentTab({ room }) {
               type="submit"
               disabled={bookingloading}
               onClick={handleReservationBooking}
-              className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
+              className="btn flex items-center justify-center text-lg font-bold text-white py-4 px-8 w-full"
             >
               {bookingloading ? (
                 <span className="flex items-center justify-center gap-2">

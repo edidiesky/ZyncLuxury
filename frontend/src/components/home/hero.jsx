@@ -380,7 +380,7 @@ const SearchHomes = () => {
                 className="w-full rounded-md inputs text-dark font-normal text-sm"
               />
               {countrymodal && (
-                <div className="absolute top-[110%] rounded-xl overflow-hidden border flex flex-col bg-white shadow-sm">
+                <div className="absolute top-[110%] rounded-xl overflow-hidden border flex flex-col bg-white shadow-lg">
                   <div className="flex max-h-[250px] overflow-auto w-full min-w-[200px]  flex-col ">
                     {newcountrylist?.map((data, index) => {
                       return (
