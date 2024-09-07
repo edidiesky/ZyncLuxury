@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import moment from "moment";
 import { MdOutlinePictureAsPdf } from "react-icons/md";
+import { IoMdCheckmark } from "react-icons/io";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { useReactToPrint } from "react-to-print";
@@ -10,7 +11,6 @@ const MainContent = () => {
   return (
     <>
       <div className="w-full relative overflow-hidden min-h-[100vh] flex flex-col">
-     
         <PaymentMessage />
       </div>
     </>
@@ -24,7 +24,9 @@ const PaymentMessage = () => {
     "MMM Do YYYY , h:mm a"
   );
   const paymentDate = moment(payment?.createAt).format("MMM Do YYYY , h:mm a");
-  const endDate = moment(updatedReservation?.endDate).format("MMM Do YYYY , h:mm a");
+  const endDate = moment(updatedReservation?.endDate).format(
+    "MMM Do YYYY , h:mm a"
+  );
   const differenceInDays = moment(updatedReservation?.endDate).diff(
     moment(updatedReservation?.startDate),
     "days"
@@ -56,16 +58,18 @@ const PaymentMessage = () => {
           className="w-[90%] relative mx-auto max-w-custom_1 z-40 grid md:grid-cols-1 items-start justify-center flex-col gap-12"
           ref={printRef}
         >
-          <div className="w-full flex flex-col gap-12">
-            <div className="py-8 lg:py-8 px-8 w-full flex items-center flex-col gap-8 justify-center">
-              <FaRegCircleCheck
-                className="text-[60px] lg:text-[80px]"
-                color="var(--gold-1)"
-              />
+          <div className="w-full flex flex-col gap-4">
+            <div className="py-2 px-8 w-full flex items-center flex-col gap-8 justify-center">
+              <div className="w-32 border-8  h-32 rounded-full border-[#0CAC97] flex items-center justify-center">
+                <IoMdCheckmark className="text-[60px]" color="#0CAC97" />
+              </div>
+
               <h3 className="text-2xl lg:text-3xl text-center font-booking_font4 font-bold ">
                 Your Payment has been confirmed
-                <span className="block md:mx-auto pt-4 font-normal md:text-center md:w-[400px] text-base md:text-lg font-booking_font
-                 text-grey">
+                <span
+                  className="block md:mx-auto pt-4 font-normal md:text-center md:w-[400px] text-base md:text-lg font-booking_font
+                 text-grey"
+                >
                   Your payment has been carried out successfully!
                 </span>
               </h3>
