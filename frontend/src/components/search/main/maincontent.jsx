@@ -9,7 +9,7 @@ import Loader from "@/components/home/loader";
 const MainContent = () => {
   return (
     <div className="w-full relative min-h-[100vh] flex flex-col gap-8">
-      <Hero />
+      {/* <Hero /> */}
       <RoomLists />
     </div>
   );
