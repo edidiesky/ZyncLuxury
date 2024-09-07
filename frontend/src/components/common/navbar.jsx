@@ -46,37 +46,35 @@ const Navbar = () => {
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
         >
-          <Link
-            to={"/"}
-            className="family1 font-bold text-2xl text-dark"
-          >
+          <Link to={"/"} className="family1 font-bold text-2xl text-dark">
             Zync<span className="text-[var(--primary)]">Luxury</span>
           </Link>
 
-          <div className="hidden flex-1 sm:flex items-center justify-center gap-6">
+          {/* <div className="hidden flex-1 sm:flex items-center justify-center gap-6">
             <input
               type="text"
               placeholder="Search for homes"
               className="inputs text-base font-semibold w-full rounded-full"
             />
+          </div> */}
+          <div className="hidden lg:flex items-center gap-4">
+            {linkData?.map((list, index) => {
+              return (
+                <NavLink
+                  end
+                  to={`/${list.path}`}
+                  key={index}
+                  className={`text-base font-bold family1 text-dark flex items-center
+                     gap-2 p-3 px-3 rounded-[40px]`}
+                >
+                  {/* <img src={list?.icon} className="w-4" alt="" /> */}
+                  <AnimateText children={list?.title} />
+                </NavLink>
+              );
+            })}
           </div>
           <div className="flex-1 flex items-center justify-end gap-4">
-            <div className="hidden lg:flex items-center gap-4">
-              {linkData?.map((list, index) =>{
-                return (
-                  <NavLink
-                    end
-                    to={`/${list.path}`}
-                    key={index}
-                    className={`text-base font-bold family1 text-dark flex items-center
-                     gap-2 p-3 px-3 rounded-[40px]`}
-                  >
-                    {/* <img src={list?.icon} className="w-4" alt="" /> */}
-                    <AnimateText children={list?.title} />
-                  </NavLink>
-                );
-              })}
-            </div>
+          
             {currentUser ? (
               // <div className="flex p-4 min-w-[100px] items-center gap-2">
               //   {currentUser?.image ? (
@@ -356,7 +354,7 @@ const Navbar = () => {
 };
 
 export const ProfileDropdownStyles = styled.div`
-z-index: 400;
+  z-index: 400;
   .profile_wrapper:hover .profile_dropdown {
     opacity: 1;
     transform: scale(1);
@@ -370,7 +368,7 @@ z-index: 400;
     overflow: hidden;
     visibility: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
-  
+
     background: #fff;
     top: 100%;
     right: 0%;
