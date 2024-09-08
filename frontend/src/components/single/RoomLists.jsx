@@ -53,7 +53,7 @@ const RoomLists = () => {
               <div className="flex flex-col gap-12 w-full">
                 {/* room title */}
                 <div className="w-full flex flex-col gap-4">
-                  <div className="flex lg:items-center justify-between gap-4">
+                  <div className="flex md:flex-row flex-col lg:items-center justify-between gap-4">
                     <h3 className="text-4xl family1 font-bold">
                       {room?.title}
 
