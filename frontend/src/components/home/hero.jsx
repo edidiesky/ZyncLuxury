@@ -69,7 +69,7 @@ const Hero = () => {
        gap-6 md:gap-12"
           >
             <h1
-              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
+              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-5xl sm:text-6xl
           family2"
             >
               Where Serenity Meets{" "}
@@ -78,17 +78,17 @@ const Hero = () => {
                 <Dash />
               </span>{" "}
               <br /> Book Your Resort Experience
-              <span className="text-lg lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] mx-auto font-semibold capitalize pt-4 md:pt-8 block family1">
+              <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] md:mx-auto font-semibold capitalize pt-4 md:pt-8 block family1">
                 We are experts who set the pace Inspiring homes beyond
                 boundaries. We help you get the best out of your finance in
                 getting a home
               </span>
             </h1>
-            <div className="w-full sm:items-center flex-col sm:flex-row sm:justify-center gap-4 flex">
+            <div className="w-full md:items-center flex-row md:justify-center gap-4 flex">
               <div className="flex">
                 <Link
                   to={"/search"}
-                  className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-8 py-4 md:px-12 md:py-6"
+                  className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-6 py-4 md:px-12 md:py-6"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -97,7 +97,7 @@ const Hero = () => {
               <div className="flex items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-8 py-4 md:px-12 md:py-6"
+                  className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-6 py-4 md:px-12 md:py-6"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -349,6 +349,11 @@ const Sidebar = ({ bar, setBar, currentUser }) => {
 };
 
 const TopContent = ({ bar, setBar, currentUser }) => {
+  const dispatch = useDispatch();
+  const handleLogOut = () => {
+    dispatch(ClearUserInfo());
+    window.location.reload(true);
+  };
   return (
     <div className="w-full z-[40000] absolute top-0 left-0 py-8">
       <div
