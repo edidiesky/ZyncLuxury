@@ -1,7 +1,7 @@
 import Image from "../common/Image";
 import { GiCutDiamond } from "react-icons/gi";
 import { FaMountainCity } from "react-icons/fa6";
-o
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { GiModernCity } from "react-icons/gi";
 const Expert = () => {
   const zyncStength = [
