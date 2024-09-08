@@ -47,7 +47,7 @@ const RegisterModal = () => {
     name: "",
     username: "",
     email: "",
-    password: "",
+    hashedPassword: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -105,9 +105,9 @@ const RegisterModal = () => {
           <div className="w-full pb-6 flex">
             <form
               onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto p-4 pb-4 grid md:grid-cols-1 gap-8"
+              className="w-[90%] mx-auto max-h-[300px] md:max-h-[100%] md:px-4 overflow-auto py-4 pb-4 grid md:grid-cols-1 gap-4"
             >
-              <div className="w-full grid md:grid-cols-2 gap-4">
+              <div className="w-full grid sm:grid-cols-2 gap-4">
                 {RegisterFormInputData?.map((input, index) => {
                   return (
                     <label
@@ -131,7 +131,7 @@ const RegisterModal = () => {
                   );
                 })}
               </div>
-              <div className="w-full flex items-center justify-center flex-col gap-3">
+              <div className="w-full mt-6 flex items-center justify-center flex-col gap-3">
                 <button
                   type="submit"
                   className="p-4 px-8 flex items-center justify-center w-full cursor-pointer btn bg-[#000] rounded-[40px] font-booking_font_bold font-bold text-white"
@@ -217,7 +217,7 @@ const RegisterModalStyles = styled(motion.div)`
     justify-content: center;
     flex-direction: column;
     background: #fff;
-    height: 580px;
+    height: 620px;
     gap: 2rem;
     border-radius: 20px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
@@ -225,6 +225,7 @@ const RegisterModalStyles = styled(motion.div)`
     @media (max-width: 580px) {
       max-width: 90%;
       min-width: 90%;
+      height: 520px;
     }
     .cross {
       width: 3rem;

@@ -24,6 +24,13 @@ enum PaymentStatus {
   PARTPAYMENT
 }
 
+enum RoomType {
+  VILLA
+  HOTEL
+  APARTMENT
+  STAY
+}
+
 enum RoleStatus {
   ADMIN
   USER
@@ -65,15 +72,16 @@ model User {
 model Rooms {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  subtitle    String
   description String
   price       String?
   city        String
+  country     String
+  location    String
+  type        RoomType @default(STAY)
   cautionfee  String?
   guests      Int?
-  // latitude    Int?
-  // longitude   Int?
-  type        String?
+  latitude    Int?
+  longitude   Int?
   bedroom     Int
   bathroom    Int
   images      String[]
