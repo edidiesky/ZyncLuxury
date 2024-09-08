@@ -57,7 +57,7 @@ const Navbar = () => {
               className="inputs text-base font-semibold w-full rounded-full"
             />
           </div> */}
-          <div className="hidden lg:flex items-center md:justify-center flex-1 gap-8">
+          <div className="hidden lg:flex items-center md:justify-center flex-1 gap-6">
             {linkData?.map((list, index) => {
               return (
                 <NavLink

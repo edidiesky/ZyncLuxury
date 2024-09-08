@@ -44,8 +44,8 @@ const LoginModal = () => {
     dispatch(offLoginModal());
   };
   const [formvalue, setFormValue] = useState({
-    email: "",
-    hashedPassword: "",
+    email: "mellisa@gmail.com",
+    hashedPassword: "12345",
   });
 
   const handleFormChange = (e) => {
@@ -151,21 +151,7 @@ const LoginModal = () => {
                 </div>
               </div>
 
-              {/* <div className="option text-dark">Or </div>
-
-              <div
-                // onClick={() => signIn("google")}
-                className="p-4 px-8 items-center flex justify-center gap-4
-                 w-full cursor-pointer btn text-[#fff] rounded-[40px] font-booking_font_bold"
-              >
-                <FcGoogle fontSize={"24px"} />
-                <AnimateText children={"Continue with Google"} />
-              </div> */}
-
-              {/* <div className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#000] rounded-[10px] font-booking_font font-normal border border-[rgba(0,0,0,.9)]">
-                <FaGithub fontSize={"28px"} />
-                Continue with Github
-              </div> */}
+             
             </form>
           </div>
         </div>

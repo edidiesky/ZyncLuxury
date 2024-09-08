@@ -5,9 +5,7 @@ import DashboardHeader from "@/components/common/dashboardHeader";
 const DashboardLayout = () => {
   return (
     <>
-      <div 
-      style={{fontFamily:"Work Sans, Arial, Helvetica, sans-serif"}}
-      className="w-full relative flex justify-end">
+      <div className="w-full relative flex justify-end">
         <DashboardSidebar />
         <div className="flex w-full lg:w-[95%] flex-col gap-4">
           <DashboardHeader />
