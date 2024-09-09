@@ -126,7 +126,7 @@ export const FilterRooms = ()=> {
     }}
     className="bg-[#ffffffb0] sticky top-0 z-[5000] shadow-md w-full flex flex-col py-4">
       <div
-        className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
+        className="w-[95%] max-w-custom mx-auto z-40 flex md:flex-row flex-col md:items-center justify-between
        gap-8"
       >
         <div className="flex items-center flex-wrap  gap-4">

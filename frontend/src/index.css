@@ -121,8 +121,8 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.family3 {
-  font-family: "Bold", sans-serif;
+.family1 {
+  font-family:  "Kumbh Sans", sans-serif !important;
 }
 :root {
   --grey-1: #4f578d;
@@ -168,7 +168,7 @@ body {
   background-color: #fff;
   line-height: 1.6 !important;
   color: var(--dark-1);
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 .hide {
