@@ -14,7 +14,7 @@ export const apartmentDataList = [
     title: "Expansive Green Oasis",
     description:
       "On a magnificent street in Rome, this 1-bedroom APARTMENT feels like a slice of serenity tucked away from the chatter of the city. Enormous arched windows offer spectacular views as well as allow sunlight to stream inside, illuminating the decorator's magnificent décor.  Spend an afternoon meandering the historic streets before stopping for a midday espresso. There are plenty of mouth-watering restaurants around the corner.  ",
-    price: "325,000",
+    price: "135,000",
     cautionfee: "100,000",
     guests: 4,
     latitude: 3.2839374,
@@ -38,8 +38,9 @@ export const apartmentDataList = [
     ],
     // subtitle: "Pool Villa",
     title: "Modern Midtown Marvel in the Windy City",
-    description: "",
-    price: "325,000",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
+    price: "305,000",
     cautionfee: "100,000",
     guests: 4,
     location: "Geyre, Karacasu, Aydın, Aegean Region, Turkey",
@@ -62,9 +63,10 @@ export const apartmentDataList = [
       "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
     ],
     // subtitle: "Garden Oasis",
-    title: "Expansive Green Oasis",
-    description: "",
-    price: "325,000",
+    title: " Bulgunnia Cozy Cottage Retreat",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
+    price: "380,000",
     cautionfee: "100,000",
     guests: 4,
     latitude: -30.22360215,
@@ -88,7 +90,8 @@ export const apartmentDataList = [
     ],
     // subtitle: "Green Villa",
     title: "Expansive Green Oasis",
-    description: "",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
     price: "325,000",
     cautionfee: "100,000",
     guests: 4,
@@ -99,110 +102,6 @@ export const apartmentDataList = [
     type: "VILLA",
     country: "Saudi Arabia",
   },
-  // Saudi Arabia
-  {
-    sellerid: "66c0a27e71a3ea08d6a26f8f",
-    bedroom: 2,
-    bathroom: 4,
-
-    images: [
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/the-great-room-elegant.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/08-outdoor-space.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/09-main-bethroom-closets.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
-    ],
-    // subtitle: "Suburbs Villa",
-    title: "Expansive Green Oasis",
-    description:
-      "Family room, nice and spacious with a double and single bed with the fabulous shower room. You won’t want to leave.",
-    price: "325,000",
-    cautionfee: "100,000",
-    guests: 4,
-    latitude: 24.0539191,
-    longitude: 47.1578436844247,
-    location: "As Salam, الديره, Sahna, Riyadh Region, 16231, Saudi Arabia",
-    city: "Sahna",
-    type: "VILLA",
-    country: "Saudi Arabia",
-  },
-  // seller 2 Laurel Damson
-
-  {
-    sellerid: "66c0a27e71a3ea08d6a26f8f",
-    bedroom: 2,
-    bathroom: 4,
-
-    images: [
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/farmland-minutes-away-from-bustling-houston.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/05-dedicated-workspace.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
-    ],
-    // subtitle: "Expansive Villa",
-    title: "Charming Brownstone in Chicago’s Gold Coast",
-    description: "",
-    price: "325,000",
-    cautionfee: "100,000",
-    guests: 4,
-    latitude: 6.5960605,
-    longitude: 3.340787,
-    location: "Lagos",
-    city: "Lagos",
-    country: "Nigeria",
-  },
-
-  // seller 3 Lewis
-
-  {
-    sellerid: "66c0a27e71a3ea08d6a26f8f",
-    bedroom: 2,
-    bathroom: 4,
-
-    images: [
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/sophisticated-urban-living-in-lincoln-park.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/02-main-bedroom.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/the-great-room-luxury.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/sophisticated-urban-living-in-lincoln-park.jpg",
-    ],
-    // subtitle: "Lincoln Villa",
-    title: "Sophisticated Urban Living House in Lincoln Park",
-    description: "",
-    price: "325,000",
-    cautionfee: "100,000",
-    guests: 4,
-    latitude: 6.4682727,
-    longitude: 3.2839374,
-    location: "Festac, Lagos",
-    city: "Lagos",
-    country: "Nigeria",
-  },
-  // seller 4 Jonas Saudi
-
-  {
-    sellerid: "66c0a27e71a3ea08d6a26f8f",
-    bedroom: 2,
-    bathroom: 4,
-    images: [
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/charming-chicago-brownstone.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/03-kitchen-room.jpg",
-      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/spacious-houston-farm-property.jpg",
-    ],
-    // subtitle: "Gold Villa",
-    title: "Yasmin Arabian Ran",
-    description: "",
-    price: "325,000",
-    cautionfee: "100,000",
-    guests: 8,
-    latitude: 24.0539191,
-    longitude: 47.1578436844247,
-    location: "As Salam, الديره, Sahna, Riyadh Region, 16231, Saudi Arabia",
-    city: "Sahna",
-    type: "VILLA",
-    country: "Saudi Arabia",
-  },
-
-  // HOTEL
   {
     title: "Silkhaus Near South Ridge Park | Unique Vibes",
     description:
@@ -252,6 +151,114 @@ export const apartmentDataList = [
       "https://a0.muscache.com/im/pictures/miso/Hosting-892636584500492829/original/d4ec1d8d-6198-48ec-b901-29d1cb20c458.jpeg?im_w=720",
     ],
   },
+  // Saudi Arabia
+  {
+    sellerid: "66c0a27e71a3ea08d6a26f8f",
+    bedroom: 2,
+    bathroom: 4,
+
+    images: [
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/the-great-room-elegant.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/08-outdoor-space.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/09-main-bethroom-closets.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
+    ],
+    // subtitle: "Suburbs Villa",
+    title: "Expansive Green Oasis",
+    description:
+      "Family room, nice and spacious with a double and single bed with the fabulous shower room. You won’t want to leave.",
+    price: "325,000",
+    cautionfee: "100,000",
+    guests: 4,
+    latitude: 24.0539191,
+    longitude: 47.1578436844247,
+    location: "As Salam, الديره, Sahna, Riyadh Region, 16231, Saudi Arabia",
+    city: "Sahna",
+    type: "VILLA",
+    country: "Saudi Arabia",
+  },
+  // seller 2 Laurel Damson
+
+  {
+    sellerid: "66c0a27e71a3ea08d6a26f8f",
+    bedroom: 2,
+    bathroom: 4,
+
+    images: [
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/farmland-minutes-away-from-bustling-houston.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/05-dedicated-workspace.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
+    ],
+    // subtitle: "Expansive Villa",
+    title: "Charming Brownstone in Chicago’s Gold Coast",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
+    price: "325,000",
+    cautionfee: "100,000",
+    guests: 4,
+    latitude: 6.5960605,
+    longitude: 3.340787,
+    location: "Lagos",
+    city: "Lagos",
+    country: "Nigeria",
+  },
+
+  // seller 3 Lewis
+
+  {
+    sellerid: "66c0a27e71a3ea08d6a26f8f",
+    bedroom: 2,
+    bathroom: 4,
+
+    images: [
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/sophisticated-urban-living-in-lincoln-park.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/02-main-bedroom.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/the-great-room-luxury.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/sophisticated-urban-living-in-lincoln-park.jpg",
+    ],
+    // subtitle: "Lincoln Villa",
+    title: "Sophisticated Urban Living House in Lincoln Park",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
+    price: "325,000",
+    cautionfee: "100,000",
+    guests: 4,
+    latitude: 6.4682727,
+    longitude: 3.2839374,
+    location: "Festac, Lagos",
+    city: "Lagos",
+    country: "Nigeria",
+  },
+  // seller 4 Jonas Saudi
+
+  {
+    sellerid: "66c0a27e71a3ea08d6a26f8f",
+    bedroom: 2,
+    bathroom: 4,
+    images: [
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/charming-chicago-brownstone.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/03-kitchen-room.jpg",
+      "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/spacious-houston-farm-property.jpg",
+    ],
+    // subtitle: "Gold Villa",
+    title: "Yasmin Arabian Ran",
+    description:
+      "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
+    price: "325,000",
+    cautionfee: "100,000",
+    guests: 8,
+    latitude: 24.0539191,
+    longitude: 47.1578436844247,
+    location: "As Salam, الديره, Sahna, Riyadh Region, 16231, Saudi Arabia",
+    city: "Sahna",
+    type: "VILLA",
+    country: "Saudi Arabia",
+  },
+
+  // HOTEL
+
   // desert
   {
     title: "Tente Glamping du 3",

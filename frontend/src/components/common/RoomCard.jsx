@@ -179,13 +179,13 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             {/* Amazon */}
           </h3>
           <div className="w-full flex items-center gap-1 justify-between">
-            <div className="flex items-center flex-1 justify-center pr-4 border-r text-base gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r text-sm gap-1 text-dark">
               <CiStar /> 5 Rating
             </div>
-            <div className="flex items-center flex-1 justify-center pr-4 border-r text-base gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r text-sm gap-1 text-dark">
               <TbLocation /> {apartment?.country}
             </div>
-            <div className="flex items-center flex-1 justify-center text-base gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center text-sm gap-1 text-dark">
               <CiCalendar /> today
             </div>
           </div>
