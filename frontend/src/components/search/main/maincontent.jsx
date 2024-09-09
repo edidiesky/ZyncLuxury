@@ -6,6 +6,7 @@ import { apartmentDataList } from "../../../data/apartmentData";
 import RoomCard from "../../common/RoomCard";
 import { getAllRooms } from "@/features/room/roomReducer";
 import Loader from "@/components/home/loader";
+import Map from "../Map";
 const MainContent = () => {
   return (
     <div className="w-full relative h-full flex flex-col gap-8">
@@ -15,17 +16,13 @@ const MainContent = () => {
 };
 
 const RoomLists = () => {
-  const dispatch = useDispatch();
   const { rooms, getallRoomisLoading } = useSelector((store) => store.room);
 
-  useEffect(() => {
-    dispatch(getAllRooms());
-  }, []);
   return (
     <div className="w-[100%] mx-auto max-w-custom_1 h-full z-40 relative grid grid-cols-custom_2">
       <div className="w-full py-12 h-full md:w-[650px] shadow-lg bg-[#fff]">
         <div
-          className="w-full relative flex px-4 mdpx-8 flex-col
+          className="w-full relative flex px-4 md:px-8 flex-col
        gap-12"
         >
           <h4 className="text-xl md:text-2xl font-semibold">
@@ -59,7 +56,9 @@ const RoomLists = () => {
           </div>
         </div>
       </div>
-      <div className="w-full"></div>
+      <div className="w-full h-full">
+        <Map />
+      </div>
     </div>
   );
 };
