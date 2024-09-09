@@ -1,16 +1,23 @@
-import React, {useEffect} from "react";
-import Navbar from "../common/navbar";
+import React, { useEffect } from "react";
 import MainContent from "./main/maincontent";
 import Footer from "../common/Footer";
-import Newsletter from "../common/Newsletter";
+import Header, { FilterRooms } from "./Header";
+
 const HomeIndex = () => {
   return (
-    <div className="bg-[var(--light-grey)] w-full flex flex-col">
-      <Navbar />
-      <div className="w-full flex relative gap-4">
+    <div className="bg-[var(--light-grey)] h-[100vh] w-full flex flex-col">
+      {/* <Navbar /> */}
+      <Header />
+      <div
+        style={{
+          height: "calc(100vh - 90px)",
+        }}
+        className="w-full flex flex-col relative gap-1"
+      >
+        <FilterRooms/>
         <MainContent />
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };

@@ -354,7 +354,7 @@ const Navbar = () => {
 };
 
 export const ProfileDropdownStyles = styled.div`
-  z-index: 400;
+  z-index: 40000 !important;
   .profile_wrapper:hover .profile_dropdown {
     opacity: 1;
     transform: scale(1);

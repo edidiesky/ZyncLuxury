@@ -1,16 +1,15 @@
 import { useEffect, useRef } from "react";
+import Skeleton from "react-loading-skeleton";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { getAllRooms } from "@/features/room/roomReducer";
 import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
+import { apartmentDataList } from "@/data/apartmentData";
 
 const Listing = () => {
   const dispatch = useDispatch();
   const { rooms, getallRoomisLoading } = useSelector((store) => store.room);
-  const collection_ref_1 = useRef(null);
-  const inView1 = useInView(collection_ref_1, {
-    margin: "0px 100px -120px 0px",
-  });
+
   useEffect(() => {
     dispatch(getAllRooms());
   }, []);
@@ -23,7 +22,7 @@ const Listing = () => {
               Passionate – Dedicated – Professional
             </h4>
             <h4 className="text-4xl md:text-5xl font-semibold text-[var(--dark-1)]">
-          Holiday accomodations <br /> recommendations for you
+              Holiday accomodations <br /> recommendations for you
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">
@@ -33,19 +32,38 @@ const Listing = () => {
           </div>
         </div>
         <div
-          ref={collection_ref_1}
           className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
         >
-          {rooms?.slice(0, 3)?.map((apartment, index) => {
-            return (
-              <RoomCard
-                index={index}
-                inView={inView1}
-                key={index}
-                apartment={apartment}
-              />
-            );
-          })}
+          {getallRoomisLoading ? (
+            <>
+              {apartmentDataList?.slice(0, 3).map((apartment, index) => {
+                return (
+                  <div key={index} className="w-full flex flex-col gap-2">
+                    <Skeleton key={index} width={"100%"} height={200} />
+                    <div className="bg-white p-6 flex flex-col">
+                      <Skeleton key={index} width={"40%"} height={10} />
+                      <Skeleton key={index} width={"80%"} height={10} />
+                      <Skeleton key={index} width={"50%"} height={5} />
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          ) : (
+            <>
+              {rooms?.slice(0, 3)?.map((apartment, index) => {
+                return (
+                  <RoomCard
+                    index={index}
+                    type={"Search"}
+                    apartment={apartment}
+                    // currentUser={currentUser}
+                    key={index}
+                  />
+                );
+              })}
+            </>
+          )}
         </div>
       </div>
     </div>

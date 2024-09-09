@@ -13,6 +13,7 @@ export default function Meta({ title, keyword, description }) {
 
 Meta.defaultProps = {
   title: "ZyncLuxury - Home of Afforadble and durable homes",
-  description: "We offer qualtiy Homes",
+  description:
+    "Captivating real estate built website built with React, NodeJS and Prisma, featuring customizable layouts, advanced property listings, and seamless content management.",
   keyword: "Homes, buy quality Homes, rare ones",
 };

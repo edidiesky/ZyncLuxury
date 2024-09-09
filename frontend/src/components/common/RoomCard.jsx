@@ -18,7 +18,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
   const [tabindex, setTabIndex] = useState(0);
   const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
-    const today = new Date();
+  const today = new Date();
   const handleImagePosition = (position) => {
     if (position === "left") {
       setTabIndex(tabindex < 0 ? apartment?.images?.length - 1 : tabindex - 1);
@@ -117,7 +117,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       custom={index}
     >
       <Link to={`/room/${apartment?.id}`} className="w-full flex flex-col">
-        <div className="w-full h-[270px] rounded-xl overflow-hidden relative">
+        <div
+          className={`w-full ${
+            type === "search" ? "h-[170px]" : "h-[230px] md:h-[270px]"
+          }  rounded-xl overflow-hidden relative`}
+        >
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
           <Link
@@ -170,7 +174,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col gap-3 rounded-b-xl py-6">
-          <h3 className="text-xl md:text-2xl font-bold w-full">
+          <h3
+            className={`${
+              type === "search" ? "md:text-lg text-base" : "md:text-2xl text-xl"
+            }  font-bold w-full`}
+          >
             {apartment?.title}
             {/* <span className="flex text-sm pt-1 items-center gap-2">
               <TiLocation fontSize={"16px"} />
@@ -178,26 +186,36 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             </span> */}
             {/* Amazon */}
           </h3>
-          <div className="w-full flex items-center gap-1 justify-between">
-            <div className="flex items-center flex-1 justify-center pr-4 border-r text-sm gap-1 text-dark">
+          <div className="w-full flex items-center text-sm gap-1 justify-between">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r gap-1 text-dark">
               <CiStar /> 5 Rating
             </div>
-            <div className="flex items-center flex-1 justify-center pr-4 border-r text-sm gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r gap-1 text-dark">
               <TbLocation /> {apartment?.country}
             </div>
-            <div className="flex items-center flex-1 justify-center text-sm gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center gap-1 text-dark">
               <CiCalendar /> today
             </div>
           </div>
           <div className="flex mt-2 justify-between w-full items-center  gap-4">
             <div className="flex flex-col">
               {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-              <p className="text-xl md:text-xl font-semibold">
+              <p
+                className={`${
+                  type === "search"
+                    ? "md:text-lg text-base"
+                    : "md:text-xl text-lg"
+                } font-semibold`}
+              >
                 ₦{apartment?.price}{" "}
                 <span className="text-sm font-normal">/night</span>
               </p>
             </div>
-            <div className="btn btn_2 px-6 py-3 family1 font-bold text-white text-sm">
+            <div
+              className={`btn btn_2 ${
+                type === "search" ? "px-4 py-2 text-xs" : "px-6 py-3 text-sm"
+              }  family1 font-bold text-white `}
+            >
               View Room
             </div>
           </div>

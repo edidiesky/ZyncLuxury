@@ -197,7 +197,7 @@ input::placeholder {
 }
 
 .input {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   height: 45px;
   padding: 0 1rem;
   /* outline: auto; */
@@ -206,7 +206,7 @@ input::placeholder {
 }
 
 .inputs {
-  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
   height: 55px;
 
   padding: 0 1rem;
