@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import moment from "moment";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { addDays } from "date-fns";
 import { CiCalendar } from "react-icons/ci";
 import Heart from "../../assets/svg/heart";
 import { TbLocation } from "react-icons/tb";
@@ -17,6 +18,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
   const [tabindex, setTabIndex] = useState(0);
   const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
+    const today = new Date();
   const handleImagePosition = (position) => {
     if (position === "left") {
       setTabIndex(tabindex < 0 ? apartment?.images?.length - 1 : tabindex - 1);
@@ -181,10 +183,10 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               <CiStar /> 5 Rating
             </div>
             <div className="flex items-center flex-1 justify-center pr-4 border-r text-base gap-1 text-dark">
-              <TbLocation /> Nigeria
+              <TbLocation /> {apartment?.country}
             </div>
             <div className="flex items-center flex-1 justify-center text-base gap-1 text-dark">
-              <CiCalendar /> Jan 2-4
+              <CiCalendar /> today
             </div>
           </div>
           <div className="flex mt-2 justify-between w-full items-center  gap-4">
