@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 
 const Map = () => {
   const { rooms, getallRoomisLoading } = useSelector((store) => store.room);
+  const position = [51.505, -0.09];
   return (
     <div className="w-full h-full">
       <MapContainer
@@ -13,21 +14,28 @@ const Map = () => {
         style={{ height: "500px", width: "100%" }}
       >
         <TileLayer
+          attribution='&copy;{" "}
+        <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>{" "}
+        contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
         />
-        {rooms.map((location, index) => (
+        {/* {rooms?.map((location, index) => (
           <Marker
             key={index}
-            position={[location.latitude, location.longitude]}
+            position={[location?.latitude, location?.longitude]}
           >
             <Popup>
-              <b>{location.title}</b>
+              <b>{location?.title}</b>
               <br />
-              {location.subtitle}
+              {location?.subtitle}
             </Popup>
           </Marker>
-        ))}
+        ))} */}
+        <Marker position={position}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
