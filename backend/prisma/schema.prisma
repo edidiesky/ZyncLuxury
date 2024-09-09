@@ -74,10 +74,10 @@ model Rooms {
   title       String
   description String
   price       String?
-  city        String
+  city        String?
   country     String
   location    String
-  type        RoomType @default(STAY)
+  type        RoomType? @default(STAY)
   cautionfee  String?
   guests      Int?
   latitude    Int?

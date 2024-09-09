@@ -205,7 +205,7 @@ const SearchHomes = () => {
             <Popover>
               {" "}
               <PopoverTrigger>
-                <div className="md:w-[500px] flex items-start gap-4">
+                <div className="lg:w-[500px] flex items-start gap-4">
                   <div className="flex flex-col w-full items-start gap-2 text-base font-bold">
                     <span>Check In</span>
                     <input
