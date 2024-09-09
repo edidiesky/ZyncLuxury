@@ -11,7 +11,7 @@ const Map = () => {
       <MapContainer
         center={[29.7604, -95.3698]}
         zoom={10}
-        style={{ height: "500px", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           attribution='&copy;{" "}

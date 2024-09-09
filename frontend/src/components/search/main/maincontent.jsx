@@ -19,7 +19,10 @@ const RoomLists = () => {
   const { rooms, getallRoomisLoading } = useSelector((store) => store.room);
 
   return (
-    <div className="w-[100%] mx-auto max-w-custom_1 h-full z-40 relative grid grid-cols-custom_2">
+    <div
+      className="w-[100%] mx-auto max-w-custom_1 h-full z-40 relative 
+    grid grid-cols-custom_2 items-start"
+    >
       <div className="w-full py-12 h-full md:w-[650px] shadow-lg bg-[#fff]">
         <div
           className="w-full relative flex px-4 md:px-8 flex-col
@@ -56,7 +59,7 @@ const RoomLists = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full">
+      <div className="w-full h-full sticky top-0">
         <Map />
       </div>
     </div>
