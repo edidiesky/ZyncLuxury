@@ -47,11 +47,13 @@ const Header = () => {
        gap-12"
         >
           <div className="flex items-center gap-4 md:gap-6">
-            <img
-              src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
-              alt=""
-              className="w-8"
-            />
+            <Link to={'/'}>
+              <img
+                src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
+                alt=""
+                className="w-8"
+              />
+            </Link>
             <label
               style={{
                 transition: "all .4s",
@@ -113,7 +115,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };
@@ -157,9 +158,9 @@ export const FilterRooms = ()=> {
           </div>
         </div>
 
-        <div className=" px-4 flex items-center md:justify-end">
+        <div className=" md:px-4 flex items-center md:justify-end">
           <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-8 py-4">
-            <BiSearch /> Search for Accomodations
+            <BiSearch /> Search Homes
           </button>
         </div>
       </div>
