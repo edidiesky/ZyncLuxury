@@ -17,7 +17,7 @@ import Loader from "../home/loader";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import AnimateText from "@/animations/AnimateText";
 import { CreateNotifications } from "@/features/notification/notificationReducer";
-export default function RoomPaymentTab({ room }) {
+export default function RoomPaymentTab({ room, differenceinDays }) {
   // states of the reservation booking either loading or
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -39,15 +39,17 @@ export default function RoomPaymentTab({ room }) {
   const enddate = date?.to;
   let date1 = moment(startdate);
   let date2 = moment(enddate);
+
   const differenceInDays = date2?.diff(date1, "days"); // Convert milliseconds to days
   // console.log(moment(startdate)?.date());
+  let mainDiff = differenceInDays ? differenceInDays : differenceinDays;
   const price =
     room && room?.price ? parseInt(room?.price.replace(/,/g, "")) : 0;
   const cautionFee =
     room && room?.cautionfee ? parseInt(room?.cautionfee.replace(/,/g, "")) : 0;
 
   // Calculate total price
-  const totalPrice = price * differenceInDays + cautionFee;
+  const totalPrice = price * mainDiff + cautionFee;
 
   // console.log("price:", price);
   // console.log("cautionFee:", cautionFee);
@@ -65,7 +67,7 @@ export default function RoomPaymentTab({ room }) {
     if (currentUser) {
       // console.log('Reservation has been booked')
       // window.location.href = `/reservation/payment`;
-      if (differenceInDays < 2) {
+      if (mainDiff < 2) {
         toast.error("Minimum reservation is 2 nights");
       } else {
         // toast.success("Reservation date is fine");
@@ -129,7 +131,7 @@ export default function RoomPaymentTab({ room }) {
                   <div className="flex items-center underline gap-1">
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
                       {moment(startdate).format("DD MMM")}
-                    </span> {" "}
+                    </span>{" "}
                     {/* <span>-</span> */}
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
                       {moment(enddate).format("DD MMM")}
@@ -278,11 +280,11 @@ export default function RoomPaymentTab({ room }) {
               {/* price */}
               <div className="w-full text-lg font-bold flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
-                  ₦ {room?.price} x {differenceInDays} nights
+                  ₦ {room?.price} x {mainDiff} nights
                 </span>
                 <span>
                   <span className="text-base">₦</span>{" "}
-                  {Number(price * differenceInDays).toLocaleString()}{" "}
+                  {Number(price * mainDiff).toLocaleString()}{" "}
                 </span>
               </div>
               {/* taxes */}

@@ -1,27 +1,30 @@
-"use client";
-import React, { useRef, useState } from "react";
+
+import React, { useCallback, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import RoomGallery from "./RoomGallery";
 import RoomTitleAndDescription from "./RoomTitleAndDescription";
-import { BiChevronDown, BiChevronUp } from "react-icons/bi";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { FaShower } from "react-icons/fa";
 import RoomFeatures from "./RoomFeatures";
+import { addDays } from "date-fns";
 import RoomPaymentTab from "./RoomPaymentTab";
-import { Bed, Bookmark } from "lucide-react";
-import { BsThreeDots } from "react-icons/bs";
-import { CiHeart } from "react-icons/ci";
+import { Bed } from "lucide-react";
 import { LiaChartAreaSolid } from "react-icons/lia";
 import RoomCalendar from "./RoomCalendar";
-const RoomLists = () => {
+import moment from "moment";
+import { onLoginModal } from "@/features/modals/modalSlice";
+import { addListToWish } from "@/features/auth/authReducer";
+import Heart from "@/assets/svg/heart";
+const RoomLists = ({}) => {
   const [datemodal, setDateModal] = useState(false);
   const [guestsmodal, setGuestsModal] = useState(false);
   const [loginmodal, setLoginModal] = useState(false);
-  const [registermodal, setRegisterModal] = useState(false);
+  const dispatch = useDispatch();
+  const today = new Date();
   const [dateRange, setDateRange] = useState({
     selection: {
-      startDate: null,
-      endDate: null,
+      startDate: today,
+      endDate: addDays(today, 3),
       key: "selection",
     },
   });
@@ -38,19 +41,30 @@ const RoomLists = () => {
       },
     });
   };
+
+  const differenceinDays = Math.round(
+    (moment(dateRange.selection.endDate, "DD/MM") -
+      moment(dateRange.selection.startDate, "DD/MM")) /
+      (1000 * 3600 * 20)
+  );
   const [childrens, setChildrens] = useState(1);
   const [adults, setAdults] = useState(2);
 
-  const { room, getallRoomisLoading } = useSelector((store) => store.room);
-
-  const handleImagePosition = (position) => {
-    if (position === "left") {
-      setTabIndex(tabindex < 0 ? room?.images?.length - 1 : tabindex - 1);
+  const { room } = useSelector((store) => store.room);
+  const { currentUser } = useSelector((store) => store.auth);
+  // handle favourite room
+  const handleFavouriteRooms = useCallback(() => {
+    // check if the user exists
+    // else perform wish lists
+    if (!currentUser) {
+      dispatch(onLoginModal());
+    } else {
+      dispatch(addListToWish(room?.id));
+      // router.refresh();
     }
-    if (position === "right") {
-      setTabIndex(tabindex >= room?.images?.length ? 0 : tabindex + 1);
-    }
-  };
+  }, [currentUser]);
+  const customerData = JSON.parse(localStorage.getItem("customer"));
+  const active = customerData?.favourites?.includes(room?.id);
 
   return (
     <>
@@ -83,8 +97,11 @@ const RoomLists = () => {
                       </span>
                     </h3>
                     <div className="flex lg:items-center md:justify-end gap-4">
-                      <div className=" flex text-lg font-bold cursor-pointer items-center gap-2 text-dark justify-center">
-                        <CiHeart fontSize={"30px"} />
+                      <div
+                        onClick={() => handleFavouriteRooms()}
+                        className=" flex text-lg font-bold cursor-pointer items-center gap-2 text-dark justify-center"
+                      >
+                        <Heart active={active} />
                         Add to Favourites
                       </div>
                     </div>
@@ -130,6 +147,7 @@ const RoomLists = () => {
                 <RoomCalendar
                   dateRange={dateRange}
                   handleSelect={handleSelect}
+                  differenceinDays={differenceinDays}
                 />
               </div>
             </div>
@@ -146,6 +164,7 @@ const RoomLists = () => {
               loginmodal={loginmodal}
               setLoginModal={setLoginModal}
               room={room}
+              differenceinDays={differenceinDays}
             />
           </div>
         </div>

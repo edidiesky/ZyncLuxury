@@ -254,7 +254,7 @@ const Navbar = () => {
               <div className="flex justify-end items-center">
                 <button
                   onClick={() => dispatch(onLoginModal())}
-                  className="btn min-w-[130px] text-center text-base family1 font-semibold text-white px-8 py-4"
+                  className="btn min-w-[120px] text-center text-base family1 font-semibold text-white px-6 py-3"
                 >
                   Sign Up
                 </button>

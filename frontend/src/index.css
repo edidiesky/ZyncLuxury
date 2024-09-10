@@ -146,7 +146,7 @@ border-radius: 50% !important;
 }
 
 .rdrDateRangePickerWrapper {
-  border: 2px solid #ddd;
+  border: 2px solid #000 !important;
   border-radius: 50% !important;
   padding: 10px;
 }
