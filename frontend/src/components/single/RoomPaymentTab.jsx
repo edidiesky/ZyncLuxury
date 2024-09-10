@@ -111,7 +111,7 @@ export default function RoomPaymentTab({ room }) {
   }, [bookingdata]);
 
   return (
-    <div className="w-[100%] lg:sticky top-[10%] flex flex-col gap-8">
+    <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col gap-8">
       <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
         <h4 className="text-3xl px-6 font-bold">
           ₦{room?.price} <span className="font-normal text-sm">/night</span>
