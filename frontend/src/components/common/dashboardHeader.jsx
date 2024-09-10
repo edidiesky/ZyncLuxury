@@ -19,7 +19,7 @@ const AdminSidebarData = [
   {
     id: 6,
     tab: {
-      icon: <LuBedDouble fontSize={"16px"} />,
+      icon: <LuBedDouble fontSize={"14px"} />,
       title: "Reservations",
       path: "reservation",
     },
@@ -37,7 +37,7 @@ const AdminSidebarData = [
   {
     id: 61,
     tab: {
-      icon: <FaHotel fontSize={"16px"} />,
+      icon: <FaHotel fontSize={"14px"} />,
       title: "Rooms",
       path: "/rooms",
     },
@@ -46,17 +46,17 @@ const AdminSidebarData = [
   {
     id: 6,
     tab: {
-      icon: <FaMoneyBill1 fontSize={"16px"} />,
+      icon: <FaMoneyBill1 fontSize={"14px"} />,
       title: "Transactions",
       path: "/orders",
     },
     list: [],
   },
- 
+
   {
     id: 4,
     tab: {
-      icon: <FaRegUser fontSize={"16px"} />,
+      icon: <FaRegUser fontSize={"14px"} />,
       title: "Clients",
       path: "/customers",
     },
@@ -67,23 +67,31 @@ const AdminSidebarData = [
 const DashboardHeader = () => {
   const { currentUser } = useSelector((store) => store.auth);
   const [bar, setBar] = React.useState(false);
-  const [notificationactivebar, setNotificationActiveBar] = React.useState(false);
+  const [notificationactivebar, setNotificationActiveBar] =
+    React.useState(false);
   const [activeindex, setActiveIndex] = useState(0);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleLogOut = () => {
     dispatch(ClearUserInfo("any"));
     window.location.reload();
   };
-  const { Notifications } = useSelector(store => store.notification)
-  const unReadNotifications = Notifications?.filter((data)=> data.read === false)
-  
+  const { Notifications } = useSelector((store) => store.notification);
+  const unReadNotifications = Notifications?.filter(
+    (data) => data.read === false
+  );
+
   // console.log(unReadNotifications)
   return (
     <>
-      <NotificationSidebar setNotificationActiveBar={setNotificationActiveBar} notificationactivebar={notificationactivebar} />
-      <HeaderStyles className="w-full z-[10] bg-[#151515] border-b flex relative items-center 
-      justify-center">
+      <NotificationSidebar
+        setNotificationActiveBar={setNotificationActiveBar}
+        notificationactivebar={notificationactivebar}
+      />
+      <HeaderStyles
+        className="w-full z-[10] px-8 flex items-center 
+      justify-center"
+      >
         <div className="Header_wrapper w-[95%] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
@@ -96,11 +104,17 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
+            <h3 className="text-3xl md:text-4xl font-semibold">
+              Hello {currentUser?.username}
+              <span className="block text-base font-light">
+                Explore information and activity about your property
+              </span>
+            </h3>
 
-            <label
+            {/* <label
               htmlFor=""
               className="hidden md:flex text-xl text-dark w-[200px] lg:w-[250px]
-             items-center gap-2 h-12 border rounded-[10px] bg-[#f9f9f9] px-4"
+             items-center gap-2 h-14 border rounded-[10px] bg-[#f9f9f9] px-4"
             >
               <div className=" text-dark flex items-center justify-center">
                 <BiSearch />
@@ -110,17 +124,21 @@ const DashboardHeader = () => {
                 placeholder="Search dashboard"
                 className="bg-transparent font-booking_font_bold border-none outline-none text-base text-grey flex-1"
               />
-            </label>
+            </label> */}
           </div>
-          <div className="flex w-full auto items-center justify-end gap-12">
-            <div onClick={() => setNotificationActiveBar(true)} className="w-10 md:w-12 hover:bg-[#f7f7f7] relative cursor-pointer h-10 md:h-12 rounded-full flex items-center justify-center text-lg">
+          <div className="flex flex-1 auto items-center justify-end gap-4">
+            <div
+              onClick={() => setNotificationActiveBar(true)}
+              className="w-10 md:w-14 hover:bg-[#f7f7f7] relative cursor-pointer h-10 md:h-14 rounded-full flex items-center justify-center text-lg"
+            >
               <Bell />
-            { unReadNotifications?.length !== 0 && <div className="w-6 h-6 rounded-full text-sm flex items-center text-[#fff] justify-center absolute -top-1 -right-2 bg-[#249f26]">
-                {unReadNotifications?.length}
-              </div>}
+              {unReadNotifications?.length !== 0 && (
+                <div className="w-6 h-6 rounded-full text-sm flex items-center text-[#fff] justify-center absolute top-1 right-2 bg-[#249f26]">
+                  {unReadNotifications?.length}
+                </div>
+              )}
             </div>
             <div className="flex profile_wrapper relative items-center gap-2">
-
               <div className="flex items-center gap-2">
                 {/* <img
                 src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
@@ -137,28 +155,28 @@ const DashboardHeader = () => {
                   <img
                     src={currentUser?.image}
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 border border-[rgba(0,0,0,.3)] rounded-full"
+                    className="w-12 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
                   />
                 ) : currentUser?.username ? (
-                  // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+                  // <div className="w-14 h-14 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
                   //   {currentUser?.username[0]}{" "}
                   // </div>
                   <img
                     src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 border border-[rgba(0,0,0,.3)] rounded-full"
+                    className="w-14 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
                   />
                 ) : (
                   <img
                     src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 border border-[rgba(0,0,0,.3)] rounded-full"
+                    className="w-14 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
                   />
                 )}
-                <h4 className="text-sm text-dark font-bold family1">
+                <h4 className="text-base capitalize text-dark font-bold family1">
                   {currentUser?.username}
-                  <span className="block font-normal font-booking_font text-xs text-dark">
-                    {currentUser?.email}
+                  <span className="block font-normal font-booking_font text-xs text-grey">
+                    {currentUser?.role}
                   </span>
                 </h4>
               </div>
@@ -191,86 +209,90 @@ const DashboardHeader = () => {
             </div>
           </div>
         </div>
-        <div
-          style={{ zIndex: "200" }}
-          className={`${bar ? "left-0" : "-left-[100%]"
-            } w-[300px] bg-[#151515] border-r shadow-2xl  h-full transition-all ease duration-700 fixed flex lg:hidden top-0 flex-col gap-2`}
-        >
-          <div
-            onClick={() => setBar(!bar)}
-            style={{ zIndex: "200" }}
-            className={`${bar ? "left-0" : "-left-[100%]"
-              } w-full h-full transition-all ease duration-300 fixed flex lg:hidden top-0 bg-[#42424227] flex-col gap-2`}
-          ></div>
-          {/* <div className="w-full h-full absolute bg-[#fff] z-[24] object-cover" /> */}
-          <div
-            style={{ zIndex: "200" }}
-            className="w-full h-full bg-[#151515] Header_wrapper py-4 flex items-start flex-col gap-2"
-          >
-            <div className="flex px-3 items-center gap-2">
-              {currentUser?.image ? (
-                <img
-                  src={currentUser?.image}
-                  alt=""
-                  className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
-                />
-              ) : currentUser?.username ? (
-                // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
-                //   {currentUser?.username[0]}{" "}
-                // </div>
-                <img
-                  src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                  alt=""
-                  className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
-                />
-              ) : (
-                ""
-              )}
-              <h4 className="text-base font-booking_font4 text-white">
-                {currentUser?.username}
-                <span className="block font-normal font-booking_font text-sm text-white">
-                  {currentUser?.email}
-                </span>
-              </h4>
-            </div>
-            <div className="w-full my-4 flex flex-col">
-              {AdminSidebarData?.map((x, index) => {
-                return (
-                  <div key={index} className="w-full mx-auto">
-                    <NavLink
-                      onClick={() => setBar(!bar)}
-                      end
-                      className={`
-                      text-xm w-[90%] mx-auto text-white font-booking_font4`}
-                      to={`/dashboard${x.tab.path}`}
-                    >
-                      <div className="flex items-center">
-                        <span className="w-12 h-12 text-lg rounded-xl flex items-center text-blue justify-center">
-                          {" "}
-                          {x.tab.icon}
-                        </span>
-                        {<h4>{x.tab?.title}</h4>}
-                      </div>
-                    </NavLink>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <Sidebar bar={bar} setBar={setBar} />
       </HeaderStyles>
     </>
+  );
+};
+
+const Sidebar = ({ bar, setBar }) => {
+  const { currentUser } = useSelector((store) => store.auth);
+  return (
+    <div
+      style={{ zIndex: "200" }}
+      className={`${
+        bar ? "left-0" : "-left-[100%]"
+      } w-[300px] bg-[#151515] border-r shadow-2xl  h-full transition-all ease duration-700 fixed flex lg:hidden top-0 flex-col gap-2`}
+    >
+      <div
+        onClick={() => setBar(!bar)}
+        style={{ zIndex: "200" }}
+        className={`${
+          bar ? "left-0" : "-left-[100%]"
+        } w-full h-full transition-all ease duration-300 fixed flex lg:hidden top-0 bg-[#42424227] flex-col gap-2`}
+      ></div>
+      {/* <div className="w-full h-full absolute bg-[#fff] z-[24] object-cover" /> */}
+      <div
+        style={{ zIndex: "200" }}
+        className="w-full h-full bg-[#151515] Header_wrapper py-4 flex items-start flex-col gap-2"
+      >
+        <div className="flex px-3 items-center gap-2">
+          {currentUser?.image ? (
+            <img
+              src={currentUser?.image}
+              alt=""
+              className="w-14 lg:w-14 h-14 lg:h-14 rounded-full"
+            />
+          ) : currentUser?.username ? (
+            // <div className="w-14 h-14 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+            //   {currentUser?.username[0]}{" "}
+            // </div>
+            <img
+              src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
+              alt=""
+              className="w-14 lg:w-14 h-14 lg:h-14 rounded-full"
+            />
+          ) : (
+            ""
+          )}
+          <h4 className="text-base font-booking_font4 text-white">
+            {currentUser?.username}
+            <span className="block font-normal font-booking_font text-sm text-white">
+              {currentUser?.email}
+            </span>
+          </h4>
+        </div>
+        <div className="w-full my-4 flex flex-col">
+          {AdminSidebarData?.map((x, index) => {
+            return (
+              <div key={index} className="w-full mx-auto">
+                <NavLink
+                  onClick={() => setBar(!bar)}
+                  end
+                  className={`
+                      text-xm w-[90%] mx-auto text-white font-booking_font4`}
+                  to={`/dashboard${x.tab.path}`}
+                >
+                  <div className="flex items-center">
+                    <span className="w-14 h-14 text-lg rounded-xl flex items-center text-blue justify-center">
+                      {" "}
+                      {x.tab.icon}
+                    </span>
+                    {<h4>{x.tab?.title}</h4>}
+                  </div>
+                </NavLink>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 };
 
 export const HeaderStyles = styled.div`
   padding: 0.7rem 0;
   min-height: 5.4rem;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
-  background: #fff;
   .profile_wrapper:hover .profile_dropdown {
     opacity: 1;
     transform: scale(1);
@@ -329,7 +351,7 @@ export const HeaderStyles = styled.div`
     }
 
     &:hover {
-      background: #3a616a2c;
+      background: #3a614a2c;
       color: #000;
 
       svg {
@@ -338,7 +360,7 @@ export const HeaderStyles = styled.div`
     }
     &.active {
       position: relative;
-      background: #3a616a;
+      background: #3a614a;
       color: #fff;
       svg {
         color: #fff;

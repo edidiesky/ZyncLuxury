@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { ProfileDropdownStyles } from "../common/navbar";
@@ -7,7 +7,6 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 
 const Profile = () => {
-  const [country, setCountry] = useState("");
   const [bar, setBar] = React.useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
@@ -146,12 +145,6 @@ const Profile = () => {
         </div>
       ) : (
         <span className="flex items-center gap-4">
-          {/* <div
-                    onClick={() => dispatch(onLoginModal())}
-                    className="btn text-xs text-center p-4 font-booking_font4 text-white px-6 rounded-[40px]"
-                  >
-                    <AnimateText children={" Book Your Stay"} />
-                  </div> */}
           <span
             onClick={() => setBar(true)}
             className="flex text-4xl cursor-pointer text-[#fff] lg:hidden"
