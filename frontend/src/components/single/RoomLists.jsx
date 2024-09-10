@@ -1,4 +1,3 @@
-
 import React, { useCallback, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import RoomGallery from "./RoomGallery";
@@ -15,6 +14,7 @@ import moment from "moment";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
 import Heart from "@/assets/svg/heart";
+import RoomLocation from "./RoomLocation";
 const RoomLists = ({}) => {
   const [datemodal, setDateModal] = useState(false);
   const [guestsmodal, setGuestsModal] = useState(false);
@@ -102,7 +102,7 @@ const RoomLists = ({}) => {
                         className=" flex text-lg font-bold cursor-pointer items-center gap-2 text-dark justify-center"
                       >
                         <Heart active={active} />
-                        Add to Favourites
+                        {active ? "Added to Favourites" : " Add to Favourites"}
                       </div>
                     </div>
                   </div>
@@ -167,6 +167,9 @@ const RoomLists = ({}) => {
               differenceinDays={differenceinDays}
             />
           </div>
+        </div>
+        <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
+          <RoomLocation />
         </div>
       </div>
     </>
