@@ -35,15 +35,16 @@ const RoomLists = () => {
   return (
     <>
       <div
-        className="w-full relative py-12 flex items-center justify-center
-   gap-8"
+        className="w-full relative py-2 md:py-12 flex flex-col items-center justify-center"
       >
+        <div className="w-full md:w-[95%] max-auto max-w-custom mx-auto">
+          <RoomGallery room={room} />
+        </div>
         <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
           <div className="flex w-full flex-col gap-4">
             {/* <h3 className="text-4xl w-full family1 font-bold">
               {room?.subtitle}
             </h3> */}
-            <RoomGallery room={room} />
           </div>
           <div
             className="w-full z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
@@ -70,7 +71,7 @@ const RoomLists = () => {
                     </h3>
                     <div className="flex lg:items-center md:justify-end gap-4">
                       <div className=" flex text-lg font-bold cursor-pointer items-center gap-2 text-dark justify-center">
-                        <CiHeart fontSize={'30px'} />
+                        <CiHeart fontSize={"30px"} />
                         Add to Favourites
                       </div>
                     </div>

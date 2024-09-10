@@ -111,127 +111,198 @@ export default function RoomPaymentTab({ room }) {
   }, [bookingdata]);
 
   return (
-    <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col gap-8">
-      <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
-        <h4 className="text-3xl px-6 font-bold">
-          ₦{room?.price} <span className="font-normal text-sm">/night</span>
-        </h4>
-        <div className="w-[90%] mx-auto grid grid-cols-1">
-          <Popover>
-            <PopoverTrigger>
-              <div className="grid rounded-t-xl px-3 border border-[rgba(0,0,0,.4)] min-h-[80px]  w-full grid-cols-2 gap-4">
-                <div className="cursor-pointer flex items-start py-3 border-r border-[rgba(0,0,0,.4)] justify-center flex-col gap-2">
-                  <span className="text-xs text-dark uppercase">CHECK-IN</span>
-                  <div className="flex items-start gap-2">
+    <>
+      <div
+        style={{
+          backdropFilter: "blur(54px)",
+        }}
+        className="w-full fixed bottom-0 left-0 h-20 flex items-center justify-center border-t bg-[#ffffff9a] z-[50000]"
+      >
+        <div className="w-[90%] mx-auto flex items-center justify-between">
+          <div className="flex flex-1 flex-col">
+            <h4 className="text-lg font-bold">
+              ₦{room?.price} <span className="font-normal text-xs">/night</span>
+            </h4>
+            <div className="">
+              <Popover>
+                <PopoverTrigger>
+                  <div className="flex items-center underline gap-2">
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
-                      {moment(startdate).format("DD MMMM YYYY")}
+                      {moment(startdate).format("DD MMM")}
+                    </span>
+                    <span>-</span>
+                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                      {moment(enddate).format("DD MMM")}
                     </span>
                   </div>
-                </div>
-                <div className="cursor-pointer flex items-start py-3 justify-center flex-col gap-2">
-                  <span className="text-xs text-dark uppercase">CHECK-Out</span>
-                  <div className="flex items-start gap-2">
-                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
-                      {moment(enddate).format("DD MMMM YYYY")}
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    initialFocus
+                    mode="range"
+                    defaultMonth={date?.from}
+                    selected={date}
+                    onSelect={setDate}
+                    numberOfMonths={2}
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
+          </div>
+          <div className="flex items-center justify-end">
+            {currentUser ? (
+              <button
+                type="submit"
+                disabled={bookingloading}
+                onClick={handleReservationBooking}
+                className="btn flex items-center justify-center text-lg font-bold text-white py-3 px-8 w-full"
+              >
+                {bookingloading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader type="dots" />
+                    Reserve ...
+                  </span>
+                ) : (
+                  "Reserve"
+                )}{" "}
+              </button>
+            ) : (
+              <button
+                onClick={handleReservationBooking}
+                className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
+              >
+                Sign in to Reserve
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col gap-8">
+        <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
+          <h4 className="text-3xl px-6 font-bold">
+            ₦{room?.price} <span className="font-normal text-sm">/night</span>
+          </h4>
+          <div className="w-[90%] mx-auto grid grid-cols-1">
+            <Popover>
+              <PopoverTrigger>
+                <div className="grid rounded-t-xl px-3 border border-[rgba(0,0,0,.4)] min-h-[80px]  w-full grid-cols-2 gap-4">
+                  <div className="cursor-pointer flex items-start py-3 border-r border-[rgba(0,0,0,.4)] justify-center flex-col gap-2">
+                    <span className="text-xs text-dark uppercase">
+                      CHECK-IN
                     </span>
+                    <div className="flex items-start gap-2">
+                      <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                        {moment(startdate).format("DD MMMM YYYY")}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="cursor-pointer flex items-start py-3 justify-center flex-col gap-2">
+                    <span className="text-xs text-dark uppercase">
+                      CHECK-Out
+                    </span>
+                    <div className="flex items-start gap-2">
+                      <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                        {moment(enddate).format("DD MMMM YYYY")}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
-              <Calendar
-                initialFocus
-                mode="range"
-                defaultMonth={date?.from}
-                selected={date}
-                onSelect={setDate}
-                numberOfMonths={2}
-              />
-            </PopoverContent>
-          </Popover>
-          <div className="w-full rounded-b-xl border border-t-0 border-[rgba(0,0,0,.4)] min-h-[40px] grid grid-cols-1 gap-4">
-            <div className="flex p-3 flex-col">
-              <span className="text-xs text-dark">GUESTS</span>
-              <div className="flex items-center gap-2">
-                <span className="text-base font-bold leading-[1.5] text-center text-dark">
-                  {guests} guests
-                </span>
-                <span className="text-[8px] leading-[1.5] flex items-center justify-end flex-1 gap-[4px] text-dark font-normal">
-                  <button
-                    disabled={guests === room?.guests}
-                    onClick={() => setGuests(guests + 1)}
-                    className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiPlus fontSize={"16px"} />
-                  </button>
-                  <button
-                    disabled={guests === 1}
-                    onClick={() => setGuests(guests - 1)}
-                    className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
-                  >
-                    <BiMinus fontSize={"16px"} />
-                  </button>
-                  {/* <BiMinus fontSize={"16px"} /> */}
-                </span>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  initialFocus
+                  mode="range"
+                  defaultMonth={date?.from}
+                  selected={date}
+                  onSelect={setDate}
+                  numberOfMonths={2}
+                />
+              </PopoverContent>
+            </Popover>
+            <div className="w-full rounded-b-xl border border-t-0 border-[rgba(0,0,0,.4)] min-h-[40px] grid grid-cols-1 gap-4">
+              <div className="flex p-3 flex-col">
+                <span className="text-xs text-dark">GUESTS</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-base font-bold leading-[1.5] text-center text-dark">
+                    {guests} guests
+                  </span>
+                  <span className="text-[8px] leading-[1.5] flex items-center justify-end flex-1 gap-[4px] text-dark font-normal">
+                    <button
+                      disabled={guests === room?.guests}
+                      onClick={() => setGuests(guests + 1)}
+                      className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
+                    >
+                      <BiPlus fontSize={"16px"} />
+                    </button>
+                    <button
+                      disabled={guests === 1}
+                      onClick={() => setGuests(guests - 1)}
+                      className="w-8 hover:bg-[#eeeeeec6] bg-[#eeee]  rounded-full cursor-pointer h-8 flex items-center justify-center"
+                    >
+                      <BiMinus fontSize={"16px"} />
+                    </button>
+                    {/* <BiMinus fontSize={"16px"} /> */}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="w-[90%] mx-auto">
-          {currentUser ? (
-            <button
-              type="submit"
-              disabled={bookingloading}
-              onClick={handleReservationBooking}
-              className="btn flex items-center justify-center text-lg font-bold text-white py-4 px-8 w-full"
-            >
-              {bookingloading ? (
-                <span className="flex items-center justify-center gap-2">
-                  <Loader type="dots" />
-                  Placing Reservation
+          <div className="w-[90%] mx-auto">
+            {currentUser ? (
+              <button
+                type="submit"
+                disabled={bookingloading}
+                onClick={handleReservationBooking}
+                className="btn flex items-center justify-center text-lg font-bold text-white py-4 px-8 w-full"
+              >
+                {bookingloading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader type="dots" />
+                    Placing Reservation
+                  </span>
+                ) : (
+                  "Place Reservation"
+                )}{" "}
+              </button>
+            ) : (
+              <button
+                onClick={handleReservationBooking}
+                className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
+              >
+                Sign in to Reserve
+              </button>
+            )}
+          </div>
+          <div className="w-[90%] py-2 mx-auto flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-4">
+              {/* price */}
+              <div className="w-full text-lg font-bold flex items-center justify-between">
+                <span className="text-dark text-base block font-booking_font font-normal">
+                  ₦ {room?.price} x {differenceInDays} nights
                 </span>
-              ) : (
-                "Place Reservation"
-              )}{" "}
-            </button>
-          ) : (
-            <button
-              onClick={handleReservationBooking}
-              className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
-            >
-              Sign in to Reserve
-            </button>
-          )}
-        </div>
-        <div className="w-[90%] py-2 mx-auto flex flex-col gap-4">
-          <div className="w-full flex flex-col gap-4">
-            {/* price */}
-            <div className="w-full text-lg font-bold flex items-center justify-between">
-              <span className="text-dark text-base block font-booking_font font-normal">
-                ₦ {room?.price} x {differenceInDays} nights
-              </span>
-              <span>
-                <span className="text-base">₦</span>{" "}
-                {Number(price * differenceInDays).toLocaleString()}{" "}
-              </span>
-            </div>
-            {/* taxes */}
-            <div className="w-full text-lg font-bold flex items-center justify-between">
-              <span className="text-dark text-base block font-booking_font font-normal">
-                Caution Fees
-              </span>
-              <span> ₦ {room?.cautionfee}</span>
-            </div>
-            {/* total */}
-            <div className="w-full text-lg font-bold flex items-center justify-between">
-              <span className="text-dark text-base block font-booking_font font-normal">
-                Total
-              </span>
-              <span> ₦ {Number(totalPrice).toLocaleString()}</span>
+                <span>
+                  <span className="text-base">₦</span>{" "}
+                  {Number(price * differenceInDays).toLocaleString()}{" "}
+                </span>
+              </div>
+              {/* taxes */}
+              <div className="w-full text-lg font-bold flex items-center justify-between">
+                <span className="text-dark text-base block font-booking_font font-normal">
+                  Caution Fees
+                </span>
+                <span> ₦ {room?.cautionfee}</span>
+              </div>
+              {/* total */}
+              <div className="w-full text-lg font-bold flex items-center justify-between">
+                <span className="text-dark text-base block font-booking_font font-normal">
+                  Total
+                </span>
+                <span> ₦ {Number(totalPrice).toLocaleString()}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
