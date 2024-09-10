@@ -42,7 +42,7 @@ const Map = () => {
     <div className="w-full h-full">
       <MapContainer
         center={[3.2839374, 12.4964]} // Default center point
-        zoom={1}
+        zoom={3}
         style={{
           height: "100%",
           width: "100%",
@@ -53,7 +53,7 @@ const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {apartmentDataList?.map((location, index) => {
+        {rooms?.map((location, index) => {
           return (
             <Marker
               key={index}
@@ -65,7 +65,7 @@ const Map = () => {
                   className="w-full flex flex-col family1"
                 >
                   <div
-                    className={`w-full h-[100px] rounded-xl overflow-hidden relative`}
+                    className={`w-full h-[130px] rounded-xl overflow-hidden relative`}
                   >
                     {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 

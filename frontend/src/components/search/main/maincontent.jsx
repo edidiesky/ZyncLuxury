@@ -37,7 +37,7 @@ const RoomLists = () => {
           </h4>
 
           <div
-            className="w-[100%] max-h-[800px] overflow-auto relative 
+            className="w-[100%] relative 
             mx-auto max-w-custom_1 z-40 items-start lg:justify-center flex-col
        gap-12"
           >
@@ -45,7 +45,7 @@ const RoomLists = () => {
               <Loader />
             ) : (
               <div className=" gap-8 w-full grid md:grid-cols-2 lg:grid-cols-2">
-                {rooms?.slice(0, 4).map((apartment, index) => {
+                {rooms?.slice(0, 12).map((apartment, index) => {
                   return (
                     <RoomCard
                       type={"search"}
