@@ -41,9 +41,9 @@ const Header = () => {
   };
   return (
     <div className="h-[100%] md:h-[90px] w-full">
-      <div className="bg-[#fff] py-6 w-full z-[6000] flex flex-col">
+      <div className="bg-[#fff] py-6 w-full flex flex-col">
         <div
-          className="w-[95%] max-w-custom z-[400] mx-auto flex items-center justify-between
+          className="w-[95%] max-w-custom mx-auto flex items-center justify-between
        gap-12"
         >
           <div className="flex items-center gap-4 md:gap-6">
@@ -125,7 +125,7 @@ export const FilterRooms = ()=> {
     style={{
       backdropFilter:"blur(14px)"
     }}
-    className="bg-[#ffffffb0] sticky top-0 z-[5000] shadow-md w-full flex flex-col py-4">
+    className="bg-[#ffffffb0] sticky top-0 z-[500] shadow-md w-full flex flex-col py-4">
       <div
         className="w-[95%] max-w-custom mx-auto z-40 flex md:flex-row flex-col md:items-center justify-between
        gap-8"
