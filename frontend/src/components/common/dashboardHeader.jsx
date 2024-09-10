@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { Bell } from "lucide-react";
 import NotificationSidebar from "./NotificationSidebar";
+import Profile from "./Profile";
 const AdminSidebarData = [
   {
     id: 6,
@@ -84,15 +85,18 @@ const DashboardHeader = () => {
   // console.log(unReadNotifications)
   return (
     <>
-      <NotificationSidebar
+      {/* <NotificationSidebar
         setNotificationActiveBar={setNotificationActiveBar}
         notificationactivebar={notificationactivebar}
-      />
+      /> */}
       <HeaderStyles
-        className="w-full z-[10] px-8 flex items-center 
+        style={{
+          backdropFilter: "blur(14px)",
+        }}
+        className="w-full z-[10] min-h-[80px] sticky family1 top-0 bg-[#ffffff9d] py-8 px-2 flex items-center 
       justify-center"
       >
-        <div className="Header_wrapper w-[95%] mx-auto flex items-center justify-between">
+        <div className="Header_wrapper w-[95%] mx-auto max-w-custom flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
               onClick={() => setBar(!bar)}
@@ -104,7 +108,7 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <h3 className="text-3xl md:text-4xl font-semibold">
+            <h3 className="text-2xl md:text-3xl font-semibold">
               Hello {currentUser?.username}
               <span className="block text-base font-light">
                 Explore information and activity about your property
@@ -138,75 +142,7 @@ const DashboardHeader = () => {
                 </div>
               )}
             </div>
-            <div className="flex profile_wrapper relative items-center gap-2">
-              <div className="flex items-center gap-2">
-                {/* <img
-                src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                alt=""
-                className="w-10 rounded-full"
-              />
-              <h4 className="text-base text-dark font-booking_font4 family1">
-                {currentUser?.username}
-                <span className="block font-normal font-booking_font text-xs text-dark">
-                  {currentUser?.email}
-                </span>
-              </h4> */}
-                {currentUser?.image ? (
-                  <img
-                    src={currentUser?.image}
-                    alt=""
-                    className="w-12 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
-                  />
-                ) : currentUser?.username ? (
-                  // <div className="w-14 h-14 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
-                  //   {currentUser?.username[0]}{" "}
-                  // </div>
-                  <img
-                    src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                    alt=""
-                    className="w-14 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
-                  />
-                ) : (
-                  <img
-                    src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                    alt=""
-                    className="w-14 lg:w-14 h-14 lg:h-14 border border-[rgba(0,0,0,.3)] rounded-full"
-                  />
-                )}
-                <h4 className="text-base capitalize text-dark font-bold family1">
-                  {currentUser?.username}
-                  <span className="block font-normal font-booking_font text-xs text-grey">
-                    {currentUser?.role}
-                  </span>
-                </h4>
-              </div>
-              <div className="profile_dropdown shadow-2xl absolute">
-                <div className="w-full flex flex-col">
-                  <div className="flex profile_dropdown_bottom flex-col w-full">
-                    <NavLink
-                      end
-                      to={"/dashboard"}
-                      className="flex items-center font-booking_font_bold text-xs p-8 h-[45px] px-2 family1 w-full profile_list text-dark"
-                    >
-                      Dashboard
-                    </NavLink>
-                    <NavLink
-                      end
-                      to={`/dashboard/profile/${currentUser?.id}`}
-                      className="flex items-center font-booking_font_bold text-xs p-8 h-[45px] px-2 family1 w-full profile_list text-dark"
-                    >
-                      Profile
-                    </NavLink>
-                    <div
-                      onClick={handleLogOut}
-                      className="flex items-center font-booking_font_bold hover:bg-[#f7f7f7] text-xs p-8 h-[45px] px-2 family1 w-full profile_list text-dark"
-                    >
-                      Log Out
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Profile />
           </div>
         </div>
         <Sidebar bar={bar} setBar={setBar} />
@@ -291,15 +227,13 @@ const Sidebar = ({ bar, setBar }) => {
 };
 
 export const HeaderStyles = styled.div`
-  padding: 0.7rem 0;
-  min-height: 5.4rem;
   .profile_wrapper:hover .profile_dropdown {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
   }
   .profile_dropdown {
-    width: 170px;
+    width: 230px;
     opacity: 0;
     transform: scale(0.8);
     transition: all 0.3s;

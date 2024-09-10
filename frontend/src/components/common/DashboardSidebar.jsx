@@ -63,7 +63,7 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[320px] overflow-hidden border rounded-3xl bg-[#F7F8FC] hidden lg:flex  column gap-2`}
+      className={`w-[320px] overflow-hidden border-[rgba(0,0,0,.1)] border-r bg-[#fff] hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] pb-4 border-b flex flex-col gap-4">
@@ -165,8 +165,8 @@ export const HeaderStyles = styled.div`
   /* width: 100px; */
   /* z-index: 3000000; */
   position: sticky;
-  top: 5%;
-  height: 90vh;
+  top: 0%;
+  height: 100vh;
   .dropdown {
     max-height: 0;
     transition: all 0.7s;
@@ -193,12 +193,12 @@ export const HeaderStyles = styled.div`
     }
     &.active {
       position: relative;
-      background: #fe4329;
-      color: #fff;
+      background: #f1f1f1;
+      color: #000;
 
       span {
         svg {
-          color: #fff;
+          color: #000;
         }
       }
     }
