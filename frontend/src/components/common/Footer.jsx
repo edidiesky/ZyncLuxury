@@ -27,7 +27,7 @@ const navbarCenterList = [
 const Footer = () => {
   return (
     <div className="w-full flex mt-16 md:mt-20 flex-col">
-      <div className="w-[90%] lg:w-[900px] shadows py-20 px-8 md:px-16 rounded-bl-2xl z-[50] gap-8 -mb-12 bg-white mx-auto flex flex-col">
+      <div className="w-[90%] lg:w-[900px] shadows py-20 px-8 md:px-16 rounded-bl-2xl z-[20] gap-8 -mb-12 bg-white mx-auto flex flex-col">
         <div className="flex flex-col gap-2">
           <h3 className="text-3xl md:text-4xl capitalize family1 font-bold">
             keep updated & don’t miss anything!

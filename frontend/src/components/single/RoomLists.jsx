@@ -12,12 +12,32 @@ import { Bed, Bookmark } from "lucide-react";
 import { BsThreeDots } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { LiaChartAreaSolid } from "react-icons/lia";
+import RoomCalendar from "./RoomCalendar";
 const RoomLists = () => {
   const [datemodal, setDateModal] = useState(false);
   const [guestsmodal, setGuestsModal] = useState(false);
   const [loginmodal, setLoginModal] = useState(false);
   const [registermodal, setRegisterModal] = useState(false);
+  const [dateRange, setDateRange] = useState({
+    selection: {
+      startDate: null,
+      endDate: null,
+      key: "selection",
+    },
+  });
+  const handleSelect = (ranges) => {
+    // console.log(ranges);
+    const selectedStartDate = ranges?.range1?.startDate;
+    const selectedendDate = ranges?.range1?.endDate;
 
+    setDateRange({
+      ...ranges.range1,
+      selection: {
+        startDate: selectedStartDate,
+        endDate: selectedendDate,
+      },
+    });
+  };
   const [childrens, setChildrens] = useState(1);
   const [adults, setAdults] = useState(2);
 
@@ -34,18 +54,11 @@ const RoomLists = () => {
 
   return (
     <>
-      <div
-        className="w-full relative py-2 md:py-12 flex flex-col items-center justify-center"
-      >
+      <div className="w-full relative py-2 md:py-12 gap-12 flex flex-col items-center justify-center">
         <div className="w-full md:w-[95%] max-auto max-w-custom mx-auto">
           <RoomGallery room={room} />
         </div>
         <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
-          <div className="flex w-full flex-col gap-4">
-            {/* <h3 className="text-4xl w-full family1 font-bold">
-              {room?.subtitle}
-            </h3> */}
-          </div>
           <div
             className="w-full z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
        gap-20"
@@ -114,6 +127,10 @@ const RoomLists = () => {
                 <RoomTitleAndDescription room={room} />
                 {/* room services */}
                 <RoomFeatures />
+                <RoomCalendar
+                  dateRange={dateRange}
+                  handleSelect={handleSelect}
+                />
               </div>
             </div>
             {/* <div className="w"></div> */}

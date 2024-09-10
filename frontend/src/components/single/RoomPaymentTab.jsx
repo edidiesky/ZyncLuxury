@@ -116,7 +116,7 @@ export default function RoomPaymentTab({ room }) {
         style={{
           backdropFilter: "blur(54px)",
         }}
-        className="w-full fixed bottom-0 left-0 h-20 flex items-center justify-center border-t bg-[#ffffff9a] z-[50000]"
+        className="w-full fixed bottom-0 left-0 h-20 flex lg:hidden items-center justify-center border-t bg-[#ffffff9a] z-[50000]"
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           <div className="flex flex-1 flex-col">
@@ -126,11 +126,11 @@ export default function RoomPaymentTab({ room }) {
             <div className="">
               <Popover>
                 <PopoverTrigger>
-                  <div className="flex items-center underline gap-2">
+                  <div className="flex items-center underline gap-1">
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
                       {moment(startdate).format("DD MMM")}
-                    </span>
-                    <span>-</span>
+                    </span> {" "}
+                    {/* <span>-</span> */}
                     <span className="text-sm font-bold leading-[1.5] text-center text-dark">
                       {moment(enddate).format("DD MMM")}
                     </span>

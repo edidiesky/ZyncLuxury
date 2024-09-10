@@ -121,8 +121,44 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* React day picker css */
+.rdrMonth {
+  width: 100% !important;
+  font-size: 14px !important;
+}
+.rdrMonthAndYearPickers select {
+  font-size: 14px !important;
+  color: var(--dark-1) !important;
+}
+.css-1flmtb5-MuiDataGrid-root .MuiDataGrid-row {
+  max-height: 200px !important;
+  min-height: 200px !important;
+}
+.rdrDay {
+height: 4em !important;
+border-radius: 50% !important;
+}
+.css-1flmtb5-MuiDataGrid-root
+  .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)
+  > .MuiDataGrid-cell {
+  max-height: 200px !important;
+  min-height: 200px !important;
+}
+
+.rdrDateRangePickerWrapper {
+  border: 2px solid #ddd;
+  border-radius: 50% !important;
+  padding: 10px;
+}
+.rdrCalendarWrapper {
+  width: 100% !important;
+  color: var(--dark-1) !important;
+  font-size: 15px !important;
+}
+/* React day picker css */
+
 .family1 {
-  font-family:  "Kumbh Sans", sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 :root {
   --grey-1: #4f578d;
