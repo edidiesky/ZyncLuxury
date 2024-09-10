@@ -118,7 +118,8 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
         style={{
           backdropFilter: "blur(54px)",
         }}
-        className="w-full fixed bottom-0 left-0 h-20 flex lg:hidden items-center justify-center border-t bg-[#ffffff9a] z-[50000]"
+        className="w-full fixed bottom-0 left-0 h-20 flex lg:hidden items-center 
+        justify-center border-t bg-[#ffffff9a] z-[50000]"
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           <div className="flex flex-1 flex-col">
