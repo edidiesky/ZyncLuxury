@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { ProfileDropdownStyles } from "../common/navbar";
 import { onLoginModal, onRegisterModal } from "@/features/modals/modalSlice";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import { ClearUserInfo } from "@/features/auth/authSlice";
 
 const Profile = () => {
   const [country, setCountry] = useState("");

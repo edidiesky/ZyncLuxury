@@ -53,8 +53,7 @@ const Hero = () => {
       <div className="w-full">
         <div
           data-scroll-section
-          className="w-full min-h-[700px] z-30 py-40 relative flex items-center justify-center
-   gap-8"
+          className="w-full min-h-[700px] z-30 py-40 relative flex items-center justify-center gap-8"
         >
           <img
             src="/hero.jpg"
@@ -350,7 +349,7 @@ const Sidebar = ({ bar, setBar, currentUser }) => {
 };
 
 const TopContent = ({ bar, setBar, currentUser }) => {
-
+  const dispatch = useDispatch();
   return (
     <div className="w-full z-[40000] absolute top-0 left-0 py-8">
       <div
