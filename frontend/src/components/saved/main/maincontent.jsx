@@ -22,7 +22,7 @@ const RoomLists = () => {
    gap-8"
     >
       {wishisLoading && <Loader />}
-      <div className="w-[90%] md:w-[80%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
+      <div className="w-[95%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
         {savedRooms?.length === 0 ? (
           <h1 className="text-dark text-start leading-[1.3] text-3xl md:text-4xl font-booking_font4 font-bold">
             You have an empty Saved Rooms

@@ -22,7 +22,7 @@ const RoomLists = () => {
       className="w-full relative py-20 pb-12 flex items-center justify-center
    gap-8"
     >
-      <div className="w-[90%] md:w-[80%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
+      <div className="w-[95%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
         {reservations?.length === 0 ? (
           <h3 className="text-dark text-start leading-[1.3] text-4xl md:text-5xl font-bold font-booking_font4">
             You have an empty Trips
