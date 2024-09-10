@@ -47,19 +47,19 @@ const Profile = () => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <Link
                       to={"/dashboard"}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
+                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
                     >
                       Dashboard
                     </Link>
                     <Link
                       to={"/dashboard/settings"}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
+                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
                     >
                       Profile
                     </Link>
                     <div
                       onClick={() => handleLogOut()}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark flex"
+                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
                     >
                       Log Out
                     </div>
@@ -68,19 +68,19 @@ const Profile = () => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <Link
                       to={"/trips"}
-                      className="font-booking_font_bold text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark block"
+                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
                     >
                       Orders
                     </Link>
                     <Link
                       to={"/savedhomes"}
-                      className="font-booking_font_bold text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark block"
+                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
                     >
                       Favourites
                     </Link>
                     <div
                       onClick={() => handleLogOut()}
-                      className="font-booking_font_bold text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark block"
+                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
                     >
                       Log Out
                     </div>
@@ -89,13 +89,13 @@ const Profile = () => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <div
                       onClick={() => dispatch(onRegisterModal())}
-                      className="font-booking_font_bold text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark block"
+                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
                     >
                       Sign Up
                     </div>
                     <div
                       onClick={() => dispatch(onLoginModal())}
-                      className="font-booking_font_bold text-xl font-semibold p-2 family1 w-full profile_list border-b text-dark block"
+                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
                     >
                       Sign In
                     </div>
@@ -103,7 +103,7 @@ const Profile = () => {
                 )}
               </div>
             </div>
-            <div className="flex min-w-[60px] md:min-w-[80px] items-center gap-2">
+            <div className="flex min-w-[60px] cursor-pointer md:min-w-[80px] items-center gap-2">
               {currentUser?.image ? (
                 <img
                   src={currentUser?.image}

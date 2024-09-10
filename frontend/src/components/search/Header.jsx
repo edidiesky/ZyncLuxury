@@ -32,13 +32,8 @@ const linkData = [
 ];
 const Header = () => {
   const [country, setCountry] = useState("");
-  const [bar, setBar] = React.useState(false);
   const { currentUser } = useSelector((store) => store.auth);
-  const dispatch = useDispatch();
-  const handleLogOut = () => {
-    dispatch(ClearUserInfo());
-    window.location.reload(true);
-  };
+
   return (
     <div className="h-[100%] md:h-[90px] w-full">
       <div className="bg-[#fff] py-6 w-full flex flex-col">
