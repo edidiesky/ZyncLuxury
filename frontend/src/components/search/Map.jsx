@@ -60,10 +60,10 @@ const Map = () => {
               <Popup>
                 <Link
                   to={`/room/${location?.id}`}
-                  className="w-full flex flex-col family1"
+                  className="w-full flex flex-col overflow-hidden rounded-md family1"
                 >
                   <div
-                    className={`w-full h-[130px] rounded-xl overflow-hidden relative`}
+                    className={`w-full h-[130px] overflow-hidden relative`}
                   >
                     {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
@@ -82,7 +82,7 @@ const Map = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex flex-col gap-3 rounded-b-xl py-1">
+                  <div className="w-full flex p-2 pb-0 flex-col gap-1 rounded-b-xl">
                     <h3 className={`text-sm font-bold w-full`}>
                       {location?.title}
                     </h3>

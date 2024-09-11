@@ -69,6 +69,15 @@
 a.active {
   color: var(--primary);
 }
+/* leaflet styles start */
+.leaflet-container a {
+  color: #000 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -135,8 +144,8 @@ button:disabled {
   min-height: 200px !important;
 }
 .rdrDay {
-height: 4em !important;
-border-radius: 50% !important;
+  height: 4em !important;
+  border-radius: 50% !important;
 }
 .css-1flmtb5-MuiDataGrid-root
   .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)
