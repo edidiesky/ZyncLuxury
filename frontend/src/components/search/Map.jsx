@@ -17,10 +17,8 @@ const Map = () => {
   const { rooms, getallRoomisLoading } = useSelector((store) => store.room);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
-  // const customIcon = Icon({
-  //   iconUrl: "",
-  //   iconSizre: [40, 40],
-  // });
+  const customerData = JSON.parse(localStorage.getItem("customer"));
+  // ;
 
   const handleFavouriteRooms = useCallback(
     (apartment) => {
@@ -52,6 +50,7 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {rooms?.map((location, index) => {
+          const active = customerData?.favourites?.includes(location?.id);
           return (
             <Marker
               key={index}
@@ -62,9 +61,7 @@ const Map = () => {
                   to={`/room/${location?.id}`}
                   className="w-full flex flex-col overflow-hidden rounded-md family1"
                 >
-                  <div
-                    className={`w-full h-[130px] overflow-hidden relative`}
-                  >
+                  <div className={`w-full h-[130px] overflow-hidden relative`}>
                     {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
                     <Link
@@ -72,7 +69,7 @@ const Map = () => {
                       onClick={() => handleFavouriteRooms(location)}
                       className="absolute z-[50] top-[10%] left-[5%]"
                     >
-                      <Heart />
+                      <Heart active={active} />
                     </Link>
                     <div className="w-full z-[30] h-full">
                       <Image
