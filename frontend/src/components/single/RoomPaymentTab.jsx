@@ -119,7 +119,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
           backdropFilter: "blur(54px)",
         }}
         className="w-full fixed bottom-0 left-0 h-20 flex lg:hidden items-center 
-        justify-center border-t bg-[#ffffff9a] z-[50000]"
+        justify-center family1 border-t bg-[#ffffff9a] z-[50000]"
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           <div className="flex flex-1 flex-col">
@@ -182,10 +182,10 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
       </div>
       <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col gap-8">
         <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
-          <h4 className="text-3xl px-6 font-bold">
+          <h4 className="text-3xl family1 px-6 font-bold">
             ₦{room?.price} <span className="font-normal text-sm">/night</span>
           </h4>
-          <div className="w-[90%] mx-auto grid grid-cols-1">
+          <div className="w-[90%] family1 mx-auto grid grid-cols-1">
             <Popover>
               <PopoverTrigger>
                 <div className="grid rounded-t-xl px-3 border border-[rgba(0,0,0,.4)] min-h-[80px]  w-full grid-cols-2 gap-4">
@@ -194,7 +194,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                       CHECK-IN
                     </span>
                     <div className="flex items-start gap-2">
-                      <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                      <span className="text-sm font-semibold leading-[1.5] text-center text-dark">
                         {moment(startdate).format("DD MMMM YYYY")}
                       </span>
                     </div>
@@ -204,7 +204,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                       CHECK-Out
                     </span>
                     <div className="flex items-start gap-2">
-                      <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                      <span className="text-sm font-semibold leading-[1.5] text-center text-dark">
                         {moment(enddate).format("DD MMMM YYYY")}
                       </span>
                     </div>
@@ -226,7 +226,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
               <div className="flex p-3 flex-col">
                 <span className="text-xs text-dark">GUESTS</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-base font-bold leading-[1.5] text-center text-dark">
+                  <span className="text-base font-semibold leading-[1.5] text-center text-dark">
                     {guests} guests
                   </span>
                   <span className="text-[8px] leading-[1.5] flex items-center justify-end flex-1 gap-[4px] text-dark font-normal">
@@ -250,13 +250,13 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
               </div>
             </div>
           </div>
-          <div className="w-[90%] mx-auto">
+          <div className="w-[90%] family1 mx-auto">
             {currentUser ? (
               <button
                 type="submit"
                 disabled={bookingloading}
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-lg font-bold text-white py-4 px-8 w-full"
+                className="btn flex items-center justify-center text-lg font-semibold text-white py-4 px-8 w-full"
               >
                 {bookingloading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -276,10 +276,10 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
               </button>
             )}
           </div>
-          <div className="w-[90%] py-2 mx-auto flex flex-col gap-4">
+          <div className="w-[90%] family1 py-2 mx-auto flex flex-col gap-4">
             <div className="w-full flex flex-col gap-4">
               {/* price */}
-              <div className="w-full text-lg font-bold flex items-center justify-between">
+              <div className="w-full text-lg font-semibold flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   ₦ {room?.price} x {mainDiff} nights
                 </span>
@@ -289,14 +289,14 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 </span>
               </div>
               {/* taxes */}
-              <div className="w-full text-lg font-bold flex items-center justify-between">
+              <div className="w-full text-lg font-semibold flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   Caution Fees
                 </span>
                 <span> ₦ {room?.cautionfee}</span>
               </div>
               {/* total */}
-              <div className="w-full text-lg font-bold flex items-center justify-between">
+              <div className="w-full text-lg font-semibold flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   Total
                 </span>

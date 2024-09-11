@@ -49,13 +49,9 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
           <Popup>
             <Link
               to={`/room/${room?.id}`}
-              className="w-full flex flex-col family1"
+              className="w-full flex flex-col rounded-xl overflow-hidden family1"
             >
-              <div
-                className={`w-full h-[130px] rounded-xl overflow-hidden relative`}
-              >
-                {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
-
+              <div className={`w-full h-[130px] overflow-hidden relative`}>
                 <Link
                   to={"#"}
                   onClick={() => handleFavouriteRooms(room)}
@@ -71,7 +67,7 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-col gap-3 rounded-b-xl py-1">
+              <div className="w-full flex p-2 pb-0 flex-col gap-1 rounded-b-xl">
                 <h3 className={`text-sm font-bold w-full`}>{room?.title}</h3>
                 <div className="w-full flex items-center text-[10px] gap-1 justify-between">
                   <div className="flex items-center flex-1 justify-center pr-2 border-r gap-1 text-dark">
