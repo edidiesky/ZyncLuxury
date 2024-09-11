@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { ProfileDropdownStyles } from "../common/navbar";
 import { onLoginModal, onRegisterModal } from "@/features/modals/modalSlice";
-import { HiBars3BottomRight } from "react-icons/hi2";
 import Profile from "../common/Profile";
 import { BiSearch } from "react-icons/bi";
+import { propertytype } from "@/data/propertyType";
 
 const linkData = [
   {
@@ -35,14 +34,14 @@ const Header = () => {
   const { currentUser } = useSelector((store) => store.auth);
 
   return (
-    <div className="h-[100%] md:h-[90px] w-full">
-      <div className="bg-[#fff] py-6 w-full flex flex-col">
+    <div className="h-[100%] md:h-[85px] w-full">
+      <div className="bg-[#fff] py-4 w-full flex flex-col">
         <div
           className="w-[95%] max-w-custom mx-auto flex items-center justify-between
        gap-12"
         >
           <div className="flex items-center gap-4 md:gap-6">
-            <Link to={'/'}>
+            <Link to={"/"}>
               <img
                 src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                 alt=""
@@ -84,7 +83,7 @@ const Header = () => {
                     end
                     to={`/${list.path}`}
                     key={index}
-                    className={`text-base hover:text-grey font-bold family1 text-dark flex items-center
+                    className={`text-sm hover:text-grey font-normal family1 text-dark flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
                   >
                     {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -114,13 +113,14 @@ const Header = () => {
   );
 };
 
-export const FilterRooms = ()=> {
+export const FilterRooms = () => {
   return (
     <div
-    style={{
-      backdropFilter:"blur(14px)"
-    }}
-    className="bg-[#ffffffb0] sticky top-0 z-[500] shadow-md w-full flex flex-col py-4">
+      style={{
+        backdropFilter: "blur(14px)",
+      }}
+      className="bg-[#ffffffb0] sticky top-0 z-[500] shadow-md w-full flex flex-col py-2"
+    >
       <div
         className="w-[95%] max-w-custom mx-auto z-40 flex md:flex-row flex-col md:items-center justify-between
        gap-8"
@@ -128,39 +128,66 @@ export const FilterRooms = ()=> {
         <div className="flex items-center flex-wrap  gap-4">
           {/* Type */}
           <div className="relative">
-            <div className="flex px-4 py-3 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-2 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
               Property Type
+            </div>
+            <div className="w-[450px] flex flex-col gap-4 bg-white rounded-xl absolute top-[130%] p-6 shadow-xl">
+              <div className="px-2 w-full">
+                <h4 className="text-lg font-bold">Popular Property Type</h4>
+              </div>
+              <div className="w-full grid grid-cols-3 gap-4">
+                {propertytype?.map((props, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="p-4 border w-full rounded-xl flex items-center justify-center flex-col gap-2"
+                    >
+                      <div className="w-20 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
+                        <img src={props?.image} alt="" className="w-8" />
+                      </div>
+                      <h5 className="text-sm font-semibold family1">
+                        {props?.name}
+                      </h5>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="asbolute bottom-0 w-full">
+                <div className="w-full pt-4 border-t flex items-center justify-end">
+                  <div className="btn px-8 text-sm text-white py-2">Apply</div>
+                </div>
+              </div>
             </div>
           </div>
           {/* price */}
           <div className="relative">
-            <div className="flex px-4 py-3 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
               Any Price
             </div>
           </div>
           {/* bedrooms */}
           <div className="relative">
-            <div className="flex px-4 py-3 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
               Bed
             </div>
           </div>
 
           {/* bathrooms */}
           <div className="relative">
-            <div className="flex px-4 py-3 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
               Bath Rooms
             </div>
           </div>
         </div>
 
         <div className=" md:px-4 flex items-center md:justify-end">
-          <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-8 py-4">
+          <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-6 py-3">
             <BiSearch /> Search Homes
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Header;

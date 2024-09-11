@@ -1,14 +1,44 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
+
 const GetAllRoom = asyncHandler(async (req, res) => {
+  const {
+    maxPrice,
+    minPrice,
+    country,
+    type,
+    bedroom,
+    bathroom,
+    title,
+    limit = 12,
+    page = 1,
+  } = req.query;
+  // render the various key when it has a value in the queryObject
+  const queryObject = {
+    ...(type && { type }),
+    ...(bedroom && { bedroom: Number(bedroom) }),
+    ...(bathroom && { bathroom: Number(bathroom) }),
+    ...(country && { country }),
+    ...(title && { title }),
+    ...(minPrice && { price: { gte: minPrice } }),
+    ...(maxPrice && { price: { lte: maxPrice } }),
+  };
+  // calculate the pagination
+  const skip = (page - 1) * limit;
   const rooms = await prisma.rooms.findMany({
+    where: queryObject,
+    skip: parseInt(skip),
+    take: parseInt(limit),
     orderBy: {
       createdAt: "desc",
     },
   });
+  // get the total rooms and the total pages
+  const totalRooms = await prisma.rooms.count({ where: queryObject });
+  const noOfPages = Math.ceil(totalRooms / limit);
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return res.json(rooms);
+  return res.json({ rooms, noOfPages, totalRooms });
 });
 
 const GetAllRoomAndReservations = asyncHandler(async (req, res) => {

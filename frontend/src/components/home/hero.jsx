@@ -78,7 +78,7 @@ const Hero = () => {
                 <Dash />
               </span>{" "}
               <br /> Book Your Resort Experience
-              <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] md:mx-auto font-semibold capitalize pt-4 md:pt-8 block family1">
+              <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] md:mx-auto font-normal capitalize pt-2 block family1">
                 We are experts who set the pace Inspiring homes beyond
                 boundaries. We help you get the best out of your finance in
                 getting a home
@@ -367,7 +367,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                 end
                 to={`/${list.path}`}
                 key={index}
-                className={`text-lg hover:text-grey font-bold family1 text-white flex items-center
+                className={`text-base hover:text-grey font-semibold family1 text-white flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}

@@ -34,6 +34,7 @@ const initialState = {
   search: "",
   limit: "",
   noOfPages: 0,
+  totalRooms:0
 };
 
 export const roomSlice = createSlice({
@@ -66,6 +67,7 @@ export const roomSlice = createSlice({
       state.getallRoomisLoading = false;
       state.rooms = action.payload.rooms;
       state.noOfPages = action.payload.noOfPages;
+      state.totalRooms = action.payload.totalRooms;
     });
     builder.addCase(getAllRoomsForAdmin.rejected, (state, action) => {
       state.getallRoomisSuccess = false;
@@ -78,7 +80,10 @@ export const roomSlice = createSlice({
     });
     builder.addCase(getAllRooms.fulfilled, (state, action) => {
       state.getallRoomisLoading = false;
-      state.rooms = action.payload;
+      state.rooms = action.payload.rooms;
+      state.noOfPages = action.payload.noOfPages;
+      state.totalRooms = action.payload.totalRooms;
+
     });
     builder.addCase(getAllRooms.rejected, (state, action) => {
       state.getallRoomisSuccess = false;
