@@ -8,6 +8,9 @@ import Loader from "@/components/home/loader";
 import { GetAllUsers } from "@/features/auth/authReducer";
 import { NavLink } from "react-router-dom";
 import Nav from "@/components/common/Nav";
+import { apartmentDataList } from "@/data/apartmentData";
+import Image from "@/components/common/Image";
+import RoomCard from "@/components/common/RoomCard";
 const DashboardIndex = () => {
   const { currentUser } = useSelector((store) => store.auth);
   const { getStatisLoading } = useSelector((store) => store.stat);
@@ -25,15 +28,15 @@ const DashboardIndex = () => {
         <div className="w-full grid gap-8 md:grid-cols-1">
           <Widget />
         </div>
-        <div className="w-full grid grid-cols-custom gap-4">
-          <div className="w-full bg-[#eee]"></div>
-          <div className="w-[300px] bg-[#fafafa] "></div>
-        </div>
-        <div className="w-full grid grid-cols-custom items-start gap-4">
-             {/*sales stat */}
-          <SalesStatistics/>
+        <div className="w-full grid lg:grid-cols-custom items-start gap-4">
+          {/*sales stat */}
+          <SalesStatistics />
           {/* property type stat */}
           <PropertyType />
+        </div>
+        <div className="w-full grid lg:grid-cols-custom items-start gap-4">
+          <Property />
+          <Transaction />
         </div>
       </div>
     </div>
@@ -42,12 +45,12 @@ const DashboardIndex = () => {
 
 const PropertyType = () => {
   return (
-    <div className="w-[360px] min-h-[460px] rounded-3xl justify-between p-6 overflow-hidden bg-[#f1f1f1] flex flex-col gap-6">
+    <div className="md:w-[360px] min-h-[460px] rounded-3xl justify-between p-6 overflow-hidden border flex flex-col gap-6">
       <h4 className="text-xl md:text-2xl font-bold">
         Property Type
-        <sapn className="text-grey block pt-1 font-light text-sm">
+        <span className="text-grey block pt-1 font-light text-sm">
           Track your Property Type
-        </sapn>
+        </span>
       </h4>
       <div className="w-[60%] mx-auto flex flex-col gap-1">
         <div className="w-full flex items-center justify-between">
@@ -69,15 +72,68 @@ const PropertyType = () => {
 
 const SalesStatistics = () => {
   return (
-    <div className="w-full min-h-[400px] rounded-3xl p-6 overflow-hidden bg-[#f1f1f1]">
+    <div className="w-full min-h-[400px] rounded-3xl p-6 overflow-hidden border">
       <h4 className="text-xl md:text-2xl font-bold">
         Report Sales
-        <sapn className="text-grey block pt-1 font-light text-sm">
+        <span className="text-grey block pt-1 font-light text-sm">
           Track your Property Type
-        </sapn>
+        </span>
       </h4>
     </div>
   );
 };
 
+const Property = () => {
+  return (
+    <div className="w-full min-h-[400px] space-y-8 rounded-3xl p-6 overflow-hidden border">
+      <div className="w-full flex items-center justify-between">
+        <h4 className="text-xl md:text-2xl font-bold">
+          My Units
+          <span className="text-grey block pt-1 font-light text-sm">
+            Track your Property Type
+          </span>
+        </h4>
+        <span className="text-grey block pt-1 font-light text-sm">See All</span>
+      </div>
+      <div className="w-full grid md:grid-cols-2 gap-4">
+        {apartmentDataList?.slice(0, 2).map((data, index) => {
+          return <RoomCard apartment={data} type={"search"} />;
+        })}
+      </div>
+    </div>
+  );
+};
+
+const Transaction = () => {
+  return (
+    <div className="md:w-[400px] min-h-[400px] rounded-3xl space-y-8 p-6 overflow-hidden border">
+      <div className="w-full flex items-center justify-between">
+        <h4 className="text-xl md:text-2xl font-bold">Last Transaction</h4>
+        <span className="text-grey block pt-1 font-light text-sm">See All</span>
+      </div>
+      <div className="w-full flex flex-col gap-3">
+        {apartmentDataList?.slice(0, 3).map((data, index) => {
+          return (
+            <div
+              key={index}
+              className="w-full pb-4 border-b gap-8 flex items-center justify-between"
+            >
+              <div className="flex flex-1 items-center gap-3">
+                <div className="w-14 h-14 rounded-full overflow-hidden">
+                  <Image src={data?.images[0]} />
+                </div>
+                <h5 className="text-sm flex-1 font-semibold family1">{data?.location}
+                  <span className="font-light block text-xs">September 2024</span>
+                </h5>
+              </div>
+              <div className="justify-end flex items-center">
+                <h5 className="text-sm font-bold family1">${data?.price}</h5>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 export default DashboardIndex;

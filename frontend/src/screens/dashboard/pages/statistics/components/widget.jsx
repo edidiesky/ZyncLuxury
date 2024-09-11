@@ -40,7 +40,7 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       {widgetData?.map((widget, index) => {
         return (
           <div
@@ -57,7 +57,7 @@ const Widget = () => {
                 >
                   {widget?.icon}
                 </div>
-                <span className="text-dark text-base md:text-lg font-semibold">
+                <span className="text-dark flex-1 text-base md:text-lg font-semibold">
                   {widget?.title}
                 </span>
               </div>

@@ -108,7 +108,7 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <h3 className="text-2xl md:text-3xl font-semibold">
+            <h3 className="text-2xl md:block hidden md:text-3xl font-semibold">
               Hello {currentUser?.username}
               <span className="block text-base font-light">
                 Explore information and activity about your property
