@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import ReservationList from "./ReservationList";
 
 const Statistics = () => {
   return (
@@ -12,16 +11,12 @@ const Statistics = () => {
       <div className="flex w-full">
         <GrowthStat />
       </div>
-      <div className="flex md:w-[400px]">
-        <ReservationList />
-      </div>
     </div>
   );
 };
 
 const GrowthStat = () => {
   const { totalStatAmount, totalMonth } = useSelector((store) => store.stat);
-
   const [options, setOptions] = useState({
     chart: {
       height: 350,
@@ -37,102 +32,100 @@ const GrowthStat = () => {
     dataLabels: {
       enabled: false,
     },
-    colors: ["var(--dark-1)", "#247BA0"],
+    colors: ["#000", "#000"],
     stroke: {
       curve: "smooth",
     },
     xaxis: {
-      categories: totalMonth,
+      categories: [
+        "Jan",
+        "Febr",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "sept",
+      ],
     },
   });
 
   const [series, setSeries] = useState([
     {
       name: "Transactions",
-      data: totalStatAmount,
+      data: [10, 34, 55, 60, 120, 44, 15, 27, 20],
     },
+    // {
+    //   name: "Transactions",
+    //   data: [20, 40, 15, 70, 20, 4, 5, 17, 20],
+    // },
   ]);
-  useEffect(() => {
-    if (Array.isArray(totalMonth) && Array.isArray(totalStatAmount)) {
-      if (totalMonth.length !== 0 || totalStatAmount.length !== 0) {
-        setOptions((prevOptions) => ({
-          ...prevOptions,
-          xaxis: {
-            categories: totalMonth,
-          },
-        }));
-        setSeries([
-          {
-            name: "Transactions",
-            data: totalStatAmount,
-          },
-        ]);
-      }
-    }
-  }, [totalStatAmount, totalMonth, setSeries, setOptions]);
+  // const [options, setOptions] = useState({
+  //   chart: {
+  //     height: 350,
+  //     type: "bar",
+  //     fontFamily: "Work Sans",
+  //     foreColor: "#333",
+  //     fontSize: "30px",
+  //     textTransform: "capitalize",
+  //     zoom: {
+  //       enabled: false,
+  //     },
+  //   },
+  //   dataLabels: {
+  //     enabled: false,
+  //   },
+  //   colors: ["var(--dark-1)", "#247BA0"],
+  //   stroke: {
+  //     curve: "smooth",
+  //   },
+  //   xaxis: {
+  //     categories: totalMonth,
+  //   },
+  // });
+
+  // const [series, setSeries] = useState([
+  //   {
+  //     name: "Transactions",
+  //     data: totalStatAmount,
+  //   },
+  // ]);
+  // useEffect(() => {
+  //   if (Array.isArray(totalMonth) && Array.isArray(totalStatAmount)) {
+  //     if (totalMonth.length !== 0 || totalStatAmount.length !== 0) {
+  //       setOptions((prevOptions) => ({
+  //         ...prevOptions,
+  //         xaxis: {
+  //           categories: totalMonth,
+  //         },
+  //       }));
+  //       setSeries([
+  //         {
+  //           name: "Transactions",
+  //           data: totalStatAmount,
+  //         },
+  //       ]);
+  //     }
+  //   }
+  // }, [totalStatAmount, totalMonth, setSeries, setOptions]);
   return (
     <div id="chart" className="w-full">
-      <div className="w-full flex flex-col gap-8">
-        <div className="p-6 w-full px-6 flex-col rounded-[10px] min-h-[400px] border bg-white flex gap-4">
-          <h3 className="text-2xl font-booking_font4 font-bold">This Year Growth</h3>
+      <div className="w-full min-h-[400px] rounded-3xl p-6 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+        <div className="p-6 w-full px-6 flex-col rounded-[10px] min-h-[400px]  flex gap-4">
+          <h3 className="text-2xl font-booking_font4 font-bold">
+            Report Sales
+          </h3>
           <div className="flex w-full flex-col gap-8">
             <Chart
               options={options}
               series={series}
-              type="line"
+              type="bar"
               width={"100%"}
               height={340}
             />
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export const SalesStat = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(GetPaymentHistory());
-  }, []);
-  const { payments } = useSelector((store) => store.payment);
-  return (
-    <div className="w-full py-6 flex flex-col gap-4 bg-white border rounded-[10px]">
-      <div className="w-full flex flex-col gap-4">
-        <div className="w-full px-6 flex items-center justify-between">
-          <h3 className="text-xl font-booking_font4 font-bold">Transaction History</h3>
-          <Link
-            style={{ textDecoration: "underline" }}
-            className="text-sm text-[var(--dark-1)] font-booking_font_bold"
-            to={"/dashboard/orders"}
-          >
-            View All
-          </Link>
-        </div>
-        <ul className="flex flex-col gap-2 w-full">
-          {payments?.slice(0, 3)?.map((data, index) => {
-            return (
-              <li
-                key={index}
-                className="text-base py-2 px-6 cursor-pointer hover:bg-[#fafafa] font-booking_font4 font-bold flex items-center justify-between w-full"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-14 h-14 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
-                    {data?.user?.name[0]}
-                  </div>
-                  <span className="text-base">
-                    <span className="capitalize">{data?.user?.username}</span>
-                    <div className="block font-booking_font font-normal text-sm text-grey">
-                      {data?.user?.email}
-                    </div>
-                  </span>
-                </div>
-                <span className="text-lg">₦{Number(data?.amount).toLocaleString()}</span>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </div>
   );

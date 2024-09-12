@@ -14,7 +14,7 @@ const AdminSidebarData = [
     tab: {
       title: "Dashboard",
       path: "",
-      icon: <Layout fontSize={"20px"} />,
+      icon: <Layout fontSize={"16px"} />,
     },
     list: [],
   },
@@ -63,7 +63,7 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[320px] overflow-hidden border-[rgba(0,0,0,.1)] border-r bg-[#fff] hidden lg:flex  column gap-2`}
+      className={`w-[280px] overflow-hidden border-[rgba(0,0,0,.1)] border-r bg-[#fff] hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] pb-4 border-b flex flex-col gap-4">
@@ -91,12 +91,12 @@ const DashboardSidebar = () => {
                     // activeClassName="active"
                     end
                     className={`w-F7F8FC tab
-                      text-base px-2 mx-auto text-[#000]`}
+                      text-sm px-2 mx-auto text-[#000]`}
                     to={`/dashboard${x.tab.path}`}
                   >
                     <div className="flex font-normal items-center group-hover:justify-start w-full">
                       <span
-                        className="w-12 h-12 text-base rounded-xl flex items-center text-dark
+                        className="w-12 h-12 text-xs rounded-xl flex items-center text-dark
                        justify-center"
                       >
                         {" "}

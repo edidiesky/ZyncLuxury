@@ -117,7 +117,6 @@ const Hero = () => {
 const SearchHomes = () => {
   const today = new Date();
   const [guests, setGuests] = React.useState(2);
-  const [countrylist, setCountryList] = React.useState([...countries]);
   const [newcountrylist, setNewCountryList] = React.useState([]);
   const [country, setCountry] = React.useState("");
   const [countrymodal, setCountryModal] = React.useState(false);

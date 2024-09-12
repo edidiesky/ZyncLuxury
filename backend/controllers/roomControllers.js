@@ -4,6 +4,8 @@ import prisma from "../prisma/index.js";
 const GetAllRoom = asyncHandler(async (req, res) => {
   const {
     maxPrice,
+    startDate,
+    endDate,
     minPrice,
     country,
     type,
@@ -13,6 +15,8 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     limit = 12,
     page = 1,
   } = req.query;
+  const roomstartDate = startDate ? new Date(startDate) : null;
+  const roomendDate = endDate ? new Date(endDate) : null;
   // render the various key when it has a value in the queryObject
   const queryObject = {
     ...(type && { type }),
@@ -22,6 +26,23 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     ...(title && { title }),
     ...(minPrice && { price: { gte: minPrice } }),
     ...(maxPrice && { price: { lte: maxPrice } }),
+    ...(roomendDate &&
+      roomstartDate && {
+        reservations: {
+          none: {
+            OR: [
+              {
+                AND: [
+                  {
+                    startDate: { gte: roomstartDate },
+                    endDate: { lte: roomendDate },
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      }),
   };
   // calculate the pagination
   const skip = (page - 1) * limit;

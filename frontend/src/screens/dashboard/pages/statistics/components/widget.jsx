@@ -16,14 +16,14 @@ const Widget = () => {
     {
       title: "Total Revenue",
       icon: <FaMoneyBill />,
-      color: "#E1E7F8",
+      color: "#E7EEE9",
       // subtitle: `${totalOrder}`,
       subtitle: `$10K`,
     },
     {
       title: "Total Property",
       icon: <MdHotel />,
-      color: "#F8E1EF",
+      color: "#E2E3E7",
       subtitle: `${totalRooms}`,
     },
     // {
@@ -35,24 +35,24 @@ const Widget = () => {
     {
       title: "Total Reserved",
       icon: <LuBedDouble />,
-      color: "#489BC5",
+      color: "#EFE7D7",
       subtitle: `${totalReservations}`,
     },
   ];
   return (
-    <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
       {widgetData?.map((widget, index) => {
         return (
           <div
             onClick={() => setWidgetTab(index)}
             key={index}
-            style={{ transition: "all .3s", background: `#f1f1f1` }}
-            className={`p-6 md:p-8 family1 font-booking_font4 w-full rounded-3xl    flex bg-white md:items-center gap-4 min-h-48`}
+            style={{ transition: "all .3s" }}
+            className={`p-6 md:p-8 family1 font-booking_font4 w-full rounded-3xl border-[rgba(0,0,0,.08)]   flex bg-[#FCFCFB] md:items-center gap-4 min-h-48`}
           >
             <div className="flex flex-col gap-4 h-full justify-between">
               <div className="w-full flex items-center gap-4">
                 <div
-                  style={{ background: `#fff` }}
+                  style={{ background: `${widget?.color}` }}
                   className={`w-12 md:w-14 text-dark text-lg md:text-2xl h-12 md:h-14 rounded-full flex items-center justify-center`}
                 >
                   {widget?.icon}

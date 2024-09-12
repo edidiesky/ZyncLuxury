@@ -114,6 +114,11 @@ const Header = () => {
 };
 
 export const FilterRooms = () => {
+  // filtered states
+  const [country, setCountry] = useState("");
+  // modal
+  const [property, setProperty] = useState(false);
+
   return (
     <div
       style={{
@@ -122,42 +127,50 @@ export const FilterRooms = () => {
       className="bg-[#ffffffb0] sticky top-0 z-[500] shadow-md w-full flex flex-col py-2"
     >
       <div
+        // onClick={() => setProperty(false)}
         className="w-[95%] max-w-custom mx-auto z-40 flex md:flex-row flex-col md:items-center justify-between
        gap-8"
       >
         <div className="flex items-center flex-wrap  gap-4">
           {/* Type */}
           <div className="relative">
-            <div className="flex px-2 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div
+              onClick={() => setProperty(!property)}
+              className="flex px-2 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold"
+            >
               Property Type
             </div>
-            <div className="w-[450px] flex flex-col gap-4 bg-white rounded-xl absolute top-[130%] p-6 shadow-xl">
-              <div className="px-2 w-full">
-                <h4 className="text-lg font-bold">Popular Property Type</h4>
-              </div>
-              <div className="w-full grid grid-cols-3 gap-4">
-                {propertytype?.map((props, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="p-4 border w-full rounded-xl flex items-center justify-center flex-col gap-2"
-                    >
-                      <div className="w-20 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
-                        <img src={props?.image} alt="" className="w-8" />
+            {property && (
+              <div className="w-[450px] flex flex-col gap-4 bg-white rounded-xl absolute top-[130%] p-6 shadow-xl">
+                <div className="px-2 w-full">
+                  <h4 className="text-lg font-bold">Popular Property Type</h4>
+                </div>
+                <div className="w-full grid grid-cols-3 gap-4">
+                  {propertytype?.map((props, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="p-4 border w-full rounded-xl flex items-center justify-center flex-col gap-2"
+                      >
+                        <div className="w-20 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
+                          <img src={props?.image} alt="" className="w-8" />
+                        </div>
+                        <h5 className="text-sm font-semibold family1">
+                          {props?.name}
+                        </h5>
                       </div>
-                      <h5 className="text-sm font-semibold family1">
-                        {props?.name}
-                      </h5>
+                    );
+                  })}
+                </div>
+                <div className="asbolute bottom-0 w-full">
+                  <div className="w-full pt-4 border-t flex items-center justify-end">
+                    <div className="btn px-8 text-sm text-white py-2">
+                      Apply
                     </div>
-                  );
-                })}
-              </div>
-              <div className="asbolute bottom-0 w-full">
-                <div className="w-full pt-4 border-t flex items-center justify-end">
-                  <div className="btn px-8 text-sm text-white py-2">Apply</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           {/* price */}
           <div className="relative">
