@@ -93,7 +93,7 @@ const DashboardHeader = () => {
         style={{
           backdropFilter: "blur(14px)",
         }}
-        className="w-full z-[10] min-h-[80px] sticky family1 top-0 bg-[#ffffff9d] py-8 px-2 flex items-center 
+        className="w-full z-[10] min-h-[50px] border-[rgba(0,0,0,.06)] border-b sticky family1 top-0 bg-[#ffffff9d] py-4 px-2 flex items-center 
       justify-center"
       >
         <div className="Header_wrapper w-[95%] mx-auto max-w-custom flex items-center justify-between">
@@ -108,17 +108,11 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <h3 className="text-2xl md:block hidden md:text-3xl font-semibold">
-              Hello {currentUser?.username}
-              <span className="block text-base font-light">
-                Explore information and activity about your property
-              </span>
-            </h3>
 
-            {/* <label
+            <label
               htmlFor=""
               className="hidden md:flex text-xl text-dark w-[200px] lg:w-[250px]
-             items-center gap-2 h-14 border rounded-[10px] bg-[#f9f9f9] px-4"
+             items-center gap-2 h-14 border rounded-[40px] px-4"
             >
               <div className=" text-dark flex items-center justify-center">
                 <BiSearch />
@@ -128,7 +122,7 @@ const DashboardHeader = () => {
                 placeholder="Search dashboard"
                 className="bg-transparent font-booking_font_bold border-none outline-none text-base text-grey flex-1"
               />
-            </label> */}
+            </label>
           </div>
           <div className="flex flex-1 auto items-center justify-end gap-4">
             <div

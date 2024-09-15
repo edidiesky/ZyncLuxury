@@ -24,6 +24,12 @@ const DashboardIndex = () => {
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-8">
+        <h3 className="text-3xl md:block hidden md:text-4xl font-semibold">
+          Welcome {currentUser?.username}
+          <span className="block text-base font-light">
+            Explore information and activity about your property
+          </span>
+        </h3>
         <div className="w-full grid gap-8 md:grid-cols-1">
           <Widget />
         </div>
