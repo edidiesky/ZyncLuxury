@@ -14,7 +14,7 @@ const AdminSidebarData = [
     tab: {
       title: "Dashboard",
       path: "",
-      icon: <Layout fontSize={"16px"} />,
+      icon: <Layout width={"18px"} />,
     },
     list: [],
   },
@@ -31,7 +31,7 @@ const AdminSidebarData = [
   {
     id: 61,
     tab: {
-      icon: <FaHotel fontSize={"16px"} />,
+      icon: <FaHotel fontSize={"15px"} />,
       title: "Rooms",
       path: "/rooms",
     },
@@ -40,7 +40,7 @@ const AdminSidebarData = [
   {
     id: 6,
     tab: {
-      icon: <FaMoneyBill fontSize={"16px"} />,
+      icon: <FaMoneyBill fontSize={"15.5px"} />,
       title: "Transactions",
       path: "/orders",
     },
@@ -50,7 +50,7 @@ const AdminSidebarData = [
   {
     id: 4,
     tab: {
-      icon: <FaRegUser fontSize={"16px"} />,
+      icon: <FaRegUser fontSize={"15.5px"} />,
       title: "Clients",
       path: "/customers",
     },
@@ -79,7 +79,7 @@ const DashboardSidebar = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full px-2 my-4 flex flex-col gap-1">
+          <div className="w-full px-2 flex flex-col gap-3">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
@@ -96,7 +96,7 @@ const DashboardSidebar = () => {
                   >
                     <div className="flex font-normal items-center flex-col justify-center w-full">
                       <span
-                        className="w-12 nav_icons h-12 text-xs rounded-xl flex items-center text-dark
+                        className="w-10 nav_icons h-10 text-xs rounded-full flex items-center text-dark
                        justify-center"
                       >
                         {" "}
@@ -128,7 +128,7 @@ const DashboardSidebar = () => {
                   <img
                     src={currentUser?.image}
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
+                    className="w-10 lg:w-10 h-10 lg:h-10 rounded-full"
                   />
                 ) : currentUser?.username ? (
                   // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
