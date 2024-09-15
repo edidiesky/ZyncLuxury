@@ -51,10 +51,10 @@ const Property = () => {
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="w-full px-4 flex items-center justify-between">
-        <h4 className="text-2xl lg:text-3xl font-bold">
-          My Units
+        <h4 className="text-3xl lg:text-4xl font-bold">
+          My Properties
           <span className="text-grey block pt-1 font-normal text-sm">
-            Track your Property Type
+            Track all your Property you have created for sell or rent
           </span>
         </h4>
         <Link
@@ -79,7 +79,7 @@ const Transaction = () => {
   return (
     <div className="w-full flex flex-col gap-4">
       <div className="w-full flex items-center pr-4 justify-between">
-        <h4 className="text-xl lg:text-2xl font-bold">Last Transaction</h4>
+        <h4 className="text-2xl lg:text-3xl font-bold">Last Transaction</h4>
         <Link
           to={`/dashboard/orders`}
           className="text-dark underline block pt-1 font-normal text-sm"
@@ -99,15 +99,15 @@ const Transaction = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden">
                     <Image src={data?.images[0]} />
                   </div>
-                  <h5 className="text-sm flex-1 font-semibold family1">
-                    {data?.location}
-                    <span className="font-normal block text-xs">
+                  <h5 className="text-base flex-1 font-semibold family1">
+                    {data?.title}
+                    <span className="font-semibold block text-xs">
                       September 2024
                     </span>
                   </h5>
                 </div>
                 <div className="justify-end flex items-center">
-                  <h5 className="text-sm font-bold family1">${data?.price}</h5>
+                  <h5 className="text-lg font-normal family1">${data?.price}</h5>
                 </div>
               </div>
             );

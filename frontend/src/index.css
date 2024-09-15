@@ -78,6 +78,22 @@ a.active {
   margin: 0 !important;
 }
 
+/* scroll */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background: #f3f3f3;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
 @layer base {
   * {
     @apply border-border;

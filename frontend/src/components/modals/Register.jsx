@@ -105,9 +105,9 @@ const RegisterModal = () => {
           <div className="w-full pb-6 flex">
             <form
               onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto max-h-[300px] md:max-h-[100%] md:px-4 overflow-auto py-4 pb-4 grid md:grid-cols-1 gap-4"
+              className="w-[90%] mx-auto max-h-[300px] md:max-h-[400px] overflow-y-scroll md:px-4 py-4 pb-4 grid md:grid-cols-1 gap-4"
             >
-              <div className="w-full grid sm:grid-cols-2 gap-4">
+              <div className="w-full grid sm:grid-cols-1 gap-4">
                 {RegisterFormInputData?.map((input, index) => {
                   return (
                     <label
@@ -217,7 +217,7 @@ const RegisterModalStyles = styled(motion.div)`
     justify-content: center;
     flex-direction: column;
     background: #fff;
-    height: 620px;
+    height: 640px;
     gap: 2rem;
     border-radius: 20px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);

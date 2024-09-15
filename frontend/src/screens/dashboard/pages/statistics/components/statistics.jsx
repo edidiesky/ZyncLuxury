@@ -109,7 +109,7 @@ const GrowthStat = () => {
   // }, [totalStatAmount, totalMonth, setSeries, setOptions]);
   return (
     <div id="chart" className="w-full flex flex-col  gap-4">
-      <h3 className="text-2xl md:text-3xl font-booking_font4 font-bold">
+      <h3 className="text-3xl md:text-4xl font-booking_font4 font-bold">
         Report Sales
       </h3>
       <div
