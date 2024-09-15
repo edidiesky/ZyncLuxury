@@ -23,26 +23,24 @@ const DashboardIndex = () => {
   // }
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col gap-8">
+      <div className="w-full flex flex-col gap-12">
         <h3 className="text-3xl md:block hidden md:text-4xl font-semibold">
           Welcome {currentUser?.username}
           <span className="block text-base font-light">
             Explore information and activity about your property
           </span>
         </h3>
-        <div className="w-full grid gap-8 md:grid-cols-1">
-          <Widget />
+        <div className="w-full grid gap-4 md:grid-cols-custom">
+          <div className="w-full flex flex-col gap-8">
+            <Widget />
+            <Statistics />
+          </div>
+          <div className="w-[360px] flex flex-col gap-8">
+            <ProductBreakdown />
+            <Transaction />
+          </div>
         </div>
-        <div className="w-full grid lg:grid-cols-custom items-start gap-4">
-          {/*sales stat */}
-          <Statistics />
-          {/* property type stat */}
-          <ProductBreakdown />
-        </div>
-        <div className="w-full grid lg:grid-cols-custom items-start gap-4">
-          <Property />
-          <Transaction />
-        </div>
+        <Property />
       </div>
     </div>
   );
@@ -51,9 +49,9 @@ const DashboardIndex = () => {
 
 const Property = () => {
   return (
-    <div className="w-full min-h-[400px] space-y-8 rounded-3xl p-6 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+    <div className="w-full min-h-[330px] space-y-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
       <div className="w-full flex items-center justify-between">
-        <h4 className="text-xl md:text-2xl font-bold">
+        <h4 className="text-2xl md:text-3xl font-bold">
           My Units
           <span className="text-grey block pt-1 font-light text-sm">
             Track your Property Type
@@ -61,8 +59,8 @@ const Property = () => {
         </h4>
         <span className="text-grey block pt-1 font-light text-sm">See All</span>
       </div>
-      <div className="w-full grid md:grid-cols-2 gap-4">
-        {apartmentDataList?.slice(0, 2).map((data, index) => {
+      <div className="w-full grid md:grid-cols-3 gap-4">
+        {apartmentDataList?.slice(0, 3).map((data, index) => {
           return <RoomCard apartment={data} type={"search"} />;
         })}
       </div>
@@ -72,7 +70,7 @@ const Property = () => {
 
 const Transaction = () => {
   return (
-    <div className="md:w-[400px] min-h-[400px] rounded-3xl space-y-8 p-6 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+    <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
       <div className="w-full flex items-center justify-between">
         <h4 className="text-xl md:text-2xl font-bold">Last Transaction</h4>
         <span className="text-grey block pt-1 font-light text-sm">See All</span>

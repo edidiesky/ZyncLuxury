@@ -7,10 +7,8 @@ import { Link } from "react-router-dom";
 
 const Statistics = () => {
   return (
-    <div className="w-full grid md:grid-cols-custom items-start gap-8">
-      <div className="flex w-full">
-        <GrowthStat />
-      </div>
+    <div className="flex w-full">
+      <GrowthStat />
     </div>
   );
 };

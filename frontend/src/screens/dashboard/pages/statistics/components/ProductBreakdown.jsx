@@ -62,7 +62,7 @@ const ProductBreakdown = () => {
     },
   ];
   return (
-    <div className="w-full md:w-[400px] flex flex-col py-8 md:py-12 bg-[#fff] border border-[rgba(0,0,0,.08)] rounded-3xl gap-4">
+    <div className="w-full flex flex-col py-8 md:py-12 bg-[#fff] border border-[rgba(0,0,0,.08)] rounded-3xl gap-4">
       <div className="w-full px-6 flex items-center justify-between">
         <h3 className="text-xl lg:text-2xl font-semibold family1">
           Property Type Breakdown

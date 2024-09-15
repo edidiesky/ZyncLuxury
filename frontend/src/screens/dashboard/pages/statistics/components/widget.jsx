@@ -26,12 +26,12 @@ const Widget = () => {
       color: "#E2E3E7",
       subtitle: `${totalRooms}`,
     },
-    // {
-    //   title: " Total Revenue",
-    //   icon: <GiCash />,
-    //   color: "#FF7F5C",
-    //   subtitle: `$${totalOrderAmount}`,
-    // },
+    {
+      title: " Total Revenue",
+      icon: <GiCash />,
+      color: "#FF7F5C",
+      subtitle: `$${totalOrderAmount}`,
+    },
     {
       title: "Total Reserved",
       icon: <LuBedDouble />,
@@ -40,14 +40,15 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-2 gap-4">
       {widgetData?.map((widget, index) => {
         return (
           <div
             onClick={() => setWidgetTab(index)}
             key={index}
             style={{ transition: "all .3s" }}
-            className={`p-6 md:p-8 family1 font-booking_font4 w-full rounded-3xl border-[rgba(0,0,0,.08)]   flex bg-[#FCFCFB] md:items-center gap-4 min-h-48`}
+            className={`p-8 md:px-4 family1 font-booking_font4 w-full
+               rounded-3xl border border-[rgb(223,223,223)]  flex md:items-center gap-4 min-h-48`}
           >
             <div className="flex flex-col gap-4 h-full justify-between">
               <div className="w-full flex items-center gap-4">
@@ -57,7 +58,7 @@ const Widget = () => {
                 >
                   {widget?.icon}
                 </div>
-                <span className="text-dark flex-1 text-base md:text-lg font-semibold">
+                <span className="text-dark flex-1 text-sm md:text-base font-semibold">
                   {widget?.title}
                 </span>
               </div>
