@@ -6,7 +6,9 @@ const DashboardLayout = () => {
   return (
     <>
       <div
-      
+        style={{
+          fontFamily: "Work Sans !important",
+        }}
         className="w-full bg-[#fff] relative flex items-start justify-end"
       >
         <DashboardSidebar />

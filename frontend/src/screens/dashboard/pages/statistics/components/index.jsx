@@ -35,7 +35,7 @@ const DashboardIndex = () => {
             <Widget />
             <Statistics />
           </div>
-          <div className="w-[360px] flex flex-col gap-8">
+          <div className="w-[400px] flex flex-col gap-8">
             <ProductBreakdown />
             <Transaction />
           </div>
@@ -49,7 +49,7 @@ const DashboardIndex = () => {
 
 const Property = () => {
   return (
-    <div className="w-full min-h-[330px] space-y-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+    <div className="w-full min-h-[330px] space-y-8 rounded-3xl p-8 md:p-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
       <div className="w-full flex items-center justify-between">
         <h4 className="text-2xl md:text-3xl font-bold">
           My Units
@@ -70,7 +70,7 @@ const Property = () => {
 
 const Transaction = () => {
   return (
-    <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+    <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 px-8 md:py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
       <div className="w-full flex items-center justify-between">
         <h4 className="text-xl md:text-2xl font-bold">Last Transaction</h4>
         <span className="text-grey block pt-1 font-light text-sm">See All</span>
