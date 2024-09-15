@@ -9,8 +9,7 @@ const OrderList = () => {
   //   const [roommodal, setRoomModal] = useState(false);
   const { payments } = useSelector((store) => store.payment);
   return (
-    <div className="w-full p-4 px-6 bg-white border rounded-[20px]">
-
+    <div className="w-full bg-[#FAFAFA] min-h-[170px] items-center flex flex-col p-4 px-6 rounded-3xl">
       <Table>
         <div className="TableContainer">
           <table className="tableWrapper">

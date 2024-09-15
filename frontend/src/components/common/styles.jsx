@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Table = styled.div`
   width: 100%;
   padding: 1rem 0;
-  background: #ffff;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -61,26 +60,23 @@ export const Table = styled.div`
 
       thead {
         tr {
-          text-align: start;
-          z-index: 200;
-          text-align: start;
+          text-align: center;
           transition: all 0.4s;
-          background-color: #fafafa;
+
           border-radius: 40px;
-          padding: 1rem;
+          padding: 1rem 0;
           /* text-transform: uppercase; */
           font-weight: normal !important;
           &:hover {
             background-color: rgba(0, 0, 0, 0.1);
           }
           th {
-            font-size: 0.8rem;
             text-align: start;
-            font-size: 15px !important;
+            font-size: 16px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1.7rem 1rem;
-            font-family: "Work Sans", Arial, Helvetica, sans-serif;
-            font-weight: bold !important;
+            padding: 1.7rem;
+            font-family: "Work Sans";
+            font-weight: 500 !important;
           }
         }
       }
@@ -96,12 +92,11 @@ export const Table = styled.div`
           }
           td {
             text-align: start;
-            padding: 1.6rem 1rem !important;
-            font-size: 14px !important;
+            padding: 1.5rem !important;
             font-weight: normal !important;
-            font-family: "Work Sans", Arial, Helvetica, sans-serif;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
             color: #000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+            line-height: 1.2 !important;
 
             span {
               &.danger {
@@ -111,10 +106,10 @@ export const Table = styled.div`
                 background: #f3efe5;
               }
               &.success {
-                color: #28a745;
+                color: #07581a;
                 padding: 0.56rem 1rem;
                 border-radius: 4px;
-                background: #dcf6d9;
+                background: #bef4b8;
               }
             }
           }

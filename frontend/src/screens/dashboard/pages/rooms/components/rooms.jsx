@@ -16,21 +16,8 @@ const RoomsList = () => {
   return (
     <>
       {getallRoomisLoading && <Loader />}
-      <div className="w-full bg-white py-4">
-        {/* <label
-          htmlFor=""
-          className="hidden md:flex text-xl text-dark w-[200px] lg:w-[250px]
-             items-center gap-2 h-12 border rounded-[10px] bg-[#f9f9f9] px-4"
-        >
-          <div className="text-dark flex items-center justify-center">
-            <BiSearch />
-          </div>
-          <input
-            type="text"
-            placeholder="Search"
-            className="bg-transparent border-none outline-none text-base text-dark flex-1"
-          />
-        </label> */}
+      <div className="w-full bg-[#FAFAFA] min-h-[170px] items-center flex flex-col p-4 px-6 rounded-3xl">
+      
         <Table>
           <div className="TableContainer">
             <table className="tableWrapper">

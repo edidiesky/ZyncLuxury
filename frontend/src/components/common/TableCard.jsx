@@ -36,11 +36,11 @@ const TableCard = ({ x, type }) => {
             </span> */}
 
             {x?.status === "CONFIRMED" ? (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center success">
+              <span className=" font-normal text-sm font-booking_font_bold text-center success">
                 {x?.status}
               </span>
             ) : (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center danger">
+              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
                 {x?.status}
               </span>
             )}
@@ -70,31 +70,31 @@ const TableCard = ({ x, type }) => {
         <tr key={x?._id}>
           <td>
             <div className="flex flex-col">
-              <span className=" font-semibold text-dark text-bold">
+              <span className=" font-normal text-dark text-bold">
                 {x?.name}
               </span>
-              {/* <span className=" font-semibold family1 text-dark">{x?.email}</span> */}
+              {/* <span className=" font-normal family1 text-dark">{x?.email}</span> */}
             </div>
           </td>
           <td>
-            <span className=" font-semibold family1  text-dark">
+            <span className=" font-normal family1  text-dark">
               {x?.email}
             </span>
           </td>
           <td>
             {x?.isAdmin ? (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center success">
+              <span className=" font-normal text-sm font-booking_font_bold text-center success">
                 Admin
               </span>
             ) : (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center danger">
+              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
                 User
               </span>
             )}
           </td>
 
           <td>
-            <span className="text-dark  font-semibold family1 text-light">
+            <span className="text-dark  font-normal family1 text-light">
               {moment(x?.createdAt).format("DD MMM YYYY")}
             </span>
           </td>
@@ -103,13 +103,13 @@ const TableCard = ({ x, type }) => {
               <Link
                 to={`/dashboard/profile/${x?.id}`}
                 // to={"#"}
-                className="w-12 h-12 rounded-full flex hover:shadow-xs hover:bg-[#ddd] items-center justify-center"
+                className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
               >
                 <MdEdit />
               </Link>
               <div
                 onClick={handleDeleteClient}
-                className="w-12 h-12 rounded-full flex hover:shadow-xs hover:bg-[#ddd] items-center justify-center"
+                className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
               >
                 <BsTrash />
               </div>
@@ -141,29 +141,29 @@ const TableCard = ({ x, type }) => {
                 alt=""
                 className="w-20 h-16 object-cover rounded-lg"
               />
-              <span className="text-sm font-semibold family1 text-dark">
+              <span className="text-base font-normal family1 text-dark">
                 {x?.title}
               </span>
             </div>
           </td>
-          {/* <td className=" font-semibold">{x?.address}</td> */}
+          {/* <td className=" font-normal">{x?.address}</td> */}
 
-          <td className=" font-semibold">{x?.city}</td>
-          <td className=" font-semibold">₦{x?.price}</td>
+          <td className=" font-normal">{x?.city}</td>
+          <td className=" font-normal">₦{x?.price}</td>
 
-          <td className=" font-semibold">{startDate}</td>
+          <td className=" font-normal">{startDate}</td>
 
-          <td className=" font-semibold">
+          <td className=" font-normal">
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/rooms/${x?.id}`}
-                className="w-12 h-12 rounded-full flex hover:shadow-xs hover:bg-[#ddd] items-center justify-center"
+                className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
               >
                 <MdEdit />
               </Link>
               <div
                 onClick={handleDeleteClient}
-                className="w-12 h-12 rounded-full flex hover:shadow-xs 
+                className="w-12 h-12 rounded-full flex hover:shadow-sm 
                 hover:bg-[#ddd] items-center justify-center"
               >
                 <BsTrash />
@@ -181,7 +181,7 @@ const TableCard = ({ x, type }) => {
       <>
         <tr key={x?.id} className="px-4">
           <td>
-            <div className="flex items-center font-semibold gap-3">
+            <div className="flex items-center font-normal gap-3">
               <img
                 src={x?.rooms?.images[0]}
                 alt=""
@@ -192,7 +192,7 @@ const TableCard = ({ x, type }) => {
           </td>
 
           <td>
-            <div className="flex items-center font-semibold gap-3">
+            <div className="flex items-center font-normal gap-3">
               {x?.user?.image ? (
                 <div className="flex items-center gap-3">
                   <img
@@ -203,7 +203,7 @@ const TableCard = ({ x, type }) => {
                   <span>
                     {x?.user?.name}
 
-                    <span className="block text-xs text-grey">
+                    <span className="block text-sm text-grey">
                       {" "}
                       @{x?.user?.username}
                     </span>
@@ -216,13 +216,13 @@ const TableCard = ({ x, type }) => {
               )}
             </div>
           </td>
-          <td className=" font-semibold">
+          <td className=" font-normal">
             <span>
               {" "}
               {startDate} - {endDate}
             </span>
           </td>
-          <td className=" font-semibold">
+          <td className=" font-normal">
             <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
           </td>
           <td>
@@ -231,19 +231,19 @@ const TableCard = ({ x, type }) => {
             </span> */}
 
             {x?.status === "CONFIRMED" ? (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center success">
+              <span className=" font-normal text-sm font-booking_font_bold text-center success">
                 {x?.status}
               </span>
             ) : (
-              <span className=" font-semibold text-xs font-booking_font_bold text-center danger">
+              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
                 {x?.status}
               </span>
             )}
           </td>
 
-          <td className=" font-semibold">{/* <span>{x?.rooms}</span> */}</td>
+          <td className=" font-normal">{/* <span>{x?.rooms}</span> */}</td>
 
-          {/* <td className=" font-semibold">
+          {/* <td className=" font-normal">
             <span> {moment(x?.createdAt).format("DD MMM YYYY")}</span>
           </td> */}
         </tr>
@@ -256,19 +256,19 @@ const TableCard = ({ x, type }) => {
       {/* <Delete /> */}
       <tr key={x?._id}>
         <td>
-          <span className=" font-semibold family1 text-dark">{x?.plan}</span>
+          <span className=" font-normal family1 text-dark">{x?.plan}</span>
         </td>
         <td>
-          <span className="text-dark  font-semibold family1">$ {x?.price}</span>
+          <span className="text-dark  font-normal family1">$ {x?.price}</span>
         </td>
 
         <td>
-          <span className="text-dark  font-semibold family1 text-light">
+          <span className="text-dark  font-normal family1 text-light">
             Type 1
           </span>
         </td>
         <td>
-          <span className="text-dark  font-semibold family1 text-light">
+          <span className="text-dark  font-normal family1 text-light">
             {x?.date}
           </span>
         </td>

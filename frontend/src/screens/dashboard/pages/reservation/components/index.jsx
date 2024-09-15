@@ -33,7 +33,7 @@ const DashboardIndex = () => {
     return <Loader />;
   }
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-12">
       <AnimatePresence mode="wait">
         {reservationmodal && (
           <ReservationRoomsModal
@@ -51,22 +51,22 @@ const DashboardIndex = () => {
           />
         )}
       </AnimatePresence>
-      <div className="w-full relative flex flex-col gap-8">
-        <div className="w-full grid md:grid-cols-2 lg:items-center gap-4 justify-between">
-          <h2 className="text-4xl font-bold font-booking_font4">
-            Reservation
-            <Nav path={"/dashboard/reservation"} title={"Reservation"} />
-          </h2>
-          <div className="flex items-center md:justify-end gap-2">
-            <div
-              onClick={() => setCreateReservationModal(true)}
-              className="p-4 btn btn_2 cursor-pointer text-sm
+      <div className="w-full grid md:grid-cols-2 lg:items-center gap-4 justify-between">
+        <h2 className="text-4xl font-bold font-booking_font4">
+          Reservation
+       
+        </h2>
+        <div className="flex items-center md:justify-end gap-2">
+          <div
+            onClick={() => setCreateReservationModal(true)}
+            className="p-4 btn btn_2 cursor-pointer text-sm
              bg-[#000] px-6 font-booking_font rounded-[10px] font-semibold text-white"
-            >
-              Add a reservation
-            </div>
+          >
+            Add a reservation
           </div>
         </div>
+      </div>
+      <div className="w-full bg-[#FAFAFA] min-h-[170px] items-center flex flex-col p-4 px-6 rounded-3xl">
         <Table>
           <div className="TableContainer">
             <table className="tableWrapper">
