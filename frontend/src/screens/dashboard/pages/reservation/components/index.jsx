@@ -27,7 +27,7 @@ const DashboardIndex = () => {
 
   useEffect(() => {
     // dispatch(GetAllRoomAndReservations());
-      dispatch(GetAllReservations());
+    dispatch(GetAllReservations());
   }, []);
   if (getsingleReservationisLoading) {
     return <Loader />;
@@ -52,10 +52,12 @@ const DashboardIndex = () => {
         )}
       </AnimatePresence>
       <div className="w-full grid md:grid-cols-2 lg:items-center gap-4 justify-between">
-        <h2 className="text-4xl font-bold font-booking_font4">
-          Reservation
-       
-        </h2>
+        <h3 className="text-3xl lg:text-5xl font-bold family1">
+          Reservations
+          <span className="block pt-3 text-base max-w-[400px] font-normal family1">
+            Make a review of your reservations created by your clients
+          </span>
+        </h3>
         <div className="flex items-center md:justify-end gap-2">
           <div
             onClick={() => setCreateReservationModal(true)}
