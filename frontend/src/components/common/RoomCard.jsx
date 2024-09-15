@@ -173,7 +173,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col gap-3 rounded-b-xl py-6">
+        <div className="w-full flex flex-col gap-2 rounded-b-xl py-6">
           <h3
             className={`${
               type === "search" ? "md:text-lg text-base" : "md:text-2xl text-xl"
@@ -187,13 +187,13 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             {/* Amazon */}
           </h3>
           <div className="w-full flex items-center text-sm gap-1 justify-between">
-            <div className="flex items-center flex-1 justify-center pr-4 border-r gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-start pr-4 border-r gap-2 text-dark">
               <CiStar /> 5 Rating
             </div>
-            <div className="flex items-center flex-1 justify-center pr-4 border-r gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center pr-4 border-r gap-2 text-dark">
               <TbLocation /> {apartment?.country}
             </div>
-            <div className="flex items-center flex-1 justify-center gap-1 text-dark">
+            <div className="flex items-center flex-1 justify-center gap-2 text-dark">
               <CiCalendar /> today
             </div>
           </div>
