@@ -63,14 +63,14 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[280px] overflow-hidden border-[rgba(0,0,0,.1)] border-r bg-[#fff] hidden lg:flex  column gap-2`}
+      className={`w-[150px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
-        <div className="w-full h-[90%] pb-4 border-b flex flex-col gap-4">
+        <div className="w-full h-[90%] flex flex-col gap-4">
           <div className="flex px-4 w-full flex-col  items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
-            <div className=" w-[90%] mx-auto relative flex gap-4 items-center flex-col justify-between">
-              <Link to={"/"} className="w-full flex">
+            <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
+              <Link to={"/"} className="w-full flex items-center justify-center">
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                   alt=""
@@ -94,9 +94,9 @@ const DashboardSidebar = () => {
                       text-sm px-2 mx-auto text-[#000]`}
                     to={`/dashboard${x.tab.path}`}
                   >
-                    <div className="flex font-normal items-center group-hover:justify-start w-full">
+                    <div className="flex font-normal items-center flex-col justify-center w-full">
                       <span
-                        className="w-12 h-12 text-xs rounded-xl flex items-center text-dark
+                        className="w-12 nav_icons h-12 text-xs rounded-xl flex items-center text-dark
                        justify-center"
                       >
                         {" "}
@@ -108,22 +108,22 @@ const DashboardSidebar = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-        <div className="flex flex-col gap-2 w-full items-start justify-between py-1">
-          <div className="w-[90%] mx-auto flex flex-col gap-4">
             <NavLink
               // activeClassName="active"
               end
-              className={`text-sm tab flex group-hover:justify-start font-normal items-center gap-4 p-[12px] px-4 text-[#000] family1`}
+              className={`text-sm tab flex justify-center flex-col font-normal items-center gap-4 p-[12px] px-4 text-[#000] family1`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
               <FiSettings fontSize={"24px"} />
 
               {<span className="">Settings</span>}
             </NavLink>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2 w-full items-start justify-between py-1">
+          <div className="w-[90%] mx-auto flex flex-col gap-4">
             <div className=" w-full relative px-2 flex gap-1 items-center justify-between">
-              <div className="flex flex-1 gap-2 items-center group-hover:justify-start">
+              <div className="flex flex-1 gap-2 justify-center items-center group-hover:justify-start">
                 {currentUser?.image ? (
                   <img
                     src={currentUser?.image}
@@ -146,12 +146,12 @@ const DashboardSidebar = () => {
                     className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                   />
                 )}
-                <h4 className="text-base  text-[#000] font-normal">
+                {/* <h4 className="text-base  text-[#000] font-normal">
                   {currentUser?.name}
                   <span className="block font-booking_font text-xs font-normal text-grey">
                     {currentUser?.email}
                   </span>
-                </h4>
+                </h4> */}
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ export const HeaderStyles = styled.div`
     align-items: center;
     gap: 1rem;
     position: relative;
-    &:hover {
+    .nav_icons:hover {
       background: #e2e2e2;
       color: #000;
       svg {
@@ -193,8 +193,10 @@ export const HeaderStyles = styled.div`
     }
     &.active {
       position: relative;
-      background: #f1f1f1;
-      color: #000;
+      .nav_icons {
+        background: #f1f1f1;
+        color: #000;
+      }
 
       span {
         svg {
