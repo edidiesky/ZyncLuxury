@@ -71,7 +71,7 @@ const RoomForms = ({
                 id="title"
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
-                className="text-sm w-full input font-normal text-grey"
+                className="text-sm w-full inputs font-normal text-grey"
               />
             </label>
             <label
@@ -125,7 +125,7 @@ const RoomForms = ({
                 id="price"
                 type="number"
                 onChange={(e) => setPrice(e.target.value)}
-                className="text-sm w-full input font-normal text-grey"
+                className="text-sm w-full inputs font-normal text-grey"
               />
             </label>
             <label
@@ -139,7 +139,7 @@ const RoomForms = ({
                 id="cautionfee"
                 type="number"
                 onChange={(e) => setCautionFee(e.target.value)}
-                className="text-sm w-full input font-normal text-grey"
+                className="text-sm w-full inputs font-normal text-grey"
               />
             </label>
             <div className="w-full grid md:grid-cols-2 gap-4">
@@ -154,7 +154,7 @@ const RoomForms = ({
                   id="rooms"
                   type="number"
                   onChange={(e) => setRooms(parseFloat(e.target.value))}
-                  className="text-sm w-full input font-normal text-grey"
+                  className="text-sm w-full inputs font-normal text-grey"
                 />
               </label>
               <label
@@ -168,7 +168,7 @@ const RoomForms = ({
                   id="bathrooms"
                   type="number"
                   onChange={(e) => setBathRooms(parseFloat(e.target.value))}
-                  className="text-sm w-full input font-normal text-grey"
+                  className="text-sm w-full inputs font-normal text-grey"
                 />
               </label>
             </div>
@@ -183,7 +183,7 @@ const RoomForms = ({
                   id="guests"
                   type="number"
                   onChange={(e) => setGuests(parseFloat(e.target.value))}
-                  className="text-sm w-full input font-normal text-grey"
+                  className="text-sm w-full inputs font-normal text-grey"
                 />
               </label>
           </div>
@@ -214,7 +214,7 @@ const RoomForms = ({
                   id="city"
                   type="text"
                   onChange={(e) => setCity(e.target.value)}
-                  className="text-sm w-full input font-normal text-grey"
+                  className="text-sm w-full inputss font-normal text-grey"
                 />
               </label>
               {/* <label
@@ -228,7 +228,7 @@ const RoomForms = ({
                   id="address"
                   type="text"
                   onChange={(e) => setAddress(e.target.value)}
-                  className="text-sm w-full input font-normal text-grey"
+                  className="text-sm w-full inputs font-normal text-grey"
                 />
               </label> */}
             </div>
