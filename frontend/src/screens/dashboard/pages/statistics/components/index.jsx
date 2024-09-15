@@ -64,7 +64,7 @@ const Property = () => {
           See All
         </Link>
       </div>
-      <div className="w-full min-h-[330px] space-y-8 rounded-3xl p-8 lg:p-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+      <div className="w-full min-h-[330px] space-y-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
         <div className="w-full grid lg:grid-cols-3 gap-4">
           {apartmentDataList?.slice(0, 3).map((data, index) => {
             return <RoomCard apartment={data} type={"search"} />;
@@ -79,7 +79,7 @@ const Transaction = () => {
   return (
     <div className="w-full flex flex-col gap-4">
       <div className="w-full flex items-center pr-4 justify-between">
-        <h4 className="text-2xl lg:text-3xl font-bold">Last Transaction</h4>
+        <h4 className="text-2xl lg:text-3xl font-bold">Latest Transaction</h4>
         <Link
           to={`/dashboard/orders`}
           className="text-dark underline block pt-1 font-normal text-sm"
@@ -87,7 +87,7 @@ const Transaction = () => {
           See All
         </Link>
       </div>
-      <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 px-8 lg:py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+      <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 px-4 lg:py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
         <div className="w-full flex flex-col gap-3">
           {apartmentDataList?.slice(0, 3).map((data, index) => {
             return (
@@ -99,10 +99,10 @@ const Transaction = () => {
                   <div className="w-14 h-14 rounded-full overflow-hidden">
                     <Image src={data?.images[0]} />
                   </div>
-                  <h5 className="text-base flex-1 font-semibold family1">
+                  <h5 className="text-base flex-1 font-normal family1">
                     {data?.title}
                     <span className="font-semibold block text-xs">
-                      September 2024
+                     14 September 2024
                     </span>
                   </h5>
                 </div>
