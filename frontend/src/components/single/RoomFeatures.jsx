@@ -14,12 +14,12 @@ export default function RoomFeatures() {
               features.
             </span>
           </h3>
-          <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-8">
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8">
             {RoomFeaturesList.map((x, index) => {
               return (
                 <div
                   key={index}
-                  className="flex text-base md:text-lg gap-4 font-normal items-center"
+                  className="flex text-sm md:text-sm gap-4 font-normal items-center"
                 >
                   {x?.icon}
                   <span className="w-full"> {x.title}</span>
