@@ -5,6 +5,7 @@ import { onLoginModal, onRegisterModal } from "@/features/modals/modalSlice";
 import Profile from "../common/Profile";
 import { BiSearch } from "react-icons/bi";
 import { propertytype } from "@/data/propertyType";
+import { handleFilterState } from "@/features/room/roomSlice";
 
 const linkData = [
   {
@@ -32,7 +33,7 @@ const linkData = [
 const Header = () => {
   const [country, setCountry] = useState("");
   const { currentUser } = useSelector((store) => store.auth);
-
+  const dispatch = useDispatch();
   return (
     <div className="h-[100%] md:h-[85px] w-full">
       <div className="bg-[#fff] py-4 w-full flex flex-col">
@@ -68,6 +69,14 @@ const Header = () => {
                 className="w-full  rounded-md bg-[#fafafa] inputs text-dark font-normal text-sm"
               />
               <div
+                onClick={() => {
+                  dispatch(
+                    handleFilterState({
+                      type: "country",
+                      value: country,
+                    })
+                  );
+                }}
                 className="w-10 flex items-center justify-center text-lg
                h-10 rounded-full bg-[var(--primary)] text-white absolute right-5 top-2"
               >

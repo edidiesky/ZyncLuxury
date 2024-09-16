@@ -16,64 +16,35 @@ export const getAllRooms = createAsyncThunk(
         minPrice,
         bedroom,
         bathroom,
-        title,
+        search,
         limit,
         page,
       } = thunkAPI.getState().room;
       // set a variable for the url
       let roomUrl = `${import.meta.env.VITE_API_BASE_URLS}/room`;
       // create and attach a separator
-      // This is a function that modifies the url based on the search parameter
-      const AppedQueryUrlParameter = (url, param, value) => {
-        // if their is a value append the params value to the url
-        if (value) {
-          const separator = url.includes("?") ? "&" : "?";
-          return `${url}${separator}${param}=${value}`;
-        }
-        return url;
-      };
-      // filter based on property country
-      if (country !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "country", country);
+      // Build query parameters dynamically
+      const params = new URLSearchParams();
+
+      // Append non-empty state values as query params
+      if (page) params.append("page", page);
+      if (limit) params.append("limit", limit);
+      if (search) params.append("title", title);
+      if (maxPrice) params.append("maxPrice", maxPrice);
+      if (minPrice) params.append("minPrice", minPrice);
+      if (startDate) params.append("startDate", startDate);
+      if (endDate) params.append("endDate", endDate);
+      if (bedroom) params.append("bedroom", bedroom);
+      if (bathroom) params.append("bathroom", bathroom);
+      if (type) params.append("type", type);
+      if (country) params.append("country", country);
+
+      // appending them to the URL
+      if (params.toString()) {
+        roomUrl += `?${params.toString()}`;
       }
-      // filter based on property bedroom
-      if (bathroom !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "bathroom", bathroom);
-      }
-      // filter based on property type
-      if (type !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "type", type);
-      }
-      // filter based on property minPrice
-      if (minPrice !== 0) {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "minPrice", minPrice);
-      }
-      // filter based on property minPrice
-      if (limit !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "limit", limit);
-      }
-      // filter based on property minPrice
-      if (minPrice !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "minPrice", minPrice);
-      }
-      // filter based on property maxPrice
-      if (page !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "page", page);
-      }
-      // filter based on property title
-      if (title !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "title", title);
-      }
-      // filter based on property bedroom
-      if (bedroom !== "") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "bedroom", bedroom);
-      }
-      // filter based on property start date and end Date
-      if (startDate !== "Invalid date" && endDate !== "Invalid date") {
-        roomUrl = AppedQueryUrlParameter(roomUrl, "startDate", startDate);
-        roomUrl = AppedQueryUrlParameter(roomUrl, "endDate", endDate);
-      }
-      console.log(roomUrl);
+
+      // Make the API request
       const { data } = await axios.get(roomUrl);
       return data;
     } catch (error) {

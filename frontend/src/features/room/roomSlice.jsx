@@ -50,6 +50,10 @@ export const roomSlice = createSlice({
   name: "room",
   initialState,
   reducers: {
+    handleFilterState: (state, action) => {
+      // console.log(state[action], action., state);
+      state[action.payload.type] = action.payload.value;
+    },
     handlePage: (state, action) => {
       if (action.payload === "next") {
         state.page =
@@ -92,7 +96,6 @@ export const roomSlice = createSlice({
       state.rooms = action.payload.rooms;
       state.noOfPages = action.payload.noOfPages;
       state.totalRooms = action.payload.totalRooms;
-
     });
     builder.addCase(getAllRooms.rejected, (state, action) => {
       state.getallRoomisSuccess = false;
@@ -154,6 +157,7 @@ export const roomSlice = createSlice({
   },
 });
 
-export const { handleClearRoomAlert, handlePage } = roomSlice.actions;
+export const { handleClearRoomAlert, handlePage, handleFilterState } =
+  roomSlice.actions;
 
 export default roomSlice.reducer;
