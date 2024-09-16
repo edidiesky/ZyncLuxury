@@ -26,7 +26,7 @@ const RoomDetail = ({
     room,
   } = useSelector((store) => store.room);
   return (
-    <div className="w-full bg-[#fff] border p-6 rounded-[10px]">
+    <div className="w-full bg-[#fff]  family1 border p-6 rounded-[10px]">
       <div className="w-full flex flex-col gap-8">
         <h4 className="text-2xl font-booking_font4 font-bold">Preview</h4>
         <div className="w-full flex flex-col gap-4">
@@ -48,39 +48,39 @@ const RoomDetail = ({
           )}
 
           <div className="w-full flex flex-col gap-4">
-            <h3 className="text-sm font-booking_font text-text_dark_1 ">
+            <h3 className="text-sm text-text_dark_1 ">
               Title:{" "}
               <span className="font-booking_font4 font-bold text-2xl"> {title}</span>
             </h3>
             <div className="w-full flex flex-col ">
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs font-booking_font flex items-center text-dark "
+                className="text-xs flex items-center text-dark "
               >
                 Price:{" "}
-                <span className="text-lg font-booking_font4 font-bold">₦{Number(price).toLocaleString()}</span>
+                <span className="text-lg font-booking_font4 font-semibold">₦{Number(price).toLocaleString()}</span>
               </h4>
               {/* cautionfee */}
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs font-booking_font flex items-center text-dark "
+                className="text-xs flex items-center text-dark "
               >
                 Caution Fee:{" "}
-                <span className="text-lg font-booking_font4 font-bold">₦{Number(cautionfee).toLocaleString()}</span>
+                <span className="text-lg font-booking_font4 font-semibold">₦{Number(cautionfee).toLocaleString()}</span>
               </h4>
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center font-booking_font text-dark "
+                className="text-xs flex items-center text-dark "
               >
                 Rooms:{" "}
-                <span className="text-xl font-booking_font4 font-bold"> {rooms}</span>{" "}
+                <span className="text-lg font-booking_font4 font-semibold"> {rooms}</span>{" "}
               </h4>
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center font-booking_font text-dark "
+                className="text-xs flex items-center text-dark "
               >
                 BathRooms:{" "}
-                <span className="text-xl font-booking_font4 font-bold"> {bathrooms}</span>{" "}
+                <span className="text-lg font-booking_font4 font-semibold"> {bathrooms}</span>{" "}
               </h4>
             </div>
           </div>
@@ -88,7 +88,7 @@ const RoomDetail = ({
         <button
           disabled={creatingRoomisLoading || updateRoomisLoading}
           onClick={handleRoomCreation}
-          className="btn text-base font-booking_font p-3  px-8 text-white rounded-[40px]"
+          className="btn text-base p-3  px-8 text-white rounded-[40px]"
         >
           {creatingRoomisLoading || updateRoomisLoading ? (
             <span className="flex items-center justify-center gap-2">

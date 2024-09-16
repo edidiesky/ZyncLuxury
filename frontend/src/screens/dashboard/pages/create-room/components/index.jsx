@@ -122,7 +122,7 @@ const DashboardIndex = () => {
       <div className="w-full relative pb-20 flex flex-col gap-12">
         <div className="w-full grid md:grid-cols-2 md:items-center gap-4 justify-between">
           <h3 className="text-3xl lg:text-4xl font-booking_font4 font-bold">
-            {room ? "Update Your room" : "Add Your Room"}
+            {room ? "Update Your Room" : "Add Your Room"}
             <span className="block font-normal text-dark pt-2 text-base font-booking_font">
               Create, edit and modify your rooms.
               Complete the forms below and click update room.
@@ -156,7 +156,7 @@ const DashboardIndex = () => {
             setGuests={setGuests}
             guests={guests}
           />
-          <div className="w-full md:w-[350px] relative lg:sticky top-[15%] left-0">
+          <div className="w-full md:w-[400px] relative lg:sticky top-[15%] left-0">
             <RoomDetail
               images={images}
               title={title}

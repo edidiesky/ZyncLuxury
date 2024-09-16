@@ -246,6 +246,7 @@ textarea {
 input {
   border: none;
   outline: none;
+    color: #000 !important;
   font-family: "Kumbh Sans", sans-serif;
   border-radius: 100px !important;
 }
@@ -253,7 +254,7 @@ input {
 input::placeholder {
   font-size: inherit;
   font-weight: inherit;
-  color: #7777;
+  color: #000;
   font-family: inherit;
 }
 

@@ -29,7 +29,7 @@ export default function CreateRoomTab({
 }) {
   // console.log(room  )
   return (
-    <div className="p-4 h-[270px] md:h-[350px] overflow-auto  px-4 md:px-12 grid w-full gap-8 lg:grid-cols-2">
+    <div className="p-8 h-[270px] md:h-[350px] overflow-auto  px-4 md:px-12 grid w-full gap-8 lg:grid-cols-2">
       <div className="w-full flex flex-col gap-4">
         <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
           Room Terms
@@ -136,7 +136,7 @@ export default function CreateRoomTab({
       {/* room price */}
       <div className="w-full flex flex-col gap-6">
         <div className="w-full flex flex-col gap-3 pt-2">
-          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
+          <h3 className="text-base w-full pb-1 border-b font-booking_font_bold font-semibold family1">
             Rooms
           </h3>
           {
@@ -162,7 +162,7 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-4 font-booking_font"
               >
                 <span className="font-semibold"> Room Price:</span>
-                <span className="block text-lg font-booking_font_bold">
+                <span className="block text-sm font-booking_font_bold">
                   {" "}
                   {reservation?.roomprice || room?.price ? <>
                     ₦{Number(reservation?.roomprice ? reservation?.roomprice : room?.price).toLocaleString()}
@@ -174,7 +174,7 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-4 font-booking_font"
               >
                 <span className="font-semibold"> Room Caution Price:</span>
-                <span className="block text-lg font-booking_font_bold">
+                <span className="block text-sm font-booking_font_bold">
                   {" "}
                   {/* roomcautionprice */}
                   {reservation
@@ -207,7 +207,7 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-2 font-booking_font"
               >
                 <span className="font-semibold">Final Room Price:</span>
-                <div className="p- text-lg flex items-center">
+                <div className="p- text-sm flex items-center">
                   {totalPrice ? <>
                     ₦{Number(totalPrice <= 0 ? 0 : totalPrice).toLocaleString()}
                   </> : <span className="text-sm">Room price has not been selected</span>}
@@ -219,7 +219,7 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-2 font-booking_font"
               >
                 <span className="font-semibold">Balance Due:</span>
-                <div className="text-lg flex items-center">
+                <div className="text-sm flex items-center">
                   {partpaymentprice ? <>
                     ₦{Number(totalBookingPrice - partpaymentprice <= 0 ? 0 : totalBookingPrice - partpaymentprice).toLocaleString()}
                   </> : <span className="text-sm">Room part price has not been selected</span>}
@@ -229,7 +229,7 @@ export default function CreateRoomTab({
 
             <div className="text-sm flex flex-col gap-2 font-booking_font">
               <span className="font-semibold"> Booking total Price:</span>
-              <div className="p-3 text-dark rounded-[5px] bg-[#f5f5f5] text-end text-lg font-semibold">
+              <div className="p-3 text-dark rounded-[5px] bg-[#f5f5f5] text-end text-sm font-semibold">
                 {
                   totalBookingPrice ? <>
                     ₦{Number(totalBookingPrice <= 0 ? 0 : totalBookingPrice).toLocaleString()}

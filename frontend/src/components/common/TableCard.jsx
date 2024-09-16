@@ -80,12 +80,16 @@ const TableCard = ({ x, type, handleModal }) => {
             <span className=" font-normal family1  text-dark">{x?.email}</span>
           </td>
           <td>
-            {x?.isAdmin ? (
-              <span className=" font-normal text-sm font-booking_font_bold text-center success">
+            {x?.role === "ADMIN" ? (
+              <span className=" font-normal text-xs family1 text-center success">
                 Admin
               </span>
+            ) : x?.role === "SELLER" ? (
+              <span className=" font-normal text-xs family1 text-center success">
+                SELLER
+              </span>
             ) : (
-              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
+              <span className=" font-normal text-xs family1 text-center danger">
                 User
               </span>
             )}

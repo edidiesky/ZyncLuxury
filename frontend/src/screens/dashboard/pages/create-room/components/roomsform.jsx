@@ -46,8 +46,8 @@ const RoomForms = ({
   return (
     <div className="w-full flex flex-col gap-8">
       {/* title */}
-      <div className="w-full bg-[#fff] border p-6 px-2 rounded-[10px]">
-        <div className="w-[95%] md:w-[90%] mx-auto flex flex-col gap-8">
+      <div className="w-full bg-[#fff] border py-8 px-2 rounded-[10px]">
+        <div className="w-[90%] mx-auto flex flex-col gap-8">
           <div className="w-full flex items-center justify-between">
             <h4 className="text-2xl font-booking_font4 font-bold">Name & Description</h4>
             <div className="flex items-center justify-end">
@@ -93,6 +93,8 @@ const RoomForms = ({
                 style={{
                   height: "200px",
                   borderRadius: "15px",
+                  fontSize:"20px !important",
+                  fontWeight:"500"
                 }}
                 value={description}
                 onChange={setDescription}
@@ -214,7 +216,7 @@ const RoomForms = ({
                   id="city"
                   type="text"
                   onChange={(e) => setCity(e.target.value)}
-                  className="text-sm w-full inputss font-normal text-grey"
+                  className="text-sm w-full inputs font-normal text-grey"
                 />
               </label>
               {/* <label
