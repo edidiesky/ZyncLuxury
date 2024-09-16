@@ -380,7 +380,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
         </div>
         <div className=" items-center z-[40000000] flex justify-end">
           {currentUser ? (
-            <Profile />
+            <Profile setBar={setBar} />
           ) : (
             <div className="flex justify-end items-center">
               <button

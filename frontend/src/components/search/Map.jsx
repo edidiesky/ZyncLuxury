@@ -1,13 +1,13 @@
 import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CiCalendar } from "react-icons/ci";
 import { TbLocation } from "react-icons/tb";
 import { CiStar } from "react-icons/ci";
-import { apartmentDataList } from "@/data/apartmentData";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
 import Image from "../common/Image";
@@ -19,6 +19,10 @@ const Map = () => {
   const dispatch = useDispatch();
   const customerData = JSON.parse(localStorage.getItem("customer"));
   // ;
+  const customIconUrl = new Icon({
+    iconUrl: "/location.png",
+    iconSize: [38, 38],
+  });
 
   const handleFavouriteRooms = useCallback(
     (apartment) => {
@@ -54,6 +58,7 @@ const Map = () => {
           return (
             <Marker
               key={index}
+              icon={customIconUrl}
               position={[location.latitude, location.longitude]}
             >
               <Popup>

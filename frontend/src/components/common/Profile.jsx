@@ -6,8 +6,8 @@ import { onLoginModal, onRegisterModal } from "@/features/modals/modalSlice";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 
-const Profile = () => {
-  const [bar, setBar] = React.useState(false);
+const Profile = ({ setBar , bar}) => {
+  // const [bar, setBar] = React.useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const handleLogOut = () => {
