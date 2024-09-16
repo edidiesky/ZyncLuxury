@@ -357,16 +357,6 @@ const TopContent = ({ bar, setBar, currentUser }) => {
        gap-12"
       >
         <div className="flex items-center gap-2">
-          <div
-            onClick={() => setBar(!bar)}
-            className="flex flex-1 lg:hidden gap-4 items-center justify-start text-white"
-          >
-            {bar ? (
-              <RxCross1 fontSize={"30px"} />
-            ) : (
-              <HiBars3BottomLeft fontSize={"30px"} />
-            )}
-          </div>
           <h4 className="family2 text-2xl md:text-2xl uppercase font-bold text-white">
             ZyncLuxury
           </h4>
