@@ -217,11 +217,11 @@ export const FilterRooms = () => {
           </div>
         </div>
 
-        <div className=" md:px-4 flex items-center md:justify-end">
+        {/* <div className=" md:px-4 flex items-center md:justify-end">
           <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-6 py-3">
             <BiSearch /> Search Homes
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
