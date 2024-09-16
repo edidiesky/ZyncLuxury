@@ -34,7 +34,16 @@ const initialState = {
   search: "",
   limit: "",
   noOfPages: 0,
-  totalRooms:0
+  totalRooms: 0,
+  maxPrice: "",
+  startDate: "",
+  endDate: "",
+  minPrice: "",
+  bedroom: "",
+  bathroom: "",
+  title: "",
+  type: "",
+  country: "",
 };
 
 export const roomSlice = createSlice({

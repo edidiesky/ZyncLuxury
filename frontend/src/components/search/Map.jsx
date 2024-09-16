@@ -42,7 +42,7 @@ const Map = () => {
     <div className="w-full h-full">
       <MapContainer
         center={[3.2839374, 12.4964]} // Default center point
-        zoom={3}
+        zoom={4}
         style={{
           height: "100%",
           width: "100%",
