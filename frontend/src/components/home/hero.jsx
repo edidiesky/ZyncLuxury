@@ -367,7 +367,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
               <HiBars3BottomLeft fontSize={"30px"} />
             )}
           </div>
-          <h4 className="family2 text-xl md:text-2xl uppercase font-bold text-white">
+          <h4 className="family2 text-2xl md:text-2xl uppercase font-bold text-white">
             ZyncLuxury
           </h4>
         </div>
