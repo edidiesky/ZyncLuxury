@@ -160,7 +160,7 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"60px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
+            <h3 className="text-xl md:text-2xl text-center font-bold font-booking_font_bold family1">
               Delete this room?
               <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
                 By deleting this product, It cannot be retrieved if this action
@@ -185,10 +185,10 @@ export default function DeleteModal({
               {deleteRoomisLoading ? (
                 <span className="flex items-center justify-center gap-2">
                   <Loader type="dots" />
-                  Deleting in progress
+                  Confirming in progress
                 </span>
               ) : (
-                " Delete Room"
+                "Confirm"
               )}
             </button>
           </div>
@@ -224,7 +224,7 @@ export default function DeleteModal({
           <span className="w-full flex items-center justify-center">
             <CiWarning fontSize={"60px"} color={"var(--red)"} />
           </span>
-          <h3 className="text-lg text-center font-bold font-booking_font_bold family1">
+          <h3 className="text-xl md:text-2xl text-center font-bold font-booking_font_bold family1">
             Delete this user?
             <span className="block text-sm w-[80%] mx-auto text-center font-booking_font font-normal text-dark">
               By deleting this user, It cannot be retrieved if this action you
@@ -249,10 +249,10 @@ export default function DeleteModal({
             {deleteUserisLoading ? (
               <span className="flex items-center justify-center gap-2">
                 <Loader type="dots" />
-                Deleting in progress
+                Confirming in progress
               </span>
             ) : (
-              " Delete user"
+              "Confirm"
             )}
           </button>
         </div>
@@ -273,8 +273,8 @@ const DeleteContainer = styled(motion.div)`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   .deleteCard {
-    max-width: 400px;
-    min-width: 360px;
+    max-width: 480px;
+    min-width: 460px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -316,7 +316,7 @@ const DeleteContainer = styled(motion.div)`
         background: #eee;
         color: #000;
         outline: none;
-        border-radius: 10px;
+        border-radius: 40px;
         cursor: pointer;
         text-transform: none;
         &:hover {

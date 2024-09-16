@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/popover";
 import moment from "moment";
 import AnimateText from "@/animations/AnimateText";
-import { HiBars3BottomRight } from "react-icons/hi2";
+import { RxCross1 } from "react-icons/rx";
+import { HiBars3BottomLeft } from "react-icons/hi2";
 import { BiCheck, BiChevronDown, BiChevronUp, BiSearch } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { ClearUserInfo } from "@/features/auth/authSlice";
@@ -355,9 +356,21 @@ const TopContent = ({ bar, setBar, currentUser }) => {
         className="w-[95%] max-w-custom mx-auto lg:px-4 z-40 flex items-center justify-between
        gap-12"
       >
-        <h4 className="family2 text-2xl uppercase font-bold text-white">
-          ZyncLuxury
-        </h4>
+        <div className="flex items-center gap-2">
+          <div
+            onClick={() => setBar(!bar)}
+            className="flex flex-1 lg:hidden gap-4 items-center justify-start text-white"
+          >
+            {bar ? (
+              <RxCross1 fontSize={"30px"} />
+            ) : (
+              <HiBars3BottomLeft fontSize={"30px"} />
+            )}
+          </div>
+          <h4 className="family2 text-xl md:text-2xl uppercase font-bold text-white">
+            ZyncLuxury
+          </h4>
+        </div>
 
         <div className="hidden lg:flex items-center justify-center gap-2">
           {linkData?.map((list, index) => {
