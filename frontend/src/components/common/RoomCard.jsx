@@ -174,24 +174,38 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col gap-2 rounded-b-xl py-6">
-          <h3
-            className={`${
-              type === "search" ? "md:text-base text-base" : "md:text-2xl text-xl"
-            }  font-bold w-full`}
-          >
-            {apartment?.title}
-            {/* <span className="flex text-sm pt-1 items-center gap-2">
+          <div className="flex items-center gap-4">
+            <h3
+              className={`${
+                type === "search"
+                  ? "md:text-base text-base"
+                  : "md:text-2xl text-xl"
+              }  font-bold flex-1`}
+            >
+              {apartment?.title}
+              {/* <span className="flex text-sm pt-1 items-center gap-2">
               <TiLocation fontSize={"16px"} />
               Houston
             </span> */}
-            {/* Amazon */}
-          </h3>
+              {/* Amazon */}
+            </h3>
+            <span
+              className={`${
+                type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
+              } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
+            >
+              <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div>
+              Vacant
+            </span>
+          </div>
           <div
             className={`w-full ${
-              type === "search" ? "text-xs" : "text-sm"
-            } flex items-center gap-1 justify-between`}
+              type === "search" ? "text-xs" : "text-lg"
+            } flex items-center text-grey gap-1 justify-between`}
           >
-            <div className="flex items-center flex-1 justify-start pr-3 border-r gap-2 text-dark">
+            {" "}
+            {apartment?.location}
+            {/* <div className="flex items-center flex-1 justify-start pr-3 border-r gap-2 text-dark">
               <CiStar /> 5 Rating
             </div>
             <div className="flex items-center flex-1 justify-center pr-3 border-r gap-2 text-dark">
@@ -199,30 +213,16 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             </div>
             <div className="flex items-center flex-1 justify-center gap-2 text-dark">
               <CiCalendar /> today
-            </div>
+            </div> */}
           </div>
-          <div className="flex mt-2 justify-between w-full items-center  gap-4">
-            <div className="flex flex-col">
-              {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-              <p
-                className={`${
-                  type === "search"
-                    ? "md:text-lg text-base"
-                    : "md:text-xl text-lg"
-                } font-semibold`}
-              >
-                ₦{apartment?.price}{" "}
-                <span className="text-sm font-normal">/night</span>
-              </p>
-            </div>
-            <div
-              className={`btn btn_2 ${
-                type === "search" ? "px-4 py-2 text-xs" : "px-6 py-3 text-sm"
-              }  family1 font-bold text-white `}
-            >
-              View Room
-            </div>
-          </div>
+          <ul
+            className={`${
+              type === "search" ? "text-sm" : "text-base"
+            } flex gap-3 list-disc list-inside items-center font-bold`}
+          >
+            <li className="">{apartment?.bedroom} bedroom</li>
+            <li className="">{apartment?.bathroom} bathroom</li>
+          </ul>
         </div>
       </Link>
     </div>
