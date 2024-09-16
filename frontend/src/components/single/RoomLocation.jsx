@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { CiCalendar } from "react-icons/ci";
 import { TbLocation } from "react-icons/tb";
@@ -26,6 +27,11 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
     },
     [currentUser]
   );
+    const customIconUrl = new Icon({
+      iconUrl: "/location.png",
+      iconSize: [38, 38],
+    });
+
   return (
     <div className="flex pt-8 md:pt-12 border-t flex-col w-full gap-8">
       <h3 className="text-3xl md:text-4xl font-bold">Where you’ll be</h3>
@@ -45,11 +51,14 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[room?.latitude, room?.longitude]}>
+        <Marker
+          icon={customIconUrl}
+          position={[room?.latitude, room?.longitude]}
+        >
           <Popup>
             <Link
               to={`/room/${room?.id}`}
-              className="w-full flex flex-col rounded-xl overflow-hidden family1"
+              className="w-[250px] flex flex-col rounded-xl overflow-hidden family1"
             >
               <div className={`w-full h-[130px] overflow-hidden relative`}>
                 <Link

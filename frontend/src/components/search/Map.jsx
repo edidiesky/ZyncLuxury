@@ -64,7 +64,7 @@ const Map = () => {
               <Popup>
                 <Link
                   to={`/room/${location?.id}`}
-                  className="w-full flex flex-col overflow-hidden rounded-md family1"
+                  className="w-[220px] flex flex-col overflow-hidden rounded-md family1"
                 >
                   <div className={`w-full h-[130px] overflow-hidden relative`}>
                     {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
