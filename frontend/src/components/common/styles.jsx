@@ -14,7 +14,6 @@ export const Table = styled.div`
     gap: 2rem;
     width: 100%;
     overflow-x: auto;
-   
 
     .tableWrapper {
       border-collapse: collapse;
@@ -49,11 +48,14 @@ export const Table = styled.div`
           }
           th {
             text-align: start;
-            font-size: 16px !important;
+            font-size: 15px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1.7rem;
             font-family: "Work Sans";
             font-weight: 500 !important;
+            @media (max-width: 780px) {
+              font-size: 13px !important;
+            }
           }
         }
       }
@@ -69,13 +71,22 @@ export const Table = styled.div`
           }
           td {
             text-align: start;
+            font-family: "Work Sans";
             padding: 1.5rem !important;
             font-weight: normal !important;
             color: #000;
+            font-size: 15px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.09);
             line-height: 1.2 !important;
+            @media (max-width: 780px) {
+              font-size: 13px !important;
+            }
 
             span {
+              font-size: 15px !important;
+              @media (max-width: 780px) {
+                font-size: 13px !important;
+              }
               &.danger {
                 color: #840a0a;
                 padding: 0.56rem 1rem;

@@ -8,7 +8,7 @@ import { MdEdit } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
 import DeleteModal from "../modals/DeleteModal";
 
-const TableCard = ({ x, type }) => {
+const TableCard = ({ x, type, handleModal }) => {
   const [userdeletemodal, setUserDeleteModal] = useState(false);
 
   const handleDeleteClient = () => {
@@ -77,9 +77,7 @@ const TableCard = ({ x, type }) => {
             </div>
           </td>
           <td>
-            <span className=" font-normal family1  text-dark">
-              {x?.email}
-            </span>
+            <span className=" font-normal family1  text-dark">{x?.email}</span>
           </td>
           <td>
             {x?.isAdmin ? (
@@ -136,11 +134,7 @@ const TableCard = ({ x, type }) => {
         <tr key={x?._id}>
           <td>
             <div className="flex w-full justify-start items-center gap-4">
-              <img
-                src={x?.images[0]}
-                alt=""
-                className="w-24 object-cover"
-              />
+              <img src={x?.images[0]} alt="" className="w-24 object-cover" />
               <span className="text-base font-normal family1 text-dark">
                 {x?.title}
                 <span className="block text-sm">
@@ -190,11 +184,15 @@ const TableCard = ({ x, type }) => {
                 alt=""
                 className="w-20 h-20 object-cover"
               />
-              {x?.rooms?.subtitle}
+              <span className="hidden lg:block">
+                {" "}
+                {x?.rooms?.title}
+                <span className="block text-sm"> {x?.rooms?.location}</span>
+              </span>
             </div>
           </td>
 
-          <td>
+          <td className="hidden lg:table-cell">
             <div className="flex items-center font-normal gap-3">
               {x?.user?.image ? (
                 <div className="flex items-center gap-3">
@@ -213,8 +211,15 @@ const TableCard = ({ x, type }) => {
                   </span>
                 </div>
               ) : (
-                <div className="w-10 h-10 rounded-full bg-[#000] flex items-center justify-center text-white text-base">
-                  {x?.user?.name[0]}
+                <div className="flex w-full items-center gap-4">
+                  <span>
+                    {x?.user?.name}
+
+                    <span className="block text-sm text-grey">
+                      {" "}
+                      @{x?.user?.username}
+                    </span>
+                  </span>
                 </div>
               )}
             </div>
@@ -244,11 +249,23 @@ const TableCard = ({ x, type }) => {
             )}
           </td>
 
-          <td className=" font-normal">{/* <span>{x?.rooms}</span> */}</td>
-
-          {/* <td className=" font-normal">
-            <span> {moment(x?.createdAt).format("DD MMM YYYY")}</span>
-          </td> */}
+          <td className=" font-normal">
+            <div className="flex items-center justify-center">
+              <div
+                onClick={handleModal}
+                className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
+              >
+                <MdEdit />
+              </div>
+              <div
+                onClick={handleDeleteClient}
+                className="w-12 h-12 rounded-full flex hover:shadow-sm 
+                hover:bg-[#ddd] items-center justify-center"
+              >
+                <BsTrash />
+              </div>
+            </div>
+          </td>
         </tr>
       </>
     );

@@ -29,9 +29,9 @@ export default function CreateRoomTab({
 }) {
   // console.log(room  )
   return (
-    <div className="p-4 h-[300px] md:h-[450px] overflow-auto  px-4 md:px-12 grid w-full gap-8 lg:grid-cols-2">
+    <div className="p-4 h-[270px] md:h-[350px] overflow-auto  px-4 md:px-12 grid w-full gap-8 lg:grid-cols-2">
       <div className="w-full flex flex-col gap-4">
-        <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-bold family1">
+        <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
           Room Terms
         </h3>
         <div className="w-full flex flex-col gap-6">
@@ -73,14 +73,14 @@ export default function CreateRoomTab({
             </PopoverContent>
           </Popover>
           <div className="w-full flex flex-col gap-2">
-            <h5 className="text-sm font-booking_font font-bold">Number of Nights:</h5>
+            <h5 className="text-sm font-booking_font font-semibold">Number of Nights:</h5>
             <span className="block font-normal text-sm">
               {differenceInDays} Nights
             </span>
           </div>
 
           <div className="w-full flex flex-col gap-4 pt-2">
-            <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-bold family1">
+            <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
               Booking Status
             </h3>
             <div className="w-full grid grid-cols-1">
@@ -136,7 +136,7 @@ export default function CreateRoomTab({
       {/* room price */}
       <div className="w-full flex flex-col gap-6">
         <div className="w-full flex flex-col gap-3 pt-2">
-          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-bold family1">
+          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
             Rooms
           </h3>
           {
@@ -152,10 +152,10 @@ export default function CreateRoomTab({
         </div>
         {/* pricing section of the code */}
         <div className="w-full flex flex-col gap-4">
-          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-bold family1">
+          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
             Room Pricing
           </h3>
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full flex flex-col gap-8">
             <div className="w-full grid md:grid-cols-2 gap-4">
               <label
                 htmlFor="titleprice"
@@ -191,14 +191,14 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-2 font-booking_font"
               >
                 <span className="font-semibold">Discount Amount:</span>
-                <input type="number" onChange={(e) => setDiscountPrice(e.target.value)} className="input" placeholder="Input amount" />
+                <input type="number" onChange={(e) => setDiscountPrice(e.target.value)} className="inputs" placeholder="inputs amount" />
               </label>
               <label
                 htmlFor="titleprice"
                 className="text-sm flex flex-col gap-2 font-booking_font"
               >
                 <span className="font-semibold">Part Payment Amount:</span>
-                <input type="number" name='partpaymentprice' value={partpaymentprice} onChange={(e) => setPartPaymentPrice(e.target.value)} className="input" placeholder="Input part payment amount" />
+                <input type="number" name='partpaymentprice' value={partpaymentprice} onChange={(e) => setPartPaymentPrice(e.target.value)} className="inputs" placeholder="inputs part payment amount" />
               </label>
             </div>
             <div className="w-full grid md:grid-cols-2 gap-4">
@@ -219,7 +219,7 @@ export default function CreateRoomTab({
                 className="text-sm flex flex-col gap-2 font-booking_font"
               >
                 <span className="font-semibold">Balance Due:</span>
-                <div className="p- text-lg flex items-center">
+                <div className="text-lg flex items-center">
                   {partpaymentprice ? <>
                     ₦{Number(totalBookingPrice - partpaymentprice <= 0 ? 0 : totalBookingPrice - partpaymentprice).toLocaleString()}
                   </> : <span className="text-sm">Room part price has not been selected</span>}
@@ -229,7 +229,7 @@ export default function CreateRoomTab({
 
             <div className="text-sm flex flex-col gap-2 font-booking_font">
               <span className="font-semibold"> Booking total Price:</span>
-              <div className="p-2 text-dark rounded-[5px] bg-[#f5f5f5] text-end text-lg font-bold">
+              <div className="p-3 text-dark rounded-[5px] bg-[#f5f5f5] text-end text-lg font-semibold">
                 {
                   totalBookingPrice ? <>
                     ₦{Number(totalBookingPrice <= 0 ? 0 : totalBookingPrice).toLocaleString()}
@@ -241,10 +241,10 @@ export default function CreateRoomTab({
           </div>
         </div>
         <div className="w-full flex flex-col gap-2 pt-2">
-          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-bold family1">
+          <h3 className="text-base w-full pb-2 border-b font-booking_font_bold font-semibold family1">
             Number of Guests
           </h3>
-          {/* <span className="block font-bold text-base">5 Guests</span> */}
+          {/* <span className="block font-semibold text-base">5 Guests</span> */}
           <div className="w-full p-2 border rounded-lg flex items-center justify-between">
             <button disabled={guests === 1} onClick={() => setGuests(guests - 1)} className="w-8 h-8 rounded-full text-sm flex items-center justify-center bg-[#eee]">
               <BiMinus />
@@ -257,18 +257,8 @@ export default function CreateRoomTab({
             </button>
           </div>
         </div>
-        {/* <div className="w-full flex flex-col gap-4 pt-3">
-        <h3 className="text-base font-bold w-full pb-4 border-b family1">
-          Client profile
-        </h3>
-        <div className="flex flex-col gap-2 w-full">
-          <span className="font-semibold text-sm"> Guest:</span>
-          <UserListSelection handleUserSelection={handleUserSelection} />
-        </div>
-
-      </div> */}
+     
       </div>
-      {/* client profile */}
     </div>
   )
 }

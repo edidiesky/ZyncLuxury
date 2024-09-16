@@ -34,14 +34,14 @@ const DashboardIndex = () => {
   }
   return (
     <div className="w-full flex flex-col gap-12">
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {reservationmodal && (
           <ReservationRoomsModal
             modal={reservationmodal}
             setModal={setReservationModal}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <AnimatePresence mode="wait">
         {createreservationmodal && (
@@ -76,7 +76,7 @@ const DashboardIndex = () => {
                 <tr>
                   {/* <th>Description</th> */}
                   <th>Home Title</th>
-                  <th>User</th>
+                  <th className="hidden lg:table-cell">User</th>
                   <th>Date</th>
                   <th>Price</th>
                   <th>Status</th>
@@ -85,7 +85,16 @@ const DashboardIndex = () => {
               </thead>
               <tbody>
                 {reservations?.map((x, index) => {
-                  return <TableCard x={x} type={"Reservation"} key={x?.id} />;
+                  return (
+                    <TableCard
+                      handleModal={() => {
+                        setCreateReservationModal(true);
+                      }}
+                      x={x}
+                      type={"Reservation"}
+                      key={x?.id}
+                    />
+                  );
                 })}
               </tbody>
             </table>
