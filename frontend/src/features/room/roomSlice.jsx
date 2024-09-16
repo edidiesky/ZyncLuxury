@@ -39,8 +39,8 @@ const initialState = {
   startDate: "",
   endDate: "",
   minPrice: "",
-  bedroom: "",
-  bathroom: "",
+  bedroom: 0,
+  bathroom: 0,
   title: "",
   type: "",
   country: "",
@@ -69,6 +69,13 @@ export const roomSlice = createSlice({
       state.creatingRoomisSuccess = false;
       state.updateRoomisSuccess = false;
       state.room = null;
+      state.country = ""
+      state.bedroom = ""
+      state.title = "";
+      state.minPrice = "";
+      state.maxPrice = "";
+      state.startDate = "";
+      state.endDate = "";
     },
   },
   extraReducers: (builder) => {

@@ -4,13 +4,15 @@ import Footer from "../common/Footer";
 import Header, { FilterRooms } from "./Header";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllRooms } from "@/features/room/roomReducer";
+import { handleClearRoomAlert } from "@/features/room/roomSlice";
 
 const HomeIndex = () => {
    const dispatch = useDispatch();
-   const { country } = useSelector((store) => store.room);
+   const { country,type } = useSelector((store) => store.room);
     useEffect(() => {
+      dispatch(handleClearRoomAlert());
       dispatch(getAllRooms());
-    }, [country]);
+    }, [country, type]);
   return (
     <div className="bg-[var(--light-grey)] h-[100vh] w-full flex flex-col">
       {/* <Navbar /> */}

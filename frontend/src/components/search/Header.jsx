@@ -125,9 +125,10 @@ const Header = () => {
 export const FilterRooms = () => {
   // filtered states
   const [country, setCountry] = useState("");
+  const [typeindex, setTypeIndex] = useState(null);
   // modal
   const [property, setProperty] = useState(false);
-
+  const dispatch = useDispatch();
   return (
     <div
       style={{
@@ -145,7 +146,7 @@ export const FilterRooms = () => {
           <div className="relative">
             <div
               onClick={() => setProperty(!property)}
-              className="flex px-2 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold"
+              className={`flex px-2 border py-2  rounded-full items-start gap-2 text-sm cursor-pointer font-bold`}
             >
               Property Type
             </div>
@@ -159,25 +160,39 @@ export const FilterRooms = () => {
                     return (
                       <div
                         key={index}
-                        className="p-4 border w-full rounded-xl flex items-center justify-center flex-col gap-2"
+                        onClick={() => {
+                          setTypeIndex(index);
+                          dispatch(
+                            handleFilterState({
+                              type: "type",
+                              value: props?.value,
+                            })
+                          );
+                          setProperty(false);
+                        }}
+                        className={`p-4 cursor-pointer ${
+                          typeindex === index
+                            ? "border-2 border-[#000]"
+                            : "border"
+                        } w-full rounded-xl flex items-center justify-center flex-col gap-2`}
                       >
-                        <div className="w-20 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
-                          <img src={props?.image} alt="" className="w-8" />
+                        <div className="w-14 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
+                          <img src={props?.image} alt="" className="w-6" />
                         </div>
-                        <h5 className="text-sm font-semibold family1">
+                        <h5 className="text-xs font-normal family1">
                           {props?.name}
                         </h5>
                       </div>
                     );
                   })}
                 </div>
-                <div className="asbolute bottom-0 w-full">
+                {/* <div className="asbolute bottom-0 w-full">
                   <div className="w-full pt-4 border-t flex items-center justify-end">
                     <div className="btn px-8 text-sm text-white py-2">
                       Apply
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             )}
           </div>
