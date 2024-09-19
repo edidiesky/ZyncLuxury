@@ -56,7 +56,7 @@ const RoomLists = () => {
                 })}
               </div>
             ) : (
-              <div className=" gap-8 w-full grid md:grid-cols-2 lg:grid-cols-3">
+              <div className=" gap-x-2 gap-y-8 w-full grid md:grid-cols-2 lg:grid-cols-3">
                 {rooms?.slice(0, 12).map((apartment, index) => {
                   return (
                     <RoomCard

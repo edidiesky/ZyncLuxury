@@ -177,7 +177,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col border rounded-b-xl bg-[#fff]">
-          <div className="w-full flex flex-col gap-2 py-4 px-6 ">
+          <div
+            className={`${
+              type === "search" ? " py-3 px-4  gap-[4px]" : "py-4 px-6  gap-2"
+            } w-full flex flex-col `}
+          >
             <div className="w-full flex items-center gap-4 justify-between">
               <h3
                 className={`${
@@ -196,8 +200,10 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                     ? "bg-[#e6eaf6] text-[#a3abdb]"
                     : "bg-[#f7f2db] text-[#eec680]"
                 } ${
-                  type === "search" ? "text-xs px-3 py-2" : "text-xs px-3 py-2"
-                } gap-2 flex items-center rounded-full  font-bold`}
+                  type === "search"
+                    ? "text-xs px-3 py-1 font-semibold"
+                    : "text-xs px-3 font-bold py-2"
+                } gap-2 flex items-center rounded-full`}
               >
                 {/* <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div> */}
                 {apartment?.listingType === "SALE"
@@ -236,7 +242,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               <li className="">{apartment?.bathroom} bathroom</li>
             </ul>
           </div>
-          <div className="w-full flex items-center border-t gap-2 rounded-b-xl px-6 py-4 bg-[#fff]">
+          <div
+            className={`${
+              type === "search" ? " py-3 px-4 gap-[4px]" : "py-4 px-6  gap-2"
+            } w-full flex items-center border-t rounded-b-xl bg-[#fff]`}
+          >
             {apartment?.user?.image ? (
               <img
                 src={apartment?.user?.image}
@@ -259,7 +269,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                 className="w-8 h-8 object-cover rounded-full"
               />
             )}
-            <span className="text-grey text-base font-normal">
+            <span
+              className={`${
+                type === "search" ? "text-sm" : "text-base"
+              } text-grey font-normal`}
+            >
               {apartment?.user?.name}'s Properties
             </span>
           </div>

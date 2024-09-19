@@ -90,8 +90,8 @@ model Rooms {
   listingType listingType? @default(RENT)
   cautionfee   String?
   guests       Int?
-  latitude     Int?
-  longitude    Int?
+  latitude     String?
+  longitude    String?
   bedroom      Int
   bathroom     Int
   images       String[]
