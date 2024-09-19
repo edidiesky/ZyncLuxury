@@ -52,7 +52,7 @@ const Property = () => {
     <div className="w-full ">
       <div className="w-full min-h-[330px] flex flex-col gap-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
         <div className="w-full px-4 flex items-center justify-between">
-          <h4 className="text-3xl lg:text-4xl font-bold">
+          <h4 className="text-2xl lg:text-3xl font-bold">
             My Properties
             <span className="text-grey block pt-1 font-normal text-sm">
               Track all your Property you have created for sell or rent
