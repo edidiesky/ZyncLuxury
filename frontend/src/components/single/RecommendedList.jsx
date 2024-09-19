@@ -13,7 +13,7 @@ const RecommendedList = ({ roomid }) => {
   return (
     <div className="w-full mt-8 flex flex-col gap-8">
       <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-8">
-        <h3 className="text-4xl md:text-4xl font-booking_font4 font-bold">
+        <h3 className="text-2xl md:text-3xl font-booking_font4 font-bold">
           Similar Rooms
         </h3>
 
