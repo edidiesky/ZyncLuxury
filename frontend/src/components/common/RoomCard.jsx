@@ -177,20 +177,25 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </div>
 
         <div className="w-full flex flex-col gap-2 rounded-b-xl p-6 border bg-[#fff]">
-          <h3
-            className={`${
-              type === "search"
-                ? "md:text-lg text-base"
-                : "md:text-3xl text-2xl"
-            }  font-bold flex-1`}
-          >
-            ${apartment?.price}
-            {/* <span className="flex text-sm pt-1 items-center gap-2">
-              <TiLocation fontSize={"16px"} />
-              Houston
-            </span> */}
-            {/* Amazon */}
-          </h3>
+          <div className="w-full flex items-center gap-4 justify-between">
+            <h3
+              className={`${
+                type === "search"
+                  ? "md:text-lg text-base"
+                  : "md:text-3xl text-2xl"
+              }  font-bold flex-1`}
+            >
+              ${apartment?.price}
+            </h3>
+            <span
+              className={`${
+                type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
+              } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
+            >
+              <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div>
+              Vacant
+            </span>
+          </div>
           <div className="flex items-center gap-4">
             <h3
               className={`${
@@ -200,20 +205,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               }  font-bold flex-1`}
             >
               {apartment?.title}
-              {/* <span className="flex text-sm pt-1 items-center gap-2">
-              <TiLocation fontSize={"16px"} />
-              Houston
-            </span> */}
-              {/* Amazon */}
             </h3>
-            {/* <span
-              className={`${
-                type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
-              } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
-            >
-              <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div>
-              Vacant
-            </span> */}
           </div>
           <div
             className={`w-full ${

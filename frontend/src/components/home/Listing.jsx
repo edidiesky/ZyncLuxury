@@ -21,7 +21,7 @@ const Listing = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl font-semibold text-[var(--dark-1)]">
+            <h4 className="text-4xl capitalize md:text-5xl font-semibold text-[var(--dark-1)]">
               Holiday accomodations <br /> recommendations for you
             </h4>
           </div>
