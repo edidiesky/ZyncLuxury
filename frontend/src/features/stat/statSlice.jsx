@@ -37,7 +37,7 @@ export const statSlice = createSlice({
         (data) => data.reservationCount
       );
        state.totalMonthRevenue = action.payload?.totalBookingsByMonth.map(
-         (data) => Number(data.totalPrice).toLocaleString()
+         (data) => Number(data.totalPrice)
        );
     });
     builder.addCase(getAdminStat.rejected, (state, action) => {
