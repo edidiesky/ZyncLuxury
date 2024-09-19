@@ -188,7 +188,7 @@ button:disabled {
 :root {
   --grey-1: #4f578d;
   --dark-1: rgb(34, 37, 61);
-  --primary: #FF385C;
+  --primary: #4456FF;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
   --red: #f73760;
@@ -296,8 +296,8 @@ input::placeholder {
 
 .btn.btn_2 {
   transition: all 0.5s;
-  background: var(--grey-1) !important;
-  color: #fff !important;
+  background: #fff !important;
+  color: #000 !important;
 }
 
 .btn.btn_3 {

@@ -108,14 +108,14 @@ const GrowthStat = () => {
   //   }
   // }, [totalStatAmount, totalMonth, setSeries, setOptions]);
   return (
-    <div id="chart" className="w-full flex flex-col  gap-4">
-      <h3 className="text-3xl md:text-4xl font-booking_font4 font-bold">
-        Report Sales
-      </h3>
+    <div id="chart" className="w-full ">
       <div
-        className="w-full min-h-[400px] rounded-3xl px-4 md:px-8 md:py-12
+        className="w-full min-h-[400px] flex flex-col gap-4 rounded-xl px-4 md:px-8 md:py-12
        overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]"
       >
+        <h3 className="text-3xl md:text-4xl font-booking_font4 font-bold">
+          Report Sales
+        </h3>
         <div className="w-full flex-col rounded-[10px] flex gap-4">
           <div className="flex w-full flex-col gap-8">
             <Chart

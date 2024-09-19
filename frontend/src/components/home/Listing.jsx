@@ -26,7 +26,7 @@ const Listing = () => {
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">
-            <button className="btn btn_3 px-8 py-4 text-base md:text-lg family1 text-dark font-normal">
+            <button className="btn btn md:px-8 px-4 py-4 text-sm md:text-base family1 text-white font-normal">
               Browse all Homes
             </button>
           </div>

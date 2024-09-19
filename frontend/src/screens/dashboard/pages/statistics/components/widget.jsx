@@ -40,7 +40,7 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-2 gap-4">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-2">
       {widgetData?.map((widget, index) => {
         return (
           <div
@@ -48,13 +48,13 @@ const Widget = () => {
             key={index}
             style={{ transition: "all .3s" }}
             className={`p-4 md:p-8 md:px-4 family1 font-booking_font4 w-full
-               rounded-3xl border border-[rgb(223,223,223)]  flex md:items-center gap-4 min-h-48`}
+               rounded-xl bg-[#fafafa] shadow-sm flex md:items-center gap-4 min-h-56`}
           >
             <div className="flex flex-col gap-4 h-full justify-between">
               <div className="w-full flex md:items-center flex-col md:flex-row gap-4">
                 <div
                   style={{ background: `${widget?.color}` }}
-                  className={`w-12 md:w-14 text-dark text-lg md:text-2xl h-12 md:h-14 rounded-full flex items-center justify-center`}
+                  className={`w-12 md:w-14 text-dark text-lg md:text-xl h-12 md:h-14 rounded-full flex items-center justify-center`}
                 >
                   {widget?.icon}
                 </div>

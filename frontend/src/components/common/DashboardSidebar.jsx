@@ -21,7 +21,7 @@ const AdminSidebarData = [
   {
     id: 6,
     tab: {
-      icon: <LuBedDouble fontSize={"16px"} />,
+      icon: <LuBedDouble fontSize={"18px"} />,
       title: "Reservations",
       path: "/reservation",
     },
@@ -31,7 +31,7 @@ const AdminSidebarData = [
   {
     id: 61,
     tab: {
-      icon: <FaHotel fontSize={"15px"} />,
+      icon: <FaHotel fontSize={"17px"} />,
       title: "Rooms",
       path: "/rooms",
     },
@@ -40,7 +40,7 @@ const AdminSidebarData = [
   {
     id: 6,
     tab: {
-      icon: <FaMoneyBill fontSize={"15.5px"} />,
+      icon: <FaMoneyBill fontSize={"17px"} />,
       title: "Transactions",
       path: "/orders",
     },
@@ -50,7 +50,7 @@ const AdminSidebarData = [
   {
     id: 4,
     tab: {
-      icon: <FaRegUser fontSize={"15.5px"} />,
+      icon: <FaRegUser fontSize={"17px"} />,
       title: "Clients",
       path: "/customers",
     },
@@ -63,14 +63,14 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[150px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
+      className={`w-[290px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
-        <div className="w-full h-[90%] flex flex-col gap-4">
+        <div className="w-full h-[90%] flex flex-col gap-12">
           <div className="flex px-4 w-full flex-col  items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
-              <Link to={"/"} className="w-full flex items-center justify-center">
+              <Link to={"/"} className="w-full flex">
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                   alt=""
@@ -79,7 +79,7 @@ const DashboardSidebar = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full px-2 flex flex-col gap-3">
+          <div className="w-full px-2 flex flex-col gap-1">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
@@ -90,11 +90,11 @@ const DashboardSidebar = () => {
                   <NavLink
                     // activeClassName="active"
                     end
-                    className={`w-F7F8FC tab
+                    className={`w-F7F8FC py-1 tab
                       text-sm px-2 mx-auto text-[#000]`}
                     to={`/dashboard${x.tab.path}`}
                   >
-                    <div className="flex font-normal items-center flex-col justify-center w-full">
+                    <div className="flex font-normal items-center gap-4 justify-start w-full">
                       <span
                         className="w-10 nav_icons h-10 text-xs rounded-full flex items-center text-dark
                        justify-center"
@@ -108,22 +108,22 @@ const DashboardSidebar = () => {
                 </div>
               );
             })}
-            <NavLink
-              // activeClassName="active"
-              end
-              className={`text-sm tab flex justify-center flex-col font-normal items-center gap-4 p-[12px] px-4 text-[#000] family1`}
-              to={`/dashboard/profile/${currentUser?.id}`}
-            >
-              <FiSettings fontSize={"24px"} />
-
-              {<span className="">Settings</span>}
-            </NavLink>
           </div>
         </div>
         <div className="flex flex-col gap-2 w-full items-start justify-between py-1">
           <div className="w-[90%] mx-auto flex flex-col gap-4">
+            <NavLink
+              // activeClassName="active"
+              end
+              className={`text-sm tab flex font-normal items-center gap-4 py-3 px-4 text-[#000] family1`}
+              to={`/dashboard/profile/${currentUser?.id}`}
+            >
+              <FiSettings fontSize={"20px"} />
+
+              {<span className="">Settings</span>}
+            </NavLink>
             <div className=" w-full relative px-2 flex gap-1 items-center justify-between">
-              <div className="flex flex-1 gap-2 justify-center items-center group-hover:justify-start">
+              <div className="flex flex-1 gap-4 items-center group-hover:justify-start">
                 {currentUser?.image ? (
                   <img
                     src={currentUser?.image}
@@ -146,12 +146,12 @@ const DashboardSidebar = () => {
                     className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                   />
                 )}
-                {/* <h4 className="text-base  text-[#000] font-normal">
+                <h4 className="text-base  text-[#000] font-normal">
                   {currentUser?.name}
                   <span className="block font-booking_font text-xs font-normal text-grey">
                     {currentUser?.email}
                   </span>
-                </h4> */}
+                </h4>
               </div>
             </div>
           </div>
@@ -184,17 +184,19 @@ export const HeaderStyles = styled.div`
     align-items: center;
     gap: 1rem;
     position: relative;
-    .nav_icons:hover {
+    &:hover {
       background: #e2e2e2;
       color: #000;
+    }
+    .nav_icons:hover {
       svg {
         color: #000;
       }
     }
     &.active {
       position: relative;
+      background: #f1f1f1;
       .nav_icons {
-        background: #f1f1f1;
         color: #000;
       }
 

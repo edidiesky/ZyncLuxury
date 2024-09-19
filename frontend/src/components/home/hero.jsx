@@ -20,6 +20,7 @@ import Dash from "@/assets/svg/dash";
 import { ProfileDropdownStyles } from "../common/navbar";
 import { countries } from "@/data/countries";
 import Profile from "../common/Profile";
+import Image from "../common/Image";
 
 const linkData = [
   {
@@ -43,6 +44,15 @@ const linkData = [
   //   title: "Contact",
   //   path: "trips",
   // },
+];
+
+const profilesList = [
+  "/face_1.jpg",
+  "/face_2.jpg",
+  "/face_3.jpg",
+  "/face_4.jpg",
+  "/face_5.jpg",
+  "/face_6.jpg",
 ];
 const Hero = () => {
   const [bar, setBar] = React.useState(false);
@@ -69,27 +79,49 @@ const Hero = () => {
             className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
        gap-6 md:gap-12"
           >
-            <h1
-              className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-5xl sm:text-6xl
+            <div className="flex max-w-[1000px] mx-auto flex-col gap-8">
+              <div className="w-full flex items-center gap-4">
+                <div className="flex items-center">
+                  {profilesList?.map((face, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={`${
+                          index !== 0 ? "-ml-6 " : ""
+                        } w-16 h-16 border-[rgba(0,0,0,.3)] overflow-hidden rounded-full border-4`}
+                      > 
+                        <Image src={face} />
+                      </div>
+                    );
+                  })}
+                </div>
+                <span className="text-base lg:text-lg text-[#eee] font-semibold capitalize block family1">
+                  5 K+ Happy Customers
+                </span>
+              </div>
+              <h1
+                className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-5xl sm:text-6xl
           family2"
-            >
-              Where Serenity Meets{" "}
-              <span className="relative">
-                Adventure:
-                <Dash />
-              </span>{" "}
-              <br /> Book Your Resort Experience
-              <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#c5c3c3] md:mx-auto font-normal capitalize pt-2 block family1">
-                We are experts who set the pace Inspiring homes beyond
-                boundaries. We help you get the best out of your finance in
-                getting a home
-              </span>
-            </h1>
+              >
+                Find your Best{" "}
+                <span className="relative">
+                  Property -
+                  <Dash />
+                </span>{" "}
+                <br /> By Lease, or Rent <br /> with Confidence
+                <span className="text-base lg:text-lg max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
+                  Explore a versed range of properties and secure your next
+                  home. We are experts who set the pace Inspiring homes beyond
+                  boundaries. We help you get the best out of your finance in
+                  getting a home
+                </span>
+              </h1>
+            </div>
             <div className="w-full md:items-center flex-row md:justify-center gap-4 flex">
               <div className="flex">
                 <Link
                   to={"/search"}
-                  className="btn md:text-lg text-base family1 font-semibold text-white rounded-[40px] px-6 py-4 md:px-12 md:py-6"
+                  className="btn md:text-base text-sm family1 font-normal text-white rounded-[40px] px-4 py-6 md:px-10"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -98,7 +130,7 @@ const Hero = () => {
               <div className="flex items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-lg text-base family1 font-semibold text-white px-6 py-4 md:px-12 md:py-6"
+                  className="btn btn_2 md:text-base text-sm family1 font-normal text-white px-4 py-6 md:px-10"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -247,8 +279,8 @@ const SearchHomes = () => {
             </div>
           </div>
           <div className="w-full px-4 flex items-center md:justify-end">
-            <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-8 py-4">
-              <BiSearch /> Search for Accomodations
+            <button className="btn text-white flex items-center gap-4 family1 font-normal px-6 text-sm lg:text-base lg:px-6 py-4">
+              <BiSearch /> Search for Homes
             </button>
           </div>
         </div>
@@ -369,7 +401,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                 end
                 to={`/${list.path}`}
                 key={index}
-                className={`text-base hover:text-grey font-semibold family1 text-white flex items-center
+                className={`text-lg hover:text-grey font-normal family1 text-white flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -387,7 +419,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                 onClick={() => dispatch(onLoginModal())}
                 className="btn min-w-[130px] text-center text-base family1 font-semibold text-white px-8 py-4"
               >
-                Sign Up
+                Discover Listing
               </button>
             </div>
           )}

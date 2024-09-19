@@ -25,16 +25,17 @@ const DashboardIndex = () => {
     <div className="w-full">
       <div className="w-full flex flex-col gap-12">
         <h3 className="text-4xl block lg:text-5xl family1 font-bold">
-          Welcome {currentUser?.username}
+          Welcome 👋
           <span className="block text-base font-normal">
             Explore information and activity about your property
           </span>
         </h3>
+        <div className="w-full flex flex-col gap-16">
+          <Widget />
+          <Statistics />
+        </div>
         <div className="w-full grid gap-12 lg:gap-4 lg:grid-cols-custom">
-          <div className="w-full flex flex-col gap-20">
-            <Widget />
-            <Statistics />
-          </div>
+          <div className="w-full flex flex-col gap-20">{/* <Widget /> */}</div>
           <div className="w-full lg:w-[400px] flex flex-col gap-12">
             <ProductBreakdown />
             <Transaction />
