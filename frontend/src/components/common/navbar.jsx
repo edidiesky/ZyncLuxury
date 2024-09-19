@@ -201,22 +201,22 @@ const Navbar = () => {
                           <img
                             src={currentUser?.image}
                             alt=""
-                            className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                            className="w-12 lg:w-14 h-12 lg:h-14 object-cover rounded-full"
                           />
                         ) : currentUser?.username ? (
-                          // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+                          // <div className="w-12 h-12 text-white object-cover rounded-full bg-[#000] text-2xl flex items-center justify-center ">
                           //   {currentUser?.username[0]}{" "}
                           // </div>
                           <img
                             src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                             alt=""
-                            className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                            className="w-12 lg:w-14 h-12 lg:h-14 object-cover rounded-full"
                           />
                         ) : (
                           <img
                             src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                             alt=""
-                            className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                            className="w-12 lg:w-14 h-12 lg:h-14 object-cover rounded-full"
                           />
                         )}
                         {/* {currentUser && (

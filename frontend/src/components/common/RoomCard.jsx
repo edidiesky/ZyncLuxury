@@ -176,53 +176,93 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col gap-2 rounded-b-xl p-6 border bg-[#fff]">
-          <div className="w-full flex items-center gap-4 justify-between">
-            <h3
+        <div className="w-full flex flex-col border rounded-b-xl bg-[#fff]">
+          <div className="w-full flex flex-col gap-2 py-4 px-6 ">
+            <div className="w-full flex items-center gap-4 justify-between">
+              <h3
+                className={`${
+                  type === "search"
+                    ? "md:text-lg text-base"
+                    : "md:text-3xl text-2xl"
+                }  font-bold flex-1`}
+              >
+                ${apartment?.price}.00
+              </h3>
+              <span
+                className={`${
+                  apartment?.listingType === "SALE"
+                    ? "bg-[#87faed] text-[#8acba1]"
+                    : apartment?.listingType === "RENT"
+                    ? "bg-[#e6eaf6] text-[#a3abdb]"
+                    : "bg-[#f7f2db] text-[#eec680]"
+                } ${
+                  type === "search" ? "text-xs px-3 py-2" : "text-xs px-3 py-2"
+                } gap-2 flex items-center rounded-full  font-bold`}
+              >
+                {/* <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div> */}
+                {apartment?.listingType === "SALE"
+                  ? "For Sale"
+                  : apartment?.listingType === "RENT"
+                  ? "For Rent"
+                  : "For Lease"}
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
+              <h3
+                className={`${
+                  type === "search"
+                    ? "md:text-base text-base"
+                    : "md:text-xl text-lg"
+                }  font-bold flex-1`}
+              >
+                {apartment?.title}
+              </h3>
+            </div>
+            <div
+              className={`w-full ${
+                type === "search" ? "text-xs" : "text-base"
+              } flex items-center text-grey gap-1`}
+            >
+              {" "}
+              {apartment?.state && <span>{apartment?.state},</span>}{" "}
+              {apartment?.country}
+            </div>
+            <ul
               className={`${
-                type === "search"
-                  ? "md:text-lg text-base"
-                  : "md:text-3xl text-2xl"
-              }  font-bold flex-1`}
+                type === "search" ? "text-sm" : "text-base"
+              } flex gap-3 list-disc list-inside items-center font-bold`}
             >
-              ${apartment?.price}
-            </h3>
-            <span
-              className={` ${
-                type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
-              } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
-            >
-              <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div>
-              Vacant
+              <li className="">{apartment?.bedroom} bedroom</li>
+              <li className="">{apartment?.bathroom} bathroom</li>
+            </ul>
+          </div>
+          <div className="w-full flex items-center border-t gap-2 rounded-b-xl px-6 py-4 bg-[#fff]">
+            {apartment?.user?.image ? (
+              <img
+                src={apartment?.user?.image}
+                alt=""
+                className="w-8 h-8 object-cover rounded-full"
+              />
+            ) : apartment?.user?.username ? (
+              // <div className="w-8 h-8 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+              //   {currentUser?.username[0]}{" "}
+              // </div>
+              <img
+                src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
+                alt=""
+                className="w-8 h-8 object-cover rounded-full"
+              />
+            ) : (
+              <img
+                src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
+                alt=""
+                className="w-8 h-8 object-cover rounded-full"
+              />
+            )}
+            <span className="text-grey text-base font-normal">
+              {apartment?.user?.name}'s Properties
             </span>
           </div>
-          <div className="flex items-center gap-4">
-            <h3
-              className={`${
-                type === "search"
-                  ? "md:text-base text-base"
-                  : "md:text-xl text-lg"
-              }  font-bold flex-1`}
-            >
-              {apartment?.title}
-            </h3>
-          </div>
-          <div
-            className={`w-full ${
-              type === "search" ? "text-xs" : "text-base"
-            } flex items-center text-grey gap-1 justify-between`}
-          >
-            {" "}
-            {apartment?.location}, {apartment?.country}
-          </div>
-          <ul
-            className={`${
-              type === "search" ? "text-sm" : "text-base"
-            } flex gap-3 list-disc list-inside items-center font-bold`}
-          >
-            <li className="">{apartment?.bedroom} bedroom</li>
-            <li className="">{apartment?.bathroom} bathroom</li>
-          </ul>
         </div>
       </Link>
     </div>

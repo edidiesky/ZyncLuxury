@@ -56,7 +56,11 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     orderBy: {
       createdAt: "desc",
     },
+    include: {
+      user: true,
+    },
   });
+
   // get the total rooms and the total pages
   const totalRooms = await prisma.rooms.count({ where: queryObject });
   const noOfPages = Math.ceil(totalRooms / limit);
@@ -106,7 +110,6 @@ const CreateRooms = asyncHandler(async (req, res) => {
   return res.json(room);
 });
 
-
 // @description  Get a single room for the user
 // @route  GET /room/34545
 // @access  Public
@@ -142,7 +145,6 @@ const UpdateRoom = asyncHandler(async (req, res) => {
 
   res.status(200).json({ updateRoom });
 });
-
 
 // @description  Delete a room for the seller
 // @route  DELETE /room/4566

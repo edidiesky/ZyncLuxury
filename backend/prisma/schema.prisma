@@ -31,7 +31,7 @@ enum RoomType {
   STAY
 }
 
-enum ListingType {
+enum listingType {
   SALE
   RENT
   LEASE
@@ -85,9 +85,9 @@ model Rooms {
   price        String?
   city         String?
   country      String
-  location     String
+  state      String?
   type         RoomType?    @default(STAY)
-  listingType ListingType? @default(RENT)
+  listingType listingType? @default(RENT)
   cautionfee   String?
   guests       Int?
   latitude     Int?
