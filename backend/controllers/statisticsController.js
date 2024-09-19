@@ -8,7 +8,7 @@ import moment from "moment";
 // @access  Private
 const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
   const start = performance.now();
-  // destution the value from the promises from the Prmoise.all
+  // destructure the value from the promises from the Prmoise.all
   const [
     totalOrderAmount,
     totalOrder,
@@ -28,7 +28,11 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
     prisma.payment.count({}),
 
     // Count total reservations
-    prisma.reservations.count({}),
+    prisma.reservations.count({
+      where: {
+        sellerId: req.user.userid,
+      },
+    }),
     // Get all the reservations of the seller where the status is confirmed
     await prisma.reservations.findMany({
       where: {
@@ -40,10 +44,18 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
       },
     }),
 
-    prisma.rooms.count({}),
+    // Get the seller room
+    prisma.rooms.count({
+      where: {
+        sellerid: req.user.userid,
+      },
+    }),
 
     // Find payments, ordered by creation date
     prisma.payment.findMany({
+      where: {
+        sellerId: req.user.userid,
+      },
       select: {
         createdAt: true,
         amount: true,
@@ -80,17 +92,17 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
     return acc;
   }, {});
 
-  // const totalBookingsByMonth = Object.values(groupedStats).map((stat) => {
-  //   const date = moment()
-  //     .year(stat.year)
-  //     .month(stat.month - 1)
-  //     .format("MMM Y");
-  //   return { date, count: stat.count };
-  // });
+  const totalBookingsByMonth = Object.values(groupedStats).map((stat) => {
+    const date = moment()
+      .year(stat.year)
+      .month(stat.month - 1)
+      .format("MMM Y");
+    return { date, reservationCount: stat.count, totalPrice: stat.totalPrice };
+  });
 
   return res.json({
     totalSales,
-    groupedStats,
+    totalBookingsByMonth,
     totalReservations: totalReservations || 0,
     totalRooms: totalRooms || 0,
     latency: `Total Latency - ${(end - start) / 1000} seconds`,
