@@ -4,7 +4,9 @@ dotenv.config();
 import prisma from "../prisma/index.js";
 import expressAsyncHandler from "express-async-handler";
 
-// User
+// @description  Create a payment for the separate user
+// @route  POST /order
+// @access  Public
 const CreatePayment = expressAsyncHandler(async (req, res) => {
   // instantiate the form data from the request body
   const { userId } = req.user;
@@ -34,6 +36,10 @@ const CreatePayment = expressAsyncHandler(async (req, res) => {
   res.status(200).json({ payment });
 });
 
+
+// @description  Get a seller order
+// @route  GET /order/history
+// @access  Private
 const GetPaymentHistoryForAdmin = expressAsyncHandler(async (req, res) => {
   // instantiate the form data from the request body
   const payment = await prisma.payment.findMany({
@@ -51,6 +57,10 @@ const GetPaymentHistoryForAdmin = expressAsyncHandler(async (req, res) => {
   res.status(200).json({ payment });
 });
 
+
+// @description  Get a single payment details
+// @route  GET /order/history/46484489
+// @access  Public
 const GetSinglePaymentDetails = expressAsyncHandler(async (req, res) => {
   // instantiate the form data from the request body
 
@@ -70,6 +80,10 @@ const GetSinglePaymentDetails = expressAsyncHandler(async (req, res) => {
   res.status(200).json({ payment });
 });
 
+
+// @description  Update a single payment details to failed when the flutterWave payment is not complete
+// @route  PUT /order/history/failed/46484489
+// @access  Public
 const UpdatePaymentToFailed = expressAsyncHandler(async (req, res) => {
   // instantiate the form data from the request body
   const { userId } = req.body;
@@ -90,6 +104,10 @@ const UpdatePaymentToFailed = expressAsyncHandler(async (req, res) => {
 
   res.status(200).json({ payment });
 });
+
+// @description  Update a single payment details to success when the flutterWave payment is completed
+// @route  PUT /order/history/success/46484489
+// @access  Public
 const UpdatePaymentToSuccess = expressAsyncHandler(async (req, res) => {
   const { reservationid, amount, currency } = req.body;
   const paymentId = req.params.id;

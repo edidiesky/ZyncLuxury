@@ -1,7 +1,11 @@
 import asyncHandler from "express-async-handler";
-import moment from 'moment'
+import moment from "moment";
 import { parse, formatISO } from "date-fns";
 import prisma from "../prisma/index.js";
+
+// @description  Get a seller reservation
+// @route  GET /reservation/user
+// @access  Private
 const GetUserReservation = asyncHandler(async (req, res) => {
   const availableRooms = await prisma.reservations.findMany({
     where: {
@@ -10,7 +14,7 @@ const GetUserReservation = asyncHandler(async (req, res) => {
     include: {
       user: true,
       rooms: true,
-      payment: true
+      payment: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -19,8 +23,14 @@ const GetUserReservation = asyncHandler(async (req, res) => {
   return res.json(availableRooms);
 });
 
+// @description  Get all seller reservation using his seller ID
+// @route  GET /reservation/history
+// @access  Private
 const GetAllReservation = asyncHandler(async (req, res) => {
   const availableRooms = await prisma.reservations.findMany({
+    where: {
+      sellerId: req.user.userid,
+    },
     include: {
       user: true,
       rooms: true,
@@ -31,6 +41,10 @@ const GetAllReservation = asyncHandler(async (req, res) => {
   });
   return res.json(availableRooms);
 });
+
+// @description  Get a singke reservation for a user
+// @route  GET /reservation/:id
+// @access  Private
 const GetSingleReservation = asyncHandler(async (req, res) => {
   const availableRooms = await prisma.reservations.findUnique({
     where: {
@@ -45,8 +59,20 @@ const GetSingleReservation = asyncHandler(async (req, res) => {
   return res.json(availableRooms);
 });
 
+
+// @description  Create a reservation using for a user or admin or seller
+// @route  POST /reservation/:id
+// @access  Public
 const CreateUserReservation = asyncHandler(async (req, res) => {
-  let { startDate, endDate, status, totalPrice, guests, patchguests, partpaymentPrice } = req.body;
+  let {
+    startDate,
+    endDate,
+    status,
+    totalPrice,
+    guests,
+    patchguests,
+    partpaymentPrice,
+  } = req.body;
   const id = req.params.id;
   startDate = formatISO(parse(startDate, "MMMM do yyyy", new Date()));
   endDate = formatISO(parse(endDate, "MMMM do yyyy", new Date()));
@@ -69,9 +95,10 @@ const CreateUserReservation = asyncHandler(async (req, res) => {
   });
   if (availableRooms.length > 0) {
     res.status(404);
-    throw new Error("This Room has already been booked for one or more days in your selected period!");
+    throw new Error(
+      "This Room has already been booked for one or more days in your selected period!"
+    );
   }
-
 
   // Book the room
   const reservationData = {
@@ -105,6 +132,10 @@ const CreateUserReservation = asyncHandler(async (req, res) => {
 
   return res.json(newReservation);
 });
+
+// @description  Delete a reservation using for a user or admin or seller
+// @route  DELETE /reservation/:id
+// @access  Public
 const DeleteReservations = asyncHandler(async (req, res) => {
   const reservations = await prisma.reservations.findUnique({
     where: {
@@ -130,8 +161,19 @@ const DeleteReservations = asyncHandler(async (req, res) => {
     .json({ msg: "The reservations has been successfully deleted" });
 });
 
+// @description  Update a reservation for admin or seller
+// @route  PUT /reservation/:id
+// @access  Private
 const UpdateReservations = asyncHandler(async (req, res) => {
-  let { startDate, endDate, status, totalPrice, guests, patchguests, partpaymentPrice } = req.body;
+  let {
+    startDate,
+    endDate,
+    status,
+    totalPrice,
+    guests,
+    patchguests,
+    partpaymentPrice,
+  } = req.body;
   const roomid = req.query.roomid;
 
   // Parse and format dates to ISO-8601
@@ -158,11 +200,14 @@ const UpdateReservations = asyncHandler(async (req, res) => {
       },
     },
     orderBy: {
-      startDate: 'asc', // Get the earliest start date
+      startDate: "asc", // Get the earliest start date
     },
   });
 
-  if (nextReservation && new Date(nextReservation.startDate) > new Date(endDate)) {
+  if (
+    nextReservation &&
+    new Date(nextReservation.startDate) > new Date(endDate)
+  ) {
     // Adjust the end date to the start date of the next reservation
     endDate = new Date(nextReservation.startDate).toISOString();
   }
@@ -182,9 +227,12 @@ const UpdateReservations = asyncHandler(async (req, res) => {
               ],
             },
             {
-              AND: [{ startDate: { lte: endDate } }, { endDate: { gte: endDate } }],
+              AND: [
+                { startDate: { lte: endDate } },
+                { endDate: { gte: endDate } },
+              ],
             },
-          ]
+          ],
         },
       ],
     },
@@ -192,7 +240,9 @@ const UpdateReservations = asyncHandler(async (req, res) => {
   // console.log(overlappingReservations.length > 1)
   if (overlappingReservations.length > 1) {
     res.status(400);
-    throw new Error("This room is already booked for one or more days in your selected period.");
+    throw new Error(
+      "This room is already booked for one or more days in your selected period."
+    );
   }
 
   // // Proceed with the update
@@ -212,8 +262,7 @@ const UpdateReservations = asyncHandler(async (req, res) => {
   });
 
   res.json(updatedReservation);
-
-})
+});
 export {
   GetUserReservation,
   GetAllReservation,

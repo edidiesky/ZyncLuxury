@@ -1,6 +1,9 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
 
+// @description  Create a favourite room for the user
+// @route  POST /favourite
+// @access  Private
 const CreateUserFavouriteRoom = asyncHandler(async (req, res) => {
   const id = req.params.id;
   const room = await prisma.rooms.findUnique({

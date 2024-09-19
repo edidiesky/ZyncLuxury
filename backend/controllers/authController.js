@@ -3,8 +3,9 @@ import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
 
-//register user
-// Not Private
+// @description  Register a new User
+// @route  POST /auth/register
+// @access  Public
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, hashedPassword, username } = req.body;
   //
@@ -53,8 +54,9 @@ const registerUser = asyncHandler(async (req, res) => {
   res.status(200).json({ user, token });
 });
 
-//Login the  user
-// Not Private
+// @description  Login a new User
+// @route  POST /auth/login
+// @access  Public
 const LoginUser = asyncHandler(async (req, res) => {
   const { email, hashedPassword } = req.body;
   if (!email || !hashedPassword) {

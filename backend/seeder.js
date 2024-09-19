@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
 import { apartmentDataList } from "./data/roomdata.js";
 import { user } from "./data/seller.js";
+import { bookingData } from "./data/bookingData.js";
+// bookingData
 
 dotenv.config();
 
@@ -24,8 +26,8 @@ mongoose.connection.on("error", (error) =>
 const importData = async () => {
   try {
     // Use Prisma to insert data
-    await prisma.rooms.createMany({
-      data: apartmentDataList,
+    await prisma.reservations.createMany({
+      data: bookingData,
     });
     // await prisma.user.createMany({
     //   data: user,

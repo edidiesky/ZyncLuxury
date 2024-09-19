@@ -1,6 +1,9 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
 
+// @description  Get all room
+// @route  GET /room
+// @access  Public
 const GetAllRoom = asyncHandler(async (req, res) => {
   const {
     maxPrice,
@@ -62,23 +65,10 @@ const GetAllRoom = asyncHandler(async (req, res) => {
   return res.json({ rooms, noOfPages, totalRooms });
 });
 
-const GetAllRoomAndReservations = asyncHandler(async (req, res) => {
-  const rooms = await prisma.rooms.findMany({
-    include: {
-      reservations: {
-        include: {
-          user: true,
-        },
-      },
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return res.json(rooms);
-});
+const GetAllRoomAndReservations = asyncHandler(async (req, res) => {});
+// @description  Get a seller rooms
+// @route  GET /rooms/13344
+// @access  Private
 const GetAllAdminRooms = asyncHandler(async (req, res) => {
   const limit = req.query.limit || 6;
   const page = req.query.page || 1;
@@ -100,6 +90,10 @@ const GetAllAdminRooms = asyncHandler(async (req, res) => {
 
   res.status(200).json({ rooms, noOfPages, totalRoom });
 });
+
+// @description  Create a room for the seller
+// @route  POST /room
+// @access  Private
 const CreateRooms = asyncHandler(async (req, res) => {
   const room = await prisma.rooms.create({
     data: {
@@ -112,6 +106,10 @@ const CreateRooms = asyncHandler(async (req, res) => {
   return res.json(room);
 });
 
+
+// @description  Get a single room for the user
+// @route  GET /room/34545
+// @access  Public
 const GetSingleRoom = asyncHandler(async (req, res) => {
   const id = req.params.id;
   const room = await prisma.rooms.findUnique({
@@ -130,6 +128,10 @@ const GetSingleRoom = asyncHandler(async (req, res) => {
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
   return res.json(room);
 });
+
+// @description  Update a room for the seller
+// @route  PUT /room/4566
+// @access  Private
 const UpdateRoom = asyncHandler(async (req, res) => {
   const updateRoom = await prisma.rooms.update({
     where: { id: req.params.id },
@@ -140,6 +142,11 @@ const UpdateRoom = asyncHandler(async (req, res) => {
 
   res.status(200).json({ updateRoom });
 });
+
+
+// @description  Delete a room for the seller
+// @route  DELETE /room/4566
+// @access  Private
 const DeleteRoom = asyncHandler(async (req, res) => {
   const rooms = await prisma.rooms.findUnique({
     where: {

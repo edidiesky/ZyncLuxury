@@ -56,21 +56,24 @@ model User {
   conversationIds String[]        @db.ObjectId
   conversations   Conversations[] @relation(fields: [conversationIds], references: [id])
 
-  seenMessageIds String[]        @db.ObjectId
-  seenMessages   Message[]       @relation("Seen", fields: [seenMessageIds], references: [id])
-  ratings        Int?
-  messages       Message[]
-  reservation    Reservations[]
-  payment        Payment[]       @relation("SellerPayments")
-  paymentsMade   Payment[]       @relation("UserPayments")
-  reviews        Review[]        @relation("SellerReviews")
-  reviewsMade    Review[]        @relation("UserReview")
-  notifications  Notifications[]
-  Rooms          Rooms[]
+  seenMessageIds   String[]       @db.ObjectId
+  seenMessages     Message[]      @relation("Seen", fields: [seenMessageIds], references: [id])
+  ratings          Int?
+  messages         Message[]
+  userReservations Reservations[] @relation("UserReservations")
+
+  // Field for seller reservations
+  sellerReservations Reservations[]  @relation("SellerReservations")
+  payment            Payment[]       @relation("SellerPayments")
+  paymentsMade       Payment[]       @relation("UserPayments")
+  reviews            Review[]        @relation("SellerReviews")
+  reviewsMade        Review[]        @relation("UserReview")
+  notifications      Notifications[]
+  Rooms              Rooms[]
 }
 
 model Rooms {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
   price       String?
@@ -87,8 +90,8 @@ model Rooms {
   images      String[]
   features    Json?
   amenities   Json?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   sellerid String @db.ObjectId
 
@@ -128,14 +131,21 @@ model Reservations {
   guests           Int?
   patchguests      Json?
   partpaymentPrice Int?
-  createdAt        DateTime          @default(now())
+  createdAt        DateTime          @default(now()) 
   updatedAt        DateTime          @updatedAt
   status           ReservationStatus @default(PENDING)
   roomid           String            @db.ObjectId
-  userid           String            @db.ObjectId
   payment          Payment[]
   rooms            Rooms?            @relation(fields: [roomid], references: [id], onDelete: Cascade)
-  user             User?             @relation(fields: [userid], references: [id], onDelete: Cascade)
+  userid           String            @db.ObjectId
+  user             User              @relation("UserReservations", fields: [userid], references: [id], onDelete: Cascade)
+  sellerId         String?           @db.ObjectId
+  seller           User?             @relation("SellerReservations", fields: [sellerId], references: [id])
+
+  @@index([createdAt])
+  @@index([status])
+  @@index([userid])
+  @@index([sellerId])
 }
 
 model Payment {
