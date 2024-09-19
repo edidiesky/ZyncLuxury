@@ -25,13 +25,13 @@ mongoose.connection.on("error", (error) =>
 
 const importData = async () => {
   try {
-     await prisma.rooms.createMany({
-       data: apartmentDataList,
-     });
+    //  await prisma.rooms.createMany({
+    //    data: apartmentDataList,
+    //  });
     // Prisma to insert data
-    // await prisma.reservations.createMany({
-    //   data: bookingData,
-    // });
+    await prisma.reservations.createMany({
+      data: bookingData,
+    });
     // await prisma.user.createMany({
     //   data: user,
     // });

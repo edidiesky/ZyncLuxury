@@ -27,8 +27,13 @@ const GetUserReservation = asyncHandler(async (req, res) => {
 // @route  GET /reservation/history
 // @access  Private
 const GetAllReservation = asyncHandler(async (req, res) => {
+  const { limit = 12, page = 1 } = req.query;
+  // calculate the pagination
+  const skip = (page - 1) * limit;
   const availableRooms = await prisma.reservations.findMany({
     where: {
+      skip: parseInt(skip),
+      take: parseInt(limit),
       sellerId: req.user.userid,
     },
     include: {
@@ -39,7 +44,9 @@ const GetAllReservation = asyncHandler(async (req, res) => {
       createdAt: "desc",
     },
   });
-  return res.json(availableRooms);
+  const totalReservation = await prisma.reservations.count({});
+  const noOfPages = Math.ceil(totalReservation / limit);
+  return res.json({ availableRooms, totalReservation, noOfPages });
 });
 
 // @description  Get a singke reservation for a user
@@ -58,7 +65,6 @@ const GetSingleReservation = asyncHandler(async (req, res) => {
   });
   return res.json(availableRooms);
 });
-
 
 // @description  Create a reservation using for a user or admin or seller
 // @route  POST /reservation/:id
