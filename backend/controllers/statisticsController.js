@@ -3,6 +3,9 @@ import prisma from "../prisma/index.js";
 import { startOfYear, endOfYear, format, addMonths } from "date-fns";
 import moment from "moment";
 
+// @description  Get the reservation bookings for the konth, their revenue, total payment, total bookings;
+// @route  GET /stat
+// @access  Private
 const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
   const start = performance.now();
   // destution the value from the promises from the Prmoise.all
@@ -94,35 +97,4 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
   });
 });
 
-// const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
-//   const start = performance.now();
-//   // 1st, 2nd and 3rd promises
-//   const promise1 = () => {
-//    return new Promise((resolve, reject) => {
-//       setTimeout(() => {
-//         resolve("1st Promise Running");
-//       }, 1000);
-//     });
-//   };
-//   const promise2 = () => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2nd Promise Running");
-//     }, 1000);
-//   });
-//   };
-//   const promise3 = () => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3rd Promise Running");
-//     }, 1000);
-//   });
-//   };
-// {$match:{status:"$completed"}}
-// {$group:{_id:"$chesse"}, totalQuantity:{$sum:"$price"}}
-//
-//   await Promise.all([promise1(), promise2(), promise3()]);
-//   const end = performance.now();
-//   console.log(`Total Latency - ${(end - start) / 1000}`);
-// });
 export { GetStatisticsDataForAdmin };
