@@ -43,7 +43,7 @@ const Widget = () => {
     <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-2">
       {widgetData?.map((widget, index) => {
         return (
-          <div className="p-2 rounded-xl min-h-56 bg-[#fafafa]">
+          <div className="p-1 rounded-xl min-h-56 bg-[#fafafa]">
             <div
               onClick={() => setWidgetTab(index)}
               key={index}

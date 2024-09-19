@@ -56,7 +56,7 @@ const ProductBreakdown = () => {
             series={options?.series}
             type="donut"
             width={"100%"}
-            height={"700"}
+            height={400}
           />
         </div>
       </div>

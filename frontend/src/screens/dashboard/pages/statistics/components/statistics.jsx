@@ -30,7 +30,7 @@ const GrowthStat = () => {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#000", "#000"],
+    colors: ["#000", "var(--primary)"],
     stroke: {
       curve: "smooth",
     },
@@ -53,6 +53,10 @@ const GrowthStat = () => {
     {
       name: "Transactions",
       data: [10, 34, 55, 60, 120, 44, 15, 27, 20],
+    },
+    {
+      name: "Quantity",
+      data: [10, 14, 25, 50, 100, 24, 15, 27, 20],
     },
     // {
     //   name: "Transactions",
@@ -123,7 +127,7 @@ const GrowthStat = () => {
               series={series}
               type="bar"
               width={"100%"}
-              height={340}
+              height={500}
             />
           </div>
         </div>
