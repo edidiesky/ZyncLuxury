@@ -188,7 +188,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               ${apartment?.price}
             </h3>
             <span
-              className={`${
+              className={` ${
                 type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
               } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
             >

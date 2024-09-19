@@ -31,6 +31,12 @@ enum RoomType {
   STAY
 }
 
+enum ListingType {
+  SALE
+  RENT
+  LEASE
+}
+
 enum RoleStatus {
   ADMIN
   USER
@@ -73,25 +79,26 @@ model User {
 }
 
 model Rooms {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  description String
-  price       String?
-  city        String?
-  country     String
-  location    String
-  type        RoomType? @default(STAY)
-  cautionfee  String?
-  guests      Int?
-  latitude    Int?
-  longitude   Int?
-  bedroom     Int
-  bathroom    Int
-  images      String[]
-  features    Json?
-  amenities   Json?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id           String       @id @default(auto()) @map("_id") @db.ObjectId
+  title        String
+  description  String
+  price        String?
+  city         String?
+  country      String
+  location     String
+  type         RoomType?    @default(STAY)
+  listingType ListingType? @default(RENT)
+  cautionfee   String?
+  guests       Int?
+  latitude     Int?
+  longitude    Int?
+  bedroom      Int
+  bathroom     Int
+  images       String[]
+  features     Json?
+  amenities    Json?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
 
   sellerid String @db.ObjectId
 
@@ -131,7 +138,7 @@ model Reservations {
   guests           Int?
   patchguests      Json?
   partpaymentPrice Int?
-  createdAt        DateTime          @default(now()) 
+  createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
   status           ReservationStatus @default(PENDING)
   roomid           String            @db.ObjectId

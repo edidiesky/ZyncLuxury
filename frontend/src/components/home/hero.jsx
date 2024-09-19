@@ -80,7 +80,7 @@ const Hero = () => {
        gap-6 md:gap-12"
           >
             <div className="flex max-w-[1000px] mx-auto flex-col gap-8">
-              <div className="w-full flex items-center gap-4">
+              <div className="w-full md:flex-row flex-col flex md:items-center gap-4">
                 <div className="flex items-center">
                   {profilesList?.map((face, index) => {
                     return (
@@ -88,9 +88,9 @@ const Hero = () => {
                         key={index}
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
-                        } w-16 h-16 border-[rgba(0,0,0,.3)] overflow-hidden rounded-full border-4`}
+                        } w-14 md:w-16 h-14 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-4`}
                       > 
-                        <Image src={face} />
+                        <img src={face} className="w-full h-full object-cover" />
                       </div>
                     );
                   })}
@@ -100,7 +100,7 @@ const Hero = () => {
                 </span>
               </div>
               <h1
-                className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-5xl sm:text-6xl
+                className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
           family2"
               >
                 Find your Best{" "}
@@ -117,20 +117,20 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-            <div className="w-full md:items-center flex-row md:justify-center gap-4 flex">
-              <div className="flex">
+            <div className="w-full md:w-[450px] md:mx-auto md:items-center flex-row md:justify-center gap-4 flex">
+              <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn md:text-base text-sm family1 font-normal text-white rounded-[40px] px-4 py-6 md:px-10"
+                  className="btn md:text-base text-center  w-full text-sm family1 font-normal text-white rounded-[40px] px-4 py-6 md:px-10"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-base text-sm family1 font-normal text-white px-4 py-6 md:px-10"
+                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-normal text-white px-4 py-6 md:px-10"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -417,7 +417,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
             <div className="flex justify-end items-center">
               <button
                 onClick={() => dispatch(onLoginModal())}
-                className="btn min-w-[130px] text-center text-base family1 font-semibold text-white px-8 py-4"
+                className="btn min-w-[100px] md:min-w-[130px] text-center text-sm md:text-base family1 font-semibold text-white px-4 md:px-8 py-4"
               >
                 Discover Listing
               </button>

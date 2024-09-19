@@ -187,8 +187,9 @@ button:disabled {
 }
 :root {
   --grey-1: #4f578d;
+  /* --light-grey: */
   --dark-1: rgb(34, 37, 61);
-  --primary: #4456FF;
+  --primary: #327AF7;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
   --red: #f73760;
