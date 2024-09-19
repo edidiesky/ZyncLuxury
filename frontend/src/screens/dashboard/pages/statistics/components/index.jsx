@@ -14,13 +14,13 @@ const DashboardIndex = () => {
   const { currentUser } = useSelector((store) => store.auth);
   const { getStatisLoading } = useSelector((store) => store.stat);
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getAdminStat());
-  //   dispatch(GetAllUsers());
-  // }, []);
-  // if (getStatisLoading) {
-  //   return <Loader />;
-  // }
+  useEffect(() => {
+    dispatch(getAdminStat());
+    dispatch(GetAllUsers());
+  }, []);
+  if (getStatisLoading) {
+    return <Loader />;
+  }
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-12">
@@ -65,8 +65,8 @@ const Property = () => {
             See All
           </Link>
         </div>
-        <div className="w-full grid lg:grid-cols-3 gap-4">
-          {apartmentDataList?.slice(0, 3).map((data, index) => {
+        <div className="w-full h-[600px] overflow-auto grid lg:grid-cols-3 gap-4">
+          {apartmentDataList?.map((data, index) => {
             return <RoomCard apartment={data} type={"search"} />;
           })}
         </div>
@@ -80,7 +80,7 @@ const Transaction = () => {
     <div className="w-full flex flex-col gap-4">
       <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 px-4 lg:py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
         <div className="w-full flex items-center pr-4 justify-between">
-          <h4 className="text-2xl lg:text-3xl font-bold">Latest Transaction</h4>
+          <h4 className="text-xl lg:text-2xl font-bold">Latest Transaction</h4>
           <Link
             to={`/dashboard/orders`}
             className="text-dark underline block pt-1 font-normal text-sm"
@@ -89,17 +89,17 @@ const Transaction = () => {
           </Link>
         </div>
         <div className="w-full flex flex-col gap-3">
-          {apartmentDataList?.slice(0, 3).map((data, index) => {
+          {apartmentDataList?.slice(0, 5).map((data, index) => {
             return (
               <div
                 key={index}
                 className="w-full pb-4 bg-[#fafafa]-b gap-8 flex items-center justify-between"
               >
                 <div className="flex flex-1 items-center gap-3">
-                  <div className="w-14 h-14 rounded-full overflow-hidden">
+                  <div className="w-20 overflow-hidden">
                     <Image src={data?.images[0]} />
                   </div>
-                  <h5 className="text-base flex-1 font-normal family1">
+                  <h5 className="text-sm flex-1 font-normal family1">
                     {data?.title}
                     <span className="font-semibold block text-xs">
                       14 September 2024

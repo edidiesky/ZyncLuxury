@@ -8,7 +8,7 @@ import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
 
 const Widget = () => {
   const [widgettab, setWidgetTab] = useState(1);
-  const { totalOrderAmount, totalOrder, totalReservations, totalRooms } =
+  const { totalOrder, totalReservations, totalRooms } =
     useSelector((store) => store.stat);
   const { users } = useSelector((store) => store.auth);
 
@@ -30,7 +30,7 @@ const Widget = () => {
       title: " Total Revenue",
       icon: <GiCash />,
       color: "#FF7F5C",
-      subtitle: `$${totalOrderAmount}`,
+      subtitle: `$${Number(totalOrder)?.toLocaleString()}`,
     },
     {
       title: "Total Reserved",

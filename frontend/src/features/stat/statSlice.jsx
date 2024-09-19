@@ -11,7 +11,8 @@ const initialState = {
   getStatisError: false,
   totalMonth: [],
   totalYear: [],
-  totalStatAmount: [],
+  totalMonthBookings: [],
+  totalMonthRevenue: [],
 };
 
 export const statSlice = createSlice({
@@ -26,15 +27,18 @@ export const statSlice = createSlice({
     builder.addCase(getAdminStat.fulfilled, (state, action) => {
       state.getStatisLoading = false;
       state.totalRooms = action.payload.totalRooms;
-      state.totalReservations = action.payload.totalReservations;
-      state.totalOrder = action.payload.totalOrder;
-      state.totalOrderAmount = action.payload.totalOrderAmount;
-      state.totalMonth = action.payload.finalStats.map(
+      state.totalReservations = action.payload?.totalReservations;
+      state.totalOrder = action.payload?.totalSales;
+      state.totalOrderAmount = action.payload?.totalOrderAmount;
+      state.totalMonth = action.payload?.totalBookingsByMonth.map(
         (data) => `${data?.date}`
       );
-      state.totalStatAmount = action.payload.finalStats.map(
-        (data) => data.count
+      state.totalMonthBookings = action.payload?.totalBookingsByMonth.map(
+        (data) => data.reservationCount
       );
+       state.totalMonthRevenue = action.payload?.totalBookingsByMonth.map(
+         (data) => Number(data.totalPrice).toLocaleString()
+       );
     });
     builder.addCase(getAdminStat.rejected, (state, action) => {
       state.getStatisLoading = false;

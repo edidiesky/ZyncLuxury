@@ -14,11 +14,13 @@ const Statistics = () => {
 };
 
 const GrowthStat = () => {
-  const { totalStatAmount, totalMonth } = useSelector((store) => store.stat);
+  const { totalMonthBookings, totalMonth, totalMonthRevenue } = useSelector(
+    (store) => store.stat
+  );
   const [options, setOptions] = useState({
     chart: {
       height: 350,
-      type: "bar",
+      type: "line",
       fontFamily: "Work Sans",
       foreColor: "#333",
       fontSize: "30px",
@@ -35,82 +37,73 @@ const GrowthStat = () => {
       curve: "smooth",
     },
     xaxis: {
-      categories: [
-        "Jan",
-        "Febr",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "sept",
-      ],
+      categories: totalMonth,
+      // categories: [
+      //   "Jan",
+      //   "Febr",
+      //   "Mar",
+      //   "Apr",
+      //   "May",
+      //   "Jun",
+      //   "Jul",
+      //   "Aug",
+      //   "sept",
+      // ],
     },
   });
 
   const [series, setSeries] = useState([
     {
       name: "Transactions",
-      data: [10, 34, 55, 60, 120, 44, 15, 27, 20],
-    },
-    {
-      name: "Quantity",
-      data: [10, 14, 25, 50, 100, 24, 15, 27, 20],
+      // data: [10, 34, 55, 60, 120, 44, 15, 27, 20],
+      data: totalMonthRevenue,
     },
     // {
-    //   name: "Transactions",
-    //   data: [20, 40, 15, 70, 20, 4, 5, 17, 20],
+    //   name: "Monthly Bookings",
+    //   // data: [10, 14, 25, 50, 100, 24, 15, 27, 20],
+    //   data: totalMonthBookings,
     // },
   ]);
-  // const [options, setOptions] = useState({
-  //   chart: {
-  //     height: 350,
-  //     type: "bar",
-  //     fontFamily: "Work Sans",
-  //     foreColor: "#333",
-  //     fontSize: "30px",
-  //     textTransform: "capitalize",
-  //     zoom: {
-  //       enabled: false,
-  //     },
-  //   },
-  //   dataLabels: {
-  //     enabled: false,
-  //   },
-  //   colors: ["var(--dark-1)", "#247BA0"],
-  //   stroke: {
-  //     curve: "smooth",
-  //   },
-  //   xaxis: {
-  //     categories: totalMonth,
-  //   },
-  // });
 
-  // const [series, setSeries] = useState([
-  //   {
-  //     name: "Transactions",
-  //     data: totalStatAmount,
-  //   },
-  // ]);
-  // useEffect(() => {
-  //   if (Array.isArray(totalMonth) && Array.isArray(totalStatAmount)) {
-  //     if (totalMonth.length !== 0 || totalStatAmount.length !== 0) {
-  //       setOptions((prevOptions) => ({
-  //         ...prevOptions,
-  //         xaxis: {
-  //           categories: totalMonth,
-  //         },
-  //       }));
-  //       setSeries([
-  //         {
-  //           name: "Transactions",
-  //           data: totalStatAmount,
-  //         },
-  //       ]);
-  //     }
-  //   }
-  // }, [totalStatAmount, totalMonth, setSeries, setOptions]);
+
+  useEffect(() => {
+    if (
+      Array.isArray(totalMonth) &&
+      Array.isArray(totalMonthBookings) &&
+      Array.isArray(totalMonthRevenue)
+    ) {
+      if (
+        totalMonth.length !== 0 ||
+        totalMonthBookings.length !== 0 ||
+        totalMonthRevenue.length !== 0
+      ) {
+        setOptions((prevOptions) => ({
+          ...prevOptions,
+          xaxis: {
+            categories: totalMonth?.slice(0,10),
+          },
+        }));
+        setSeries([
+          {
+            name: "Transactions",
+            // data: [10, 34, 55, 60, 120, 44, 15, 27, 20],
+            data: totalMonthRevenue?.slice(0,10),
+          },
+          // {
+          //   name: "Monthly Bookings",
+          //   // data: [10, 14, 25, 50, 100, 24, 15, 27, 20],
+          //   data: totalMonthBookings?.slice(0,6),
+          // },
+        ]);
+      }
+    }
+  }, [
+    totalMonthBookings,
+    totalMonth,
+    totalMonthRevenue,
+  ]);
+  console.log(`"totalMonthBookings":${totalMonthBookings}`);
+  console.log(`"totalMonthRevenue":${totalMonthRevenue}`);
   return (
     <div id="chart" className="w-full ">
       <div
@@ -125,7 +118,7 @@ const GrowthStat = () => {
             <Chart
               options={options}
               series={series}
-              type="bar"
+              type="line"
               width={"100%"}
               height={500}
             />
