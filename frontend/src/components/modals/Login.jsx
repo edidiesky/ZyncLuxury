@@ -132,7 +132,7 @@ const LoginModal = () => {
                 <button
                   type="submit"
                   className="p-4 px-8 text-base flex items-center justify-center w-full cursor-pointer 
-                  btn btn_2 bg-[#000] rounded-[40px] font-booking_font_bold text-white"
+                  btn  bg-[#000] rounded-[40px] font-booking_font_bold text-white"
                 >
                   <AnimateText children={"Sign In"} />
                 </button>

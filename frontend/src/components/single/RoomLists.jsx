@@ -69,10 +69,10 @@ const RoomLists = ({}) => {
   return (
     <>
       <div className="w-full relative py-2 md:py-12 gap-12 flex flex-col items-center justify-center">
-        <div className="w-full md:w-[95%] max-auto max-w-custom mx-auto">
+        <div className="w-full md:w-[90%] max-auto max-w-custom mx-auto">
           <RoomGallery room={room} />
         </div>
-        <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
+        <div className="w-[90%] max-auto max-w-custom flex flex-col gap-12">
           <div
             className="w-full z-40 flex flex-col-reverse lg:grid lg:grid-cols-custom items-start justify-center
        gap-20"
@@ -170,7 +170,7 @@ const RoomLists = ({}) => {
             />
           </div>
         </div>
-        <div className="w-[95%] max-auto max-w-custom flex flex-col gap-12">
+        <div className="w-[90%] max-auto max-w-custom flex flex-col gap-12">
           <RoomLocation />
         </div>
       </div>

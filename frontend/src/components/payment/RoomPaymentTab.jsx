@@ -47,8 +47,8 @@ export default function RoomPaymentTab() {
           <Skeleton width={"100%"} height={40} />
         </div>
       ) : (
-        <div className="w-full flex-col gap-8">
-          <div className="border shadow-2xl rounded-xl overflow-hidden flex flex-col w-full">
+        <div className="w-full flex-col p-3 bg-[#fafafa] rounded-xl gap-8">
+          <div className="rounded-xl bg-[#fff] border overflow-hidden flex flex-col w-full">
             <img
               alt="Cotion"
               loading="lazy"

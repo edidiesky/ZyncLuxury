@@ -1,6 +1,13 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { BiCheck, BiPlus, BiMinus, BiStar } from "react-icons/bi";
+import {
+  BiCheck,
+  BiPlus,
+  BiMinus,
+  BiStar,
+  BiPhone,
+  BiMessage,
+} from "react-icons/bi";
 import moment from "moment";
 import { addDays, format } from "date-fns";
 import axios from "axios";
@@ -180,8 +187,8 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
           </div>
         </div>
       </div>
-      <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col gap-8">
-        <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff] shadows">
+      <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col p-3 bg-[#fafafa] rounded-xl gap-8">
+        <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff]">
           <h4 className="text-3xl family1 px-6 font-bold">
             ₦{room?.price} <span className="font-normal text-sm">/night</span>
           </h4>
@@ -256,7 +263,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 type="submit"
                 disabled={bookingloading}
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-lg font-semibold text-white py-4 px-8 w-full"
+                className="btn flex items-center justify-center text-base font-semibold text-white py-4 px-8 w-full"
               >
                 {bookingloading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -276,8 +283,8 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
               </button>
             )}
           </div>
-          <div className="w-[90%] family1 py-2 mx-auto flex flex-col gap-4">
-            <div className="w-full flex flex-col gap-4">
+          <div className="w-[90%] family1 py-2 mx-auto flex flex-col gap-2">
+            <div className="w-full flex flex-col gap-2">
               {/* price */}
               <div className="w-full text-lg font-semibold flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
@@ -301,6 +308,53 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                   Total
                 </span>
                 <span> ₦ {Number(totalPrice).toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex items-start flex-col border-t gap-4 rounded-b-xl px-4 py-4 bg-[#fff]">
+            <div className="flex items-center gap-3">
+              {room?.user?.image ? (
+                <img
+                  src={room?.user?.image}
+                  alt=""
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              ) : room?.user?.username ? (
+                // <div className="w-16 h-16 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+                //   {currentUser?.username[0]}{" "}
+                // </div>
+                <img
+                  src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
+                  alt=""
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              ) : (
+                <img
+                  src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
+                  alt=""
+                  className="w-16 h-16 object-cover rounded-full"
+                />
+              )}
+              <span className="text-dark text-lg font-bold">
+                {room?.user?.name}
+                <span className="text-[var(--primary)] block font-normal text-base">
+                  Verifed Agents
+                </span>
+              </span>
+            </div>
+            <span className="text-dark text-sm w-full font-normal">
+              {room?.user?.name} is a dedicated real estate agent specializing
+              in managing and overseeing properties with a keen eye for detail
+              and a commitment for excellence
+            </span>
+            <div className="flex w-full">
+              <div
+                style={{
+                  transition: "all .3s",
+                }}
+                className="rounded-full cursor-pointer hover:bg-[#000] hover:text-[#fff] py-3 flex items-center gap-2 border px-6 text-dark font-normal text-base"
+              >
+                <BiMessage /> Message Agent
               </div>
             </div>
           </div>

@@ -119,6 +119,9 @@ const GetSingleRoom = asyncHandler(async (req, res) => {
     where: {
       id: id,
     },
+    include: {
+      user: true,
+    },
   });
 
   if (!room) {
