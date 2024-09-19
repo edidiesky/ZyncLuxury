@@ -25,7 +25,7 @@ const Expert = () => {
         className="w-full flex relative bg-[#f4f5fa] py-20 flex-col gap-40"
       >
         <div className="background_grey"></div>
-        <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-20">
+        <div className="w-[90%] max-w-custom mx-auto flex flex-col gap-20">
           <div className="grid lg:grid-cols-2 items-start md:items-center w-full gap-12">
             <div className="flex flex-col gap-4">
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
@@ -133,7 +133,7 @@ const Expert = () => {
         data-scroll-section
         className="w-full flex relative border-b border-dotted py-24 flex-col gap-40"
       >
-        <div className="w-[95%] max-w-custom justify-center md:items-center mx-auto flex gap-20">
+        <div className="w-[90%] max-w-custom justify-center md:items-center mx-auto flex gap-20">
           <div className="w-full flex md:flex-row flex-col justify-center md:items-center gap-12 md:gap-24">
             <div className="flex flex-col gap-3">
               <h2 className="text-7xl md:text-9xl text-[#868dbb]">15k+</h2>

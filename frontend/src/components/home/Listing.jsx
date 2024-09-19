@@ -15,7 +15,7 @@ const Listing = () => {
   }, []);
   return (
     <div data-scroll-section className="w-full flex py-32 flex-col">
-      <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-20">
+      <div className="w-[90%] max-w-custom mx-auto flex flex-col gap-20">
         <div className="grid lg:grid-cols-2 gap-4 items-start lg:items-center w-full">
           <div className="flex flex-col gap-4">
             <h4 className="text-lg md:text-xl text-[var(--primary)]">

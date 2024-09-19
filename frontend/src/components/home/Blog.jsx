@@ -27,7 +27,7 @@ const blogList = [
 const Blog = () => {
   return (
     <div data-scroll-section className="w-full flex py-32 flex-col gap-40">
-      <div className="w-[95%] max-w-custom mx-auto flex flex-col gap-20">
+      <div className="w-[90%] max-w-custom mx-auto flex flex-col gap-20">
         <div className="flex flex-col items-start md:items-center md:justify-center w-full gap-4">
           <div className="flex flex-col md:items-center md:justify-center gap-4">
             <h4 className="text-lg md:text-xl text-[var(--primary)]">

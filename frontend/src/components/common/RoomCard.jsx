@@ -116,11 +116,14 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       className="w-full"
       custom={index}
     >
-      <Link to={`/room/${apartment?.id}`} className="w-full flex flex-col">
+      <Link
+        to={`/room/${apartment?.id}`}
+        className="w-full p-2 bg-[#fafafa] rounded-xl flex flex-col"
+      >
         <div
           className={`w-full ${
             type === "search" ? "h-[170px]" : "h-[230px] md:h-[270px]"
-          }  rounded-xl overflow-hidden relative`}
+          }  rounded-t-xl overflow-hidden relative`}
         >
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
@@ -173,13 +176,27 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col gap-2 rounded-b-xl py-6">
+        <div className="w-full flex flex-col gap-2 rounded-b-xl p-6 border bg-[#fff]">
+          <h3
+            className={`${
+              type === "search"
+                ? "md:text-lg text-base"
+                : "md:text-3xl text-2xl"
+            }  font-bold flex-1`}
+          >
+            ${apartment?.price}
+            {/* <span className="flex text-sm pt-1 items-center gap-2">
+              <TiLocation fontSize={"16px"} />
+              Houston
+            </span> */}
+            {/* Amazon */}
+          </h3>
           <div className="flex items-center gap-4">
             <h3
               className={`${
                 type === "search"
                   ? "md:text-base text-base"
-                  : "md:text-2xl text-xl"
+                  : "md:text-xl text-lg"
               }  font-bold flex-1`}
             >
               {apartment?.title}
@@ -189,31 +206,22 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             </span> */}
               {/* Amazon */}
             </h3>
-            <span
+            {/* <span
               className={`${
                 type === "search" ? "text-xs px-4 py-2" : "text-sm px-4 py-3 "
               } gap-2 bg-[#fafafa] flex items-center rounded-full  font-bold`}
             >
               <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div>
               Vacant
-            </span>
+            </span> */}
           </div>
           <div
             className={`w-full ${
-              type === "search" ? "text-xs" : "text-lg"
+              type === "search" ? "text-xs" : "text-base"
             } flex items-center text-grey gap-1 justify-between`}
           >
             {" "}
-            {apartment?.location}
-            {/* <div className="flex items-center flex-1 justify-start pr-3 border-r gap-2 text-dark">
-              <CiStar /> 5 Rating
-            </div>
-            <div className="flex items-center flex-1 justify-center pr-3 border-r gap-2 text-dark">
-              <TbLocation /> {apartment?.country}
-            </div>
-            <div className="flex items-center flex-1 justify-center gap-2 text-dark">
-              <CiCalendar /> today
-            </div> */}
+            {apartment?.location}, {apartment?.country}
           </div>
           <ul
             className={`${
