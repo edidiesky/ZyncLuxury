@@ -32,12 +32,11 @@ const DashboardIndex = () => {
         </h3>
         <div className="w-full flex flex-col gap-16">
           <Widget />
-          <Statistics />
         </div>
         <div className="w-full grid gap-12 lg:gap-4 lg:grid-cols-custom">
-          <div className="w-full flex flex-col gap-20">{/* <Widget /> */}</div>
+          <Statistics />
           <div className="w-full lg:w-[400px] flex flex-col gap-12">
-            <ProductBreakdown />
+            {/* <ProductBreakdown /> */}
             <Transaction />
           </div>
         </div>
@@ -50,22 +49,22 @@ const DashboardIndex = () => {
 
 const Property = () => {
   return (
-    <div className="w-full flex flex-col gap-8">
-      <div className="w-full px-4 flex items-center justify-between">
-        <h4 className="text-3xl lg:text-4xl font-bold">
-          My Properties
-          <span className="text-grey block pt-1 font-normal text-sm">
-            Track all your Property you have created for sell or rent
-          </span>
-        </h4>
-        <Link
-          to={`/dashboard/rooms`}
-          className="text-dark underline block pt-1 font-normal text-sm"
-        >
-          See All
-        </Link>
-      </div>
-      <div className="w-full min-h-[330px] space-y-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+    <div className="w-full ">
+      <div className="w-full min-h-[330px] flex flex-col gap-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+        <div className="w-full px-4 flex items-center justify-between">
+          <h4 className="text-3xl lg:text-4xl font-bold">
+            My Properties
+            <span className="text-grey block pt-1 font-normal text-sm">
+              Track all your Property you have created for sell or rent
+            </span>
+          </h4>
+          <Link
+            to={`/dashboard/rooms`}
+            className="text-dark underline block pt-1 font-normal text-sm"
+          >
+            See All
+          </Link>
+        </div>
         <div className="w-full grid lg:grid-cols-3 gap-4">
           {apartmentDataList?.slice(0, 3).map((data, index) => {
             return <RoomCard apartment={data} type={"search"} />;
@@ -79,16 +78,16 @@ const Property = () => {
 const Transaction = () => {
   return (
     <div className="w-full flex flex-col gap-4">
-      <div className="w-full flex items-center pr-4 justify-between">
-        <h4 className="text-2xl lg:text-3xl font-bold">Latest Transaction</h4>
-        <Link
-          to={`/dashboard/orders`}
-          className="text-dark underline block pt-1 font-normal text-sm"
-        >
-          See All
-        </Link>
-      </div>
       <div className="w-full min-h-[400px] rounded-3xl space-y-8 p-6 px-4 lg:py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
+        <div className="w-full flex items-center pr-4 justify-between">
+          <h4 className="text-2xl lg:text-3xl font-bold">Latest Transaction</h4>
+          <Link
+            to={`/dashboard/orders`}
+            className="text-dark underline block pt-1 font-normal text-sm"
+          >
+            See All
+          </Link>
+        </div>
         <div className="w-full flex flex-col gap-3">
           {apartmentDataList?.slice(0, 3).map((data, index) => {
             return (
@@ -103,12 +102,14 @@ const Transaction = () => {
                   <h5 className="text-base flex-1 font-normal family1">
                     {data?.title}
                     <span className="font-semibold block text-xs">
-                     14 September 2024
+                      14 September 2024
                     </span>
                   </h5>
                 </div>
                 <div className="justify-end flex items-center">
-                  <h5 className="text-lg font-normal family1">${data?.price}</h5>
+                  <h5 className="text-lg font-normal family1">
+                    ${data?.price}
+                  </h5>
                 </div>
               </div>
             );
