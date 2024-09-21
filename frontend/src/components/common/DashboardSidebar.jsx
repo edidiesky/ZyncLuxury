@@ -63,7 +63,7 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[290px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
+      className={`w-[280px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] flex flex-col gap-12">
