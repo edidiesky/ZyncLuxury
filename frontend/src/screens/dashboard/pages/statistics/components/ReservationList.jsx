@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { GetAllReservations } from "@/features/reservation/reservationReducer";
 
 const ReservationList = () => {
-  //   const [roommodal, setRoomModal] = useState(false);
   const dispatch = useDispatch();
   const { reservations } = useSelector((store) => store.reservation);
 

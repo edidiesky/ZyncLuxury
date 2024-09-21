@@ -34,7 +34,6 @@ const GetAllReservation = asyncHandler(async (req, res) => {
     where: {
       skip: parseInt(skip),
       take: parseInt(limit),
-      sellerId: req.user.userid,
     },
     include: {
       user: true,

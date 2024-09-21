@@ -1,9 +1,7 @@
 "use client";
-import { GetPaymentHistory } from "@/features/payment/paymentReducer";
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 
 const Statistics = () => {
   return (
@@ -32,7 +30,7 @@ const GrowthStat = () => {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#000", "var(--primary)"],
+    colors: ["var(--primary)", "#000"],
     stroke: {
       curve: "smooth",
     },
@@ -102,8 +100,8 @@ const GrowthStat = () => {
     totalMonth,
     totalMonthRevenue,
   ]);
-  console.log(`"totalMonthBookings":${totalMonthBookings}`);
-  console.log(`"totalMonthRevenue":${totalMonthRevenue}`);
+  // console.log(`"totalMonthBookings":${totalMonthBookings}`);
+  // console.log(`"totalMonthRevenue":${totalMonthRevenue}`);
   return (
     <div id="chart" className="w-full ">
       <div

@@ -76,7 +76,6 @@ const LoginModal = () => {
       exit={{ opacity: 0, visibility: "hidden" }}
       animate={{ opacity: 1, visibility: "visible" }}
     >
-      {loginisLoading && <Loader />}
       <motion.div
         variants={ModalVariants}
         initial="initial"
@@ -130,11 +129,19 @@ const LoginModal = () => {
               </div>
               <div className="w-full flex items-center justify-center flex-col gap-3">
                 <button
+                  data-test="loginmodal_button"
                   type="submit"
-                  className="p-4 px-8 text-base flex items-center justify-center w-full cursor-pointer 
-                  btn  bg-[#000] rounded-[40px] font-booking_font_bold text-white"
+                  disabled={loginisLoading}
+                  className="p-4 px-8 hover:opacity-[.5] text-[#fff] flex items-center justify-center w-full cursor-pointer 
+                   bg-[#000] rounded-[40px] family1 font-normal"
                 >
-                  <AnimateText children={"Sign In"} />
+                  {loginisLoading ? (
+                    <div className="w-full flex justify-center items-center gap-4">
+                      <Loader type="dots" /> Login in progress
+                    </div>
+                  ) : (
+                    <AnimateText children={"Sign In"} />
+                  )}
                 </button>
                 <div className="w-full flex items-center justify-start gap-2">
                   <span className="text-sm font-normal text-dark">
@@ -150,8 +157,6 @@ const LoginModal = () => {
                   </span>
                 </div>
               </div>
-
-             
             </form>
           </div>
         </div>
