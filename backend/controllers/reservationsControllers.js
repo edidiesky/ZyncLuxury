@@ -31,10 +31,9 @@ const GetAllReservation = asyncHandler(async (req, res) => {
   // calculate the pagination
   const skip = (page - 1) * limit;
   const availableRooms = await prisma.reservations.findMany({
-    where: {
-      skip: parseInt(skip),
-      take: parseInt(limit),
-    },
+    where: { sellerId: req.user.userId },
+    skip: parseInt(skip),
+    take: parseInt(limit),
     include: {
       user: true,
       rooms: true,
