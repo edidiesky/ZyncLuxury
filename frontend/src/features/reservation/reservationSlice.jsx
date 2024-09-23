@@ -18,6 +18,7 @@ const initialState = {
   loginisLoading: false,
   loginisSuccess: false,
   loginisError: false,
+  totalReservation:0,
 
   getsingleReservationisLoading: false,
   getsingleReservationisSuccess: false,
@@ -78,7 +79,7 @@ export const reservationSlice = createSlice({
     builder.addCase(GetAllReservations.fulfilled, (state, action) => {
       state.getsingleReservationisLoading = false;
       state.getsingleReservationisSuccess = true;
-      state.reservations = action.payload;
+      state.reservations = action.payload.availableRooms;
     });
     builder.addCase(GetAllReservations.rejected, (state, action) => {
       state.getsingleReservationisSuccess = false;
