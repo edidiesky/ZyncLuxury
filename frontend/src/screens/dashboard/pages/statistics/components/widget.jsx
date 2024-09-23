@@ -13,13 +13,13 @@ const Widget = () => {
   const { users } = useSelector((store) => store.auth);
 
   const widgetData = [
-    {
-      title: "Total Revenue",
-      icon: <FaMoneyBill />,
-      color: "#E7EEE9",
-      // subtitle: `${totalOrder}`,
-      subtitle: `$10K`,
-    },
+    // {
+    //   title: "Total Revenue",
+    //   icon: <FaMoneyBill />,
+    //   color: "#E7EEE9",
+    //   // subtitle: `${totalOrder}`,
+    //   subtitle: `$10K`,
+    // },
     {
       title: "Total Property",
       icon: <MdHotel />,
@@ -40,7 +40,7 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-2">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-2">
       {widgetData?.map((widget, index) => {
         return (
           <div className="p-1 rounded-xl min-h-56 bg-[#fafafa]">
