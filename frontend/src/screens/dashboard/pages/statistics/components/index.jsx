@@ -10,13 +10,14 @@ import { apartmentDataList } from "@/data/apartmentData";
 import Image from "@/components/common/Image";
 import ProductBreakdown from "./ProductBreakdown";
 import RoomCard from "@/components/common/RoomCard";
+import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 const DashboardIndex = () => {
-  const { currentUser } = useSelector((store) => store.auth);
+
   const { getStatisLoading } = useSelector((store) => store.stat);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAdminStat());
-    dispatch(GetAllUsers());
+    dispatch(getAllRoomsForAdmin());
   }, []);
   if (getStatisLoading) {
     return <Loader />;
@@ -48,6 +49,7 @@ const DashboardIndex = () => {
 
 
 const Property = () => {
+    const { rooms } = useSelector((store) => store.room);
   return (
     <div className="w-full ">
       <div className="w-full min-h-[330px] flex flex-col gap-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
@@ -66,7 +68,7 @@ const Property = () => {
           </Link>
         </div>
         <div className="w-full h-[600px] overflow-auto grid lg:grid-cols-3 gap-4">
-          {apartmentDataList?.map((data, index) => {
+          {rooms?.map((data, index) => {
             return <RoomCard apartment={data} type={"search"} />;
           })}
         </div>
