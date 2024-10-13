@@ -2,7 +2,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T06:33:34Z",
     "endDate": "2023-12-02T04:32:53Z",
-    "totalPrice": 11486,
+    "totalPrice": 1106,
     "guests": 3,
     "partpaymentPrice": 2083,
     "status": "CONFIRMED",
@@ -15,7 +15,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T15:24:02Z",
     "endDate": "2024-01-19T01:08:34Z",
-    "totalPrice": 35492,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8080,
     "status": "CONFIRMED",
@@ -28,7 +28,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T17:14:55Z",
     "endDate": "2024-01-31T07:25:35Z",
-    "totalPrice": 14122,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 7101,
     "status": "PENDING",
@@ -41,7 +41,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T01:37:14Z",
     "endDate": "2023-12-12T18:29:12Z",
-    "totalPrice": 14402,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2235,
     "status": "CONFIRMED",
@@ -54,7 +54,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T05:24:22Z",
     "endDate": "2023-12-09T05:12:35Z",
-    "totalPrice": 14871,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 7507,
     "status": "UNAVAILABLE",
@@ -67,7 +67,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T19:45:39Z",
     "endDate": "2023-12-03T09:52:24Z",
-    "totalPrice": 14075,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 7297,
     "status": "UNAVAILABLE",
@@ -80,7 +80,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:34:46Z",
     "endDate": "2023-12-29T07:22:25Z",
-    "totalPrice": 11561,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 8532,
     "status": "PENDING",
@@ -93,7 +93,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T23:36:40Z",
     "endDate": "2023-12-22T11:32:15Z",
-    "totalPrice": 29234,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9508,
     "status": "PENDING",
@@ -106,7 +106,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T16:47:42Z",
     "endDate": "2024-01-13T09:07:14Z",
-    "totalPrice": 44474,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8810,
     "status": "CONFIRMED",
@@ -119,7 +119,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T22:11:39Z",
     "endDate": "2024-01-03T03:04:59Z",
-    "totalPrice": 13864,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 3665,
     "status": "CONFIRMED",
@@ -132,7 +132,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T04:09:31Z",
     "endDate": "2023-11-25T06:25:16Z",
-    "totalPrice": 44805,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3980,
     "status": "UNAVAILABLE",
@@ -145,7 +145,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T07:46:36Z",
     "endDate": "2023-11-22T00:20:14Z",
-    "totalPrice": 30571,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4992,
     "status": "PENDING",
@@ -158,7 +158,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T14:10:09Z",
     "endDate": "2023-11-29T09:52:51Z",
-    "totalPrice": 14547,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8652,
     "status": "CONFIRMED",
@@ -171,7 +171,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T11:34:48Z",
     "endDate": "2023-12-24T02:54:09Z",
-    "totalPrice": 22546,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8290,
     "status": "PENDING",
@@ -184,7 +184,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T05:25:08Z",
     "endDate": "2023-12-15T00:24:43Z",
-    "totalPrice": 30291,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 2219,
     "status": "PENDING",
@@ -197,7 +197,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T06:11:38Z",
     "endDate": "2023-12-07T04:25:20Z",
-    "totalPrice": 41914,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3465,
     "status": "CONFIRMED",
@@ -210,7 +210,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T10:59:57Z",
     "endDate": "2023-12-02T00:18:34Z",
-    "totalPrice": 16581,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7789,
     "status": "CONFIRMED",
@@ -223,7 +223,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T22:34:32Z",
     "endDate": "2024-02-01T00:02:23Z",
-    "totalPrice": 38598,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6779,
     "status": "PENDING",
@@ -236,7 +236,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T16:22:22Z",
     "endDate": "2023-12-15T23:36:27Z",
-    "totalPrice": 27194,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6327,
     "status": "UNAVAILABLE",
@@ -249,7 +249,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T10:30:34Z",
     "endDate": "2023-11-14T22:14:39Z",
-    "totalPrice": 29121,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9660,
     "status": "CONFIRMED",
@@ -262,7 +262,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T14:04:10Z",
     "endDate": "2023-12-11T11:22:26Z",
-    "totalPrice": 38399,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9553,
     "status": "UNAVAILABLE",
@@ -275,7 +275,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T10:22:22Z",
     "endDate": "2023-12-28T09:30:23Z",
-    "totalPrice": 43515,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 9157,
     "status": "CONFIRMED",
@@ -288,7 +288,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T10:24:07Z",
     "endDate": "2023-12-24T10:30:53Z",
-    "totalPrice": 36945,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6143,
     "status": "PENDING",
@@ -301,7 +301,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T01:13:08Z",
     "endDate": "2023-12-11T23:46:00Z",
-    "totalPrice": 15009,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2874,
     "status": "PENDING",
@@ -314,7 +314,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T11:41:47Z",
     "endDate": "2023-11-15T05:23:56Z",
-    "totalPrice": 23440,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6758,
     "status": "UNAVAILABLE",
@@ -327,7 +327,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T22:42:46Z",
     "endDate": "2024-01-23T01:42:26Z",
-    "totalPrice": 43293,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3474,
     "status": "CONFIRMED",
@@ -340,7 +340,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T11:07:30Z",
     "endDate": "2023-12-02T23:28:21Z",
-    "totalPrice": 21202,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2147,
     "status": "PENDING",
@@ -353,7 +353,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T07:37:46Z",
     "endDate": "2024-01-19T16:54:28Z",
-    "totalPrice": 35667,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 9222,
     "status": "UNAVAILABLE",
@@ -366,7 +366,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T19:43:01Z",
     "endDate": "2024-01-29T14:51:06Z",
-    "totalPrice": 37923,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4333,
     "status": "UNAVAILABLE",
@@ -379,7 +379,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T01:09:51Z",
     "endDate": "2023-12-19T05:35:56Z",
-    "totalPrice": 35274,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3595,
     "status": "PENDING",
@@ -392,7 +392,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:58:53Z",
     "endDate": "2023-12-17T13:19:13Z",
-    "totalPrice": 30718,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5614,
     "status": "CONFIRMED",
@@ -405,7 +405,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T19:46:12Z",
     "endDate": "2024-01-25T04:39:54Z",
-    "totalPrice": 12277,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7805,
     "status": "UNAVAILABLE",
@@ -418,7 +418,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T00:55:16Z",
     "endDate": "2024-01-07T03:01:37Z",
-    "totalPrice": 10081,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6274,
     "status": "PENDING",
@@ -431,7 +431,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T05:06:29Z",
     "endDate": "2023-12-02T17:22:12Z",
-    "totalPrice": 17799,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4186,
     "status": "UNAVAILABLE",
@@ -444,7 +444,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T21:53:09Z",
     "endDate": "2023-11-28T15:40:55Z",
-    "totalPrice": 20071,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 5307,
     "status": "PENDING",
@@ -457,7 +457,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T10:06:33Z",
     "endDate": "2023-11-15T20:23:21Z",
-    "totalPrice": 11267,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6810,
     "status": "CONFIRMED",
@@ -470,7 +470,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:38:20Z",
     "endDate": "2023-11-20T14:12:19Z",
-    "totalPrice": 39606,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 2316,
     "status": "UNAVAILABLE",
@@ -483,7 +483,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T01:27:44Z",
     "endDate": "2023-12-06T10:14:36Z",
-    "totalPrice": 27151,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6940,
     "status": "UNAVAILABLE",
@@ -496,7 +496,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T07:24:18Z",
     "endDate": "2024-01-13T23:42:38Z",
-    "totalPrice": 38151,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 3386,
     "status": "UNAVAILABLE",
@@ -509,7 +509,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T05:00:38Z",
     "endDate": "2024-01-18T04:43:30Z",
-    "totalPrice": 33868,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 8056,
     "status": "PENDING",
@@ -522,7 +522,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:40:12Z",
     "endDate": "2023-12-16T11:18:28Z",
-    "totalPrice": 31640,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8323,
     "status": "UNAVAILABLE",
@@ -535,7 +535,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T22:29:20Z",
     "endDate": "2024-01-20T16:56:17Z",
-    "totalPrice": 35089,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 2125,
     "status": "PENDING",
@@ -548,7 +548,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T07:47:32Z",
     "endDate": "2024-01-26T03:02:49Z",
-    "totalPrice": 34290,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4248,
     "status": "UNAVAILABLE",
@@ -561,7 +561,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:07:04Z",
     "endDate": "2023-12-27T18:18:56Z",
-    "totalPrice": 28384,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4108,
     "status": "CONFIRMED",
@@ -574,7 +574,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T00:34:07Z",
     "endDate": "2024-01-23T21:07:35Z",
-    "totalPrice": 37872,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 2463,
     "status": "UNAVAILABLE",
@@ -587,7 +587,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T15:59:54Z",
     "endDate": "2023-11-21T11:14:03Z",
-    "totalPrice": 33703,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5620,
     "status": "PENDING",
@@ -600,7 +600,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T01:05:05Z",
     "endDate": "2023-12-02T03:34:32Z",
-    "totalPrice": 26088,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 5407,
     "status": "UNAVAILABLE",
@@ -613,7 +613,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T13:00:09Z",
     "endDate": "2023-11-17T19:02:07Z",
-    "totalPrice": 48298,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 3102,
     "status": "UNAVAILABLE",
@@ -626,7 +626,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T00:21:30Z",
     "endDate": "2023-12-20T10:07:42Z",
-    "totalPrice": 49952,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5424,
     "status": "CONFIRMED",
@@ -639,7 +639,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T00:45:29Z",
     "endDate": "2024-01-22T01:18:32Z",
-    "totalPrice": 40950,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6060,
     "status": "PENDING",
@@ -652,7 +652,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T22:58:29Z",
     "endDate": "2023-12-24T16:19:28Z",
-    "totalPrice": 36127,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6756,
     "status": "UNAVAILABLE",
@@ -665,7 +665,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T00:17:27Z",
     "endDate": "2023-11-22T23:42:14Z",
-    "totalPrice": 22095,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 7531,
     "status": "PENDING",
@@ -678,7 +678,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T00:21:23Z",
     "endDate": "2023-12-05T10:37:37Z",
-    "totalPrice": 47078,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5218,
     "status": "PENDING",
@@ -691,7 +691,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T05:20:19Z",
     "endDate": "2023-11-28T07:20:35Z",
-    "totalPrice": 43048,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7983,
     "status": "UNAVAILABLE",
@@ -704,7 +704,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:23:34Z",
     "endDate": "2024-01-12T05:17:28Z",
-    "totalPrice": 24766,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3407,
     "status": "PENDING",
@@ -717,7 +717,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T16:33:31Z",
     "endDate": "2023-12-02T11:25:02Z",
-    "totalPrice": 31868,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 5315,
     "status": "PENDING",
@@ -730,7 +730,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:01:42Z",
     "endDate": "2023-12-22T10:16:15Z",
-    "totalPrice": 46976,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 5191,
     "status": "UNAVAILABLE",
@@ -743,7 +743,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T23:03:16Z",
     "endDate": "2024-01-06T11:53:05Z",
-    "totalPrice": 10437,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4278,
     "status": "CONFIRMED",
@@ -756,7 +756,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T17:41:43Z",
     "endDate": "2024-02-01T13:21:05Z",
-    "totalPrice": 10679,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9735,
     "status": "CONFIRMED",
@@ -769,7 +769,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:59:51Z",
     "endDate": "2023-12-25T05:55:57Z",
-    "totalPrice": 31113,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 9571,
     "status": "PENDING",
@@ -782,7 +782,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T13:04:13Z",
     "endDate": "2023-11-25T09:21:30Z",
-    "totalPrice": 21964,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 8818,
     "status": "PENDING",
@@ -795,7 +795,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:38:11Z",
     "endDate": "2023-12-31T18:57:27Z",
-    "totalPrice": 36520,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5198,
     "status": "CONFIRMED",
@@ -808,7 +808,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T15:49:45Z",
     "endDate": "2023-12-09T01:10:33Z",
-    "totalPrice": 15914,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3086,
     "status": "PENDING",
@@ -821,7 +821,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T05:04:29Z",
     "endDate": "2023-12-10T10:01:27Z",
-    "totalPrice": 10472,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 2848,
     "status": "CONFIRMED",
@@ -834,7 +834,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T03:26:36Z",
     "endDate": "2024-01-23T00:53:34Z",
-    "totalPrice": 34452,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9968,
     "status": "UNAVAILABLE",
@@ -847,7 +847,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T05:17:22Z",
     "endDate": "2023-12-13T02:01:46Z",
-    "totalPrice": 10921,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 5232,
     "status": "PENDING",
@@ -860,7 +860,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T11:24:19Z",
     "endDate": "2024-01-03T21:04:43Z",
-    "totalPrice": 10026,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6043,
     "status": "PENDING",
@@ -873,7 +873,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T21:18:31Z",
     "endDate": "2023-11-14T22:24:53Z",
-    "totalPrice": 25341,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4746,
     "status": "UNAVAILABLE",
@@ -886,7 +886,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T23:33:04Z",
     "endDate": "2023-12-01T01:13:53Z",
-    "totalPrice": 40658,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 5259,
     "status": "CONFIRMED",
@@ -899,7 +899,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T02:36:28Z",
     "endDate": "2023-12-21T21:56:02Z",
-    "totalPrice": 35666,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9547,
     "status": "UNAVAILABLE",
@@ -912,7 +912,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T01:28:31Z",
     "endDate": "2023-11-17T22:02:31Z",
-    "totalPrice": 23812,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 8345,
     "status": "UNAVAILABLE",
@@ -925,7 +925,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T13:57:33Z",
     "endDate": "2024-01-14T23:10:11Z",
-    "totalPrice": 29778,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6553,
     "status": "PENDING",
@@ -938,7 +938,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T01:26:26Z",
     "endDate": "2023-11-17T08:29:55Z",
-    "totalPrice": 41615,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3418,
     "status": "PENDING",
@@ -951,7 +951,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T12:27:25Z",
     "endDate": "2023-12-06T12:55:09Z",
-    "totalPrice": 22684,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9986,
     "status": "CONFIRMED",
@@ -964,7 +964,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T17:05:39Z",
     "endDate": "2023-11-19T08:33:22Z",
-    "totalPrice": 11314,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6385,
     "status": "CONFIRMED",
@@ -977,7 +977,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T16:15:49Z",
     "endDate": "2023-12-16T06:09:02Z",
-    "totalPrice": 30126,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6875,
     "status": "CONFIRMED",
@@ -990,7 +990,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T02:09:58Z",
     "endDate": "2023-12-25T16:28:56Z",
-    "totalPrice": 30619,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 3548,
     "status": "PENDING",
@@ -1003,7 +1003,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T13:25:02Z",
     "endDate": "2023-11-14T08:39:12Z",
-    "totalPrice": 14126,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 3458,
     "status": "PENDING",
@@ -1016,7 +1016,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T16:06:03Z",
     "endDate": "2023-12-26T02:18:32Z",
-    "totalPrice": 30532,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7377,
     "status": "UNAVAILABLE",
@@ -1029,7 +1029,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T08:02:42Z",
     "endDate": "2023-11-20T21:10:54Z",
-    "totalPrice": 46393,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7146,
     "status": "CONFIRMED",
@@ -1042,7 +1042,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T18:42:29Z",
     "endDate": "2023-11-25T16:05:26Z",
-    "totalPrice": 29077,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5126,
     "status": "UNAVAILABLE",
@@ -1055,7 +1055,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T08:24:12Z",
     "endDate": "2023-12-14T23:38:42Z",
-    "totalPrice": 45137,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6387,
     "status": "PENDING",
@@ -1068,7 +1068,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:48:14Z",
     "endDate": "2023-11-17T03:37:31Z",
-    "totalPrice": 38777,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4703,
     "status": "PENDING",
@@ -1081,7 +1081,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T12:25:39Z",
     "endDate": "2023-11-27T03:25:34Z",
-    "totalPrice": 40108,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7584,
     "status": "UNAVAILABLE",
@@ -1094,7 +1094,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T20:20:08Z",
     "endDate": "2023-12-05T08:18:32Z",
-    "totalPrice": 39771,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6469,
     "status": "CONFIRMED",
@@ -1107,7 +1107,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T14:54:41Z",
     "endDate": "2024-01-08T09:24:00Z",
-    "totalPrice": 35137,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2666,
     "status": "PENDING",
@@ -1120,7 +1120,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T05:20:51Z",
     "endDate": "2024-01-04T19:00:41Z",
-    "totalPrice": 39405,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4725,
     "status": "UNAVAILABLE",
@@ -1133,7 +1133,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T12:07:38Z",
     "endDate": "2023-12-13T03:56:41Z",
-    "totalPrice": 17915,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 9577,
     "status": "CONFIRMED",
@@ -1146,7 +1146,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T11:02:11Z",
     "endDate": "2024-01-12T11:34:55Z",
-    "totalPrice": 44481,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 6911,
     "status": "CONFIRMED",
@@ -1159,7 +1159,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T13:04:14Z",
     "endDate": "2024-01-22T12:58:10Z",
-    "totalPrice": 29649,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8389,
     "status": "UNAVAILABLE",
@@ -1172,7 +1172,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T07:34:39Z",
     "endDate": "2023-11-24T15:35:48Z",
-    "totalPrice": 37786,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 6224,
     "status": "PENDING",
@@ -1185,7 +1185,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T22:56:44Z",
     "endDate": "2024-01-18T11:26:38Z",
-    "totalPrice": 21815,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 2977,
     "status": "CONFIRMED",
@@ -1198,7 +1198,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T05:00:51Z",
     "endDate": "2024-01-25T20:45:00Z",
-    "totalPrice": 13739,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6501,
     "status": "UNAVAILABLE",
@@ -1211,7 +1211,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T13:21:12Z",
     "endDate": "2023-12-20T21:13:58Z",
-    "totalPrice": 28562,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3501,
     "status": "PENDING",
@@ -1224,7 +1224,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T04:07:38Z",
     "endDate": "2023-12-01T12:28:56Z",
-    "totalPrice": 44925,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7997,
     "status": "UNAVAILABLE",
@@ -1237,7 +1237,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T09:38:16Z",
     "endDate": "2023-12-05T22:03:21Z",
-    "totalPrice": 20731,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6736,
     "status": "UNAVAILABLE",
@@ -1250,7 +1250,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T00:58:47Z",
     "endDate": "2023-11-22T01:31:31Z",
-    "totalPrice": 21379,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9561,
     "status": "UNAVAILABLE",
@@ -1263,7 +1263,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:09:40Z",
     "endDate": "2024-01-10T06:06:24Z",
-    "totalPrice": 37357,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2897,
     "status": "PENDING",
@@ -1276,7 +1276,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T18:34:23Z",
     "endDate": "2024-01-15T18:35:55Z",
-    "totalPrice": 27093,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 8889,
     "status": "UNAVAILABLE",
@@ -1289,7 +1289,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T22:35:47Z",
     "endDate": "2023-12-04T15:36:39Z",
-    "totalPrice": 48692,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 5469,
     "status": "UNAVAILABLE",
@@ -1302,7 +1302,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T00:26:15Z",
     "endDate": "2023-12-10T09:23:00Z",
-    "totalPrice": 19166,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 9838,
     "status": "CONFIRMED",
@@ -1315,7 +1315,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T13:27:31Z",
     "endDate": "2023-11-29T10:48:38Z",
-    "totalPrice": 29434,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6810,
     "status": "UNAVAILABLE",
@@ -1328,7 +1328,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:44:08Z",
     "endDate": "2023-12-03T12:30:44Z",
-    "totalPrice": 17197,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2990,
     "status": "UNAVAILABLE",
@@ -1341,7 +1341,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T20:10:06Z",
     "endDate": "2023-11-21T23:37:17Z",
-    "totalPrice": 13006,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 7134,
     "status": "PENDING",
@@ -1354,7 +1354,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T16:58:59Z",
     "endDate": "2023-12-13T07:02:33Z",
-    "totalPrice": 19284,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7544,
     "status": "CONFIRMED",
@@ -1367,7 +1367,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T02:21:24Z",
     "endDate": "2024-01-03T00:36:01Z",
-    "totalPrice": 14230,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2719,
     "status": "UNAVAILABLE",
@@ -1380,7 +1380,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T04:37:21Z",
     "endDate": "2023-12-12T22:01:33Z",
-    "totalPrice": 12308,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5744,
     "status": "PENDING",
@@ -1393,7 +1393,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T23:36:35Z",
     "endDate": "2024-01-12T15:38:39Z",
-    "totalPrice": 32054,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6638,
     "status": "UNAVAILABLE",
@@ -1406,7 +1406,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T05:11:10Z",
     "endDate": "2023-12-19T02:59:34Z",
-    "totalPrice": 38622,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 2862,
     "status": "UNAVAILABLE",
@@ -1419,7 +1419,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T03:35:11Z",
     "endDate": "2023-12-09T09:37:43Z",
-    "totalPrice": 19019,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 7740,
     "status": "CONFIRMED",
@@ -1432,7 +1432,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T12:03:00Z",
     "endDate": "2024-01-18T00:34:23Z",
-    "totalPrice": 14586,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 5239,
     "status": "CONFIRMED",
@@ -1445,7 +1445,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T02:20:40Z",
     "endDate": "2023-11-21T13:27:47Z",
-    "totalPrice": 46779,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 9840,
     "status": "CONFIRMED",
@@ -1458,7 +1458,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T20:16:50Z",
     "endDate": "2023-12-21T06:57:31Z",
-    "totalPrice": 17828,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3500,
     "status": "CONFIRMED",
@@ -1471,7 +1471,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:08:10Z",
     "endDate": "2023-12-11T21:13:00Z",
-    "totalPrice": 16823,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 6615,
     "status": "PENDING",
@@ -1484,7 +1484,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T17:49:58Z",
     "endDate": "2023-12-03T08:04:27Z",
-    "totalPrice": 39167,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3556,
     "status": "UNAVAILABLE",
@@ -1497,7 +1497,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T04:01:56Z",
     "endDate": "2024-01-13T03:42:13Z",
-    "totalPrice": 47072,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8737,
     "status": "UNAVAILABLE",
@@ -1510,7 +1510,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T15:34:31Z",
     "endDate": "2023-12-28T07:52:49Z",
-    "totalPrice": 14381,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4897,
     "status": "CONFIRMED",
@@ -1523,7 +1523,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T07:19:26Z",
     "endDate": "2023-11-13T09:17:41Z",
-    "totalPrice": 28244,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 8139,
     "status": "UNAVAILABLE",
@@ -1536,7 +1536,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:30:56Z",
     "endDate": "2023-12-31T05:36:17Z",
-    "totalPrice": 30395,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 2471,
     "status": "UNAVAILABLE",
@@ -1549,7 +1549,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T17:51:00Z",
     "endDate": "2023-12-30T02:05:11Z",
-    "totalPrice": 13881,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2775,
     "status": "UNAVAILABLE",
@@ -1562,7 +1562,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T15:07:08Z",
     "endDate": "2024-01-06T05:39:19Z",
-    "totalPrice": 40778,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6164,
     "status": "CONFIRMED",
@@ -1575,7 +1575,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T15:17:37Z",
     "endDate": "2023-11-17T15:54:26Z",
-    "totalPrice": 37960,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3445,
     "status": "UNAVAILABLE",
@@ -1588,7 +1588,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T23:32:13Z",
     "endDate": "2023-12-17T03:06:19Z",
-    "totalPrice": 32271,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8185,
     "status": "CONFIRMED",
@@ -1601,7 +1601,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T20:53:15Z",
     "endDate": "2023-11-24T19:55:39Z",
-    "totalPrice": 21611,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7870,
     "status": "UNAVAILABLE",
@@ -1614,7 +1614,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T07:26:43Z",
     "endDate": "2023-11-29T12:26:51Z",
-    "totalPrice": 25303,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9120,
     "status": "UNAVAILABLE",
@@ -1627,7 +1627,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T04:55:42Z",
     "endDate": "2023-12-13T20:36:27Z",
-    "totalPrice": 31453,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6558,
     "status": "CONFIRMED",
@@ -1640,7 +1640,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T07:20:40Z",
     "endDate": "2023-12-19T13:01:00Z",
-    "totalPrice": 35797,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4893,
     "status": "CONFIRMED",
@@ -1653,7 +1653,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T03:25:53Z",
     "endDate": "2024-01-31T07:34:58Z",
-    "totalPrice": 22099,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2683,
     "status": "UNAVAILABLE",
@@ -1666,7 +1666,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T14:55:10Z",
     "endDate": "2023-12-26T17:13:02Z",
-    "totalPrice": 28274,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5962,
     "status": "CONFIRMED",
@@ -1679,7 +1679,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T01:42:21Z",
     "endDate": "2023-12-30T02:34:22Z",
-    "totalPrice": 44443,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8508,
     "status": "CONFIRMED",
@@ -1692,7 +1692,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:38:29Z",
     "endDate": "2023-12-14T20:56:52Z",
-    "totalPrice": 35354,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8111,
     "status": "PENDING",
@@ -1705,7 +1705,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T21:54:27Z",
     "endDate": "2024-01-07T22:52:29Z",
-    "totalPrice": 45708,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8810,
     "status": "PENDING",
@@ -1718,7 +1718,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T04:12:05Z",
     "endDate": "2024-01-30T16:25:24Z",
-    "totalPrice": 41674,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5610,
     "status": "UNAVAILABLE",
@@ -1731,7 +1731,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T18:19:29Z",
     "endDate": "2023-11-29T14:44:39Z",
-    "totalPrice": 49065,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9873,
     "status": "UNAVAILABLE",
@@ -1744,7 +1744,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T23:12:57Z",
     "endDate": "2024-01-15T04:30:23Z",
-    "totalPrice": 18802,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3288,
     "status": "PENDING",
@@ -1757,7 +1757,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T20:35:32Z",
     "endDate": "2023-12-11T15:02:14Z",
-    "totalPrice": 33427,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 2079,
     "status": "CONFIRMED",
@@ -1770,7 +1770,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T09:18:14Z",
     "endDate": "2023-11-25T13:48:01Z",
-    "totalPrice": 29661,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3586,
     "status": "CONFIRMED",
@@ -1783,7 +1783,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T10:23:46Z",
     "endDate": "2023-12-10T01:02:37Z",
-    "totalPrice": 31256,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 2943,
     "status": "CONFIRMED",
@@ -1796,7 +1796,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T08:57:53Z",
     "endDate": "2023-11-13T22:04:18Z",
-    "totalPrice": 30220,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4211,
     "status": "CONFIRMED",
@@ -1809,7 +1809,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T02:32:32Z",
     "endDate": "2023-12-04T22:34:14Z",
-    "totalPrice": 42890,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5316,
     "status": "CONFIRMED",
@@ -1822,7 +1822,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T01:35:42Z",
     "endDate": "2023-12-21T15:15:23Z",
-    "totalPrice": 39845,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6680,
     "status": "PENDING",
@@ -1835,7 +1835,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T14:38:40Z",
     "endDate": "2024-01-22T13:49:29Z",
-    "totalPrice": 44423,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5342,
     "status": "PENDING",
@@ -1848,7 +1848,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T10:33:18Z",
     "endDate": "2023-12-09T16:57:39Z",
-    "totalPrice": 35580,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8664,
     "status": "UNAVAILABLE",
@@ -1861,7 +1861,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T03:27:33Z",
     "endDate": "2024-01-22T08:33:02Z",
-    "totalPrice": 14533,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 4394,
     "status": "CONFIRMED",
@@ -1874,7 +1874,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T15:31:18Z",
     "endDate": "2023-12-31T23:35:53Z",
-    "totalPrice": 17489,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2321,
     "status": "CONFIRMED",
@@ -1887,7 +1887,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T05:46:44Z",
     "endDate": "2024-01-22T23:45:33Z",
-    "totalPrice": 37156,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8718,
     "status": "UNAVAILABLE",
@@ -1900,7 +1900,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T20:55:55Z",
     "endDate": "2024-01-28T11:33:02Z",
-    "totalPrice": 46040,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6536,
     "status": "PENDING",
@@ -1913,7 +1913,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T17:55:07Z",
     "endDate": "2024-01-12T16:58:47Z",
-    "totalPrice": 10444,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 7494,
     "status": "CONFIRMED",
@@ -1926,7 +1926,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T15:22:52Z",
     "endDate": "2024-01-18T19:43:43Z",
-    "totalPrice": 49208,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3597,
     "status": "CONFIRMED",
@@ -1939,7 +1939,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:27:45Z",
     "endDate": "2024-01-08T10:05:11Z",
-    "totalPrice": 38679,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6731,
     "status": "UNAVAILABLE",
@@ -1952,7 +1952,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T05:31:16Z",
     "endDate": "2023-11-18T21:14:30Z",
-    "totalPrice": 23164,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 3725,
     "status": "CONFIRMED",
@@ -1965,7 +1965,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T22:07:48Z",
     "endDate": "2023-11-29T15:04:29Z",
-    "totalPrice": 34346,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3760,
     "status": "PENDING",
@@ -1978,7 +1978,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T13:35:51Z",
     "endDate": "2024-01-22T06:30:00Z",
-    "totalPrice": 21310,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7271,
     "status": "PENDING",
@@ -1991,7 +1991,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:28:02Z",
     "endDate": "2023-11-26T21:18:04Z",
-    "totalPrice": 35790,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9713,
     "status": "PENDING",
@@ -2004,7 +2004,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T18:31:19Z",
     "endDate": "2023-12-05T16:43:31Z",
-    "totalPrice": 17616,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3844,
     "status": "PENDING",
@@ -2017,7 +2017,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T03:29:24Z",
     "endDate": "2023-12-20T05:39:36Z",
-    "totalPrice": 32118,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 2372,
     "status": "PENDING",
@@ -2030,7 +2030,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:49:10Z",
     "endDate": "2024-01-09T02:07:01Z",
-    "totalPrice": 37247,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7503,
     "status": "UNAVAILABLE",
@@ -2043,7 +2043,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:26:59Z",
     "endDate": "2024-01-30T22:13:46Z",
-    "totalPrice": 29738,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 3008,
     "status": "CONFIRMED",
@@ -2056,7 +2056,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T18:58:54Z",
     "endDate": "2023-12-30T21:12:40Z",
-    "totalPrice": 41081,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 7374,
     "status": "PENDING",
@@ -2069,7 +2069,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T21:00:43Z",
     "endDate": "2023-12-16T05:27:44Z",
-    "totalPrice": 47433,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9833,
     "status": "CONFIRMED",
@@ -2082,7 +2082,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:11:50Z",
     "endDate": "2023-12-25T03:49:38Z",
-    "totalPrice": 24788,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4939,
     "status": "PENDING",
@@ -2095,7 +2095,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T02:07:05Z",
     "endDate": "2023-11-28T07:31:26Z",
-    "totalPrice": 49082,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6778,
     "status": "PENDING",
@@ -2108,7 +2108,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T17:25:06Z",
     "endDate": "2023-12-11T08:16:42Z",
-    "totalPrice": 24957,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4795,
     "status": "PENDING",
@@ -2121,7 +2121,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T02:38:17Z",
     "endDate": "2024-01-25T05:54:42Z",
-    "totalPrice": 23215,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6394,
     "status": "PENDING",
@@ -2134,7 +2134,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:19:27Z",
     "endDate": "2024-02-01T16:29:24Z",
-    "totalPrice": 13338,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 8245,
     "status": "PENDING",
@@ -2147,7 +2147,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:10:06Z",
     "endDate": "2023-12-14T16:56:10Z",
-    "totalPrice": 27559,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5688,
     "status": "PENDING",
@@ -2160,7 +2160,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:27:57Z",
     "endDate": "2024-01-13T06:33:24Z",
-    "totalPrice": 22523,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4047,
     "status": "PENDING",
@@ -2173,7 +2173,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T15:16:48Z",
     "endDate": "2023-12-18T20:16:16Z",
-    "totalPrice": 16435,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8529,
     "status": "CONFIRMED",
@@ -2186,7 +2186,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T00:51:38Z",
     "endDate": "2023-12-30T10:28:13Z",
-    "totalPrice": 43900,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4840,
     "status": "CONFIRMED",
@@ -2199,7 +2199,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T12:56:13Z",
     "endDate": "2023-11-28T23:21:18Z",
-    "totalPrice": 24268,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3701,
     "status": "UNAVAILABLE",
@@ -2212,7 +2212,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T03:12:15Z",
     "endDate": "2024-01-29T07:07:46Z",
-    "totalPrice": 21290,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 4546,
     "status": "CONFIRMED",
@@ -2225,7 +2225,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T22:13:32Z",
     "endDate": "2023-11-13T01:38:03Z",
-    "totalPrice": 21794,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9871,
     "status": "UNAVAILABLE",
@@ -2238,7 +2238,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T20:41:43Z",
     "endDate": "2024-01-04T11:26:32Z",
-    "totalPrice": 42680,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6068,
     "status": "UNAVAILABLE",
@@ -2251,7 +2251,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T01:09:06Z",
     "endDate": "2023-12-21T17:15:09Z",
-    "totalPrice": 43486,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 9623,
     "status": "UNAVAILABLE",
@@ -2264,7 +2264,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T20:05:32Z",
     "endDate": "2024-01-21T11:30:04Z",
-    "totalPrice": 28056,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5032,
     "status": "CONFIRMED",
@@ -2277,7 +2277,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T07:07:00Z",
     "endDate": "2023-12-20T13:45:02Z",
-    "totalPrice": 33144,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4827,
     "status": "CONFIRMED",
@@ -2290,7 +2290,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T14:53:39Z",
     "endDate": "2023-11-18T06:44:00Z",
-    "totalPrice": 22726,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2349,
     "status": "UNAVAILABLE",
@@ -2303,7 +2303,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T04:47:13Z",
     "endDate": "2024-01-24T06:14:22Z",
-    "totalPrice": 43426,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9065,
     "status": "UNAVAILABLE",
@@ -2316,7 +2316,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T03:05:31Z",
     "endDate": "2023-11-28T09:36:28Z",
-    "totalPrice": 42282,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6216,
     "status": "PENDING",
@@ -2329,7 +2329,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T00:53:11Z",
     "endDate": "2023-12-14T04:45:54Z",
-    "totalPrice": 20246,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4237,
     "status": "CONFIRMED",
@@ -2342,7 +2342,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T02:12:54Z",
     "endDate": "2024-01-07T10:07:10Z",
-    "totalPrice": 21018,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 9392,
     "status": "CONFIRMED",
@@ -2355,7 +2355,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T08:39:10Z",
     "endDate": "2024-01-24T11:46:39Z",
-    "totalPrice": 25026,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4787,
     "status": "CONFIRMED",
@@ -2368,7 +2368,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T16:15:14Z",
     "endDate": "2024-01-02T22:00:03Z",
-    "totalPrice": 29439,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5440,
     "status": "UNAVAILABLE",
@@ -2381,7 +2381,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T15:17:14Z",
     "endDate": "2024-01-06T10:44:46Z",
-    "totalPrice": 35735,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3227,
     "status": "PENDING",
@@ -2394,7 +2394,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T21:36:09Z",
     "endDate": "2023-12-30T20:24:27Z",
-    "totalPrice": 45011,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7312,
     "status": "PENDING",
@@ -2407,7 +2407,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T16:41:54Z",
     "endDate": "2023-12-15T07:57:26Z",
-    "totalPrice": 11820,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 5035,
     "status": "PENDING",
@@ -2420,7 +2420,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:57:48Z",
     "endDate": "2023-12-14T15:12:01Z",
-    "totalPrice": 23808,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6266,
     "status": "UNAVAILABLE",
@@ -2433,7 +2433,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T21:53:59Z",
     "endDate": "2024-01-19T22:33:52Z",
-    "totalPrice": 31966,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8437,
     "status": "CONFIRMED",
@@ -2446,7 +2446,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T10:26:56Z",
     "endDate": "2024-01-09T14:49:29Z",
-    "totalPrice": 25562,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3674,
     "status": "PENDING",
@@ -2459,7 +2459,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T07:07:09Z",
     "endDate": "2023-11-13T10:50:00Z",
-    "totalPrice": 33765,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8132,
     "status": "CONFIRMED",
@@ -2472,7 +2472,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:04:27Z",
     "endDate": "2023-12-05T02:10:47Z",
-    "totalPrice": 27134,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2871,
     "status": "PENDING",
@@ -2485,7 +2485,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T02:31:06Z",
     "endDate": "2024-01-04T22:17:04Z",
-    "totalPrice": 44898,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7522,
     "status": "CONFIRMED",
@@ -2498,7 +2498,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T07:54:55Z",
     "endDate": "2023-11-13T20:24:54Z",
-    "totalPrice": 18148,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 9365,
     "status": "PENDING",
@@ -2511,7 +2511,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T02:24:13Z",
     "endDate": "2024-01-21T20:37:29Z",
-    "totalPrice": 11801,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4683,
     "status": "UNAVAILABLE",
@@ -2524,7 +2524,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T02:55:50Z",
     "endDate": "2024-01-23T21:56:02Z",
-    "totalPrice": 46797,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8701,
     "status": "UNAVAILABLE",
@@ -2537,7 +2537,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:11:18Z",
     "endDate": "2024-01-21T04:01:04Z",
-    "totalPrice": 41288,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6441,
     "status": "CONFIRMED",
@@ -2550,7 +2550,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T00:15:06Z",
     "endDate": "2023-12-19T11:41:36Z",
-    "totalPrice": 48435,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7231,
     "status": "PENDING",
@@ -2563,7 +2563,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T21:58:20Z",
     "endDate": "2023-12-16T02:37:55Z",
-    "totalPrice": 48103,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2165,
     "status": "UNAVAILABLE",
@@ -2576,7 +2576,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T21:40:36Z",
     "endDate": "2024-01-28T04:31:19Z",
-    "totalPrice": 14374,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6361,
     "status": "CONFIRMED",
@@ -2589,7 +2589,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T19:53:49Z",
     "endDate": "2024-01-14T03:57:30Z",
-    "totalPrice": 12937,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 4788,
     "status": "PENDING",
@@ -2602,7 +2602,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T00:26:06Z",
     "endDate": "2023-12-05T13:37:22Z",
-    "totalPrice": 20190,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8359,
     "status": "CONFIRMED",
@@ -2615,7 +2615,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:59:36Z",
     "endDate": "2024-01-28T09:00:19Z",
-    "totalPrice": 26964,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4410,
     "status": "UNAVAILABLE",
@@ -2628,7 +2628,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T04:24:12Z",
     "endDate": "2023-12-07T13:45:47Z",
-    "totalPrice": 21331,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2441,
     "status": "PENDING",
@@ -2641,7 +2641,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T08:36:07Z",
     "endDate": "2023-11-18T17:43:22Z",
-    "totalPrice": 33178,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5771,
     "status": "CONFIRMED",
@@ -2654,7 +2654,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T03:51:59Z",
     "endDate": "2023-11-22T04:40:29Z",
-    "totalPrice": 16223,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4136,
     "status": "PENDING",
@@ -2667,7 +2667,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T14:08:00Z",
     "endDate": "2024-01-08T09:46:47Z",
-    "totalPrice": 14031,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6664,
     "status": "PENDING",
@@ -2680,7 +2680,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T18:10:14Z",
     "endDate": "2023-12-11T02:46:00Z",
-    "totalPrice": 43708,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8976,
     "status": "UNAVAILABLE",
@@ -2693,7 +2693,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:36:03Z",
     "endDate": "2024-01-19T01:53:45Z",
-    "totalPrice": 28326,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7589,
     "status": "UNAVAILABLE",
@@ -2706,7 +2706,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:19:02Z",
     "endDate": "2023-12-22T12:28:55Z",
-    "totalPrice": 36393,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6313,
     "status": "CONFIRMED",
@@ -2719,7 +2719,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T03:13:24Z",
     "endDate": "2024-01-28T01:00:46Z",
-    "totalPrice": 31771,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3763,
     "status": "CONFIRMED",
@@ -2732,7 +2732,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T02:33:01Z",
     "endDate": "2024-01-08T02:02:11Z",
-    "totalPrice": 47757,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 4359,
     "status": "UNAVAILABLE",
@@ -2745,7 +2745,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T01:22:35Z",
     "endDate": "2023-11-24T18:57:43Z",
-    "totalPrice": 34347,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8906,
     "status": "CONFIRMED",
@@ -2758,7 +2758,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T13:41:50Z",
     "endDate": "2023-12-25T02:38:08Z",
-    "totalPrice": 12775,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 4997,
     "status": "CONFIRMED",
@@ -2771,7 +2771,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T00:25:58Z",
     "endDate": "2023-12-11T04:40:56Z",
-    "totalPrice": 31982,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9653,
     "status": "UNAVAILABLE",
@@ -2781,686 +2781,11 @@ export const bookingData = [
     "createdAt": "2024-04-07T08:51:32Z",
     "updatedAt": "2024-11-11T05:11:26Z"
   },
-  {
-    "startDate": "2023-09-18T02:08:32Z",
-    "endDate": "2023-12-02T08:28:08Z",
-    "totalPrice": 40376,
-    "guests": 7,
-    "partpaymentPrice": 3875,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-10T08:29:48Z",
-    "updatedAt": "2023-06-02T13:31:45Z"
-  },
-  {
-    "startDate": "2023-09-18T12:31:12Z",
-    "endDate": "2023-12-22T06:18:00Z",
-    "totalPrice": 12273,
-    "guests": 2,
-    "partpaymentPrice": 9421,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-05-05T05:17:56Z",
-    "updatedAt": "2023-09-13T17:35:28Z"
-  },
-  {
-    "startDate": "2023-09-27T17:18:08Z",
-    "endDate": "2023-11-29T20:39:48Z",
-    "totalPrice": 46822,
-    "guests": 5,
-    "partpaymentPrice": 6555,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-03-24T09:27:57Z",
-    "updatedAt": "2023-10-22T17:14:55Z"
-  },
-  {
-    "startDate": "2023-09-13T19:24:15Z",
-    "endDate": "2023-12-07T11:50:39Z",
-    "totalPrice": 47446,
-    "guests": 8,
-    "partpaymentPrice": 7233,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-21T01:27:03Z",
-    "updatedAt": "2024-01-29T19:07:12Z"
-  },
-  {
-    "startDate": "2023-09-16T05:00:16Z",
-    "endDate": "2024-01-10T14:11:36Z",
-    "totalPrice": 27412,
-    "guests": 7,
-    "partpaymentPrice": 6834,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-02-22T08:33:33Z",
-    "updatedAt": "2023-11-07T09:32:28Z"
-  },
-  {
-    "startDate": "2023-09-21T15:43:15Z",
-    "endDate": "2024-01-20T23:09:25Z",
-    "totalPrice": 28545,
-    "guests": 7,
-    "partpaymentPrice": 6492,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-05-25T13:04:20Z",
-    "updatedAt": "2024-06-20T22:45:18Z"
-  },
-  {
-    "startDate": "2023-09-15T00:05:30Z",
-    "endDate": "2024-01-14T18:08:48Z",
-    "totalPrice": 39209,
-    "guests": 7,
-    "partpaymentPrice": 8396,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-29T02:34:35Z",
-    "updatedAt": "2024-07-26T10:00:04Z"
-  },
-  {
-    "startDate": "2023-09-18T07:43:59Z",
-    "endDate": "2024-01-17T18:07:17Z",
-    "totalPrice": 32707,
-    "guests": 5,
-    "partpaymentPrice": 8523,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-01T15:32:12Z",
-    "updatedAt": "2023-12-03T12:44:06Z"
-  },
-  {
-    "startDate": "2023-09-23T00:53:58Z",
-    "endDate": "2024-01-12T13:28:52Z",
-    "totalPrice": 33426,
-    "guests": 2,
-    "partpaymentPrice": 2201,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-02-21T04:59:35Z",
-    "updatedAt": "2024-11-05T01:30:58Z"
-  },
-  {
-    "startDate": "2023-09-22T17:05:31Z",
-    "endDate": "2024-01-21T22:08:30Z",
-    "totalPrice": 49679,
-    "guests": 4,
-    "partpaymentPrice": 9645,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-15T07:53:10Z",
-    "updatedAt": "2024-02-15T01:57:45Z"
-  },
-  {
-    "startDate": "2023-09-19T19:29:34Z",
-    "endDate": "2024-01-01T07:31:18Z",
-    "totalPrice": 39423,
-    "guests": 3,
-    "partpaymentPrice": 7380,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-02-11T03:59:23Z",
-    "updatedAt": "2024-07-04T07:19:42Z"
-  },
-  {
-    "startDate": "2023-09-18T07:25:33Z",
-    "endDate": "2024-01-09T03:55:18Z",
-    "totalPrice": 13934,
-    "guests": 3,
-    "partpaymentPrice": 5953,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-03-01T01:13:38Z",
-    "updatedAt": "2023-12-18T02:47:15Z"
-  },
-  {
-    "startDate": "2023-09-14T03:31:24Z",
-    "endDate": "2024-01-24T17:07:08Z",
-    "totalPrice": 18409,
-    "guests": 4,
-    "partpaymentPrice": 9897,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-11-06T05:25:26Z",
-    "updatedAt": "2024-06-12T15:37:21Z"
-  },
-  {
-    "startDate": "2023-09-24T01:02:57Z",
-    "endDate": "2024-01-05T15:08:02Z",
-    "totalPrice": 27034,
-    "guests": 6,
-    "partpaymentPrice": 3991,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-11T17:50:17Z",
-    "updatedAt": "2023-06-04T01:47:28Z"
-  },
-  {
-    "startDate": "2023-09-27T20:10:12Z",
-    "endDate": "2023-11-20T09:43:45Z",
-    "totalPrice": 40599,
-    "guests": 5,
-    "partpaymentPrice": 2603,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-04-10T03:30:54Z",
-    "updatedAt": "2024-09-24T06:12:51Z"
-  },
-  {
-    "startDate": "2023-09-16T02:39:45Z",
-    "endDate": "2024-01-10T01:18:50Z",
-    "totalPrice": 24934,
-    "guests": 5,
-    "partpaymentPrice": 2026,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-04-25T09:07:54Z",
-    "updatedAt": "2024-02-19T03:07:44Z"
-  },
-  {
-    "startDate": "2023-09-24T06:20:47Z",
-    "endDate": "2023-12-13T23:22:54Z",
-    "totalPrice": 14284,
-    "guests": 4,
-    "partpaymentPrice": 7548,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-30T05:33:20Z",
-    "updatedAt": "2023-10-27T08:57:49Z"
-  },
-  {
-    "startDate": "2023-09-24T18:30:18Z",
-    "endDate": "2024-01-12T19:09:38Z",
-    "totalPrice": 44600,
-    "guests": 7,
-    "partpaymentPrice": 2010,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-08-09T09:41:04Z",
-    "updatedAt": "2023-10-29T11:59:50Z"
-  },
-  {
-    "startDate": "2023-09-25T15:12:16Z",
-    "endDate": "2024-01-03T16:54:11Z",
-    "totalPrice": 10591,
-    "guests": 2,
-    "partpaymentPrice": 8573,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-31T11:02:50Z",
-    "updatedAt": "2023-06-12T20:55:54Z"
-  },
-  {
-    "startDate": "2023-09-21T06:03:33Z",
-    "endDate": "2023-12-03T12:52:24Z",
-    "totalPrice": 11438,
-    "guests": 5,
-    "partpaymentPrice": 4358,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-07-25T02:26:33Z",
-    "updatedAt": "2024-07-22T08:54:23Z"
-  },
-  {
-    "startDate": "2023-09-26T07:30:22Z",
-    "endDate": "2023-12-11T11:53:52Z",
-    "totalPrice": 25790,
-    "guests": 8,
-    "partpaymentPrice": 2734,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-28T01:19:23Z",
-    "updatedAt": "2024-10-23T14:43:20Z"
-  },
-  {
-    "startDate": "2023-09-15T07:30:33Z",
-    "endDate": "2023-12-18T00:50:02Z",
-    "totalPrice": 38847,
-    "guests": 4,
-    "partpaymentPrice": 6989,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-10-12T08:49:31Z",
-    "updatedAt": "2024-02-20T05:34:32Z"
-  },
-  {
-    "startDate": "2023-09-15T09:44:19Z",
-    "endDate": "2023-12-15T04:13:45Z",
-    "totalPrice": 20406,
-    "guests": 4,
-    "partpaymentPrice": 7371,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-14T19:49:27Z",
-    "updatedAt": "2024-05-04T23:12:26Z"
-  },
-  {
-    "startDate": "2023-09-17T11:43:43Z",
-    "endDate": "2023-11-22T02:59:15Z",
-    "totalPrice": 40655,
-    "guests": 7,
-    "partpaymentPrice": 4053,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-12-24T21:54:57Z",
-    "updatedAt": "2024-06-03T04:41:05Z"
-  },
-  {
-    "startDate": "2023-09-21T09:11:40Z",
-    "endDate": "2023-11-16T23:09:03Z",
-    "totalPrice": 24683,
-    "guests": 5,
-    "partpaymentPrice": 2860,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-25T13:56:40Z",
-    "updatedAt": "2024-07-02T10:40:03Z"
-  },
-  {
-    "startDate": "2023-09-18T12:58:39Z",
-    "endDate": "2024-01-29T07:57:12Z",
-    "totalPrice": 24468,
-    "guests": 6,
-    "partpaymentPrice": 3660,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-23T14:24:44Z",
-    "updatedAt": "2024-04-29T18:01:05Z"
-  },
-  {
-    "startDate": "2023-09-19T11:35:48Z",
-    "endDate": "2023-12-16T14:07:55Z",
-    "totalPrice": 16526,
-    "guests": 5,
-    "partpaymentPrice": 3559,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-27T21:51:11Z",
-    "updatedAt": "2024-06-17T19:47:34Z"
-  },
-  {
-    "startDate": "2023-09-23T11:15:57Z",
-    "endDate": "2023-11-13T22:59:10Z",
-    "totalPrice": 46999,
-    "guests": 7,
-    "partpaymentPrice": 8148,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-03T13:31:46Z",
-    "updatedAt": "2024-09-16T11:50:57Z"
-  },
-  {
-    "startDate": "2023-09-22T12:17:59Z",
-    "endDate": "2024-01-26T04:04:24Z",
-    "totalPrice": 14029,
-    "guests": 5,
-    "partpaymentPrice": 8684,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-04-28T00:42:27Z",
-    "updatedAt": "2023-12-11T01:47:55Z"
-  },
-  {
-    "startDate": "2023-09-14T11:21:00Z",
-    "endDate": "2023-11-29T19:01:47Z",
-    "totalPrice": 22480,
-    "guests": 8,
-    "partpaymentPrice": 9261,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-16T10:42:17Z",
-    "updatedAt": "2023-06-16T11:40:28Z"
-  },
-  {
-    "startDate": "2023-09-22T10:13:45Z",
-    "endDate": "2023-11-16T15:13:57Z",
-    "totalPrice": 28435,
-    "guests": 6,
-    "partpaymentPrice": 2807,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-05T06:47:15Z",
-    "updatedAt": "2024-10-03T08:10:00Z"
-  },
-  {
-    "startDate": "2023-09-23T14:30:48Z",
-    "endDate": "2023-11-27T07:14:38Z",
-    "totalPrice": 37677,
-    "guests": 4,
-    "partpaymentPrice": 9594,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-04-10T22:50:52Z",
-    "updatedAt": "2023-10-19T14:37:12Z"
-  },
-  {
-    "startDate": "2023-09-24T17:43:48Z",
-    "endDate": "2023-11-13T10:13:04Z",
-    "totalPrice": 26778,
-    "guests": 5,
-    "partpaymentPrice": 3964,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-24T23:25:57Z",
-    "updatedAt": "2023-09-03T07:24:37Z"
-  },
-  {
-    "startDate": "2023-09-19T01:19:09Z",
-    "endDate": "2024-01-30T15:56:28Z",
-    "totalPrice": 11975,
-    "guests": 7,
-    "partpaymentPrice": 6033,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-05-14T15:43:46Z",
-    "updatedAt": "2023-06-12T21:23:25Z"
-  },
-  {
-    "startDate": "2023-09-27T12:46:54Z",
-    "endDate": "2023-12-18T15:42:03Z",
-    "totalPrice": 30264,
-    "guests": 3,
-    "partpaymentPrice": 2483,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-02T06:59:00Z",
-    "updatedAt": "2023-04-18T01:01:13Z"
-  },
-  {
-    "startDate": "2023-09-15T19:04:41Z",
-    "endDate": "2023-12-31T00:51:29Z",
-    "totalPrice": 34860,
-    "guests": 5,
-    "partpaymentPrice": 9635,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-02-20T14:38:11Z",
-    "updatedAt": "2023-05-24T18:19:27Z"
-  },
-  {
-    "startDate": "2023-09-16T04:18:33Z",
-    "endDate": "2024-01-11T14:16:54Z",
-    "totalPrice": 45495,
-    "guests": 6,
-    "partpaymentPrice": 2897,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-02-20T07:45:04Z",
-    "updatedAt": "2024-08-31T22:12:03Z"
-  },
-  {
-    "startDate": "2023-09-24T18:42:09Z",
-    "endDate": "2024-01-03T08:25:34Z",
-    "totalPrice": 15979,
-    "guests": 2,
-    "partpaymentPrice": 9306,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-04-20T07:18:01Z",
-    "updatedAt": "2024-12-13T22:06:08Z"
-  },
-  {
-    "startDate": "2023-09-19T14:50:32Z",
-    "endDate": "2023-11-16T04:40:16Z",
-    "totalPrice": 49874,
-    "guests": 7,
-    "partpaymentPrice": 6934,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-01-12T02:20:24Z",
-    "updatedAt": "2023-07-01T19:01:51Z"
-  },
-  {
-    "startDate": "2023-09-16T11:44:24Z",
-    "endDate": "2023-11-26T14:11:28Z",
-    "totalPrice": 34889,
-    "guests": 7,
-    "partpaymentPrice": 2079,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-05-30T06:36:08Z",
-    "updatedAt": "2024-04-15T02:24:33Z"
-  },
-  {
-    "startDate": "2023-09-19T10:00:58Z",
-    "endDate": "2023-11-16T19:58:42Z",
-    "totalPrice": 27158,
-    "guests": 4,
-    "partpaymentPrice": 7075,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-02-02T19:08:23Z",
-    "updatedAt": "2024-04-30T21:23:18Z"
-  },
-  {
-    "startDate": "2023-09-24T07:58:43Z",
-    "endDate": "2023-12-02T13:04:41Z",
-    "totalPrice": 22500,
-    "guests": 6,
-    "partpaymentPrice": 6840,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-28T17:52:13Z",
-    "updatedAt": "2024-04-23T15:52:46Z"
-  },
-  {
-    "startDate": "2023-09-12T14:34:52Z",
-    "endDate": "2024-01-21T12:08:17Z",
-    "totalPrice": 30205,
-    "guests": 8,
-    "partpaymentPrice": 7304,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-10-30T03:58:12Z",
-    "updatedAt": "2023-07-20T05:51:19Z"
-  },
-  {
-    "startDate": "2023-09-26T13:53:26Z",
-    "endDate": "2023-11-27T02:15:03Z",
-    "totalPrice": 39253,
-    "guests": 7,
-    "partpaymentPrice": 5943,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-04-10T01:06:51Z",
-    "updatedAt": "2024-05-03T18:25:55Z"
-  },
-  {
-    "startDate": "2023-09-24T01:20:13Z",
-    "endDate": "2024-01-27T04:55:37Z",
-    "totalPrice": 47772,
-    "guests": 5,
-    "partpaymentPrice": 6664,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-22T15:28:53Z",
-    "updatedAt": "2023-11-14T17:13:11Z"
-  },
-  {
-    "startDate": "2023-09-23T10:08:57Z",
-    "endDate": "2023-12-27T23:59:27Z",
-    "totalPrice": 21429,
-    "guests": 8,
-    "partpaymentPrice": 6221,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-29T13:53:39Z",
-    "updatedAt": "2023-09-14T20:24:35Z"
-  },
-  {
-    "startDate": "2023-09-13T08:03:28Z",
-    "endDate": "2023-12-12T17:21:57Z",
-    "totalPrice": 35634,
-    "guests": 7,
-    "partpaymentPrice": 2768,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-31T22:39:42Z",
-    "updatedAt": "2023-10-22T08:32:47Z"
-  },
-  {
-    "startDate": "2023-09-25T11:10:22Z",
-    "endDate": "2024-01-05T19:26:24Z",
-    "totalPrice": 48302,
-    "guests": 8,
-    "partpaymentPrice": 7326,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-23T03:08:36Z",
-    "updatedAt": "2024-06-21T01:06:23Z"
-  },
-  {
-    "startDate": "2023-09-12T19:13:48Z",
-    "endDate": "2023-12-24T07:25:15Z",
-    "totalPrice": 41579,
-    "guests": 2,
-    "partpaymentPrice": 6140,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-11-27T17:10:59Z",
-    "updatedAt": "2024-07-11T05:27:44Z"
-  },
-  {
-    "startDate": "2023-09-21T12:26:50Z",
-    "endDate": "2024-01-20T15:05:56Z",
-    "totalPrice": 19224,
-    "guests": 7,
-    "partpaymentPrice": 4866,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-01T20:58:38Z",
-    "updatedAt": "2024-04-28T16:09:53Z"
-  },
-  {
-    "startDate": "2023-09-24T06:45:21Z",
-    "endDate": "2023-11-21T14:52:35Z",
-    "totalPrice": 35174,
-    "guests": 4,
-    "partpaymentPrice": 2552,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-29T20:40:36Z",
-    "updatedAt": "2023-08-08T18:20:37Z"
-  },
-  {
-    "startDate": "2023-09-20T21:02:14Z",
-    "endDate": "2023-11-13T18:51:03Z",
-    "totalPrice": 38559,
-    "guests": 6,
-    "partpaymentPrice": 7868,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-04T17:05:17Z",
-    "updatedAt": "2023-12-12T05:09:06Z"
-  },
+
   {
     "startDate": "2023-09-21T20:51:11Z",
     "endDate": "2023-12-09T00:50:19Z",
-    "totalPrice": 40141,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4152,
     "status": "UNAVAILABLE",
@@ -3473,7 +2798,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T00:19:47Z",
     "endDate": "2023-12-11T14:20:29Z",
-    "totalPrice": 23457,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3495,
     "status": "PENDING",
@@ -3486,7 +2811,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T08:57:17Z",
     "endDate": "2023-12-28T21:42:08Z",
-    "totalPrice": 38921,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7702,
     "status": "UNAVAILABLE",
@@ -3499,7 +2824,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T02:56:02Z",
     "endDate": "2023-12-29T01:37:04Z",
-    "totalPrice": 25411,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 9577,
     "status": "UNAVAILABLE",
@@ -3512,7 +2837,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:19:13Z",
     "endDate": "2024-01-19T21:44:27Z",
-    "totalPrice": 28992,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 6305,
     "status": "CONFIRMED",
@@ -3525,7 +2850,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T12:23:06Z",
     "endDate": "2024-01-17T10:07:03Z",
-    "totalPrice": 22816,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4086,
     "status": "PENDING",
@@ -3538,7 +2863,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T06:37:09Z",
     "endDate": "2023-11-23T05:40:04Z",
-    "totalPrice": 30006,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9558,
     "status": "PENDING",
@@ -3551,7 +2876,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T08:41:30Z",
     "endDate": "2024-01-29T05:16:15Z",
-    "totalPrice": 13414,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8355,
     "status": "CONFIRMED",
@@ -3564,7 +2889,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T02:11:26Z",
     "endDate": "2023-12-20T10:43:08Z",
-    "totalPrice": 24061,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4156,
     "status": "PENDING",
@@ -3577,7 +2902,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T01:41:41Z",
     "endDate": "2023-11-27T16:59:51Z",
-    "totalPrice": 31074,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 8505,
     "status": "PENDING",
@@ -3590,7 +2915,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T08:11:25Z",
     "endDate": "2023-12-10T17:50:29Z",
-    "totalPrice": 19225,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 9881,
     "status": "UNAVAILABLE",
@@ -3603,7 +2928,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T04:13:49Z",
     "endDate": "2023-11-30T21:01:03Z",
-    "totalPrice": 29951,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 3567,
     "status": "CONFIRMED",
@@ -3616,7 +2941,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T00:07:44Z",
     "endDate": "2023-12-19T08:36:15Z",
-    "totalPrice": 23430,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8269,
     "status": "CONFIRMED",
@@ -3629,7 +2954,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T03:19:56Z",
     "endDate": "2023-12-12T22:08:51Z",
-    "totalPrice": 13471,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7600,
     "status": "CONFIRMED",
@@ -3642,7 +2967,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T09:45:32Z",
     "endDate": "2024-01-10T12:26:13Z",
-    "totalPrice": 44930,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 7411,
     "status": "CONFIRMED",
@@ -3655,7 +2980,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T14:46:55Z",
     "endDate": "2024-01-04T22:23:27Z",
-    "totalPrice": 16679,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 8273,
     "status": "CONFIRMED",
@@ -3668,7 +2993,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:15:32Z",
     "endDate": "2024-01-22T22:45:07Z",
-    "totalPrice": 47918,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5067,
     "status": "PENDING",
@@ -3681,7 +3006,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T19:16:43Z",
     "endDate": "2023-12-31T03:31:34Z",
-    "totalPrice": 45251,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8312,
     "status": "UNAVAILABLE",
@@ -3694,7 +3019,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:26:06Z",
     "endDate": "2023-12-21T17:48:53Z",
-    "totalPrice": 31603,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8490,
     "status": "PENDING",
@@ -3707,7 +3032,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T00:22:21Z",
     "endDate": "2024-01-04T23:46:14Z",
-    "totalPrice": 22241,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7122,
     "status": "CONFIRMED",
@@ -3720,7 +3045,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T09:56:30Z",
     "endDate": "2023-12-31T10:46:55Z",
-    "totalPrice": 40895,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 4912,
     "status": "CONFIRMED",
@@ -3733,7 +3058,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T15:40:34Z",
     "endDate": "2023-12-06T01:42:43Z",
-    "totalPrice": 32141,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 7189,
     "status": "UNAVAILABLE",
@@ -3746,7 +3071,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T13:00:54Z",
     "endDate": "2024-01-24T02:47:37Z",
-    "totalPrice": 13147,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 5885,
     "status": "CONFIRMED",
@@ -3759,7 +3084,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T14:46:18Z",
     "endDate": "2023-12-12T23:00:58Z",
-    "totalPrice": 25533,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9159,
     "status": "CONFIRMED",
@@ -3772,7 +3097,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T01:05:03Z",
     "endDate": "2023-11-21T15:09:37Z",
-    "totalPrice": 38417,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 5408,
     "status": "CONFIRMED",
@@ -3785,7 +3110,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T17:09:20Z",
     "endDate": "2023-12-18T08:37:22Z",
-    "totalPrice": 11493,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 2242,
     "status": "CONFIRMED",
@@ -3798,7 +3123,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T12:58:52Z",
     "endDate": "2023-11-27T12:14:42Z",
-    "totalPrice": 15954,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 7766,
     "status": "UNAVAILABLE",
@@ -3811,7 +3136,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T19:49:29Z",
     "endDate": "2023-12-11T15:03:05Z",
-    "totalPrice": 13638,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7406,
     "status": "PENDING",
@@ -3824,7 +3149,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T06:31:07Z",
     "endDate": "2024-01-27T04:17:36Z",
-    "totalPrice": 48996,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 2396,
     "status": "PENDING",
@@ -3837,7 +3162,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T06:53:27Z",
     "endDate": "2024-01-06T19:03:04Z",
-    "totalPrice": 10621,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 4573,
     "status": "CONFIRMED",
@@ -3850,7 +3175,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T11:49:44Z",
     "endDate": "2023-12-13T11:17:02Z",
-    "totalPrice": 36903,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 2115,
     "status": "PENDING",
@@ -3863,7 +3188,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T15:27:05Z",
     "endDate": "2024-01-03T09:29:40Z",
-    "totalPrice": 14344,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 7940,
     "status": "PENDING",
@@ -3876,7 +3201,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T10:40:27Z",
     "endDate": "2024-01-15T07:34:04Z",
-    "totalPrice": 37264,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 3978,
     "status": "PENDING",
@@ -3889,7 +3214,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T18:57:51Z",
     "endDate": "2023-12-19T22:52:49Z",
-    "totalPrice": 38233,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 8959,
     "status": "UNAVAILABLE",
@@ -3902,7 +3227,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T02:10:51Z",
     "endDate": "2023-12-17T11:16:09Z",
-    "totalPrice": 32657,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5610,
     "status": "PENDING",
@@ -3915,7 +3240,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T20:32:30Z",
     "endDate": "2024-01-17T12:31:29Z",
-    "totalPrice": 32648,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9993,
     "status": "UNAVAILABLE",
@@ -3928,7 +3253,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T14:09:56Z",
     "endDate": "2023-12-09T21:07:54Z",
-    "totalPrice": 16332,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8382,
     "status": "CONFIRMED",
@@ -3941,7 +3266,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T11:11:24Z",
     "endDate": "2024-01-17T11:06:29Z",
-    "totalPrice": 35683,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 8473,
     "status": "PENDING",
@@ -3954,7 +3279,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T15:31:44Z",
     "endDate": "2024-01-11T21:15:20Z",
-    "totalPrice": 49138,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8854,
     "status": "UNAVAILABLE",
@@ -3967,7 +3292,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T04:39:15Z",
     "endDate": "2024-01-23T17:56:13Z",
-    "totalPrice": 16319,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6269,
     "status": "PENDING",
@@ -3980,7 +3305,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T08:02:28Z",
     "endDate": "2023-12-01T09:56:09Z",
-    "totalPrice": 40427,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3031,
     "status": "UNAVAILABLE",
@@ -3993,7 +3318,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T09:10:07Z",
     "endDate": "2024-01-22T23:16:22Z",
-    "totalPrice": 33449,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 9823,
     "status": "UNAVAILABLE",
@@ -4006,7 +3331,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T08:33:36Z",
     "endDate": "2023-12-12T16:50:01Z",
-    "totalPrice": 29253,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 5397,
     "status": "CONFIRMED",
@@ -4019,7 +3344,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T14:45:48Z",
     "endDate": "2023-12-05T15:22:55Z",
-    "totalPrice": 44530,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7996,
     "status": "PENDING",
@@ -4032,7 +3357,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T08:29:31Z",
     "endDate": "2023-11-26T00:34:48Z",
-    "totalPrice": 46614,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 7234,
     "status": "UNAVAILABLE",
@@ -4045,7 +3370,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T19:44:04Z",
     "endDate": "2024-01-26T15:26:46Z",
-    "totalPrice": 19505,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3041,
     "status": "PENDING",
@@ -4058,7 +3383,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T07:41:05Z",
     "endDate": "2023-11-26T17:23:32Z",
-    "totalPrice": 31783,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 5225,
     "status": "UNAVAILABLE",
@@ -4071,7 +3396,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T11:38:05Z",
     "endDate": "2024-01-29T11:49:31Z",
-    "totalPrice": 26537,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 6331,
     "status": "CONFIRMED",
@@ -4084,7 +3409,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T00:23:21Z",
     "endDate": "2024-01-05T10:08:14Z",
-    "totalPrice": 12541,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 7254,
     "status": "PENDING",
@@ -4097,7 +3422,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T19:49:48Z",
     "endDate": "2023-12-08T01:09:42Z",
-    "totalPrice": 44859,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 9557,
     "status": "CONFIRMED",
@@ -4110,7 +3435,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T20:19:22Z",
     "endDate": "2023-11-17T21:02:02Z",
-    "totalPrice": 45055,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 9307,
     "status": "PENDING",
@@ -4123,7 +3448,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T20:45:17Z",
     "endDate": "2024-01-02T10:49:12Z",
-    "totalPrice": 17340,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 2308,
     "status": "PENDING",
@@ -4136,7 +3461,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T20:40:37Z",
     "endDate": "2023-12-15T20:17:49Z",
-    "totalPrice": 38504,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 3452,
     "status": "CONFIRMED",
@@ -4149,7 +3474,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T10:23:19Z",
     "endDate": "2023-12-03T04:55:53Z",
-    "totalPrice": 21826,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 2055,
     "status": "UNAVAILABLE",
@@ -4162,7 +3487,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T05:15:51Z",
     "endDate": "2023-12-26T15:54:53Z",
-    "totalPrice": 18381,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4676,
     "status": "PENDING",
@@ -4175,7 +3500,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T23:34:16Z",
     "endDate": "2023-12-28T04:07:23Z",
-    "totalPrice": 33442,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 4767,
     "status": "PENDING",
@@ -4188,7 +3513,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T01:59:08Z",
     "endDate": "2023-12-29T00:29:01Z",
-    "totalPrice": 44831,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8623,
     "status": "UNAVAILABLE",
@@ -4201,7 +3526,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:57:33Z",
     "endDate": "2023-11-15T05:29:45Z",
-    "totalPrice": 20462,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 7346,
     "status": "CONFIRMED",
@@ -4214,7 +3539,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T05:34:09Z",
     "endDate": "2023-12-20T06:34:00Z",
-    "totalPrice": 44344,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4532,
     "status": "CONFIRMED",
@@ -4227,7 +3552,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T15:34:47Z",
     "endDate": "2023-12-22T12:08:32Z",
-    "totalPrice": 27685,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 2030,
     "status": "UNAVAILABLE",
@@ -4240,7 +3565,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:36:40Z",
     "endDate": "2024-01-29T08:04:56Z",
-    "totalPrice": 32580,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4889,
     "status": "CONFIRMED",
@@ -4253,7 +3578,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T20:18:23Z",
     "endDate": "2023-12-23T15:10:00Z",
-    "totalPrice": 14119,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3510,
     "status": "PENDING",
@@ -4266,7 +3591,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T09:55:14Z",
     "endDate": "2024-01-31T00:07:36Z",
-    "totalPrice": 49532,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6595,
     "status": "PENDING",
@@ -4279,7 +3604,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T15:11:01Z",
     "endDate": "2024-01-01T05:02:22Z",
-    "totalPrice": 16317,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3623,
     "status": "PENDING",
@@ -4292,7 +3617,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T17:46:52Z",
     "endDate": "2023-12-09T18:04:53Z",
-    "totalPrice": 13286,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 8059,
     "status": "UNAVAILABLE",
@@ -4305,7 +3630,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T05:53:03Z",
     "endDate": "2024-01-02T05:59:22Z",
-    "totalPrice": 36189,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3063,
     "status": "CONFIRMED",
@@ -4318,7 +3643,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:42:49Z",
     "endDate": "2024-01-03T02:34:34Z",
-    "totalPrice": 41442,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6656,
     "status": "CONFIRMED",
@@ -4331,7 +3656,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T03:04:54Z",
     "endDate": "2023-11-16T15:13:45Z",
-    "totalPrice": 13682,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 3742,
     "status": "PENDING",
@@ -4344,7 +3669,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:16:10Z",
     "endDate": "2023-12-28T01:27:04Z",
-    "totalPrice": 13218,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3772,
     "status": "CONFIRMED",
@@ -4357,7 +3682,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T08:02:00Z",
     "endDate": "2024-01-12T04:11:57Z",
-    "totalPrice": 13804,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7849,
     "status": "PENDING",
@@ -4370,7 +3695,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T21:56:33Z",
     "endDate": "2024-01-09T13:45:14Z",
-    "totalPrice": 27479,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8877,
     "status": "UNAVAILABLE",
@@ -4383,7 +3708,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:23:40Z",
     "endDate": "2023-12-04T03:58:47Z",
-    "totalPrice": 11011,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 6564,
     "status": "CONFIRMED",
@@ -4396,7 +3721,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T23:08:59Z",
     "endDate": "2023-12-13T13:13:22Z",
-    "totalPrice": 23803,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 4693,
     "status": "CONFIRMED",
@@ -4409,7 +3734,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T00:14:02Z",
     "endDate": "2023-11-24T17:58:16Z",
-    "totalPrice": 40423,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8990,
     "status": "UNAVAILABLE",
@@ -4422,7 +3747,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:00:36Z",
     "endDate": "2024-01-26T00:03:08Z",
-    "totalPrice": 15956,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 6442,
     "status": "UNAVAILABLE",
@@ -4435,7 +3760,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:21:07Z",
     "endDate": "2023-11-18T13:19:02Z",
-    "totalPrice": 43851,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 2155,
     "status": "PENDING",
@@ -4448,7 +3773,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T18:23:47Z",
     "endDate": "2024-01-17T19:02:32Z",
-    "totalPrice": 40924,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6107,
     "status": "PENDING",
@@ -4461,7 +3786,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:09:38Z",
     "endDate": "2024-01-16T13:05:38Z",
-    "totalPrice": 31139,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 4426,
     "status": "PENDING",
@@ -4474,7 +3799,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T18:14:51Z",
     "endDate": "2023-12-17T11:39:24Z",
-    "totalPrice": 17364,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 5586,
     "status": "UNAVAILABLE",
@@ -4487,7 +3812,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:41:00Z",
     "endDate": "2024-01-03T23:10:52Z",
-    "totalPrice": 42838,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 3238,
     "status": "PENDING",
@@ -4500,7 +3825,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T19:21:13Z",
     "endDate": "2024-01-21T20:09:13Z",
-    "totalPrice": 47784,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9138,
     "status": "CONFIRMED",
@@ -4513,7 +3838,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T00:17:44Z",
     "endDate": "2023-11-27T18:32:47Z",
-    "totalPrice": 22473,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 9386,
     "status": "UNAVAILABLE",
@@ -4526,7 +3851,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T07:51:19Z",
     "endDate": "2023-12-15T08:08:09Z",
-    "totalPrice": 29202,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2204,
     "status": "PENDING",
@@ -4539,7 +3864,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T16:57:51Z",
     "endDate": "2023-11-26T18:51:33Z",
-    "totalPrice": 14063,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9560,
     "status": "UNAVAILABLE",
@@ -4552,7 +3877,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T20:23:26Z",
     "endDate": "2024-01-19T16:49:07Z",
-    "totalPrice": 18634,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 7522,
     "status": "UNAVAILABLE",
@@ -4565,7 +3890,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T16:09:11Z",
     "endDate": "2023-12-09T23:10:45Z",
-    "totalPrice": 41009,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 6107,
     "status": "PENDING",
@@ -4578,7 +3903,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T06:31:37Z",
     "endDate": "2023-12-19T09:04:01Z",
-    "totalPrice": 29992,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 9382,
     "status": "CONFIRMED",
@@ -4591,7 +3916,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T03:32:04Z",
     "endDate": "2024-01-30T08:19:34Z",
-    "totalPrice": 35945,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 4079,
     "status": "CONFIRMED",
@@ -4604,7 +3929,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T14:44:52Z",
     "endDate": "2023-12-27T07:34:11Z",
-    "totalPrice": 28145,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 2454,
     "status": "CONFIRMED",
@@ -4617,7 +3942,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T20:47:22Z",
     "endDate": "2024-01-17T15:34:19Z",
-    "totalPrice": 43480,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 5164,
     "status": "UNAVAILABLE",
@@ -4630,7 +3955,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T17:05:22Z",
     "endDate": "2023-11-18T23:28:45Z",
-    "totalPrice": 35627,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 5367,
     "status": "UNAVAILABLE",
@@ -4643,7 +3968,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T23:55:28Z",
     "endDate": "2023-12-22T16:45:32Z",
-    "totalPrice": 39099,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7882,
     "status": "UNAVAILABLE",
@@ -4656,7 +3981,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T20:29:56Z",
     "endDate": "2023-12-29T16:54:07Z",
-    "totalPrice": 11208,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 5628,
     "status": "CONFIRMED",
@@ -4669,7 +3994,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T22:20:33Z",
     "endDate": "2023-11-17T00:04:12Z",
-    "totalPrice": 22810,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 8743,
     "status": "PENDING",
@@ -4682,7 +4007,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T11:20:25Z",
     "endDate": "2024-01-04T13:54:16Z",
-    "totalPrice": 29456,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 2830,
     "status": "UNAVAILABLE",
@@ -4695,7 +4020,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T09:52:34Z",
     "endDate": "2023-11-19T23:21:59Z",
-    "totalPrice": 22194,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 6296,
     "status": "CONFIRMED",
@@ -4708,7 +4033,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T22:23:19Z",
     "endDate": "2023-12-08T00:18:48Z",
-    "totalPrice": 47107,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 4907,
     "status": "PENDING",
@@ -4721,7 +4046,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T13:10:17Z",
     "endDate": "2024-01-24T10:51:01Z",
-    "totalPrice": 14683,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 4889,
     "status": "UNAVAILABLE",
@@ -4731,738 +4056,11 @@ export const bookingData = [
     "createdAt": "2023-09-06T10:58:47Z",
     "updatedAt": "2023-10-26T06:59:09Z"
   },
-  {
-    "startDate": "2023-09-18T21:40:05Z",
-    "endDate": "2023-11-26T09:54:41Z",
-    "totalPrice": 10891,
-    "guests": 4,
-    "partpaymentPrice": 5498,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-11-05T07:47:51Z",
-    "updatedAt": "2023-11-09T17:30:59Z"
-  },
-  {
-    "startDate": "2023-09-24T13:19:25Z",
-    "endDate": "2023-12-14T04:57:11Z",
-    "totalPrice": 28767,
-    "guests": 5,
-    "partpaymentPrice": 4511,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-05-02T06:29:43Z",
-    "updatedAt": "2023-07-21T13:03:34Z"
-  },
-  {
-    "startDate": "2023-09-27T10:33:43Z",
-    "endDate": "2023-12-10T09:39:58Z",
-    "totalPrice": 28519,
-    "guests": 5,
-    "partpaymentPrice": 6810,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-13T21:11:56Z",
-    "updatedAt": "2024-11-06T15:34:12Z"
-  },
-  {
-    "startDate": "2023-09-17T21:41:56Z",
-    "endDate": "2023-12-22T03:37:50Z",
-    "totalPrice": 36718,
-    "guests": 6,
-    "partpaymentPrice": 9551,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-10-22T09:08:25Z",
-    "updatedAt": "2024-05-03T12:56:23Z"
-  },
-  {
-    "startDate": "2023-09-21T09:03:22Z",
-    "endDate": "2024-01-02T18:00:51Z",
-    "totalPrice": 38575,
-    "guests": 6,
-    "partpaymentPrice": 5273,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-12-15T21:09:32Z",
-    "updatedAt": "2023-10-26T12:17:07Z"
-  },
-  {
-    "startDate": "2023-09-14T18:24:48Z",
-    "endDate": "2023-12-01T12:30:27Z",
-    "totalPrice": 27770,
-    "guests": 4,
-    "partpaymentPrice": 3812,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-01-27T19:09:09Z",
-    "updatedAt": "2024-04-26T11:56:38Z"
-  },
-  {
-    "startDate": "2023-09-25T16:53:35Z",
-    "endDate": "2023-11-20T09:22:21Z",
-    "totalPrice": 28266,
-    "guests": 3,
-    "partpaymentPrice": 2132,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-22T22:37:15Z",
-    "updatedAt": "2023-09-09T09:08:07Z"
-  },
-  {
-    "startDate": "2023-09-22T14:31:37Z",
-    "endDate": "2023-12-11T23:56:59Z",
-    "totalPrice": 16384,
-    "guests": 5,
-    "partpaymentPrice": 7347,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-07-24T13:13:21Z",
-    "updatedAt": "2024-08-28T10:06:12Z"
-  },
-  {
-    "startDate": "2023-09-20T16:10:51Z",
-    "endDate": "2023-11-16T07:17:32Z",
-    "totalPrice": 47425,
-    "guests": 4,
-    "partpaymentPrice": 9953,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-31T08:04:27Z",
-    "updatedAt": "2023-10-14T11:36:57Z"
-  },
-  {
-    "startDate": "2023-09-15T19:08:57Z",
-    "endDate": "2023-11-22T13:09:46Z",
-    "totalPrice": 26673,
-    "guests": 5,
-    "partpaymentPrice": 3507,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-06-09T22:18:43Z",
-    "updatedAt": "2024-12-16T05:18:24Z"
-  },
-  {
-    "startDate": "2023-09-18T09:11:47Z",
-    "endDate": "2023-11-23T22:44:51Z",
-    "totalPrice": 16034,
-    "guests": 4,
-    "partpaymentPrice": 2706,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-04-09T18:28:22Z",
-    "updatedAt": "2024-07-10T20:37:03Z"
-  },
-  {
-    "startDate": "2023-09-25T16:13:16Z",
-    "endDate": "2024-01-15T01:41:48Z",
-    "totalPrice": 19568,
-    "guests": 5,
-    "partpaymentPrice": 5165,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-12-08T01:50:57Z",
-    "updatedAt": "2023-11-15T21:21:14Z"
-  },
-  {
-    "startDate": "2023-09-22T11:55:27Z",
-    "endDate": "2024-01-31T05:12:15Z",
-    "totalPrice": 34316,
-    "guests": 3,
-    "partpaymentPrice": 7207,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-12-11T21:13:40Z",
-    "updatedAt": "2024-09-18T05:55:26Z"
-  },
-  {
-    "startDate": "2023-09-24T11:34:56Z",
-    "endDate": "2023-11-30T18:34:28Z",
-    "totalPrice": 15965,
-    "guests": 2,
-    "partpaymentPrice": 5673,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-01-04T10:39:22Z",
-    "updatedAt": "2023-09-15T13:30:23Z"
-  },
-  {
-    "startDate": "2023-09-24T23:53:10Z",
-    "endDate": "2024-01-16T13:31:39Z",
-    "totalPrice": 14390,
-    "guests": 5,
-    "partpaymentPrice": 7668,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-11-04T20:16:54Z",
-    "updatedAt": "2023-09-11T03:33:59Z"
-  },
-  {
-    "startDate": "2023-09-21T08:37:21Z",
-    "endDate": "2023-12-30T13:09:02Z",
-    "totalPrice": 35907,
-    "guests": 8,
-    "partpaymentPrice": 3842,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-08T04:57:36Z",
-    "updatedAt": "2024-10-22T08:55:07Z"
-  },
-  {
-    "startDate": "2023-09-27T04:41:09Z",
-    "endDate": "2023-12-05T23:23:35Z",
-    "totalPrice": 29807,
-    "guests": 4,
-    "partpaymentPrice": 7318,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-06-03T13:07:57Z",
-    "updatedAt": "2024-06-30T12:52:47Z"
-  },
-  {
-    "startDate": "2023-09-26T21:57:40Z",
-    "endDate": "2024-01-29T20:15:11Z",
-    "totalPrice": 18653,
-    "guests": 5,
-    "partpaymentPrice": 6717,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-23T12:34:53Z",
-    "updatedAt": "2024-08-04T08:47:40Z"
-  },
-  {
-    "startDate": "2023-09-23T10:28:06Z",
-    "endDate": "2023-12-30T00:38:39Z",
-    "totalPrice": 28982,
-    "guests": 5,
-    "partpaymentPrice": 5362,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-11-10T17:47:53Z",
-    "updatedAt": "2024-02-25T16:01:29Z"
-  },
-  {
-    "startDate": "2023-09-19T21:02:02Z",
-    "endDate": "2023-12-26T05:15:36Z",
-    "totalPrice": 12300,
-    "guests": 2,
-    "partpaymentPrice": 8436,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-17T04:43:48Z",
-    "updatedAt": "2023-11-16T15:05:01Z"
-  },
-  {
-    "startDate": "2023-09-17T16:27:31Z",
-    "endDate": "2023-12-24T12:38:05Z",
-    "totalPrice": 42231,
-    "guests": 6,
-    "partpaymentPrice": 7830,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-04-16T19:02:40Z",
-    "updatedAt": "2024-01-20T14:07:10Z"
-  },
-  {
-    "startDate": "2023-09-21T22:29:32Z",
-    "endDate": "2024-01-05T10:40:31Z",
-    "totalPrice": 13817,
-    "guests": 8,
-    "partpaymentPrice": 7534,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-14T09:29:53Z",
-    "updatedAt": "2023-07-06T08:05:20Z"
-  },
-  {
-    "startDate": "2023-09-21T14:26:36Z",
-    "endDate": "2024-01-23T01:46:13Z",
-    "totalPrice": 16473,
-    "guests": 4,
-    "partpaymentPrice": 2462,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-05T20:48:10Z",
-    "updatedAt": "2024-08-11T05:51:21Z"
-  },
-  {
-    "startDate": "2023-09-15T21:23:10Z",
-    "endDate": "2024-01-04T05:19:26Z",
-    "totalPrice": 35943,
-    "guests": 6,
-    "partpaymentPrice": 4492,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-04-28T02:10:50Z",
-    "updatedAt": "2024-04-21T09:16:12Z"
-  },
-  {
-    "startDate": "2023-09-17T16:01:31Z",
-    "endDate": "2023-11-30T02:10:08Z",
-    "totalPrice": 40989,
-    "guests": 5,
-    "partpaymentPrice": 7306,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-07-21T00:30:36Z",
-    "updatedAt": "2023-09-20T13:06:15Z"
-  },
-  {
-    "startDate": "2023-09-12T14:16:20Z",
-    "endDate": "2024-02-01T01:51:35Z",
-    "totalPrice": 24214,
-    "guests": 4,
-    "partpaymentPrice": 9939,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-08-31T03:02:43Z",
-    "updatedAt": "2023-09-03T13:11:48Z"
-  },
-  {
-    "startDate": "2023-09-26T20:40:48Z",
-    "endDate": "2023-12-16T19:53:46Z",
-    "totalPrice": 19473,
-    "guests": 3,
-    "partpaymentPrice": 6003,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-08-25T17:12:19Z",
-    "updatedAt": "2023-05-09T02:51:29Z"
-  },
-  {
-    "startDate": "2023-09-17T14:33:30Z",
-    "endDate": "2023-11-26T04:41:25Z",
-    "totalPrice": 15740,
-    "guests": 2,
-    "partpaymentPrice": 9100,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-10-27T22:47:06Z",
-    "updatedAt": "2024-09-08T22:10:01Z"
-  },
-  {
-    "startDate": "2023-09-26T03:10:58Z",
-    "endDate": "2023-11-29T06:19:10Z",
-    "totalPrice": 11274,
-    "guests": 4,
-    "partpaymentPrice": 5226,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-29T15:02:52Z",
-    "updatedAt": "2024-03-26T16:54:50Z"
-  },
-  {
-    "startDate": "2023-09-25T01:33:08Z",
-    "endDate": "2023-12-08T03:06:37Z",
-    "totalPrice": 36541,
-    "guests": 2,
-    "partpaymentPrice": 8757,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-05-18T06:23:26Z",
-    "updatedAt": "2023-07-05T22:13:18Z"
-  },
-  {
-    "startDate": "2023-09-27T18:33:06Z",
-    "endDate": "2023-12-15T06:58:53Z",
-    "totalPrice": 13739,
-    "guests": 3,
-    "partpaymentPrice": 2952,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-27T14:52:43Z",
-    "updatedAt": "2024-02-05T04:19:30Z"
-  },
-  {
-    "startDate": "2023-09-13T01:12:02Z",
-    "endDate": "2023-11-28T15:05:13Z",
-    "totalPrice": 26521,
-    "guests": 5,
-    "partpaymentPrice": 2251,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-11-19T11:31:57Z",
-    "updatedAt": "2024-11-28T10:14:57Z"
-  },
-  {
-    "startDate": "2023-09-23T09:24:35Z",
-    "endDate": "2024-01-25T04:28:18Z",
-    "totalPrice": 15507,
-    "guests": 2,
-    "partpaymentPrice": 4870,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-22T13:15:39Z",
-    "updatedAt": "2024-09-22T16:16:03Z"
-  },
-  {
-    "startDate": "2023-09-19T21:14:49Z",
-    "endDate": "2023-12-07T08:51:55Z",
-    "totalPrice": 36249,
-    "guests": 2,
-    "partpaymentPrice": 9127,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-06T19:40:35Z",
-    "updatedAt": "2023-11-24T04:19:11Z"
-  },
-  {
-    "startDate": "2023-09-16T11:23:59Z",
-    "endDate": "2024-01-08T22:29:58Z",
-    "totalPrice": 18288,
-    "guests": 3,
-    "partpaymentPrice": 4015,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-05-26T03:59:36Z",
-    "updatedAt": "2023-04-20T02:39:28Z"
-  },
-  {
-    "startDate": "2023-09-22T14:21:38Z",
-    "endDate": "2024-01-18T03:25:28Z",
-    "totalPrice": 13935,
-    "guests": 2,
-    "partpaymentPrice": 2486,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-05-18T02:57:55Z",
-    "updatedAt": "2024-09-05T17:55:15Z"
-  },
-  {
-    "startDate": "2023-09-15T23:29:43Z",
-    "endDate": "2023-11-13T04:12:10Z",
-    "totalPrice": 39065,
-    "guests": 5,
-    "partpaymentPrice": 5001,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-21T19:35:15Z",
-    "updatedAt": "2023-05-26T04:56:16Z"
-  },
-  {
-    "startDate": "2023-09-18T15:26:32Z",
-    "endDate": "2023-12-04T02:01:18Z",
-    "totalPrice": 16628,
-    "guests": 8,
-    "partpaymentPrice": 8464,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-01-21T06:16:01Z",
-    "updatedAt": "2023-08-06T00:55:39Z"
-  },
-  {
-    "startDate": "2023-09-18T18:15:19Z",
-    "endDate": "2023-11-30T02:56:36Z",
-    "totalPrice": 23493,
-    "guests": 3,
-    "partpaymentPrice": 8398,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-09-24T18:04:26Z",
-    "updatedAt": "2024-08-11T14:32:53Z"
-  },
-  {
-    "startDate": "2023-09-27T23:03:00Z",
-    "endDate": "2024-01-20T07:04:44Z",
-    "totalPrice": 27111,
-    "guests": 2,
-    "partpaymentPrice": 8572,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-03-21T03:16:14Z",
-    "updatedAt": "2023-08-07T02:03:48Z"
-  },
-  {
-    "startDate": "2023-09-12T22:23:01Z",
-    "endDate": "2023-12-19T06:31:29Z",
-    "totalPrice": 20199,
-    "guests": 7,
-    "partpaymentPrice": 9805,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-08-29T21:43:48Z",
-    "updatedAt": "2024-09-11T06:36:12Z"
-  },
-  {
-    "startDate": "2023-09-12T12:06:16Z",
-    "endDate": "2023-12-09T11:04:29Z",
-    "totalPrice": 35149,
-    "guests": 7,
-    "partpaymentPrice": 6128,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-09-12T05:39:39Z",
-    "updatedAt": "2024-07-30T23:06:04Z"
-  },
-  {
-    "startDate": "2023-09-26T13:33:59Z",
-    "endDate": "2024-01-16T05:33:44Z",
-    "totalPrice": 14973,
-    "guests": 8,
-    "partpaymentPrice": 3380,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-02-19T20:55:52Z",
-    "updatedAt": "2023-07-24T18:11:07Z"
-  },
-  {
-    "startDate": "2023-09-22T13:01:24Z",
-    "endDate": "2023-12-18T21:48:08Z",
-    "totalPrice": 10022,
-    "guests": 7,
-    "partpaymentPrice": 3768,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-04-12T18:24:50Z",
-    "updatedAt": "2023-08-09T06:33:50Z"
-  },
-  {
-    "startDate": "2023-09-26T19:18:42Z",
-    "endDate": "2023-12-03T13:30:25Z",
-    "totalPrice": 26148,
-    "guests": 4,
-    "partpaymentPrice": 3497,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-05T23:45:35Z",
-    "updatedAt": "2024-07-06T01:14:33Z"
-  },
-  {
-    "startDate": "2023-09-27T01:33:27Z",
-    "endDate": "2023-12-20T18:11:00Z",
-    "totalPrice": 15338,
-    "guests": 2,
-    "partpaymentPrice": 3387,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-04-18T16:31:27Z",
-    "updatedAt": "2024-03-04T02:14:52Z"
-  },
-  {
-    "startDate": "2023-09-20T20:07:27Z",
-    "endDate": "2024-01-01T16:44:44Z",
-    "totalPrice": 31446,
-    "guests": 5,
-    "partpaymentPrice": 9868,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-06-25T18:44:20Z",
-    "updatedAt": "2023-12-29T18:07:49Z"
-  },
-  {
-    "startDate": "2023-09-22T20:09:38Z",
-    "endDate": "2023-12-09T03:58:54Z",
-    "totalPrice": 46047,
-    "guests": 4,
-    "partpaymentPrice": 9172,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-04T14:41:18Z",
-    "updatedAt": "2024-08-07T11:21:02Z"
-  },
-  {
-    "startDate": "2023-09-20T00:18:48Z",
-    "endDate": "2023-12-13T14:45:48Z",
-    "totalPrice": 46261,
-    "guests": 8,
-    "partpaymentPrice": 4871,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-07-14T16:43:04Z",
-    "updatedAt": "2024-09-13T11:06:15Z"
-  },
-  {
-    "startDate": "2023-09-24T20:46:06Z",
-    "endDate": "2023-11-20T15:59:01Z",
-    "totalPrice": 11552,
-    "guests": 3,
-    "partpaymentPrice": 9996,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66de3740ac971307e60ad5ef",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-10-25T20:19:53Z",
-    "updatedAt": "2023-12-30T08:14:43Z"
-  },
-  {
-    "startDate": "2023-09-15T02:15:33Z",
-    "endDate": "2023-12-16T02:05:44Z",
-    "totalPrice": 13151,
-    "guests": 8,
-    "partpaymentPrice": 7832,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2023-06-23T00:42:11Z",
-    "updatedAt": "2024-01-09T14:17:17Z"
-  },
-  {
-    "startDate": "2023-09-23T21:49:16Z",
-    "endDate": "2024-01-08T01:08:41Z",
-    "totalPrice": 25986,
-    "guests": 7,
-    "partpaymentPrice": 4110,
-    "status": "PENDING",
-    "roomid": "66ec510fcc69560640705c7e",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-12-24T10:53:58Z",
-    "updatedAt": "2023-09-02T04:10:31Z"
-  },
-  {
-    "startDate": "2023-09-27T01:43:17Z",
-    "endDate": "2024-01-09T07:41:24Z",
-    "totalPrice": 11777,
-    "guests": 8,
-    "partpaymentPrice": 6021,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2024-06-08T06:33:12Z",
-    "updatedAt": "2024-01-26T04:50:50Z"
-  },
-  {
-    "startDate": "2023-09-12T17:50:58Z",
-    "endDate": "2024-01-04T09:09:08Z",
-    "totalPrice": 42469,
-    "guests": 2,
-    "partpaymentPrice": 6343,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66de33e78e741ef898436a53",
-    "createdAt": "2024-04-10T15:54:45Z",
-    "updatedAt": "2024-12-02T23:15:30Z"
-  },
-  {
-    "startDate": "2023-09-15T16:51:14Z",
-    "endDate": "2023-11-22T10:17:43Z",
-    "totalPrice": 23247,
-    "guests": 6,
-    "partpaymentPrice": 5614,
-    "status": "CONFIRMED",
-    "roomid": "66ec510fcc69560640705c7c",
-    "userid": "66e66ede8e1900fefa77815f",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-09-18T00:40:10Z",
-    "updatedAt": "2024-08-20T05:54:46Z"
-  },
-  {
-    "startDate": "2023-09-13T10:14:40Z",
-    "endDate": "2023-12-31T12:29:09Z",
-    "totalPrice": 36970,
-    "guests": 2,
-    "partpaymentPrice": 4730,
-    "status": "UNAVAILABLE",
-    "roomid": "66ec510fcc69560640705c78",
-    "userid": "66e94eadf745eda1e83a3f1b",
-    "sellerId": "66c0a27e71a3ea08d6a26f8f",
-    "createdAt": "2023-06-25T16:55:03Z",
-    "updatedAt": "2023-05-01T14:36:30Z"
-  },
+ 
   {
     "startDate": "2023-09-13T09:14:48Z",
     "endDate": "2023-11-16T08:59:02Z",
-    "totalPrice": 49167,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 3133,
     "status": "PENDING",
@@ -5475,7 +4073,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T08:16:45Z",
     "endDate": "2023-11-27T16:42:23Z",
-    "totalPrice": 16497,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 9906,
     "status": "CONFIRMED",
@@ -5488,7 +4086,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T11:58:52Z",
     "endDate": "2023-12-15T14:07:37Z",
-    "totalPrice": 16628,
+    "totalPrice": 10,
     "guests": 4,
     "partpaymentPrice": 7844,
     "status": "UNAVAILABLE",
@@ -5501,7 +4099,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T09:48:21Z",
     "endDate": "2023-12-11T03:53:05Z",
-    "totalPrice": 18972,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 3838,
     "status": "CONFIRMED",
@@ -5514,7 +4112,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T04:08:06Z",
     "endDate": "2024-01-26T12:35:17Z",
-    "totalPrice": 38227,
+    "totalPrice": 10,
     "guests": 7,
     "partpaymentPrice": 8104,
     "status": "UNAVAILABLE",
@@ -5527,7 +4125,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T07:57:15Z",
     "endDate": "2023-11-23T23:25:24Z",
-    "totalPrice": 23612,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 7577,
     "status": "UNAVAILABLE",
@@ -5540,7 +4138,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T22:15:32Z",
     "endDate": "2023-12-24T20:51:20Z",
-    "totalPrice": 33790,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 9941,
     "status": "PENDING",
@@ -5553,7 +4151,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T20:17:30Z",
     "endDate": "2023-11-16T22:24:50Z",
-    "totalPrice": 34243,
+    "totalPrice": 303,
     "guests": 5,
     "partpaymentPrice": 7604,
     "status": "PENDING",
@@ -5566,7 +4164,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T10:54:55Z",
     "endDate": "2023-11-14T02:00:30Z",
-    "totalPrice": 35948,
+    "totalPrice": 308,
     "guests": 3,
     "partpaymentPrice": 6787,
     "status": "UNAVAILABLE",
@@ -5579,7 +4177,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T17:17:16Z",
     "endDate": "2023-12-17T04:08:34Z",
-    "totalPrice": 48799,
+    "totalPrice": 40,
     "guests": 3,
     "partpaymentPrice": 8373,
     "status": "CONFIRMED",
@@ -5592,7 +4190,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T23:09:48Z",
     "endDate": "2024-01-29T04:54:29Z",
-    "totalPrice": 40145,
+    "totalPrice": 405,
     "guests": 8,
     "partpaymentPrice": 4810,
     "status": "UNAVAILABLE",
@@ -5605,7 +4203,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T11:06:45Z",
     "endDate": "2023-12-26T20:57:45Z",
-    "totalPrice": 40640,
+    "totalPrice": 40,
     "guests": 4,
     "partpaymentPrice": 5462,
     "status": "UNAVAILABLE",
@@ -5618,7 +4216,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:41:30Z",
     "endDate": "2023-11-28T23:39:26Z",
-    "totalPrice": 28981,
+    "totalPrice": 201,
     "guests": 4,
     "partpaymentPrice": 2027,
     "status": "UNAVAILABLE",
@@ -5631,7 +4229,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T23:36:15Z",
     "endDate": "2023-11-25T00:09:40Z",
-    "totalPrice": 17706,
+    "totalPrice": 106,
     "guests": 8,
     "partpaymentPrice": 5291,
     "status": "CONFIRMED",
@@ -5644,7 +4242,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:04:31Z",
     "endDate": "2023-11-15T04:53:11Z",
-    "totalPrice": 19649,
+    "totalPrice": 109,
     "guests": 5,
     "partpaymentPrice": 3277,
     "status": "CONFIRMED",
@@ -5657,7 +4255,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T07:51:26Z",
     "endDate": "2024-01-13T17:08:38Z",
-    "totalPrice": 24991,
+    "totalPrice": 201,
     "guests": 7,
     "partpaymentPrice": 3715,
     "status": "PENDING",
@@ -5670,7 +4268,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:09:33Z",
     "endDate": "2024-01-02T04:18:25Z",
-    "totalPrice": 13181,
+    "totalPrice": 101,
     "guests": 2,
     "partpaymentPrice": 3143,
     "status": "CONFIRMED",
@@ -5683,7 +4281,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T16:38:34Z",
     "endDate": "2023-12-07T20:20:39Z",
-    "totalPrice": 23714,
+    "totalPrice": 20,
     "guests": 8,
     "partpaymentPrice": 2561,
     "status": "UNAVAILABLE",
@@ -5696,7 +4294,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T18:49:04Z",
     "endDate": "2024-01-26T06:44:37Z",
-    "totalPrice": 41594,
+    "totalPrice": 404,
     "guests": 5,
     "partpaymentPrice": 3331,
     "status": "UNAVAILABLE",
@@ -5709,7 +4307,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T03:27:36Z",
     "endDate": "2023-11-19T12:45:52Z",
-    "totalPrice": 34828,
+    "totalPrice": 308,
     "guests": 6,
     "partpaymentPrice": 4580,
     "status": "PENDING",
@@ -5722,7 +4320,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T18:11:47Z",
     "endDate": "2023-11-24T08:45:25Z",
-    "totalPrice": 12093,
+    "totalPrice": 103,
     "guests": 4,
     "partpaymentPrice": 2571,
     "status": "PENDING",
@@ -5735,7 +4333,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T12:32:03Z",
     "endDate": "2023-12-27T18:02:24Z",
-    "totalPrice": 45533,
+    "totalPrice": 40,
     "guests": 8,
     "partpaymentPrice": 6698,
     "status": "UNAVAILABLE",
@@ -5748,7 +4346,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T10:35:32Z",
     "endDate": "2023-12-21T12:57:31Z",
-    "totalPrice": 35966,
+    "totalPrice": 30,
     "guests": 4,
     "partpaymentPrice": 2329,
     "status": "UNAVAILABLE",
@@ -5761,7 +4359,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T19:32:15Z",
     "endDate": "2024-01-07T16:54:19Z",
-    "totalPrice": 12015,
+    "totalPrice": 105,
     "guests": 6,
     "partpaymentPrice": 5647,
     "status": "UNAVAILABLE",
@@ -5774,7 +4372,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T03:44:25Z",
     "endDate": "2024-01-29T16:20:39Z",
-    "totalPrice": 49820,
+    "totalPrice": 400,
     "guests": 3,
     "partpaymentPrice": 6051,
     "status": "CONFIRMED",
@@ -5787,7 +4385,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:56:55Z",
     "endDate": "2023-12-29T15:40:14Z",
-    "totalPrice": 17773,
+    "totalPrice": 10,
     "guests": 6,
     "partpaymentPrice": 7586,
     "status": "CONFIRMED",
@@ -5800,7 +4398,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:04:38Z",
     "endDate": "2024-01-04T21:44:45Z",
-    "totalPrice": 38571,
+    "totalPrice": 301,
     "guests": 2,
     "partpaymentPrice": 6741,
     "status": "CONFIRMED",
@@ -5813,7 +4411,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T18:07:56Z",
     "endDate": "2024-01-22T20:47:21Z",
-    "totalPrice": 37981,
+    "totalPrice": 301,
     "guests": 7,
     "partpaymentPrice": 6637,
     "status": "CONFIRMED",
@@ -5826,7 +4424,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T14:09:52Z",
     "endDate": "2023-11-20T07:22:32Z",
-    "totalPrice": 10272,
+    "totalPrice": 102,
     "guests": 4,
     "partpaymentPrice": 3237,
     "status": "PENDING",
@@ -5839,7 +4437,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T10:43:50Z",
     "endDate": "2023-11-22T06:24:33Z",
-    "totalPrice": 37455,
+    "totalPrice": 305,
     "guests": 3,
     "partpaymentPrice": 6626,
     "status": "PENDING",
@@ -5852,7 +4450,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T12:53:57Z",
     "endDate": "2023-12-07T07:10:23Z",
-    "totalPrice": 42827,
+    "totalPrice": 40,
     "guests": 8,
     "partpaymentPrice": 5225,
     "status": "CONFIRMED",
@@ -5865,7 +4463,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:28:32Z",
     "endDate": "2023-11-24T21:00:32Z",
-    "totalPrice": 31062,
+    "totalPrice": 302,
     "guests": 3,
     "partpaymentPrice": 4053,
     "status": "PENDING",
@@ -5878,7 +4476,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T21:54:20Z",
     "endDate": "2023-11-19T10:22:09Z",
-    "totalPrice": 22174,
+    "totalPrice": 204,
     "guests": 2,
     "partpaymentPrice": 2466,
     "status": "PENDING",
@@ -5891,7 +4489,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T13:57:15Z",
     "endDate": "2023-12-15T09:51:45Z",
-    "totalPrice": 35305,
+    "totalPrice": 30,
     "guests": 5,
     "partpaymentPrice": 6478,
     "status": "UNAVAILABLE",
@@ -5904,7 +4502,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T08:52:53Z",
     "endDate": "2023-12-16T08:50:17Z",
-    "totalPrice": 19770,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5936,
     "status": "CONFIRMED",
@@ -5917,7 +4515,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T07:31:33Z",
     "endDate": "2024-01-17T08:21:15Z",
-    "totalPrice": 44911,
+    "totalPrice": 401,
     "guests": 5,
     "partpaymentPrice": 5947,
     "status": "PENDING",
@@ -5930,7 +4528,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T01:26:51Z",
     "endDate": "2023-12-18T11:54:44Z",
-    "totalPrice": 20079,
+    "totalPrice": 20,
     "guests": 6,
     "partpaymentPrice": 3057,
     "status": "UNAVAILABLE",
@@ -5943,7 +4541,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T16:47:07Z",
     "endDate": "2023-11-24T09:40:27Z",
-    "totalPrice": 45277,
+    "totalPrice": 407,
     "guests": 4,
     "partpaymentPrice": 7671,
     "status": "PENDING",
@@ -5956,7 +4554,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T04:31:33Z",
     "endDate": "2023-11-14T09:13:38Z",
-    "totalPrice": 42597,
+    "totalPrice": 407,
     "guests": 7,
     "partpaymentPrice": 4356,
     "status": "CONFIRMED",
@@ -5969,7 +4567,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T13:14:19Z",
     "endDate": "2023-12-03T23:59:17Z",
-    "totalPrice": 43659,
+    "totalPrice": 40,
     "guests": 3,
     "partpaymentPrice": 2083,
     "status": "UNAVAILABLE",
@@ -5982,7 +4580,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:43:04Z",
     "endDate": "2023-11-21T04:35:24Z",
-    "totalPrice": 47315,
+    "totalPrice": 405,
     "guests": 5,
     "partpaymentPrice": 4032,
     "status": "PENDING",
@@ -5995,7 +4593,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T01:23:54Z",
     "endDate": "2023-12-21T08:35:15Z",
-    "totalPrice": 40332,
+    "totalPrice": 40,
     "guests": 8,
     "partpaymentPrice": 8699,
     "status": "CONFIRMED",
@@ -6008,7 +4606,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T01:02:51Z",
     "endDate": "2024-01-28T19:51:54Z",
-    "totalPrice": 27870,
+    "totalPrice": 200,
     "guests": 4,
     "partpaymentPrice": 8217,
     "status": "PENDING",
@@ -6021,7 +4619,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T18:14:48Z",
     "endDate": "2023-12-18T16:33:51Z",
-    "totalPrice": 16398,
+    "totalPrice": 10,
     "guests": 5,
     "partpaymentPrice": 5485,
     "status": "PENDING",
@@ -6034,7 +4632,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:03:41Z",
     "endDate": "2023-12-03T06:50:17Z",
-    "totalPrice": 36211,
+    "totalPrice": 30,
     "guests": 4,
     "partpaymentPrice": 5197,
     "status": "UNAVAILABLE",
@@ -6047,7 +4645,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T04:40:38Z",
     "endDate": "2024-01-27T19:40:40Z",
-    "totalPrice": 17560,
+    "totalPrice": 100,
     "guests": 4,
     "partpaymentPrice": 4972,
     "status": "PENDING",
@@ -6060,7 +4658,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T06:38:37Z",
     "endDate": "2023-12-06T07:33:49Z",
-    "totalPrice": 33735,
+    "totalPrice": 30,
     "guests": 8,
     "partpaymentPrice": 3029,
     "status": "PENDING",
@@ -6073,7 +4671,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T17:40:44Z",
     "endDate": "2024-01-25T10:53:18Z",
-    "totalPrice": 13688,
+    "totalPrice": 108,
     "guests": 8,
     "partpaymentPrice": 5168,
     "status": "CONFIRMED",
@@ -6086,7 +4684,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T06:48:31Z",
     "endDate": "2023-11-28T09:07:18Z",
-    "totalPrice": 12469,
+    "totalPrice": 109,
     "guests": 5,
     "partpaymentPrice": 6603,
     "status": "PENDING",
@@ -6099,7 +4697,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T09:50:47Z",
     "endDate": "2023-12-09T22:11:17Z",
-    "totalPrice": 16070,
+    "totalPrice": 10,
     "guests": 3,
     "partpaymentPrice": 3001,
     "status": "PENDING",
@@ -6112,7 +4710,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:35:56Z",
     "endDate": "2024-01-10T08:25:20Z",
-    "totalPrice": 43356,
+    "totalPrice": 406,
     "guests": 5,
     "partpaymentPrice": 7023,
     "status": "UNAVAILABLE",
@@ -6125,7 +4723,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T11:34:26Z",
     "endDate": "2023-12-17T06:09:41Z",
-    "totalPrice": 32382,
+    "totalPrice": 30,
     "guests": 6,
     "partpaymentPrice": 8638,
     "status": "PENDING",
@@ -6138,7 +4736,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:13:00Z",
     "endDate": "2023-11-18T14:22:48Z",
-    "totalPrice": 17609,
+    "totalPrice": 109,
     "guests": 2,
     "partpaymentPrice": 8140,
     "status": "CONFIRMED",
@@ -6151,7 +4749,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T16:23:27Z",
     "endDate": "2024-01-24T02:59:16Z",
-    "totalPrice": 43710,
+    "totalPrice": 400,
     "guests": 4,
     "partpaymentPrice": 5501,
     "status": "CONFIRMED",
@@ -6164,7 +4762,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T13:33:48Z",
     "endDate": "2024-01-13T03:04:09Z",
-    "totalPrice": 25240,
+    "totalPrice": 200,
     "guests": 4,
     "partpaymentPrice": 2249,
     "status": "UNAVAILABLE",
@@ -6177,7 +4775,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T17:27:54Z",
     "endDate": "2024-01-02T02:31:31Z",
-    "totalPrice": 21124,
+    "totalPrice": 204,
     "guests": 7,
     "partpaymentPrice": 2692,
     "status": "UNAVAILABLE",
@@ -6190,7 +4788,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T22:20:45Z",
     "endDate": "2024-01-31T05:26:30Z",
-    "totalPrice": 13803,
+    "totalPrice": 103,
     "guests": 8,
     "partpaymentPrice": 7376,
     "status": "PENDING",
@@ -6203,7 +4801,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T02:47:56Z",
     "endDate": "2024-01-10T16:47:03Z",
-    "totalPrice": 29524,
+    "totalPrice": 204,
     "guests": 8,
     "partpaymentPrice": 6129,
     "status": "UNAVAILABLE",
@@ -6216,7 +4814,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T15:38:45Z",
     "endDate": "2023-11-15T07:14:03Z",
-    "totalPrice": 45068,
+    "totalPrice": 408,
     "guests": 8,
     "partpaymentPrice": 5119,
     "status": "UNAVAILABLE",
@@ -6229,7 +4827,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T05:43:10Z",
     "endDate": "2023-12-01T02:04:33Z",
-    "totalPrice": 29147,
+    "totalPrice": 20,
     "guests": 8,
     "partpaymentPrice": 3479,
     "status": "PENDING",
@@ -6242,7 +4840,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:31:52Z",
     "endDate": "2024-01-16T03:13:16Z",
-    "totalPrice": 17679,
+    "totalPrice": 109,
     "guests": 7,
     "partpaymentPrice": 5196,
     "status": "UNAVAILABLE",
@@ -6255,7 +4853,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T08:17:03Z",
     "endDate": "2023-12-29T10:57:59Z",
-    "totalPrice": 36295,
+    "totalPrice": 30,
     "guests": 2,
     "partpaymentPrice": 3270,
     "status": "CONFIRMED",
@@ -6268,7 +4866,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:24:18Z",
     "endDate": "2024-01-14T22:12:00Z",
-    "totalPrice": 15781,
+    "totalPrice": 101,
     "guests": 2,
     "partpaymentPrice": 4643,
     "status": "UNAVAILABLE",
@@ -6281,7 +4879,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:51:08Z",
     "endDate": "2023-12-30T11:24:42Z",
-    "totalPrice": 12363,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 3903,
     "status": "PENDING",
@@ -6294,7 +4892,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T15:53:13Z",
     "endDate": "2023-12-14T05:05:50Z",
-    "totalPrice": 24544,
+    "totalPrice": 20,
     "guests": 4,
     "partpaymentPrice": 3850,
     "status": "UNAVAILABLE",
@@ -6307,7 +4905,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T08:32:38Z",
     "endDate": "2024-01-23T09:26:23Z",
-    "totalPrice": 22715,
+    "totalPrice": 205,
     "guests": 6,
     "partpaymentPrice": 9473,
     "status": "UNAVAILABLE",
@@ -6320,7 +4918,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T11:34:20Z",
     "endDate": "2023-11-27T16:14:37Z",
-    "totalPrice": 27573,
+    "totalPrice": 203,
     "guests": 6,
     "partpaymentPrice": 7288,
     "status": "UNAVAILABLE",
@@ -6333,7 +4931,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T21:30:34Z",
     "endDate": "2024-01-28T16:20:20Z",
-    "totalPrice": 25349,
+    "totalPrice": 209,
     "guests": 4,
     "partpaymentPrice": 8819,
     "status": "PENDING",
@@ -6346,7 +4944,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T11:28:27Z",
     "endDate": "2023-12-05T08:06:34Z",
-    "totalPrice": 22620,
+    "totalPrice": 20,
     "guests": 4,
     "partpaymentPrice": 8757,
     "status": "UNAVAILABLE",
@@ -6359,7 +4957,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T03:29:50Z",
     "endDate": "2023-11-15T02:42:43Z",
-    "totalPrice": 12883,
+    "totalPrice": 103,
     "guests": 5,
     "partpaymentPrice": 9149,
     "status": "UNAVAILABLE",
@@ -6372,7 +4970,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T20:40:55Z",
     "endDate": "2023-12-24T03:40:09Z",
-    "totalPrice": 48137,
+    "totalPrice": 40,
     "guests": 6,
     "partpaymentPrice": 5705,
     "status": "CONFIRMED",
@@ -6385,7 +4983,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:57:53Z",
     "endDate": "2023-12-22T05:12:29Z",
-    "totalPrice": 42835,
+    "totalPrice": 40,
     "guests": 7,
     "partpaymentPrice": 2463,
     "status": "CONFIRMED",
@@ -6398,7 +4996,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T14:33:56Z",
     "endDate": "2023-12-13T20:37:20Z",
-    "totalPrice": 20249,
+    "totalPrice": 20,
     "guests": 4,
     "partpaymentPrice": 9044,
     "status": "UNAVAILABLE",
@@ -6411,7 +5009,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T12:57:57Z",
     "endDate": "2024-01-07T05:01:07Z",
-    "totalPrice": 24869,
+    "totalPrice": 209,
     "guests": 8,
     "partpaymentPrice": 3959,
     "status": "PENDING",
@@ -6424,7 +5022,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T19:09:26Z",
     "endDate": "2024-01-03T11:36:39Z",
-    "totalPrice": 29774,
+    "totalPrice": 204,
     "guests": 2,
     "partpaymentPrice": 6406,
     "status": "UNAVAILABLE",
@@ -6437,7 +5035,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T13:56:21Z",
     "endDate": "2023-12-11T22:20:14Z",
-    "totalPrice": 13282,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 5924,
     "status": "UNAVAILABLE",
@@ -6450,7 +5048,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T11:49:28Z",
     "endDate": "2023-12-08T13:28:51Z",
-    "totalPrice": 24846,
+    "totalPrice": 20,
     "guests": 5,
     "partpaymentPrice": 3204,
     "status": "PENDING",
@@ -6463,7 +5061,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T05:54:27Z",
     "endDate": "2023-11-21T01:49:20Z",
-    "totalPrice": 16690,
+    "totalPrice": 100,
     "guests": 3,
     "partpaymentPrice": 5445,
     "status": "PENDING",
@@ -6476,7 +5074,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T14:51:52Z",
     "endDate": "2023-11-15T15:42:06Z",
-    "totalPrice": 12418,
+    "totalPrice": 108,
     "guests": 3,
     "partpaymentPrice": 9239,
     "status": "CONFIRMED",
@@ -6489,7 +5087,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T00:18:43Z",
     "endDate": "2024-01-10T11:45:38Z",
-    "totalPrice": 27497,
+    "totalPrice": 207,
     "guests": 3,
     "partpaymentPrice": 2698,
     "status": "UNAVAILABLE",
@@ -6502,7 +5100,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T14:15:47Z",
     "endDate": "2023-12-19T03:59:57Z",
-    "totalPrice": 47135,
+    "totalPrice": 40,
     "guests": 7,
     "partpaymentPrice": 3709,
     "status": "PENDING",
@@ -6515,7 +5113,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T18:11:46Z",
     "endDate": "2024-01-25T02:57:56Z",
-    "totalPrice": 31152,
+    "totalPrice": 302,
     "guests": 7,
     "partpaymentPrice": 9921,
     "status": "CONFIRMED",
@@ -6528,7 +5126,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T15:56:46Z",
     "endDate": "2023-12-04T10:41:30Z",
-    "totalPrice": 44453,
+    "totalPrice": 40,
     "guests": 3,
     "partpaymentPrice": 8742,
     "status": "PENDING",
@@ -6541,7 +5139,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T05:29:26Z",
     "endDate": "2023-12-11T06:34:21Z",
-    "totalPrice": 10664,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 6580,
     "status": "PENDING",
@@ -6554,7 +5152,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T08:56:53Z",
     "endDate": "2023-11-29T22:34:15Z",
-    "totalPrice": 25100,
+    "totalPrice": 200,
     "guests": 5,
     "partpaymentPrice": 7536,
     "status": "UNAVAILABLE",
@@ -6567,7 +5165,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T05:30:00Z",
     "endDate": "2024-01-27T04:24:14Z",
-    "totalPrice": 39809,
+    "totalPrice": 309,
     "guests": 6,
     "partpaymentPrice": 7531,
     "status": "UNAVAILABLE",
@@ -6580,7 +5178,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T11:24:13Z",
     "endDate": "2023-11-30T12:55:22Z",
-    "totalPrice": 25360,
+    "totalPrice": 200,
     "guests": 2,
     "partpaymentPrice": 2695,
     "status": "CONFIRMED",
@@ -6593,7 +5191,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T22:26:55Z",
     "endDate": "2023-12-12T08:53:02Z",
-    "totalPrice": 48050,
+    "totalPrice": 40,
     "guests": 6,
     "partpaymentPrice": 3318,
     "status": "UNAVAILABLE",
@@ -6606,7 +5204,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T02:25:02Z",
     "endDate": "2023-12-10T12:47:11Z",
-    "totalPrice": 11607,
+    "totalPrice": 10,
     "guests": 2,
     "partpaymentPrice": 4517,
     "status": "CONFIRMED",
@@ -6619,7 +5217,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T14:25:23Z",
     "endDate": "2024-01-24T11:10:59Z",
-    "totalPrice": 43513,
+    "totalPrice": 403,
     "guests": 8,
     "partpaymentPrice": 7090,
     "status": "UNAVAILABLE",
@@ -6632,7 +5230,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T19:29:38Z",
     "endDate": "2023-12-12T16:16:39Z",
-    "totalPrice": 25086,
+    "totalPrice": 20,
     "guests": 3,
     "partpaymentPrice": 4497,
     "status": "UNAVAILABLE",
@@ -6645,7 +5243,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T16:47:23Z",
     "endDate": "2023-12-02T05:15:34Z",
-    "totalPrice": 14603,
+    "totalPrice": 10,
     "guests": 8,
     "partpaymentPrice": 8283,
     "status": "UNAVAILABLE",
@@ -6658,7 +5256,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:50:39Z",
     "endDate": "2023-12-16T15:18:34Z",
-    "totalPrice": 23401,
+    "totalPrice": 20,
     "guests": 3,
     "partpaymentPrice": 9880,
     "status": "CONFIRMED",
@@ -6671,7 +5269,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T05:43:00Z",
     "endDate": "2023-12-10T16:06:57Z",
-    "totalPrice": 40729,
+    "totalPrice": 409,
     "guests": 2,
     "partpaymentPrice": 3256,
     "status": "CONFIRMED",
@@ -6684,7 +5282,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T05:00:38Z",
     "endDate": "2023-12-19T15:23:45Z",
-    "totalPrice": 47060,
+    "totalPrice": 400,
     "guests": 8,
     "partpaymentPrice": 9016,
     "status": "UNAVAILABLE",
@@ -6697,7 +5295,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T20:56:55Z",
     "endDate": "2023-12-11T23:48:42Z",
-    "totalPrice": 47277,
+    "totalPrice": 407,
     "guests": 6,
     "partpaymentPrice": 2464,
     "status": "PENDING",
@@ -6710,7 +5308,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T08:04:37Z",
     "endDate": "2023-11-16T10:47:26Z",
-    "totalPrice": 19840,
+    "totalPrice": 100,
     "guests": 5,
     "partpaymentPrice": 6704,
     "status": "PENDING",
@@ -6723,7 +5321,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T21:31:39Z",
     "endDate": "2024-01-18T16:37:54Z",
-    "totalPrice": 43372,
+    "totalPrice": 402,
     "guests": 8,
     "partpaymentPrice": 2158,
     "status": "PENDING",
@@ -6736,7 +5334,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T06:59:43Z",
     "endDate": "2023-11-17T13:33:14Z",
-    "totalPrice": 16340,
+    "totalPrice": 100,
     "guests": 6,
     "partpaymentPrice": 7595,
     "status": "UNAVAILABLE",
@@ -6749,7 +5347,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:25:09Z",
     "endDate": "2023-12-23T16:08:04Z",
-    "totalPrice": 46525,
+    "totalPrice": 405,
     "guests": 4,
     "partpaymentPrice": 3918,
     "status": "CONFIRMED",
@@ -6762,7 +5360,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:20:14Z",
     "endDate": "2024-01-17T14:54:20Z",
-    "totalPrice": 16878,
+    "totalPrice": 108,
     "guests": 2,
     "partpaymentPrice": 4162,
     "status": "UNAVAILABLE",
@@ -6775,7 +5373,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T04:28:13Z",
     "endDate": "2024-01-23T13:53:28Z",
-    "totalPrice": 12588,
+    "totalPrice": 108,
     "guests": 7,
     "partpaymentPrice": 4392,
     "status": "PENDING",
@@ -6788,7 +5386,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T20:53:36Z",
     "endDate": "2023-11-17T07:37:18Z",
-    "totalPrice": 21291,
+    "totalPrice": 201,
     "guests": 6,
     "partpaymentPrice": 2493,
     "status": "PENDING",
@@ -6801,7 +5399,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:09:05Z",
     "endDate": "2023-11-13T13:55:14Z",
-    "totalPrice": 17462,
+    "totalPrice": 102,
     "guests": 3,
     "partpaymentPrice": 2110,
     "status": "CONFIRMED",
@@ -6814,7 +5412,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T01:49:49Z",
     "endDate": "2023-11-27T22:59:11Z",
-    "totalPrice": 36314,
+    "totalPrice": 304,
     "guests": 8,
     "partpaymentPrice": 6678,
     "status": "UNAVAILABLE",
@@ -6827,7 +5425,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T04:53:14Z",
     "endDate": "2024-01-03T05:30:07Z",
-    "totalPrice": 22803,
+    "totalPrice": 203,
     "guests": 3,
     "partpaymentPrice": 8856,
     "status": "PENDING",
@@ -6840,7 +5438,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T13:28:03Z",
     "endDate": "2024-01-26T21:59:39Z",
-    "totalPrice": 37621,
+    "totalPrice": 301,
     "guests": 5,
     "partpaymentPrice": 4158,
     "status": "UNAVAILABLE",
@@ -6853,7 +5451,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T06:48:49Z",
     "endDate": "2023-12-10T05:18:06Z",
-    "totalPrice": 21121,
+    "totalPrice": 201,
     "guests": 3,
     "partpaymentPrice": 9090,
     "status": "UNAVAILABLE",
@@ -6866,7 +5464,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T15:11:13Z",
     "endDate": "2023-11-30T15:34:33Z",
-    "totalPrice": 26552,
+    "totalPrice": 202,
     "guests": 5,
     "partpaymentPrice": 5244,
     "status": "CONFIRMED",
@@ -6879,7 +5477,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T08:35:21Z",
     "endDate": "2023-12-06T14:11:39Z",
-    "totalPrice": 12020,
+    "totalPrice": 100,
     "guests": 8,
     "partpaymentPrice": 3944,
     "status": "UNAVAILABLE",
@@ -6892,7 +5490,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T08:22:16Z",
     "endDate": "2024-01-14T20:57:04Z",
-    "totalPrice": 21024,
+    "totalPrice": 204,
     "guests": 6,
     "partpaymentPrice": 3465,
     "status": "PENDING",
@@ -6905,7 +5503,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T13:28:30Z",
     "endDate": "2023-11-25T07:58:15Z",
-    "totalPrice": 33204,
+    "totalPrice": 304,
     "guests": 3,
     "partpaymentPrice": 7692,
     "status": "UNAVAILABLE",
@@ -6918,7 +5516,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T05:01:49Z",
     "endDate": "2023-12-30T12:37:12Z",
-    "totalPrice": 40545,
+    "totalPrice": 405,
     "guests": 5,
     "partpaymentPrice": 6444,
     "status": "PENDING",
@@ -6931,7 +5529,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T03:10:40Z",
     "endDate": "2023-12-16T09:43:19Z",
-    "totalPrice": 37962,
+    "totalPrice": 302,
     "guests": 6,
     "partpaymentPrice": 8125,
     "status": "CONFIRMED",
@@ -6944,7 +5542,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T01:35:58Z",
     "endDate": "2023-12-14T10:00:20Z",
-    "totalPrice": 24678,
+    "totalPrice": 208,
     "guests": 8,
     "partpaymentPrice": 9771,
     "status": "UNAVAILABLE",
@@ -6957,7 +5555,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T12:48:48Z",
     "endDate": "2023-11-19T17:35:10Z",
-    "totalPrice": 31714,
+    "totalPrice": 304,
     "guests": 2,
     "partpaymentPrice": 7476,
     "status": "PENDING",
@@ -6970,7 +5568,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T02:17:36Z",
     "endDate": "2024-01-15T05:14:07Z",
-    "totalPrice": 24415,
+    "totalPrice": 205,
     "guests": 5,
     "partpaymentPrice": 5760,
     "status": "CONFIRMED",
@@ -6983,7 +5581,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T13:14:24Z",
     "endDate": "2023-12-16T04:43:30Z",
-    "totalPrice": 30278,
+    "totalPrice": 308,
     "guests": 6,
     "partpaymentPrice": 7337,
     "status": "CONFIRMED",
@@ -6996,7 +5594,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T20:52:06Z",
     "endDate": "2024-01-14T11:40:15Z",
-    "totalPrice": 29275,
+    "totalPrice": 205,
     "guests": 7,
     "partpaymentPrice": 8679,
     "status": "UNAVAILABLE",
@@ -7009,7 +5607,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T06:55:26Z",
     "endDate": "2023-12-13T15:07:53Z",
-    "totalPrice": 39572,
+    "totalPrice": 302,
     "guests": 7,
     "partpaymentPrice": 6678,
     "status": "CONFIRMED",
@@ -7022,7 +5620,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T17:12:32Z",
     "endDate": "2023-12-26T00:53:53Z",
-    "totalPrice": 12086,
+    "totalPrice": 106,
     "guests": 2,
     "partpaymentPrice": 6082,
     "status": "UNAVAILABLE",
@@ -7035,7 +5633,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T10:18:07Z",
     "endDate": "2023-11-30T03:02:56Z",
-    "totalPrice": 19763,
+    "totalPrice": 103,
     "guests": 6,
     "partpaymentPrice": 6155,
     "status": "CONFIRMED",
@@ -7048,7 +5646,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T01:39:13Z",
     "endDate": "2023-12-20T22:31:11Z",
-    "totalPrice": 37963,
+    "totalPrice": 303,
     "guests": 7,
     "partpaymentPrice": 6520,
     "status": "CONFIRMED",
@@ -7061,7 +5659,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:15:03Z",
     "endDate": "2024-01-12T09:54:14Z",
-    "totalPrice": 49506,
+    "totalPrice": 406,
     "guests": 3,
     "partpaymentPrice": 9287,
     "status": "UNAVAILABLE",
@@ -7074,7 +5672,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T16:39:15Z",
     "endDate": "2024-01-25T21:48:30Z",
-    "totalPrice": 48819,
+    "totalPrice": 409,
     "guests": 8,
     "partpaymentPrice": 2465,
     "status": "PENDING",
@@ -7087,7 +5685,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T04:00:41Z",
     "endDate": "2024-01-05T21:03:49Z",
-    "totalPrice": 33602,
+    "totalPrice": 302,
     "guests": 6,
     "partpaymentPrice": 3726,
     "status": "CONFIRMED",
@@ -7100,7 +5698,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T16:17:16Z",
     "endDate": "2023-11-26T09:45:36Z",
-    "totalPrice": 16345,
+    "totalPrice": 1605,
     "guests": 8,
     "partpaymentPrice": 6728,
     "status": "UNAVAILABLE",
@@ -7113,7 +5711,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T23:47:26Z",
     "endDate": "2023-12-11T22:47:34Z",
-    "totalPrice": 48331,
+    "totalPrice": 4801,
     "guests": 6,
     "partpaymentPrice": 3074,
     "status": "UNAVAILABLE",
@@ -7126,7 +5724,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T11:30:37Z",
     "endDate": "2024-01-16T15:55:23Z",
-    "totalPrice": 44256,
+    "totalPrice": 4406,
     "guests": 4,
     "partpaymentPrice": 8961,
     "status": "PENDING",
@@ -7139,7 +5737,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T21:01:34Z",
     "endDate": "2023-12-11T09:17:21Z",
-    "totalPrice": 40826,
+    "totalPrice": 4006,
     "guests": 4,
     "partpaymentPrice": 8575,
     "status": "UNAVAILABLE",
@@ -7152,7 +5750,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T13:20:55Z",
     "endDate": "2024-01-02T11:22:42Z",
-    "totalPrice": 45174,
+    "totalPrice": 4504,
     "guests": 6,
     "partpaymentPrice": 5205,
     "status": "CONFIRMED",
@@ -7165,7 +5763,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T13:33:04Z",
     "endDate": "2023-12-17T15:47:41Z",
-    "totalPrice": 33195,
+    "totalPrice": 3305,
     "guests": 8,
     "partpaymentPrice": 9635,
     "status": "PENDING",
@@ -7178,7 +5776,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T20:12:02Z",
     "endDate": "2023-12-17T15:24:06Z",
-    "totalPrice": 14753,
+    "totalPrice": 1403,
     "guests": 2,
     "partpaymentPrice": 4462,
     "status": "CONFIRMED",
@@ -7191,7 +5789,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T09:49:01Z",
     "endDate": "2023-12-18T08:06:40Z",
-    "totalPrice": 39671,
+    "totalPrice": 3901,
     "guests": 6,
     "partpaymentPrice": 5545,
     "status": "CONFIRMED",
@@ -7204,7 +5802,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T16:42:25Z",
     "endDate": "2023-12-29T13:23:31Z",
-    "totalPrice": 10159,
+    "totalPrice": 1009,
     "guests": 4,
     "partpaymentPrice": 9336,
     "status": "CONFIRMED",
@@ -7217,7 +5815,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T20:11:52Z",
     "endDate": "2023-11-17T18:32:12Z",
-    "totalPrice": 17653,
+    "totalPrice": 1703,
     "guests": 2,
     "partpaymentPrice": 9629,
     "status": "UNAVAILABLE",
@@ -7230,7 +5828,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T19:33:08Z",
     "endDate": "2023-11-20T11:05:43Z",
-    "totalPrice": 38412,
+    "totalPrice": 3802,
     "guests": 7,
     "partpaymentPrice": 6080,
     "status": "CONFIRMED",
@@ -7243,7 +5841,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T14:48:06Z",
     "endDate": "2023-12-01T16:25:42Z",
-    "totalPrice": 29400,
+    "totalPrice": 2900,
     "guests": 8,
     "partpaymentPrice": 2075,
     "status": "CONFIRMED",
@@ -7256,7 +5854,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T04:59:11Z",
     "endDate": "2023-12-25T02:16:00Z",
-    "totalPrice": 45171,
+    "totalPrice": 4501,
     "guests": 2,
     "partpaymentPrice": 7491,
     "status": "UNAVAILABLE",
@@ -7269,7 +5867,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T06:15:07Z",
     "endDate": "2023-12-28T07:15:38Z",
-    "totalPrice": 27788,
+    "totalPrice": 2708,
     "guests": 3,
     "partpaymentPrice": 7026,
     "status": "PENDING",
@@ -7282,7 +5880,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:22:41Z",
     "endDate": "2023-12-12T05:08:32Z",
-    "totalPrice": 17773,
+    "totalPrice": 1703,
     "guests": 2,
     "partpaymentPrice": 4724,
     "status": "UNAVAILABLE",
@@ -7295,7 +5893,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T14:14:50Z",
     "endDate": "2024-01-11T17:14:04Z",
-    "totalPrice": 31778,
+    "totalPrice": 3108,
     "guests": 4,
     "partpaymentPrice": 5864,
     "status": "CONFIRMED",
@@ -7308,7 +5906,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T15:54:04Z",
     "endDate": "2023-12-24T01:44:26Z",
-    "totalPrice": 46443,
+    "totalPrice": 4603,
     "guests": 6,
     "partpaymentPrice": 4744,
     "status": "PENDING",
@@ -7321,7 +5919,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T00:51:38Z",
     "endDate": "2024-01-21T05:54:02Z",
-    "totalPrice": 14485,
+    "totalPrice": 1405,
     "guests": 5,
     "partpaymentPrice": 3549,
     "status": "CONFIRMED",
@@ -7334,7 +5932,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T20:13:56Z",
     "endDate": "2023-12-30T08:35:37Z",
-    "totalPrice": 23857,
+    "totalPrice": 2307,
     "guests": 5,
     "partpaymentPrice": 6114,
     "status": "PENDING",
@@ -7347,7 +5945,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T00:05:21Z",
     "endDate": "2023-11-24T14:27:16Z",
-    "totalPrice": 46455,
+    "totalPrice": 4605,
     "guests": 7,
     "partpaymentPrice": 3354,
     "status": "UNAVAILABLE",
@@ -7360,7 +5958,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T01:45:13Z",
     "endDate": "2024-01-11T08:13:23Z",
-    "totalPrice": 19301,
+    "totalPrice": 1901,
     "guests": 6,
     "partpaymentPrice": 4278,
     "status": "UNAVAILABLE",
@@ -7373,7 +5971,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T00:34:04Z",
     "endDate": "2023-12-01T09:19:52Z",
-    "totalPrice": 45639,
+    "totalPrice": 4509,
     "guests": 3,
     "partpaymentPrice": 4857,
     "status": "UNAVAILABLE",
@@ -7386,7 +5984,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:53:47Z",
     "endDate": "2023-12-02T15:06:44Z",
-    "totalPrice": 23619,
+    "totalPrice": 2309,
     "guests": 8,
     "partpaymentPrice": 3073,
     "status": "UNAVAILABLE",
@@ -7399,7 +5997,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T10:25:26Z",
     "endDate": "2023-12-12T21:09:52Z",
-    "totalPrice": 16889,
+    "totalPrice": 1609,
     "guests": 2,
     "partpaymentPrice": 3985,
     "status": "PENDING",
@@ -7412,7 +6010,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T08:01:21Z",
     "endDate": "2023-12-11T15:30:58Z",
-    "totalPrice": 47771,
+    "totalPrice": 4701,
     "guests": 2,
     "partpaymentPrice": 5680,
     "status": "CONFIRMED",
@@ -7425,7 +6023,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T02:36:52Z",
     "endDate": "2023-11-22T07:13:51Z",
-    "totalPrice": 13998,
+    "totalPrice": 1308,
     "guests": 8,
     "partpaymentPrice": 2885,
     "status": "PENDING",
@@ -7438,7 +6036,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T17:35:03Z",
     "endDate": "2023-12-31T16:47:17Z",
-    "totalPrice": 28135,
+    "totalPrice": 2805,
     "guests": 6,
     "partpaymentPrice": 2940,
     "status": "CONFIRMED",
@@ -7451,7 +6049,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T06:24:53Z",
     "endDate": "2023-11-14T05:41:57Z",
-    "totalPrice": 21750,
+    "totalPrice": 2100,
     "guests": 2,
     "partpaymentPrice": 2306,
     "status": "PENDING",
@@ -7464,7 +6062,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T15:12:08Z",
     "endDate": "2024-01-04T06:15:09Z",
-    "totalPrice": 47319,
+    "totalPrice": 4709,
     "guests": 3,
     "partpaymentPrice": 2090,
     "status": "CONFIRMED",
@@ -7477,7 +6075,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T16:38:01Z",
     "endDate": "2023-12-14T23:57:11Z",
-    "totalPrice": 15540,
+    "totalPrice": 1500,
     "guests": 8,
     "partpaymentPrice": 6082,
     "status": "PENDING",
@@ -7490,7 +6088,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T17:57:31Z",
     "endDate": "2023-11-14T20:55:08Z",
-    "totalPrice": 20132,
+    "totalPrice": 2002,
     "guests": 5,
     "partpaymentPrice": 2310,
     "status": "CONFIRMED",
@@ -7503,7 +6101,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T18:28:46Z",
     "endDate": "2023-12-12T23:30:28Z",
-    "totalPrice": 20792,
+    "totalPrice": 2002,
     "guests": 2,
     "partpaymentPrice": 3116,
     "status": "PENDING",
@@ -7516,7 +6114,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T21:22:43Z",
     "endDate": "2023-12-03T17:07:35Z",
-    "totalPrice": 33673,
+    "totalPrice": 3303,
     "guests": 7,
     "partpaymentPrice": 4171,
     "status": "PENDING",
@@ -7529,7 +6127,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T06:25:38Z",
     "endDate": "2023-12-03T08:52:14Z",
-    "totalPrice": 10699,
+    "totalPrice": 1009,
     "guests": 5,
     "partpaymentPrice": 6700,
     "status": "CONFIRMED",
@@ -7542,7 +6140,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T11:03:53Z",
     "endDate": "2024-01-21T14:28:41Z",
-    "totalPrice": 11068,
+    "totalPrice": 1108,
     "guests": 7,
     "partpaymentPrice": 9738,
     "status": "PENDING",
@@ -7555,7 +6153,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:25:57Z",
     "endDate": "2024-01-03T13:00:24Z",
-    "totalPrice": 45176,
+    "totalPrice": 4506,
     "guests": 4,
     "partpaymentPrice": 9339,
     "status": "CONFIRMED",
@@ -7568,7 +6166,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T09:33:25Z",
     "endDate": "2024-01-26T05:39:57Z",
-    "totalPrice": 22110,
+    "totalPrice": 2200,
     "guests": 2,
     "partpaymentPrice": 2397,
     "status": "PENDING",
@@ -7581,7 +6179,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T01:11:49Z",
     "endDate": "2024-01-14T22:19:21Z",
-    "totalPrice": 17905,
+    "totalPrice": 1705,
     "guests": 8,
     "partpaymentPrice": 3858,
     "status": "CONFIRMED",
@@ -7594,7 +6192,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T16:45:10Z",
     "endDate": "2023-12-14T07:19:14Z",
-    "totalPrice": 40722,
+    "totalPrice": 4002,
     "guests": 6,
     "partpaymentPrice": 5490,
     "status": "PENDING",
@@ -7607,7 +6205,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T19:47:06Z",
     "endDate": "2023-11-19T17:57:11Z",
-    "totalPrice": 33277,
+    "totalPrice": 3307,
     "guests": 8,
     "partpaymentPrice": 9407,
     "status": "CONFIRMED",
@@ -7620,7 +6218,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T04:18:00Z",
     "endDate": "2024-01-23T10:51:52Z",
-    "totalPrice": 18433,
+    "totalPrice": 1803,
     "guests": 5,
     "partpaymentPrice": 9923,
     "status": "PENDING",
@@ -7633,7 +6231,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T02:19:03Z",
     "endDate": "2023-12-01T04:25:04Z",
-    "totalPrice": 20778,
+    "totalPrice": 2008,
     "guests": 2,
     "partpaymentPrice": 3445,
     "status": "CONFIRMED",
@@ -7646,7 +6244,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T15:07:25Z",
     "endDate": "2024-01-18T19:01:33Z",
-    "totalPrice": 33766,
+    "totalPrice": 3306,
     "guests": 7,
     "partpaymentPrice": 7831,
     "status": "CONFIRMED",
@@ -7659,7 +6257,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T20:17:38Z",
     "endDate": "2024-02-01T10:04:17Z",
-    "totalPrice": 30970,
+    "totalPrice": 3000,
     "guests": 2,
     "partpaymentPrice": 8506,
     "status": "CONFIRMED",
@@ -7672,7 +6270,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T06:17:20Z",
     "endDate": "2023-12-09T21:51:32Z",
-    "totalPrice": 14096,
+    "totalPrice": 1406,
     "guests": 8,
     "partpaymentPrice": 5702,
     "status": "UNAVAILABLE",
@@ -7685,7 +6283,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T11:58:56Z",
     "endDate": "2023-11-26T01:01:44Z",
-    "totalPrice": 40674,
+    "totalPrice": 4004,
     "guests": 8,
     "partpaymentPrice": 5673,
     "status": "UNAVAILABLE",
@@ -7698,7 +6296,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T06:09:21Z",
     "endDate": "2024-01-17T13:11:39Z",
-    "totalPrice": 16724,
+    "totalPrice": 1604,
     "guests": 6,
     "partpaymentPrice": 4106,
     "status": "CONFIRMED",
@@ -7711,7 +6309,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T20:13:31Z",
     "endDate": "2023-11-30T16:50:38Z",
-    "totalPrice": 21747,
+    "totalPrice": 2107,
     "guests": 7,
     "partpaymentPrice": 8541,
     "status": "PENDING",
@@ -7724,7 +6322,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T03:59:28Z",
     "endDate": "2023-11-29T00:57:00Z",
-    "totalPrice": 29103,
+    "totalPrice": 2903,
     "guests": 6,
     "partpaymentPrice": 2777,
     "status": "UNAVAILABLE",
@@ -7737,7 +6335,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T17:46:48Z",
     "endDate": "2023-11-24T18:18:08Z",
-    "totalPrice": 19813,
+    "totalPrice": 1903,
     "guests": 6,
     "partpaymentPrice": 5955,
     "status": "UNAVAILABLE",
@@ -7750,7 +6348,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T08:06:45Z",
     "endDate": "2023-12-01T17:59:13Z",
-    "totalPrice": 19270,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 6363,
     "status": "UNAVAILABLE",
@@ -7763,7 +6361,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T21:04:11Z",
     "endDate": "2023-12-08T04:44:49Z",
-    "totalPrice": 49423,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 2447,
     "status": "CONFIRMED",
@@ -7776,7 +6374,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T14:07:51Z",
     "endDate": "2023-11-19T08:31:53Z",
-    "totalPrice": 37125,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 3548,
     "status": "CONFIRMED",
@@ -7789,7 +6387,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T19:12:29Z",
     "endDate": "2023-12-21T03:52:12Z",
-    "totalPrice": 47594,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 4948,
     "status": "PENDING",
@@ -7802,7 +6400,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T15:11:08Z",
     "endDate": "2024-01-10T01:56:43Z",
-    "totalPrice": 29885,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 9168,
     "status": "CONFIRMED",
@@ -7815,7 +6413,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T20:54:39Z",
     "endDate": "2023-11-23T00:55:22Z",
-    "totalPrice": 46557,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 5130,
     "status": "CONFIRMED",
@@ -7828,7 +6426,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T05:30:35Z",
     "endDate": "2024-01-17T10:42:32Z",
-    "totalPrice": 45774,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 7461,
     "status": "UNAVAILABLE",
@@ -7841,7 +6439,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T19:47:30Z",
     "endDate": "2024-01-31T08:40:09Z",
-    "totalPrice": 31529,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 4166,
     "status": "PENDING",
@@ -7854,7 +6452,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T06:40:42Z",
     "endDate": "2023-12-08T13:21:15Z",
-    "totalPrice": 47606,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 3132,
     "status": "CONFIRMED",
@@ -7867,7 +6465,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T23:19:21Z",
     "endDate": "2023-12-11T16:13:21Z",
-    "totalPrice": 12250,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 4527,
     "status": "UNAVAILABLE",
@@ -7880,7 +6478,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T02:23:49Z",
     "endDate": "2024-01-29T15:09:47Z",
-    "totalPrice": 15159,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 2786,
     "status": "CONFIRMED",
@@ -7893,7 +6491,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:58:58Z",
     "endDate": "2024-01-28T12:01:46Z",
-    "totalPrice": 27034,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 2800,
     "status": "CONFIRMED",
@@ -7906,7 +6504,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T19:49:11Z",
     "endDate": "2023-12-28T18:00:55Z",
-    "totalPrice": 32442,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 5867,
     "status": "CONFIRMED",
@@ -7919,7 +6517,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T14:41:15Z",
     "endDate": "2023-11-23T03:47:04Z",
-    "totalPrice": 37097,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 7042,
     "status": "PENDING",
@@ -7932,7 +6530,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T00:10:10Z",
     "endDate": "2023-11-28T11:15:43Z",
-    "totalPrice": 24391,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 8234,
     "status": "UNAVAILABLE",
@@ -7945,7 +6543,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T12:47:52Z",
     "endDate": "2023-12-18T11:28:47Z",
-    "totalPrice": 17003,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 7178,
     "status": "PENDING",
@@ -7958,7 +6556,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:55:59Z",
     "endDate": "2024-01-28T01:57:21Z",
-    "totalPrice": 12443,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 3814,
     "status": "UNAVAILABLE",
@@ -7971,7 +6569,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T08:06:16Z",
     "endDate": "2023-11-22T09:31:33Z",
-    "totalPrice": 22233,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 5745,
     "status": "CONFIRMED",
@@ -7984,7 +6582,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T17:16:46Z",
     "endDate": "2024-01-28T02:41:02Z",
-    "totalPrice": 39792,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 3933,
     "status": "PENDING",
@@ -7997,7 +6595,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T11:32:37Z",
     "endDate": "2023-11-26T05:38:59Z",
-    "totalPrice": 12736,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 8381,
     "status": "UNAVAILABLE",
@@ -8010,7 +6608,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T22:57:52Z",
     "endDate": "2023-11-16T22:15:08Z",
-    "totalPrice": 43548,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 9100,
     "status": "PENDING",
@@ -8023,7 +6621,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T02:19:42Z",
     "endDate": "2023-11-24T00:08:09Z",
-    "totalPrice": 36047,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 7826,
     "status": "CONFIRMED",
@@ -8036,7 +6634,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:51:11Z",
     "endDate": "2023-12-31T05:19:28Z",
-    "totalPrice": 37377,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 2539,
     "status": "CONFIRMED",
@@ -8049,7 +6647,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T07:23:45Z",
     "endDate": "2024-01-21T05:05:05Z",
-    "totalPrice": 37272,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 4750,
     "status": "CONFIRMED",
@@ -8062,7 +6660,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T02:27:58Z",
     "endDate": "2024-01-02T22:54:53Z",
-    "totalPrice": 45384,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 6032,
     "status": "PENDING",
@@ -8075,7 +6673,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:52:03Z",
     "endDate": "2024-01-22T18:41:05Z",
-    "totalPrice": 18021,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 8305,
     "status": "CONFIRMED",
@@ -8088,7 +6686,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T13:09:19Z",
     "endDate": "2024-01-02T19:17:21Z",
-    "totalPrice": 34897,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 4459,
     "status": "UNAVAILABLE",
@@ -8101,7 +6699,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T12:47:03Z",
     "endDate": "2023-12-21T04:23:21Z",
-    "totalPrice": 29110,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 7277,
     "status": "CONFIRMED",
@@ -8114,7 +6712,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T16:10:52Z",
     "endDate": "2023-12-14T00:40:31Z",
-    "totalPrice": 28770,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 3661,
     "status": "CONFIRMED",
@@ -8127,7 +6725,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T01:56:53Z",
     "endDate": "2024-01-28T09:00:55Z",
-    "totalPrice": 17239,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 4870,
     "status": "PENDING",
@@ -8140,7 +6738,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T12:57:46Z",
     "endDate": "2023-11-24T08:46:13Z",
-    "totalPrice": 40335,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 8341,
     "status": "CONFIRMED",
@@ -8153,7 +6751,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T11:32:16Z",
     "endDate": "2023-11-13T10:39:12Z",
-    "totalPrice": 11508,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 9178,
     "status": "CONFIRMED",
@@ -8166,7 +6764,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:30:20Z",
     "endDate": "2023-12-13T13:07:28Z",
-    "totalPrice": 14183,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 6623,
     "status": "CONFIRMED",
@@ -8179,7 +6777,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T10:16:15Z",
     "endDate": "2024-01-16T12:09:49Z",
-    "totalPrice": 26546,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 8398,
     "status": "CONFIRMED",
@@ -8192,7 +6790,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T00:54:23Z",
     "endDate": "2023-12-04T05:14:00Z",
-    "totalPrice": 37861,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 2165,
     "status": "CONFIRMED",
@@ -8205,7 +6803,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T03:57:54Z",
     "endDate": "2023-11-21T10:35:50Z",
-    "totalPrice": 41461,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 6583,
     "status": "UNAVAILABLE",
@@ -8218,7 +6816,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T17:39:13Z",
     "endDate": "2024-01-02T19:35:55Z",
-    "totalPrice": 31312,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 5123,
     "status": "PENDING",
@@ -8231,7 +6829,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T15:12:48Z",
     "endDate": "2024-01-30T17:02:40Z",
-    "totalPrice": 34977,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 9367,
     "status": "CONFIRMED",
@@ -8244,7 +6842,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T02:37:20Z",
     "endDate": "2024-01-06T21:56:56Z",
-    "totalPrice": 18518,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 5124,
     "status": "UNAVAILABLE",
@@ -8257,7 +6855,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T22:17:18Z",
     "endDate": "2023-12-22T05:11:18Z",
-    "totalPrice": 14039,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 2714,
     "status": "PENDING",
@@ -8270,7 +6868,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T21:52:51Z",
     "endDate": "2024-02-01T14:17:47Z",
-    "totalPrice": 48066,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 9146,
     "status": "CONFIRMED",
@@ -8283,7 +6881,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T17:57:53Z",
     "endDate": "2024-01-13T18:23:35Z",
-    "totalPrice": 33171,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 7469,
     "status": "CONFIRMED",
@@ -8296,7 +6894,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:40:13Z",
     "endDate": "2024-01-18T00:43:21Z",
-    "totalPrice": 26224,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 2208,
     "status": "CONFIRMED",
@@ -8309,7 +6907,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T08:50:25Z",
     "endDate": "2024-01-27T16:11:47Z",
-    "totalPrice": 11197,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 6554,
     "status": "CONFIRMED",
@@ -8322,7 +6920,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T23:55:05Z",
     "endDate": "2023-11-22T02:48:35Z",
-    "totalPrice": 25364,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 3075,
     "status": "CONFIRMED",
@@ -8335,7 +6933,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T09:58:20Z",
     "endDate": "2024-01-09T18:37:12Z",
-    "totalPrice": 18598,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 4966,
     "status": "PENDING",
@@ -8348,7 +6946,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T21:58:36Z",
     "endDate": "2024-01-10T00:31:39Z",
-    "totalPrice": 12178,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 5444,
     "status": "CONFIRMED",
@@ -8361,7 +6959,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T12:48:56Z",
     "endDate": "2023-12-31T19:24:49Z",
-    "totalPrice": 28908,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 8445,
     "status": "UNAVAILABLE",
@@ -8374,7 +6972,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T01:28:05Z",
     "endDate": "2024-01-04T20:56:10Z",
-    "totalPrice": 23773,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 6427,
     "status": "PENDING",
@@ -8387,7 +6985,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:16:37Z",
     "endDate": "2023-12-21T15:27:16Z",
-    "totalPrice": 33628,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 3949,
     "status": "CONFIRMED",
@@ -8400,7 +6998,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T19:16:28Z",
     "endDate": "2024-01-20T03:05:31Z",
-    "totalPrice": 24740,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 8297,
     "status": "PENDING",
@@ -8413,7 +7011,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T04:43:36Z",
     "endDate": "2023-12-14T15:28:46Z",
-    "totalPrice": 19169,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 6010,
     "status": "PENDING",
@@ -8426,7 +7024,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T16:25:52Z",
     "endDate": "2023-12-01T11:24:07Z",
-    "totalPrice": 23640,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 6327,
     "status": "UNAVAILABLE",
@@ -8439,7 +7037,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T00:17:51Z",
     "endDate": "2023-12-11T06:06:49Z",
-    "totalPrice": 49420,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 5311,
     "status": "UNAVAILABLE",
@@ -8452,7 +7050,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T14:54:07Z",
     "endDate": "2023-12-11T21:05:23Z",
-    "totalPrice": 42735,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 4980,
     "status": "PENDING",
@@ -8465,7 +7063,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T07:34:30Z",
     "endDate": "2023-11-27T20:48:05Z",
-    "totalPrice": 17364,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 4491,
     "status": "CONFIRMED",
@@ -8478,7 +7076,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T09:11:38Z",
     "endDate": "2023-12-31T13:44:39Z",
-    "totalPrice": 42379,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 2751,
     "status": "PENDING",
@@ -8491,7 +7089,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T06:47:28Z",
     "endDate": "2023-11-25T04:47:30Z",
-    "totalPrice": 35063,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 7838,
     "status": "UNAVAILABLE",
@@ -8504,7 +7102,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:49:04Z",
     "endDate": "2023-12-30T06:26:02Z",
-    "totalPrice": 10245,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 7963,
     "status": "UNAVAILABLE",
@@ -8517,7 +7115,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T22:25:20Z",
     "endDate": "2023-12-19T10:10:25Z",
-    "totalPrice": 37449,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 2303,
     "status": "CONFIRMED",
@@ -8530,7 +7128,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T04:24:51Z",
     "endDate": "2023-12-01T22:50:01Z",
-    "totalPrice": 14979,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 6791,
     "status": "UNAVAILABLE",
@@ -8543,7 +7141,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T22:15:50Z",
     "endDate": "2023-12-11T11:34:07Z",
-    "totalPrice": 45789,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 2178,
     "status": "PENDING",
@@ -8556,7 +7154,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T11:39:22Z",
     "endDate": "2023-11-20T02:36:25Z",
-    "totalPrice": 25406,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 8993,
     "status": "PENDING",
@@ -8569,7 +7167,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T19:08:23Z",
     "endDate": "2023-11-18T03:24:16Z",
-    "totalPrice": 30479,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 4182,
     "status": "UNAVAILABLE",
@@ -8582,7 +7180,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T22:33:40Z",
     "endDate": "2023-12-10T05:15:31Z",
-    "totalPrice": 25828,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 5740,
     "status": "CONFIRMED",
@@ -8595,7 +7193,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T11:40:08Z",
     "endDate": "2023-12-31T08:21:26Z",
-    "totalPrice": 28815,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 2655,
     "status": "CONFIRMED",
@@ -8608,7 +7206,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T19:30:43Z",
     "endDate": "2023-11-25T16:09:40Z",
-    "totalPrice": 13176,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 2917,
     "status": "PENDING",
@@ -8621,7 +7219,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T15:45:32Z",
     "endDate": "2023-11-14T07:21:03Z",
-    "totalPrice": 31911,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 3506,
     "status": "PENDING",
@@ -8634,7 +7232,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T15:21:21Z",
     "endDate": "2024-01-23T18:47:51Z",
-    "totalPrice": 33765,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 3992,
     "status": "UNAVAILABLE",
@@ -8647,7 +7245,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T11:14:59Z",
     "endDate": "2023-11-24T20:40:08Z",
-    "totalPrice": 29244,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 2839,
     "status": "CONFIRMED",
@@ -8660,7 +7258,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T18:52:31Z",
     "endDate": "2023-11-20T21:30:30Z",
-    "totalPrice": 27221,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 5327,
     "status": "CONFIRMED",
@@ -8673,7 +7271,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T02:31:17Z",
     "endDate": "2023-11-15T20:49:01Z",
-    "totalPrice": 22297,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 3324,
     "status": "PENDING",
@@ -8686,7 +7284,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T08:28:47Z",
     "endDate": "2023-12-05T19:04:21Z",
-    "totalPrice": 12814,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 3544,
     "status": "CONFIRMED",
@@ -8699,7 +7297,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T02:15:20Z",
     "endDate": "2023-12-19T04:19:00Z",
-    "totalPrice": 16750,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 3859,
     "status": "UNAVAILABLE",
@@ -8712,7 +7310,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:31:33Z",
     "endDate": "2023-11-28T12:52:10Z",
-    "totalPrice": 11855,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 2179,
     "status": "UNAVAILABLE",
@@ -8725,7 +7323,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T17:15:21Z",
     "endDate": "2024-01-06T11:53:17Z",
-    "totalPrice": 35780,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 3006,
     "status": "PENDING",
@@ -8738,7 +7336,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T12:52:45Z",
     "endDate": "2023-12-07T18:24:57Z",
-    "totalPrice": 18367,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 4947,
     "status": "UNAVAILABLE",
@@ -8751,7 +7349,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T19:51:03Z",
     "endDate": "2023-12-28T21:12:08Z",
-    "totalPrice": 41158,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 7728,
     "status": "UNAVAILABLE",
@@ -8764,7 +7362,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T07:52:31Z",
     "endDate": "2023-12-07T19:08:46Z",
-    "totalPrice": 48129,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 7486,
     "status": "PENDING",
@@ -8777,7 +7375,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T22:06:49Z",
     "endDate": "2023-11-20T06:46:08Z",
-    "totalPrice": 48110,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 4625,
     "status": "UNAVAILABLE",
@@ -8790,7 +7388,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T10:00:43Z",
     "endDate": "2023-12-16T21:56:38Z",
-    "totalPrice": 39515,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 3728,
     "status": "CONFIRMED",
@@ -8803,7 +7401,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T17:24:49Z",
     "endDate": "2023-12-17T17:28:13Z",
-    "totalPrice": 30421,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 7581,
     "status": "CONFIRMED",
@@ -8816,7 +7414,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T12:58:18Z",
     "endDate": "2024-01-12T08:57:30Z",
-    "totalPrice": 45377,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 2931,
     "status": "UNAVAILABLE",
@@ -8829,7 +7427,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T05:32:55Z",
     "endDate": "2024-01-09T17:50:26Z",
-    "totalPrice": 49148,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 9741,
     "status": "CONFIRMED",
@@ -8842,7 +7440,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T20:55:49Z",
     "endDate": "2023-12-27T00:12:49Z",
-    "totalPrice": 44758,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 9210,
     "status": "UNAVAILABLE",
@@ -8855,7 +7453,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T08:50:11Z",
     "endDate": "2023-12-07T12:16:59Z",
-    "totalPrice": 17118,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 4311,
     "status": "UNAVAILABLE",
@@ -8868,7 +7466,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T17:47:20Z",
     "endDate": "2024-01-16T13:09:07Z",
-    "totalPrice": 39645,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 5030,
     "status": "PENDING",
@@ -8881,7 +7479,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T15:35:30Z",
     "endDate": "2023-12-26T06:21:52Z",
-    "totalPrice": 45794,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 8929,
     "status": "UNAVAILABLE",
@@ -8894,7 +7492,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:42:51Z",
     "endDate": "2024-01-17T16:34:53Z",
-    "totalPrice": 18153,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 7847,
     "status": "PENDING",
@@ -8907,7 +7505,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T16:44:58Z",
     "endDate": "2024-01-25T18:50:21Z",
-    "totalPrice": 20264,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 4358,
     "status": "PENDING",
@@ -8920,7 +7518,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T13:31:07Z",
     "endDate": "2023-12-07T21:25:07Z",
-    "totalPrice": 35545,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 5404,
     "status": "UNAVAILABLE",
@@ -8933,7 +7531,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T01:35:10Z",
     "endDate": "2024-01-26T19:21:51Z",
-    "totalPrice": 12541,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 4878,
     "status": "UNAVAILABLE",
@@ -8946,7 +7544,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T10:51:17Z",
     "endDate": "2023-12-07T17:50:49Z",
-    "totalPrice": 20142,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 8913,
     "status": "CONFIRMED",
@@ -8959,7 +7557,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:57:22Z",
     "endDate": "2024-01-23T08:11:15Z",
-    "totalPrice": 33788,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 2430,
     "status": "CONFIRMED",
@@ -8972,7 +7570,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T04:09:54Z",
     "endDate": "2024-01-08T05:11:23Z",
-    "totalPrice": 45866,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 7316,
     "status": "PENDING",
@@ -8985,7 +7583,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T05:30:43Z",
     "endDate": "2023-12-03T13:28:24Z",
-    "totalPrice": 40682,
+    "totalPrice": 240,
     "guests": 7,
     "partpaymentPrice": 3470,
     "status": "PENDING",
@@ -8998,7 +7596,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T06:00:11Z",
     "endDate": "2023-11-28T11:36:47Z",
-    "totalPrice": 37859,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 5212,
     "status": "UNAVAILABLE",
@@ -9011,7 +7609,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T14:56:54Z",
     "endDate": "2023-11-28T09:12:09Z",
-    "totalPrice": 42832,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 6813,
     "status": "CONFIRMED",
@@ -9024,7 +7622,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T19:05:30Z",
     "endDate": "2024-01-05T18:59:45Z",
-    "totalPrice": 15213,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 8825,
     "status": "PENDING",
@@ -9037,7 +7635,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T13:18:03Z",
     "endDate": "2024-01-20T19:49:36Z",
-    "totalPrice": 44561,
+    "totalPrice": 240,
     "guests": 4,
     "partpaymentPrice": 6750,
     "status": "PENDING",
@@ -9050,7 +7648,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T21:33:23Z",
     "endDate": "2023-11-29T06:23:37Z",
-    "totalPrice": 38764,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 7619,
     "status": "UNAVAILABLE",
@@ -9063,7 +7661,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T14:21:15Z",
     "endDate": "2024-01-08T16:14:01Z",
-    "totalPrice": 44984,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 7710,
     "status": "CONFIRMED",
@@ -9076,7 +7674,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T06:48:39Z",
     "endDate": "2024-01-11T02:31:48Z",
-    "totalPrice": 20482,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 5740,
     "status": "UNAVAILABLE",
@@ -9089,7 +7687,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T06:20:13Z",
     "endDate": "2024-02-01T10:46:21Z",
-    "totalPrice": 48820,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 2054,
     "status": "UNAVAILABLE",
@@ -9102,7 +7700,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T14:20:07Z",
     "endDate": "2024-01-29T12:14:48Z",
-    "totalPrice": 25581,
+    "totalPrice": 240,
     "guests": 5,
     "partpaymentPrice": 4183,
     "status": "UNAVAILABLE",
@@ -9115,7 +7713,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T01:16:57Z",
     "endDate": "2023-11-16T06:07:31Z",
-    "totalPrice": 12084,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 3144,
     "status": "UNAVAILABLE",
@@ -9128,7 +7726,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T07:54:48Z",
     "endDate": "2024-01-26T12:59:31Z",
-    "totalPrice": 28730,
+    "totalPrice": 240,
     "guests": 3,
     "partpaymentPrice": 6119,
     "status": "UNAVAILABLE",
@@ -9141,7 +7739,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T06:15:07Z",
     "endDate": "2024-01-26T09:53:40Z",
-    "totalPrice": 16006,
+    "totalPrice": 240,
     "guests": 8,
     "partpaymentPrice": 7544,
     "status": "UNAVAILABLE",
@@ -9154,7 +7752,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T22:48:42Z",
     "endDate": "2023-11-22T15:30:47Z",
-    "totalPrice": 39766,
+    "totalPrice": 240,
     "guests": 2,
     "partpaymentPrice": 5442,
     "status": "CONFIRMED",
@@ -9167,7 +7765,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T14:51:21Z",
     "endDate": "2024-01-17T13:13:02Z",
-    "totalPrice": 29102,
+    "totalPrice": 2902,
     "guests": 3,
     "partpaymentPrice": 4844,
     "status": "CONFIRMED",
@@ -9180,7 +7778,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T00:30:57Z",
     "endDate": "2024-01-19T06:05:15Z",
-    "totalPrice": 15512,
+    "totalPrice": 1502,
     "guests": 6,
     "partpaymentPrice": 4968,
     "status": "UNAVAILABLE",
@@ -9193,7 +7791,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T03:23:31Z",
     "endDate": "2024-01-24T14:48:43Z",
-    "totalPrice": 24168,
+    "totalPrice": 2408,
     "guests": 6,
     "partpaymentPrice": 2063,
     "status": "CONFIRMED",
@@ -9206,7 +7804,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T10:02:49Z",
     "endDate": "2023-12-22T18:44:53Z",
-    "totalPrice": 47349,
+    "totalPrice": 4709,
     "guests": 4,
     "partpaymentPrice": 4972,
     "status": "PENDING",
@@ -9219,7 +7817,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T07:23:08Z",
     "endDate": "2023-11-28T16:15:30Z",
-    "totalPrice": 35716,
+    "totalPrice": 3506,
     "guests": 2,
     "partpaymentPrice": 7140,
     "status": "CONFIRMED",
@@ -9232,7 +7830,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:36:41Z",
     "endDate": "2023-11-13T23:05:12Z",
-    "totalPrice": 19998,
+    "totalPrice": 1908,
     "guests": 3,
     "partpaymentPrice": 5026,
     "status": "CONFIRMED",
@@ -9245,7 +7843,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T21:20:15Z",
     "endDate": "2023-12-12T12:04:15Z",
-    "totalPrice": 29004,
+    "totalPrice": 2904,
     "guests": 6,
     "partpaymentPrice": 3839,
     "status": "UNAVAILABLE",
@@ -9258,7 +7856,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T12:47:41Z",
     "endDate": "2024-01-15T00:05:00Z",
-    "totalPrice": 36318,
+    "totalPrice": 3608,
     "guests": 6,
     "partpaymentPrice": 6827,
     "status": "CONFIRMED",
@@ -9271,7 +7869,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T04:01:27Z",
     "endDate": "2023-11-21T14:27:03Z",
-    "totalPrice": 11699,
+    "totalPrice": 1109,
     "guests": 7,
     "partpaymentPrice": 9970,
     "status": "CONFIRMED",
@@ -9284,7 +7882,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:48:32Z",
     "endDate": "2023-12-10T09:53:53Z",
-    "totalPrice": 44324,
+    "totalPrice": 4404,
     "guests": 7,
     "partpaymentPrice": 7803,
     "status": "CONFIRMED",
@@ -9297,7 +7895,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T05:35:34Z",
     "endDate": "2024-01-19T01:03:20Z",
-    "totalPrice": 49080,
+    "totalPrice": 4900,
     "guests": 8,
     "partpaymentPrice": 8967,
     "status": "CONFIRMED",
@@ -9310,7 +7908,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T17:48:52Z",
     "endDate": "2024-01-17T19:30:48Z",
-    "totalPrice": 38488,
+    "totalPrice": 3808,
     "guests": 6,
     "partpaymentPrice": 4510,
     "status": "PENDING",
@@ -9323,7 +7921,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T13:29:34Z",
     "endDate": "2024-01-23T21:05:12Z",
-    "totalPrice": 22601,
+    "totalPrice": 2201,
     "guests": 5,
     "partpaymentPrice": 9082,
     "status": "PENDING",
@@ -9336,7 +7934,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T08:05:25Z",
     "endDate": "2024-01-28T02:31:36Z",
-    "totalPrice": 48840,
+    "totalPrice": 4800,
     "guests": 2,
     "partpaymentPrice": 5773,
     "status": "CONFIRMED",
@@ -9349,7 +7947,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T00:31:19Z",
     "endDate": "2024-01-30T08:32:22Z",
-    "totalPrice": 23122,
+    "totalPrice": 2302,
     "guests": 2,
     "partpaymentPrice": 2228,
     "status": "UNAVAILABLE",
@@ -9362,7 +7960,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T03:10:52Z",
     "endDate": "2024-01-06T11:43:31Z",
-    "totalPrice": 44727,
+    "totalPrice": 4407,
     "guests": 5,
     "partpaymentPrice": 3086,
     "status": "UNAVAILABLE",
@@ -9375,7 +7973,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T12:51:28Z",
     "endDate": "2024-01-28T02:18:32Z",
-    "totalPrice": 21553,
+    "totalPrice": 2103,
     "guests": 8,
     "partpaymentPrice": 5321,
     "status": "CONFIRMED",
@@ -9388,7 +7986,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:06:14Z",
     "endDate": "2024-01-06T01:32:32Z",
-    "totalPrice": 28799,
+    "totalPrice": 2809,
     "guests": 8,
     "partpaymentPrice": 7520,
     "status": "PENDING",
@@ -9401,7 +7999,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T22:02:09Z",
     "endDate": "2023-12-12T03:20:02Z",
-    "totalPrice": 16770,
+    "totalPrice": 1600,
     "guests": 7,
     "partpaymentPrice": 2683,
     "status": "CONFIRMED",
@@ -9414,7 +8012,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:04:34Z",
     "endDate": "2023-11-19T05:13:05Z",
-    "totalPrice": 28007,
+    "totalPrice": 2807,
     "guests": 7,
     "partpaymentPrice": 3382,
     "status": "UNAVAILABLE",
@@ -9427,7 +8025,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T07:28:18Z",
     "endDate": "2023-11-20T03:06:13Z",
-    "totalPrice": 39951,
+    "totalPrice": 3901,
     "guests": 7,
     "partpaymentPrice": 5965,
     "status": "UNAVAILABLE",
@@ -9440,7 +8038,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T11:41:38Z",
     "endDate": "2023-11-14T18:28:14Z",
-    "totalPrice": 41979,
+    "totalPrice": 4109,
     "guests": 5,
     "partpaymentPrice": 8460,
     "status": "PENDING",
@@ -9453,7 +8051,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T12:17:52Z",
     "endDate": "2024-01-19T18:36:13Z",
-    "totalPrice": 10623,
+    "totalPrice": 1003,
     "guests": 7,
     "partpaymentPrice": 7834,
     "status": "UNAVAILABLE",
@@ -9466,7 +8064,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T12:30:55Z",
     "endDate": "2023-11-25T23:25:04Z",
-    "totalPrice": 44660,
+    "totalPrice": 4400,
     "guests": 4,
     "partpaymentPrice": 5798,
     "status": "CONFIRMED",
@@ -9479,7 +8077,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T18:13:25Z",
     "endDate": "2023-12-27T19:12:14Z",
-    "totalPrice": 43060,
+    "totalPrice": 4300,
     "guests": 6,
     "partpaymentPrice": 2412,
     "status": "PENDING",
@@ -9492,7 +8090,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T05:58:04Z",
     "endDate": "2023-11-21T07:33:54Z",
-    "totalPrice": 14084,
+    "totalPrice": 1404,
     "guests": 7,
     "partpaymentPrice": 7389,
     "status": "UNAVAILABLE",
@@ -9505,7 +8103,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T11:54:21Z",
     "endDate": "2024-01-24T01:08:22Z",
-    "totalPrice": 21198,
+    "totalPrice": 2108,
     "guests": 4,
     "partpaymentPrice": 8102,
     "status": "CONFIRMED",
@@ -9518,7 +8116,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T01:12:12Z",
     "endDate": "2023-12-16T11:07:07Z",
-    "totalPrice": 36530,
+    "totalPrice": 3600,
     "guests": 2,
     "partpaymentPrice": 4056,
     "status": "CONFIRMED",
@@ -9531,7 +8129,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T00:49:12Z",
     "endDate": "2023-12-05T18:08:32Z",
-    "totalPrice": 33863,
+    "totalPrice": 3303,
     "guests": 4,
     "partpaymentPrice": 3985,
     "status": "CONFIRMED",
@@ -9544,7 +8142,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T16:08:24Z",
     "endDate": "2024-01-11T11:34:42Z",
-    "totalPrice": 37724,
+    "totalPrice": 3704,
     "guests": 6,
     "partpaymentPrice": 9150,
     "status": "CONFIRMED",
@@ -9557,7 +8155,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T13:52:41Z",
     "endDate": "2023-12-14T01:23:20Z",
-    "totalPrice": 25284,
+    "totalPrice": 2504,
     "guests": 4,
     "partpaymentPrice": 7964,
     "status": "CONFIRMED",
@@ -9570,7 +8168,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T05:32:53Z",
     "endDate": "2024-01-02T02:49:56Z",
-    "totalPrice": 32609,
+    "totalPrice": 3209,
     "guests": 8,
     "partpaymentPrice": 8488,
     "status": "PENDING",
@@ -9583,7 +8181,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:08:11Z",
     "endDate": "2023-12-03T16:39:41Z",
-    "totalPrice": 23004,
+    "totalPrice": 2304,
     "guests": 5,
     "partpaymentPrice": 6699,
     "status": "UNAVAILABLE",
@@ -9596,7 +8194,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T13:41:56Z",
     "endDate": "2024-01-20T20:34:54Z",
-    "totalPrice": 29729,
+    "totalPrice": 2909,
     "guests": 6,
     "partpaymentPrice": 6316,
     "status": "CONFIRMED",
@@ -9609,7 +8207,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T01:53:15Z",
     "endDate": "2023-12-22T14:00:07Z",
-    "totalPrice": 22012,
+    "totalPrice": 2202,
     "guests": 6,
     "partpaymentPrice": 5599,
     "status": "PENDING",
@@ -9622,7 +8220,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T14:03:55Z",
     "endDate": "2024-01-22T15:15:27Z",
-    "totalPrice": 11881,
+    "totalPrice": 1101,
     "guests": 2,
     "partpaymentPrice": 3758,
     "status": "PENDING",
@@ -9635,7 +8233,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T08:19:47Z",
     "endDate": "2023-11-24T18:10:17Z",
-    "totalPrice": 46057,
+    "totalPrice": 4607,
     "guests": 3,
     "partpaymentPrice": 2753,
     "status": "CONFIRMED",
@@ -9648,7 +8246,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T00:38:00Z",
     "endDate": "2023-11-17T06:15:38Z",
-    "totalPrice": 19848,
+    "totalPrice": 1908,
     "guests": 6,
     "partpaymentPrice": 7945,
     "status": "CONFIRMED",
@@ -9661,7 +8259,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T00:32:08Z",
     "endDate": "2024-01-14T09:00:43Z",
-    "totalPrice": 41273,
+    "totalPrice": 4103,
     "guests": 6,
     "partpaymentPrice": 4824,
     "status": "UNAVAILABLE",
@@ -9674,7 +8272,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T06:29:54Z",
     "endDate": "2024-01-01T13:07:02Z",
-    "totalPrice": 41475,
+    "totalPrice": 4105,
     "guests": 8,
     "partpaymentPrice": 6124,
     "status": "CONFIRMED",
@@ -9687,7 +8285,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T09:40:18Z",
     "endDate": "2023-11-14T03:06:07Z",
-    "totalPrice": 45613,
+    "totalPrice": 4503,
     "guests": 8,
     "partpaymentPrice": 3384,
     "status": "UNAVAILABLE",
@@ -9700,7 +8298,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T03:20:09Z",
     "endDate": "2023-12-16T00:21:06Z",
-    "totalPrice": 41756,
+    "totalPrice": 4106,
     "guests": 5,
     "partpaymentPrice": 9856,
     "status": "UNAVAILABLE",
@@ -9713,7 +8311,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T13:37:46Z",
     "endDate": "2023-11-30T11:09:26Z",
-    "totalPrice": 41282,
+    "totalPrice": 4102,
     "guests": 7,
     "partpaymentPrice": 4788,
     "status": "PENDING",
@@ -9726,7 +8324,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T08:11:57Z",
     "endDate": "2024-01-15T19:20:48Z",
-    "totalPrice": 15930,
+    "totalPrice": 1500,
     "guests": 2,
     "partpaymentPrice": 5765,
     "status": "CONFIRMED",
@@ -9739,7 +8337,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T15:45:45Z",
     "endDate": "2024-01-30T04:10:38Z",
-    "totalPrice": 23530,
+    "totalPrice": 2300,
     "guests": 7,
     "partpaymentPrice": 2647,
     "status": "CONFIRMED",
@@ -9752,7 +8350,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T22:39:24Z",
     "endDate": "2024-01-28T08:25:03Z",
-    "totalPrice": 25072,
+    "totalPrice": 2502,
     "guests": 5,
     "partpaymentPrice": 7292,
     "status": "UNAVAILABLE",
@@ -9765,7 +8363,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T20:11:25Z",
     "endDate": "2024-01-25T10:11:11Z",
-    "totalPrice": 48159,
+    "totalPrice": 4809,
     "guests": 3,
     "partpaymentPrice": 8300,
     "status": "CONFIRMED",
@@ -9778,7 +8376,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T13:42:53Z",
     "endDate": "2023-12-17T02:15:17Z",
-    "totalPrice": 31861,
+    "totalPrice": 3101,
     "guests": 3,
     "partpaymentPrice": 3838,
     "status": "UNAVAILABLE",
@@ -9791,7 +8389,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T02:02:05Z",
     "endDate": "2024-01-28T00:45:57Z",
-    "totalPrice": 22202,
+    "totalPrice": 2202,
     "guests": 2,
     "partpaymentPrice": 5698,
     "status": "CONFIRMED",
@@ -9804,7 +8402,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T06:09:53Z",
     "endDate": "2024-01-04T12:53:48Z",
-    "totalPrice": 14510,
+    "totalPrice": 1400,
     "guests": 3,
     "partpaymentPrice": 5154,
     "status": "PENDING",
@@ -9817,7 +8415,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T14:33:36Z",
     "endDate": "2023-12-18T14:41:25Z",
-    "totalPrice": 42899,
+    "totalPrice": 4209,
     "guests": 8,
     "partpaymentPrice": 2968,
     "status": "CONFIRMED",
@@ -9830,7 +8428,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T00:42:44Z",
     "endDate": "2023-12-13T17:22:29Z",
-    "totalPrice": 36623,
+    "totalPrice": 3603,
     "guests": 5,
     "partpaymentPrice": 6867,
     "status": "CONFIRMED",
@@ -9843,7 +8441,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T23:18:40Z",
     "endDate": "2023-11-23T16:47:33Z",
-    "totalPrice": 34252,
+    "totalPrice": 3402,
     "guests": 6,
     "partpaymentPrice": 3014,
     "status": "PENDING",
@@ -9856,7 +8454,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T04:16:38Z",
     "endDate": "2024-01-04T09:32:30Z",
-    "totalPrice": 37617,
+    "totalPrice": 3707,
     "guests": 4,
     "partpaymentPrice": 9891,
     "status": "CONFIRMED",
@@ -9869,7 +8467,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T11:33:20Z",
     "endDate": "2023-11-27T19:46:03Z",
-    "totalPrice": 18559,
+    "totalPrice": 1809,
     "guests": 5,
     "partpaymentPrice": 7690,
     "status": "CONFIRMED",
@@ -9882,7 +8480,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T07:17:39Z",
     "endDate": "2024-01-13T23:38:56Z",
-    "totalPrice": 35937,
+    "totalPrice": 3507,
     "guests": 3,
     "partpaymentPrice": 2868,
     "status": "CONFIRMED",
@@ -9895,7 +8493,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T22:16:51Z",
     "endDate": "2023-12-29T10:01:42Z",
-    "totalPrice": 40723,
+    "totalPrice": 4003,
     "guests": 6,
     "partpaymentPrice": 5326,
     "status": "PENDING",
@@ -9908,7 +8506,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T11:28:28Z",
     "endDate": "2023-11-21T22:46:18Z",
-    "totalPrice": 24860,
+    "totalPrice": 2400,
     "guests": 3,
     "partpaymentPrice": 5759,
     "status": "CONFIRMED",
@@ -9921,7 +8519,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T06:31:58Z",
     "endDate": "2023-11-20T20:09:01Z",
-    "totalPrice": 45394,
+    "totalPrice": 4504,
     "guests": 2,
     "partpaymentPrice": 8359,
     "status": "CONFIRMED",
@@ -9934,7 +8532,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T09:19:11Z",
     "endDate": "2024-01-22T04:47:40Z",
-    "totalPrice": 21387,
+    "totalPrice": 2107,
     "guests": 4,
     "partpaymentPrice": 5815,
     "status": "CONFIRMED",
@@ -9947,7 +8545,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T11:54:31Z",
     "endDate": "2024-01-07T00:23:32Z",
-    "totalPrice": 41420,
+    "totalPrice": 4100,
     "guests": 3,
     "partpaymentPrice": 7399,
     "status": "UNAVAILABLE",
@@ -9960,7 +8558,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T14:49:11Z",
     "endDate": "2024-01-10T10:50:03Z",
-    "totalPrice": 22428,
+    "totalPrice": 2208,
     "guests": 3,
     "partpaymentPrice": 6046,
     "status": "CONFIRMED",
@@ -9973,7 +8571,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T13:35:43Z",
     "endDate": "2023-12-10T11:17:07Z",
-    "totalPrice": 17786,
+    "totalPrice": 1706,
     "guests": 5,
     "partpaymentPrice": 5706,
     "status": "UNAVAILABLE",
@@ -9986,7 +8584,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T02:47:01Z",
     "endDate": "2023-12-02T08:26:28Z",
-    "totalPrice": 16939,
+    "totalPrice": 1609,
     "guests": 2,
     "partpaymentPrice": 8101,
     "status": "UNAVAILABLE",
@@ -9999,7 +8597,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T08:04:48Z",
     "endDate": "2023-11-23T19:31:30Z",
-    "totalPrice": 48815,
+    "totalPrice": 4805,
     "guests": 4,
     "partpaymentPrice": 9706,
     "status": "CONFIRMED",
@@ -10012,7 +8610,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T02:34:35Z",
     "endDate": "2024-01-03T20:30:04Z",
-    "totalPrice": 24120,
+    "totalPrice": 2400,
     "guests": 5,
     "partpaymentPrice": 2288,
     "status": "UNAVAILABLE",
@@ -10025,7 +8623,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T10:17:31Z",
     "endDate": "2023-12-26T15:29:33Z",
-    "totalPrice": 26330,
+    "totalPrice": 2600,
     "guests": 6,
     "partpaymentPrice": 7381,
     "status": "PENDING",
@@ -10038,7 +8636,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T23:04:53Z",
     "endDate": "2024-01-03T15:35:25Z",
-    "totalPrice": 35433,
+    "totalPrice": 3503,
     "guests": 4,
     "partpaymentPrice": 7737,
     "status": "CONFIRMED",
@@ -10051,7 +8649,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T00:08:08Z",
     "endDate": "2023-12-27T01:41:34Z",
-    "totalPrice": 44904,
+    "totalPrice": 4404,
     "guests": 2,
     "partpaymentPrice": 2242,
     "status": "UNAVAILABLE",
@@ -10064,7 +8662,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T00:39:51Z",
     "endDate": "2024-01-02T14:57:45Z",
-    "totalPrice": 32337,
+    "totalPrice": 3207,
     "guests": 3,
     "partpaymentPrice": 7927,
     "status": "UNAVAILABLE",
@@ -10077,7 +8675,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T11:16:07Z",
     "endDate": "2023-12-09T15:33:37Z",
-    "totalPrice": 14051,
+    "totalPrice": 1401,
     "guests": 8,
     "partpaymentPrice": 7918,
     "status": "PENDING",
@@ -10090,7 +8688,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T09:44:38Z",
     "endDate": "2023-11-29T18:30:27Z",
-    "totalPrice": 36459,
+    "totalPrice": 3609,
     "guests": 5,
     "partpaymentPrice": 8165,
     "status": "UNAVAILABLE",
@@ -10103,7 +8701,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T19:27:43Z",
     "endDate": "2024-01-08T15:10:42Z",
-    "totalPrice": 48273,
+    "totalPrice": 4803,
     "guests": 3,
     "partpaymentPrice": 9206,
     "status": "UNAVAILABLE",
@@ -10116,7 +8714,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T11:58:44Z",
     "endDate": "2024-01-02T08:46:48Z",
-    "totalPrice": 18240,
+    "totalPrice": 1800,
     "guests": 2,
     "partpaymentPrice": 8596,
     "status": "CONFIRMED",
@@ -10129,7 +8727,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T07:27:48Z",
     "endDate": "2023-11-23T04:31:10Z",
-    "totalPrice": 32847,
+    "totalPrice": 3207,
     "guests": 4,
     "partpaymentPrice": 9352,
     "status": "UNAVAILABLE",
@@ -10142,7 +8740,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T16:51:34Z",
     "endDate": "2023-11-27T13:42:47Z",
-    "totalPrice": 38584,
+    "totalPrice": 3804,
     "guests": 2,
     "partpaymentPrice": 4561,
     "status": "PENDING",
@@ -10155,7 +8753,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T04:42:30Z",
     "endDate": "2023-11-23T07:53:51Z",
-    "totalPrice": 19770,
+    "totalPrice": 1900,
     "guests": 7,
     "partpaymentPrice": 5656,
     "status": "CONFIRMED",
@@ -10168,7 +8766,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T20:40:09Z",
     "endDate": "2023-11-21T21:23:08Z",
-    "totalPrice": 24882,
+    "totalPrice": 2402,
     "guests": 2,
     "partpaymentPrice": 6210,
     "status": "UNAVAILABLE",
@@ -10181,7 +8779,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T13:10:51Z",
     "endDate": "2023-12-09T07:58:48Z",
-    "totalPrice": 40616,
+    "totalPrice": 4006,
     "guests": 8,
     "partpaymentPrice": 3119,
     "status": "CONFIRMED",
@@ -10194,7 +8792,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T22:27:31Z",
     "endDate": "2023-12-14T20:30:57Z",
-    "totalPrice": 25459,
+    "totalPrice": 2509,
     "guests": 6,
     "partpaymentPrice": 8712,
     "status": "UNAVAILABLE",
@@ -10207,7 +8805,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T01:55:14Z",
     "endDate": "2023-11-30T11:09:50Z",
-    "totalPrice": 27016,
+    "totalPrice": 2706,
     "guests": 7,
     "partpaymentPrice": 6355,
     "status": "CONFIRMED",
@@ -10220,7 +8818,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T15:32:39Z",
     "endDate": "2023-12-15T20:20:49Z",
-    "totalPrice": 44974,
+    "totalPrice": 4404,
     "guests": 6,
     "partpaymentPrice": 7558,
     "status": "UNAVAILABLE",
@@ -10233,7 +8831,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T19:38:37Z",
     "endDate": "2024-01-23T16:00:53Z",
-    "totalPrice": 31452,
+    "totalPrice": 3102,
     "guests": 7,
     "partpaymentPrice": 6260,
     "status": "PENDING",
@@ -10246,7 +8844,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T13:45:04Z",
     "endDate": "2023-12-07T10:56:46Z",
-    "totalPrice": 30241,
+    "totalPrice": 3001,
     "guests": 7,
     "partpaymentPrice": 8045,
     "status": "PENDING",
@@ -10259,7 +8857,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T15:17:25Z",
     "endDate": "2023-12-23T23:32:50Z",
-    "totalPrice": 41570,
+    "totalPrice": 4100,
     "guests": 6,
     "partpaymentPrice": 2421,
     "status": "CONFIRMED",
@@ -10272,7 +8870,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T13:06:18Z",
     "endDate": "2023-12-04T15:47:38Z",
-    "totalPrice": 20879,
+    "totalPrice": 2009,
     "guests": 8,
     "partpaymentPrice": 6792,
     "status": "PENDING",
@@ -10285,7 +8883,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T05:18:56Z",
     "endDate": "2023-11-24T09:30:52Z",
-    "totalPrice": 40283,
+    "totalPrice": 4003,
     "guests": 3,
     "partpaymentPrice": 5516,
     "status": "PENDING",
@@ -10298,7 +8896,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T23:02:05Z",
     "endDate": "2023-12-15T00:25:03Z",
-    "totalPrice": 12947,
+    "totalPrice": 1207,
     "guests": 7,
     "partpaymentPrice": 7392,
     "status": "CONFIRMED",
@@ -10311,7 +8909,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T23:58:19Z",
     "endDate": "2024-01-23T17:48:13Z",
-    "totalPrice": 43696,
+    "totalPrice": 430,
     "guests": 5,
     "partpaymentPrice": 4854,
     "status": "CONFIRMED",
@@ -10324,7 +8922,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T05:06:47Z",
     "endDate": "2023-12-23T21:02:08Z",
-    "totalPrice": 37995,
+    "totalPrice": 370,
     "guests": 2,
     "partpaymentPrice": 9039,
     "status": "UNAVAILABLE",
@@ -10337,7 +8935,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T16:39:27Z",
     "endDate": "2023-12-30T16:06:47Z",
-    "totalPrice": 17702,
+    "totalPrice": 170,
     "guests": 2,
     "partpaymentPrice": 5484,
     "status": "CONFIRMED",
@@ -10350,7 +8948,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T20:43:15Z",
     "endDate": "2024-01-15T03:22:21Z",
-    "totalPrice": 22634,
+    "totalPrice": 220,
     "guests": 5,
     "partpaymentPrice": 7165,
     "status": "CONFIRMED",
@@ -10363,7 +8961,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T20:49:59Z",
     "endDate": "2023-12-30T02:58:01Z",
-    "totalPrice": 10499,
+    "totalPrice": 100,
     "guests": 7,
     "partpaymentPrice": 3990,
     "status": "UNAVAILABLE",
@@ -10376,7 +8974,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T22:30:07Z",
     "endDate": "2023-11-25T10:43:51Z",
-    "totalPrice": 26117,
+    "totalPrice": 260,
     "guests": 6,
     "partpaymentPrice": 9767,
     "status": "CONFIRMED",
@@ -10389,7 +8987,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T23:45:08Z",
     "endDate": "2023-12-09T10:33:23Z",
-    "totalPrice": 45691,
+    "totalPrice": 450,
     "guests": 5,
     "partpaymentPrice": 6137,
     "status": "PENDING",
@@ -10402,7 +9000,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T21:06:37Z",
     "endDate": "2024-01-24T20:00:59Z",
-    "totalPrice": 30405,
+    "totalPrice": 300,
     "guests": 3,
     "partpaymentPrice": 4675,
     "status": "CONFIRMED",
@@ -10415,7 +9013,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T20:09:00Z",
     "endDate": "2023-12-21T23:06:16Z",
-    "totalPrice": 36181,
+    "totalPrice": 360,
     "guests": 5,
     "partpaymentPrice": 3517,
     "status": "PENDING",
@@ -10428,7 +9026,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T02:51:11Z",
     "endDate": "2024-01-16T17:12:02Z",
-    "totalPrice": 20734,
+    "totalPrice": 200,
     "guests": 3,
     "partpaymentPrice": 2880,
     "status": "UNAVAILABLE",
@@ -10441,7 +9039,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T08:08:54Z",
     "endDate": "2023-11-19T06:10:50Z",
-    "totalPrice": 37422,
+    "totalPrice": 370,
     "guests": 7,
     "partpaymentPrice": 2812,
     "status": "UNAVAILABLE",
@@ -10454,7 +9052,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T20:06:03Z",
     "endDate": "2023-12-15T14:43:35Z",
-    "totalPrice": 40284,
+    "totalPrice": 400,
     "guests": 5,
     "partpaymentPrice": 4554,
     "status": "UNAVAILABLE",
@@ -10467,7 +9065,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T06:45:36Z",
     "endDate": "2024-01-24T05:51:18Z",
-    "totalPrice": 14715,
+    "totalPrice": 140,
     "guests": 3,
     "partpaymentPrice": 4376,
     "status": "UNAVAILABLE",
@@ -10480,7 +9078,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T13:49:45Z",
     "endDate": "2024-01-28T21:47:14Z",
-    "totalPrice": 30166,
+    "totalPrice": 300,
     "guests": 3,
     "partpaymentPrice": 9261,
     "status": "PENDING",
@@ -10493,7 +9091,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T20:38:36Z",
     "endDate": "2023-12-13T20:18:02Z",
-    "totalPrice": 30651,
+    "totalPrice": 300,
     "guests": 2,
     "partpaymentPrice": 2000,
     "status": "PENDING",
@@ -10506,7 +9104,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T21:15:25Z",
     "endDate": "2023-11-23T12:16:10Z",
-    "totalPrice": 21187,
+    "totalPrice": 210,
     "guests": 4,
     "partpaymentPrice": 4099,
     "status": "UNAVAILABLE",
@@ -10519,7 +9117,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T10:49:23Z",
     "endDate": "2023-12-26T09:08:06Z",
-    "totalPrice": 12923,
+    "totalPrice": 120,
     "guests": 2,
     "partpaymentPrice": 4528,
     "status": "CONFIRMED",
@@ -10532,7 +9130,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T11:12:30Z",
     "endDate": "2023-12-30T09:15:54Z",
-    "totalPrice": 10954,
+    "totalPrice": 100,
     "guests": 3,
     "partpaymentPrice": 4636,
     "status": "UNAVAILABLE",
@@ -10545,7 +9143,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T15:30:04Z",
     "endDate": "2024-01-10T01:56:28Z",
-    "totalPrice": 38507,
+    "totalPrice": 380,
     "guests": 4,
     "partpaymentPrice": 8949,
     "status": "PENDING",
@@ -10558,7 +9156,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T01:15:26Z",
     "endDate": "2024-01-07T14:58:19Z",
-    "totalPrice": 17125,
+    "totalPrice": 170,
     "guests": 8,
     "partpaymentPrice": 9546,
     "status": "CONFIRMED",
@@ -10571,7 +9169,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T19:47:12Z",
     "endDate": "2024-01-09T20:28:56Z",
-    "totalPrice": 44806,
+    "totalPrice": 440,
     "guests": 6,
     "partpaymentPrice": 7967,
     "status": "UNAVAILABLE",
@@ -10584,7 +9182,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T00:43:57Z",
     "endDate": "2023-12-20T22:01:14Z",
-    "totalPrice": 11615,
+    "totalPrice": 110,
     "guests": 8,
     "partpaymentPrice": 2994,
     "status": "PENDING",
@@ -10597,7 +9195,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T06:04:21Z",
     "endDate": "2024-02-01T05:23:36Z",
-    "totalPrice": 14684,
+    "totalPrice": 140,
     "guests": 2,
     "partpaymentPrice": 4653,
     "status": "CONFIRMED",
@@ -10610,7 +9208,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T02:31:15Z",
     "endDate": "2023-11-17T22:47:47Z",
-    "totalPrice": 30559,
+    "totalPrice": 300,
     "guests": 6,
     "partpaymentPrice": 4756,
     "status": "PENDING",
@@ -10623,7 +9221,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T19:21:43Z",
     "endDate": "2024-01-13T15:00:54Z",
-    "totalPrice": 48045,
+    "totalPrice": 480,
     "guests": 7,
     "partpaymentPrice": 9559,
     "status": "CONFIRMED",
@@ -10636,7 +9234,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T15:40:13Z",
     "endDate": "2024-01-23T02:04:45Z",
-    "totalPrice": 32486,
+    "totalPrice": 320,
     "guests": 4,
     "partpaymentPrice": 8591,
     "status": "UNAVAILABLE",
@@ -10649,7 +9247,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:09:38Z",
     "endDate": "2024-01-07T05:31:58Z",
-    "totalPrice": 17252,
+    "totalPrice": 170,
     "guests": 8,
     "partpaymentPrice": 9667,
     "status": "PENDING",
@@ -10662,7 +9260,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T17:35:52Z",
     "endDate": "2023-12-29T17:47:29Z",
-    "totalPrice": 32087,
+    "totalPrice": 320,
     "guests": 3,
     "partpaymentPrice": 9256,
     "status": "PENDING",
@@ -10675,7 +9273,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T19:35:40Z",
     "endDate": "2023-11-24T03:08:48Z",
-    "totalPrice": 30498,
+    "totalPrice": 300,
     "guests": 5,
     "partpaymentPrice": 2873,
     "status": "UNAVAILABLE",
@@ -10688,7 +9286,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T03:59:07Z",
     "endDate": "2024-01-14T12:47:03Z",
-    "totalPrice": 35326,
+    "totalPrice": 350,
     "guests": 5,
     "partpaymentPrice": 7230,
     "status": "CONFIRMED",
@@ -10701,7 +9299,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T20:20:46Z",
     "endDate": "2023-11-18T11:10:27Z",
-    "totalPrice": 46907,
+    "totalPrice": 460,
     "guests": 7,
     "partpaymentPrice": 6066,
     "status": "PENDING",
@@ -10714,7 +9312,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T16:59:32Z",
     "endDate": "2024-01-25T08:40:33Z",
-    "totalPrice": 20864,
+    "totalPrice": 200,
     "guests": 2,
     "partpaymentPrice": 6462,
     "status": "UNAVAILABLE",
@@ -10727,7 +9325,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T06:38:32Z",
     "endDate": "2023-12-31T18:27:45Z",
-    "totalPrice": 32004,
+    "totalPrice": 320,
     "guests": 5,
     "partpaymentPrice": 4884,
     "status": "CONFIRMED",
@@ -10740,7 +9338,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T04:28:20Z",
     "endDate": "2023-12-28T01:58:30Z",
-    "totalPrice": 48505,
+    "totalPrice": 480,
     "guests": 4,
     "partpaymentPrice": 6742,
     "status": "UNAVAILABLE",
@@ -10753,7 +9351,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T06:10:48Z",
     "endDate": "2024-01-04T13:32:26Z",
-    "totalPrice": 28436,
+    "totalPrice": 280,
     "guests": 2,
     "partpaymentPrice": 4596,
     "status": "PENDING",
@@ -10766,7 +9364,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T01:12:48Z",
     "endDate": "2024-01-13T06:05:35Z",
-    "totalPrice": 24231,
+    "totalPrice": 240,
     "guests": 6,
     "partpaymentPrice": 6596,
     "status": "PENDING",
@@ -10779,7 +9377,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T23:56:33Z",
     "endDate": "2024-01-08T20:35:00Z",
-    "totalPrice": 46828,
+    "totalPrice": 460,
     "guests": 6,
     "partpaymentPrice": 8867,
     "status": "PENDING",
@@ -10792,7 +9390,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T15:07:41Z",
     "endDate": "2024-01-31T01:48:55Z",
-    "totalPrice": 39224,
+    "totalPrice": 390,
     "guests": 4,
     "partpaymentPrice": 2076,
     "status": "CONFIRMED",
@@ -10805,7 +9403,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T13:20:15Z",
     "endDate": "2024-01-05T22:40:29Z",
-    "totalPrice": 31418,
+    "totalPrice": 310,
     "guests": 3,
     "partpaymentPrice": 7394,
     "status": "CONFIRMED",
@@ -10818,7 +9416,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T01:07:12Z",
     "endDate": "2024-01-30T14:32:30Z",
-    "totalPrice": 37264,
+    "totalPrice": 370,
     "guests": 6,
     "partpaymentPrice": 2079,
     "status": "CONFIRMED",
@@ -10831,7 +9429,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T19:41:11Z",
     "endDate": "2024-01-17T10:45:20Z",
-    "totalPrice": 23434,
+    "totalPrice": 230,
     "guests": 7,
     "partpaymentPrice": 8134,
     "status": "PENDING",
@@ -10844,7 +9442,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T02:13:15Z",
     "endDate": "2024-01-13T05:08:50Z",
-    "totalPrice": 20379,
+    "totalPrice": 200,
     "guests": 5,
     "partpaymentPrice": 3320,
     "status": "PENDING",
@@ -10857,7 +9455,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T21:36:17Z",
     "endDate": "2023-11-18T07:24:22Z",
-    "totalPrice": 40741,
+    "totalPrice": 400,
     "guests": 3,
     "partpaymentPrice": 8319,
     "status": "PENDING",
@@ -10870,7 +9468,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T18:20:50Z",
     "endDate": "2023-12-05T17:59:12Z",
-    "totalPrice": 32699,
+    "totalPrice": 320,
     "guests": 8,
     "partpaymentPrice": 3372,
     "status": "CONFIRMED",
@@ -10883,7 +9481,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T08:44:38Z",
     "endDate": "2024-01-17T21:10:43Z",
-    "totalPrice": 35961,
+    "totalPrice": 350,
     "guests": 3,
     "partpaymentPrice": 3345,
     "status": "CONFIRMED",
@@ -10896,7 +9494,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T02:03:39Z",
     "endDate": "2024-01-25T08:44:59Z",
-    "totalPrice": 27719,
+    "totalPrice": 270,
     "guests": 6,
     "partpaymentPrice": 8358,
     "status": "PENDING",
@@ -10909,7 +9507,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T23:31:41Z",
     "endDate": "2023-12-13T03:04:25Z",
-    "totalPrice": 42639,
+    "totalPrice": 420,
     "guests": 3,
     "partpaymentPrice": 6977,
     "status": "CONFIRMED",
@@ -10922,7 +9520,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T01:08:50Z",
     "endDate": "2024-01-29T13:51:17Z",
-    "totalPrice": 22400,
+    "totalPrice": 220,
     "guests": 4,
     "partpaymentPrice": 3261,
     "status": "CONFIRMED",
@@ -10935,7 +9533,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T05:38:55Z",
     "endDate": "2023-12-11T03:45:23Z",
-    "totalPrice": 19845,
+    "totalPrice": 190,
     "guests": 7,
     "partpaymentPrice": 4931,
     "status": "UNAVAILABLE",
@@ -10948,7 +9546,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T02:57:58Z",
     "endDate": "2023-12-16T19:46:30Z",
-    "totalPrice": 13273,
+    "totalPrice": 130,
     "guests": 8,
     "partpaymentPrice": 2083,
     "status": "CONFIRMED",
@@ -10961,7 +9559,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T07:22:24Z",
     "endDate": "2024-01-16T21:44:39Z",
-    "totalPrice": 45428,
+    "totalPrice": 450,
     "guests": 6,
     "partpaymentPrice": 6004,
     "status": "CONFIRMED",
@@ -10974,7 +9572,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T15:11:28Z",
     "endDate": "2023-12-17T10:03:46Z",
-    "totalPrice": 26794,
+    "totalPrice": 260,
     "guests": 4,
     "partpaymentPrice": 3331,
     "status": "UNAVAILABLE",
@@ -10987,7 +9585,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T06:12:42Z",
     "endDate": "2023-12-30T09:23:30Z",
-    "totalPrice": 21220,
+    "totalPrice": 210,
     "guests": 6,
     "partpaymentPrice": 5213,
     "status": "CONFIRMED",
@@ -11000,7 +9598,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T18:24:06Z",
     "endDate": "2023-12-26T05:57:39Z",
-    "totalPrice": 12042,
+    "totalPrice": 120,
     "guests": 4,
     "partpaymentPrice": 4048,
     "status": "UNAVAILABLE",
@@ -11013,7 +9611,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:58:19Z",
     "endDate": "2023-12-21T17:15:14Z",
-    "totalPrice": 33591,
+    "totalPrice": 330,
     "guests": 8,
     "partpaymentPrice": 8351,
     "status": "CONFIRMED",
@@ -11026,7 +9624,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T21:48:56Z",
     "endDate": "2024-01-18T01:47:10Z",
-    "totalPrice": 30493,
+    "totalPrice": 300,
     "guests": 7,
     "partpaymentPrice": 7710,
     "status": "UNAVAILABLE",
@@ -11039,7 +9637,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T05:47:43Z",
     "endDate": "2023-11-13T11:05:31Z",
-    "totalPrice": 15062,
+    "totalPrice": 150,
     "guests": 8,
     "partpaymentPrice": 8630,
     "status": "PENDING",
@@ -11052,7 +9650,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T12:13:14Z",
     "endDate": "2023-11-22T05:58:24Z",
-    "totalPrice": 39517,
+    "totalPrice": 390,
     "guests": 8,
     "partpaymentPrice": 9962,
     "status": "PENDING",
@@ -11065,7 +9663,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T15:35:44Z",
     "endDate": "2024-01-15T23:14:39Z",
-    "totalPrice": 46091,
+    "totalPrice": 460,
     "guests": 8,
     "partpaymentPrice": 8852,
     "status": "UNAVAILABLE",
@@ -11078,7 +9676,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T16:23:12Z",
     "endDate": "2023-11-24T10:31:36Z",
-    "totalPrice": 20917,
+    "totalPrice": 200,
     "guests": 4,
     "partpaymentPrice": 5041,
     "status": "UNAVAILABLE",
@@ -11091,7 +9689,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T06:26:38Z",
     "endDate": "2023-12-05T15:45:53Z",
-    "totalPrice": 46876,
+    "totalPrice": 460,
     "guests": 4,
     "partpaymentPrice": 6091,
     "status": "UNAVAILABLE",
@@ -11104,7 +9702,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:25:37Z",
     "endDate": "2023-12-24T22:56:48Z",
-    "totalPrice": 38120,
+    "totalPrice": 380,
     "guests": 4,
     "partpaymentPrice": 9739,
     "status": "CONFIRMED",
@@ -11117,7 +9715,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T17:49:17Z",
     "endDate": "2023-11-26T09:09:37Z",
-    "totalPrice": 34741,
+    "totalPrice": 340,
     "guests": 4,
     "partpaymentPrice": 9181,
     "status": "UNAVAILABLE",
@@ -11130,7 +9728,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T07:22:26Z",
     "endDate": "2024-01-17T00:02:25Z",
-    "totalPrice": 14520,
+    "totalPrice": 140,
     "guests": 4,
     "partpaymentPrice": 6159,
     "status": "PENDING",
@@ -11143,7 +9741,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:51:14Z",
     "endDate": "2023-12-12T19:26:11Z",
-    "totalPrice": 11819,
+    "totalPrice": 110,
     "guests": 7,
     "partpaymentPrice": 6616,
     "status": "CONFIRMED",
@@ -11156,7 +9754,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T15:51:09Z",
     "endDate": "2023-12-02T17:13:31Z",
-    "totalPrice": 44055,
+    "totalPrice": 440,
     "guests": 2,
     "partpaymentPrice": 8682,
     "status": "PENDING",
@@ -11169,7 +9767,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T12:16:49Z",
     "endDate": "2023-12-18T19:28:47Z",
-    "totalPrice": 12999,
+    "totalPrice": 120,
     "guests": 8,
     "partpaymentPrice": 6915,
     "status": "CONFIRMED",
@@ -11182,7 +9780,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T06:06:55Z",
     "endDate": "2024-01-31T11:06:43Z",
-    "totalPrice": 13148,
+    "totalPrice": 130,
     "guests": 3,
     "partpaymentPrice": 2559,
     "status": "PENDING",
@@ -11195,7 +9793,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T10:39:42Z",
     "endDate": "2023-12-07T18:33:34Z",
-    "totalPrice": 11533,
+    "totalPrice": 110,
     "guests": 6,
     "partpaymentPrice": 8819,
     "status": "PENDING",
@@ -11208,7 +9806,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T08:42:32Z",
     "endDate": "2024-01-15T10:56:48Z",
-    "totalPrice": 19180,
+    "totalPrice": 190,
     "guests": 3,
     "partpaymentPrice": 2857,
     "status": "CONFIRMED",
@@ -11221,7 +9819,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T23:38:51Z",
     "endDate": "2023-12-19T10:37:14Z",
-    "totalPrice": 30556,
+    "totalPrice": 300,
     "guests": 3,
     "partpaymentPrice": 2168,
     "status": "PENDING",
@@ -11234,7 +9832,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T11:35:25Z",
     "endDate": "2023-12-17T16:46:54Z",
-    "totalPrice": 13255,
+    "totalPrice": 130,
     "guests": 4,
     "partpaymentPrice": 3064,
     "status": "CONFIRMED",
@@ -11247,7 +9845,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T02:50:58Z",
     "endDate": "2023-12-24T09:57:15Z",
-    "totalPrice": 18993,
+    "totalPrice": 180,
     "guests": 3,
     "partpaymentPrice": 5715,
     "status": "PENDING",
@@ -11260,7 +9858,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T23:48:27Z",
     "endDate": "2024-01-15T07:37:22Z",
-    "totalPrice": 36582,
+    "totalPrice": 360,
     "guests": 6,
     "partpaymentPrice": 8650,
     "status": "UNAVAILABLE",
@@ -11273,7 +9871,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:25:59Z",
     "endDate": "2023-11-26T21:17:29Z",
-    "totalPrice": 10299,
+    "totalPrice": 100,
     "guests": 8,
     "partpaymentPrice": 9375,
     "status": "PENDING",
@@ -11286,7 +9884,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T20:54:51Z",
     "endDate": "2023-12-28T11:44:26Z",
-    "totalPrice": 32715,
+    "totalPrice": 320,
     "guests": 5,
     "partpaymentPrice": 8505,
     "status": "CONFIRMED",
@@ -11299,7 +9897,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T23:02:13Z",
     "endDate": "2024-01-21T04:10:11Z",
-    "totalPrice": 26575,
+    "totalPrice": 260,
     "guests": 4,
     "partpaymentPrice": 7297,
     "status": "PENDING",
@@ -11312,7 +9910,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T14:29:59Z",
     "endDate": "2023-12-07T03:42:49Z",
-    "totalPrice": 38516,
+    "totalPrice": 380,
     "guests": 6,
     "partpaymentPrice": 4872,
     "status": "PENDING",
@@ -11325,7 +9923,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T00:00:11Z",
     "endDate": "2023-11-16T10:31:37Z",
-    "totalPrice": 26003,
+    "totalPrice": 260,
     "guests": 4,
     "partpaymentPrice": 4134,
     "status": "CONFIRMED",
@@ -11338,7 +9936,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T22:48:46Z",
     "endDate": "2023-12-03T19:54:02Z",
-    "totalPrice": 11099,
+    "totalPrice": 110,
     "guests": 7,
     "partpaymentPrice": 4649,
     "status": "CONFIRMED",
@@ -11351,7 +9949,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T15:09:21Z",
     "endDate": "2023-12-18T08:53:10Z",
-    "totalPrice": 17173,
+    "totalPrice": 170,
     "guests": 7,
     "partpaymentPrice": 2282,
     "status": "PENDING",
@@ -11364,7 +9962,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T10:30:26Z",
     "endDate": "2023-12-16T03:22:08Z",
-    "totalPrice": 48846,
+    "totalPrice": 480,
     "guests": 2,
     "partpaymentPrice": 7160,
     "status": "CONFIRMED",
@@ -11377,7 +9975,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T00:55:52Z",
     "endDate": "2023-12-11T19:51:00Z",
-    "totalPrice": 19453,
+    "totalPrice": 190,
     "guests": 4,
     "partpaymentPrice": 4197,
     "status": "CONFIRMED",
@@ -11390,7 +9988,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T13:14:47Z",
     "endDate": "2023-12-15T14:22:06Z",
-    "totalPrice": 10887,
+    "totalPrice": 1007,
     "guests": 6,
     "partpaymentPrice": 8948,
     "status": "PENDING",
@@ -11403,7 +10001,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T06:09:10Z",
     "endDate": "2023-12-12T21:32:26Z",
-    "totalPrice": 49043,
+    "totalPrice": 4903,
     "guests": 6,
     "partpaymentPrice": 2729,
     "status": "PENDING",
@@ -11416,7 +10014,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T00:08:56Z",
     "endDate": "2023-12-20T16:39:49Z",
-    "totalPrice": 36454,
+    "totalPrice": 3604,
     "guests": 8,
     "partpaymentPrice": 8538,
     "status": "CONFIRMED",
@@ -11429,7 +10027,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T21:45:16Z",
     "endDate": "2024-01-22T20:52:05Z",
-    "totalPrice": 36110,
+    "totalPrice": 3600,
     "guests": 6,
     "partpaymentPrice": 2164,
     "status": "CONFIRMED",
@@ -11442,7 +10040,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T10:41:04Z",
     "endDate": "2023-11-27T09:46:10Z",
-    "totalPrice": 22926,
+    "totalPrice": 2206,
     "guests": 5,
     "partpaymentPrice": 8106,
     "status": "CONFIRMED",
@@ -11455,7 +10053,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T02:19:34Z",
     "endDate": "2023-11-13T15:00:25Z",
-    "totalPrice": 34015,
+    "totalPrice": 3405,
     "guests": 3,
     "partpaymentPrice": 5864,
     "status": "PENDING",
@@ -11468,7 +10066,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T19:10:55Z",
     "endDate": "2024-01-03T23:58:37Z",
-    "totalPrice": 22195,
+    "totalPrice": 2205,
     "guests": 8,
     "partpaymentPrice": 9406,
     "status": "CONFIRMED",
@@ -11481,7 +10079,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T02:00:59Z",
     "endDate": "2024-01-04T17:06:44Z",
-    "totalPrice": 18272,
+    "totalPrice": 1802,
     "guests": 2,
     "partpaymentPrice": 6660,
     "status": "PENDING",
@@ -11494,7 +10092,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T10:59:19Z",
     "endDate": "2024-01-24T18:52:44Z",
-    "totalPrice": 47056,
+    "totalPrice": 4706,
     "guests": 4,
     "partpaymentPrice": 5357,
     "status": "UNAVAILABLE",
@@ -11507,7 +10105,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T14:17:54Z",
     "endDate": "2024-01-13T16:23:12Z",
-    "totalPrice": 42199,
+    "totalPrice": 4209,
     "guests": 7,
     "partpaymentPrice": 5791,
     "status": "PENDING",
@@ -11520,7 +10118,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T18:00:25Z",
     "endDate": "2024-01-05T04:53:05Z",
-    "totalPrice": 49604,
+    "totalPrice": 4904,
     "guests": 6,
     "partpaymentPrice": 2164,
     "status": "UNAVAILABLE",
@@ -11533,7 +10131,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T18:16:29Z",
     "endDate": "2023-11-27T11:27:40Z",
-    "totalPrice": 26849,
+    "totalPrice": 2609,
     "guests": 8,
     "partpaymentPrice": 9182,
     "status": "PENDING",
@@ -11546,7 +10144,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T21:59:17Z",
     "endDate": "2023-12-31T13:43:24Z",
-    "totalPrice": 28122,
+    "totalPrice": 2802,
     "guests": 6,
     "partpaymentPrice": 5662,
     "status": "PENDING",
@@ -11559,7 +10157,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T04:57:46Z",
     "endDate": "2023-12-07T04:04:19Z",
-    "totalPrice": 46179,
+    "totalPrice": 4609,
     "guests": 5,
     "partpaymentPrice": 2528,
     "status": "UNAVAILABLE",
@@ -11572,7 +10170,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T12:25:26Z",
     "endDate": "2023-12-15T10:44:39Z",
-    "totalPrice": 10748,
+    "totalPrice": 1008,
     "guests": 7,
     "partpaymentPrice": 7611,
     "status": "UNAVAILABLE",
@@ -11585,7 +10183,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T21:14:02Z",
     "endDate": "2023-12-20T18:52:28Z",
-    "totalPrice": 36428,
+    "totalPrice": 3608,
     "guests": 6,
     "partpaymentPrice": 4169,
     "status": "PENDING",
@@ -11598,7 +10196,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T19:03:32Z",
     "endDate": "2023-12-10T00:06:59Z",
-    "totalPrice": 17471,
+    "totalPrice": 1701,
     "guests": 6,
     "partpaymentPrice": 2246,
     "status": "PENDING",
@@ -11611,7 +10209,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T03:25:57Z",
     "endDate": "2024-02-01T03:03:10Z",
-    "totalPrice": 31175,
+    "totalPrice": 3105,
     "guests": 2,
     "partpaymentPrice": 4292,
     "status": "CONFIRMED",
@@ -11624,7 +10222,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T00:49:09Z",
     "endDate": "2024-01-21T18:53:46Z",
-    "totalPrice": 41054,
+    "totalPrice": 4104,
     "guests": 7,
     "partpaymentPrice": 2001,
     "status": "UNAVAILABLE",
@@ -11637,7 +10235,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T00:05:50Z",
     "endDate": "2024-01-05T08:02:31Z",
-    "totalPrice": 10184,
+    "totalPrice": 1004,
     "guests": 8,
     "partpaymentPrice": 6805,
     "status": "UNAVAILABLE",
@@ -11650,7 +10248,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T09:58:59Z",
     "endDate": "2024-02-01T19:35:52Z",
-    "totalPrice": 46752,
+    "totalPrice": 4602,
     "guests": 4,
     "partpaymentPrice": 4401,
     "status": "CONFIRMED",
@@ -11663,7 +10261,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T10:37:59Z",
     "endDate": "2023-11-23T20:26:30Z",
-    "totalPrice": 41020,
+    "totalPrice": 4100,
     "guests": 7,
     "partpaymentPrice": 7979,
     "status": "UNAVAILABLE",
@@ -11676,7 +10274,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T11:46:28Z",
     "endDate": "2023-12-14T08:43:47Z",
-    "totalPrice": 13178,
+    "totalPrice": 1308,
     "guests": 8,
     "partpaymentPrice": 8903,
     "status": "PENDING",
@@ -11689,7 +10287,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T16:15:53Z",
     "endDate": "2024-01-15T09:32:46Z",
-    "totalPrice": 24121,
+    "totalPrice": 2401,
     "guests": 3,
     "partpaymentPrice": 7561,
     "status": "PENDING",
@@ -11702,7 +10300,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T06:51:32Z",
     "endDate": "2023-11-22T15:33:24Z",
-    "totalPrice": 13060,
+    "totalPrice": 1300,
     "guests": 7,
     "partpaymentPrice": 7894,
     "status": "CONFIRMED",
@@ -11715,7 +10313,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T08:29:18Z",
     "endDate": "2023-11-26T16:14:24Z",
-    "totalPrice": 19818,
+    "totalPrice": 1908,
     "guests": 6,
     "partpaymentPrice": 9159,
     "status": "PENDING",
@@ -11728,7 +10326,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T07:12:23Z",
     "endDate": "2023-12-27T21:50:44Z",
-    "totalPrice": 26927,
+    "totalPrice": 2607,
     "guests": 7,
     "partpaymentPrice": 6938,
     "status": "PENDING",
@@ -11741,7 +10339,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:54:06Z",
     "endDate": "2024-01-09T18:42:23Z",
-    "totalPrice": 28972,
+    "totalPrice": 2802,
     "guests": 6,
     "partpaymentPrice": 5581,
     "status": "CONFIRMED",
@@ -11754,7 +10352,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T11:02:56Z",
     "endDate": "2023-11-23T03:57:37Z",
-    "totalPrice": 11113,
+    "totalPrice": 1103,
     "guests": 7,
     "partpaymentPrice": 7037,
     "status": "CONFIRMED",
@@ -11767,7 +10365,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T21:18:21Z",
     "endDate": "2024-01-26T06:37:39Z",
-    "totalPrice": 41765,
+    "totalPrice": 4105,
     "guests": 7,
     "partpaymentPrice": 3925,
     "status": "UNAVAILABLE",
@@ -11780,7 +10378,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T01:52:13Z",
     "endDate": "2024-01-16T17:46:41Z",
-    "totalPrice": 44368,
+    "totalPrice": 4408,
     "guests": 5,
     "partpaymentPrice": 6321,
     "status": "PENDING",
@@ -11793,7 +10391,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T04:59:46Z",
     "endDate": "2024-01-22T02:44:24Z",
-    "totalPrice": 13353,
+    "totalPrice": 1303,
     "guests": 6,
     "partpaymentPrice": 8445,
     "status": "PENDING",
@@ -11806,7 +10404,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T01:38:23Z",
     "endDate": "2023-11-16T05:27:39Z",
-    "totalPrice": 17338,
+    "totalPrice": 1708,
     "guests": 3,
     "partpaymentPrice": 2279,
     "status": "UNAVAILABLE",
@@ -11819,7 +10417,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T10:27:44Z",
     "endDate": "2024-01-31T21:09:54Z",
-    "totalPrice": 16531,
+    "totalPrice": 1601,
     "guests": 7,
     "partpaymentPrice": 9927,
     "status": "UNAVAILABLE",
@@ -11832,7 +10430,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T20:13:41Z",
     "endDate": "2024-02-01T11:25:46Z",
-    "totalPrice": 25412,
+    "totalPrice": 2502,
     "guests": 5,
     "partpaymentPrice": 9037,
     "status": "CONFIRMED",
@@ -11845,7 +10443,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T21:42:31Z",
     "endDate": "2024-01-16T13:16:38Z",
-    "totalPrice": 23408,
+    "totalPrice": 2308,
     "guests": 8,
     "partpaymentPrice": 2335,
     "status": "PENDING",
@@ -11858,7 +10456,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T07:43:11Z",
     "endDate": "2023-11-21T00:12:25Z",
-    "totalPrice": 26875,
+    "totalPrice": 2605,
     "guests": 7,
     "partpaymentPrice": 8159,
     "status": "CONFIRMED",
@@ -11871,7 +10469,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T01:01:07Z",
     "endDate": "2024-01-14T14:24:36Z",
-    "totalPrice": 26925,
+    "totalPrice": 2605,
     "guests": 4,
     "partpaymentPrice": 8694,
     "status": "PENDING",
@@ -11884,7 +10482,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:50:44Z",
     "endDate": "2024-01-12T01:34:01Z",
-    "totalPrice": 15824,
+    "totalPrice": 1504,
     "guests": 7,
     "partpaymentPrice": 8340,
     "status": "CONFIRMED",
@@ -11897,7 +10495,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T00:06:32Z",
     "endDate": "2024-01-14T18:21:14Z",
-    "totalPrice": 44274,
+    "totalPrice": 4404,
     "guests": 4,
     "partpaymentPrice": 8151,
     "status": "PENDING",
@@ -11910,7 +10508,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T07:29:51Z",
     "endDate": "2023-12-12T06:47:10Z",
-    "totalPrice": 35188,
+    "totalPrice": 3508,
     "guests": 8,
     "partpaymentPrice": 9375,
     "status": "UNAVAILABLE",
@@ -11923,7 +10521,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T07:42:49Z",
     "endDate": "2023-12-17T19:48:22Z",
-    "totalPrice": 38977,
+    "totalPrice": 3807,
     "guests": 7,
     "partpaymentPrice": 8132,
     "status": "UNAVAILABLE",
@@ -11936,7 +10534,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T02:35:02Z",
     "endDate": "2023-12-10T18:09:50Z",
-    "totalPrice": 16009,
+    "totalPrice": 1609,
     "guests": 5,
     "partpaymentPrice": 9297,
     "status": "UNAVAILABLE",
@@ -11949,7 +10547,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T11:34:15Z",
     "endDate": "2024-01-11T04:00:14Z",
-    "totalPrice": 48152,
+    "totalPrice": 4802,
     "guests": 3,
     "partpaymentPrice": 8407,
     "status": "PENDING",
@@ -11962,7 +10560,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T06:19:24Z",
     "endDate": "2024-01-24T19:20:19Z",
-    "totalPrice": 26322,
+    "totalPrice": 2602,
     "guests": 8,
     "partpaymentPrice": 2304,
     "status": "PENDING",
@@ -11975,7 +10573,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T19:11:10Z",
     "endDate": "2023-12-21T02:56:00Z",
-    "totalPrice": 28258,
+    "totalPrice": 2808,
     "guests": 4,
     "partpaymentPrice": 6528,
     "status": "CONFIRMED",
@@ -11988,7 +10586,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T22:50:55Z",
     "endDate": "2024-01-16T19:49:23Z",
-    "totalPrice": 12381,
+    "totalPrice": 1201,
     "guests": 5,
     "partpaymentPrice": 3656,
     "status": "PENDING",
@@ -12001,7 +10599,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T16:42:55Z",
     "endDate": "2023-12-31T07:30:01Z",
-    "totalPrice": 28166,
+    "totalPrice": 2806,
     "guests": 3,
     "partpaymentPrice": 3221,
     "status": "PENDING",
@@ -12014,7 +10612,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T04:41:51Z",
     "endDate": "2023-11-24T20:01:42Z",
-    "totalPrice": 43502,
+    "totalPrice": 4302,
     "guests": 3,
     "partpaymentPrice": 2435,
     "status": "PENDING",
@@ -12027,7 +10625,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T16:32:53Z",
     "endDate": "2023-12-26T09:57:58Z",
-    "totalPrice": 36035,
+    "totalPrice": 3605,
     "guests": 7,
     "partpaymentPrice": 2780,
     "status": "UNAVAILABLE",
@@ -12040,7 +10638,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T12:57:26Z",
     "endDate": "2023-12-24T15:09:34Z",
-    "totalPrice": 22752,
+    "totalPrice": 2202,
     "guests": 8,
     "partpaymentPrice": 6008,
     "status": "UNAVAILABLE",
@@ -12053,7 +10651,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T02:21:28Z",
     "endDate": "2024-01-13T23:05:46Z",
-    "totalPrice": 19595,
+    "totalPrice": 1905,
     "guests": 2,
     "partpaymentPrice": 2999,
     "status": "UNAVAILABLE",
@@ -12066,7 +10664,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T23:41:13Z",
     "endDate": "2023-12-15T22:24:36Z",
-    "totalPrice": 17145,
+    "totalPrice": 1705,
     "guests": 3,
     "partpaymentPrice": 6553,
     "status": "PENDING",
@@ -12079,7 +10677,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T15:09:28Z",
     "endDate": "2023-12-11T22:29:22Z",
-    "totalPrice": 28727,
+    "totalPrice": 2807,
     "guests": 5,
     "partpaymentPrice": 3713,
     "status": "CONFIRMED",
@@ -12092,7 +10690,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T13:02:17Z",
     "endDate": "2023-11-20T14:23:50Z",
-    "totalPrice": 29563,
+    "totalPrice": 2903,
     "guests": 3,
     "partpaymentPrice": 3943,
     "status": "CONFIRMED",
@@ -12105,7 +10703,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T22:05:49Z",
     "endDate": "2023-12-24T11:53:14Z",
-    "totalPrice": 30644,
+    "totalPrice": 3004,
     "guests": 4,
     "partpaymentPrice": 2377,
     "status": "UNAVAILABLE",
@@ -12118,7 +10716,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T03:11:27Z",
     "endDate": "2023-12-15T22:54:41Z",
-    "totalPrice": 17615,
+    "totalPrice": 1705,
     "guests": 5,
     "partpaymentPrice": 4851,
     "status": "CONFIRMED",
@@ -12131,7 +10729,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T11:23:18Z",
     "endDate": "2023-12-05T18:29:00Z",
-    "totalPrice": 27107,
+    "totalPrice": 2707,
     "guests": 5,
     "partpaymentPrice": 8904,
     "status": "UNAVAILABLE",
@@ -12144,7 +10742,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T01:54:48Z",
     "endDate": "2023-12-26T21:22:47Z",
-    "totalPrice": 42860,
+    "totalPrice": 4200,
     "guests": 7,
     "partpaymentPrice": 2238,
     "status": "CONFIRMED",
@@ -12157,7 +10755,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T10:37:34Z",
     "endDate": "2023-11-26T00:45:36Z",
-    "totalPrice": 25399,
+    "totalPrice": 2509,
     "guests": 4,
     "partpaymentPrice": 8548,
     "status": "CONFIRMED",
@@ -12170,7 +10768,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T19:01:16Z",
     "endDate": "2024-01-14T23:01:00Z",
-    "totalPrice": 14252,
+    "totalPrice": 1402,
     "guests": 2,
     "partpaymentPrice": 6466,
     "status": "CONFIRMED",
@@ -12183,7 +10781,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T03:50:16Z",
     "endDate": "2023-12-11T12:11:02Z",
-    "totalPrice": 14760,
+    "totalPrice": 1400,
     "guests": 2,
     "partpaymentPrice": 8593,
     "status": "UNAVAILABLE",
@@ -12196,7 +10794,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T23:14:31Z",
     "endDate": "2024-01-08T23:25:40Z",
-    "totalPrice": 40330,
+    "totalPrice": 4000,
     "guests": 6,
     "partpaymentPrice": 8457,
     "status": "PENDING",
@@ -12209,7 +10807,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T04:27:43Z",
     "endDate": "2024-01-28T04:32:48Z",
-    "totalPrice": 23882,
+    "totalPrice": 2302,
     "guests": 8,
     "partpaymentPrice": 3067,
     "status": "UNAVAILABLE",
@@ -12222,7 +10820,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T07:49:17Z",
     "endDate": "2023-11-29T20:52:04Z",
-    "totalPrice": 29448,
+    "totalPrice": 2908,
     "guests": 4,
     "partpaymentPrice": 2939,
     "status": "CONFIRMED",
@@ -12235,7 +10833,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T03:25:36Z",
     "endDate": "2023-12-20T23:10:13Z",
-    "totalPrice": 48504,
+    "totalPrice": 4804,
     "guests": 6,
     "partpaymentPrice": 4443,
     "status": "CONFIRMED",
@@ -12248,7 +10846,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T13:04:09Z",
     "endDate": "2023-11-15T15:47:27Z",
-    "totalPrice": 46313,
+    "totalPrice": 4603,
     "guests": 2,
     "partpaymentPrice": 2865,
     "status": "PENDING",
@@ -12261,7 +10859,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T12:52:26Z",
     "endDate": "2023-12-10T19:46:48Z",
-    "totalPrice": 21153,
+    "totalPrice": 2103,
     "guests": 8,
     "partpaymentPrice": 2431,
     "status": "UNAVAILABLE",
@@ -12274,7 +10872,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T14:45:57Z",
     "endDate": "2023-11-28T13:01:43Z",
-    "totalPrice": 22037,
+    "totalPrice": 2207,
     "guests": 5,
     "partpaymentPrice": 2226,
     "status": "CONFIRMED",
@@ -12287,7 +10885,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T07:52:47Z",
     "endDate": "2024-01-05T17:09:09Z",
-    "totalPrice": 24047,
+    "totalPrice": 2407,
     "guests": 3,
     "partpaymentPrice": 2584,
     "status": "UNAVAILABLE",
@@ -12300,7 +10898,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T20:05:05Z",
     "endDate": "2023-12-06T15:49:33Z",
-    "totalPrice": 44009,
+    "totalPrice": 4409,
     "guests": 7,
     "partpaymentPrice": 9810,
     "status": "CONFIRMED",
@@ -12313,7 +10911,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T09:05:32Z",
     "endDate": "2024-01-11T10:53:05Z",
-    "totalPrice": 48268,
+    "totalPrice": 4808,
     "guests": 4,
     "partpaymentPrice": 8360,
     "status": "PENDING",
@@ -12326,7 +10924,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T20:51:26Z",
     "endDate": "2023-12-28T11:50:40Z",
-    "totalPrice": 22086,
+    "totalPrice": 2206,
     "guests": 2,
     "partpaymentPrice": 6712,
     "status": "UNAVAILABLE",
@@ -12339,7 +10937,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T03:20:58Z",
     "endDate": "2024-01-19T14:02:34Z",
-    "totalPrice": 33051,
+    "totalPrice": 3301,
     "guests": 8,
     "partpaymentPrice": 5208,
     "status": "PENDING",
@@ -12352,7 +10950,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T00:47:01Z",
     "endDate": "2023-12-31T14:36:56Z",
-    "totalPrice": 16394,
+    "totalPrice": 1604,
     "guests": 8,
     "partpaymentPrice": 5729,
     "status": "PENDING",
@@ -12365,7 +10963,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T18:32:27Z",
     "endDate": "2023-11-25T22:45:53Z",
-    "totalPrice": 12380,
+    "totalPrice": 1200,
     "guests": 3,
     "partpaymentPrice": 5371,
     "status": "PENDING",
@@ -12378,7 +10976,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T04:45:28Z",
     "endDate": "2023-11-13T08:09:10Z",
-    "totalPrice": 32241,
+    "totalPrice": 3201,
     "guests": 2,
     "partpaymentPrice": 3120,
     "status": "CONFIRMED",
@@ -12391,7 +10989,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T18:41:29Z",
     "endDate": "2023-12-12T10:51:24Z",
-    "totalPrice": 39932,
+    "totalPrice": 3902,
     "guests": 7,
     "partpaymentPrice": 9717,
     "status": "PENDING",
@@ -12404,7 +11002,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T00:44:58Z",
     "endDate": "2024-01-06T15:27:41Z",
-    "totalPrice": 47611,
+    "totalPrice": 4701,
     "guests": 6,
     "partpaymentPrice": 8260,
     "status": "PENDING",
@@ -12417,7 +11015,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T00:46:25Z",
     "endDate": "2023-12-08T10:58:51Z",
-    "totalPrice": 46451,
+    "totalPrice": 4601,
     "guests": 4,
     "partpaymentPrice": 5236,
     "status": "PENDING",
@@ -12430,7 +11028,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T10:50:17Z",
     "endDate": "2024-01-22T04:44:09Z",
-    "totalPrice": 42311,
+    "totalPrice": 4201,
     "guests": 4,
     "partpaymentPrice": 9174,
     "status": "CONFIRMED",
@@ -12443,7 +11041,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T18:54:08Z",
     "endDate": "2024-01-27T08:41:39Z",
-    "totalPrice": 29540,
+    "totalPrice": 2900,
     "guests": 4,
     "partpaymentPrice": 8931,
     "status": "UNAVAILABLE",
@@ -12456,7 +11054,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T19:52:38Z",
     "endDate": "2023-12-17T01:07:06Z",
-    "totalPrice": 32629,
+    "totalPrice": 3209,
     "guests": 7,
     "partpaymentPrice": 7371,
     "status": "UNAVAILABLE",
@@ -12469,7 +11067,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T22:30:42Z",
     "endDate": "2023-12-04T23:12:42Z",
-    "totalPrice": 14629,
+    "totalPrice": 1409,
     "guests": 5,
     "partpaymentPrice": 5374,
     "status": "PENDING",
@@ -12482,7 +11080,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T20:09:01Z",
     "endDate": "2023-11-23T13:19:52Z",
-    "totalPrice": 42984,
+    "totalPrice": 4204,
     "guests": 3,
     "partpaymentPrice": 3611,
     "status": "UNAVAILABLE",
@@ -12495,7 +11093,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T16:36:57Z",
     "endDate": "2023-12-02T19:36:18Z",
-    "totalPrice": 17702,
+    "totalPrice": 1702,
     "guests": 5,
     "partpaymentPrice": 4938,
     "status": "PENDING",
@@ -12508,7 +11106,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T22:30:19Z",
     "endDate": "2023-12-09T12:18:45Z",
-    "totalPrice": 23315,
+    "totalPrice": 2305,
     "guests": 4,
     "partpaymentPrice": 7672,
     "status": "CONFIRMED",
@@ -12521,7 +11119,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T23:42:44Z",
     "endDate": "2023-12-04T12:25:52Z",
-    "totalPrice": 25082,
+    "totalPrice": 2502,
     "guests": 8,
     "partpaymentPrice": 4960,
     "status": "UNAVAILABLE",
@@ -12534,7 +11132,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-22T04:45:20Z",
     "endDate": "2024-01-31T08:47:27Z",
-    "totalPrice": 17736,
+    "totalPrice": 1706,
     "guests": 8,
     "partpaymentPrice": 2574,
     "status": "PENDING",
@@ -12547,7 +11145,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T05:05:33Z",
     "endDate": "2024-01-03T01:51:28Z",
-    "totalPrice": 13233,
+    "totalPrice": 1303,
     "guests": 4,
     "partpaymentPrice": 6203,
     "status": "CONFIRMED",
@@ -12560,7 +11158,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T00:53:50Z",
     "endDate": "2024-01-21T04:43:47Z",
-    "totalPrice": 22738,
+    "totalPrice": 2208,
     "guests": 8,
     "partpaymentPrice": 7603,
     "status": "PENDING",
@@ -12573,7 +11171,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T04:22:45Z",
     "endDate": "2023-11-16T20:05:09Z",
-    "totalPrice": 35861,
+    "totalPrice": 3501,
     "guests": 2,
     "partpaymentPrice": 9198,
     "status": "PENDING",
@@ -12586,7 +11184,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T01:24:59Z",
     "endDate": "2023-12-11T17:52:23Z",
-    "totalPrice": 29890,
+    "totalPrice": 2900,
     "guests": 2,
     "partpaymentPrice": 6965,
     "status": "CONFIRMED",
@@ -12599,7 +11197,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T14:02:14Z",
     "endDate": "2023-12-23T11:00:22Z",
-    "totalPrice": 33823,
+    "totalPrice": 3303,
     "guests": 7,
     "partpaymentPrice": 4414,
     "status": "PENDING",
@@ -12612,7 +11210,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T22:54:16Z",
     "endDate": "2024-01-14T13:09:00Z",
-    "totalPrice": 22444,
+    "totalPrice": 2204,
     "guests": 6,
     "partpaymentPrice": 6826,
     "status": "CONFIRMED",
@@ -12625,7 +11223,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-20T11:09:00Z",
     "endDate": "2024-01-03T20:12:32Z",
-    "totalPrice": 19551,
+    "totalPrice": 1901,
     "guests": 4,
     "partpaymentPrice": 6754,
     "status": "CONFIRMED",
@@ -12638,7 +11236,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T06:04:42Z",
     "endDate": "2023-12-30T16:42:32Z",
-    "totalPrice": 40428,
+    "totalPrice": 4008,
     "guests": 4,
     "partpaymentPrice": 3527,
     "status": "PENDING",
@@ -12651,7 +11249,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-19T05:48:49Z",
     "endDate": "2023-12-29T00:21:38Z",
-    "totalPrice": 15171,
+    "totalPrice": 1501,
     "guests": 4,
     "partpaymentPrice": 7824,
     "status": "UNAVAILABLE",
@@ -12664,7 +11262,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-17T08:57:11Z",
     "endDate": "2023-11-23T10:07:13Z",
-    "totalPrice": 34302,
+    "totalPrice": 3402,
     "guests": 8,
     "partpaymentPrice": 3637,
     "status": "UNAVAILABLE",
@@ -12677,7 +11275,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T18:23:48Z",
     "endDate": "2023-11-14T01:21:03Z",
-    "totalPrice": 30664,
+    "totalPrice": 3004,
     "guests": 8,
     "partpaymentPrice": 3730,
     "status": "UNAVAILABLE",
@@ -12690,7 +11288,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T17:53:43Z",
     "endDate": "2024-01-19T14:01:59Z",
-    "totalPrice": 31429,
+    "totalPrice": 3109,
     "guests": 4,
     "partpaymentPrice": 2065,
     "status": "PENDING",
@@ -12703,7 +11301,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T13:04:33Z",
     "endDate": "2024-01-09T08:07:02Z",
-    "totalPrice": 30052,
+    "totalPrice": 3002,
     "guests": 7,
     "partpaymentPrice": 5064,
     "status": "CONFIRMED",
@@ -12716,7 +11314,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T04:13:33Z",
     "endDate": "2023-12-15T03:09:52Z",
-    "totalPrice": 31590,
+    "totalPrice": 3100,
     "guests": 8,
     "partpaymentPrice": 3847,
     "status": "PENDING",
@@ -12729,7 +11327,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:50:51Z",
     "endDate": "2024-01-16T07:28:13Z",
-    "totalPrice": 38000,
+    "totalPrice": 3800,
     "guests": 5,
     "partpaymentPrice": 3412,
     "status": "CONFIRMED",
@@ -12742,7 +11340,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T22:00:35Z",
     "endDate": "2023-12-30T05:46:59Z",
-    "totalPrice": 42693,
+    "totalPrice": 4203,
     "guests": 6,
     "partpaymentPrice": 7812,
     "status": "UNAVAILABLE",
@@ -12755,7 +11353,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T23:37:16Z",
     "endDate": "2023-11-13T04:36:41Z",
-    "totalPrice": 16654,
+    "totalPrice": 1604,
     "guests": 3,
     "partpaymentPrice": 2239,
     "status": "PENDING",
@@ -12768,7 +11366,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-27T16:25:19Z",
     "endDate": "2024-01-06T14:43:47Z",
-    "totalPrice": 39765,
+    "totalPrice": 3905,
     "guests": 2,
     "partpaymentPrice": 8413,
     "status": "UNAVAILABLE",
@@ -12781,7 +11379,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-13T05:34:25Z",
     "endDate": "2023-11-20T03:26:56Z",
-    "totalPrice": 14178,
+    "totalPrice": 1408,
     "guests": 5,
     "partpaymentPrice": 9837,
     "status": "UNAVAILABLE",
@@ -12794,7 +11392,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T23:06:51Z",
     "endDate": "2024-01-13T16:22:11Z",
-    "totalPrice": 22546,
+    "totalPrice": 2206,
     "guests": 7,
     "partpaymentPrice": 4157,
     "status": "UNAVAILABLE",
@@ -12807,7 +11405,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-24T11:24:12Z",
     "endDate": "2023-12-06T23:45:23Z",
-    "totalPrice": 42660,
+    "totalPrice": 4200,
     "guests": 3,
     "partpaymentPrice": 9906,
     "status": "UNAVAILABLE",
@@ -12820,7 +11418,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T06:03:30Z",
     "endDate": "2024-01-05T06:51:32Z",
-    "totalPrice": 23763,
+    "totalPrice": 2303,
     "guests": 8,
     "partpaymentPrice": 7049,
     "status": "UNAVAILABLE",
@@ -12833,7 +11431,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-25T11:25:45Z",
     "endDate": "2023-12-05T02:16:36Z",
-    "totalPrice": 33999,
+    "totalPrice": 3309,
     "guests": 2,
     "partpaymentPrice": 8901,
     "status": "PENDING",
@@ -12846,7 +11444,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T00:31:51Z",
     "endDate": "2024-01-14T05:39:37Z",
-    "totalPrice": 10527,
+    "totalPrice": 1007,
     "guests": 2,
     "partpaymentPrice": 8254,
     "status": "CONFIRMED",
@@ -12859,7 +11457,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-18T16:21:37Z",
     "endDate": "2024-01-22T03:32:10Z",
-    "totalPrice": 14956,
+    "totalPrice": 1406,
     "guests": 6,
     "partpaymentPrice": 7579,
     "status": "PENDING",
@@ -12872,7 +11470,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-12T22:10:51Z",
     "endDate": "2023-11-20T03:33:42Z",
-    "totalPrice": 44894,
+    "totalPrice": 4404,
     "guests": 6,
     "partpaymentPrice": 4112,
     "status": "UNAVAILABLE",
@@ -12885,7 +11483,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-14T23:33:21Z",
     "endDate": "2023-11-19T17:33:40Z",
-    "totalPrice": 21816,
+    "totalPrice": 2106,
     "guests": 6,
     "partpaymentPrice": 6236,
     "status": "UNAVAILABLE",
@@ -12898,7 +11496,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T20:25:33Z",
     "endDate": "2024-01-11T10:49:07Z",
-    "totalPrice": 36352,
+    "totalPrice": 36002,
     "guests": 2,
     "partpaymentPrice": 4105,
     "status": "UNAVAILABLE",
@@ -12911,7 +11509,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T08:18:13Z",
     "endDate": "2023-11-19T03:53:15Z",
-    "totalPrice": 28571,
+    "totalPrice": 2801,
     "guests": 6,
     "partpaymentPrice": 5964,
     "status": "PENDING",
@@ -12924,7 +11522,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-16T23:49:16Z",
     "endDate": "2023-12-20T13:09:47Z",
-    "totalPrice": 37917,
+    "totalPrice": 3707,
     "guests": 3,
     "partpaymentPrice": 4363,
     "status": "PENDING",
@@ -12937,7 +11535,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T03:13:35Z",
     "endDate": "2023-12-06T01:13:32Z",
-    "totalPrice": 32789,
+    "totalPrice": 3209,
     "guests": 8,
     "partpaymentPrice": 2577,
     "status": "UNAVAILABLE",
@@ -12950,7 +11548,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-26T19:50:42Z",
     "endDate": "2023-11-25T14:34:46Z",
-    "totalPrice": 30959,
+    "totalPrice": 3009,
     "guests": 5,
     "partpaymentPrice": 8143,
     "status": "UNAVAILABLE",
@@ -12963,7 +11561,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-15T04:27:13Z",
     "endDate": "2023-12-26T05:25:59Z",
-    "totalPrice": 29206,
+    "totalPrice": 2906,
     "guests": 2,
     "partpaymentPrice": 7334,
     "status": "UNAVAILABLE",
@@ -12976,7 +11574,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-23T06:59:15Z",
     "endDate": "2024-01-17T16:57:10Z",
-    "totalPrice": 41935,
+    "totalPrice": 401005,
     "guests": 8,
     "partpaymentPrice": 4225,
     "status": "PENDING",
@@ -12989,7 +11587,7 @@ export const bookingData = [
   {
     "startDate": "2023-09-21T20:56:39Z",
     "endDate": "2024-01-09T11:38:34Z",
-    "totalPrice": 18090,
+    "totalPrice": 180000,
     "guests": 2,
     "partpaymentPrice": 3318,
     "status": "PENDING",

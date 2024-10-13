@@ -19,10 +19,10 @@ const Widget = () => {
       icon: <FaMoneyBill />,
       bgColor: "#cdeed3",
       color: "#347345",
-      // subtitle: `${totalOrder}`,
+      subtitle: `${totalOrder}`,
       subtext:
         "Browse your applied jobs here and check their respective progress..",
-      subtitle: `$10K`,
+      // subtitle: `$10K`,
     },
     {
       title: "Total Property",
@@ -43,7 +43,7 @@ const Widget = () => {
       subtitle: `$${Number(totalOrder)?.toLocaleString()}`,
     },
     {
-      title: "Total Reserved",
+      title: "Total Reservations",
       icon: <LuBedDouble />,
       bgColor: "#cdeed3",
       color: "#002b31",
@@ -76,7 +76,7 @@ const Widget = () => {
               </h4>
             </div>
             <div className="w-full family1 flex flex-col">
-              <h3 className="text-3xl md:text-5xl font-semibold">10</h3>
+              <h3 className="text-3xl md:text-4xl font-semibold">{data?.subtitle}</h3>
 
               <span className="text-xs flex-1 pt-2 block font-normal">
                 {data?.subtext}

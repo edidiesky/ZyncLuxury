@@ -14,15 +14,15 @@ import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 import RoomsCreated from "./RoomsCreated";
 const DashboardIndex = () => {
 
-  // const { getStatisLoading } = useSelector((store) => store.stat);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getAdminStat());
-  //   dispatch(getAllRoomsForAdmin());
-  // }, []);
-  // if (getStatisLoading) {
-  //   return <Loader />;
-  // }
+  const { getStatisLoading } = useSelector((store) => store.stat);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAdminStat());
+    dispatch(getAllRoomsForAdmin());
+  }, []);
+  if (getStatisLoading) {
+    return <Loader />;
+  }
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-8">
