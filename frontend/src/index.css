@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -105,7 +104,7 @@ a.active {
 }
 
 .ql-container {
-  font-family: Archivo, sans-serif, sans-serif !important;
+  font-family: "Kumbh Sans",sans-serif !important;
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded img {
   width: 100% !important;
@@ -183,7 +182,7 @@ button:disabled {
 /* React day picker css */
 
 .family1 {
-  font-family: "Work Sans", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
 }
 :root {
   --grey-1: #4f578d;
@@ -342,7 +341,7 @@ html.lenis body {
 #reactSchedulerOutsideWrapper *,
 #reactSchedulerOutsideWrapper ::before,
 #reactSchedulerOutsideWrapper ::after {
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 .sc-iuOPfm.eiWmqu {
@@ -352,12 +351,12 @@ html.lenis body {
 }
 
 .sc-gjLKRp.gqsWwT {
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
   font-weight: 600;
 }
 
 .sc-cCzKKE.bwVOYM {
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
   /* font-weight: normal !important; */
   font-size: 12px !important;
 }
@@ -373,7 +372,7 @@ html.lenis body {
 }
 
 .sc-gjLKRp.eAzhgx {
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -421,7 +420,7 @@ html.lenis body {
 
 .sc-cCzKKE.bwVOYM {
   display: block !important;
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 .sc-cCzKKE.fOgBaC::after {
@@ -434,7 +433,7 @@ html.lenis body {
 
 .sc-cCzKKE.dxSqfu {
   display: block !important;
-  font-family: Archivo, sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 .sc-cCzKKE.dxSqfw::after {

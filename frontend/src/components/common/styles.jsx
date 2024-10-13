@@ -51,7 +51,7 @@ export const Table = styled.div`
             font-size: 15px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1.7rem;
-            font-family: "Work Sans";
+            font-family: "Karla";
             font-weight: 500 !important;
             @media (max-width: 780px) {
               font-size: 13px !important;
@@ -71,7 +71,7 @@ export const Table = styled.div`
           }
           td {
             text-align: start;
-            font-family: "Work Sans";
+            font-family: "Karla";
             padding: 1.5rem !important;
             font-weight: normal !important;
             color: #000;
