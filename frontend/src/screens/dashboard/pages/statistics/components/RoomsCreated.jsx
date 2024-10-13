@@ -9,7 +9,7 @@ const RoomsCreated = () => {
   );
   return (
     <div className="px-6 py-8 border rounded-lg flex flex-col w-full gap-6">
-      <div className="w-full flex items-center justify-between gap-4">
+      <div className="w-full flex md:flex-row flex-col md:items-center justify-between gap-4">
         <div className="flex flex-col">
           <h3 className="text-xl block lg:text-2xl text-dark family2 font-semibold">
             Recent Listings
@@ -18,7 +18,7 @@ const RoomsCreated = () => {
             Overview of your properties regarding Rentals management
           </span>
         </div>
-        <div className="flex-1 flex flex-row gap-4 md:items-center justify-end">
+        <div className="flex-1 flex flex-row gap-4 items-center md:justify-end">
           <form action="" className="max-w-[240px] md:w-[200px] relative">
             <input
               type="text"

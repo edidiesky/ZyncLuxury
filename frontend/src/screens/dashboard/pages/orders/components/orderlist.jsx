@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import { Table } from "@/components/common/styles";
 import TableCard from "@/components/common/TableCard";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const OrderList = () => {
-  //   const [roommodal, setRoomModal] = useState(false);
+  const dispatch = useDispatch();
   const { payments } = useSelector((store) => store.payment);
   return (
-    <div className="w-full bg-[#FAFAFA] min-h-[170px] items-center flex flex-col p-4 px-6 rounded-3xl">
+    <div className="px-6 py-8 border rounded-lg flex flex-col w-full gap-6">
       <Table>
         <div className="TableContainer">
           <table className="tableWrapper">
@@ -34,14 +34,26 @@ const OrderList = () => {
           </table>
         </div>
       </Table>
-      {/* <div className="w-full flex items-center justify-end gap-2">
-        <div className="p-4 rounded-2xl text-base font-bold font-booking_font_bold border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]">
-          Previous
+      {/* {payments?.length > 0 ? (
+        <div className="w-full family1 flex items-center justify-end gap-4">
+          <div
+            onClick={() => dispatch(handlePage("prev"))}
+            className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
+          >
+            <BiChevronLeft />
+          </div>
+          {page}
+          <div
+            onClick={() => dispatch(handlePage("next"))}
+            className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
+          >
+            {" "}
+            <BiChevronRight />
+          </div>
         </div>
-        <div className="p-4 rounded-2xl text-base font-bold font-booking_font_bold border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]">
-          Next
-        </div>
-      </div> */}
+      ) : (
+        ""
+      )} */}
     </div>
   );
 };
