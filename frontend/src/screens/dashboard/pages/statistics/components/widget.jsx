@@ -8,66 +8,83 @@ import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
 
 const Widget = () => {
   const [widgettab, setWidgetTab] = useState(1);
-  const { totalOrder, totalReservations, totalRooms } =
-    useSelector((store) => store.stat);
+  const { totalOrder, totalReservations, totalRooms } = useSelector(
+    (store) => store.stat
+  );
   const { users } = useSelector((store) => store.auth);
 
   const widgetData = [
-    // {
-    //   title: "Total Revenue",
-    //   icon: <FaMoneyBill />,
-    //   color: "#E7EEE9",
-    //   // subtitle: `${totalOrder}`,
-    //   subtitle: `$10K`,
-    // },
+    {
+      title: "Total Revenue",
+      icon: <FaMoneyBill />,
+      bgColor: "#cdeed3",
+      color: "#347345",
+      // subtitle: `${totalOrder}`,
+      subtext:
+        "Browse your applied jobs here and check their respective progress..",
+      subtitle: `$10K`,
+    },
     {
       title: "Total Property",
       icon: <MdHotel />,
-      color: "#E2E3E7",
+      bgColor: "#deddff",
+      color: "#3e3aff",
+      subtext:
+        "Browse your applied jobs here and check their respective progress..",
       subtitle: `${totalRooms}`,
     },
     {
       title: " Total Revenue",
       icon: <GiCash />,
-      color: "#FF7F5C",
+      bgColor: "#f3f3f1",
+      color: "#a37d18",
+      subtext:
+        "Browse your applied jobs here and check their respective progress..",
       subtitle: `$${Number(totalOrder)?.toLocaleString()}`,
     },
     {
       title: "Total Reserved",
       icon: <LuBedDouble />,
-      color: "#EFE7D7",
+      bgColor: "#cdeed3",
+      color: "#002b31",
+      subtext:
+        "Browse your applied jobs here and check their respective progress..",
       subtitle: `${totalReservations}`,
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-2">
-      {widgetData?.map((widget, index) => {
+    <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-2">
+      {widgetData?.map((data, index) => {
         return (
-          <div className="p-1 rounded-xl min-h-56 bg-[#fafafa]">
-            <div
-              onClick={() => setWidgetTab(index)}
-              key={index}
-              style={{ transition: "all .3s" }}
-              className={`p-4 md:p-8 md:px-4 border family1 font-booking_font4 w-full
-               rounded-xl bg-[#fff] flex md:items-center gap-4 h-full`}
-            >
-              <div className="flex flex-col gap-4 h-full justify-between">
-                <div className="w-full flex md:items-center flex-col md:flex-row gap-4">
-                  <div
-                    style={{ background: `${widget?.color}` }}
-                    className={`w-12 md:w-14 text-dark text-lg md:text-xl h-12 md:h-14 rounded-full flex items-center justify-center`}
-                  >
-                    {widget?.icon}
-                  </div>
-                  <span className="text-dark flex-1 text-sm md:text-base font-semibold">
-                    {widget?.title}
-                  </span>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-normal">
-                  {widget?.subtitle}
-                </h3>
+          <div
+            key={index}
+            className="w-full p-4 items-start family1 justify-center min-h-[200px] md:min-h-[250px] 
+                    border rounded-xl flex flex-col gap-4"
+          >
+            <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
+              <div
+                style={{
+                  backgroundColor: `${data?.bgColor}`,
+                  color: `${data?.color}`,
+                }}
+                className="w-10 md:w-12 text-xl flex items-center justify-center h-10 md:h-12 rounded-md"
+              >
+                {data?.icon}
               </div>
+              <h4 className="text-sm md:text-base font-semibold">
+                {data?.title}
+              </h4>
             </div>
+            <div className="w-full flex flex-col">
+              <h3 className="text-3xl md:text-5xl font-semibold">10</h3>
+
+              <span className="text-xs flex-1 pt-2 block font-normal">
+                {data?.subtext}
+              </span>
+            </div>
+            {/* <div className="pt-3">
+                    <div className="shadows py-2 bg-[#fafafa] rounded-md cursor-pointer px-4 border text-dark text-sm">Browse</div>
+                  </div> */}
           </div>
         );
       })}

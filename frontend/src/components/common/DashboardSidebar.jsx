@@ -65,8 +65,8 @@ const DashboardSidebar = () => {
     <HeaderStyles
       className={`w-[310px] bg-[#18171C] lg:block hidden h-[100vh] overflow-auto sticky top-0`}
     >
-      <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
-        <div className="w-full h-[90%] flex flex-col gap-8">
+      <div className="w-full h-full family1 py-4 justify-between flex items-center flex-col gap-4">
+        <div className="w-full h-[90%] flex flex-col gap-4">
           <div className="flex px-4 w-full flex-col gap-4 items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">

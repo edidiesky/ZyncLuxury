@@ -13,32 +13,33 @@ import RoomCard from "@/components/common/RoomCard";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 const DashboardIndex = () => {
 
-  const { getStatisLoading } = useSelector((store) => store.stat);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAdminStat());
-    dispatch(getAllRoomsForAdmin());
-  }, []);
-  if (getStatisLoading) {
-    return <Loader />;
-  }
+  // const { getStatisLoading } = useSelector((store) => store.stat);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getAdminStat());
+  //   dispatch(getAllRoomsForAdmin());
+  // }, []);
+  // if (getStatisLoading) {
+  //   return <Loader />;
+  // }
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col gap-12">
-        <h3 className="text-4xl block lg:text-5xl family1 font-bold">
-          Welcome 👋
-          <span className="block text-base font-normal">
-            Explore information and activity about your property
+      <div className="w-full flex flex-col gap-8">
+        <div className="w-full flex flex-col gap-1">
+          <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
+            Dashboard
+          </h3>
+          <span className="block family1 text-base font-normal">
+            Overview of your properties regarding Rentals management
           </span>
-        </h3>
-        <div className="w-full flex flex-col gap-16">
-          <Widget />
         </div>
+        {/* widget */}
+        <Widget />
+        <Statistics />
         <div className="w-full grid gap-12 lg:gap-4 lg:grid-cols-custom">
-          <Statistics />
           <div className="w-full lg:w-[400px] flex flex-col gap-12">
             {/* <ProductBreakdown /> */}
-            <Transaction />
+            {/* <Transaction /> */}
           </div>
         </div>
         <Property />

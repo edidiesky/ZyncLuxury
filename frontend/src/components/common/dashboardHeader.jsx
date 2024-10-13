@@ -16,6 +16,7 @@ import { ClearUserInfo } from "@/features/auth/authSlice";
 import { Bell } from "lucide-react";
 import NotificationSidebar from "./NotificationSidebar";
 import Profile from "./Profile";
+import { BsSearch } from "react-icons/bs";
 const AdminSidebarData = [
   {
     id: 6,
@@ -93,8 +94,7 @@ const DashboardHeader = () => {
         style={{
           backdropFilter: "blur(14px)",
         }}
-        className="w-full z-[10] min-h-[50px] border-[rgba(0,0,0,.06)] border-b sticky family1 top-0 bg-[#ffffff9d] py-4 px-2 flex items-center 
-      justify-center"
+        className="h-[85px] border-b border-[rgba(0,0,0,.08)] bg-[#ffffff4e] flex z-40 sticky top-0 items-center justify-between"
       >
         <div className="Header_wrapper w-[95%] mx-auto max-w-custom flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -108,21 +108,19 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-
-            <label
-              htmlFor=""
-              className="hidden md:flex text-xl text-dark w-[200px] lg:w-[250px]
-             items-center gap-2 h-14 border rounded-[40px] px-4"
+            <form
+              action=""
+              className="max-w-[200px] h-[50px] md:max-w-[400px] md:w-[300px] flex items-center relative"
             >
-              <div className=" text-dark flex items-center justify-center">
-                <BiSearch />
-              </div>
+              <span className="w-4 h-4 absolute left-6">
+                <BsSearch />
+              </span>
               <input
                 type="text"
-                placeholder="Search dashboard"
-                className="bg-transparent font-booking_font_bold border-none outline-none text-base text-grey flex-1"
+                placeholder="Search by job title, skill, tags"
+                className="text-sm pl-12 h-full border font-normal bg-white rounded-full w-full "
               />
-            </label>
+            </form>
           </div>
           <div className="flex flex-1 auto items-center justify-end gap-4">
             <div
@@ -266,14 +264,7 @@ export const HeaderStyles = styled.div`
   }
   a,
   .tab {
-    padding: 7px 14px;
-    margin: 0 auto;
-    border-radius: 4px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
+    
     svg {
       color: #fff;
     }

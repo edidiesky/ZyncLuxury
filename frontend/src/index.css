@@ -217,7 +217,7 @@ button:disabled {
     background-position: 40px 0;
   }
 
-  100% {
+100% {
     background-position: 0 0;
   }
 }
@@ -243,51 +243,38 @@ textarea {
   border-radius: 10px;
 }
 
+form input {
+  min-height: 49px;
+  /* min-width: 130px; */
+  border-radius: 5px;
+  background-color: inherit;
+  transition: all 0.3s;
+  border: 1.5px solid #e7e7e9;
+  padding: 0 1rem;
+}
 input {
-  border: none;
-  outline: none;
-  color: #000 !important;
-  font-family: "Kumbh Sans", sans-serif;
-  border-radius: 100px !important;
-}
-
-input::placeholder {
-  font-size: inherit;
-  font-weight: inherit;
-  color: #000;
-  font-family: inherit;
-}
-
-.input {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  height: 45px;
+  min-height: 49px;
+  /* min-width: 130px; */
+  border-radius: 5px;
+  background-color: inherit;
+  transition: all 0.3s;
+  border: 1.5px solid #3e3aff;
   padding: 0 1rem;
-  /* outline: auto; */
-  font-family: "Kumbh Sans", sans-serif;
-  transition: all 0.4s;
 }
-
-.inputs {
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  height: 55px;
-
-  padding: 0 1rem;
-  font-family: "Kumbh Sans", sans-serif;
-  transition: all 0.4s;
+form input:hover {
+  box-shadow: 0 0 0 6px #e7e7e9;
+  transition: all 0.3s;
+  outline: 1px solid #3e3aff;
 }
-
 input:hover {
   box-shadow: 0 0 0 6px #e7e7e9;
   transition: all 0.3s;
-  outline: 1px solid #5d5d5e;
+  outline: 1px solid #3e3aff;
 }
 input:focus {
   box-shadow: 0 0 0 6px #e7e7e9;
   transition: all 0.3s;
-  outline: 1px solid #5d5d5e;
-}
-.inputs:focus {
-  outline: auto !important;
+  outline: 1px solid #3e3aff;
 }
 
 .btn {

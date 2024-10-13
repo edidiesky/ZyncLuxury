@@ -26,18 +26,18 @@ const Profile = ({ setBar , bar}) => {
                     <img
                       src={currentUser?.image}
                       alt=""
-                      className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                      className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                     />
                   ) : (
                     <img
                       src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                       alt=""
-                      className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                      className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                     />
                   )}
-                  <h4 className="text-base text-dark font-bold family1">
+                  <h4 className="text-base text-dark font-bold">
                     {currentUser?.name}
-                    <span className="block font-normal family1 text-xs text-dark">
+                    <span className="block font-normal text-xs text-dark">
                       {currentUser?.role === "SELLER" ? "Seller" : "Personal"}{" "}
                       Account
                     </span>
@@ -47,19 +47,19 @@ const Profile = ({ setBar , bar}) => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <Link
                       to={"/dashboard"}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Dashboard
                     </Link>
                     <Link
                       to={"/dashboard/settings"}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Profile
                     </Link>
                     <div
                       onClick={() => handleLogOut()}
-                      className="font-booking_font_bold items-center gap-3 text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark flex"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Log Out
                     </div>
@@ -68,19 +68,19 @@ const Profile = ({ setBar , bar}) => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <Link
                       to={"/trips"}
-                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Orders
                     </Link>
                     <Link
                       to={"/savedhomes"}
-                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Favourites
                     </Link>
                     <div
                       onClick={() => handleLogOut()}
-                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Log Out
                     </div>
@@ -89,13 +89,13 @@ const Profile = ({ setBar , bar}) => {
                   <div className="flex profile_dropdown_bottom flex-col w-full">
                     <div
                       onClick={() => dispatch(onRegisterModal())}
-                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Sign Up
                     </div>
                     <div
                       onClick={() => dispatch(onLoginModal())}
-                      className="font-booking_font_bold text-xl font-semibold py-4 family1 w-full profile_list border-b text-dark block"
+                      className="text-sm block font-normal px-4 py-4 hover:bg-[#fafafa] text-[#000]"
                     >
                       Sign In
                     </div>
@@ -108,7 +108,7 @@ const Profile = ({ setBar , bar}) => {
                 <img
                   src={currentUser?.image}
                   alt=""
-                  className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                  className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                 />
               ) : currentUser?.username ? (
                 // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
@@ -117,13 +117,13 @@ const Profile = ({ setBar , bar}) => {
                 <img
                   src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                   alt=""
-                  className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                  className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                 />
               ) : (
                 <img
                   src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                   alt=""
-                  className="w-12 lg:w-14 h-12 lg:h-14 rounded-full"
+                  className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
                 />
               )}
               {/* {currentUser && (
