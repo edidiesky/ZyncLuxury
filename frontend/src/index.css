@@ -258,7 +258,7 @@ input {
   border-radius: 5px;
   background-color: inherit;
   transition: all 0.3s;
-  border: 1.5px solid #3e3aff;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
   font-family: "Karla", sans-serif !important;
 }

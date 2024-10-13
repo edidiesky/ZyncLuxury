@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 const DashboardIndex = () => {
   const [roommodal, setRoomModal] = useState(false);
-  const { deleteRoomisSuccess,page } = useSelector((store) => store.room);
+  const { deleteRoomisSuccess, page } = useSelector((store) => store.room);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllRoomsForAdmin());
@@ -22,14 +22,14 @@ const DashboardIndex = () => {
       </AnimatePresence>
       <div className="w-full pb-20 flex flex-col gap-12">
         <div className="w-full grid lg:grid-cols-2 lg:items-center gap-4 justify-between">
-         <div className="w-full flex flex-col gap-1">
-          <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
-            Listings Created
-          </h3>
-          <span className="block family1 text-base font-normal">
-            Overview of your properties regarding your Listings created
-          </span>
-        </div>
+          <div className="w-full flex flex-col gap-1">
+            <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
+              Listings Created
+            </h3>
+            <span className="block family1 text-base font-normal">
+              Overview of your properties regarding your Listings created
+            </span>
+          </div>
           <div className="flex items-center lg:justify-end gap-2">
             <Link
               to={"/dashboard/rooms/create-room"}

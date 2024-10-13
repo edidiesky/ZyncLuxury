@@ -53,15 +53,15 @@ const ImageUpload = ({ images, setImages }) => {
       {uploading && <Loader />}
       <div className="w-[95%] md:w-[90%] mx-auto flex flex-col gap-8">
         <div className="w-full flex items-center justify-between">
-          <h4 className="text-2xl font-booking_font4 font-bold">
+          <h4 className="text-lg md:text-xl font-semibold">
             Room Images
-            <span className="font-normal font-booking_font text-base block">
+            <span className="font-normal family1 text-sm block">
               Share what makes your rooms images special.
             </span>
           </h4>
         </div>
         <div className="w-full flex flex-col gap-4">
-          <div className="w-full flex flex-col gap-4 text-sm font-booking_font4 font-bold">
+          <div className="w-full flex flex-col gap-4 text-sm font-semibold">
             <span>Photos</span>
             {images?.length > 0 ? (
               <div className="w-full flex flex-col justify-center items-center gap-8">
@@ -105,7 +105,7 @@ const ImageUpload = ({ images, setImages }) => {
               >
                 <div
                   style={{ transition: "all .4s" }}
-                  className="text-base font-bold cursor-pointer flex items-center shadow-sm hover:shadow-lg border rounded-lg justify-center bg-white p-4 gap-3 font-booking_font_bold"
+                  className="text-base font-semibold cursor-pointer flex items-center shadow-sm hover:shadow-lg border rounded-lg justify-center bg-white p-4 gap-3 font-booking_font_bold"
                 >
                   <input
                     type="file"

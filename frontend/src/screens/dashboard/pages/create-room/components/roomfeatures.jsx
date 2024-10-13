@@ -8,18 +8,16 @@ const Roomfeatures = ({
     <div className="w-full bg-[#fff] border p-6 px-2 rounded-[10px]">
       <div className="w-[95%] md:w-[90%] mx-auto flex flex-col gap-8">
         <div className="w-full flex items-center justify-between">
-          <h4 className="text-2xl font-booking_font4 font-bold">
+          <h4 className="text-xl font-semibold">
             Room Attributes & Features
-            <span className="font-normal font-booking_font text-base block">
+            <span className="font-normal family1 text-sm block">
               Share what makes your place special.
             </span>
           </h4>
         </div>
-        <div className="pt-2 w-full flex flex-col gap-8">
+        <div className="w-full flex flex-col gap-8">
           <div className="flex gap-4 flex-col w-full">
-            <span className="font-booking_font4 font-bold text-base block">
-              Room Features
-            </span>
+           
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-3">
               {RoomFeaturesList?.map((x, index) => {
                 const active = features.includes(x);
@@ -33,7 +31,7 @@ const Roomfeatures = ({
                     } flex w-full cursor-pointer hover:bg-[#fafafa] p-4 rounded-lg flex-col gap-2`}
                   >
                     {x?.icon}
-                    <span className="text-sm font-booking_font">
+                    <span className="text-sm family1">
                       {x?.title}
                     </span>
                   </div>
@@ -43,7 +41,7 @@ const Roomfeatures = ({
           </div>
 {/* 
           <div className="flex gap-4 flex-col w-full">
-            <span className="font-semibold font-booking_font_bold text-base block">
+            <span className="font-semibold family1 text-base block">
               Room Amenities
             </span>
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-3">
@@ -59,7 +57,7 @@ const Roomfeatures = ({
                     } flex w-full cursor-pointer hover:bg-[#fafafa] p-4 rounded-lg flex-col gap-2`}
                   >
                     {x?.icon}
-                    <span className="text-sm font-booking_font4 font-bold">
+                    <span className="text-sm family1 font-semibold">
                       {x?.title}
                     </span>
                   </div>

@@ -27,8 +27,8 @@ const RoomDetail = ({
   } = useSelector((store) => store.room);
   return (
     <div className="w-full bg-[#fff]  family1 border p-6 rounded-[10px]">
-      <div className="w-full flex flex-col gap-8">
-        <h4 className="text-2xl font-booking_font4 font-bold">Preview</h4>
+      <div className="w-full flex flex-col gap-4">
+        <h4 className="text-xl font-semibold">Preview</h4>
         <div className="w-full flex flex-col gap-4">
           {images?.length > 0 ? (
             <img
@@ -43,44 +43,44 @@ const RoomDetail = ({
             />
           ) : (
             <>
-              <div className="w-full h-[200px] bg-[#fafafa] border"></div>
+              <div className="w-full h-[100px] bg-[#fafafa] border"></div>
             </>
           )}
 
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full flex flex-col gap-2">
             <h3 className="text-sm text-text_dark_1 ">
               Title:{" "}
-              <span className="font-booking_font4 font-bold text-2xl"> {title}</span>
+              <span className="family1 font-semibold text-xl"> {title}</span>
             </h3>
-            <div className="w-full flex flex-col ">
+            <div className="w-full flex flex-col gap-2">
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center text-dark "
+                className="text-sm flex items-center text-dark "
               >
                 Price:{" "}
-                <span className="text-lg font-booking_font4 font-semibold">₦{Number(price).toLocaleString()}</span>
+                <span className="text-lg family1 font-semibold">₦{Number(price).toLocaleString()}</span>
               </h4>
               {/* cautionfee */}
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center text-dark "
+                className="text-sm flex items-center text-dark "
               >
                 Caution Fee:{" "}
-                <span className="text-lg font-booking_font4 font-semibold">₦{Number(cautionfee).toLocaleString()}</span>
+                <span className="text-lg family1 font-semibold">₦{Number(cautionfee).toLocaleString()}</span>
               </h4>
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center text-dark "
+                className="text-sm flex items-center text-dark "
               >
                 Rooms:{" "}
-                <span className="text-lg font-booking_font4 font-semibold"> {rooms}</span>{" "}
+                <span className="text-lg family1 font-semibold"> {rooms}</span>{" "}
               </h4>
               <h4
                 style={{ letterSpacing: "2px" }}
-                className="text-xs flex items-center text-dark "
+                className="text-sm flex items-center text-dark "
               >
                 BathRooms:{" "}
-                <span className="text-lg font-booking_font4 font-semibold"> {bathrooms}</span>{" "}
+                <span className="text-lg family1 font-semibold"> {bathrooms}</span>{" "}
               </h4>
             </div>
           </div>
