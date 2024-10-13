@@ -95,7 +95,7 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"50px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg md:text-xl text-center font-semibold family1">
+            <h3 className="text-lg md:text-xl text-center font-semibold">
               Delete this Reservation?
               <span className="block text-sm w-[80%] mx-auto text-center font-normal text-dark">
                 By deleting this reservation,It cannot be retrieved back if this
@@ -224,7 +224,7 @@ export default function DeleteModal({
           <span className="w-full flex items-center justify-center">
             <CiWarning fontSize={"50px"} color={"var(--red)"} />
           </span>
-          <h3 className="text-lg md:text-xl text-center font-semibol">
+          <h3 className="text-lg md:text-xl text-center font-semibold">
             Delete this user?
             <span className="block text-sm w-[80%] family1 mx-auto text-center font-normal text-dark">
               By deleting this user, It cannot be retrieved if this action you
