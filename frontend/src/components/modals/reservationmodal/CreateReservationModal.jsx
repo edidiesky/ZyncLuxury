@@ -460,7 +460,7 @@ const ReservationModalStyles = styled(motion.div)`
   position: fixed;
   left: 0;
   display: flex;
-  z-index: 20;
+  z-index: 20000;
   align-items: center;
   justify-content: center;
   top: 0;
