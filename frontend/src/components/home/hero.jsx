@@ -47,12 +47,11 @@ const linkData = [
 ];
 
 const profilesList = [
-  "/face_1.jpg",
-  "/face_2.jpg",
-  "/face_3.jpg",
-  "/face_4.jpg",
-  "/face_5.jpg",
-  "/face_6.jpg",
+  "/face_1.png",
+  "/face_2.png",
+  "/face_3.png",
+  "/face_2.png",
+  "/face_1.png",
 ];
 const Hero = () => {
   const [bar, setBar] = React.useState(false);
