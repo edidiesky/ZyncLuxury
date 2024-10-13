@@ -136,12 +136,12 @@ const Profile = ({ setBar , bar}) => {
                       )} */}
             </div>
           </div>
-          <span
+          {/* <span
             onClick={() => setBar(true)}
             className="flex cursor-pointer text-3xl text-[#fff] lg:hidden"
           >
             <HiBars3BottomRight />
-          </span>
+          </span> */}
         </div>
       ) : (
         <span className="flex items-center gap-4">

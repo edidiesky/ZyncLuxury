@@ -137,8 +137,9 @@ const DashboardHeader = () => {
             <Profile />
           </div>
         </div>
-        <Sidebar bar={bar} setBar={setBar} />
+        
       </HeaderStyles>
+      <Sidebar bar={bar} setBar={setBar} />
     </>
   );
 };
@@ -150,7 +151,7 @@ const Sidebar = ({ bar, setBar }) => {
       style={{ zIndex: "200" }}
       className={`${
         bar ? "left-0" : "-left-[100%]"
-      } w-[300px] bg-[#151515] border-r shadow-2xl  h-full transition-all ease duration-700 fixed flex lg:hidden top-0 flex-col gap-2`}
+      } w-[300px] bg-[#18171C] border-r shadow-2xl  h-full transition-all ease duration-700 fixed flex lg:hidden top-0 flex-col gap-2`}
     >
       <div
         onClick={() => setBar(!bar)}
@@ -169,23 +170,23 @@ const Sidebar = ({ bar, setBar }) => {
             <img
               src={currentUser?.image}
               alt=""
-              className="w-14 lg:w-14 h-14 lg:h-14 rounded-full"
+              className="w-10 h-10 rounded-full"
             />
           ) : currentUser?.username ? (
-            // <div className="w-14 h-14 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+            // <div className="w-10 h-10 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
             //   {currentUser?.username[0]}{" "}
             // </div>
             <img
               src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
               alt=""
-              className="w-14 lg:w-14 h-14 lg:h-14 rounded-full"
+              className="w-10 h-10 rounded-full"
             />
           ) : (
             ""
           )}
-          <h4 className="text-base font-booking_font4 text-white">
-            {currentUser?.username}
-            <span className="block font-normal font-booking_font text-sm text-white">
+          <h4 className="text-base text-white">
+            {currentUser?.name}
+            <span className="block font-normal family1 text-sm text-white">
               {currentUser?.email}
             </span>
           </h4>
@@ -197,12 +198,12 @@ const Sidebar = ({ bar, setBar }) => {
                 <NavLink
                   onClick={() => setBar(!bar)}
                   end
-                  className={`
-                      text-xm w-[90%] mx-auto text-white font-booking_font4`}
+                  className={`tab 
+                      text-sm w-[90%] mx-auto text-white family1`}
                   to={`/dashboard${x.tab.path}`}
                 >
                   <div className="flex items-center">
-                    <span className="w-14 h-14 text-lg rounded-xl flex items-center text-blue justify-center">
+                    <span className="w-12 h-14 text-lg rounded-xl flex items-center text-blue justify-center">
                       {" "}
                       {x.tab.icon}
                     </span>
@@ -262,27 +263,29 @@ export const HeaderStyles = styled.div`
       /* min-height: 100px; */
     }
   }
-  a,
   .tab {
-    
-    svg {
+    &:hover {
+      background: #282c2b;
       color: #fff;
     }
-
-    &:hover {
-      background: #3a614a2c;
-      color: #000;
-
+    .nav_icons:hover {
       svg {
         color: #fff;
       }
     }
     &.active {
       position: relative;
-      background: #3a614a;
+      background: #282c2b;
       color: #fff;
-      svg {
+
+      .nav_icons {
         color: #fff;
+      }
+
+      span {
+        svg {
+          color: #fff;
+        }
       }
     }
   }
