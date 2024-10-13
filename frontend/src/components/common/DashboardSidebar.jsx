@@ -63,47 +63,54 @@ const DashboardSidebar = () => {
   const pathname = true;
   return (
     <HeaderStyles
-      className={`w-[280px] overflow-hidden bg-[#FCFCFB] hidden lg:flex  column gap-2`}
+      className={`w-[310px] bg-[#18171C] lg:block hidden h-[100vh] overflow-auto sticky top-0`}
     >
       <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
-        <div className="w-full h-[90%] flex flex-col gap-12">
-          <div className="flex px-4 w-full flex-col  items-start justify-between py-1">
+        <div className="w-full h-[90%] flex flex-col gap-8">
+          <div className="flex px-4 w-full flex-col gap-4 items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
-              <Link to={"/"} className="w-full flex">
+              <Link
+                to={"/"}
+                className="w-full flex items-center gap-4 font-semibold text-base text-white"
+              >
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                   alt=""
-                  className="w-10"
+                  className="w-6"
                 />
+                ZyncLuxury
               </Link>
+            </div>
+            <div
+              className="py-2 rounded-md w-full px-3 font-normal
+                     text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]"
+            >
+              <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
+                {currentUser?.name?.split("")[0]}
+              </div>
+              <span className="text-sm family2 font-semibold">
+                {currentUser?.name}
+                <span className="text-xs block font-normal text-[#969A9A]">
+                  Admin
+                </span>
+              </span>
             </div>
           </div>
           <div className="w-full px-2 flex flex-col gap-1">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
-                <div
-                  key={index}
-                  className="w-[95%] font-normal family1 text-xs mx-auto"
-                >
+                <div key={index} className="w-[95%] text-sm mx-auto">
                   <NavLink
                     // activeClassName="active"
                     end
-                    className={`w-F7F8FC py-1 tab
-                      text-sm px-2 mx-auto text-[#000]`}
+                    className={`flex tab py-3 hover:text-white text-[#969a9acb] font-semibold
+                                 rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
                     to={`/dashboard${x.tab.path}`}
                   >
-                    <div className="flex font-normal items-center gap-4 justify-start w-full">
-                      <span
-                        className="w-10 nav_icons h-10 text-xs rounded-full flex items-center text-dark
-                       justify-center"
-                      >
-                        {" "}
-                        {x.tab.icon}
-                      </span>
-                      {<span className="">{x.tab?.title}</span>}
-                    </div>
+                    <span className="">{x?.tab?.icon}</span>{" "}
+                    <span className="flex-1">{x?.tab?.title}</span>
                   </NavLink>
                 </div>
               );
@@ -115,44 +122,59 @@ const DashboardSidebar = () => {
             <NavLink
               // activeClassName="active"
               end
-              className={`text-sm tab flex font-normal items-center gap-4 py-3 px-4 text-[#000] family1`}
+              className={`flex tab py-3 hover:text-white text-[#969a9acb] font-semibold text-sm
+                                 rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
-              <FiSettings fontSize={"20px"} />
+              <FiSettings fontSize={"18px"} />
 
               {<span className="">Settings</span>}
             </NavLink>
-            <div className=" w-full relative px-2 flex gap-1 items-center justify-between">
+            {/* <div className=" w-full relative px-2 flex gap-1 items-center justify-between">
               <div className="flex flex-1 gap-4 items-center group-hover:justify-start">
                 {currentUser?.image ? (
                   <img
                     src={currentUser?.image}
                     alt=""
-                    className="w-10 lg:w-10 h-10 lg:h-10 rounded-full"
+                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
                   />
                 ) : currentUser?.username ? (
-                  // <div className="w-12 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
+                  // <div className="w-8 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
                   //   {currentUser?.username[0]}{" "}
                   // </div>
                   <img
                     src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
+                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
                   />
                 ) : (
                   <img
                     src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                     alt=""
-                    className="w-12 lg:w-12 h-12 lg:h-12 rounded-full"
+                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
                   />
                 )}
-                <h4 className="text-base  text-[#000] font-normal">
+                <h4 className="text-sm  text-[#fff] font-semibold">
                   {currentUser?.name}
-                  <span className="block font-booking_font text-xs font-normal text-grey">
+                  <span className="block font-booking_font text-xs font-semibold text-grey">
                     {currentUser?.email}
                   </span>
                 </h4>
               </div>
+            </div> */}
+            <div
+              className="py-2 rounded-md w-full px-3 font-normal
+                     text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]"
+            >
+              <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
+                {currentUser?.name?.split("")[0]}
+              </div>
+              <span className="text-sm family2 font-semibold">
+                {currentUser?.name}
+                <span className="text-xs block font-normal text-[#969A9A]">
+                  Admin
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -177,32 +199,27 @@ export const HeaderStyles = styled.div`
   }
 
   .tab {
-    margin: 0 auto;
-    border-radius: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
     &:hover {
-      background: #e2e2e2;
-      color: #000;
+      background: #282c2b;
+      color: #fff;
     }
     .nav_icons:hover {
       svg {
-        color: #000;
+        color: #fff;
       }
     }
     &.active {
       position: relative;
-      background: #f1f1f1;
+      background: #282c2b;
+      color: #fff;
+
       .nav_icons {
-        color: #000;
+        color: #fff;
       }
 
       span {
         svg {
-          color: #000;
+          color: #fff;
         }
       }
     }

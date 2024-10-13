@@ -66,7 +66,7 @@
 }
 
 a.active {
-  color: var(--primary);
+  /* color: var(--primary); */
 }
 /* leaflet styles start */
 .leaflet-container a {
@@ -104,7 +104,7 @@ a.active {
 }
 
 .ql-container {
-  font-family: "Kumbh Sans",sans-serif !important;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded img {
   width: 100% !important;
@@ -188,7 +188,7 @@ button:disabled {
   --grey-1: #4f578d;
   /* --light-grey: */
   --dark-1: rgb(34, 37, 61);
-  --primary: #327AF7;
+  --primary: #327af7;
   --background_2: #0e0d0c;
   --gold-1: #be9874;
   --red: #f73760;
@@ -246,7 +246,7 @@ textarea {
 input {
   border: none;
   outline: none;
-    color: #000 !important;
+  color: #000 !important;
   font-family: "Kumbh Sans", sans-serif;
   border-radius: 100px !important;
 }
@@ -276,9 +276,15 @@ input::placeholder {
   transition: all 0.4s;
 }
 
-.input:hover,
-.input:focus {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8) !important;
+input:hover {
+  box-shadow: 0 0 0 6px #e7e7e9;
+  transition: all 0.3s;
+  outline: 1px solid #5d5d5e;
+}
+input:focus {
+  box-shadow: 0 0 0 6px #e7e7e9;
+  transition: all 0.3s;
+  outline: 1px solid #5d5d5e;
 }
 .inputs:focus {
   outline: auto !important;
@@ -292,6 +298,7 @@ input::placeholder {
 }
 .btn:hover {
   background: var(--grey-1) !important;
+  box-shadow: 0 0 0 6px #e7e7e9;
 }
 
 .btn.btn_2 {
