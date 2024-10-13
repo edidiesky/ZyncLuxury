@@ -69,10 +69,6 @@ export const Table = styled.div`
             line-height: 1.2 !important;
 
             span {
-              font-size: 15px !important;
-              @media (max-width: 780px) {
-                font-size: 13px !important;
-              }
               &.danger {
                 color: #840a0a;
                 padding: 0.56rem 1rem;

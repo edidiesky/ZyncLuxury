@@ -86,11 +86,22 @@ export const GetAllReservations = createAsyncThunk(
           authorization: `Bearer ${state.auth.token}`,
         },
       };
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URLS}/reservation/history`,
-        config
-      );
-      return data;
+      let reservationURL = `${
+        import.meta.env.VITE_API_BASE_URLS
+      }/reservation/history`;
+      const { page, search, limit } = thunkAPI.getState().reservation;
+      if (page) {
+        reservationURL = reservationURL + `?page=${page}`;
+        const { data } = await axios.get(reservationURL);
+        return data;
+      } else if (search) {
+        reservationURL = reservationURL + `?search=${search}`;
+        const { data } = await axios.get(reservationURL,config);
+        return data;
+      } else {
+        const { data } = await axios.get(reservationURL,config);
+        return data;
+      }
     } catch (error) {
       return thunkAPI.rejectWithValue(
         error.response && error.response.data.message
@@ -100,7 +111,6 @@ export const GetAllReservations = createAsyncThunk(
     }
   }
 );
-
 
 export const DeleteReservation = createAsyncThunk(
   "DeleteReservation",
@@ -139,7 +149,9 @@ export const UpdateReservation = createAsyncThunk(
         },
       };
       const { data } = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URLS}/reservation/${reservationId?.reservationid}?roomid=${reservationId?.roomid}`,
+        `${import.meta.env.VITE_API_BASE_URLS}/reservation/${
+          reservationId?.reservationid
+        }?roomid=${reservationId?.roomid}`,
         reservation,
         config
       );

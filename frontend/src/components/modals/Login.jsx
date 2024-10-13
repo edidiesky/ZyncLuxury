@@ -132,8 +132,8 @@ const LoginModal = () => {
                   data-test="loginmodal_button"
                   type="submit"
                   disabled={loginisLoading}
-                  className="p-4 px-8 hover:opacity-[.5] text-[#fff] flex items-center justify-center w-full cursor-pointer 
-                   bg-[#000] rounded-[40px] family1 font-normal"
+                  className="p-3 px-8 hover:opacity-[.5] text-[#fff] flex btn items-center justify-center w-full cursor-pointer 
+                   bg-[#000] rounded-md family1 font-semibold"
                 >
                   {loginisLoading ? (
                     <div className="w-full flex justify-center items-center gap-4">
@@ -241,19 +241,21 @@ const LoginModalStyles = styled(motion.div)`
       padding-top: 2rem;
       gap: 1rem;
       button {
-        padding: 1.2rem 2rem;
+        padding: 1rem 2rem;
         border: none;
         /* font-size: 1.4rem; */
         font-weight: 400;
         background: var(--grey-2);
         color: #fff;
         outline: none;
-        border-radius: 40px;
+        border-radius: 4px;
         cursor: pointer;
         text-transform: none;
         &:hover {
           background: var(--grey-1);
           color: var(--text-color);
+          box-shadow: 0 0 0 6px #e7e7e9;
+          transition: all 0.3s;
         }
         &.deleteBtn {
           background: var(--blue-1);

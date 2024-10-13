@@ -27,7 +27,7 @@ const GetUserReservation = asyncHandler(async (req, res) => {
 // @route  GET /reservation/history
 // @access  Private
 const GetAllReservation = asyncHandler(async (req, res) => {
-  const { limit = 12, page = 1 } = req.query;
+  const { limit = 6, page = 1 } = req.query;
   // calculate the pagination
   const skip = (page - 1) * limit;
   const availableRooms = await prisma.reservations.findMany({

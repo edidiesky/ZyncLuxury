@@ -217,7 +217,7 @@ button:disabled {
     background-position: 40px 0;
   }
 
-100% {
+  100% {
     background-position: 0 0;
   }
 }
@@ -260,7 +260,7 @@ input {
   transition: all 0.3s;
   border: 1.5px solid #3e3aff;
   padding: 0 1rem;
-    font-family: "Karla", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
 }
 form input:hover {
   box-shadow: 0 0 0 6px #e7e7e9;
@@ -282,11 +282,13 @@ input:focus {
   transition: all 0.5s;
   background: var(--primary) !important;
   cursor: pointer;
-  border-radius: 100px !important;
+  border-radius: 10px !important;
 }
 .btn:hover {
   background: var(--grey-1) !important;
   box-shadow: 0 0 0 6px #e7e7e9;
+  box-shadow: 0 0 0 6px #e7e7e9;
+  transition: all 0.3s;
 }
 
 .btn.btn_2 {
@@ -304,6 +306,8 @@ input:focus {
 .btn.btn_2:hover {
   background: var(--primary) !important;
   color: #fff !important;
+    box-shadow: 0 0 0 6px #e7e7e9;
+  transition: all 0.3s;
 }
 
 .hide {

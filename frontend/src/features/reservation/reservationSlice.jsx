@@ -18,7 +18,7 @@ const initialState = {
   loginisLoading: false,
   loginisSuccess: false,
   loginisError: false,
-  totalReservation:0,
+  totalReservation: 0,
 
   getsingleReservationisLoading: false,
   getsingleReservationisSuccess: false,
@@ -35,6 +35,11 @@ const initialState = {
   createReservationisLoading: false,
   createReservationisSuccess: false,
   createReservationisError: false,
+  page: 1,
+  search: "",
+  limit: "",
+  noOfPages: 0,
+  totalRooms: 0,
 };
 
 export const reservationSlice = createSlice({
@@ -43,6 +48,15 @@ export const reservationSlice = createSlice({
   reducers: {
     handleClearReservationAlert: (state, action) => {
       state.deleteReservationisSuccess = false;
+    },
+    handlePage: (state, action) => {
+      if (action.payload === "next") {
+        state.page =
+          state.page === state.noOfPages ? state.noOfPages : state.page + 1;
+      }
+      if (action.payload === "prev") {
+        state.page = state.page === 1 ? 1 : state.page - 1;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -152,6 +166,6 @@ export const reservationSlice = createSlice({
   },
 });
 // handleClearReservationAlert
-export const { handleClearReservationAlert } = reservationSlice.actions;
+export const { handleClearReservationAlert, handlePage } = reservationSlice.actions;
 
 export default reservationSlice.reducer;

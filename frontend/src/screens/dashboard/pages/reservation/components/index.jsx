@@ -5,15 +5,14 @@ import {
   GetAllRoomAndReservations,
   GetAllReservations,
 } from "@/features/reservation/reservationReducer";
-
+import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import ReservationRoomsModal from "@/components/modals/ReservationRoomsModal";
-import ReservationCalendar from "./Calendar";
 import Loader from "@/components/home/loader";
 import CreateReservationModal from "@/components/modals/reservationmodal/CreateReservationModal";
 import Nav from "@/components/common/Nav";
 import { Table } from "@/components/common/styles";
 import TableCard from "@/components/common/TableCard";
+import { handlePage } from "@/features/reservation/reservationSlice";
 const DashboardIndex = () => {
   const [reservationmodal, setReservationModal] = useState(false);
   const [createreservationmodal, setCreateReservationModal] = useState(false);
@@ -52,23 +51,26 @@ const DashboardIndex = () => {
         )}
       </AnimatePresence>
       <div className="w-full grid md:grid-cols-2 lg:items-center gap-4 justify-between">
-        <h3 className="text-3xl lg:text-5xl font-bold family1">
-          Reservations
-          <span className="block pt-3 text-base max-w-[400px] font-normal family1">
-            Make a review of your reservations created by your clients
+        <div className="w-full flex flex-col gap-1">
+          <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
+            Reservations Created
+          </h3>
+          <span className="block family1 text-base font-normal">
+            Overview of your listings reservations created by your clients
           </span>
-        </h3>
+        </div>
+
         <div className="flex items-center md:justify-end gap-2">
           <div
             onClick={() => setCreateReservationModal(true)}
-            className="p-4 btn btn_2 cursor-pointer text-sm
+            className="p-4 btn cursor-pointer text-sm
              bg-[#000] px-6 font-booking_font rounded-[10px] font-semibold text-white"
           >
             Add a reservation
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#FAFAFA] min-h-[170px] items-center flex flex-col p-4 px-6 rounded-3xl">
+      <div className="px-6 py-8 border rounded-lg flex flex-col w-full gap-6">
         <Table>
           <div className="TableContainer">
             <table className="tableWrapper">
@@ -100,7 +102,26 @@ const DashboardIndex = () => {
             </table>
           </div>
         </Table>
-
+        {reservations?.length > 0 ? (
+          <div className="w-full flex items-center justify-end gap-4">
+            <div
+              onClick={() => dispatch(handlePage("prev"))}
+              className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
+            >
+              <BiChevronLeft />
+            </div>
+            {page}
+            <div
+              onClick={() => dispatch(handlePage("next"))}
+              className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
+            >
+              {" "}
+              <BiChevronRight />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
         {/* <ReservationCalendar /> */}
       </div>
     </div>

@@ -26,7 +26,7 @@ export const getAllRooms = createAsyncThunk(
       // Build query parameters dynamically
       const params = new URLSearchParams();
 
-      // Append non-empty state values as query params
+      // It Append non-empty state values as query params
       if (page) params.append("page", page);
       if (limit) params.append("limit", limit);
       if (search) params.append("title", title);

@@ -138,7 +138,7 @@ const TableCard = ({ x, type, handleModal }) => {
         <tr className="family1" key={x?._id}>
           <td className="text-sm font-semibold">
             <div className="flex w-full justify-start items-center gap-4">
-              <img src={x?.images[0]} alt="" className="w-24 object-cover" />
+              <img src={x?.images[0]} alt="" className="w-16 object-cover" />
               <span className="text-sm font-bold family1 text-dark">
                 {x?.title}
                 <span className="block text-xs font-normal">
@@ -183,12 +183,12 @@ const TableCard = ({ x, type, handleModal }) => {
               <img
                 src={x?.rooms?.images[0]}
                 alt=""
-                className="w-20 h-20 object-cover"
+                className="w-16 object-cover"
               />
-              <span className="hidden lg:block">
+              <span className="hidden font-semibold lg:block">
                 {" "}
                 {x?.rooms?.title}
-                <span className="block text-sm"> {x?.rooms?.location}</span>
+                <span className="block font-normal text-sm"> {x?.rooms?.country}</span>
               </span>
             </div>
           </td>
@@ -240,11 +240,11 @@ const TableCard = ({ x, type, handleModal }) => {
             </span> */}
 
             {x?.status === "CONFIRMED" ? (
-              <span className=" font-normal text-sm font-booking_font_bold text-center success">
+              <span className=" font-normal text-xs font-booking_font_bold text-center success">
                 {x?.status}
               </span>
             ) : (
-              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
+              <span className=" font-normal text-xs font-booking_font_bold text-center danger">
                 {x?.status}
               </span>
             )}
