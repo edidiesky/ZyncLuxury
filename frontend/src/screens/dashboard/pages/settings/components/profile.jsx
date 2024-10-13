@@ -112,23 +112,23 @@ const Profile = () => {
   return (
     <div className="w-full lg:grid-cols-custom_2 relative items-start gap-8 grid">
       {(updateUserisLoading || getallUserisLoading || uploading) && <Loader />}
-      <div className="w-full lg:sticky top-[10%] py-8 bg-white border rounded-[20px]">
+      <div className="w-full lg:sticky family1 top-[10%]">
         <div
           onClick={() => setIndex(0)}
           className={`px-6  ${
             index === 0 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
-          }  text-base font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
+          }  text-sm font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
         >
-          <BiUser /> Profile Settings
+          <BiUser fontSize={'20px'} /> Profile Settings
         </div>
 
         <div
           onClick={() => setIndex(1)}
           className={`px-6  ${
             index === 1 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
-          }  text-base font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
+          }  text-sm font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
         >
-          <BiLock /> Password
+          <BiLock fontSize={'20px'} /> Password
         </div>
       </div>
       <>
@@ -137,7 +137,7 @@ const Profile = () => {
             <div className="w-full flex flex-col gap-8">
               <div>
                 <div className="w-full flex items-center gap-8">
-                  <div className="w-32 h-32 relative">
+                  <div className="w-24 h-24 relative">
                     {image !== "" ? (
                       <img
                         src={image}
@@ -152,7 +152,7 @@ const Profile = () => {
                       />
                     )}
                     <label htmlFor="upload">
-                      <div className="absolute cursor-pointer text-white text-2xl rounded-full border-4 border-[rgba(255,255,255,1)] flex items-center justify-center w-12 h-12 bottom-5 -right-5 bg-[#5542F6]">
+                      <div className="absolute cursor-pointer text-white text-xl rounded-full border-4 border-[rgba(255,255,255,1)] flex items-center justify-center w-10 h-10 bottom-5 -right-5 bg-[#5542F6]">
                         <BiCamera />
                         <input
                           type="file"
@@ -170,7 +170,7 @@ const Profile = () => {
                   <div
                     onClick={handleUpdateUser}
                     style={{ letterSpacing: "2px" }}
-                    className="btn btn-2 text-xs font-booking_font p-4 px-6 uppercase font-normal rounded-[40px] text-white"
+                    className="btn btn-2 text-xs p-4 px-4 font-semibold rounded-[40px] text-white"
                   >
                     Upload Now
                   </div>
@@ -182,13 +182,13 @@ const Profile = () => {
                     <label
                       key={index}
                       htmlFor={input.label}
-                      className="text-sm font-booking_font_normal rounded-[10px] flex flex-col gap-2 text-dark"
+                      className="text-sm family1 flex flex-col gap-2 text-dark"
                     >
                       <span className="text-dark font-normal">
                         {input.label}
                       </span>
                       <input
-                        className="w-full rounded-2xl text-dark font-normal text-sm inputs"
+                        className="w-full text-dark font-normal text-sm inputs"
                         required={true}
                         name={input?.name}
                         id={input.label}
@@ -201,12 +201,12 @@ const Profile = () => {
                   );
                 })}
                 <div className="flex flex-col gap-3">
-                  <span className="text-dark text-base font-normal">
+                  <span className="text-dark text-sm font-normal">
                     User Role
                   </span>
                   <div className="p-6 px-4 border w-full rounded-lg flex items-center justify-between">
                     <div className="flex flex-col gap-1">
-                      <span className="text-base font-bold font-booking_font_bold">
+                      <span className="text-sm font-bold font-booking_font_bold">
                         User Priviledge
                       </span>
 
@@ -236,29 +236,29 @@ const Profile = () => {
           <div className="w-full p-8 px-6 bg-white border rounded-[20px]">
             <div className="w-full flex flex-col gap-8">
               <div className="w-full flex items-center gap-8">
-                <h4 className="text-xl font-booking_font4">Change Password</h4>
+                <h4 className="text-xl font-semibold">Change Password</h4>
               </div>
               <form className="w-full grid grid-cols-1 gap-4">
                 <label
                   htmlFor={"password"}
-                  className="text-base font-booking_font_normal rounded-[10px] flex flex-col gap-2 text-dark"
+                  className="text-base family1 flex flex-col gap-2 text-dark"
                 >
                   <span className="text-grey font-normal">Password</span>
                   <input
-                    className="w-full rounded-2xl text-dark font-normal text-sm inputs"
+                    className="w-full text-dark font-normal text-sm inputs"
                     required={true}
-                    name={input?.name}
-                    id={input.label}
-                    value={formvalue[input.name]}
-                    type={input.type}
-                    placeholder={input.label}
+                    name={"password"}
+                    id={"password"}
+                    value={password}
+                    type={'password'}
+                    placeholder="Enter your password"
                     onChange={handleFormChange}
                   ></input>
                 </label>
 
                 <label
                   htmlFor={"confirmpassword"}
-                  className="text-base font-booking_font_normal rounded-[10px] flex flex-col gap-2 text-dark"
+                  className="text-sm family1 flex flex-col gap-2 text-dark"
                 >
                   <span className="text-grey font-normal">
                     Confirm Password
@@ -266,13 +266,13 @@ const Profile = () => {
                   <div className="input flex item-center gap-1">
                     {/* <MdOutlineMailOutline fontSize={'18px'} className="text-grey" /> */}
                     <input
-                      className="w-full rounded-2xl text-dark font-normal text-sm inputs"
+                      className="w-full text-dark font-normal text-sm inputs"
                       required={true}
                       name={"confirmpassword"}
                       id={"confirmpassword"}
                       value={confirmpassword}
                       type={"password"}
-                      placeholder={"Comfirm your Password"}
+                      placeholder={"Confirm your Password"}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
                   </div>
