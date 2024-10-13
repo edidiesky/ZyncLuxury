@@ -120,7 +120,7 @@ const Hero = () => {
               <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn md:text-base text-center  w-full text-sm family1 font-semibold text-white rounded-[40px] px-4 py-6"
+                  className="btn md:text-base text-center  w-full text-sm family1 font-semibold text-white rounded-[40px] px-4 py-4"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -129,7 +129,7 @@ const Hero = () => {
               <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-semibold text-white px-4 py-6"
+                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-semibold text-white px-4 py-4"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -393,14 +393,14 @@ const TopContent = ({ bar, setBar, currentUser }) => {
           </h4>
         </div>
 
-        <div className="hidden lg:flex items-center justify-center gap-2">
+        <div className="hidden lg:flex items-center justify-center gap-4">
           {linkData?.map((list, index) => {
             return (
               <NavLink
                 end
                 to={`/${list.path}`}
                 key={index}
-                className={`text-lg hover:text-grey font-normal family1 text-white flex items-center
+                className={`text-base hover:text-grey font-normal family1 text-white flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}

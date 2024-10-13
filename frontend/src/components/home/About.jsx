@@ -93,10 +93,10 @@ const About = () => {
                     className="w-full z-20 group hover:-translate-y-10 p-12 bg-[#f4f5fa] rounded-xl
                      flex flex-col gap-4"
                   >
-                    <div className="w-36 h-36 mb-4 border-8 group-hover:bg-[var(--primary)] border-[hsla(232, 28%, 73%,calc(100% - 80%))] md:text-6xl flex items-center justify-center rounded-full bg-white text-4xl">
+                    <div className="w-36 h-36 mb-4 border-8 group-hover:text-white group-hover:bg-[var(--primary)] border-[hsla(232, 28%, 73%,calc(100% - 80%))] md:text-6xl flex items-center justify-center rounded-full bg-white text-4xl">
                       {data?.icons}
                     </div>
-                    <h3 className="text-2xl md:text-3xl family1 font-bold text-dark">
+                    <h3 className="text-2xl md:text-3xl font-bold text-dark">
                       {data?.title}
                     </h3>
                     <h4 className="text-sm md:text-base family1 font-normal text-grey">
@@ -105,7 +105,7 @@ const About = () => {
                   </div>
                   <div className="w-full z-10">
                     <div
-                      className="w-[90%] capitalize font-normal -mt-20 text-base text-center py-4 pt-12 px-4
+                      className="w-[90%] capitalize family1 font-normal -mt-20 text-base text-center py-4 pt-12 px-4
                      rounded-xl text-white mx-auto bg-[var(--primary)]"
                     >
                       {data?.text}

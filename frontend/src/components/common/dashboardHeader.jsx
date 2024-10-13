@@ -94,7 +94,7 @@ const DashboardHeader = () => {
         style={{
           backdropFilter: "blur(14px)",
         }}
-        className="h-[85px] border-b border-[rgba(0,0,0,.08)] bg-[#ffffff4e] flex z-40 sticky top-0 items-center justify-between"
+        className="h-[85px] w-full border-b border-[rgba(0,0,0,.08)] bg-[#ffffff4e] flex z-40 sticky top-0 items-center justify-between"
       >
         <div className="Header_wrapper w-[95%] mx-auto max-w-custom flex items-center justify-between">
           <div className="flex items-center gap-3">

@@ -118,11 +118,11 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
     >
       <Link
         to={`/room/${apartment?.id}`}
-        className="w-full p-2 bg-[#fafafa] rounded-xl flex flex-col"
+        className="w-full rounded-xl flex flex-col"
       >
         <div
           className={`w-full ${
-            type === "search" ? "h-[170px]" : "h-[230px] md:h-[270px]"
+            type === "search" ? "h-[170px]" : "h-[230px] md:h-[240px]"
           }  rounded-t-xl overflow-hidden relative`}
         >
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
@@ -179,7 +179,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         <div className="w-full flex flex-col border rounded-b-xl bg-[#fff]">
           <div
             className={`${
-              type === "search" ? " py-3 px-4  gap-[4px]" : "py-4 px-6  gap-2"
+              type === "search" ? " py-3 px-4  gap-[4px]" : "p-4 gap-2"
             } w-full flex flex-col `}
           >
             <div className="w-full flex items-center gap-4 justify-between">
@@ -187,7 +187,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                 className={`${
                   type === "search"
                     ? "md:text-lg text-base"
-                    : "md:text-3xl text-2xl"
+                    : "md:text-3xl family1 text-2xl"
                 }  font-bold flex-1`}
               >
                 ${apartment?.price}.00
@@ -219,7 +219,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                   type === "search"
                     ? "md:text-base text-base"
                     : "md:text-xl text-lg"
-                }  font-bold flex-1`}
+                }  font-semibold flex-1`}
               >
                 {apartment?.title}
               </h3>
@@ -227,7 +227,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             <div
               className={`w-full ${
                 type === "search" ? "text-xs" : "text-base"
-              } flex items-center text-grey gap-1`}
+              } flex items-center family1 text-grey gap-1`}
             >
               {" "}
               {apartment?.state && <span>{apartment?.state},</span>}{" "}
@@ -236,13 +236,13 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             <ul
               className={`${
                 type === "search" ? "text-sm" : "text-base"
-              } flex gap-3 list-disc list-inside items-center font-bold`}
+              } flex gap-3 list-disc family1 list-inside items-center font-bold`}
             >
               <li className="">{apartment?.bedroom} bedroom</li>
               <li className="">{apartment?.bathroom} bathroom</li>
             </ul>
           </div>
-          <div
+          {/* <div
             className={`${
               type === "search" ? " py-3 px-4 gap-[4px]" : "py-4 px-6  gap-2"
             } w-full flex items-center border-t rounded-b-xl bg-[#fff]`}
@@ -276,7 +276,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             >
               {apartment?.user?.name}'s Properties
             </span>
-          </div>
+          </div> */}
         </div>
       </Link>
     </div>

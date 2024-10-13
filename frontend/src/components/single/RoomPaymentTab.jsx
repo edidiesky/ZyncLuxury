@@ -187,8 +187,8 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
           </div>
         </div>
       </div>
-      <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col p-3 bg-[#fafafa] rounded-xl gap-8">
-        <div className="w-full border rounded-lg py-8 px-3 flex flex-col gap-4 md:w-[380px] bg-[#fff]">
+      <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col">
+        <div className="w-full border rounded-lg py-8 px-2 flex flex-col gap-4 md:w-[380px] bg-[#fff]">
           <h4 className="text-3xl family1 px-6 font-bold">
             ₦{room?.price} <span className="font-normal text-sm">/night</span>
           </h4>
@@ -300,7 +300,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 <span className="text-dark text-base block font-booking_font font-normal">
                   Caution Fees
                 </span>
-                <span> ₦ {room?.cautionfee}</span>
+                <span> ₦ {room?.cautionfee?room?.cautionfee:0}</span>
               </div>
               {/* total */}
               <div className="w-full text-lg font-semibold flex items-center justify-between">
