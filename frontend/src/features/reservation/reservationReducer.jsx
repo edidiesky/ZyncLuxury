@@ -92,7 +92,7 @@ export const GetAllReservations = createAsyncThunk(
       const { page, search, limit } = thunkAPI.getState().reservation;
       if (page) {
         reservationURL = reservationURL + `?page=${page}`;
-        const { data } = await axios.get(reservationURL);
+        const { data } = await axios.get(reservationURL, config);
         return data;
       } else if (search) {
         reservationURL = reservationURL + `?search=${search}`;
