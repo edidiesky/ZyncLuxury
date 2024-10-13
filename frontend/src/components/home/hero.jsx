@@ -47,11 +47,11 @@ const linkData = [
 ];
 
 const profilesList = [
-  "/face_1.png",
+  "/face_1.jpg",
   "/face_2.png",
   "/face_3.png",
   "/face_2.png",
-  "/face_1.png",
+  "/face_1.jpg",
 ];
 const Hero = () => {
   const [bar, setBar] = React.useState(false);
@@ -120,7 +120,7 @@ const Hero = () => {
               <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn md:text-base text-center  w-full text-sm family1 font-normal text-white rounded-[40px] px-4 py-6 md:px-10"
+                  className="btn md:text-base text-center  w-full text-sm family1 font-semibold text-white rounded-[40px] px-4 py-6"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -129,7 +129,7 @@ const Hero = () => {
               <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-normal text-white px-4 py-6 md:px-10"
+                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-semibold text-white px-4 py-6"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -388,7 +388,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
        gap-12"
       >
         <div className="flex items-center gap-2">
-          <h4 className="family2 text-2xl md:text-2xl uppercase font-bold text-white">
+          <h4 className="text-2xl md:text-2xl font-bold text-white">
             ZyncLuxury
           </h4>
         </div>
@@ -416,7 +416,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
             <div className="flex justify-end items-center">
               <button
                 onClick={() => dispatch(onLoginModal())}
-                className="btn min-w-[100px] md:min-w-[130px] text-center text-sm md:text-base family1 font-semibold text-white px-4 md:px-8 py-4"
+                className="btn text-center text-sm md:text-base family1 font-semibold text-white px-4 md:px-8 py-3"
               >
                 Discover Listing
               </button>
