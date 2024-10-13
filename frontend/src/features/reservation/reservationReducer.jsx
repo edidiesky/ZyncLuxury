@@ -81,6 +81,7 @@ export const GetAllReservations = createAsyncThunk(
   async (reservationId, thunkAPI) => {
     try {
       const state = thunkAPI.getState();
+      const { page, search, limit } = thunkAPI.getState().reservation;
       const config = {
         headers: {
           authorization: `Bearer ${state.auth.token}`,
@@ -89,17 +90,17 @@ export const GetAllReservations = createAsyncThunk(
       let reservationURL = `${
         import.meta.env.VITE_API_BASE_URLS
       }/reservation/history`;
-      const { page, search, limit } = thunkAPI.getState().reservation;
+
       if (page) {
         reservationURL = reservationURL + `?page=${page}`;
         const { data } = await axios.get(reservationURL, config);
         return data;
       } else if (search) {
         reservationURL = reservationURL + `?search=${search}`;
-        const { data } = await axios.get(reservationURL,config);
+        const { data } = await axios.get(reservationURL, config);
         return data;
       } else {
-        const { data } = await axios.get(reservationURL,config);
+        const { data } = await axios.get(reservationURL, config);
         return data;
       }
     } catch (error) {

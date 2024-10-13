@@ -18,9 +18,8 @@ const DashboardIndex = () => {
   const [createreservationmodal, setCreateReservationModal] = useState(false);
   const [roommodal, setRoomModal] = useState(false);
   const dispatch = useDispatch();
-  const { reservations, getsingleReservationisLoading } = useSelector(
-    (store) => store.reservation
-  );
+  const { reservations, getsingleReservationisLoading, reservation } =
+    useSelector((store) => store.reservation);
 
   const { currentUser } = useSelector((store) => store.auth);
 
