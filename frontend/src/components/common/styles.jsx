@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Table = styled.div`
   width: 100%;
-  padding: 1rem 0;
-  border-radius: 3px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -20,10 +18,6 @@ export const Table = styled.div`
       overflow-x: auto;
       border-collapse: collapse;
       table-layout: fixed;
-      /* @media (max-width: 1080px) {
-        max-width: 900px;
-        min-width: 900px;
-      } */
       @media (max-width: 780px) {
         max-width: 600px;
         min-width: 600px;
@@ -41,21 +35,17 @@ export const Table = styled.div`
 
           border-radius: 40px;
           padding: 1rem 0;
-          /* text-transform: uppercase; */
           font-weight: normal !important;
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-          }
+          background-color: #fafafa;
           th {
             text-align: start;
-            font-size: 15px !important;
+            font-size: 14px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1.7rem;
-            font-family: "Karla";
-            font-weight: 500 !important;
-            @media (max-width: 780px) {
-              font-size: 13px !important;
-            }
+            padding: 1.3rem 1rem;
+            font-weight: 400;
+            font-family: "Karla", sans-serif;
+            background-color: #fafafa;
+            color: #969a9a;
           }
         }
       }
@@ -67,20 +57,16 @@ export const Table = styled.div`
           transition: all 0.5s;
           z-index: 200;
           &:hover {
-            background-color: rgba(0, 0, 0, 0.06);
+            background-color: #eee;
           }
           td {
             text-align: start;
-            font-family: "Karla";
-            padding: 1.5rem !important;
+            font-family: "Karla", sans-serif;
+            padding: 1rem !important;
             font-weight: normal !important;
             color: #000;
-            font-size: 15px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.09);
             line-height: 1.2 !important;
-            @media (max-width: 780px) {
-              font-size: 13px !important;
-            }
 
             span {
               font-size: 15px !important;

@@ -65,14 +65,14 @@ const DashboardSidebar = () => {
     <HeaderStyles
       className={`w-[310px] bg-[#18171C] lg:block hidden h-[100vh] overflow-auto sticky top-0`}
     >
-      <div className="w-full h-full family1 py-4 justify-between flex items-center flex-col gap-4">
+      <div className="w-full h-full  py-4 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] flex flex-col gap-4">
           <div className="flex px-4 w-full flex-col gap-4 items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
               <Link
                 to={"/"}
-                className="w-full flex items-center gap-4 font-semibold text-base text-white"
+                className="w-full flex items-center gap-4 font-semibold text-lg text-white"
               >
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
@@ -97,7 +97,7 @@ const DashboardSidebar = () => {
               </span>
             </div>
           </div>
-          <div className="w-full px-2 flex flex-col gap-1">
+          <div className="w-full px-2 family1 flex flex-col gap-1">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
@@ -122,7 +122,7 @@ const DashboardSidebar = () => {
             <NavLink
               // activeClassName="active"
               end
-              className={`flex tab py-3 hover:text-white text-[#969a9acb] font-semibold text-sm
+              className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] font-semibold text-sm
                                  rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >

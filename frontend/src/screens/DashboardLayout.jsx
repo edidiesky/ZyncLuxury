@@ -11,7 +11,7 @@ const DashboardLayout = () => {
         <DashboardSidebar />
         <div className="flex w-full md:w-[90%] mx-auto max-w-custom relative flex-col gap-4">
           <DashboardHeader />
-          <div className="px-4 py-8 lg:px-6 w-full">
+          <div className="px-4 py-8 lg:px-8 w-full">
             <Outlet />
           </div>
         </div>

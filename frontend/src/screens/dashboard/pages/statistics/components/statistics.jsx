@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 const Statistics = () => {
   return (
     <div className="flex w-full">
-      {/* <GrowthStat /> */}
       <Charts/>
     </div>
   );
@@ -29,9 +28,6 @@ const Charts = () => {
       enabled: false,
     },
     colors: ["#2E0266", "var(--primary)"],
-    stroke: {
-      curve: "smooth",
-    },
     xaxis: {
       // categories: totalMonth,
       categories: [
@@ -64,7 +60,7 @@ const Charts = () => {
           series={series}
           type="bar"
           width={"100%"}
-          height={"250px"}
+          height={"400px"}
         />
       </div>
     </div>

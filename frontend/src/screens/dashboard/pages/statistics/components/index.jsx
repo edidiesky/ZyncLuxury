@@ -11,6 +11,7 @@ import Image from "@/components/common/Image";
 import ProductBreakdown from "./ProductBreakdown";
 import RoomCard from "@/components/common/RoomCard";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
+import RoomsCreated from "./RoomsCreated";
 const DashboardIndex = () => {
 
   // const { getStatisLoading } = useSelector((store) => store.stat);
@@ -33,50 +34,20 @@ const DashboardIndex = () => {
             Overview of your properties regarding Rentals management
           </span>
         </div>
-        {/* widget */}
-        <Widget />
-        <Statistics />
         <div className="w-full grid gap-12 lg:gap-4 lg:grid-cols-custom">
-          <div className="w-full lg:w-[400px] flex flex-col gap-12">
-            {/* <ProductBreakdown /> */}
-            {/* <Transaction /> */}
+          <Widget />
+          <div className="w-full lg:w-[500px] flex flex-col gap-12">
+            <Statistics />
           </div>
         </div>
-        <Property />
+        {/* widget */}
+
+        <RoomsCreated />
       </div>
     </div>
   );
 };
 
-
-const Property = () => {
-    const { rooms } = useSelector((store) => store.room);
-  return (
-    <div className="w-full ">
-      <div className="w-full min-h-[330px] flex flex-col gap-8 rounded-3xl px-8 py-12 overflow-hidden bg-[#fff] border border-[rgba(0,0,0,.08)]">
-        <div className="w-full px-4 flex items-center justify-between">
-          <h4 className="text-2xl lg:text-3xl font-bold">
-            My Properties
-            <span className="text-grey block pt-1 font-normal text-sm">
-              Track all your Property you have created for sell or rent
-            </span>
-          </h4>
-          <Link
-            to={`/dashboard/rooms`}
-            className="text-dark underline block pt-1 font-normal text-sm"
-          >
-            See All
-          </Link>
-        </div>
-        <div className="w-full h-[600px] overflow-auto grid lg:grid-cols-3 gap-4">
-          {rooms?.map((data, index) => {
-            return <RoomCard apartment={data} type={"search"} />;
-          })}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Transaction = () => {
   return (

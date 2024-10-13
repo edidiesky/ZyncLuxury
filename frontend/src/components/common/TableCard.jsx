@@ -19,7 +19,7 @@ const TableCard = ({ x, type, handleModal }) => {
       <>
         {/* <Delete /> */}
         <tr key={x?.id}>
-          <td>
+          <td className='text-sm font-semibold'>
             <span className="flex items-center gap-2">
               Payment Received from{" "}
               <span className="font-booking_font_bold font-bold text-dark">
@@ -27,10 +27,10 @@ const TableCard = ({ x, type, handleModal }) => {
               </span>
             </span>
           </td>
-          <td>{x?.reservation?.id}</td>
-          <td>₦{Number(x?.amount).toLocaleString()}</td>
-          <td>{x?.currency}</td>
-          <td>
+          <td className='text-sm font-semibold'>{x?.reservation?.id}</td>
+          <td className='text-sm font-semibold'>₦{Number(x?.amount).toLocaleString()}</td>
+          <td className='text-sm font-semibold'>{x?.currency}</td>
+          <td className='text-sm font-semibold'>
             {/* <span className="p-4">
               {x?.status}
             </span> */}
@@ -45,7 +45,7 @@ const TableCard = ({ x, type, handleModal }) => {
               </span>
             )}
           </td>
-          <td>{moment(x?.createdAt).format("DD MMMM YYYY")}</td>
+          <td className='text-sm font-semibold'>{moment(x?.createdAt).format("DD MMMM YYYY")}</td>
 
           {/* <td>
 
@@ -68,7 +68,7 @@ const TableCard = ({ x, type, handleModal }) => {
         </AnimatePresence>
         {/* <Delete /> */}
         <tr key={x?._id}>
-          <td>
+          <td className='text-sm font-semibold'>
             <div className="flex flex-col">
               <span className=" font-normal text-dark text-bold">
                 {x?.name}
@@ -76,10 +76,10 @@ const TableCard = ({ x, type, handleModal }) => {
               {/* <span className=" font-normal family1 text-dark">{x?.email}</span> */}
             </div>
           </td>
-          <td>
+          <td className='text-sm font-semibold'>
             <span className=" font-normal family1  text-dark">{x?.email}</span>
           </td>
-          <td>
+          <td className='text-sm font-semibold'>
             {x?.role === "ADMIN" ? (
               <span className=" font-normal text-xs family1 text-center success">
                 Admin
@@ -95,12 +95,12 @@ const TableCard = ({ x, type, handleModal }) => {
             )}
           </td>
 
-          <td>
+          <td className='text-sm font-semibold'>
             <span className="text-dark  font-normal family1 text-light">
               {moment(x?.createdAt).format("DD MMM YYYY")}
             </span>
           </td>
-          <td>
+          <td className='text-sm font-semibold'>
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/profile/${x?.id}`}
@@ -135,26 +135,23 @@ const TableCard = ({ x, type, handleModal }) => {
             />
           )}
         </AnimatePresence>
-        <tr key={x?._id}>
-          <td>
+        <tr className="family1" key={x?._id}>
+          <td className="text-sm font-semibold">
             <div className="flex w-full justify-start items-center gap-4">
               <img src={x?.images[0]} alt="" className="w-24 object-cover" />
-              <span className="text-base font-normal family1 text-dark">
+              <span className="text-sm font-bold family1 text-dark">
                 {x?.title}
-                <span className="block text-sm">
+                <span className="block text-xs font-normal">
                   {x?.city}, {x?.country}
                 </span>
               </span>
             </div>
           </td>
-          {/* <td className=" font-normal">{x?.address}</td> */}
+          <td className="text-sm font-semibold">₦{x?.price}</td>
 
-          {/* <td className=" font-normal"></td> */}
-          <td className=" font-normal">₦{x?.price}</td>
+          <td className="text-sm font-semibold">{startDate}</td>
 
-          <td className=" font-normal">{startDate}</td>
-
-          <td className=" font-normal">
+          <td className="text-sm font-semibold">
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/rooms/${x?.id}`}
@@ -181,7 +178,7 @@ const TableCard = ({ x, type, handleModal }) => {
     return (
       <>
         <tr key={x?.id} className="px-4">
-          <td>
+          <td className="text-sm font-semibold">
             <div className="flex items-center font-normal gap-3">
               <img
                 src={x?.rooms?.images[0]}
@@ -196,7 +193,7 @@ const TableCard = ({ x, type, handleModal }) => {
             </div>
           </td>
 
-          <td className="hidden lg:table-cell">
+          <td className="hidden lg:table-cell text-sm font-semibold">
             <div className="flex items-center font-normal gap-3">
               {x?.user?.image ? (
                 <div className="flex items-center gap-3">
@@ -228,16 +225,16 @@ const TableCard = ({ x, type, handleModal }) => {
               )}
             </div>
           </td>
-          <td className=" font-normal">
+          <td className="text-sm font-semibold">
             <span>
               {" "}
               {startDate} - {endDate}
             </span>
           </td>
-          <td className=" font-normal">
+          <td className="text-sm font-semibold">
             <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
           </td>
-          <td>
+          <td className="text-sm font-semibold">
             {/* <span className="p-4">
               {x?.status}
             </span> */}
@@ -253,7 +250,7 @@ const TableCard = ({ x, type, handleModal }) => {
             )}
           </td>
 
-          <td className=" font-normal">
+          <td className="text-sm font-semibold">
             <div className="flex items-center justify-center">
               <div
                 onClick={handleModal}
@@ -279,19 +276,19 @@ const TableCard = ({ x, type, handleModal }) => {
     <>
       {/* <Delete /> */}
       <tr key={x?._id}>
-        <td>
+        <td className='text-sm font-semibold'>
           <span className=" font-normal family1 text-dark">{x?.plan}</span>
         </td>
-        <td>
+        <td className='text-sm font-semibold'>
           <span className="text-dark  font-normal family1">$ {x?.price}</span>
         </td>
 
-        <td>
+        <td className='text-sm font-semibold'>
           <span className="text-dark  font-normal family1 text-light">
             Type 1
           </span>
         </td>
-        <td>
+        <td className='text-sm font-semibold'>
           <span className="text-dark  font-normal family1 text-light">
             {x?.date}
           </span>

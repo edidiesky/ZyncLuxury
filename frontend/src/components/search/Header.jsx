@@ -38,7 +38,7 @@ const Header = () => {
     <div className="h-[100%] md:h-[85px] w-full">
       <div className="bg-[#fff] py-4 w-full flex flex-col">
         <div
-          className="w-[95%] max-w-custom mx-auto flex items-center justify-between
+          className="w-[95%] family1 max-w-custom mx-auto flex items-center justify-between
        gap-12"
         >
           <div className="flex items-center gap-4 md:gap-6">

@@ -53,12 +53,12 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-2">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-2 gap-4 md:gap-4">
       {widgetData?.map((data, index) => {
         return (
           <div
             key={index}
-            className="w-full p-4 items-start family1 justify-center min-h-[200px] md:min-h-[250px] 
+            className="w-full p-4 items-start  justify-center min-h-[200px] md:min-h-[250px] 
                     border rounded-xl flex flex-col gap-4"
           >
             <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
@@ -75,7 +75,7 @@ const Widget = () => {
                 {data?.title}
               </h4>
             </div>
-            <div className="w-full flex flex-col">
+            <div className="w-full family1 flex flex-col">
               <h3 className="text-3xl md:text-5xl font-semibold">10</h3>
 
               <span className="text-xs flex-1 pt-2 block font-normal">

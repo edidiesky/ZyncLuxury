@@ -239,7 +239,7 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+  font-family: "Karla", sans-serif !important;
   border-radius: 10px;
 }
 
@@ -260,6 +260,7 @@ input {
   transition: all 0.3s;
   border: 1.5px solid #3e3aff;
   padding: 0 1rem;
+    font-family: "Karla", sans-serif !important;
 }
 form input:hover {
   box-shadow: 0 0 0 6px #e7e7e9;
