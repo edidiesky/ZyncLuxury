@@ -273,8 +273,8 @@ const DeleteContainer = styled(motion.div)`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   .deleteCard {
-    max-width: 480px;
-    min-width: 460px;
+    max-width: 405px;
+    min-width: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
