@@ -10,7 +10,6 @@ import Image from "@/components/common/Image";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 import RoomsCreated from "./RoomsCreated";
 const DashboardIndex = () => {
-
   const { getStatisLoading } = useSelector((store) => store.stat);
   const dispatch = useDispatch();
   useEffect(() => {
