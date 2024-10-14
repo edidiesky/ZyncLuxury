@@ -31,7 +31,7 @@ const DashboardIndex = () => {
     return <Loader />;
   }
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-6">
       {/* <AnimatePresence mode="wait">
         {reservationmodal && (
           <ReservationRoomsModal
@@ -49,7 +49,7 @@ const DashboardIndex = () => {
           />
         )}
       </AnimatePresence>
-      <div className="w-full grid md:grid-cols-2 lg:items-center gap-4 justify-between">
+      <div className="w-full grid md:grid-cols-2 lg:items-center gap-6 justify-between">
         <div className="w-full flex flex-col gap-1">
           <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
             Reservations Created
@@ -102,7 +102,7 @@ const DashboardIndex = () => {
           </div>
         </Table>
         {reservations?.length > 0 ? (
-          <div className="w-full family1 flex items-center justify-end gap-4">
+          <div className="w-full family1 flex items-center justify-end gap-6">
             <div
               onClick={() => dispatch(handlePage("prev"))}
               className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
