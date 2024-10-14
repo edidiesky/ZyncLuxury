@@ -112,7 +112,7 @@ const Profile = () => {
   return (
     <div className="w-full lg:grid-cols-custom_2 relative items-start gap-8 grid">
       {(updateUserisLoading || getallUserisLoading || uploading) && <Loader />}
-       <div className="w-full lg:w-[300px] lg:sticky top-[10%] flex md:flex-col flex-row md:items-start items-center">
+           <div className="w-full lg:w-[300px] lg:sticky top-[10%] flex md:flex-col flex-row md:items-start items-center">
         <div
           onClick={() => setIndex(0)}
           className={`px-6  ${
