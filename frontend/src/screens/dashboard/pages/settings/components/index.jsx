@@ -5,7 +5,7 @@ const DashboardIndex = () => {
   const [roommodal, setRoomModal] = useState(false);
   return (
     <div className="w-full">
-      <div className="w-full pb-20 flex flex-col gap-8">
+      <div className="w-full pb-20 flex flex-col gap-4">
         <div className="w-full flex flex-col gap-1">
           <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
             Account Settings
