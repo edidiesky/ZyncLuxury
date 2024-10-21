@@ -43,7 +43,7 @@ export const Table = styled.div`
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1.3rem 1rem;
             font-weight: 400;
-            font-family: "Karla", sans-serif;
+            font-family: "Regular", sans-serif;
             background-color: #fafafa;
             color: #969a9a;
           }
@@ -61,7 +61,7 @@ export const Table = styled.div`
           }
           td {
             text-align: start;
-            font-family: "Karla", sans-serif;
+            font-family: "Regular", sans-serif;
             padding: 1rem !important;
             font-weight: normal !important;
             color: #000;

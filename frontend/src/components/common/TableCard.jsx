@@ -139,9 +139,9 @@ const TableCard = ({ x, type, handleModal }) => {
           <td className="text-sm font-semibold">
             <div className="flex w-full justify-start items-center gap-4">
               <img src={x?.images[0]} alt="" className="w-16 object-cover" />
-              <span className="text-sm font-bold family1 text-dark">
+              <span className="text-base family2 text-dark">
                 {x?.title}
-                <span className="block text-xs font-normal">
+                <span className="block text-xs regular">
                   {x?.city}, {x?.country}
                 </span>
               </span>
@@ -185,10 +185,10 @@ const TableCard = ({ x, type, handleModal }) => {
                 alt=""
                 className="w-16 object-cover"
               />
-              <span className="hidden font-semibold lg:block">
+              <span className="hidden text-base family2 lg:block">
                 {" "}
                 {x?.rooms?.title}
-                <span className="block font-normal text-sm"> {x?.rooms?.country}</span>
+                <span className="block regular text-sm"> {x?.rooms?.country}</span>
               </span>
             </div>
           </td>
