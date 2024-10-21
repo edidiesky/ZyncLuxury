@@ -130,38 +130,7 @@ const DashboardSidebar = () => {
 
               {<span className="">Settings</span>}
             </NavLink>
-            {/* <div className=" w-full relative px-2 flex gap-1 items-center justify-between">
-              <div className="flex flex-1 gap-4 items-center group-hover:justify-start">
-                {currentUser?.image ? (
-                  <img
-                    src={currentUser?.image}
-                    alt=""
-                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
-                  />
-                ) : currentUser?.username ? (
-                  // <div className="w-8 h-12 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
-                  //   {currentUser?.username[0]}{" "}
-                  // </div>
-                  <img
-                    src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                    alt=""
-                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
-                  />
-                ) : (
-                  <img
-                    src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                    alt=""
-                    className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
-                  />
-                )}
-                <h4 className="text-sm  text-[#fff] family2">
-                  {currentUser?.name}
-                  <span className="block font-booking_font text-xs family2 text-grey">
-                    {currentUser?.email}
-                  </span>
-                </h4>
-              </div>
-            </div> */}
+        
             <div
               className="py-2 rounded-md w-full px-3 font-normal
                      text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]"

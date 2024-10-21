@@ -11,7 +11,7 @@ const RoomsCreated = () => {
     <div className="px-6 py-8 border rounded-lg flex flex-col w-full gap-6">
       <div className="w-full flex md:flex-row flex-col md:items-center justify-between gap-4">
         <div className="flex flex-col">
-          <h3 className="text-xl block lg:text-2xl text-dark family2 font-semibold">
+          <h3 className="text-xl block lg:text-3xl text-dark family2 family2">
             Recent Listings
           </h3>
           <span className="block family1 text-base font-normal">
@@ -51,7 +51,7 @@ const RoomsCreated = () => {
             {rooms?.length === 0 ? (
               ""
             ) : (
-              //   <h4 className="w-full p-4 text-center text-lg font-semibold">
+              //   <h4 className="w-full p-4 text-center text-lg family2">
               //     You have no Listings
               //   </h4> ""
               <tbody>
