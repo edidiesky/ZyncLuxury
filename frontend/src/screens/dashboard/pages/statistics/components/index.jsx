@@ -30,9 +30,9 @@ const DashboardIndex = () => {
             Overview of your properties regarding Rentals management
           </span>
         </div>
-        <div className="w-full grid gap-12 lg:gap-4 lg:grid-cols-custom">
+        <div className="w-full grid items-start gap-12 lg:gap-4 lg:grid-cols-1">
           <Widget />
-          <div className="w-full lg:w-[500px] flex flex-col gap-12">
+          <div className="w-full flex flex-col gap-12">
             <Statistics />
           </div>
         </div>
