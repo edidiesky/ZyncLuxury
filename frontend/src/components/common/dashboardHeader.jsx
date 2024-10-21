@@ -117,7 +117,7 @@ const DashboardHeader = () => {
               </span>
               <input
                 type="text"
-                placeholder="Search lisitimgs"
+                placeholder="Search listings"
                 className="text-sm pl-12 h-full border font-normal bg-white rounded-full w-full "
               />
             </form>
