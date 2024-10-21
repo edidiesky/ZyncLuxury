@@ -90,7 +90,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             <div
               style={{ letterSpacing: "1px" }}
               className="flex items-center justify-between gap-2 pb-2 uppercase 
-            text-xs font-semibold"
+            text-xs regular"
             >
               <span className="flex uppercase items-center">
                 <span>{startDate}</span> - <span>{endDate}</span>
@@ -122,7 +122,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
       >
         <div
           className={`w-full ${
-            type === "search" ? "h-[170px]" : "h-[230px] md:h-[240px]"
+            type === "search" ? "h-[170px]" : "h-[230px] md:h-[280px]"
           }  rounded-t-xl overflow-hidden relative`}
         >
           {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
@@ -201,7 +201,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                     : "bg-[#f7f2db] text-[#eec680]"
                 } ${
                   type === "search"
-                    ? "text-xs px-3 py-1 font-semibold"
+                    ? "text-xs px-3 py-1 regular"
                     : "text-xs px-3 font-bold py-2"
                 } gap-2 flex items-center rounded-full `}
               >
@@ -236,7 +236,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             <ul
               className={`${
                 type === "search" ? "text-sm" : "text-base"
-              } flex gap-3 list-disc family1 list-inside items-center font-bold`}
+              } flex gap-3 list-disc family1 list-inside items-center regular`}
             >
               <li className="">{apartment?.bedroom} bedroom</li>
               <li className="">{apartment?.bathroom} bathroom</li>

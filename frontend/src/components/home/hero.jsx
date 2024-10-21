@@ -187,21 +187,21 @@ const SearchHomes = () => {
           className="flex flex-col md:px-4 gap-4 w-full"
         >
           <div className="p-4 rounded-full flex-wrap  flex items-center gap-4">
-            <div className="py-3 px-6 text-center rounded-full bg-gray-200 text-dark font-bold text-sm">
+            <div className="py-3 px-6 text-center rounded-full bg-gray-200 text-dark family2 text-sm">
               All Accomodations
             </div>
-            {/* <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+            {/* <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark family2 text-sm">
              Villa
             </div>
-            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark family2 text-sm">
              Hotel
             </div>
-            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark font-bold text-sm">
+            <div className="py-3 px-6 md:flex-1 text-center rounded-full text-dark family2 text-sm">
            Apartment
             </div> */}
           </div>
           <div className="w-full px-8 flex flex-wrap md:flex-nowrap items-start gap-4">
-            <div className="flex flex-col relative md:w-1/4 gap-2 text-base font-bold">
+            <div className="flex flex-col relative md:w-1/4 gap-2 text-base family2">
               <span>Location</span>
               <input
                 type="text"
@@ -240,7 +240,7 @@ const SearchHomes = () => {
               {" "}
               <PopoverTrigger>
                 <div className="lg:w-[500px] flex items-start gap-4">
-                  <div className="flex flex-col w-full items-start gap-2 text-base font-bold">
+                  <div className="flex flex-col w-full items-start gap-2 text-base family2">
                     <span>Check In</span>
                     <input
                       type="text"
@@ -249,7 +249,7 @@ const SearchHomes = () => {
                       className="w-full rounded-md inputs text-dark font-normal text-sm"
                     />
                   </div>
-                  <div className="flex flex-col w-full items-start gap-2 text-base font-bold">
+                  <div className="flex flex-col w-full items-start gap-2 text-base family2">
                     <span>Check Out</span>
                     <input
                       type="text"
@@ -271,7 +271,7 @@ const SearchHomes = () => {
                 />
               </PopoverContent>
             </Popover>
-            <div className="flex md:w-1/4 flex-col gap-2 text-base font-bold">
+            <div className="flex md:w-1/4 flex-col gap-2 text-base family2">
               <span>Participant</span>
               <input
                 type="text"
@@ -342,7 +342,7 @@ const Sidebar = ({ bar, setBar, currentUser }) => {
               />
             )}
             {currentUser && (
-              <h4 className="text-base font-bold font-booking_font4 text-[#fff] family1">
+              <h4 className="text-base family2 font-booking_font4 text-[#fff] family1">
                 {currentUser?.name}
                 <span className="block font-normal font-booking_font text-sm text-grey">
                   {currentUser?.email}
@@ -391,7 +391,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
        gap-12"
       >
         <div className="flex items-center gap-2">
-          <h4 className="text-2xl md:text-2xl font-bold text-white">
+          <h4 className="text-2xl md:text-2xl family2 text-white">
             ZyncLuxury
           </h4>
         </div>

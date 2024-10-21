@@ -29,7 +29,7 @@ const Footer = () => {
     <div className="w-full flex mt-16 md:mt-20 flex-col">
       <div className="w-[90%] lg:w-[900px] shadows py-20 px-8 md:px-16 rounded-bl-2xl z-[20] gap-8 -mb-12 bg-white mx-auto flex flex-col">
         <div className="flex flex-col gap-2">
-          <h3 className="text-3xl md:text-4xl capitalize family1 font-bold">
+          <h3 className="text-3xl md:text-4xl capitalize family1 family2">
             keep updated & don’t miss anything!
           </h3>
           <span className="block text-lg text-grey">
@@ -50,69 +50,69 @@ const Footer = () => {
       </div>
       <div className="w-full bg-[#22253d] flex px-4 md:px-8 flex-col pt-36 pb-20">
         <div className="w-[95%] max-w-custom mx-auto md:items-center md:justify-center z-40 flex flex-col gap-12">
-          <h3 className="family2 text-4xl md:text-5xl md:text-center text-white font-extrabold">
-            <span className="family1 text-lg block text-[var(--primary)] font-normal">
+          <h3 className="family2 text-4xl md:text-5xl md:text-center text-white family2">
+            <span className="family1 text-lg block text-[var(--primary)] regular">
               Home of Luxury
             </span>
             Zyncs<span className="text-[var(--primary)]">Luxury</span>
           </h3>
           <div className="w-full grid md:items-center md:justify-center grid-cols-2 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-8">
-              <h4 className="text-lg md:text-center md:text-xl font-bold text-white">
+              <h4 className="text-lg md:text-center md:text-xl family2 text-white">
                 Resources
               </h4>
               <div className="flex flex-col gap-2">
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Get pre-qualified
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Find an Agent
                 </h4>{" "}
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Housing Guide
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Research Media
                 </h4>{" "}
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Media Room
                 </h4>
               </div>
             </div>
             <div className="flex flex-col gap-8">
-              <h4 className="text-lg md:text-center md:text-xl font-bold text-white">
+              <h4 className="text-lg md:text-center md:text-xl family2 text-white">
                 Company
               </h4>
               <div className="flex flex-col gap-2">
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   About Us
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Newsroom
                 </h4>{" "}
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Careers
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Investors
                 </h4>{" "}
               </div>
             </div>
             <div className="flex flex-col gap-8">
-              <h4 className="text-lg md:text-center md:text-xl font-bold text-white">
+              <h4 className="text-lg md:text-center md:text-xl family2 text-white">
                 Website Link
               </h4>
               <div className="flex flex-col gap-2">
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Home
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   About
                 </h4>{" "}
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Favourite
                 </h4>
-                <h4 className="text-base md:text-center md:text-lg font-normal text-grey">
+                <h4 className="text-base md:text-center md:text-lg regular text-grey">
                   Reservations
                 </h4>{" "}
               </div>
