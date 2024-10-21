@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Widget from "./widget";
 import Statistics from "./statistics";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux"
 import { getAdminStat } from "@/features/stat/statReducer";
 import Loader from "@/components/home/loader";
 import { Link, NavLink } from "react-router-dom";
@@ -23,7 +23,7 @@ const DashboardIndex = () => {
     <div className="w-full">
       <div className="w-full flex flex-col gap-8">
         <div className="w-full flex flex-col gap-1">
-          <h3 className="text-2xl block lg:text-3xl text-dark family2">
+          <h3 className="text-2xl block lg:text-4xl text-dark family2">
             Dashboard
           </h3>
           <span className="block family1 text-base font-normal">

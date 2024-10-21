@@ -23,7 +23,7 @@ const DashboardIndex = () => {
       <div className="w-full pb-20 flex flex-col gap-6">
         <div className="w-full grid lg:grid-cols-2 lg:items-center gap-6 justify-between">
           <div className="w-full flex flex-col gap-1">
-            <h3 className="text-2xl block lg:text-3xl text-dark family2">
+            <h3 className="text-2xl block lg:text-4xl text-dark family2">
               Listings Created
             </h3>
             <span className="block family1 text-base font-normal">
