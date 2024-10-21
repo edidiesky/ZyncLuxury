@@ -45,7 +45,7 @@ const GetPaymentHistoryForAdmin = expressAsyncHandler(async (req, res) => {
   const cacheKey = `seller_room_${req.user?.userId}`;
   const cacheOrders = await redisClient.get(cacheKey);
   if (cacheOrders) {
-    return res.json(JSON.parse(cacheOrders));
+    return res.json(cacheOrders);
   } else {
     // instantiate the form data from the request body
     const payment = await prisma.payment.findMany({
@@ -62,7 +62,7 @@ const GetPaymentHistoryForAdmin = expressAsyncHandler(async (req, res) => {
     });
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-    await redisClient.set(cacheKey, JSON.stringify(payment), { EX: 3600 });
+    await redisClient.set(cacheKey, payment, { EX: 3600 });
 
     res.status(200).json({ payment });
   }

@@ -13,7 +13,7 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
   const cacheKey = `seller_statistics_${req.user?.userId}`;
   const cacheStat = await redisClient.get(cacheKey);
   if (cacheStat) {
-    return res.json(JSON.parse(cacheStat));
+    return res.json(cacheStat);
   } else {
     // destructuring the value from the promises from the Prmoise.all
     const [
@@ -117,7 +117,7 @@ const GetStatisticsDataForAdmin = asyncHandler(async (req, res) => {
       totalRooms: totalRooms || 0,
       latency: `Total Latency - ${(end - start) / 1000} seconds`,
     };
-    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    await redisClient.set(cacheKey, result, { EX: 3600 });
 
     return res.json(result);
   }

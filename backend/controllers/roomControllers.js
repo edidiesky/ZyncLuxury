@@ -52,7 +52,7 @@ const GetAllRoom = asyncHandler(async (req, res) => {
   const cacheKey = "rooms";
   const cacheRooms = await redisClient.get(cacheKey);
   if (cacheRooms) {
-    return res.json(JSON.parse(cacheRooms));
+    return res.json(cacheRooms);
   } else {
     const rooms = await prisma.rooms.findMany({
       where: queryObject,
@@ -70,7 +70,7 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     const totalRooms = await prisma.rooms.count({ where: queryObject });
     const noOfPages = Math.ceil(totalRooms / limit);
     const result = { rooms, noOfPages, totalRooms };
-    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    await redisClient.set(cacheKey, result, { EX: 3600 });
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
     return res.json(result);
@@ -90,7 +90,7 @@ const GetAllSellerRooms = asyncHandler(async (req, res) => {
   const cacheKey = `seller_room_${req.user?.userId}`;
   const cacheRooms = await redisClient.get(cacheKey);
   if (cacheRooms) {
-    return res.json(JSON.parse(cacheRooms));
+    return res.json(cacheRooms);
   } else {
     const rooms = await prisma.rooms.findMany({
       where: {
@@ -105,7 +105,7 @@ const GetAllSellerRooms = asyncHandler(async (req, res) => {
 
     const noOfPages = Math.ceil(totalRoom / limit);
     const result = { rooms, noOfPages, totalRoom };
-    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    await redisClient.set(cacheKey, result, { EX: 3600 });
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
     return res.json(result);
@@ -135,7 +135,7 @@ const GetSingleRoom = asyncHandler(async (req, res) => {
   const cacheKey = `room_${id}`;
   const cacheRooms = await redisClient.get(cacheKey);
   if (cacheRooms) {
-    return res.json(JSON.parse(cacheRooms));
+    return res.json(cacheRooms);
   } else {
     const room = await prisma.rooms.findUnique({
       where: {
@@ -152,7 +152,7 @@ const GetSingleRoom = asyncHandler(async (req, res) => {
         { status: 404 }
       );
     }
-    await redisClient.set(cacheKey, JSON.stringify(room), { EX: 3600 });
+    await redisClient.set(cacheKey, room, { EX: 3600 });
 
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");

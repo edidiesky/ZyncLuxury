@@ -34,7 +34,7 @@ const GetAllReservation = asyncHandler(async (req, res) => {
   const cacheKey = `seller_Reservations_${req.user?.userId}`;
   const cachedReservations = await redisClient.get(cacheKey);
   if (cachedReservations) {
-    return res.json(JSON.parse(cachedReservations));
+    return res.json(cachedReservations);
   } else {
     const availableRooms = await prisma.reservations.findMany({
       where: { sellerId: req.user.userId },
@@ -51,7 +51,7 @@ const GetAllReservation = asyncHandler(async (req, res) => {
     const totalReservation = await prisma.reservations.count({});
     const noOfPages = Math.ceil(totalReservation / limit);
     const result = { availableRooms, noOfPages, totalReservation };
-    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    await redisClient.set(cacheKey, result, { EX: 3600 });
     return res.json(result);
   }
 });
@@ -63,7 +63,7 @@ const GetSingleReservation = asyncHandler(async (req, res) => {
   const cacheKey = `single_reservation_${req.params.id}`;
   const cachedReservation = await redisClient.get(cacheKey);
   if (cachedReservation) {
-    return res.json(JSON.parse(cachedReservation));
+    return res.json(cachedReservation);
   } else {
     const availableRooms = await prisma.reservations.findUnique({
       where: {
@@ -75,7 +75,7 @@ const GetSingleReservation = asyncHandler(async (req, res) => {
         rooms: true,
       },
     });
-    await redisClient.set(cacheKey, JSON.stringify(availableRooms), {
+    await redisClient.set(cacheKey, availableRooms, {
       EX: 3600,
     });
 

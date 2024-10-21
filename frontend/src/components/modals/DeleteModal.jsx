@@ -95,9 +95,9 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"50px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg md:text-xl text-center font-semibold">
+            <h3 className="text-lg md:text-2xl text-center font-semibold">
               Delete this Reservation?
-              <span className="block text-sm w-[80%] mx-auto text-center font-normal text-dark">
+              <span className="block text-sm w-[80%] mx-auto text-center  regular  text-dark">
                 By deleting this reservation,It cannot be retrieved back if this
                 action you carry has been taken.
               </span>
@@ -106,7 +106,7 @@ export default function DeleteModal({
 
           <div className="deleteCardBottom py-3 w-full flex items-center justify-end px-4 border-t">
             <button
-              className="family1 flex items-center justify-center text-sm"
+              className="regular flex items-center justify-center text-sm"
               onClick={handleClearAlert}
             >
               Cancel
@@ -114,7 +114,7 @@ export default function DeleteModal({
             <button
               disabled={deleteReservationisLoading}
               onClick={handleDeleteReservation}
-              className="deleteBtn family1 flex items-center justify-center text-sm"
+              className="deleteBtn regular flex items-center justify-center text-sm"
               // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
             >
               {deleteReservationisLoading ? (
@@ -160,9 +160,9 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"50px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg md:text-xl text-center font-semibold ">
+            <h3 className="text-lg md:text-2xl text-center family2">
               Delete this room?
-              <span className="block font-normal text-sm w-[80%] mx-auto family1 text-center text-dark">
+              <span className="block  regular  text-sm w-[80%] mx-auto regular text-center text-dark">
                 By deleting this product, It cannot be retrieved if this action
                 you carry has been taken.
               </span>
@@ -171,7 +171,7 @@ export default function DeleteModal({
 
           <div className="deleteCardBottom py-3 w-full flex items-center justify-end px-4 border-t">
             <button
-              className="family1 flex items-center justify-center text-sm"
+              className="regular flex items-center justify-center text-sm"
               onClick={handleClearAlert}
             >
               Cancel
@@ -179,7 +179,7 @@ export default function DeleteModal({
             <button
               disabled={deleteRoomisLoading}
               onClick={handleDeleteRoom}
-              className="deleteBtn family1 flex items-center justify-center text-sm"
+              className="deleteBtn regular flex items-center justify-center text-sm"
               // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
             >
               {deleteRoomisLoading ? (
@@ -224,9 +224,9 @@ export default function DeleteModal({
           <span className="w-full flex items-center justify-center">
             <CiWarning fontSize={"50px"} color={"var(--red)"} />
           </span>
-          <h3 className="text-lg md:text-xl text-center font-semibold">
+          <h3 className="text-lg md:text-2xl text-center font-semibold">
             Delete this user?
-            <span className="block text-sm w-[80%] family1 mx-auto text-center font-normal text-dark">
+            <span className="block text-sm w-[80%] regular mx-auto text-center  regular  text-dark">
               By deleting this user, It cannot be retrieved if this action you
               carry has been taken.
             </span>
@@ -235,7 +235,7 @@ export default function DeleteModal({
 
         <div className="deleteCardBottom py-3 w-full flex md:flex-row flex-col gap-2 items-center md:justify-end px-4 border-t">
           <button
-            className="family1 flex items-center justify-center text-sm"
+            className="regular flex items-center justify-center text-sm"
             onClick={handleClearAlert}
           >
             Cancel
@@ -243,7 +243,7 @@ export default function DeleteModal({
           <button
             disabled={deleteUserisLoading}
             onClick={handleDeleteUser}
-            className="deleteBtn family1 flex items-center justify-center text-sm"
+            className="deleteBtn regular flex items-center justify-center text-sm"
             // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
           >
             {deleteUserisLoading ? (
@@ -310,9 +310,8 @@ const DeleteContainer = styled(motion.div)`
       gap: 1rem;
       button {
         padding: 0.5rem 1rem;
-        min-height: 45px;
+        min-height: 40px;
         border: none;
-        font-weight: 600;
         background: #eee;
         color: #000;
         outline: none;
