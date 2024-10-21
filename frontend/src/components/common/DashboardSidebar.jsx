@@ -72,7 +72,7 @@ const DashboardSidebar = () => {
             <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
               <Link
                 to={"/"}
-                className="w-full flex items-center gap-4 font-semibold text-lg text-white"
+                className="w-full flex items-center gap-4 family2 text-lg text-white"
               >
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
@@ -89,7 +89,7 @@ const DashboardSidebar = () => {
               <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
               </div>
-              <span className="text-sm family2 font-semibold">
+              <span className="text-sm family2">
                 {currentUser?.name}
                 <span className="text-xs block font-normal text-[#969A9A]">
                   Admin
@@ -105,7 +105,7 @@ const DashboardSidebar = () => {
                   <NavLink
                     // activeClassName="active"
                     end
-                    className={`flex tab py-3 hover:text-white text-[#969a9acb] font-semibold
+                    className={`flex tab py-3 hover:text-white text-[#969a9acb] regular
                                  rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
                     to={`/dashboard${x.tab.path}`}
                   >
@@ -122,7 +122,7 @@ const DashboardSidebar = () => {
             <NavLink
               // activeClassName="active"
               end
-              className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] font-semibold text-sm
+              className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] family2 text-sm
                                  rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
@@ -154,9 +154,9 @@ const DashboardSidebar = () => {
                     className="w-8 lg:w-8 h-8 lg:h-8 rounded-full"
                   />
                 )}
-                <h4 className="text-sm  text-[#fff] font-semibold">
+                <h4 className="text-sm  text-[#fff] family2">
                   {currentUser?.name}
-                  <span className="block font-booking_font text-xs font-semibold text-grey">
+                  <span className="block font-booking_font text-xs family2 text-grey">
                     {currentUser?.email}
                   </span>
                 </h4>
@@ -169,7 +169,7 @@ const DashboardSidebar = () => {
               <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
               </div>
-              <span className="text-sm family2 font-semibold">
+              <span className="text-sm family2">
                 {currentUser?.name}
                 <span className="text-xs block font-normal text-[#969A9A]">
                   Admin

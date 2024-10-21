@@ -137,7 +137,6 @@ a.active {
 @font-face {
   font-family: "Bold";
   src: url("./assets/fonts/ClashGrotesk-Medium.otf") format("opentype");
-  font-weight: 500;
 }
 @font-face {
   font-family: "Regular";

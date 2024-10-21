@@ -121,7 +121,7 @@ const DashboardIndex = () => {
     <div className="w-full relative">
       <div className="w-full relative pb-20 flex flex-col gap-12">
         <div className="w-full flex flex-col gap-1">
-          <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
+          <h3 className="text-2xl block lg:text-3xl text-dark family2">
             {room ? "Update Your Room" : "Add Your Room"}
           </h3>
           <span className="block family1 max-w-[400px] text-base font-normal">

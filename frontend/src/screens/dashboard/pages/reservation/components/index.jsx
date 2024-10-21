@@ -51,7 +51,7 @@ const DashboardIndex = () => {
       </AnimatePresence>
       <div className="w-full grid md:grid-cols-2 lg:items-center gap-6 justify-between">
         <div className="w-full flex flex-col gap-1">
-          <h3 className="text-2xl block lg:text-3xl text-dark family2 font-semibold">
+          <h3 className="text-2xl block lg:text-3xl text-dark family2">
             Reservations Created
           </h3>
           <span className="block family1 text-base font-normal">
@@ -63,7 +63,7 @@ const DashboardIndex = () => {
           <div
             onClick={() => setCreateReservationModal(true)}
             className="p-4 btn cursor-pointer text-sm
-             bg-[#000] px-6 font-booking_font rounded-[10px] font-semibold text-white"
+             bg-[#000] px-6 font-booking_font rounded-[10px] family2 text-white"
           >
             Add a reservation
           </div>
@@ -105,14 +105,14 @@ const DashboardIndex = () => {
           <div className="w-full family1 flex items-center justify-end gap-6">
             <div
               onClick={() => dispatch(handlePage("prev"))}
-              className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
+              className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
             >
               <BiChevronLeft />
             </div>
             {page}
             <div
               onClick={() => dispatch(handlePage("next"))}
-              className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
+              className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
             >
               {" "}
               <BiChevronRight />

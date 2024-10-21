@@ -82,7 +82,7 @@ const RoomLists = ({}) => {
                 {/* room title */}
                 <div className="w-full flex flex-col gap-4">
                   <div className="flex md:flex-row flex-col lg:items-center justify-between gap-4">
-                    <h3 className="text-2xl md:text-3xl flex-1 family2">
+                    <h3 className="text-3xl md:text-5xl flex-1 family2">
                       {room?.title}
  
                       <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">

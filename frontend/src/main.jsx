@@ -19,9 +19,7 @@ root.render(
         }}
       />
       <BrowserRouter>
-        <SmoothScroll>
-          <App />
-        </SmoothScroll>
+        <App />
       </BrowserRouter>
     </Provider>
     ,
