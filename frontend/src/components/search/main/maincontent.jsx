@@ -31,7 +31,7 @@ const RoomLists = () => {
           className="w-full relative flex px-4 md:px-8 flex-col
        gap-4"
         >
-          <h4 className="text-lg md:text-xl font-semibold">
+          <h4 className="text-xl md:text-2xl family2">
             Over {totalRooms} property
           </h4>
 

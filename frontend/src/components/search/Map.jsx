@@ -84,25 +84,15 @@ const Map = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex p-2 pb-0 flex-col gap-1 rounded-b-xl">
-                    <h3 className={`text-sm font-bold w-full`}>
+                  <div className="w-full flex p-2 pb-0 flex-col rounded-b-xl">
+                    <h3 className={`text-base family2 w-full`}>
                       {location?.title}
+                      <span className="block regular text-xs">{location?.country}</span>
                     </h3>
-                    <div className="w-full flex items-center text-[10px] gap-1 justify-between">
-                      <div className="flex items-center flex-1 justify-center pr-2 border-r gap-1 text-dark">
-                        <CiStar /> 5 Rating
-                      </div>
-                      <div className="flex items-center flex-1 justify-center pr-2 border-r gap-1 text-dark">
-                        <TbLocation /> {location?.country}
-                      </div>
-                      <div className="flex items-center flex-1 justify-center gap-1 text-dark">
-                        <CiCalendar /> today
-                      </div>
-                    </div>
                     <div className="flex justify-between w-full items-center  gap-4">
                       <div className="flex flex-col">
-                        {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-                        <p className={`text-xs font-semibold`}>
+                        {/* <p className="text-base family2 text-grey family1">from</p> */}
+                        <p className={`text-xs family2`}>
                           ₦{location?.price}{" "}
                           <span className="text-[10px] font-normal">
                             /night
@@ -110,7 +100,7 @@ const Map = () => {
                         </p>
                       </div>
                       <div
-                        className={`btn btn_2 px-4 py-1 text-[10px] family1 font-bold text-white `}
+                        className={`btn px-4 py-1 text-[10px] family1 family2 text-white `}
                       >
                         View Room
                       </div>

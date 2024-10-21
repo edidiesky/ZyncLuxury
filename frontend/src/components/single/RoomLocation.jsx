@@ -77,18 +77,12 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
               </div>
 
               <div className="w-full flex p-2 pb-0 flex-col gap-1 rounded-b-xl">
-                <h3 className={`text-sm font-bold w-full`}>{room?.title}</h3>
-                <div className="w-full flex items-center text-[10px] gap-1 justify-between">
-                  <div className="flex items-center flex-1 justify-center pr-2 border-r gap-1 text-dark">
-                    <CiStar /> 5 Rating
-                  </div>
-                  <div className="flex items-center flex-1 justify-center pr-2 border-r gap-1 text-dark">
-                    <TbLocation /> {room?.country}
-                  </div>
-                  <div className="flex items-center flex-1 justify-center gap-1 text-dark">
-                    <CiCalendar /> today
-                  </div>
-                </div>
+                <h3 className={`text-base family2 w-full`}>
+                  {room?.title}
+                  <span className="block regular text-xs">
+                    {room?.country}
+                  </span>
+                </h3>
                 <div className="flex justify-between w-full items-center  gap-4">
                   <div className="flex flex-col">
                     {/* <p className="text-base family2 text-grey family1">from</p> */}
@@ -96,11 +90,6 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
                       ₦{room?.price}{" "}
                       <span className="text-[10px] font-normal">/night</span>
                     </p>
-                  </div>
-                  <div
-                    className={`btn btn_2 px-4 py-1 text-[10px] family1 font-bold text-white `}
-                  >
-                    View Room
                   </div>
                 </div>
               </div>

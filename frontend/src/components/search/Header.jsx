@@ -66,7 +66,7 @@ const Header = () => {
                   setCountry(e.target.value);
                 }}
                 placeholder="New York (USA)"
-                className="w-full  rounded-md bg-[#fafafa] inputs text-dark font-normal text-sm"
+                className="w-full  rounded-md inputs text-dark font-normal text-sm"
               />
               <div
                 onClick={() => {
@@ -77,8 +77,7 @@ const Header = () => {
                     })
                   );
                 }}
-                className="w-10 flex items-center justify-center text-lg
-               h-10 rounded-full bg-[var(--primary)] text-white absolute right-5 top-2"
+                className="w-10 flex items-center justify-center text-lg h-10 text-dark absolute right-5 top-1"
               >
                 <BiSearch />
               </div>
@@ -92,7 +91,7 @@ const Header = () => {
                     end
                     to={`/${list.path}`}
                     key={index}
-                    className={`text-sm hover:text-grey font-normal family1 text-dark flex items-center
+                    className={`text-base hover:text-grey font-normal family1 text-dark flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
                   >
                     {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -146,14 +145,14 @@ export const FilterRooms = () => {
           <div className="relative">
             <div
               onClick={() => setProperty(!property)}
-              className={`flex px-2 border py-2  rounded-full items-start gap-2 text-sm cursor-pointer font-bold`}
+              className={`flex px-2 border py-2  rounded-full items-start gap-2 text-sm cursor-pointer family2`}
             >
               Property Type
             </div>
             {property && (
               <div className="w-[450px] flex flex-col gap-4 bg-white rounded-xl absolute top-[130%] p-6 shadow-xl">
                 <div className="px-2 w-full">
-                  <h4 className="text-lg font-bold">Popular Property Type</h4>
+                  <h4 className="text-lg family2">Popular Property Type</h4>
                 </div>
                 <div className="w-full grid grid-cols-3 gap-4">
                   {propertytype?.map((props, index) => {
@@ -179,7 +178,7 @@ export const FilterRooms = () => {
                         <div className="w-14 h-14 rounded-lg bg-[#fafafa] flex items-center justify-center">
                           <img src={props?.image} alt="" className="w-6" />
                         </div>
-                        <h5 className="text-xs font-normal family1">
+                        <h5 className="text-sm family2">
                           {props?.name}
                         </h5>
                       </div>
@@ -198,27 +197,27 @@ export const FilterRooms = () => {
           </div>
           {/* price */}
           <div className="relative">
-            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer family2">
               Any Price
             </div>
           </div>
           {/* bedrooms */}
           <div className="relative">
-            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer family2">
               Bed
             </div>
           </div>
 
           {/* bathrooms */}
           <div className="relative">
-            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer font-bold">
+            <div className="flex px-4 py-2 border rounded-full items-start gap-2 text-sm cursor-pointer family2">
               Bath Rooms
             </div>
           </div>
         </div>
 
         {/* <div className=" md:px-4 flex items-center md:justify-end">
-          <button className="btn text-white flex items-center gap-4 family1 font-bold px-6 text-sm lg:text-base lg:px-6 py-3">
+          <button className="btn text-white flex items-center gap-4 family1 family2 px-6 text-sm lg:text-base lg:px-6 py-3">
             <BiSearch /> Search Homes
           </button>
         </div> */}
