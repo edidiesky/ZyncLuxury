@@ -34,7 +34,7 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
 
   return (
     <div className="flex pt-8 md:pt-12 border-t flex-col w-full gap-8">
-      <h3 className="text-xl md:text-2xl font-semibold">Where you’ll be</h3>
+      <h3 className="text-xl md:text-2xl family2">Where you’ll be</h3>
       <MapContainer
         center={[
           room?.latitude ? room?.latitude : 3.2839374,
@@ -91,8 +91,8 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
                 </div>
                 <div className="flex justify-between w-full items-center  gap-4">
                   <div className="flex flex-col">
-                    {/* <p className="text-base font-semibold text-grey family1">from</p> */}
-                    <p className={`text-xs font-semibold`}>
+                    {/* <p className="text-base family2 text-grey family1">from</p> */}
+                    <p className={`text-xs family2`}>
                       ₦{room?.price}{" "}
                       <span className="text-[10px] font-normal">/night</span>
                     </p>

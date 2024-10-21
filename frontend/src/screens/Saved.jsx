@@ -1,12 +1,14 @@
 import React from "react";
 import Meta from "@/components/common/Meta";
 import HomeIndex from "../components/saved";
+import SmoothScroll from "../constants/utils/SmoothScroll";
+
 const Saved = () => {
   return (
-    <div>
+    <SmoothScroll>
       <Meta title={"My Favourites Homes"} />
       <HomeIndex />
-    </div>
+    </SmoothScroll>
   );
 };
 

@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
-
+import redisClient from "../utils/redisClient.js";
 // @description  Get all room
 // @route  GET /room
 // @access  Public
@@ -49,50 +49,67 @@ const GetAllRoom = asyncHandler(async (req, res) => {
   };
   // calculate the pagination
   const skip = (page - 1) * limit;
-  const rooms = await prisma.rooms.findMany({
-    where: queryObject,
-    skip: parseInt(skip),
-    take: parseInt(limit),
-    orderBy: {
-      createdAt: "desc",
-    },
-    include: {
-      user: true,
-    },
-  });
+  const cacheKey = "rooms";
+  const cacheRooms = await redisClient.get(cacheKey);
+  if (cacheRooms) {
+    return res.json(JSON.parse(cacheRooms));
+  } else {
+    const rooms = await prisma.rooms.findMany({
+      where: queryObject,
+      skip: parseInt(skip),
+      take: parseInt(limit),
+      orderBy: {
+        createdAt: "desc",
+      },
+      include: {
+        user: true,
+      },
+    });
 
-  // get the total rooms and the total pages
-  const totalRooms = await prisma.rooms.count({ where: queryObject });
-  const noOfPages = Math.ceil(totalRooms / limit);
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return res.json({ rooms, noOfPages, totalRooms });
+    // get the total rooms and the total pages
+    const totalRooms = await prisma.rooms.count({ where: queryObject });
+    const noOfPages = Math.ceil(totalRooms / limit);
+    const result = { rooms, noOfPages, totalRooms };
+    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    return res.json(result);
+  }
 });
 
 const GetAllRoomAndReservations = asyncHandler(async (req, res) => {});
 // @description  Get a seller rooms
 // @route  GET /rooms/13344
 // @access  Private
-const GetAllAdminRooms = asyncHandler(async (req, res) => {
+const GetAllSellerRooms = asyncHandler(async (req, res) => {
   const limit = req.query.limit || 6;
   const page = req.query.page || 1;
   const skip = (page - 1) * limit;
 
   const totalRoom = await prisma.rooms.count({});
+  const cacheKey = `seller_room_${req.user?.userId}`;
+  const cacheRooms = await redisClient.get(cacheKey);
+  if (cacheRooms) {
+    return res.json(JSON.parse(cacheRooms));
+  } else {
+    const rooms = await prisma.rooms.findMany({
+      where: {
+        sellerid: req.user?.userId,
+      },
+      skip: skip,
+      take: limit,
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
 
-  const rooms = await prisma.rooms.findMany({
-    skip: skip,
-    take: limit,
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-
-  const noOfPages = Math.ceil(totalRoom / limit);
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-
-  res.status(200).json({ rooms, noOfPages, totalRoom });
+    const noOfPages = Math.ceil(totalRoom / limit);
+    const result = { rooms, noOfPages, totalRoom };
+    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    return res.json(result);
+  }
 });
 
 // @description  Create a room for the seller
@@ -115,24 +132,32 @@ const CreateRooms = asyncHandler(async (req, res) => {
 // @access  Public
 const GetSingleRoom = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  const room = await prisma.rooms.findUnique({
-    where: {
-      id: id,
-    },
-    include: {
-      user: true,
-    },
-  });
+  const cacheKey = `room_${id}`;
+  const cacheRooms = await redisClient.get(cacheKey);
+  if (cacheRooms) {
+    return res.json(JSON.parse(cacheRooms));
+  } else {
+    const room = await prisma.rooms.findUnique({
+      where: {
+        id: id,
+      },
+      include: {
+        user: true,
+      },
+    });
 
-  if (!room) {
-    return NextResponse.json(
-      { message: "No room has being found" },
-      { status: 404 }
-    );
+    if (!room) {
+      return NextResponse.json(
+        { message: "No room has being found" },
+        { status: 404 }
+      );
+    }
+    await redisClient.set(cacheKey, JSON.stringify(room), { EX: 3600 });
+
+    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    return res.json(room);
   }
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return res.json(room);
 });
 
 // @description  Update a room for the seller
@@ -176,6 +201,6 @@ export {
   CreateRooms,
   GetSingleRoom,
   DeleteRoom,
-  GetAllAdminRooms,
+  GetAllSellerRooms,
   UpdateRoom,
 };

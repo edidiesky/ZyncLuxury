@@ -8,7 +8,7 @@ export default function RoomTitleAndDescription({ room }) {
         {/* title */}
 
         <div className="w-full pb-8 border-b flex flex-col gap-2">
-          <h3 className="text-xl md:text-2xl font-semibold">Description</h3>
+          <h3 className="text-xl md:text-2xl family2">Description</h3>
           <h4 className="text-base md:text-lg leading-[1.8] family1 block font-booking_font font-normal text-dark">
             With our single bedroom in a gated estate, Lekki. Feel free to treat
             yourself to a luxurious getaway filled with comfort, relaxation and

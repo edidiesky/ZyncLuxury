@@ -10,7 +10,7 @@ import {
   GetAllRoom,
   GetSingleRoom,
   DeleteRoom,
-  GetAllAdminRooms,
+  GetAllSellerRooms,
   GetAllRoomAndReservations,
   UpdateRoom,
 } from "../controllers/roomControllers.js";
@@ -19,7 +19,7 @@ router
   .route("/")
   .get(GetAllRoom)
   .post(authMiddleware, adminMiddleware, CreateRooms);
-router.route("/admin").get(GetAllAdminRooms);
+router.route("/admin").get(authMiddleware, adminMiddleware, GetAllSellerRooms);
 router
   .route("/room-reservation-history")
   .get(authMiddleware, adminMiddleware, GetAllRoomAndReservations);

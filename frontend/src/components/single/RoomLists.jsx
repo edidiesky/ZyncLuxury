@@ -82,7 +82,7 @@ const RoomLists = ({}) => {
                 {/* room title */}
                 <div className="w-full flex flex-col gap-4">
                   <div className="flex md:flex-row flex-col lg:items-center justify-between gap-4">
-                    <h3 className="text-2xl md:text-3xl flex-1 font-semibold">
+                    <h3 className="text-2xl md:text-3xl flex-1 family2">
                       {room?.title}
  
                       <span className="text-sm pt-3 text-dark font-normal family1 flex items-center gap-3">
@@ -101,7 +101,7 @@ const RoomLists = ({}) => {
                     <div className="flex lg:items-center md:justify-end gap-4">
                       <div
                         onClick={() => handleFavouriteRooms()}
-                        className=" flex text-lg font-semibold family1 cursor-pointer items-center gap-2 text-dark justify-center"
+                        className=" flex text-lg regular cursor-pointer items-center gap-2 text-dark justify-center"
                       >
                         <Heart active={active} />
                         {active ? "Added to Favourites" : " Add to Favourites"}
@@ -110,21 +110,21 @@ const RoomLists = ({}) => {
                   </div>
                   <div className="grid family1 grid-cols-2 sm:grid-cols-4 border rounded-[10px] md:gap-4">
                     <div className="flex flex-col p-4 pl-4 md:pl-8 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                      <span className="text-lg font-semibold">Bedroom</span>
+                      <span className="text-lg family2">Bedroom</span>
                       <div className="flex items-center gap-4">
                         <span className="text-base">{room?.bedroom} </span>
                         <Bed fontSize={"32px"} />
                       </div>
                     </div>
                     <div className="flex flex-col  p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                      <span className="text-lg font-semibold">Bathroom</span>
+                      <span className="text-lg family2">Bathroom</span>
                       <div className="flex items-center gap-4">
                         <span className="text-base">{room?.bathroom} </span>
                         <FaShower fontSize={"30px"} />
                       </div>
                     </div>
                     <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                      <span className="text-lg font-semibold">Bedroom</span>
+                      <span className="text-lg family2">Bedroom</span>
                       <div className="flex items-center gap-3">
                         <span className="text-base">1220 sq.ft </span>
 
@@ -132,7 +132,7 @@ const RoomLists = ({}) => {
                       </div>
                     </div>
                     <div className="flex flex-col p-4 border-r min-h-[120px] justify-center gap-1 text-sm font-booking_font4 text-dark">
-                      <span className="text-lg font-semibold">Bedroom</span>
+                      <span className="text-lg family2">Bedroom</span>
                       <div className="flex items-center gap-3">
                         <span className="text-base">1220 sq.ft </span>
 

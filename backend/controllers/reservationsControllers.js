@@ -2,7 +2,7 @@ import asyncHandler from "express-async-handler";
 import moment from "moment";
 import { parse, formatISO } from "date-fns";
 import prisma from "../prisma/index.js";
-
+import redisClient from "../utils/redisClient.js";
 // @description  Get a seller reservation
 // @route  GET /reservation/user
 // @access  Private
@@ -30,38 +30,57 @@ const GetAllReservation = asyncHandler(async (req, res) => {
   const { limit = 6, page = 1 } = req.query;
   // calculate the pagination
   const skip = (page - 1) * limit;
-  const availableRooms = await prisma.reservations.findMany({
-    where: { sellerId: req.user.userId },
-    skip: parseInt(skip),
-    take: parseInt(limit),
-    include: {
-      user: true,
-      rooms: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-  const totalReservation = await prisma.reservations.count({});
-  const noOfPages = Math.ceil(totalReservation / limit);
-  return res.json({ availableRooms, totalReservation, noOfPages });
+
+  const cacheKey = `seller_Reservations_${req.user?.userId}`;
+  const cachedReservations = await redisClient.get(cacheKey);
+  if (cachedReservations) {
+    return res.json(JSON.parse(cachedReservations));
+  } else {
+    const availableRooms = await prisma.reservations.findMany({
+      where: { sellerId: req.user.userId },
+      skip: parseInt(skip),
+      take: parseInt(limit),
+      include: {
+        user: true,
+        rooms: true,
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+    const totalReservation = await prisma.reservations.count({});
+    const noOfPages = Math.ceil(totalReservation / limit);
+    const result = { availableRooms, noOfPages, totalReservation };
+    await redisClient.set(cacheKey, JSON.stringify(result), { EX: 3600 });
+    return res.json(result);
+  }
 });
 
 // @description  Get a singke reservation for a user
 // @route  GET /reservation/:id
 // @access  Private
 const GetSingleReservation = asyncHandler(async (req, res) => {
-  const availableRooms = await prisma.reservations.findUnique({
-    where: {
-      userid: req.user.userId,
-      id: req.params.id,
-    },
-    include: {
-      user: true,
-      rooms: true,
-    },
-  });
-  return res.json(availableRooms);
+  const cacheKey = `single_reservation_${req.params.id}`;
+  const cachedReservation = await redisClient.get(cacheKey);
+  if (cachedReservation) {
+    return res.json(JSON.parse(cachedReservation));
+  } else {
+    const availableRooms = await prisma.reservations.findUnique({
+      where: {
+        userid: req.user.userId,
+        id: req.params.id,
+      },
+      include: {
+        user: true,
+        rooms: true,
+      },
+    });
+    await redisClient.set(cacheKey, JSON.stringify(availableRooms), {
+      EX: 3600,
+    });
+
+    return res.json(availableRooms);
+  }
 });
 
 // @description  Create a reservation using for a user or admin or seller

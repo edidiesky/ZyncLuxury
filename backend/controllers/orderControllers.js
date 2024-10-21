@@ -1,6 +1,8 @@
 // import Product from "../models/Product.js";
 import dotenv from "dotenv";
 dotenv.config();
+import redisClient from "../utils/redisClient.js";
+
 import prisma from "../prisma/index.js";
 import expressAsyncHandler from "express-async-handler";
 
@@ -36,27 +38,35 @@ const CreatePayment = expressAsyncHandler(async (req, res) => {
   res.status(200).json({ payment });
 });
 
-
 // @description  Get a seller order
 // @route  GET /order/history
 // @access  Private
 const GetPaymentHistoryForAdmin = expressAsyncHandler(async (req, res) => {
-  // instantiate the form data from the request body
-  const payment = await prisma.payment.findMany({
-    include: {
-      user: true,
-      Reservation: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  const cacheKey = `seller_room_${req.user?.userId}`;
+  const cacheOrders = await redisClient.get(cacheKey);
+  if (cacheOrders) {
+    return res.json(JSON.parse(cacheOrders));
+  } else {
+    // instantiate the form data from the request body
+    const payment = await prisma.payment.findMany({
+      where: {
+        sellerId: req.user.userId,
+      },
+      include: {
+        user: true,
+        Reservation: true,
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    await redisClient.set(cacheKey, JSON.stringify(payment), { EX: 3600 });
 
-  res.status(200).json({ payment });
+    res.status(200).json({ payment });
+  }
 });
-
 
 // @description  Get a single payment details
 // @route  GET /order/history/46484489
@@ -79,7 +89,6 @@ const GetSinglePaymentDetails = expressAsyncHandler(async (req, res) => {
 
   res.status(200).json({ payment });
 });
-
 
 // @description  Update a single payment details to failed when the flutterWave payment is not complete
 // @route  PUT /order/history/failed/46484489

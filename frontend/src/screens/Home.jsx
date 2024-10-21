@@ -3,6 +3,7 @@ import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/src/locomotive-scroll.scss'
 import HomeIndex from "../components/home";
 import Meta from "@/components/common/Meta";
+import SmoothScroll from '../constants/utils/SmoothScroll';
 
 const Home = () => {
   const elementRef = useRef(null)
@@ -18,7 +19,9 @@ const Home = () => {
   return (
     <div ref={elementRef} id="main-content" data-scroll-container>
       <Meta />
-      <HomeIndex />
+      <SmoothScroll>
+        <HomeIndex />
+      </SmoothScroll>
     </div>
   );
 };

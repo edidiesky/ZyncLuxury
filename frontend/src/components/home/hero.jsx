@@ -88,18 +88,21 @@ const Hero = () => {
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
                         } w-14 md:w-16 h-14 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-4`}
-                      > 
-                        <img src={face} className="w-full h-full object-cover" />
+                      >
+                        <img
+                          src={face}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     );
                   })}
                 </div>
-                <span className="text-base lg:text-lg text-[#eee] font-semibold capitalize block family1">
+                <span className="text-base lg:text-lg text-[#eee] regular capitalize block family1">
                   5 K+ Happy Customers
                 </span>
               </div>
               <h1
-                className="text-white md:text-center capitalize font-bold leading-[1.1] lg:leading-[1.3] text-4xl sm:text-6xl
+                className="text-white md:text-center capitalize leading-[1.1] lg:leading-[1.15] text-4xl sm:text-6xl md:text-7xl
           family2"
               >
                 Find your Best{" "}
@@ -108,7 +111,7 @@ const Hero = () => {
                   <Dash />
                 </span>{" "}
                 <br /> By Lease, or Rent <br /> with Confidence
-                <span className="text-base lg:text-lg max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
+                <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
@@ -120,7 +123,7 @@ const Hero = () => {
               <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn md:text-base text-center  w-full text-sm family1 font-semibold text-white rounded-[40px] px-4 py-4"
+                  className="btn md:text-base text-center  w-full text-sm family1 regular text-white rounded-[40px] px-4 py-4"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -129,7 +132,7 @@ const Hero = () => {
               <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-base text-center w-full text-sm family1 font-semibold text-white px-4 py-4"
+                  className="btn btn_2 md:text-base text-center w-full text-sm family1 regular text-white px-4 py-4"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
@@ -400,7 +403,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                 end
                 to={`/${list.path}`}
                 key={index}
-                className={`text-base hover:text-grey font-normal family1 text-white flex items-center
+                className={`text-lg hover:text-grey font-normal regular text-white flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -416,7 +419,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
             <div className="flex justify-end items-center">
               <button
                 onClick={() => dispatch(onLoginModal())}
-                className="btn text-center text-sm md:text-base family1 font-semibold text-white px-4 md:px-8 py-3"
+                className="btn text-center text-sm md:text-base regular text-white px-6 md:px-8 py-3"
               >
                 Discover Listing
               </button>

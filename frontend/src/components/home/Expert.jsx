@@ -31,7 +31,7 @@ const Expert = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h3 className="text-4xl font-semibold md:text-5xl family2 text-[var(--dark-1)]">
+              <h3 className="text-4xl family2 md:text-5xl text-[var(--dark-1)]">
                 Why you should <br /> Choose ZyncLuxury?
               </h3>
               <h4 className="text-lg md:text-xl text-[var(--dark-1)]">
@@ -77,7 +77,7 @@ const Expert = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h3 className="text-4xl md:text-5xl font-semibold capitalize family2 text-white">
+              <h3 className="text-4xl md:text-5xl family2 capitalize text-white">
                 Why you should choose ZyncLuxury?
               </h3>
               <p className="text-base md:text-lg family1 leading-[1.4] font-normal text-grey">

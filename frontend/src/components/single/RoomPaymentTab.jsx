@@ -201,7 +201,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                       CHECK-IN
                     </span>
                     <div className="flex items-start gap-2">
-                      <span className="text-sm font-semibold leading-[1.5] text-center text-dark">
+                      <span className="text-sm family2 leading-[1.5] text-center text-dark">
                         {moment(startdate).format("DD MMMM YYYY")}
                       </span>
                     </div>
@@ -211,7 +211,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                       CHECK-Out
                     </span>
                     <div className="flex items-start gap-2">
-                      <span className="text-sm font-semibold leading-[1.5] text-center text-dark">
+                      <span className="text-sm family2 leading-[1.5] text-center text-dark">
                         {moment(enddate).format("DD MMMM YYYY")}
                       </span>
                     </div>
@@ -233,7 +233,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
               <div className="flex p-3 flex-col">
                 <span className="text-xs text-dark">GUESTS</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-base font-semibold leading-[1.5] text-center text-dark">
+                  <span className="text-base family2 leading-[1.5] text-center text-dark">
                     {guests} guests
                   </span>
                   <span className="text-[8px] leading-[1.5] flex items-center justify-end flex-1 gap-[4px] text-dark font-normal">
@@ -263,7 +263,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 type="submit"
                 disabled={bookingloading}
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-base font-semibold text-white py-4 px-8 w-full"
+                className="btn flex items-center justify-center text-base family2 text-white py-4 px-8 w-full"
               >
                 {bookingloading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -286,7 +286,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
           <div className="w-[90%] family1 py-2 mx-auto flex flex-col gap-2">
             <div className="w-full flex flex-col gap-2">
               {/* price */}
-              <div className="w-full text-lg font-semibold flex items-center justify-between">
+              <div className="w-full text-lg family2 flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   ₦ {room?.price} x {mainDiff} nights
                 </span>
@@ -296,14 +296,14 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 </span>
               </div>
               {/* taxes */}
-              <div className="w-full text-lg font-semibold flex items-center justify-between">
+              <div className="w-full text-lg family2 flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   Caution Fees
                 </span>
                 <span> ₦ {room?.cautionfee?room?.cautionfee:0}</span>
               </div>
               {/* total */}
-              <div className="w-full text-lg font-semibold flex items-center justify-between">
+              <div className="w-full text-lg family2 flex items-center justify-between">
                 <span className="text-dark text-base block font-booking_font font-normal">
                   Total
                 </span>

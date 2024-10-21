@@ -1,10 +1,13 @@
 import React from "react";
 import PaymentIndex from "../components/payment-success";
+import SmoothScroll from "../constants/utils/SmoothScroll";
+
 const PaymentSuccess = () => {
   return (
-    <div>
+    <SmoothScroll>
+
       <PaymentIndex />
-    </div>
+    </SmoothScroll>
   );
 };
 

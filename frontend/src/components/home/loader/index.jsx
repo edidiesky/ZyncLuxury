@@ -1,13 +1,14 @@
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
-const Loader = ({type,color,size}) => {
-  if(type === 'dots') {
+import { CiSettings } from "react-icons/ci";
+const Loader = ({ type, color, size }) => {
+  if (type === "dots") {
     return (
       <ThreeDots
-        height={size?size:"20"}
-        width={size?size:"20"}
+        height={size ? size : "20"}
+        width={size ? size : "20"}
         radius="10"
-        color={color?color:"#fff"}
+        color={color ? color : "#fff"}
         ariaLabel="three-dots-loading"
         wrapperStyle={{}}
         wrapperClassName=""
@@ -22,10 +23,13 @@ const Loader = ({type,color,size}) => {
         width: "100vw",
         position: "fixed",
         height: "100vh",
-        background: "#ffffffc3",
+        background: "#ffffff7a",
       }}
     >
-      <ThreeDots
+      <div className="spinner text-xl">
+        <CiSettings fontSize={'30px'} />
+      </div>
+      {/* <ThreeDots
         height="40"
         width="40"
         radius="10"
@@ -34,7 +38,7 @@ const Loader = ({type,color,size}) => {
         wrapperStyle={{}}
         wrapperClassName=""
         visible={true}
-      />
+      /> */}
     </div>
   );
 };

@@ -7,7 +7,7 @@ export default function RoomFeatures() {
     <>
       <div className="w-full">
         <div className="w-full flex flex-col gap-8">
-          <h3 className="text-xl md:text-2xl font-semibold">
+          <h3 className="text-xl md:text-2xl family2">
             Room Services
             <span className="block family1 pt-2 text-base font-normal font-booking_font">
               Enjoy the comforts of home and beyond with these distinctive

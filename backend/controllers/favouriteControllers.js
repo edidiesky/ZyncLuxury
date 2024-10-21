@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
+import redisClient from "../utils/redisClient.js";
 
 // @description  Create a favourite room for the user
 // @route  POST /favourite
@@ -49,7 +50,7 @@ const CreateUserFavouriteRoom = asyncHandler(async (req, res) => {
     : `${room.title} has been saved to your collections`;
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return  res.status(200).json({
+  return res.status(200).json({
     message: message,
     favourite: !isSavedRoomIncluded,
     user: user,
@@ -57,23 +58,30 @@ const CreateUserFavouriteRoom = asyncHandler(async (req, res) => {
 });
 
 const GetUserFavouriteRooms = asyncHandler(async (req, res) => {
-  const currentUser = await prisma.user.findUnique({
-    where: {
-      id: req.user?.userId,
-    },
-  });
+  const cacheKey = `user_favourites_room_${req.user?.userId}`;
+  const cacheFavouritesRooms = await redisClient.get(cacheKey);
+  if (cacheFavouritesRooms) {
+    return res.json(JSON.parse(cacheFavouritesRooms));
+  } else {
+    const currentUser = await prisma.user.findUnique({
+      where: {
+        id: req.user?.userId,
+      },
+    });
 
-  let userRoomFavourites = currentUser?.favourites
-    ? currentUser?.favourites
-    : [];
-  const rooms = await prisma.rooms.findMany({
-    where: {
-      id: { in: userRoomFavourites },
-    },
-  });
+    let userRoomFavourites = currentUser?.favourites
+      ? currentUser?.favourites
+      : [];
+    const rooms = await prisma.rooms.findMany({
+      where: {
+        id: { in: userRoomFavourites },
+      },
+    });
+    await redisClient.set(cacheKey, JSON.stringify(rooms), { EX: 3600 });
 
-  res.setHeader("Content-Type", "text/html");
-  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  return  res.status(200).json(rooms);
+    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    return res.status(200).json(rooms);
+  }
 });
 export { CreateUserFavouriteRoom, GetUserFavouriteRooms };

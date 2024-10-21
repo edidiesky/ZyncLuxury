@@ -85,7 +85,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
             />
           </div>
           <div className="w-full flex flex-col py-6 bg-white gap-2">
-            <h3 className="text-2xl font-bold">{apartment?.rooms?.subtitle}</h3>
+            <h3 className="text-2xl family2">{apartment?.rooms?.subtitle}</h3>
 
             <div
               style={{ letterSpacing: "1px" }}
@@ -203,7 +203,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                   type === "search"
                     ? "text-xs px-3 py-1 font-semibold"
                     : "text-xs px-3 font-bold py-2"
-                } gap-2 flex items-center rounded-full`}
+                } gap-2 flex items-center rounded-full `}
               >
                 {/* <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div> */}
                 {apartment?.listingType === "SALE"
@@ -218,8 +218,8 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                 className={`${
                   type === "search"
                     ? "md:text-base text-base"
-                    : "md:text-xl text-lg"
-                }  font-semibold flex-1`}
+                    : "md:text-2xl text-lg"
+                }  flex-1 family2`}
               >
                 {apartment?.title}
               </h3>

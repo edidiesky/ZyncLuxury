@@ -72,6 +72,19 @@ a.active {
 .leaflet-container a {
   color: #000 !important;
 }
+  .spinner {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 .leaflet-popup-content {
   margin: 0 !important;
@@ -123,9 +136,13 @@ a.active {
 
 @font-face {
   font-family: "Bold";
-  src: url("./assets/fonts/bold.ttf") format("truetype");
+  src: url("./assets/fonts/ClashGrotesk-Medium.otf") format("opentype");
+  font-weight: 500;
 }
-
+@font-face {
+  font-family: "Regular";
+  src: url("./assets/fonts/ClashGrotesk-Regular.otf") format("opentype");
+}
 *,
 *::after,
 *::before {
@@ -186,7 +203,13 @@ button:disabled {
 /* React day picker css */
 
 .family1 {
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
+}
+.family2 {
+  font-family: "Bold", sans-serif !important;
+}
+.regular {
+  font-family: "Regular", sans-serif !important;
 }
 :root {
   --grey-1: #4f578d;
@@ -233,7 +256,7 @@ body {
   background-color: #fff;
   line-height: 1.6 !important;
   color: var(--dark-1);
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 
 .hide {

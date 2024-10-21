@@ -33,7 +33,7 @@ const Blog = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl capitalize font-semibold text-[var(--dark-1)]">
+            <h4 className="text-4xl md:text-5xl capitalize family2 text-[var(--dark-1)]">
               latest news & insights
             </h4>
           </div>
