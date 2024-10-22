@@ -29,7 +29,7 @@ export default function RoomGallery() {
         </div>
       ) : (
         <div className="lg:grid-cols-1 grid gap-2">
-          <div className="w-full h-[420px] overflow-hidden rounded-xl md:h-[450px]">
+          <div className="w-full h-[420px] overflow-hidden lg:rounded-xl md:h-[450px]">
             <Image alt="Cotion" src={room?.images[0]} />
           </div>
         </div>
