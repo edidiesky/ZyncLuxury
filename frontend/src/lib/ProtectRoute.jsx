@@ -4,13 +4,9 @@ import { useSelector } from "react-redux";
 export const ProtectRoute = ({ children, type }) => {
   // const navigate = useNavigate()
   const { currentUser } = useSelector((store) => store.auth);
-  if (!currentUser) {
+  console.log(currentUser.role);
+  if (!currentUser || currentUser?.role === "USER") {
     return <Navigate to="/" />;
-  }
-  if (type === "dashboard") {
-    if (currentUser?.isAdmin) {
-      return <Navigate to="/" />;
-    }
   }
 
   return children;

@@ -101,7 +101,7 @@ export default function App() {
         <Route
           path={"/dashboard"}
           element={
-            <ProtectRoute>
+            <ProtectRoute type={'dashboard'}>
               <DashboardLayout />
             </ProtectRoute>
           }
