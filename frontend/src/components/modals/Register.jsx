@@ -82,9 +82,14 @@ const RegisterModal = () => {
     <RegisterModalStyles
       className="w-full h-screen"
       as={motion.div}
-      initial={{ opacity: 0, visibility: "hidden" }}
-      exit={{ opacity: 0, visibility: "hidden" }}
-      animate={{ opacity: 1, visibility: "visible" }}
+      initial={{ opacity: 0 }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 1.7,
+        },
+      }}
+      animate={{ opacity: 1 }}
     >
       <motion.div
         variants={ModalVariants}
@@ -95,9 +100,9 @@ const RegisterModal = () => {
       >
         <div className="w-full mx-auto flex flex-col">
           <div className="w-full sticky top-0 left-0 p-8 px-8 flex  items-center justify-between">
-            <h3 className="text-2xl md:text-3xl font-bold font-booking_font4">
+            <h3 className="text-2xl md:text-3xl family2">
               Sign Up
-              <span className="block text-sm font-normal font-booking_font">
+              <span className="block text-sm regular">
                 Register to your account and check out your bookings
               </span>
             </h3>
@@ -140,7 +145,7 @@ const RegisterModal = () => {
                   type="submit"
                   disabled={registerisLoading || noEntry}
                   className="p-4 px-8 hover:opacity-[.5] text-[#fff] flex items-center justify-center w-full cursor-pointer 
-                   bg-[#000] rounded-[40px] family1 font-normal"
+                   bg-[#000] rounded-[40px] regular"
                 >
                   {registerisLoading ? (
                     <div className="w-full flex justify-center items-center gap-4">
@@ -229,7 +234,7 @@ const RegisterModalStyles = styled(motion.div)`
     justify-content: center;
     flex-direction: column;
     background: #fff;
-    height: 640px;
+    height: 620px;
     gap: 2rem;
     border-radius: 20px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);

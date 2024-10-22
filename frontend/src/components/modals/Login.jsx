@@ -72,9 +72,14 @@ const LoginModal = () => {
   return (
     <LoginModalStyles
       as={motion.div}
-      initial={{ opacity: 0, visibility: "hidden" }}
-      exit={{ opacity: 0, visibility: "hidden" }}
-      animate={{ opacity: 1, visibility: "visible" }}
+      initial={{ opacity: 0 }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 1.7,
+        },
+      }}
+      animate={{ opacity: 1 }}
     >
       <motion.div
         variants={ModalVariants}
@@ -91,9 +96,9 @@ const LoginModal = () => {
             <RxCross2 />
           </div>
           <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
-            <h3 className="text-3xl font-booking_font4 font-bold">
+            <h3 className="text-3xl font-booking_font4 family2">
               Sign In
-              <span className="block text-sm font-normal max-w-[250px] pt-1 font-booking_font">
+              <span className="block text-sm font-normal max-w-[250px] pt-1 regular">
                 Login to your account and check out your bookings
               </span>
             </h3>
@@ -133,14 +138,14 @@ const LoginModal = () => {
                   type="submit"
                   disabled={loginisLoading}
                   className="p-3 px-8 hover:opacity-[.5] text-[#fff] flex btn items-center justify-center w-full cursor-pointer 
-                   bg-[#000] rounded-md family1 font-semibold"
+                   bg-[#000] rounded-md regular"
                 >
                   {loginisLoading ? (
                     <div className="w-full flex justify-center items-center gap-4">
                       <Loader type="dots" /> Login in progress
                     </div>
                   ) : (
-                    <AnimateText children={"Sign In"} />
+                    "Sign In"
                   )}
                 </button>
                 <div className="w-full flex items-center justify-start gap-2">
