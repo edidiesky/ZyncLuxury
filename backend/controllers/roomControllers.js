@@ -87,29 +87,22 @@ const GetAllSellerRooms = asyncHandler(async (req, res) => {
   const skip = (page - 1) * limit;
 
   const totalRoom = await prisma.rooms.count({});
-  const cacheKey = `seller_room_${req.user?.userId}`;
-  const cacheRooms = await redisClient.get(cacheKey);
-  if (cacheRooms) {
-    return res.json(cacheRooms);
-  } else {
-    const rooms = await prisma.rooms.findMany({
-      where: {
-        sellerid: req.user?.userId,
-      },
-      skip: skip,
-      take: limit,
-      orderBy: {
-        createdAt: "desc",
-      },
-    });
+  const rooms = await prisma.rooms.findMany({
+    where: {
+      sellerid: req.user?.userId,
+    },
+    skip: skip,
+    take: limit,
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
-    const noOfPages = Math.ceil(totalRoom / limit);
-    const result = { rooms, noOfPages, totalRoom };
-    await redisClient.set(cacheKey, result, { EX: 3600 });
-    res.setHeader("Content-Type", "text/html");
-    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-    return res.json(result);
-  }
+  const noOfPages = Math.ceil(totalRoom / limit);
+  const result = { rooms, noOfPages, totalRoom };
+  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  return res.json(result);
 });
 
 // @description  Create a room for the seller
