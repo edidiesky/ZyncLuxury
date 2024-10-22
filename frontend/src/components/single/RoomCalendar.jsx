@@ -9,7 +9,7 @@ const RoomCalendar = ({ dateRange, handleSelect, differenceinDays }) => {
 
   return (
     <div className="flex pt-8 md:pt-12 border-t flex-col w-full gap-4">
-      <h3 className="text-xl md:text-2xl family2">
+      <h3 className="text-2xl md:text-3xl family2">
         {differenceinDays ? differenceinDays : 0} night in {room?.title}
         <span
           className="block text-grey font-normal text-base family1"

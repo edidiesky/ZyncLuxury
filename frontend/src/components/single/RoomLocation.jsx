@@ -27,22 +27,22 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
     },
     [currentUser]
   );
-    const customIconUrl = new Icon({
-      iconUrl: "/location.png",
-      iconSize: [38, 38],
-    });
+  const customIconUrl = new Icon({
+    iconUrl: "/location.png",
+    iconSize: [38, 38],
+  });
 
   return (
     <div className="flex pt-8 md:pt-12 border-t flex-col w-full gap-8">
-      <h3 className="text-xl md:text-2xl family2">Where you’ll be</h3>
+      <h3 className="text-2xl md:text-3xl family2">Where you’ll be</h3>
       <MapContainer
+        className="h-[200px] md:h-[500px]"
         center={[
           room?.latitude ? room?.latitude : 3.2839374,
           room?.longitude ? room?.longitude : 12.4964,
         ]}
         zoom={5}
         style={{
-          height: "600px",
           width: "100%",
           fontFamily: " Kumbh Sans, sans-serif",
         }}
@@ -60,7 +60,7 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
               to={`/room/${room?.id}`}
               className="w-[250px] flex flex-col rounded-xl overflow-hidden family1"
             >
-              <div className={`w-full h-[130px] overflow-hidden relative`}>
+              <div className={`w-full h-[120px] overflow-hidden relative`}>
                 <Link
                   to={"#"}
                   onClick={() => handleFavouriteRooms(room)}
@@ -76,22 +76,15 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
                 </div>
               </div>
 
-              <div className="w-full flex p-2 pb-0 flex-col gap-1 rounded-b-xl">
+              <div className="w-full flex p-2 pb-0 flex-col rounded-b-xl">
                 <h3 className={`text-base family2 w-full`}>
                   {room?.title}
-                  <span className="block regular text-xs">
-                    {room?.country}
-                  </span>
+                  <span className="block regular text-xs">{room?.country}</span>
                 </h3>
-                <div className="flex justify-between w-full items-center  gap-4">
-                  <div className="flex flex-col">
-                    {/* <p className="text-base family2 text-grey family1">from</p> */}
-                    <p className={`text-xs family2`}>
-                      ₦{room?.price}{" "}
-                      <span className="text-[10px] font-normal">/night</span>
-                    </p>
-                  </div>
-                </div>
+                <p className={`text-xs family2`}>
+                  ₦{room?.price}{" "}
+                  <span className="text-[10px] font-normal">/night</span>
+                </p>
               </div>
             </Link>
           </Popup>
