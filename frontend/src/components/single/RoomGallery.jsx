@@ -10,7 +10,7 @@ export default function RoomGallery() {
       {room?.images?.length === 4 ? (
         <div className="w-full">
           <div className="lg:grid-cols-2 grid gap-2">
-            <div className="w-full h-[420px] overflow-hidden rounded-xl md:h-[400px]">
+            <div className="w-full h-[420px] overflow-hidden lg:rounded-xl lg:h-[400px]">
               <Image alt="Cotion" src={room?.images[0]} />
             </div>
             <div className="w-full hidden lg:grid grid-cols-2 gap-2">
@@ -18,7 +18,7 @@ export default function RoomGallery() {
                 return (
                   <div
                     key={index}
-                    className="w-full h-[200px] overflow-hidden rounded-xl"
+                    className="w-full h-[200px] overflow-hidden lg:rounded-xl"
                   >
                     <Image src={image} />
                   </div>

@@ -130,18 +130,18 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           <div className="flex flex-1 flex-col">
-            <h4 className="text-lg font-bold">
+            <h4 className="text-lg family2">
               ₦{room?.price} <span className="font-normal text-xs">/night</span>
             </h4>
             <div className="">
               <Popover>
                 <PopoverTrigger>
                   <div className="flex items-center underline gap-1">
-                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                    <span className="text-sm family2 leading-[1.5] text-center text-dark">
                       {moment(startdate).format("DD MMM")}
                     </span>{" "}
                     {/* <span>-</span> */}
-                    <span className="text-sm font-bold leading-[1.5] text-center text-dark">
+                    <span className="text-sm family2 leading-[1.5] text-center text-dark">
                       {moment(enddate).format("DD MMM")}
                     </span>
                   </div>
@@ -165,7 +165,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 type="submit"
                 disabled={bookingloading}
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-lg font-bold text-white py-3 px-8 w-full"
+                className="btn flex items-center justify-center text-lg family2 text-white py-3 px-8 w-full"
               >
                 {bookingloading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -189,7 +189,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
       </div>
       <div className="w-[100%] lg:sticky top-[10%] hidden lg:flex flex-col">
         <div className="w-full border rounded-lg py-8 px-2 flex flex-col gap-4 md:w-[380px] bg-[#fff]">
-          <h4 className="text-3xl family1 px-6 font-bold">
+          <h4 className="text-3xl family1 px-6 family2">
             ₦{room?.price} <span className="font-normal text-sm">/night</span>
           </h4>
           <div className="w-[90%] family1 mx-auto grid grid-cols-1">
@@ -335,7 +335,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                   className="w-16 h-16 object-cover rounded-full"
                 />
               )}
-              <span className="text-dark text-lg font-bold">
+              <span className="text-dark text-lg family2">
                 {room?.user?.name}
                 <span className="text-[var(--primary)] block font-normal text-base">
                   Verifed Agents

@@ -72,19 +72,19 @@ a.active {
 .leaflet-container a {
   color: #000 !important;
 }
-  .spinner {
-    display: inline-block;
-    animation: spin 1s linear infinite;
-  }
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
 
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .leaflet-popup-content {
   margin: 0 !important;
@@ -165,10 +165,10 @@ button:disabled {
 .rdrMonth {
   width: 100% !important;
   font-size: 14px !important;
-   font-family: "Karla", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
 }
 .rdrMonthAndYearPickers select {
-   font-family: "Karla", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
   font-size: 14px !important;
   color: var(--dark-1) !important;
 }
@@ -185,7 +185,7 @@ button:disabled {
   > .MuiDataGrid-cell {
   max-height: 200px !important;
   min-height: 200px !important;
-   font-family: "Karla", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
 }
 
 .rdrDateRangePickerWrapper {
@@ -197,7 +197,7 @@ button:disabled {
   width: 100% !important;
   color: var(--dark-1) !important;
   font-size: 15px !important;
-   font-family: "Karla", sans-serif !important;
+  font-family: "Karla", sans-serif !important;
 }
 /* React day picker css */
 
@@ -332,7 +332,7 @@ input:focus {
 .btn.btn_2:hover {
   background: var(--primary) !important;
   color: #fff !important;
-    box-shadow: 0 0 0 6px #e7e7e9;
+  box-shadow: 0 0 0 6px #e7e7e9;
   transition: all 0.3s;
 }
 
@@ -346,9 +346,17 @@ input:focus {
 
 .line {
   overflow: hidden;
-text-align: center !important;
+  text-align: center !important;
 }
 
+@media (max-width: 780px) {
+  .line {
+    overflow: hidden;
+    text-align: start !important;
+    width: fit-content !important;
+    /* display: inline-block; */
+  }
+}
 html.lenis,
 html.lenis body {
   height: auto;
