@@ -75,7 +75,7 @@ const Hero = () => {
           y: 0,
           opacity: 1,
           stagger: { amount: 0.6 },
-          duration: 1,
+          duration: 1.6,
           ease: "power4.out",
         }
       )
@@ -450,9 +450,16 @@ const TopContent = ({ bar, setBar, currentUser }) => {
        gap-12"
       >
         <div className="flex items-center gap-2">
-          <h4 className="text-2xl md:text-2xl family2 text-white">
-            ZyncLuxury
-          </h4>
+          <Link to={"/"} className="flex items-center gap-2">
+            <img
+              src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
+              alt=""
+              className="w-8"
+            />
+            <span className="text-2xl md:text-2xl family2 text-white">
+              ZyncLuxury
+            </span>
+          </Link>
         </div>
 
         <div className="hidden lg:flex items-center justify-center gap-4">

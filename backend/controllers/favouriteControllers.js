@@ -61,7 +61,7 @@ const GetUserFavouriteRooms = asyncHandler(async (req, res) => {
   const cacheKey = `user_favourites_room_${req.user?.userId}`;
   const cacheFavouritesRooms = await redisClient.get(cacheKey);
   if (cacheFavouritesRooms) {
-    return res.json(JSON.parse(cacheFavouritesRooms));
+    return res.json(cacheFavouritesRooms);
   } else {
     const currentUser = await prisma.user.findUnique({
       where: {
@@ -77,7 +77,7 @@ const GetUserFavouriteRooms = asyncHandler(async (req, res) => {
         id: { in: userRoomFavourites },
       },
     });
-    await redisClient.set(cacheKey, JSON.stringify(rooms), { EX: 3600 });
+    await redisClient.set(cacheKey, rooms, { EX: 3600 });
 
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");

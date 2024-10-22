@@ -46,12 +46,15 @@ const Navbar = () => {
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
         >
-          <Link to={"/"}>
+          <Link to={"/"} className="flex items-center gap-2">
             <img
               src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
               alt=""
               className="w-8"
             />
+            <span className="text-2xl md:text-2xl family2 text-dark">
+              ZyncLuxury
+            </span>
           </Link>
 
           {/* <div className="hidden flex-1 sm:flex items-center justify-center gap-6">

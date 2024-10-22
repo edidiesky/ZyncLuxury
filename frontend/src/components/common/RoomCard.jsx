@@ -195,10 +195,10 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               <span
                 className={`${
                   apartment?.listingType === "SALE"
-                    ? "bg-[#87faed] text-[#8acba1]"
+                    ? "bg-[#deddff] text-[#3e3aff]"
                     : apartment?.listingType === "RENT"
-                    ? "bg-[#e6eaf6] text-[#a3abdb]"
-                    : "bg-[#f7f2db] text-[#eec680]"
+                    ? "bg-[#cdeed3] text-[#347345]"
+                    : "bg-[#f3f3f1] text-[#a37d18]"
                 } ${
                   type === "search"
                     ? "text-xs px-3 py-1 regular"
@@ -242,41 +242,6 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               <li className="">{apartment?.bathroom} bathroom</li>
             </ul>
           </div>
-          {/* <div
-            className={`${
-              type === "search" ? " py-3 px-4 gap-[4px]" : "py-4 px-6  gap-2"
-            } w-full flex items-center border-t rounded-b-xl bg-[#fff]`}
-          >
-            {apartment?.user?.image ? (
-              <img
-                src={apartment?.user?.image}
-                alt=""
-                className="w-8 h-8 object-cover rounded-full"
-              />
-            ) : apartment?.user?.username ? (
-              // <div className="w-8 h-8 text-white rounded-full bg-[#000] text-2xl flex items-center justify-center ">
-              //   {currentUser?.username[0]}{" "}
-              // </div>
-              <img
-                src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                alt=""
-                className="w-8 h-8 object-cover rounded-full"
-              />
-            ) : (
-              <img
-                src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
-                alt=""
-                className="w-8 h-8 object-cover rounded-full"
-              />
-            )}
-            <span
-              className={`${
-                type === "search" ? "text-sm" : "text-base"
-              } text-grey font-normal`}
-            >
-              {apartment?.user?.name}'s Properties
-            </span>
-          </div> */}
         </div>
       </Link>
     </div>

@@ -152,7 +152,7 @@ const GetSingleRoom = asyncHandler(async (req, res) => {
         { status: 404 }
       );
     }
-    await redisClient.set(cacheKey, room, { EX: 3600 });
+    await redisClient.set(cacheKey, room, { EX: 60 });
 
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");

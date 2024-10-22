@@ -42,12 +42,15 @@ const Header = () => {
        gap-12"
         >
           <div className="flex items-center gap-4 md:gap-6">
-            <Link to={"/"}>
+            <Link to={"/"} className="flex items-center gap-2">
               <img
                 src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                 alt=""
                 className="w-8"
               />
+              <span className="text-2xl md:text-2xl family2 text-dark">
+                ZyncLuxury
+              </span>
             </Link>
             <label
               style={{
