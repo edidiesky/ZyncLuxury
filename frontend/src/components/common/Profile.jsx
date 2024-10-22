@@ -16,7 +16,7 @@ const Profile = ({ setBar, bar }) => {
     window.location.reload(true);
   };
   return (
-    <div className="flex-1 relative">
+    <div className=" relative">
       {currentUser && (
         <div className="flex items-center justify-end gap-8">
           <div className="flex items-center gap-2">

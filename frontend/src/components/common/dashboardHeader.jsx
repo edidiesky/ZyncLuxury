@@ -123,7 +123,7 @@ const DashboardHeader = () => {
             </form>
           </div>
           <div className="flex flex-1 auto items-center justify-end gap-4">
-            <div
+            {/* <div
               onClick={() => setNotificationActiveBar(true)}
               className="w-10 md:w-14 hover:bg-[#f7f7f7] relative cursor-pointer h-10 md:h-14 rounded-full flex items-center justify-center text-lg"
             >
@@ -133,7 +133,7 @@ const DashboardHeader = () => {
                   {unReadNotifications?.length}
                 </div>
               )}
-            </div>
+            </div> */}
             <Profile />
           </div>
         </div>
