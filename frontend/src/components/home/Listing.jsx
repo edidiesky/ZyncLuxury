@@ -5,6 +5,7 @@ import { getAllRooms } from "@/features/room/roomReducer";
 import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
 import { apartmentDataList } from "@/data/apartmentData";
+import AnimateTextWord from "../common/AnimateTextWord";
 
 const Listing = () => {
   const dispatch = useDispatch();
@@ -21,8 +22,10 @@ const Listing = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl capitalize md:text-5xl family2 text-[var(--dark-1)]">
-              Holiday accomodations <br /> recommendations for you
+            <h4 className="text-4xl capitalize max-w-[600px] md:text-5xl family2 text-[var(--dark-1)]">
+              <AnimateTextWord type={"bigtext"}>
+                Holiday accomodations recommendations for you
+              </AnimateTextWord>
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">
@@ -31,9 +34,7 @@ const Listing = () => {
             </button>
           </div>
         </div>
-        <div
-          className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <div className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3">
           {getallRoomisLoading ? (
             <>
               {apartmentDataList?.slice(0, 3).map((apartment, index) => {

@@ -3,6 +3,8 @@ import { GiCutDiamond } from "react-icons/gi";
 import { FaMountainCity } from "react-icons/fa6";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { GiModernCity } from "react-icons/gi";
+import AnimateTextWord from "../common/AnimateTextWord";
+
 const Expert = () => {
   const zyncStength = [
     {
@@ -31,12 +33,17 @@ const Expert = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h3 className="text-4xl family2 md:text-5xl text-[var(--dark-1)]">
-                Why you should <br /> Choose ZyncLuxury?
-              </h3>
+              <h4 className="text-4xl max-w-[500px] md:text-5xl capitalize family2 text-[var(--dark-1)]">
+                <AnimateTextWord type={"bigtext"}>
+                  Why we are the best at Luxury Homes?
+                </AnimateTextWord>
+              </h4>
               <h4 className="text-lg md:text-xl text-[var(--dark-1)]">
-                Auisque cursus sed magnads vitae conubia pharetra auctor
-                interdum dui metus augue.
+                <AnimateTextWord>
+                  Auisque cursus sed magnads vitae conubia pharetra auctor
+                  interdum dui metus augue. Xursus sed magnads vitae conubia
+                  pharetra auctor interdum dui metus augue.
+                </AnimateTextWord>
               </h4>
             </div>
             <div className="flex lg:items-center flex-col gap-4 md:justify-end">
@@ -77,13 +84,17 @@ const Expert = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h3 className="text-4xl md:text-5xl family2 capitalize text-white">
-                Why you should choose ZyncLuxury?
+              <h3 className="text-4xl max-w-[500px] md:text-5xl capitalize family2 text-white">
+                <AnimateTextWord>
+                  Why you should choose ZyncLuxury?
+                </AnimateTextWord>
               </h3>
               <p className="text-base md:text-lg family1 leading-[1.4] font-normal text-grey">
-                Buisque cursus metus vitae sed pharetra auctor semy interdum
-                magna augue eget diam ante ipsum faucibus luctus ultrices
-                losuere cubilia. Vestibulum lacinia arcu eget nulla.
+                <AnimateTextWord>
+                  Buisque cursus metus vitae sed pharetra auctor semy interdum
+                  magna augue eget diam ante ipsum faucibus luctus ultrices
+                  losuere cubilia. Vestibulum lacinia arcu eget nulla.
+                </AnimateTextWord>
               </p>
               <div className="w-full flex items-center gap-4">
                 <div className="w-24 h-24 bg-[#282c48] flex text-5xl items-center rounded-full text-white justify-center">

@@ -80,7 +80,7 @@ const Hero = () => {
         }
       )
       .fromTo(
-        text1?.words,
+        text1?.chars,
         {
           y: "100%",
           opacity: 0,
@@ -94,11 +94,11 @@ const Hero = () => {
           duration: 1.6,
           ease: "power4.out",
         },
-        0.33
+        0.6
       )
       // hero_btn
       .fromTo(
-        text2?.lines,
+        text2?.words,
         {
           y: 50,
           opacity: 0,
@@ -107,22 +107,22 @@ const Hero = () => {
           y: 0,
           opacity: 1,
           stagger: { amount: 0.3 },
-          duration: 0.8,
+          duration: 1,
           ease: "power4.out",
         },
-        0.6
+        1.3
       )
       .fromTo(
         ".hero_btn",
         {
-          y: 50,
+          y: 20,
           opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          ease: "power4.out",
+          duration: 0.5,
+          stagger: { amount: 0.2 },
         }
       );
   }, []);
@@ -142,11 +142,8 @@ const Hero = () => {
 
           <TopContent bar={bar} setBar={setBar} currentUser={currentUser} />
 
-          <div
-            className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
-       gap-6 md:gap-12"
-          >
-            <div className="flex max-w-[1000px] md:mx-auto flex-col gap-8">
+          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col  gap-6 md:gap-12">
+            <div className="flex max-w-[980px] md:mx-auto flex-col md:items-center justify-center gap-8">
               <div className="w-full hero_about_text md:flex-row flex-col flex md:items-center gap-4">
                 <div className="flex items-center">
                   {profilesList?.map((face, index) => {
@@ -169,17 +166,11 @@ const Hero = () => {
                   5 K+ Happy Customers
                 </span>
               </div>
-              <h1
-                className="text-white hero_main_text md:text-center capitalize leading-[1.1] lg:leading-[1.15] text-4xl sm:text-6xl md:text-7xl
-          family2"
-              >
-                Find your Best{" "}
-                <span className="relative">
-                  Property -
-                  <Dash />
-                </span>{" "}
-                <br /> By Lease, or Rent <br /> with Confidence
-                <span className="text-base hero_submain_text lg:text-xl max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
+              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1.15] text-4xl md:text-center sm:text-6xl md:text-7xl family2">
+                <span className="text-center hero_main_text hide">
+                  Find your Best Property - By Lease, or Rent with Confidence
+                </span>
+                <span className="text-base lg:text-2xl hero_submain_text hide max-w-[400px] md:mx-auto md:text-center md:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
@@ -187,7 +178,7 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-            <div className="w-full md:w-[450px] md:mx-auto md:items-center flex-row md:justify-center gap-4 flex">
+            <div className="w-full md:w-[450px] md:items-center flex-row gap-4 flex">
               <div className="flex flex-1">
                 <Link
                   to={"/search"}

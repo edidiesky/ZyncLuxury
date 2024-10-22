@@ -7,6 +7,8 @@ import { MdCleaningServices } from "react-icons/md";
 import { MdPrivacyTip } from "react-icons/md";
 import { GiConsoleController } from "react-icons/gi";
 import { FaKitchenSet } from "react-icons/fa6";
+import AnimateTextWord from "../common/AnimateTextWord";
+
 const whychooseList = [
   {
     text: "Gateway to a full luxury lifestyle",
@@ -72,14 +74,18 @@ const About = () => {
               <h4 className="text-lg md:text-xl text-[var(--primary)]">
                 Passionate – Dedicated – Professional
               </h4>
-              <h4 className="text-4xl md:text-5xl family2 text-[var(--dark-1)]">
-                Why you should <br /> Choose ZyncLuxury?
+              <h4 className="text-4xl max-w-[600px] md:text-5xl family2 text-[var(--dark-1)]">
+                <AnimateTextWord type={"bigtext"}>
+                  Why you should should Choose ZyncLuxury?
+                </AnimateTextWord>
               </h4>
             </div>
             <div className="flex lg:items-center md:justify-end">
               <span className="text-xl max-w-[100%] md:max-w-[400px] text-grey font-normal">
-                Auisque cursus metus vitae sed pharetra auctor semy mas interdum
-                magnads augue.
+                <AnimateTextWord>
+                  Auisque cursus metus vitae sed pharetra auctor semy mas
+                  interdum magnads augue.
+                </AnimateTextWord>
               </span>
             </div>
           </div>
@@ -129,10 +135,14 @@ const About = () => {
           </div>
           <div className="flex w-full flex-col gap-4">
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
-              Passionate – Dedicated – Professional
+              <AnimateTextWord>
+                Passionate – Dedicated – Professional
+              </AnimateTextWord>
             </h4>
-            <h3 className="text-4xl md:text-5xl family2 capitalize family2 text-white">
-              its’ not about business, <br /> <span>it’s about ‘YOU’!</span>
+            <h3 className="text-4xl leading-[1.2] max-w-[500px] md:text-5xl family2 capitalize family2 text-white">
+              <AnimateTextWord type={"bigtext"}>
+                its’ not about business, it’s about ‘YOU’!
+              </AnimateTextWord>{" "}
             </h3>
             <div className="flex items-center py-4 gap-8">
               <div className="family2 text-xl md:text-xl family2 text-white">
@@ -146,9 +156,11 @@ const About = () => {
               </div>
             </div>
             <p className="text-xl family1 leading-[1.4] font-normal text-white">
-              Buisque cursus metus vitae sed pharetra auctor semy interdum magna
-              augue eget diam ante ipsum faucibus luctus ultrices losuere
-              cubilia. Vestibulum lacinia arcu eget nulla.
+              <AnimateTextWord>
+                Buisque cursus metus vitae sed pharetra auctor semy interdum
+                magna augue eget diam ante ipsum faucibus luctus ultrices
+                losuere cubilia. Vestibulum lacinia arcu eget nulla.
+              </AnimateTextWord>
             </p>
             <div className="flex pt-8 flex-col gap-4">
               <p className="text-lg text-grey">

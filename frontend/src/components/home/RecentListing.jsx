@@ -3,6 +3,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { getAllRooms } from "@/features/room/roomReducer";
 import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
+import AnimateTextWord from "../common/AnimateTextWord";
 
 const RecentListing = () => {
   const dispatch = useDispatch();
@@ -22,8 +23,10 @@ const RecentListing = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl capitalize family2 text-[var(--dark-1)]">
-              Check out our <br /> favourite listings
+            <h4 className="text-4xl max-w-[500px] md:text-5xl capitalize family2 text-[var(--dark-1)]">
+              <AnimateTextWord type={"bigtext"}>
+                Check out our favourite listings
+              </AnimateTextWord>
             </h4>
           </div>
           <div className="flex lg:items-center md:justify-end">

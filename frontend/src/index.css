@@ -345,10 +345,8 @@ input:focus {
 }
 
 .line {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px !important;
-  width: fit-content !important;
+  overflow: hidden;
+text-align: center !important;
 }
 
 html.lenis,
