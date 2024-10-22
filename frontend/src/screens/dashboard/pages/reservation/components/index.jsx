@@ -102,7 +102,7 @@ const DashboardIndex = () => {
           </div>
         </Table>
         {reservations?.length > 0 ? (
-          <div className="w-full family1 flex items-center justify-end gap-6">
+          <div className="w-full mt-4 family1 flex items-center justify-end gap-4">
             <div
               onClick={() => dispatch(handlePage("prev"))}
               className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"

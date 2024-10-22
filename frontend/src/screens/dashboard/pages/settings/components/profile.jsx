@@ -112,13 +112,13 @@ const Profile = () => {
   return (
     <div className="w-full lg:grid-cols-custom_2 relative items-start gap-8 grid">
       {(updateUserisLoading || getallUserisLoading || uploading) && <Loader />}
-           <div className="w-full lg:w-[300px] lg:sticky top-[10%] flex md:flex-col flex-row md:items-start items-center">
+           <div className="w-full lg:w-[260px] lg:sticky top-[10%] flex md:flex-col flex-row md:items-start items-center">
         <div
           onClick={() => setIndex(0)}
           className={`px-6  ${
             index === 0
-              ? "bg-[#eee] border-b-4 md:border-b-0 md:border-r-4 border-[rgba(0,0,0,1)]"
-              : " bg-[#fafafa] border-0"
+              ? "bg-[#fafafa] border-b-4 md:border-b-0 md:border-r-4 border-[rgba(0,0,0,1)]"
+              : " "
           }  text-base family1 w-full cursor-pointer py-4 flex items-center justify-start gap-4`}
         >
           <BiUser /> Profile Settings
@@ -129,7 +129,7 @@ const Profile = () => {
           className={`px-6  ${
             index === 1
               ? "bg-[#eee] border-b-4 md:border-b-0 md:border-r-4 border-[rgba(0,0,0,1)]"
-              : " bg-[#fafafa] border-0"
+              : " border-0"
           }  text-base family1 cursor-pointer py-4 w-full flex items-center justify-start gap-4`}
         >
           <BiLock /> Password

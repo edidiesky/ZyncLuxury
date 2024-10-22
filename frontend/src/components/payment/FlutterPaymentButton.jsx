@@ -90,7 +90,7 @@ const FlutterPaymentButton = () => {
         });
       }}
       // style={{ letterSpacing: "4px" }}
-      className="btn p-4 rounded-[40px] cursor-pointer px-8 text-sm font-semibold uppercase text-center text-white font-booking_font"
+      className="btn p-4 rounded-[40px] cursor-pointer px-8 text-sm family2 uppercase text-center text-white font-booking_font"
     >
       {createpaymentisLoading ? (
         <span className="flex items-center justify-center gap-2">

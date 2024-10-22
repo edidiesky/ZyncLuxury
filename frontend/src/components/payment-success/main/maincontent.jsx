@@ -64,10 +64,10 @@ const PaymentMessage = () => {
                 <IoMdCheckmark className="text-[60px]" color="#0CAC97" />
               </div>
 
-              <h3 className="text-2xl lg:text-3xl text-center font-booking_font4 font-bold ">
+              <h3 className="text-2xl lg:text-3xl text-center font-booking_font4 family2 ">
                 Your Payment has been confirmed
                 <span
-                  className="block md:mx-auto pt-4 font-normal md:text-center md:w-[400px] text-base md:text-lg font-booking_font
+                  className="block md:mx-auto pt-4 regular md:text-center md:w-[400px] text-base md:text-lg font-booking_font
                  text-grey"
                 >
                   Your payment has been carried out successfully!
@@ -75,7 +75,7 @@ const PaymentMessage = () => {
               </h3>
             </div>
             <div className="w-full pb-4 lg:pb-8 border-b flex flex-col gap-3 lg:gap-8">
-              <h3 className="text-3xl lg:text-4xl font-booking_font4 font-bold ">
+              <h3 className="text-3xl lg:text-4xl font-booking_font4 family2 ">
                 Order Details
               </h3>
               <div className="w-full grid sm:grid-cols-custom lg:items-center gap-8 lg:gap-20">
@@ -87,31 +87,31 @@ const PaymentMessage = () => {
                       className="w-[220px] lg:w-[300px] object-cover h-[200px] lg:h-[300px]"
                     />
                     <div className="w-full flex flex-col gap-2 lg:gap-4">
-                      <h3 className="text-3xl font-booking_font4 font-bold ">
+                      <h3 className="text-3xl font-booking_font4 family2 ">
                         {updatedReservation?.rooms?.title}
                       </h3>
                       <ul className="flex flex-col lg:gap-2">
                         <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                          <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                          <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                             Check In:
                           </span>
                           <span className="text-start"> {startDate}</span>
                         </li>
                         <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                          <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                          <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                             Check Out:
                           </span>
                           <span className="text-start">{endDate}</span>
                         </li>
                         <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                          <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                          <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                             Guests:
                           </span>
                           <span className="text-start">{payment?.guests}</span>
                           {/* 4 */}
                         </li>
                         <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                          <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                          <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                             Total Days:
                           </span>
                           <span className="text-start">
@@ -124,24 +124,24 @@ const PaymentMessage = () => {
                 </div>
                 <div className="w-[70%] md:w-[400px]">
                   <div className="w-full flex flex-col gap-4">
-                    <h3 className="text-3xl font-booking_font4 font-bold ">
+                    <h3 className="text-3xl font-booking_font4 family2 ">
                       Reservation Details
                     </h3>
                     <ul className="flex flex-col gap-2">
                       <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                        <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                        <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                           Order No:
                         </span>
                         {payment?.id}
                       </li>
                       <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                        <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                        <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                           Order Date:
                         </span>
                         {paymentDate}
                       </li>
                       <li className="text-sm sm:text-sm grid grid-cols-2 items-center gap-3 font-booking_font">
-                        <span className="font-bold w-[80px] lg:w-[100px] font-booking_font_bold">
+                        <span className="family2 w-[80px] lg:w-[100px] font-booking_font_bold">
                           Order Id:
                         </span>{" "}
                         {updatedReservation?.id}
@@ -152,7 +152,7 @@ const PaymentMessage = () => {
               </div>
             </div>
             <div className="w-full flex items-center justify-start">
-              <h3 className="text-3xl font-booking_font4 font-bold ">
+              <h3 className="text-3xl font-booking_font4 family2 ">
                 <div className="flex md:flex-row flex-col md:items-center gap-4">
                   Amount Paid:{" "}
                   <div className="flex items-center gap-4">
@@ -167,9 +167,9 @@ const PaymentMessage = () => {
                   </div>
                 </div>
 
-                <span className="block font-booking_font_bold font-normal text-lg">
+                <span className="block font-booking_font_bold regular text-lg">
                   For early check-in or further enquiries, contact us{" "}
-                  <span className="text-lg text-[var(--gold-1)] hover:text-[var(--gold-1)] font-booking_font4 font-bold ">
+                  <span className="text-lg text-[var(--gold-1)] hover:text-[var(--gold-1)] font-booking_font4 family2 ">
                     +(234) 913 861 1598
                   </span>
                 </span>

@@ -36,7 +36,7 @@ export default function RoomInfo() {
         
                     <h2
                       ref={ctaText_1}
-                      className="text-3xl lg:text-5xl font-bold font-booking_font4 flex flex-wrap gap-x-[8px] gap-y-[8px]  leading-[1] 
+                      className="text-3xl lg:text-5xl family2 font-booking_font4 flex flex-wrap gap-x-[8px] gap-y-[8px]  leading-[1] 
                       font-booking_font3"
                     >
                       {ctaText1.split(" ").map((x, index) => {
@@ -70,7 +70,7 @@ export default function RoomInfo() {
                 <div className="w-full flex flex-col gap-8">
                   <h2
                     ref={ctaText_2}
-                    className="text-2xl lg:text-3xl font-bold flex font-booking_font4 flex-wrap gap-x-[8px] gap-y-[8px]  leading-[1] font-booking_font3"
+                    className="text-2xl lg:text-3xl family2 flex font-booking_font4 flex-wrap gap-x-[8px] gap-y-[8px]  leading-[1] font-booking_font3"
                   >
                     {ctaText2.split(" ").map((x, index) => {
                       return (
@@ -109,7 +109,7 @@ export default function RoomInfo() {
                     All fees and charges will be inclusive of taxes. Exceptions
                     may apply in certain jurisdictions. For a list of
                     exceptions, please click{" "}
-                    <span className="font-bold">here.</span>
+                    <span className="family2">here.</span>
                   </span>
 
                   {getsingleReservationisLoading ? (

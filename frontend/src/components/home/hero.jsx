@@ -77,7 +77,7 @@ const Hero = () => {
           stagger: { amount: 0.6 },
           duration: 1.6,
           ease: "power4.out",
-        }
+        },.5
       )
       .fromTo(
         text1?.chars,
@@ -94,7 +94,7 @@ const Hero = () => {
           duration: 1.6,
           ease: "power4.out",
         },
-        0.6
+      .6
       )
       // hero_btn
       .fromTo(
@@ -110,7 +110,7 @@ const Hero = () => {
           duration: 1,
           ease: "power4.out",
         },
-        1.3
+        2
       )
       .fromTo(
         ".hero_btn",
