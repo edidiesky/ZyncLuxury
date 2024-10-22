@@ -22,11 +22,11 @@ const RoomLists = () => {
       className="w-full relative py-20 pb-12 flex items-center justify-center
    gap-8"
     >
-      <div className="w-[95%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
+      <div className="w-[90%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
         {reservations?.length !== 0 && (
-          <h3 className="text-4xl md:text-5xl font-bold">
+          <h3 className="text-3xl md:text-5xl family2">
             My Reservations
-            <span className="block pt-3 font-normal text-base md:text-xl">
+            <span className="block pt-3 regular text-base md:text-xl">
               Here is your list of your luxurious booked homes
             </span>
           </h3>
