@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export const ProtectRoute = ({ children, type }) => {
   // const navigate = useNavigate()
   const { currentUser } = useSelector((store) => store.auth);
-  console.log(currentUser.role);
+  // console.log(currentUser.role);
   if (!currentUser || currentUser?.role === "USER") {
     return <Navigate to="/" />;
   }

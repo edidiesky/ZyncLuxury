@@ -49,7 +49,16 @@ const RoomsCreated = () => {
             </thead>
 
             {rooms?.length === 0 ? (
-              ""
+              <div className="w-full flex flex-col gap-4 justify-center items-center">
+                <img
+                  src="/no_result.jpg"
+                  alt=""
+                  className="w-[300px] md:w-[400px]"
+                />
+                <h1 className="text-dark leading-[1.3] text-3xl md:text-3xl text-center family2">
+                  You have an empty created Listings
+                </h1>
+              </div>
             ) : (
               //   <h4 className="w-full p-4 text-center text-lg family2">
               //     You have no Listings

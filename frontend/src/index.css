@@ -337,7 +337,18 @@ input:focus {
 }
 
 .hide {
+  overflow: hidden !important;
+}
+
+.hide {
   overflow: hidden;
+}
+
+.line {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  width: fit-content !important;
 }
 
 html.lenis,

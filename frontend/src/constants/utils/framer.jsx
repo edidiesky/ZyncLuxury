@@ -1,37 +1,84 @@
 export const slideup = {
   initial: {
     opacity: 0,
-    y: "80%",
+    y: "50%",
   },
   animate: (i) => ({
     opacity: 1,
-    y: "0",
-    transition: { duration: 0.7, delay: i * 0.006 },
+    y: "0%",
+    transition: { duration: 0.7, delay: i * 0.02 },
   }),
   exit: {
     opacity: 0,
-    y: "80%",
-    transition: { duration: 0.6 },
+    y: "50%",
+  },
+};
+
+export const LargeSlideup = {
+  initial: {
+    opacity: 0,
+    y: "100%",
+  },
+  animate: (i) => ({
+    opacity: 1,
+    y: "0%",
+    transition: {
+      duration: 1,
+      delay: i * 0.06,
+      ease: [0.62, 0.05, 0.01, 0.99],
+    },
+  }),
+  exit: {
+    opacity: 0,
+    y: "100%",
+  },
+};
+export const slideLeft = {
+  initial: {
+    opacity: 0,
+    x: "50%",
+  },
+  animate: (i) => ({
+    opacity: 1,
+    x: "0%",
+    transition: { duration: 0.8 },
+  }),
+  exit: {
+    opacity: 0,
+    x: "50%",
+  },
+};
+
+export const slideRight = {
+  initial: {
+    opacity: 0,
+    x: "-50%",
+  },
+  animate: (i) => ({
+    opacity: 1,
+    x: "0%",
+    transition: { duration: 0.8, delay: i * 0.4 },
+  }),
+  exit: {
+    opacity: 0,
+    x: "-50%",
   },
 };
 export const smallslideup2 = {
   initial: {
     opacity: 0,
-    y: "80px",
+    y: "70px",
   },
   animate: (i) => ({
     opacity: 1,
     y: "0",
-    transition: { duration: 0.6, delay: i * 0.4 },
+    transition: { duration: 1.5, delay: i * 0.4 },
   }),
   exit: {
     opacity: 0,
-    y: "80px",
-    transition: { duration: 0.5 },
+    y: "70px",
   },
 };
-
-
 
 export const clipPathRight = {
   initial: {
@@ -46,7 +93,7 @@ export const clipPathRight = {
   }),
   exit: {
     opacity: 0,
-    transition: {duration: 0.5},
+    transition: { duration: 0.5 },
     // clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
     clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
   },
@@ -60,7 +107,7 @@ export const clipPathLeft2 = {
   animate: (i) => ({
     opacity: 1,
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    transition: { duration: .7, delay: i * 0.4 },
+    transition: { duration: 0.7, delay: i * 0.4 },
   }),
   exit: {
     opacity: 0,
@@ -141,12 +188,10 @@ export const opacity1 = {
   initial: {
     opacity: 0,
   },
-  enter: {
+  enter: (i) => ({
     opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
+    transition: { duration: 1.5, delay: i * 0.4 },
+  }),
   exit: {
     opacity: 1,
   },

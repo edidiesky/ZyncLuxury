@@ -14,7 +14,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { Link, NavLink } from "react-router-dom";
-
+import SplitType from "split-type";
+import gsap from "gsap";
 import { addDays } from "date-fns";
 import Dash from "@/assets/svg/dash";
 import { ProfileDropdownStyles } from "../common/navbar";
@@ -58,6 +59,73 @@ const Hero = () => {
 
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
+  React.useEffect(() => {
+    const text1 = new SplitType(".hero_main_text");
+    const text2 = new SplitType(".hero_submain_text");
+    gsap
+      .timeline()
+      .to("body", { css: { visibility: "visible" } })
+      .fromTo(
+        ".hero_about_text",
+        {
+          y: "100%",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: { amount: 0.6 },
+          duration: 1,
+          ease: "power4.out",
+        }
+      )
+      .fromTo(
+        text1?.words,
+        {
+          y: "100%",
+          opacity: 0,
+          skew: 7,
+        },
+        {
+          y: 0,
+          skew: 0,
+          opacity: 1,
+          stagger: { amount: 0.6 },
+          duration: 1.6,
+          ease: "power4.out",
+        },
+        0.33
+      )
+      // hero_btn
+      .fromTo(
+        text2?.lines,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: { amount: 0.3 },
+          duration: 0.8,
+          ease: "power4.out",
+        },
+        0.6
+      )
+      .fromTo(
+        ".hero_btn",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power4.out",
+        }
+      );
+  }, []);
   return (
     <>
       <div className="w-full">
@@ -78,8 +146,8 @@ const Hero = () => {
             className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col
        gap-6 md:gap-12"
           >
-            <div className="flex max-w-[1000px] mx-auto flex-col gap-8">
-              <div className="w-full md:flex-row flex-col flex md:items-center gap-4">
+            <div className="flex max-w-[1000px] md:mx-auto flex-col gap-8">
+              <div className="w-full hero_about_text md:flex-row flex-col flex md:items-center gap-4">
                 <div className="flex items-center">
                   {profilesList?.map((face, index) => {
                     return (
@@ -102,7 +170,7 @@ const Hero = () => {
                 </span>
               </div>
               <h1
-                className="text-white md:text-center capitalize leading-[1.1] lg:leading-[1.15] text-4xl sm:text-6xl md:text-7xl
+                className="text-white hero_main_text md:text-center capitalize leading-[1.1] lg:leading-[1.15] text-4xl sm:text-6xl md:text-7xl
           family2"
               >
                 Find your Best{" "}
@@ -111,7 +179,7 @@ const Hero = () => {
                   <Dash />
                 </span>{" "}
                 <br /> By Lease, or Rent <br /> with Confidence
-                <span className="text-base lg:text-xl max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
+                <span className="text-base hero_submain_text lg:text-xl max-w-[400px] md:max-w-[680px] text-[#eee] md:mx-auto font-normal capitalize pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
@@ -123,7 +191,7 @@ const Hero = () => {
               <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn md:text-base text-center  w-full text-sm family1 regular text-white rounded-[40px] px-4 py-4"
+                  className="btn hero_btn md:text-base text-center  w-full text-sm family1 regular text-white rounded-[40px] px-4 py-4"
                 >
                   <AnimateText children={"Book Your Home"} />
                 </Link>
@@ -132,7 +200,7 @@ const Hero = () => {
               <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn btn_2 md:text-base text-center w-full text-sm family1 regular text-white px-4 py-4"
+                  className="btn hero_btn btn_2 md:text-base text-center w-full text-sm family1 regular text-white px-4 py-4"
                 >
                   <AnimateText children={"Learn More"} />
                 </Link>
