@@ -95,7 +95,7 @@ export default function DeleteModal({
             <span className="w-full flex items-center justify-center">
               <CiWarning fontSize={"50px"} color={"var(--red)"} />
             </span>
-            <h3 className="text-lg md:text-2xl text-center font-semibold">
+            <h3 className="text-lg md:text-2xl text-center family2">
               Delete this Reservation?
               <span className="block text-sm w-[80%] mx-auto text-center  regular  text-dark">
                 By deleting this reservation,It cannot be retrieved back if this
@@ -224,7 +224,7 @@ export default function DeleteModal({
           <span className="w-full flex items-center justify-center">
             <CiWarning fontSize={"50px"} color={"var(--red)"} />
           </span>
-          <h3 className="text-lg md:text-2xl text-center font-semibold">
+          <h3 className="text-lg md:text-2xl text-center family2">
             Delete this user?
             <span className="block text-sm w-[80%] regular mx-auto text-center  regular  text-dark">
               By deleting this user, It cannot be retrieved if this action you
@@ -273,8 +273,8 @@ const DeleteContainer = styled(motion.div)`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   .deleteCard {
-    max-width: 405px;
-    min-width: 420px;
+    max-width: 505px;
+    min-width: 520px;
     display: flex;
     align-items: center;
     justify-content: center;

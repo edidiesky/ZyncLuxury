@@ -14,7 +14,8 @@ import { addListToWish } from "@/features/auth/authReducer";
 import Image from "./Image";
 import DeleteModal from "../modals/DeleteModal";
 
-const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
+const RoomCard = ({ type, apartment, inView, index }) => {
+  console.log(apartment);
   const [tabindex, setTabIndex] = useState(0);
   const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
@@ -61,9 +62,9 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
         </AnimatePresence>
         <Link
           to={`/reservation/payment/${apartment?.id}`}
-          className="w-full flex flex-col"
+          className="w-full border rounded-xl gap-4 flex flex-col"
         >
-          <div className="h-[240px] overflow-hidden rounded-xl group w-full relative">
+          <div className="h-[240px] overflow-hidden rounded-t-xl group w-full relative">
             <Link
               to={"#"}
               style={{ transition: "all .4s" }}
@@ -84,12 +85,22 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
               className="w-full h-[240px] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
             />
           </div>
-          <div className="w-full flex flex-col py-6 bg-white gap-2">
-            <h3 className="text-2xl family2">{apartment?.rooms?.subtitle}</h3>
-
+          <div className="w-full px-4 py-4 flex flex-col bg-white">
+            <h3 className="text-lg md:text-2xl family2">
+              {apartment?.rooms?.title}
+            </h3>
+            <div
+              className={`w-full ${
+                type === "search" ? "text-xs" : "text-base"
+              } flex items-center family1 text-grey gap-1`}
+            >
+              {" "}
+              {apartment?.rooms?.state && <span>{apartment?.rooms?.state},</span>}{" "}
+              {apartment?.rooms?.country}
+            </div>
             <div
               style={{ letterSpacing: "1px" }}
-              className="flex items-center justify-between gap-2 pb-2 uppercase 
+              className="flex items-center justify-between gap-2 uppercase 
             text-xs regular"
             >
               <span className="flex uppercase items-center">
@@ -102,6 +113,7 @@ const RoomCard = ({ type, apartment, inView, index, setMousePosition }) => {
                 </span>
               </span>
             </div>
+    
           </div>
         </Link>
       </>
