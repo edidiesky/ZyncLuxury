@@ -165,7 +165,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
                 type="submit"
                 disabled={bookingloading}
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-lg family2 text-white py-3 px-8 w-full"
+                className="btn flex items-center justify-center text-sm family2 text-white py-3 px-8 w-full"
               >
                 {bookingloading ? (
                   <span className="flex items-center justify-center gap-2">
