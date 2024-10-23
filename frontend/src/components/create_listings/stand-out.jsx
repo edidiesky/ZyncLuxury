@@ -15,10 +15,10 @@ export default function StandOut() {
           >
             <div className="flex-1 flex gap-1 flex-col">
               <h1 className="family2 text-dark">
-                <span className="blocktext-lg py-1">Step 2</span>
-                Make your place stand out
+                <span className="blocktext-lg py-1">Step 2</span> Make your
+                place stand out
               </h1>
-              <span className="block text-sm regular text-dark">
+              <span className="block text-sm md:text-base regular text-dark">
                 In this step, you’ll add some of the amenities your place
                 offers, plus 5 or more photos. Then, you’ll create a title and
                 description.

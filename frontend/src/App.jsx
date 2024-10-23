@@ -128,6 +128,14 @@ export default function App() {
           }
         >
           <Route
+            path="stand-out"
+            element={
+              <Suspense fallback={<></>}>
+                <StandOut />
+              </Suspense>
+            }
+          />
+          <Route
             path="floor-plan"
             element={
               <Suspense fallback={<></>}>
