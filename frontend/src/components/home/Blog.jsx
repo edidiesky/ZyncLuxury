@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Image from "../common/Image";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import AnimateTextWord from "../common/AnimateTextWord";
+
 const blogList = [
   {
     title: "How to have a fantastic career opportunity with minimal spending",
@@ -33,31 +35,41 @@ const Blog = () => {
             <h4 className="text-lg md:text-xl text-[var(--primary)]">
               Passionate – Dedicated – Professional
             </h4>
-            <h4 className="text-4xl md:text-5xl capitalize family2 text-[var(--dark-1)]">
-              latest news & insights
-            </h4>
+            <h3 className="text-4xl md:text-5xl capitalize family2 text-[var(--dark-1)]">
+              <AnimateTextWord type={"bigtext"}>
+                latest news & insights
+              </AnimateTextWord>
+            </h3>
           </div>
           <div className="flex lg:items-center md:justify-center">
             <span className="text-xl max-w-[100%] md:text-center mx-auto md:max-w-[600px] text-grey font-normal">
-              Auisque cursus metus vitae sed pharetra auctor semy mas interdum
-              magnads augue.
+              <AnimateTextWord>
+                Auisque cursus metus vitae sed pharetra auctor semy mas interdum
+                magnads augue. Metus vitae sed pharetra auctor semy mas interdum
+              </AnimateTextWord>
             </span>
           </div>
         </div>
         <div className="w-full grid md:grid-cols-3 gap-12">
           {blogList?.map((blog, index) => {
             return (
-              <Link to={"/"} className="w-full group flex flex-col gap-4">
+              <Link
+                key={index}
+                to={"/"}
+                className="w-full group flex flex-col gap-4"
+              >
                 <div className="w-full overflow-hidden rounded-xl">
                   <Image src={blog?.image} />
                 </div>
                 <div className="py-8 border-b border-dotted px-4 flex flex-col gap-4">
                   <h5 className="text-base font-normal">
-                    Categories:{" "}
-                    <span className="text-[var(--primary)]">Luxury Living</span>
+                    <AnimateTextWord>Categories: </AnimateTextWord>
+                    <span className="text-[var(--primary)]">
+                      <AnimateTextWord> Luxury Living</AnimateTextWord>
+                    </span>
                   </h5>
                   <h4 className="text-2xl group-hover:text-[var(--primary)] group-hover:underline md:text-3xl font-bold">
-                    {blog?.title}
+                    <AnimateTextWord>{blog?.title}</AnimateTextWord>
                   </h4>
                 </div>
                 <div className="px-2 py-2">

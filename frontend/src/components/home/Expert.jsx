@@ -114,7 +114,9 @@ const Expert = () => {
                     color="var(--primary)"
                   />
                   <span className="text-base md:text-xl text-white">
-                    Awards won with business intelligence
+                    <AnimateTextWord>
+                      Awards won with business intelligence
+                    </AnimateTextWord>
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -123,7 +125,9 @@ const Expert = () => {
                     color="var(--primary)"
                   />
                   <span className="text-base md:text-xl text-white">
-                    Our mission is to grow your business faster
+                    <AnimateTextWord>
+                      Our mission is to grow your business faster
+                    </AnimateTextWord>
                   </span>
                 </div>{" "}
                 <div className="flex items-center gap-3">
@@ -131,8 +135,11 @@ const Expert = () => {
                     fontSize={"26px"}
                     color="var(--primary)"
                   />
+
                   <span className="text-base md:text-xl text-white">
-                    Global presence makes us top rated company
+                    <AnimateTextWord>
+                      Global presence makes us top rated company
+                    </AnimateTextWord>
                   </span>
                 </div>
               </div>
@@ -147,21 +154,28 @@ const Expert = () => {
         <div className="w-[90%] max-w-custom justify-center md:items-center mx-auto flex gap-20">
           <div className="w-full flex md:flex-row flex-col justify-center md:items-center gap-12 md:gap-24">
             <div className="flex flex-col gap-3">
-              <h2 className="text-7xl md:text-9xl text-[#868dbb]">15k+</h2>
+              <h2 className="text-7xl md:text-9xl text-[#868dbb]">
+                <AnimateTextWord type={"bigtext"}>15k+</AnimateTextWord>
+              </h2>
               <span className="text-lg md:text-xl text-[#000]">
-                Supported Listings
+                <AnimateTextWord> Supported Listings</AnimateTextWord>
               </span>
             </div>
             <div className="flex flex-col gap-3">
-              <h2 className="text-7xl md:text-9xl text-[#868dbb]">3.5M</h2>
+              <h2 className="text-7xl md:text-9xl text-[#868dbb]">
+                <AnimateTextWord type={"bigtext"}> 3.5M</AnimateTextWord>
+              </h2>
               <span className="text-lg md:text-xl text-[#000]">
-                Supported Listings
+                <AnimateTextWord> Supported Listings</AnimateTextWord>
               </span>
             </div>{" "}
             <div className="flex flex-col gap-3">
-              <h2 className="text-7xl md:text-9xl text-[#868dbb]">600</h2>
+              <h2 className="text-7xl md:text-9xl text-[#868dbb]">
+                {" "}
+                <AnimateTextWord type={"bigtext"}>600</AnimateTextWord>
+              </h2>
               <span className="text-lg md:text-xl text-[#000]">
-                Supported Listings
+                <AnimateTextWord> Supported Listings</AnimateTextWord>
               </span>
             </div>
           </div>

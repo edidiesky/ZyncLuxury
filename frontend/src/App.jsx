@@ -4,6 +4,7 @@ import "./index.css";
 import Loader from "./components/home/loader";
 import Layout from "./screens/Layout";
 import DashboardLayout from "./screens/DashboardLayout";
+
 import {
   Statistics,
   Rooms,
@@ -18,11 +19,27 @@ import Preloader from "./components/common/Preloader";
 const HomeWrapper = lazy(() => import("./screens/Home"));
 const SearchWrapper = lazy(() => import("./screens/Search"));
 const ProfileWrapper = lazy(() => import("./screens/Profile"));
+const CreateListingWrapper = lazy(() => import("./screens/CreateListing"));
+// CreateListing
 const SingleWrapper = lazy(() => import("./screens/Single"));
 const SavedWrapper = lazy(() => import("./screens/Saved"));
 const TripsWrapper = lazy(() => import("./screens/Trips"));
 const PaymentWrapper = lazy(() => import("./screens/Payment"));
 const PaymentSuccess = lazy(() => import("./screens/Payment-Success"));
+
+import {
+  AboutPlace,
+  BasicInfoAboutPlace,
+  BasicOfferOfPlace,
+  DescriptionOfPlace,
+  InformationOfPlace,
+  LocationOfplace,
+  PhotosAboutPlace,
+  ReviewOfPlace,
+  PriceOfPlace,
+  StandOut,
+  TitleOfPlace,
+} from "./screens/hosting";
 // PaymentSuccess
 export default function App() {
   const [height, setHeight] = useState(0);
@@ -64,6 +81,7 @@ export default function App() {
               </Suspense>
             }
           />
+
           <Route
             path="savedhomes"
             element={
@@ -98,10 +116,101 @@ export default function App() {
           />
         </Route>
 
+        {/* become a host */}
+        <Route
+          path={"/become-a-host/:id"}
+          element={
+            <ProtectRoute>
+              <Layout />
+            </ProtectRoute>
+          }
+        >
+          <Route
+            path="Basic-Information"
+            element={
+              <Suspense fallback={<></>}>
+                <BasicInfoAboutPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="Description"
+            element={
+              <Suspense fallback={<></>}>
+                <DescriptionOfPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="LocationOfplace"
+            element={
+              <Suspense fallback={<></>}>
+                <LocationOfplace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="PhotosAboutPlace"
+            element={
+              <Suspense fallback={<></>}>
+                <PhotosAboutPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="StandOut"
+            element={
+              <Suspense fallback={<></>}>
+                <StandOut />
+              </Suspense>
+            }
+          />
+          <Route
+            path="TitleOfPlace"
+            element={
+              <Suspense fallback={<></>}>
+                <TitleOfPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="ReviewOfPlace"
+            element={
+              <Suspense fallback={<></>}>
+                <ReviewOfPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="InformationOfPlace"
+            element={
+              <Suspense fallback={<></>}>
+                <InformationOfPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="Basic-Offer"
+            element={
+              <Suspense fallback={<></>}>
+                <BasicOfferOfPlace />
+              </Suspense>
+            }
+          />
+          {/* about */}
+          <Route
+            path="About-Place"
+            element={
+              <Suspense fallback={<></>}>
+                <AboutPlace />
+              </Suspense>
+            }
+          />
+        </Route>
         <Route
           path={"/dashboard"}
           element={
-            <ProtectRoute type={'dashboard'}>
+            <ProtectRoute type={"dashboard"}>
               <DashboardLayout />
             </ProtectRoute>
           }
