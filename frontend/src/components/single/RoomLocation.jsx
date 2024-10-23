@@ -41,7 +41,7 @@ const RoomLocation = ({ dateRange, handleSelect, differenceinDays }) => {
           room?.latitude ? room?.latitude : 3.2839374,
           room?.longitude ? room?.longitude : 12.4964,
         ]}
-        zoom={5}
+        zoom={10}
         style={{
           width: "100%",
           fontFamily: " Kumbh Sans, sans-serif",
