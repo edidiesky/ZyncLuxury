@@ -11,7 +11,7 @@ export default function ReviewOfPlace() {
       <ReviewOfPlaceContainer className="flex flex-col gap-2 w-[90%]  max-w-custom mx-auto">
         <div className="w-[90%]  max-w-custom mx-auto flex flex-col gap-2">
           {" "}
-          <h2 className="text-extra-bold w-[90%]  max-w-custom mx-auto w-full text-start text-dark">
+          <h2 className="family2 w-[90%]  max-w-custom mx-auto w-full text-start text-dark">
             Review your listing
             <span className="block py-1text-lg regular text-grey">
               Here's what we'll show to guests. Make sure everything looks good.

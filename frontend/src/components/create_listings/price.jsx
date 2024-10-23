@@ -42,7 +42,7 @@ export default function PriceofPlace() {
             data-aos-duration="1400"
             className="aboutCenter flex flex-col gap-1 justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-full text-start text-dark">
+            <h2 className="family2 w-full text-start text-dark">
               Now, set your price
               <span className="block py-1 text-sm regular text-grey">
                 You can change it anytime.

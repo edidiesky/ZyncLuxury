@@ -26,7 +26,7 @@ const storage = new CloudinaryStorage({
 });
 const upload = multer({ storage });
 
-router.post("/", upload.array("files", 4), async (req, res) => {
+router.post("/", upload.array("files", 5), async (req, res) => {
   try {
     // req.files contains an array of uploaded files
     const files = req.files;

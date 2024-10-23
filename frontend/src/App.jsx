@@ -168,7 +168,7 @@ export default function App() {
             }
           />
           <Route
-            path="PhotosAboutPlace"
+            path="photos"
             element={
               <Suspense fallback={<></>}>
                 <PhotosAboutPlace />

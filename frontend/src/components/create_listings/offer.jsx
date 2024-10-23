@@ -71,7 +71,7 @@ export default function OfferofPlace() {
         
           className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
-          <h2 className="text-extra-bold w-full text-start text-dark">
+          <h2 className="family2 w-full text-start text-dark">
             Tell guests what your place has to offer
             <span className="block py-1text-lg regular text-grey">
               You can add more amenities after you publish your listing.

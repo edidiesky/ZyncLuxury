@@ -9,20 +9,20 @@ export default function UploadImageCard({ x, index, handleDeleteListUpload }) {
   };
   return (
     <div>
-      <div className="imageWrapper w-full" key={index}>
-        <img src={x} alt="" className="image" />
-        <div className="imagegradient w-full h-100"></div>
+      <div className="w-full h-[300px] p-3 border rounded-md relative" key={index}>
+        <img src={x} alt="" className="h-full w-full object-cover" />
+        <div className="imagegradient w-full h-full"></div>
         {deleteoptions && (
           <div className="options">
             <div
               onClick={deleteOptions}
-              className="fs-14 list regular"
+              className="text-base list regular"
             >
               Delete
             </div>
             <div
               onClick={() => setDeleteOptions(false)}
-              className="fs-14 list regular"
+              className="text-base list regular"
             >
               Cancel
             </div>

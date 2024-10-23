@@ -29,7 +29,7 @@ export default function TitleofPlace() {
             data-aos-duration="1400"
             className="aboutCenter flex flex-col justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-full text-start text-dark">
+            <h2 className="family2 w-full text-start text-dark">
               Add some Title of your boat
               <span className="block py-1 text-sm regular text-grey">
                 Short titles work best. Have fun with it—you can always change
