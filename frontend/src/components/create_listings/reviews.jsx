@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Star from "../common/svg/star";
 export default function ReviewOfPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { GigsDetails } = useSelector((store) => store.gigs);
+  const { GigsDetails } = useSelector((store) => store.room);
   return (
     <>
       <ReviewOfPlaceContainer className="flex flex-col gap-2 w-[90%]  max-w-custom mx-auto">
@@ -20,17 +20,17 @@ export default function ReviewOfPlace() {
           <div className="ReviewOfCenter flex item-start gap-4 justify-start w-90 auto">
             <div className="authC_right flex flex-col flex-1 gap-1">
               <img
-                src={GigsDetails?.listing_image[0]}
+                src={GigsDetails?.image[0]}
                 alt=""
                 className="image"
               />
               <div className="flex flex-col">
                 <h4 className="fs-16 family2 w-full flex items-center justify-between">
-                  {GigsDetails?.listing_title}
+                  {GigsDetails?.title}
                   <Star />
                 </h4>
                 <h5 className="fs-16family2 text-dark">
-                  ${GigsDetails?.listing_price}{" "}
+                  ${GigsDetails?.price}{" "}
                   <span className="regular fs-14">night</span>
                 </h5>
               </div>

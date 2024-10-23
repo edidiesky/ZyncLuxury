@@ -8,11 +8,11 @@ import Upload from "../common/svg/upload";
   import UploadImageCard from "./uploadimagecard";
 import LoaderIndex from "../loaders";
 import { useDispatch } from "react-redux";
-import { handleListingImage } from "../../Features/listing/listingSlice";
+import { handleListingImage } from "@/features/room/roomSlice";
 import Message from "../loaders/Message";
 export default function PhotosofPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
   const dispatch = useDispatch();
   const [uploadimage, setUploadImage] = useState([]);
   const [uploading, setUploading] = useState(false);
@@ -61,10 +61,10 @@ export default function PhotosofPlace() {
     }
   }, [alert]);
   useEffect(() => {
-    if (host_listing.listing_image.length > 0) {
-      setUploadImage(host_listing.listing_image);
+    if (listing.image.length > 0) {
+      setUploadImage(listing.image);
     }
-  }, [host_listing, setUploadImage]);
+  }, [listing, setUploadImage]);
 
   const handleDeleteListUpload = (listindex) => {
     const result = uploadimage.filter((x, index) => index !== listindex);
@@ -137,7 +137,7 @@ export default function PhotosofPlace() {
       </PhotosofPlaceContainer>
       <FooterHosting
         active={
-          host_listing.listing_image.length >= 4 || uploadimage?.length >= 4
+          listing.image.length >= 4 || uploadimage?.length >= 4
         }
         prev={`${currentUser?.id}/stand-out`}
         next={`${currentUser?.id}/title`}

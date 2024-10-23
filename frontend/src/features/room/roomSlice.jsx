@@ -8,7 +8,7 @@ import {
   UpdateRoom,
   getAllRoomsForAdmin,
 } from "./roomReducer";
-const listings = JSON.parse(localStorage.getItem("host_listing"));
+const listings = JSON.parse(localStorage.getItem("listing"));
 const initialState = {
   rooms: [],
   listing: listings
@@ -102,7 +102,7 @@ export const roomSlice = createSlice({
         ...state.listing,
         type: action.payload,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingLocation: (state, action) => {
       state.listing = {
@@ -110,7 +110,7 @@ export const roomSlice = createSlice({
         location: action.payload.location,
         region: action.payload.region,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleBasicListing: (state, action) => {
       state.listing = {
@@ -119,28 +119,28 @@ export const roomSlice = createSlice({
         bedrooms: action.payload.bedrooms,
         guests: action.payload.guests,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingImage: (state, action) => {
       state.listing = {
         ...state.listing,
         images: action.payload,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingTitle: (state, action) => {
       state.listing = {
         ...state.listing,
         title: action.payload,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingDescription: (state, action) => {
       state.listing = {
         ...state.listing,
         description: action.payload,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingDate: (state, action) => {
       state.listing = {
@@ -148,14 +148,14 @@ export const roomSlice = createSlice({
         startDate: action.payload.startDate,
         endDate: action.payload.endDate,
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
     handleListingPrice: (state, action) => {
       state.listing = {
         ...state.listing,
         price: parseInt(action.payload),
       };
-      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+      localStorage.setItem("listing", JSON.stringify(state.listing));
     },
   },
   extraReducers: (builder) => {

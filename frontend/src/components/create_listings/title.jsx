@@ -3,9 +3,9 @@ import styled from "styled-components";
 import FooterHosting from "./footer";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { handleListingTitle } from "../../Features/listing/listingSlice";
+import { handleListingTitle } from "@/features/room/roomSlice";
 export default function TitleofPlace() {
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
   const { currentUser } = useSelector((store) => store.auth);
   const [title, setTitle] = useState("");
   const dispatch = useDispatch();
@@ -15,10 +15,10 @@ export default function TitleofPlace() {
     dispatch(handleListingTitle(e.target.value));
   };
   useEffect(() => {
-    if (host_listing.listing_title) {
-      setTitle(host_listing.listing_title);
+    if (listing.title) {
+      setTitle(listing.title);
     }
-  }, [host_listing, host_listing.listing_title]);
+  }, [listing, listing.title]);
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function TitleofPlace() {
         </div>
       </TitleofPlaceContainer>
       <FooterHosting
-        active={host_listing.listing_title}
+        active={listing.title}
         prev={`${currentUser?.id}/photos`}
         next={`${currentUser?.id}/description`}
       />

@@ -3,10 +3,10 @@ import styled from "styled-components";
 import FooterHosting from "./footer";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { handleListingDescription } from "../../Features/listing/listingSlice";
+import { handleListingDescription } from "@/features/room/roomSlice";
 export default function InformationofPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
   const [description, setDescription] = useState("");
   const dispatch = useDispatch();
 
@@ -16,10 +16,10 @@ export default function InformationofPlace() {
   };
 
   useEffect(() => {
-    if (host_listing.listing_description) {
-      setDescription(host_listing.listing_description);
+    if (listing.description) {
+      setDescription(listing.description);
     }
-  }, [host_listing, setDescription]);
+  }, [listing, setDescription]);
   return (
     <>
       <InformationofPlaceContainer>

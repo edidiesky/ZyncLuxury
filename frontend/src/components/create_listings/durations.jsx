@@ -7,11 +7,11 @@ import FooterHosting from "./footer";
 import {
   handleListingDate,
   handleListingPrice,
-} from "../../Features/listing/listingSlice";
+} from "@/features/room/roomSlice";
 import DateInput from "../forms/Date";
 export default function DurationofPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
   const [date, setDate] = useState("");
   const [dateRange, setDateRange] = useState({
     selection: {
@@ -48,21 +48,21 @@ export default function DurationofPlace() {
   };
 
   // useEffect(() => {
-  //   if (host_listing.listing_startDate && host_listing.listing_endDate) {
+  //   if (listing.startDate && listing.endDate) {
   //     setDateRange({
   //       selection: {
-  //         startDate: host_listing.listing_startDate,
-  //         endDate: host_listing.listing_endDate,
+  //         startDate: listing.startDate,
+  //         endDate: listing.endDate,
   //       },
   //     });
   //   }
   // }, [
-  //   host_listing.listing_endDate,
-  //   host_listing.listing_startDate,
+  //   listing.endDate,
+  //   listing.startDate,
   //   setDateRange,
   // ]);
 
-  // console.log(host_listing.listing_startDate)
+  // console.log(listing.startDate)
 
   return (
     <>
@@ -88,7 +88,7 @@ export default function DurationofPlace() {
         </div>
       </DurationofPlaceContainer>
       <FooterHosting
-        active={host_listing.listing_startDate}
+        active={listing.startDate}
         prev={`${currentUser?.id}/description`}
         next={`${currentUser?.id}/price`}
       />

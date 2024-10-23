@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import FooterHosting from "./footer";
-import { categorydata } from "../../data/category";
 import { useDispatch } from "react-redux";
-import { handleListingType } from "../../Features/listing/listingSlice";
+import { categorydata } from "@/constants/data/category";
+import { handleListingType } from "@/features/room/roomSlice";
 export default function DescriptionofPlace() {
   const [tab, setTab] = useState(null);
-  const { host_listing, gigsIsSuccess } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const handleListingTypes = (x, index) => {
@@ -23,7 +23,7 @@ export default function DescriptionofPlace() {
         <div
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
+          className="aboutCenter flex flex-col gap-8 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
           <h2 className=" w-[90%]  max-w-custom mx-auto text-start text-dark">
             Which of these best describes your place?
@@ -35,8 +35,8 @@ export default function DescriptionofPlace() {
                   onClick={() => handleListingTypes(x, index)}
                   className={
                     tab === index
-                      ? "card fs-16 column flex active"
-                      : "card fs-16 column flex"
+                      ? "card fs-16 flex-col gap-3 items-center justify-center flex active"
+                      : "card fs-16 flex-col gap-3 items-center justify-center flex"
                   }
                 >
                   <img
@@ -54,7 +54,7 @@ export default function DescriptionofPlace() {
       </DescriptionofPlaceContainer>
       <FooterHosting
         next={`${currentUser?.id}/location`}
-        active={host_listing.listing_type}
+        active={listing.type}
         prev={`${currentUser?.id}/about-your-place`}
       />
     </>

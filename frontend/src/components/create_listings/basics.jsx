@@ -5,10 +5,10 @@ import Map from "../forms/map";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { handleBasicListing } from "../../Features/listing/listingSlice";
+import { handleBasicListing } from "@/features/room/roomSlice";
 export default function BasicInfoAboutPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
 
   const dispatch = useDispatch();
   const [guests, setGuests] = useState(2);
@@ -22,12 +22,12 @@ export default function BasicInfoAboutPlace() {
   }, [guests, bedrooms, beds]);
 
   useEffect(() => {
-    if (host_listing) {
-      setGuests(host_listing.listing_guests);
-      setBedRooms(host_listing.listing_bedrooms);
-      setBeds(host_listing.listing_beds);
+    if (listing) {
+      setGuests(listing.guests);
+      setBedRooms(listing.bedrooms);
+      setBeds(listing.beds);
     }
-  }, [host_listing, setGuests, setBeds, setBedRooms]);
+  }, [listing, setGuests, setBeds, setBedRooms]);
   const active = beds && bedrooms && guests;
 
   return (

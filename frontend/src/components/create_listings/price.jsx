@@ -6,13 +6,13 @@ import FooterHosting from "./footer";
 import {
   clearGigsAlert,
   handleListingPrice,
-} from "../../Features/listing/listingSlice";
+} from "@/features/room/roomSlice";
 import Message from "../loaders/Message";
 import LoaderIndex from "../loaders";
 export default function PriceofPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing, gigsIsSuccess, gigsIsLoading } = useSelector(
-    (store) => store.gigs
+  const { listing, creatingRoomisSuccess, gigsIsLoading } = useSelector(
+    (store) => store.room
   );
   const [price, setPrice] = useState(0);
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export default function PriceofPlace() {
       <PriceofPlaceContainer>
         <Message
           alertText={"Your Listing has been succesfully created"}
-          showAlert={gigsIsSuccess}
+          showAlert={creatingRoomisSuccess}
           // handleClearAlert={}
         />
         {gigsIsLoading && <LoaderIndex />}
@@ -67,7 +67,7 @@ export default function PriceofPlace() {
       </PriceofPlaceContainer>
       <FooterHosting
         submit={true}
-        active={host_listing.listing_price}
+        active={listing.price}
         prev={`${currentUser?.id}/duration`}
         next={`${currentUser?.id}/reviews`}
       />

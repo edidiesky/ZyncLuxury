@@ -6,12 +6,12 @@ import SelectInput from "../forms/Select";
 import Map from "../forms/map";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { handleListingLocation } from "../../Features/listing/listingSlice";
+import { handleListingLocation } from "@/features/room/roomSlice";
 export default function Location() {
   const dispatch = useDispatch();
 
   const { currentUser } = useSelector((store) => store.auth);
-  const { host_listing } = useSelector((store) => store.gigs);
+  const { listing } = useSelector((store) => store.room);
 
   const [country, setCountry] = useState("");
   const onChange = (country) => {
@@ -25,16 +25,16 @@ export default function Location() {
   };
 
   useEffect(() => {
-    if (host_listing.listing_region && host_listing?.listing_location) {
+    if (listing.region && listing?.location) {
       setCountry({
-        label: host_listing?.listing_location,
-        region: host_listing?.listing_region,
+        label: listing?.location,
+        region: listing?.region,
       });
     }
-  }, [host_listing]);
+  }, [listing]);
 
   // console.log(country);
-  const active = host_listing.listing_region && host_listing?.listing_location
+  const active = listing.region && listing?.location
   // console.log(active)
   return (
     <>
