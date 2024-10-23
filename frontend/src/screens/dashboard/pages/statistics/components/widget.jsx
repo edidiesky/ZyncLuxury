@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useState } from "react";
 import { MdHotel } from "react-icons/md";
 import { GiCash } from "react-icons/gi";

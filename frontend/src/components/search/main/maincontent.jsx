@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useEffect } from "react";
 import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";

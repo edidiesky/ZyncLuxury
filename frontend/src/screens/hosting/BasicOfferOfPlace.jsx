@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import OfferofPlace from "../components/listing/offer";
+// import OfferofPlace from "../components/listing/offer";
 
 export default function BasicOfferOfPlace() {
   return (
     <>
       <BasicOfferOfPlaceContainer className="flex item-center justify-center">
-        <OfferofPlace/>
+        {/* <OfferofPlace/> */}
       </BasicOfferOfPlaceContainer>
     </>
   );

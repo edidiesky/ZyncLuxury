@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useRef } from "react";
 import { RoomFeaturesList, RoomFeaturesList2 } from "@/constants/data/feature";
 

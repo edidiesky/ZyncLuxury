@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useState, useCallback, useEffect } from "react";
 import { CiWarning } from "react-icons/ci";
 import { motion } from "framer-motion";

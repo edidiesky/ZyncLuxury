@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 export default function RoomTitleAndDescription({ room }) {

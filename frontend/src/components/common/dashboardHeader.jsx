@@ -1,4 +1,4 @@
-"use client";
+ 
 import styled from "styled-components";
 import { RxCross1 } from "react-icons/rx";
 import { HiBars3BottomLeft } from "react-icons/hi2";

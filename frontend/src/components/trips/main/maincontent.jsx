@@ -1,4 +1,4 @@
-"use client";
+ 
 import React from "react";
 import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { apartmentDataList } from "../../../data/apartmentData";

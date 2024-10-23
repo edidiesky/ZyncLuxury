@@ -18,7 +18,7 @@ const Map = () => {
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const customerData = JSON.parse(localStorage.getItem("customer"));
-  // ;
+  // 
   const customIconUrl = new Icon({
     iconUrl: "/location.png",
     iconSize: [38, 38],

@@ -1,4 +1,4 @@
-"use client";
+ 
 import React from "react";
 import Footer from "@/components/common/Footer";
 import RoomInfo from "./Top";

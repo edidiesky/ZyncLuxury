@@ -1,4 +1,4 @@
-"use client";
+ 
 import React, { useEffect, useRef, useState } from "react";
 import moment from "moment";
 import Skeleton from "react-loading-skeleton";

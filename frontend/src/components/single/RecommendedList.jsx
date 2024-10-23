@@ -1,4 +1,4 @@
-"use client";
+ 
 import Skeleton from "react-loading-skeleton";
 import RoomCard from "../common/RoomCard";
 import { apartmentDataList } from "@/data/apartmentData";
