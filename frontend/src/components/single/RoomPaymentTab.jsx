@@ -179,7 +179,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
             ) : (
               <button
                 onClick={handleReservationBooking}
-                className="btn flex items-center justify-center text-lg text-white py-4 px-8 w-full"
+                className="btn flex items-center justify-center text-sm text-white py-4 px-8 w-full"
               >
                 Sign in to Reserve
               </button>
