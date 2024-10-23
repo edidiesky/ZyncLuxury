@@ -109,7 +109,7 @@ const RoomsPrice = () => {
       >
         <h1
           ref={price_ref_1}
-          className="text-white text-center leading-[1.3] text-6xl md:text-7xl font-booking_font4 font-bold"
+          className="text-white text-center leading-[1.3] text-6xl md:text-7xl font-booking_font4 family2"
         >
           <span
             style={{ letterSpacing: "4px" }}
@@ -174,11 +174,11 @@ const RoomsPrice = () => {
                 <div className="w-full flex flex-col gap-3 px-8">
                   <h3
                     className={`${index === 1 ? "text-[#B7FF0A]" : "b"}
-                     text-xl font-booking_font_bold font-bold`}
+                     text-xl font-booking_font_bold family2`}
                   >
                     {room?.title}
                   </h3>
-                  <h3 className="text-4xl md:text-5xl font-booking_font4 font-bold">
+                  <h3 className="text-4xl md:text-5xl font-booking_font4 family2">
                     <span className="text-xl">₦</span>
                     {room?.price}
                     <span className="pl-3 text-xl font-booking_font">
@@ -187,7 +187,7 @@ const RoomsPrice = () => {
                   </h3>
                   <div className="w-full">
                     <div
-                      className="btn font-bold btn_2 flex items-center justify-center
+                      className="btn family2 btn_2 flex items-center justify-center
                      py-4 mt-6 px-8 rounded-[40px] w-full text-lg"
                     >
                       <AnimateText children={"Get Started Now!"} />
@@ -203,7 +203,7 @@ const RoomsPrice = () => {
                   <div className="w-full flex flex-col gap-8">
                     <h3
                       className={`${index === 1 ? "text-[#fff]" : "text-dark"}
-                     text-xl font-booking_font font-bold`}
+                     text-xl font-booking_font family2`}
                     >
                       Features
                     </h3>

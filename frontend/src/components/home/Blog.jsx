@@ -68,7 +68,7 @@ const Blog = () => {
                       <AnimateTextWord> Luxury Living</AnimateTextWord>
                     </span>
                   </h5>
-                  <h4 className="text-2xl group-hover:text-[var(--primary)] group-hover:underline md:text-3xl font-bold">
+                  <h4 className="text-2xl group-hover:text-[var(--primary)] group-hover:underline md:text-3xl family2">
                     <AnimateTextWord>{blog?.title}</AnimateTextWord>
                   </h4>
                 </div>

@@ -210,7 +210,7 @@ const Profile = () => {
                   </span>
                   <div className="p-6 px-4 border w-full rounded-lg flex items-center justify-between">
                     <div className="flex flex-col gap-1">
-                      <span className="text-sm font-bold font-booking_font_bold">
+                      <span className="text-sm family2 font-booking_font_bold">
                         User Priviledge
                       </span>
 

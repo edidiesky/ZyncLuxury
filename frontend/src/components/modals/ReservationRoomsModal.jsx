@@ -52,12 +52,12 @@ const ReservationRoomsModal = ({
             className="w-full py-4 sticky justify-between top-0 left-0
            bg-white z-20 flex gap-1"
           >
-            <h3 className="text-2xl font-bold font-booking_font4">Add Rooms</h3>
+            <h3 className="text-2xl family2 font-booking_font4">Add Rooms</h3>
             <div className="flex items-center gap-2">
               <div
                 // onClick={() => setReservationModal(true)}
                 className="p-3 cursor-pointer text-sm 
-             bg-[#C5F244] btn px-8 font-booking_font rounded-[10px] font-bold text-dark"
+             bg-[#C5F244] btn px-8 font-booking_font rounded-[10px] family2 text-dark"
               >
                 Save
               </div>

@@ -40,6 +40,7 @@ import {
   StandOut,
   TitleOfPlace,
 } from "./screens/hosting";
+import HostingLayout from "./screens/hosting/HostingLayout";
 // PaymentSuccess
 export default function App() {
   const [height, setHeight] = useState(0);
@@ -121,7 +122,7 @@ export default function App() {
           path={"/become-a-host/:id"}
           element={
             <ProtectRoute>
-              <Layout />
+              <HostingLayout />
             </ProtectRoute>
           }
         >

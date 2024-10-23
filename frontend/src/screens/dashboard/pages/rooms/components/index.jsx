@@ -33,7 +33,7 @@ const DashboardIndex = () => {
           <div className="flex items-center lg:justify-end gap-2">
             <Link
               to={"/dashboard/rooms/create-room"}
-              className="p-3 btn cursor-pointer text-sm px-8 font-bold 
+              className="p-3 btn cursor-pointer text-sm px-8 family2 
              rounded-[10px]  text-white"
             >
               Add a room

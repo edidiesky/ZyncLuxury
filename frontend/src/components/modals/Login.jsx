@@ -154,7 +154,7 @@ const LoginModal = () => {
                     <span
                       onClick={handleLoginModal}
                       style={{ textDecoration: "underline" }}
-                      className="font-booking_font_bold font-bold cursor-pointer"
+                      className="font-booking_font_bold family2 cursor-pointer"
                       //  to={"#"}
                     >
                       Sign Up

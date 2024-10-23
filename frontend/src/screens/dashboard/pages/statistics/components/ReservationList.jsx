@@ -17,7 +17,7 @@ const ReservationList = () => {
   return (
     <div className="w-full border bg-white py-6 flex flex-col gap-4 shdow-xl rounded-[10px]">
       <div className="w-full px-6 flex items-center justify-between">
-        <h3 className="text-xl font-booking_font4 font-bold">
+        <h3 className="text-xl font-booking_font4 family2">
           Booking History
         </h3>
         <Link
@@ -39,7 +39,7 @@ const ReservationList = () => {
             return (
               <li
                 key={index}
-                className="text-base py-2 px-6 cursor-pointer hover:bg-[#fafafa] font-booking_font4 font-bold flex items-center justify-between w-full"
+                className="text-base py-2 px-6 cursor-pointer hover:bg-[#fafafa] font-booking_font4 family2 flex items-center justify-between w-full"
               >
                 <div className="flex items-center gap-2">
                   {data?.user?.image ? (

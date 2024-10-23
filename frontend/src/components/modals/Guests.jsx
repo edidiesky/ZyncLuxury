@@ -50,7 +50,7 @@ const GuestsModal = ({
       >
         <div className="w-[95%] mx-auto flex flex-col gap-8">
           <div className="w-full flex items-center justify-between">
-            <h3 className="text-2xl font-bold font-booking_font4">
+            <h3 className="text-2xl family2 font-booking_font4">
               Edit Travelers
             </h3>
             <div className="cross" onClick={handleClearAlert}>
@@ -128,7 +128,7 @@ const GuestsModal = ({
               onClick={handleClearAlert}
               className="p-4 text-center w-full cursor-pointer 
             font-booking_font_bold
-            bg-[#C5F244] px-8 rounded-[40px] font-bold text-dark"
+            bg-[#C5F244] px-8 rounded-[40px] family2 text-dark"
             >
               Search
             </div>

@@ -110,7 +110,7 @@ const RoomCard = ({ type, apartment, index }) => {
               </span>
 
               <span className="flex text-xs font-normal font-booking_font flex-col">
-                <span className="block text-lg md:text-xl font-bold font-booking_font_bold">
+                <span className="block text-lg md:text-xl family2 font-booking_font_bold">
                   ₦{apartment?.rooms?.price}
                 </span>
               </span>
@@ -202,7 +202,7 @@ const RoomCard = ({ type, apartment, index }) => {
                   type === "search"
                     ? "md:text-lg text-base"
                     : "md:text-3xl family1 text-2xl"
-                }  font-bold flex-1`}
+                }  family2 flex-1`}
               >
                 ${apartment?.price}.00
               </h3>
@@ -216,7 +216,7 @@ const RoomCard = ({ type, apartment, index }) => {
                 } ${
                   type === "search"
                     ? "text-xs px-3 py-1 regular"
-                    : "text-xs px-3 font-bold py-2"
+                    : "text-xs px-3 family2 py-2"
                 } gap-2 flex items-center rounded-full `}
               >
                 {/* <div className="w-4 h-4 rounded-full border-2 border-[rgba(0,0,0,1)]"></div> */}

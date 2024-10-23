@@ -345,7 +345,7 @@ export default function CreateReservationModal({ setModal, reservation }) {
                   ? "bg-[#B691C1]"
                   : "bg-[#0e7b10] text-[#fff]"
               }  
-               text-xs font-bold`}
+               text-xs family2`}
                 >
                   {status === "PENDING"
                     ? "Pending Payment"
@@ -371,7 +371,7 @@ export default function CreateReservationModal({ setModal, reservation }) {
             <div className="grid pt-4 w-full gap-4 grid-cols-2 z-[200000000] bg-[#fff] lg:grid-cols-4">
               <div
                 onClick={() => setReservationTab(1)}
-                className={`w-full cursor-pointer ${ reservationtab === 1 ? "border-b-4 border-[#0e7b10]" : "" } text-[#000]  pb-3 text-base font-booking_font_bold font-bold`}
+                className={`w-full cursor-pointer ${ reservationtab === 1 ? "border-b-4 border-[#0e7b10]" : "" } text-[#000]  pb-3 text-base font-booking_font_bold family2`}
               >
                 Booking Details
               </div>
@@ -379,7 +379,7 @@ export default function CreateReservationModal({ setModal, reservation }) {
               <div
                 onClick={() => setReservationTab(2)}
                 className={`w-full cursor-pointer ${
-                  reservationtab === 2 ? "border-b-4 border-[#0e7b10]" : ""}    text-[#000] pb-3 text-base font-booking_font_bold font-bold`}
+                  reservationtab === 2 ? "border-b-4 border-[#0e7b10]" : ""}    text-[#000] pb-3 text-base font-booking_font_bold family2`}
               >
                 Client Profile
               </div>
@@ -416,7 +416,7 @@ export default function CreateReservationModal({ setModal, reservation }) {
 
           <div className="deleteCardBottom py-2 w-full flex flex-row gap-2 items-center md:justify-end px-4">
             <button
-              className="family1 font-booking_font font-bold flex items-center justify-center text-sm"
+              className="family1 font-booking_font family2 flex items-center justify-center text-sm"
               onClick={handleClearAlert}
             >
               Cancel
@@ -424,7 +424,7 @@ export default function CreateReservationModal({ setModal, reservation }) {
             <button
               // disabled={room === null || user === null || createReservationisLoading}
               onClick={handleNextTab}
-              className="btn px-4 text-[#fff] py-2 rounded-[10px] family1 font-booking_font font-bold flex items-center justify-center text-sm"
+              className="btn px-4 text-[#fff] py-2 rounded-[10px] family1 font-booking_font family2 flex items-center justify-center text-sm"
               // onClick={() => dispatch(AdminDeleteUserProfile({ Detailsdata: id }))}
             >
               {createReservationisLoading ? (

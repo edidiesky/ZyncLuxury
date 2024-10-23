@@ -11,7 +11,6 @@ import Loader from "@/components/home/loader";
 const MainContent = () => {
   return (
     <div className="w-full relative min-h-[100vh] flex flex-col">
-      <Hero />
       <Profile />
     </div>
   );
@@ -33,52 +32,10 @@ const Hero = () => {
         className="w-[90%] mx-auto z-40 flex items-center justify-center flex-col
        gap-4"
       >
-        <h1 className="text-white font-bold  text-center leading-[1.3] text-5xl md:text-6xl font-booking_font4">
+        <h1 className="text-white family2  text-center leading-[1.3] text-5xl md:text-6xl family2">
           My Profile
         </h1>
-        {/* <div className="w-full absolute bottom-0 left-0 z-[35] flex items-center justify-center py-8">
-          <div className="w-[90%] lg:w-[50%] mx-auto grid grid-cols-2  sm:grid-cols-4 items-center justify-center gap-4 max-w-custom_1 h-full">
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full bg-white text-dark flex items-center justify-center">
-                1
-              </div>{" "}
-              <span className="text-white">Saved Room</span>
-            </span>
-
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                2
-              </div>{" "}
-              <span className="text-white">BOOKING</span>
-            </span>
-
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                3
-              </div>{" "}
-              <span className="text-white">CHECKOUT</span>
-            </span>
-
-            <span
-              style={{ letterSpacing: "4px" }}
-              className="text-[9px] md:text-xs font-normal uppercase flex items-center gap-4 font-booking_font"
-            >
-              <div className="w-6 h-6 rounded-full border-white border text-white flex items-center justify-center">
-                4
-              </div>{" "}
-              <span className="text-white">THANK YOU</span>
-            </span>
-          </div>
-        </div> */}
+  
       </div>
     </div>
   );
@@ -185,10 +142,10 @@ const Profile = () => {
    gap-8"
     >
       <div
-        className="w-[90%] relative mx-auto max-w-custom_1 z-40 flex items-start justify-center flex-col
+        className="w-[90%] md:w-[900px] relative mx-auto max-w-custom_1 z-40 flex items-start justify-center flex-col
        gap-12"
       >
-        <h1 className="text-dark text-start leading-[1.3] text-4xl font-booking_font4">
+        <h1 className="text-dark text-start leading-[1.3] text-4xl family2">
           Account Settings
           <span className="block text-lg font-normal font-booking_font">
             Make changes on your profile
@@ -197,11 +154,11 @@ const Profile = () => {
 
         <div className="w-full lg:grid-cols-custom_2 relative items-start gap-8 grid">
           {(updateUserisLoading || getallUserisLoading || uploading) && <Loader />}
-          <div className="w-full lg:sticky top-[10%] py-8 bg-white border rounded-[20px]">
+          <div className="w-full lg:sticky top-[10%]">
             <div
               onClick={() => setIndex(0)}
               className={`px-6  ${index === 0 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
-                }  text-base font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
+                }  text-base family2 cursor-pointer py-4 flex items-center justify-start gap-4`}
             >
               <BiUser /> Profile Settings
             </div>
@@ -209,7 +166,7 @@ const Profile = () => {
             <div
               onClick={() => setIndex(1)}
               className={`px-6  ${index === 1 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
-                }  text-base font-booking_font4 cursor-pointer py-4 flex items-center justify-start gap-4`}
+                }  text-base family2 cursor-pointer py-4 flex items-center justify-start gap-4`}
             >
               <BiLock /> Password
             </div>
@@ -302,7 +259,7 @@ const Profile = () => {
               <div className="w-full p-8 px-6 bg-white border rounded-[20px]">
                 <div className="w-full flex flex-col gap-8">
                   <div className="w-full flex items-center gap-8">
-                    <h4 className="text-xl font-booking_font4">Change Password</h4>
+                    <h4 className="text-xl family2">Change Password</h4>
                   </div>
                   <form className="w-full grid grid-cols-1 gap-4">
                     <label

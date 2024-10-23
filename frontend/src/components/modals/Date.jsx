@@ -52,7 +52,7 @@ const DateModal = ({
       >
         {/* <div className="w-[95%] z-30 mx-auto flex flex-col gap-4">
           <div className="w-full flex items-center justify-between">
-            <h3 className="text-2xl font-bold font-booking_font2">
+            <h3 className="text-2xl family2 font-booking_font2">
               Select the dates of your stay
             </h3>
             <div className="cross" onClick={handleClearAlert}>
@@ -64,7 +64,7 @@ const DateModal = ({
           </div>
 
           <div className="w-full flex justify-end">
-            <div onClick={handleClearAlert} className="p-4 text-center cursor-pointer text-sm font-booking_font_bold text-white btn px-8 rounded-[40px] font-bold text-dark">
+            <div onClick={handleClearAlert} className="p-4 text-center cursor-pointer text-sm font-booking_font_bold text-white btn px-8 rounded-[40px] family2 text-dark">
               Done
             </div>
           </div>
