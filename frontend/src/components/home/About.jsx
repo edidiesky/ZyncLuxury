@@ -1,4 +1,6 @@
 import { Phone } from "lucide-react";
+import { useRef } from "react";
+
 import Image from "../common/Image";
 import { GrSecure } from "react-icons/gr";
 import { MdOutlineElectricalServices } from "react-icons/md";
@@ -8,6 +10,8 @@ import { MdPrivacyTip } from "react-icons/md";
 import { GiConsoleController } from "react-icons/gi";
 import { FaKitchenSet } from "react-icons/fa6";
 import AnimateTextWord from "../common/AnimateTextWord";
+import { motion, useInView } from "framer-motion";
+import { smallslideup2 } from "@/constants/utils/framer";
 
 const whychooseList = [
   {
@@ -56,6 +60,10 @@ const whychooseList = [
 ];
 
 const About = () => {
+  const refCard = useRef(null);
+  const inView = useInView(refCard, {
+    margin: "0px 100px -120px 0px",
+  });
   return (
     <div data-scroll-section className="w-full relative flex flex-col gap-20">
       {/* <div
@@ -92,7 +100,14 @@ const About = () => {
           <div className="w-full grid md:grid-cols-3 gap-y-16 gap-x-12">
             {whychooseList?.map((data, index) => {
               return (
-                <div className="w-full cursor-pointer flex flex-col">
+                <motion.div
+                  variants={smallslideup2}
+                  initial={"initial"}
+                  animate={inView ? "animate" : "exit"}
+                  ref={refCard}
+                  custom={index / 2}
+                  className="w-full cursor-pointer flex flex-col"
+                >
                   <div
                     style={{ transition: "all .3s" }}
                     key={index}
@@ -117,7 +132,7 @@ const About = () => {
                       {data?.text}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
