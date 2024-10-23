@@ -286,7 +286,7 @@ input {
   transition: all 0.3s;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
-  font-family: "Karla", sans-serif !important;
+   font-family: "Regular", sans-serif !important;
 }
 form input:hover {
   box-shadow: 0 0 0 6px #e7e7e9;
