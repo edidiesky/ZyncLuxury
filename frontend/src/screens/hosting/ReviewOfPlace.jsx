@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import ReviewofPlace from "../components/listing/reviews";
+// import ReviewofPlace from "../components/listing/reviews";
 
 export default function ReviewOfplace() {
   return (
     <>
       <ReviewOfplaceContainer className="flex item-center justify-center">
-        <ReviewofPlace />
+        {/* <ReviewofPlace /> */}
       </ReviewOfplaceContainer>
     </>
   );

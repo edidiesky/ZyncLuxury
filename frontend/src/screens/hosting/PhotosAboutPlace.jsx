@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import PhotosofPlace from "../components/listing/photos";
+// import PhotosofPlace from "../components/listing/photos";
 
 export default function PhotosAboutPlace() {
   return (
     <>
       <PhotosAboutPlaceContainer className="flex item-center justify-center">
-        <PhotosofPlace />
+        {/* <PhotosofPlace /> */}
       </PhotosAboutPlaceContainer>
     </>
   );

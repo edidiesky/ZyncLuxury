@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import DescriptionofPlace from "../components/listing/description";
+// import DescriptionofPlace from "../components/listing/description";
 
 export default function DescriptionOfplace() {
   return (
     <>
       <DescriptionOfplaceContainer className="flex item-center justify-center">
-        <DescriptionofPlace />
+        {/* <DescriptionofPlace /> */}
       </DescriptionOfplaceContainer>
     </>
   );

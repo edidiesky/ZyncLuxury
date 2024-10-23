@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import Location from "../components/listing/location";
+// import Location from "../components/listing/location";
 
 export default function LocationOfplace() {
   return (
     <>
       <LocationOfplaceContainer className="flex item-center justify-center">
-        <Location />
+        {/* <Location /> */}
       </LocationOfplaceContainer>
     </>
   );
