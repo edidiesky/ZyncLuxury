@@ -1,6 +1,6 @@
 # ZyncLuxury
 
-ZyncLuxury is a web platform that offers luxurious home listings for home lovers. It allows users to explore various homes, place orders, and leave reviews. The platform owner are given the priviledges when authenticated to see home listings, manage home listings items, see reviews, receive payment, see list of customers, and lastly see how their products(home listings items) has been purchased over a period of time
+ZyncLuxury is a web platform that offers luxurious home listings for home lovers. It allows users to explore various homes, create their own homes when being authorized, place orders, and leave reviews. I created Zybcluxury with the help of Nodejs, Prisma, Socket-IO, Redis and Upstash for caching; ReactJS, TailwindCSS and Cypress for testing the happy path of the users
 
 ![Project Screenshot](/image_1.jpg)
 
@@ -16,7 +16,7 @@ ZyncLuxury is a web platform that offers luxurious home listings for home lovers
 
 ## Technologies Used
 
-- **Backend:** Node.js, Express, Prisma, MongoDB, Socket.IO, Jest
+- **Backend:** Node.js, Express, Prisma, MongoDB, Socket.IO, Jest, Redis and Upstash
 - **Frontend:** React.js, Cypress, Framer-motion, Gsap, Tailwind.CSS.
 - **Hosting:** Vercel
 
