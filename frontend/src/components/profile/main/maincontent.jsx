@@ -190,7 +190,8 @@ const Profile = () => {
                           />
                         )}
                         <label htmlFor="upload">
-                          <div className="absolute cursor-pointer text-white text-2xl rounded-full border-4 border-[rgba(255,255,255,1)] flex items-center justify-center w-12 h-12 bottom-5 -right-5 bg-[#5542F6]">
+                          <div className="absolute cursor-pointer text-white text-base md:text-2xl rounded-full border-4
+                           border-[rgba(255,255,255,1)] flex items-center justify-center w-8 h-8 md:w-12 md:h-12 bottom-5 -right-5 bg-[#5542F6]">
                             <BiCamera />
                             <input
                               type="file"
