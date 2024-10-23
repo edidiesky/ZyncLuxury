@@ -482,7 +482,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
         <div className=" items-center z-[40000000] flex justify-end">
           {currentUser ? (
             <div className="flex items-center gap-8">
-              <Link  to={`/become-a-host/${currentUser?.id}`} className="btn text-center text-sm md:text-base regular text-white px-4 md:px-8 py-3">
+              <Link  to={`/become-a-host/${currentUser?.id}`} className="btn md:block hidden text-center text-sm md:text-base regular text-white px-4 md:px-8 py-3">
                 Host your Home
               </Link>
               <Profile setBar={setBar} />

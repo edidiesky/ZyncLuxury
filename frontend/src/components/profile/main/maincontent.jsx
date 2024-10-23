@@ -175,7 +175,7 @@ const Profile = () => {
                 <div className="w-full flex flex-col gap-8">
                   <div>
                     <div className="w-full flex items-center gap-8">
-                      <div className="w-32 h-32 relative">
+                      <div className="w-20 h-20 md:w-32 md:h-32 relative">
                         {image !== "" ? (
                           <img
                             src={image}
