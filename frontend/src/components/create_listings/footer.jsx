@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { CreateRoom } from "@/features/room/roomReducer";
 export default function FooterHosting({ next, prev, text, active, submit }) {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((store) => store.auth);
-  const { listing, creatingRoomisSuccess } = useSelector((store) => store.room);
+  const { listing, creatingRoomisSuccess,room } = useSelector((store) => store.room);
   // console.log(listing)
 
   const navigate = useNavigate();
@@ -20,12 +19,12 @@ export default function FooterHosting({ next, prev, text, active, submit }) {
 
   // navigate if the listing has been succesfully created
   useEffect(() => {
-    if (creatingRoomisSuccess) {
+    if (creatingRoomisSuccess && room?.id) {
       setTimeout(() => {
-        navigate(`/become-a-host/${currentUser?.id}/reviews`);
+        navigate(`/become-a-host/${currentUser?.id}/reviews/${room?.id}`);
       }, 6000);
     }
-  }, [creatingRoomisSuccess, navigate]);
+  }, [creatingRoomisSuccess, navigate, room?.id]);
 
   return (
     <>

@@ -192,7 +192,7 @@ export default function App() {
             }
           />
           <Route
-            path="ReviewOfPlace"
+            path="reviews/:apartmentid"
             element={
               <Suspense fallback={<></>}>
                 <ReviewOfPlace />

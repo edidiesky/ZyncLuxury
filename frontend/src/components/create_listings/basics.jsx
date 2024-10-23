@@ -11,23 +11,23 @@ export default function BasicInfoAboutPlace() {
 
   const dispatch = useDispatch();
   const [guests, setGuests] = useState(2);
-  const [bedrooms, setBedRooms] = useState(2);
+  const [bedroom, setBedRoom] = useState(2);
   const [bathroom, setBathroom] = useState(1);
 
   useEffect(() => {
     dispatch(
-      handleBasicListing({ bathroom: bathroom, bedrooms: bedrooms, guests: guests })
+      handleBasicListing({ bathroom: bathroom, bedroom: bedroom, guests: guests })
     );
-  }, [guests, bedrooms, bathroom]);
+  }, [guests, bedroom, bathroom]);
 
   useEffect(() => {
     if (listing) {
       setGuests(listing.guests);
-      setBedRooms(listing.bedrooms);
+      setBedRoom(listing.bedroom);
       setBathroom(listing.bathroom);
     }
-  }, [listing, setGuests, setBathroom, setBedRooms]);
-  const active = bathroom && bedrooms && guests;
+  }, [listing, setGuests, setBathroom, setBedRoom]);
+  const active = bathroom && bedroom && guests;
 
   return (
     <>
@@ -64,21 +64,21 @@ export default function BasicInfoAboutPlace() {
                 </button>
               </div>
             </div>{" "}
-            {/* bedrooms */}
+            {/* bedroom */}
             <div className="w-full text-sm regular pb-6 border-b typewrapper flex items-center justify-between">
               Bedrooms
               <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
-                  onClick={() => setBedRooms(bedrooms + 1)}
-                  disabled={bedrooms >= 10}
+                  onClick={() => setBedRoom(bedroom + 1)}
+                  disabled={bedroom >= 10}
                   className="icons flex items-center justify-center"
                 >
                   <BiPlus fontSize={"20px"} />
                 </button>{" "}
-                <h4 className="text-smfamily2">{bedrooms}</h4>
+                <h4 className="text-smfamily2">{bedroom}</h4>
                 <button
-                  onClick={() => setBedRooms(bedrooms - 1)}
-                  disabled={bedrooms === 0}
+                  onClick={() => setBedRoom(bedroom - 1)}
+                  disabled={bedroom === 0}
                   className="icons flex items-center justify-center"
                 >
                   <BiMinus fontSize={"20px"} />

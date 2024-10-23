@@ -1,59 +1,55 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import FooterHosting from "./footer";
-import { useSelector } from "react-redux";
-import Star from "../common/svg/star";
+import { useDispatch, useSelector } from "react-redux";
+import Star from "@/assets/svg/star";
+import { useParams } from "react-router-dom";
+import { getSingleRooms } from "@/features/room/roomReducer";
+import RoomCard from "../common/RoomCard";
 export default function ReviewOfPlace() {
+  const { apartmentid } = useParams();
+  const dispatch = useDispatch();
   const { currentUser } = useSelector((store) => store.auth);
-  const { GigsDetails } = useSelector((store) => store.room);
+  const { room } = useSelector((store) => store.room);
+  useEffect(() => {
+    if (apartmentid) {
+      dispatch(getSingleRooms(apartmentid));
+    }
+  }, [apartmentid]);
   return (
     <>
       <ReviewOfPlaceContainer className="flex flex-col gap-2 w-[90%]  max-w-custom mx-auto">
-        <div className="w-[90%]  max-w-custom mx-auto flex flex-col gap-2">
+        <div className="w-[90%]  max-w-custom mx-auto flex flex-col gap-12">
           {" "}
-          <h2 className="family2 w-[90%]  max-w-custom mx-auto w-full text-start text-dark">
+          <h2 className="family2 text-start text-dark">
             Review your listing
-            <span className="block py-1text-lg regular text-grey">
+            <span className="block py-1 text-base md:text-lg regular text-grey">
               Here's what we'll show to guests. Make sure everything looks good.
             </span>
           </h2>
-          <div className="ReviewOfCenter flex item-start gap-4 justify-start w-90 auto">
-            <div className="authC_right flex flex-col flex-1 gap-1">
-              <img
-                src={GigsDetails?.image[0]}
-                alt=""
-                className="image"
-              />
-              <div className="flex flex-col">
-                <h4 className="fs-16 family2 w-full flex items-center justify-between">
-                  {GigsDetails?.title}
-                  <Star />
-                </h4>
-                <h5 className="fs-16family2 text-dark">
-                  ${GigsDetails?.price}{" "}
-                  <span className="regular fs-14">night</span>
-                </h5>
-              </div>
+          <div className="grid md:grid-cols-custom item-start gap-12 justify-start auto">
+            <div className="flex md:w-[380px] flex-col flex-1 gap-1">
+              <RoomCard apartment={room} />
             </div>{" "}
-            <div className="flex flex-col flex-1">
-              <h3 className="fs-30 family2">What's next?</h3>
-              <div className="list1text-lg family2 text-dark">
+            <div className="flex w-full flex-col flex-1 gap-6">
+              <h3 className="text-2xl md:text-3xl family2">What's next?</h3>
+              <div className="list text-lg md:text-xl family2 text-dark">
                 Confirm a few details and publish{" "}
-                <span className="block fs-14 regular text-grey">
+                <span className="block text-sm md:text-base regular text-grey">
                   We’ll let you know if you need to verify your identity or
                   register with the local government.
                 </span>
               </div>
-              <div className="list1text-lg family2 text-dark">
+              <div className="list1 text-lg md:text-xl family2 text-dark">
                 Set up your calendar{" "}
-                <span className="block fs-14 regular text-grey">
+                <span className="block text-sm md:text-base regular text-grey">
                   Choose which dates your listing is available. It will be
                   visible 20 hours after you publish.
                 </span>
               </div>
-              <div className="list1text-lg family2 text-dark">
+              <div className="list1 text-lg md:text-xl family2 text-dark">
                 Adjust your settings
-                <span className="block fs-14 regular text-grey">
+                <span className="block text-sm md:text-base regular text-grey">
                   Set house rules, select a cancellation policy, choose how
                   guests book, and more.
                 </span>
@@ -63,8 +59,9 @@ export default function ReviewOfPlace() {
         </div>
       </ReviewOfPlaceContainer>
       <FooterHosting
-        next={`${currentUser?.id}/price`}
+        next={`/`}
         prev={`${currentUser?.id}/price`}
+        active={true}
       />
     </>
   );

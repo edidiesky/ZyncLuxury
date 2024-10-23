@@ -24,7 +24,6 @@ const initialState = {
         listingType: "RENT",
         type: "",
         price: "",
-        region: "",
         features: [],
         cautionfee: "",
         latitude: "",
@@ -117,7 +116,7 @@ export const roomSlice = createSlice({
       state.listing = {
         ...state.listing,
         bathroom: action.payload.bathroom,
-        bedroom: action.payload.bedrooms,
+        bedroom: action.payload.bedroom,
         guests: action.payload.guests,
       };
       localStorage.setItem("listing", JSON.stringify(state.listing));
@@ -154,7 +153,7 @@ export const roomSlice = createSlice({
     handleListingPrice: (state, action) => {
       state.listing = {
         ...state.listing,
-        price: parseInt(action.payload),
+        price: action.payload,
       };
       localStorage.setItem("listing", JSON.stringify(state.listing));
     },
@@ -209,6 +208,7 @@ export const roomSlice = createSlice({
     builder.addCase(CreateRoom.fulfilled, (state, action) => {
       state.creatingRoomisSuccess = true;
       state.creatingRoomisLoading = false;
+      state.room = action.payload
       toast.success("Room has been created succesfully");
     });
     builder.addCase(CreateRoom.rejected, (state, action) => {
