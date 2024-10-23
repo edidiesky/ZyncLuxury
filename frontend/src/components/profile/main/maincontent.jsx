@@ -74,9 +74,7 @@ const Profile = () => {
     });
   };
 
-  const handleSwitchChange = (name) => (checked) => {
-    setRole(checked);
-  };
+
   const dispatch = useDispatch();
   const [uploading, setUploading] = useState(false);
   const [alert, setAlert] = useState(false);
@@ -154,10 +152,10 @@ const Profile = () => {
 
         <div className="w-full lg:grid-cols-custom_2 relative items-start gap-8 grid">
           {(updateUserisLoading || getallUserisLoading || uploading) && <Loader />}
-          <div className="w-full lg:sticky top-[10%]">
+          <div className="w-full lg:sticky top-[10%] flex md:flex-col flex-row">
             <div
               onClick={() => setIndex(0)}
-              className={`px-6  ${index === 0 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
+              className={`px-6  ${index === 0 ? "bg-[#fafafa] border-b-4 md:border-r-4" : " bg-white border-0"
                 }  text-base family2 cursor-pointer py-4 flex items-center justify-start gap-4`}
             >
               <BiUser /> Profile Settings
@@ -165,7 +163,7 @@ const Profile = () => {
 
             <div
               onClick={() => setIndex(1)}
-              className={`px-6  ${index === 1 ? "bg-[#fafafa] border-r-4" : " bg-white border-0"
+              className={`px-6  ${index === 1 ? "bg-[#fafafa] border-b-4 md:border-r-4" : " bg-white border-0"
                 }  text-base family2 cursor-pointer py-4 flex items-center justify-start gap-4`}
             >
               <BiLock /> Password
