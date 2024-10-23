@@ -5,7 +5,7 @@ import React from "react";
 export default function TitleOfplace() {
   return (
     <>
-      <TitleOfplaceContainer className="flex item-center justify-center">
+      <TitleOfplaceContainer className="flex items-center justify-center">
         {/* <TitleofPlace /> */}
       </TitleOfplaceContainer>
     </>

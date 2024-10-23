@@ -65,7 +65,7 @@ const RoomsCreated = () => {
               //   </h4> ""
               <tbody>
                 {rooms?.slice(0, 4)?.map((x, index) => {
-                  return <TableCard x={x} type={"rooms"} key={x?._id} />;
+                  return <TableCard x={x} type={"rooms"} key={x?.id} />;
                 })}
               </tbody>
             )}

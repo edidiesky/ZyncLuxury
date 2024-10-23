@@ -27,16 +27,16 @@ const sidebarData = [
 ];
 export default function ListingHeader({ type }) {
   const [drop, setDrop] = useState(false);
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
 
   if (type === "dashboard") {
     return (
       <>
-        <ListingHeaderContainer className="type w-100">
-          <div className="aboutCenter flex item-center gap-3 justify-space auto">
+        <ListingHeaderContainer className="type w-full">
+          <div className="aboutCenter flex items-center gap-3 justify-between auto">
             {/* <div className="flex-1"></div> */}
             <div className="flex">
-              <form className="flex item-center form">
+              <form className="flex items-center form">
                 <BiSearch />
                 <input
                   type="text"
@@ -45,8 +45,8 @@ export default function ListingHeader({ type }) {
                 />
               </form>
             </div>
-            <div className="w-100 flex-1 relative flex item-center justify-end">
-              <div className="flex top item-center gap-1 justify-end">
+            <div className="w-full flex-1 relative flex items-center justify-end">
+              <div className="flex top items-center gap-1 justify-end">
                 {/* <AnimatePresence
                 initial="false"
                 exitBeforeEnter={true}
@@ -65,7 +65,7 @@ export default function ListingHeader({ type }) {
                     background: "rgba(0,0,0,.1)",
                     color: "#Fff",
                   }}
-                  className="profile_wrapper flex item-center justify-center"
+                  className="profile_wrapper flex items-center justify-center"
                 >
                   <div
                     style={{
@@ -76,7 +76,7 @@ export default function ListingHeader({ type }) {
                       color: "#Fff",
                       border: "2px solid #fff",
                     }}
-                    className="fs-16 text-white flex item-center justify-center"
+                    className="fs-16 text-white flex items-center justify-center"
                   >
                     {userInfo?.firstname.charAt(0)}
                   </div>
@@ -104,11 +104,11 @@ export default function ListingHeader({ type }) {
           ></div>
         )}
         <ListingHeaderContainer className="type">
-          <div className="aboutCenter flex item-center gap-3 justify-space w-85 auto">
+          <div className="aboutCenter flex items-center gap-3 justify-between w-[90%]  max-w-custom mx-auto">
             <Link to={"/"}>
               <Logo />
             </Link>
-            <div className="flex top item-center gap-1 justify-end">
+            <div className="flex top items-center gap-1 justify-end">
               <Dropdown setDrop={setDrop} drop={drop} type={"type"} />
               <div
                 onClick={() => setDrop(!drop)}
@@ -119,7 +119,7 @@ export default function ListingHeader({ type }) {
                   background: "rgba(0,0,0,.1)",
                   color: "#Fff",
                 }}
-                className="profile_wrapper flex item-center justify-center"
+                className="profile_wrapper flex items-center justify-center"
               >
                 <div
                   style={{
@@ -130,7 +130,7 @@ export default function ListingHeader({ type }) {
                     color: "#Fff",
                     border: "2px solid #fff",
                   }}
-                  className="fs-16 text-white flex item-center justify-center"
+                  className="fs-16 text-white flex items-center justify-center"
                 >
                   {userInfo?.firstname.charAt(0)}
                 </div>
@@ -144,11 +144,11 @@ export default function ListingHeader({ type }) {
   return (
     <>
       <ListingHeaderContainer>
-        <div className="aboutCenter flex item-center gap-3 justify-center w-85 auto">
+        <div className="aboutCenter flex items-center gap-3 justify-center w-[90%]  max-w-custom mx-auto">
           <Logo2 />
-          <div className="flex top item-center gap-1 justify-end w-100">
-            <div className="headBtn fs-14 text-dark text-bold">Questions</div>
-            <div className="headBtn fs-14 text-dark text-bold">Save & Exit</div>
+          <div className="flex top items-center gap-1 justify-end w-full">
+            <div className="headBtn fs-14 text-dark family2">Questions</div>
+            <div className="headBtn fs-14 text-dark family2">Save & Exit</div>
           </div>
         </div>
       </ListingHeaderContainer>

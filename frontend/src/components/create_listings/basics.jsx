@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { handleBasicListing } from "../../Features/listing/listingSlice";
 export default function BasicInfoAboutPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing } = useSelector((store) => store.gigs);
 
   const dispatch = useDispatch();
@@ -36,72 +36,72 @@ export default function BasicInfoAboutPlace() {
         <div
           data-aos="fade-up"
           data-aos-duration="1400"
-          className="aboutCenter flex column gap-2 justify-center item-center"
+          className="aboutCenter flex flex-col gap-2 justify-center items-center"
         >
-          <h2 className="text-bold w-100 text-start text-dark">
+          <h2 className="family2 w-full text-start text-dark">
             Share some basics about your place
-            <span className="fs-18 block py-1 text-light text-grey">
+            <span className="text-sm block py-1 regular text-grey">
               You'll add more details later, like bed types.
             </span>
           </h2>
-          <div className="flex typeContainer auto flex column gap-2">
+          <div className="flex typeContainer auto flex flex-col gap-2">
             {/* guest */}
-            <div className="w-100 fs-18 text-light bottom typewrapper flex item-center justify-space">
+            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
               Guests
-              <div className="flex item-center" style={{ gap: "1.2rem" }}>
+              <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
                   onClick={() => setGuests(guests + 1)}
                   disabled={guests >= 12}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiPlus fontSize={"20px"} />
                 </button>{" "}
-                <h4 className="fs-18 text-extra-bold">{guests}</h4>
+                <h4 className="text-smfamily2">{guests}</h4>
                 <button
                   onClick={() => setGuests(guests - 1)}
                   disabled={guests === 0}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiMinus fontSize={"20px"} />
                 </button>
               </div>
             </div>{" "}
             {/* bedrooms */}
-            <div className="w-100 fs-18 text-light bottom typewrapper flex item-center justify-space">
+            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
               Bedrooms
-              <div className="flex item-center" style={{ gap: "1.2rem" }}>
+              <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
                   onClick={() => setBedRooms(bedrooms + 1)}
                   disabled={bedrooms >= 10}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiPlus fontSize={"20px"} />
                 </button>{" "}
-                <h4 className="fs-18 text-extra-bold">{bedrooms}</h4>
+                <h4 className="text-smfamily2">{bedrooms}</h4>
                 <button
                   onClick={() => setBedRooms(bedrooms - 1)}
                   disabled={bedrooms === 0}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiMinus fontSize={"20px"} />
                 </button>
               </div>
             </div>{" "}
-            <div className="w-100 fs-18 text-light bottom typewrapper flex item-center justify-space">
+            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
               Beds
-              <div className="flex item-center" style={{ gap: "1.2rem" }}>
+              <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
                   onClick={() => setBeds(beds + 1)}
                   disabled={beds >= 12}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiPlus fontSize={"20px"} />
                 </button>{" "}
-                <h4 className="fs-18 text-extra-bold">{beds}</h4>
+                <h4 className="text-smfamily2">{beds}</h4>
                 <button
                   onClick={() => setBeds(beds - 1)}
                   disabled={beds === 0}
-                  className="icons flex item-center justify-center"
+                  className="icons flex items-center justify-center"
                 >
                   <BiMinus fontSize={"20px"} />
                 </button>
@@ -112,8 +112,8 @@ export default function BasicInfoAboutPlace() {
       </BasicInfoAboutPlaceContainer>
       <FooterHosting
         active={active}
-        prev={`${userInfo?._id}/location`}
-        next={`${userInfo?._id}/stand-out`}
+        prev={`${currentUser?.id}/location`}
+        next={`${currentUser?.id}/stand-out`}
       />
     </>
   );

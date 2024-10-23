@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import Exception from "../../components/create_listings/stand-out";
+import StartSection from "../../components/create_listings/starting";
 
-export default function StandOut() {
+export default function Starting() {
   return (
     <>
       <ExceptionContainer className="flex items-center justify-center">
-        <Exception />
+        <StartSection />
       </ExceptionContainer>
     </>
   );

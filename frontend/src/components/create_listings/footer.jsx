@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { CreateRoom } from "@/features/room/roomReducer";
 export default function FooterHosting({ next, prev, text, active, submit }) {
   const dispatch = useDispatch();
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { listing, creatingRoomisSuccess } = useSelector((store) => store.room);
   // console.log(listing)
 
@@ -22,31 +22,39 @@ export default function FooterHosting({ next, prev, text, active, submit }) {
   useEffect(() => {
     if (creatingRoomisSuccess) {
       setTimeout(() => {
-        navigate(`/become-a-host/${userInfo?._id}/reviews`);
+        navigate(`/become-a-host/${currentUser?.id}/reviews`);
       }, 6000);
     }
   }, [creatingRoomisSuccess, navigate]);
 
   return (
     <>
-      <div className="hostingbottom">
-        <div className="w-85 auto flex item-center justify-space">
+      <div className="fixed bottom-0 w-full bg-white shadow border-t h-[80px] flex items-center">
+        <div className="w-[90%] mx-auto flex items-center justify-between">
           {!text && (
-            <Link to={`/become-a-host/${prev}`} className="hostbtn grey fs-18">
+            <Link
+              to={`/become-a-host/${prev}`}
+              className="btn px-4 py-3 text-white text-center min-w-[120px] text-base"
+            >
               Back
             </Link>
           )}
 
-          <div className="flex-1 flex item-center justify-end">
+          <div className="flex-1 flex items-center justify-end">
             {submit ? (
-              <button onClick={handleCreateListing} className={"hostbtn fs-18"}>
+              <button
+                onClick={handleCreateListing}
+                className={
+                  "btn btn_3 px-4 py-3 text-white text-center min-w-[120px] text-base"
+                }
+              >
                 {text ? text : "Create Listing"}
               </button>
             ) : (
               <button
                 onClick={handleNextNavigation}
                 disabled={!active}
-                className={"hostbtn fs-18"}
+                className="btn btn_3 px-4 py-3 text-white text-center min-w-[120px] text-base"
               >
                 {text ? text : "Next"}
               </button>
@@ -57,5 +65,3 @@ export default function FooterHosting({ next, prev, text, active, submit }) {
     </>
   );
 }
-
-const StartingContainer = styled.div``;

@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { handleListingImage } from "../../Features/listing/listingSlice";
 import Message from "../loaders/Message";
 export default function PhotosofPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing } = useSelector((store) => store.gigs);
   const dispatch = useDispatch();
   const [uploadimage, setUploadImage] = useState([]);
@@ -81,24 +81,24 @@ export default function PhotosofPlace() {
             handleClearAlert={handleClearAlerts}
           />
         )}
-        <div className="hidden w-100">
+        <div className="hidden w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
-            className="aboutCenter flex column gap-3 justify-center item-center w-85 auto"
+            className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-100 text-start text-dark">
+            <h2 className="text-extra-bold w-full text-start text-dark">
               Add some photos of your boat
-              <span className="block py-1 fs-18 text-light text-grey">
+              <span className="block py-1 text-sm regular text-grey">
                 You'll need 5 photos to get started. You can add more or make
                 changes later.
               </span>
             </h2>
             {!uploadimage.length > 0 ? (
-              <div className="grid w-85 auto">
+              <div className="grid w-[90%]  max-w-custom mx-auto">
                 <label
                   htmlFor="upload"
-                  className="uploadWrapper auto flex item-center justify-center flex column gap-1"
+                  className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
                 >
                   <Upload />
                   <input
@@ -109,18 +109,18 @@ export default function PhotosofPlace() {
                     style={{ display: "none" }}
                     onChange={handleFileUpload}
                     multiple
-                    className="w-100"
+                    className="w-full"
                   />
-                  <h4 className="fs-24 text-bold">
+                  <h4 className="text-lg family2">
                     Upload your photos here
-                    <span className="text-light block text-center fs-16">
+                    <span className="regular block text-center fs-16">
                       Choose at least 5 photos
                     </span>
                   </h4>
                 </label>
               </div>
             ) : (
-              <div className="flex grid upload column gap-1 w-85 auto">
+              <div className="flex grid upload column gap-1 w-[90%]  max-w-custom mx-auto">
                 {uploadimage.map((x, index) => {
                   return (
                     <UploadImageCard
@@ -139,8 +139,8 @@ export default function PhotosofPlace() {
         active={
           host_listing.listing_image.length >= 4 || uploadimage?.length >= 4
         }
-        prev={`${userInfo?._id}/stand-out`}
-        next={`${userInfo?._id}/title`}
+        prev={`${currentUser?.id}/stand-out`}
+        next={`${currentUser?.id}/title`}
       />
     </>
   );

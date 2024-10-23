@@ -10,7 +10,7 @@ import {
 } from "../../Features/listing/listingSlice";
 import DateInput from "../forms/Date";
 export default function DurationofPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing } = useSelector((store) => store.gigs);
   const [date, setDate] = useState("");
   const [dateRange, setDateRange] = useState({
@@ -67,20 +67,20 @@ export default function DurationofPlace() {
   return (
     <>
       <DurationofPlaceContainer>
-        <div className="hidden-w-100">
+        <div className="hidden-w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex column justify-center item-center w-85 auto"
+            className="aboutCenter flex flex-col justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-100 text-start text-dark">
+            <h2 className="text-extra-bold w-full text-start text-dark">
               Now, set your date
-              <span className="block py-1 fs-18 text-light text-grey">
+              <span className="block py-1 text-sm regular text-grey">
                 You can change it anytime.
               </span>
             </h2>
             <div className="grid w-90 auto">
-              <div className="uploadWrapper auto flex column gap-2">
+              <div className="uploadWrapper auto flex flex-col gap-2">
                 <DateInput handleSelect={handleSelect} dateRange={dateRange} />
               </div>
             </div>
@@ -89,8 +89,8 @@ export default function DurationofPlace() {
       </DurationofPlaceContainer>
       <FooterHosting
         active={host_listing.listing_startDate}
-        prev={`${userInfo?._id}/description`}
-        next={`${userInfo?._id}/price`}
+        prev={`${currentUser?.id}/description`}
+        next={`${currentUser?.id}/price`}
       />
     </>
   );

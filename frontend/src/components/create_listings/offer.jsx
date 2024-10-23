@@ -44,7 +44,7 @@ const offerdata = [
   },
 ];
 export default function OfferofPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const [list, setList] = useState([]);
   const [tab, setTab] = useState(null);
   const [include, setInclusde] = useState(false);
@@ -70,23 +70,23 @@ export default function OfferofPlace() {
         <div
           data-aos="fade-up"
           data-aos-duration="1400"
-          className="aboutCenter flex column gap-3 justify-center item-center w-85 auto"
+          className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
-          <h2 className="text-extra-bold w-100 text-start text-dark">
+          <h2 className="text-extra-bold w-full text-start text-dark">
             Tell guests what your place has to offer
-            <span className="block py-1 fs-20 text-light text-grey">
+            <span className="block py-1text-lg regular text-grey">
               You can add more amenities after you publish your listing.
             </span>
           </h2>
-          <div className="grid cardwrapper w-85 auto">
+          <div className="grid cardwrapper w-[90%]  max-w-custom mx-auto">
             {offerdata.map((x, index) => {
               return (
                 <div
                   onClick={() => handleListOffer(index, x)}
                   className={
                     tab === index
-                      ? "card fs-18 gap-1 column flex active"
-                      : "card fs-18 gap-1 column flex"
+                      ? "card text-sm gap-1 column flex active"
+                      : "card text-sm gap-1 column flex"
                   }
                 >
                   {x.image}
@@ -98,8 +98,8 @@ export default function OfferofPlace() {
         </div>
       </OfferofPlaceContainer>
       <FooterHosting
-        prev={`${userInfo?._id}/stand-out`}
-        next={`${userInfo?._id}/photos`}
+        prev={`${currentUser?.id}/stand-out`}
+        next={`${currentUser?.id}/photos`}
       />
     </>
   );

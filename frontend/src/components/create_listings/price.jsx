@@ -10,7 +10,7 @@ import {
 import Message from "../loaders/Message";
 import LoaderIndex from "../loaders";
 export default function PriceofPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing, gigsIsSuccess, gigsIsLoading } = useSelector(
     (store) => store.gigs
   );
@@ -36,29 +36,29 @@ export default function PriceofPlace() {
           // handleClearAlert={}
         />
         {gigsIsLoading && <LoaderIndex />}
-        <div className="hidden-w-100">
+        <div className="hidden-w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex column gap-1 justify-center item-center w-85 auto"
+            className="aboutCenter flex flex-col gap-1 justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-100 text-start text-dark">
+            <h2 className="text-extra-bold w-full text-start text-dark">
               Now, set your price
-              <span className="block py-1 fs-18 text-light text-grey">
+              <span className="block py-1 text-sm regular text-grey">
                 You can change it anytime.
               </span>
             </h2>
-            <div className="grid w-85 auto">
+            <div className="grid w-[90%]  max-w-custom mx-auto">
               <div
                 placeholder="fun boat"
-                className="uploadWrapper auto flex item-center justify-center flex column gap-1"
+                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
               >
                 <input
                   value={price}
                   name="price"
                   placeholder="$50"
                   onChange={handleListingPrices}
-                  className="fs-30 family1 text-dark text-center text-extra-bold"
+                  className="fs-30 family1 text-dark text-centerfamily2"
                 />
               </div>
             </div>
@@ -68,8 +68,8 @@ export default function PriceofPlace() {
       <FooterHosting
         submit={true}
         active={host_listing.listing_price}
-        prev={`${userInfo?._id}/duration`}
-        next={`${userInfo?._id}/reviews`}
+        prev={`${currentUser?.id}/duration`}
+        next={`${currentUser?.id}/reviews`}
       />
     </>
   );

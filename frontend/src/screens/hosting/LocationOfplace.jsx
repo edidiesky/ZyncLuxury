@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
-// import Location from "../components/listing/location";
+// import Location from "../../components/create_listings/location";
 
 export default function LocationOfplace() {
   return (
     <>
-      <LocationOfplaceContainer className="flex item-center justify-center">
+      <LocationOfplaceContainer className="flex items-center justify-center">
         {/* <Location /> */}
       </LocationOfplaceContainer>
     </>

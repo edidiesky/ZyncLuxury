@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
-// import InformationofPlace from "../components/listing/information";
+// import InformationofPlace from "../../components/create_listings/information";
 
 export default function InformationOfplace() {
   return (
     <>
-      <InformationOfplaceContainer className="flex item-center justify-center">
+      <InformationOfplaceContainer className="flex items-center justify-center">
         {/* <InformationofPlace /> */}
       </InformationOfplaceContainer>
     </>

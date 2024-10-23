@@ -33,7 +33,7 @@ const RoomsList = () => {
               </thead>
               <tbody>
                 {rooms?.map((x, index) => {
-                  return <TableCard x={x} type={"rooms"} key={x?._id} />;
+                  return <TableCard x={x} type={"rooms"} key={x?.id} />;
                 })}
               </tbody>
             </table>

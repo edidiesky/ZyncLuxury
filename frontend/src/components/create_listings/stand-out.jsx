@@ -7,24 +7,24 @@ export default function StandOut() {
   return (
     <>
       <StandOutContainer className="w-90 auto">
-        <div className="hidden w-100">
+        <div className=" w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex item-center gap-3 justify-center w-85 auto"
+            className="aboutCenter flex items-center gap-3 justify-center w-[90%]  max-w-custom mx-auto"
           >
-            <div className="aboutC_right flex gap-1 column flex-1">
-              <h1 className=" text-extra-bold text-dark">
-                <span className="block fs-20 py-1">Step 2</span>
+            <div className="flex-1 flex gap-1 flex-col">
+              <h1 className="family2 text-dark">
+                <span className="blocktext-lg py-1">Step 2</span>
                 Make your place stand out
               </h1>
-              <span className="block fs-18 text-light text-dark">
+              <span className="block text-sm regular text-dark">
                 In this step, you’ll add some of the amenities your place
                 offers, plus 5 or more photos. Then, you’ll create a title and
                 description.
               </span>
             </div>{" "}
-            <div className="aboutC_right flex item-center justify-center flex-1">
+            <div className="flex-1 flex items-center justify-center">
               <img
                 src="https://a0.muscache.com/4ea/air/v2/pictures/da2e1a40-a92b-449e-8575-d8208cc5d409.jpg"
                 alt=""
@@ -36,8 +36,8 @@ export default function StandOut() {
       </StandOutContainer>
       <FooterHosting
         active={true}
-        prev={`${currentUser?._id}/floor-plan`}
-        next={`${currentUser?._id}/photos`}
+        prev={`${currentUser?.id}/floor-plan`}
+        next={`${currentUser?.id}/photos`}
       />
     </>
   );

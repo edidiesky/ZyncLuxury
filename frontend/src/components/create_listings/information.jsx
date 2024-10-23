@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { handleListingDescription } from "../../Features/listing/listingSlice";
 export default function InformationofPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing } = useSelector((store) => store.gigs);
   const [description, setDescription] = useState("");
   const dispatch = useDispatch();
@@ -23,25 +23,25 @@ export default function InformationofPlace() {
   return (
     <>
       <InformationofPlaceContainer>
-        <div className="w-100 hidden">
+        <div className="w-full hidden">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex column gap-1 justify-center item-center w-85 auto"
+            className="aboutCenter flex flex-col gap-1 justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-100 text-start text-dark">
+            <h2 className="text-extra-bold w-full text-start text-dark">
               Create your description
-              <span className="block py-1 fs-20 text-light text-grey">
+              <span className="block py-1text-lg regular text-grey">
                 Share what makes your place special.
               </span>
             </h2>
-            <div className="grid w-85 auto">
+            <div className="grid w-[90%]  max-w-custom mx-auto">
               <textarea
                 value={description}
                 name="description"
                 onChange={handleListingDescriptions}
                 placeholder="Feel refreshed when you stay in this rustic gem."
-                className="uploadWrapper auto flex item-center justify-center flex column gap-1"
+                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
               />
             </div>
           </div>
@@ -49,8 +49,8 @@ export default function InformationofPlace() {
       </InformationofPlaceContainer>
       <FooterHosting
         active={description}
-        prev={`${userInfo?._id}/title`}
-        next={`${userInfo?._id}/duration`}
+        prev={`${currentUser?.id}/title`}
+        next={`${currentUser?.id}/duration`}
       />
     </>
   );

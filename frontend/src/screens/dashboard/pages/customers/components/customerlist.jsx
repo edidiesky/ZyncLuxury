@@ -39,7 +39,7 @@ const RoomsList = () => {
             </thead>
             <tbody>
               {users?.map((x, index) => {
-                return <TableCard x={x} type={"customerlist"} key={x?._id} />;
+                return <TableCard x={x} type={"customerlist"} key={x?.id} />;
               })}
             </tbody>
           </table>

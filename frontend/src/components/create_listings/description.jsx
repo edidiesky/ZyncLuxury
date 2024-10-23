@@ -8,7 +8,7 @@ import { handleListingType } from "../../Features/listing/listingSlice";
 export default function DescriptionofPlace() {
   const [tab, setTab] = useState(null);
   const { host_listing, gigsIsSuccess } = useSelector((store) => store.gigs);
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const handleListingTypes = (x, index) => {
     setTab(index);
@@ -23,12 +23,12 @@ export default function DescriptionofPlace() {
         <div
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="aboutCenter flex column gap-3 justify-center item-center w-85 auto"
+          className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
-          <h2 className=" w-85 auto text-start text-dark">
+          <h2 className=" w-[90%]  max-w-custom mx-auto text-start text-dark">
             Which of these best describes your place?
           </h2>
-          <div className="grid cardwrapper w-85 auto">
+          <div className="grid cardwrapper w-[90%]  max-w-custom mx-auto">
             {categorydata.map((x, index) => {
               return (
                 <div
@@ -53,9 +53,9 @@ export default function DescriptionofPlace() {
         </div>
       </DescriptionofPlaceContainer>
       <FooterHosting
-        next={`${userInfo?._id}/location`}
+        next={`${currentUser?.id}/location`}
         active={host_listing.listing_type}
-        prev={`${userInfo?._id}/about-your-place`}
+        prev={`${currentUser?.id}/about-your-place`}
       />
     </>
   );

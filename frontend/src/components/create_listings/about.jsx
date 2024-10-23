@@ -3,7 +3,7 @@ import styled from "styled-components";
 import FooterHosting from "./footer";
 import { useSelector } from "react-redux";
 export default function AboutPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
 
   return (
     <>
@@ -11,20 +11,20 @@ export default function AboutPlace() {
         <div
           data-aos="fade-up"
           data-aos-duration="1400"
-          className="aboutCenter flex item-center gap-3 justify-center w-85 auto"
+          className="aboutCenter flex items-center gap-3 justify-center w-[90%]  max-w-custom mx-auto"
         >
-          <div className="aboutC_right flex column flex-1">
-            <h1 className=" text-extra-bold text-dark">
-              <span className="block fs-20">Step 1</span>
+          <div className="aboutC_right flex flex-col flex-1">
+            <h1 className="family2 text-dark">
+              <span className="block text-lg">Step 1</span>
               Tell us about your place
             </h1>
-            <span className="block py-1 fs-18 text-light text-dark">
+            <span className="block py-1 text-sm regular text-dark">
               In this step, we'll ask you which type of property you have and if
               guests will book the entire place or just a room. Then let us know
               the location and how many guests can stay.
             </span>
           </div>{" "}
-          <div className="aboutC_right flex item-center justify-center flex-1">
+          <div className="aboutC_right flex items-center justify-center flex-1">
             <img
               src="https://a0.muscache.com/4ea/air/v2/pictures/da2e1a40-a92b-449e-8575-d8208cc5d409.jpg"
               alt=""
@@ -36,7 +36,7 @@ export default function AboutPlace() {
 
       <FooterHosting
         active={true}
-        next={`${userInfo?._id}/structure`}
+        next={`${currentUser?.id}/structure`}
         prev={"overview"}
       />
     </>

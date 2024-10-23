@@ -4,56 +4,56 @@ import FooterHosting from "./footer";
 import { useSelector } from "react-redux";
 import Star from "../common/svg/star";
 export default function ReviewOfPlace() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { GigsDetails } = useSelector((store) => store.gigs);
   return (
     <>
-      <ReviewOfPlaceContainer className="flex column gap-2 w-85 auto">
-        <div className="w-85 auto flex column gap-2">
+      <ReviewOfPlaceContainer className="flex flex-col gap-2 w-[90%]  max-w-custom mx-auto">
+        <div className="w-[90%]  max-w-custom mx-auto flex flex-col gap-2">
           {" "}
-          <h2 className="text-extra-bold w-85 auto w-100 text-start text-dark">
+          <h2 className="text-extra-bold w-[90%]  max-w-custom mx-auto w-full text-start text-dark">
             Review your listing
-            <span className="block py-1 fs-20 text-light text-grey">
+            <span className="block py-1text-lg regular text-grey">
               Here's what we'll show to guests. Make sure everything looks good.
             </span>
           </h2>
           <div className="ReviewOfCenter flex item-start gap-4 justify-start w-90 auto">
-            <div className="authC_right flex column flex-1 gap-1">
+            <div className="authC_right flex flex-col flex-1 gap-1">
               <img
                 src={GigsDetails?.listing_image[0]}
                 alt=""
                 className="image"
               />
-              <div className="flex column">
-                <h4 className="fs-16 text-bold w-100 flex item-center justify-space">
+              <div className="flex flex-col">
+                <h4 className="fs-16 family2 w-full flex items-center justify-between">
                   {GigsDetails?.listing_title}
                   <Star />
                 </h4>
-                <h5 className="fs-16 text-extra-bold text-dark">
+                <h5 className="fs-16family2 text-dark">
                   ${GigsDetails?.listing_price}{" "}
-                  <span className="text-light fs-14">night</span>
+                  <span className="regular fs-14">night</span>
                 </h5>
               </div>
             </div>{" "}
-            <div className="flex column flex-1">
-              <h3 className="fs-30 text-bold">What's next?</h3>
-              <div className="list1 fs-20 text-bold text-dark">
+            <div className="flex flex-col flex-1">
+              <h3 className="fs-30 family2">What's next?</h3>
+              <div className="list1text-lg family2 text-dark">
                 Confirm a few details and publish{" "}
-                <span className="block fs-14 text-light text-grey">
+                <span className="block fs-14 regular text-grey">
                   We’ll let you know if you need to verify your identity or
                   register with the local government.
                 </span>
               </div>
-              <div className="list1 fs-20 text-bold text-dark">
+              <div className="list1text-lg family2 text-dark">
                 Set up your calendar{" "}
-                <span className="block fs-14 text-light text-grey">
+                <span className="block fs-14 regular text-grey">
                   Choose which dates your listing is available. It will be
                   visible 20 hours after you publish.
                 </span>
               </div>
-              <div className="list1 fs-20 text-bold text-dark">
+              <div className="list1text-lg family2 text-dark">
                 Adjust your settings
-                <span className="block fs-14 text-light text-grey">
+                <span className="block fs-14 regular text-grey">
                   Set house rules, select a cancellation policy, choose how
                   guests book, and more.
                 </span>
@@ -63,8 +63,8 @@ export default function ReviewOfPlace() {
         </div>
       </ReviewOfPlaceContainer>
       <FooterHosting
-        next={`${userInfo?._id}/price`}
-        prev={`${userInfo?._id}/price`}
+        next={`${currentUser?.id}/price`}
+        prev={`${currentUser?.id}/price`}
       />
     </>
   );

@@ -159,7 +159,7 @@ const ReservationRoomsModal = ({
               <div className="w-full grid grid-cols-2 gap-2">
                 {/* guests */}
                 <div className="w-full text-sm font-booking_font_normal flex flex-col gap-2">
-                  <span className="text-bold text-dark">Number of Guests </span>
+                  <span className="family2 text-dark">Number of Guests </span>
                   <div
                     className="flex items-center border p-3 rounded-[10px] justify-between"
                     style={{ gap: "1rem" }}
@@ -171,7 +171,7 @@ const ReservationRoomsModal = ({
                     >
                       <BiMinus fontSize={"18px"} />
                     </button>{" "}
-                    <h4 className="fs-18 flex-1 text-center text-dark text-extra-bold">
+                    <h4 className="text-sm flex-1 text-center text-darkfamily2">
                       {guests}
                     </h4>
                     <button
@@ -184,7 +184,7 @@ const ReservationRoomsModal = ({
                 </div>{" "}
                 {/* Additional Beds  */}
                 <div className="w-full text-sm font-booking_font_normal flex flex-col gap-2">
-                  <span className="text-bold text-dark">
+                  <span className="family2 text-dark">
                     Number of Additional Beds{" "}
                   </span>
                   <div
@@ -198,7 +198,7 @@ const ReservationRoomsModal = ({
                     >
                       <BiMinus fontSize={"18px"} />
                     </button>{" "}
-                    <h4 className="fs-18 flex-1 text-center text-dark text-extra-bold">
+                    <h4 className="text-sm flex-1 text-center text-darkfamily2">
                       {additionalbeds}
                     </h4>
                     <button
@@ -213,7 +213,7 @@ const ReservationRoomsModal = ({
               <div className="w-full grid grid-cols-2 gap-2">
                 {/* singlebeds */}
                 <div className="w-full text-sm font-booking_font_normal flex flex-col gap-2">
-                  <span className="text-bold text-dark">
+                  <span className="family2 text-dark">
                     Number of single beds{" "}
                   </span>
                   <div
@@ -227,7 +227,7 @@ const ReservationRoomsModal = ({
                     >
                       <BiMinus fontSize={"18px"} />
                     </button>{" "}
-                    <h4 className="fs-18 flex-1 text-center text-dark text-extra-bold">
+                    <h4 className="text-sm flex-1 text-center text-darkfamily2">
                       {singlebeds}
                     </h4>
                     <button
@@ -240,7 +240,7 @@ const ReservationRoomsModal = ({
                 </div>{" "}
                 {/* twinbeds Beds  */}
                 <div className="w-full text-sm font-booking_font_normal flex flex-col gap-2">
-                  <span className="text-bold text-dark">
+                  <span className="family2 text-dark">
                     Number of twin beds{" "}
                   </span>
                   <div
@@ -254,7 +254,7 @@ const ReservationRoomsModal = ({
                     >
                       <BiMinus fontSize={"18px"} />
                     </button>{" "}
-                    <h4 className="fs-18 flex-1 text-center text-dark text-extra-bold">
+                    <h4 className="text-sm flex-1 text-center text-darkfamily2">
                       {twinbeds}
                     </h4>
                     <button

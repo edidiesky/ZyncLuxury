@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 const DashboardBanner = ({ title }) => {
-  // const { userInfo } = useAppSelector(store => store.auth)
+  // const { currentUser } = useAppSelector(store => store.auth)
   const userInfo = {};
   return (
     <div className="h-[14rem] rounded-[20px] overflow-hidden relative w-full">

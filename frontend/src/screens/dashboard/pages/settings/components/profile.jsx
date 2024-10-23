@@ -267,7 +267,7 @@ const Profile = () => {
                   <span className="text-grey font-normal">
                     Confirm Password
                   </span>
-                  <div className="input flex item-center gap-1">
+                  <div className="input flex items-center gap-1">
                     {/* <MdOutlineMailOutline fontSize={'18px'} className="text-grey" /> */}
                     <input
                       className="w-full text-dark font-normal text-sm inputs"

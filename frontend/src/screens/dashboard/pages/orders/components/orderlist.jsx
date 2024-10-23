@@ -28,7 +28,7 @@ const OrderList = () => {
             </thead>
             <tbody>
               {payments?.map((x, index) => {
-                return <TableCard x={x} type={"orderlist"} key={x?._id} />;
+                return <TableCard x={x} type={"orderlist"} key={x?.id} />;
               })}
             </tbody>
           </table>

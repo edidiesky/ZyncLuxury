@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { handleListingTitle } from "../../Features/listing/listingSlice";
 export default function TitleofPlace() {
   const { host_listing } = useSelector((store) => store.gigs);
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const [title, setTitle] = useState("");
   const dispatch = useDispatch();
 
@@ -23,26 +23,26 @@ export default function TitleofPlace() {
   return (
     <>
       <TitleofPlaceContainer>
-        <div className="w-100 hidden">
+        <div className="w-full hidden">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex column justify-center item-center w-85 auto"
+            className="aboutCenter flex flex-col justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
-            <h2 className="text-extra-bold w-100 text-start text-dark">
+            <h2 className="text-extra-bold w-full text-start text-dark">
               Add some Title of your boat
-              <span className="block py-1 fs-18 text-light text-grey">
+              <span className="block py-1 text-sm regular text-grey">
                 Short titles work best. Have fun with it—you can always change
                 it later.
               </span>
             </h2>
-            <div className="grid w-85 auto">
+            <div className="grid w-[90%]  max-w-custom mx-auto">
               <textarea
                 placeholder="fun boat"
                 value={title}
                 name="title"
                 onChange={handleListingTitles}
-                className="uploadWrapper auto flex item-center justify-center flex column gap-1"
+                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
               />
             </div>
           </div>
@@ -50,8 +50,8 @@ export default function TitleofPlace() {
       </TitleofPlaceContainer>
       <FooterHosting
         active={host_listing.listing_title}
-        prev={`${userInfo?._id}/photos`}
-        next={`${userInfo?._id}/description`}
+        prev={`${currentUser?.id}/photos`}
+        next={`${currentUser?.id}/description`}
       />
     </>
   );

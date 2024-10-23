@@ -128,7 +128,7 @@ export const UpdateSingleUser = createAsyncThunk(
       };
       // console.log(user);
       const { data } = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URLS}/user/${state.auth.userInfo?.id}`,
+        `${import.meta.env.VITE_API_BASE_URLS}/user/${state.auth.currentUser?.id}`,
         user,
         config
       );

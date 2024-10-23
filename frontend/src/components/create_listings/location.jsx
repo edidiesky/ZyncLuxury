@@ -10,7 +10,7 @@ import { handleListingLocation } from "../../Features/listing/listingSlice";
 export default function Location() {
   const dispatch = useDispatch();
 
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   const { host_listing } = useSelector((store) => store.gigs);
 
   const [country, setCountry] = useState("");
@@ -42,18 +42,18 @@ export default function Location() {
         <div
           data-aos="fade-up"
           data-aos-duration="1400"
-          className="aboutCenter flex column gap-2 justify-center item-center w-85 auto"
+          className="aboutCenter flex flex-col gap-2 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
-          <h2 className="text-bold w-100 text-start text-dark">
+          <h2 className="family2 w-full text-start text-dark">
             Where's your place located?
-            <span className="fs-20 block py-1 text-light text-grey">
+            <span className="fs-20 block py-1 regular text-grey">
               Your address is only shared with guests after they’ve made a
               reservation.
             </span>
           </h2>
           <form
             action=""
-            className="locationsearch text-dark flex item-center gap-2"
+            className="locationsearch text-dark flex items-center gap-2"
           >
             <div className="searchwrapper auto">
               <SelectInput value={country} onChange={onChange} />
@@ -64,8 +64,8 @@ export default function Location() {
       </LocationofPlaceContainer>
       <FooterHosting
         active={active}
-        next={`${userInfo?._id}/floor-plan`}
-        prev={`${userInfo?._id}/structure`}
+        next={`${currentUser?.id}/floor-plan`}
+        prev={`${currentUser?.id}/structure`}
       />
     </>
   );

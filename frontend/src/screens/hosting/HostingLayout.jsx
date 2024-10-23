@@ -18,8 +18,8 @@ const HostingLayout = () => {
         {registermodal && <RegisterModal modal={registermodal} />}
       </AnimatePresence>
 
-      <div className="w-full flex flex-col gap-8">
-        <div className="w-full sticky top-0 left-0 py-6 border-b bg-white">
+      <div className="w-full flex flex-col">
+        <div className="w-full sticky top-0 left-0 py-4 border-b bg-white">
           <div
             className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between gap-12"
           >

@@ -127,7 +127,7 @@ const Navbar = () => {
 
         <div
           style={{ zIndex: "200" }}
-          className="w-full Header_wrapper bg-[#22253d] shadows border-r border-[#22253d] h-full  flex item-center flex-col gap-4"
+          className="w-full Header_wrapper bg-[#22253d] shadows border-r border-[#22253d] h-full  flex items-center flex-col gap-4"
         >
           {currentUser && (
             <div className="flex p-4 items-center gap-2">

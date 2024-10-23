@@ -39,6 +39,7 @@ import {
   PriceOfPlace,
   StandOut,
   TitleOfPlace,
+  Starting,
 } from "./screens/hosting";
 import HostingLayout from "./screens/hosting/HostingLayout";
 // PaymentSuccess
@@ -143,7 +144,7 @@ export default function App() {
             }
           />
           <Route
-            path="DescriptionOfPlace"
+            path="structure"
             element={
               <Suspense fallback={<></>}>
                 <DescriptionOfPlace />
@@ -170,7 +171,7 @@ export default function App() {
             index
             element={
               <Suspense fallback={<></>}>
-                <StandOut />
+                <Starting />
               </Suspense>
             }
           />
@@ -208,7 +209,7 @@ export default function App() {
           />
           {/* about */}
           <Route
-            path="About-Place"
+            path="about-your-place"
             element={
               <Suspense fallback={<></>}>
                 <AboutPlace />

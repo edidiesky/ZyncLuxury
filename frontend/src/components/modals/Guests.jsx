@@ -60,9 +60,9 @@ const GuestsModal = ({
 
           <div className="w-full flex flex-col gap-8">
             <div className="w-full fs-16 flex items-center justify-between">
-              <span className="text-bold text-dark">
+              <span className="family2 text-dark">
                 Adults{" "}
-                <div className="block fs-14 text-light text-dark">Age 13+</div>
+                <div className="block fs-14 regular text-dark">Age 13+</div>
               </span>
               <div
                 className="flex items-center justify-end"
@@ -75,7 +75,7 @@ const GuestsModal = ({
                 >
                   <BiMinus fontSize={"18px"} />
                 </button>{" "}
-                <h4 className="fs-18 flex-1 text-dark text-extra-bold">
+                <h4 className="text-sm flex-1 text-darkfamily2">
                   {adults}
                 </h4>
                 <button
@@ -88,9 +88,9 @@ const GuestsModal = ({
               </div>
             </div>{" "}
             <div className="w-full fs-16 flex items-center justify-between">
-              <span className="text-bold text-dark">
+              <span className="family2 text-dark">
                 Children{" "}
-                <div className="block fs-14 text-light text-dark">
+                <div className="block fs-14 regular text-dark">
                   Age 2 - 12
                 </div>
               </span>
@@ -105,7 +105,7 @@ const GuestsModal = ({
                 >
                   <BiMinus fontSize={"18px"} />
                 </button>{" "}
-                <h4 className="fs-18 flex-1 text-dark text-extra-bold">
+                <h4 className="text-sm flex-1 text-darkfamily2">
                   {childrens}
                 </h4>
                 <button

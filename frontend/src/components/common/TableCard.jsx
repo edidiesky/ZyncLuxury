@@ -67,10 +67,10 @@ const TableCard = ({ x, type, handleModal }) => {
           )}
         </AnimatePresence>
         {/* <Delete /> */}
-        <tr key={x?._id}>
+        <tr key={x?.id}>
           <td className='text-sm font-semibold'>
             <div className="flex flex-col">
-              <span className=" font-normal text-dark text-bold">
+              <span className=" font-normal text-dark family2">
                 {x?.name}
               </span>
               {/* <span className=" font-normal family1 text-dark">{x?.email}</span> */}
@@ -96,7 +96,7 @@ const TableCard = ({ x, type, handleModal }) => {
           </td>
 
           <td className='text-sm font-semibold'>
-            <span className="text-dark  font-normal family1 text-light">
+            <span className="text-dark  font-normal family1 regular">
               {moment(x?.createdAt).format("DD MMM YYYY")}
             </span>
           </td>
@@ -135,7 +135,7 @@ const TableCard = ({ x, type, handleModal }) => {
             />
           )}
         </AnimatePresence>
-        <tr className="family1" key={x?._id}>
+        <tr className="family1" key={x?.id}>
           <td className="text-sm font-semibold">
             <div className="flex w-full justify-start items-center gap-4">
               <img src={x?.images[0]} alt="" className="w-16 object-cover" />
@@ -275,7 +275,7 @@ const TableCard = ({ x, type, handleModal }) => {
   return (
     <>
       {/* <Delete /> */}
-      <tr key={x?._id}>
+      <tr key={x?.id}>
         <td className='text-sm font-semibold'>
           <span className=" font-normal family1 text-dark">{x?.plan}</span>
         </td>
@@ -284,12 +284,12 @@ const TableCard = ({ x, type, handleModal }) => {
         </td>
 
         <td className='text-sm font-semibold'>
-          <span className="text-dark  font-normal family1 text-light">
+          <span className="text-dark  font-normal family1 regular">
             Type 1
           </span>
         </td>
         <td className='text-sm font-semibold'>
-          <span className="text-dark  font-normal family1 text-light">
+          <span className="text-dark  font-normal family1 regular">
             {x?.date}
           </span>
         </td>

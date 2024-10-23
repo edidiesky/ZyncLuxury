@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
-// import PriceofPlace from "../components/listing/price";
+// import PriceofPlace from "../../components/create_listings/price";
 
 export default function PriceOfplace() {
   return (
     <>
-      <PriceOfplaceContainer className="flex item-center justify-center">
+      <PriceOfplaceContainer className="flex items-center justify-center">
         {/* <PriceofPlace /> */}
       </PriceOfplaceContainer>
     </>

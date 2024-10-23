@@ -11,7 +11,8 @@ const ReviewOfPlace = lazy(() => import("./ReviewOfPlace"));
 const PriceOfPlace = lazy(() => import("./PriceOfPlace"));
 const StandOut = lazy(() => import("./StandOut"));
 const TitleOfPlace = lazy(() => import("./TitleOfPlace"));
-// StandOut
+const Starting = lazy(() => import("./Starting"));
+// Starting
 
 export {
   AboutPlace,
@@ -25,4 +26,5 @@ export {
   PriceOfPlace,
   StandOut,
   TitleOfPlace,
+  Starting,
 };

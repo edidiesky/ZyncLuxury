@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
-// import AboutPlace from "../components/listing/about";
+import AboutPlaceComponent from "../../components/create_listings/about";
 export default function AboutPlace() {
   return (
     <>
-      <AboutplaceContainer className="flex item-center justify-center">
-        {/* <AboutPlace /> */}
+      <AboutplaceContainer className="flex items-center justify-center">
+        <AboutPlaceComponent />
       </AboutplaceContainer>
     </>
   );
