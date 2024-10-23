@@ -1,4 +1,3 @@
- 
 import React, { useState, useCallback, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -9,6 +8,7 @@ import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 const DashboardIndex = () => {
   const [roommodal, setRoomModal] = useState(false);
   const { deleteRoomisSuccess, page } = useSelector((store) => store.room);
+  const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllRoomsForAdmin());
@@ -32,11 +32,10 @@ const DashboardIndex = () => {
           </div>
           <div className="flex items-center lg:justify-end gap-2">
             <Link
-              to={"/dashboard/rooms/create-room"}
-              className="p-3 btn cursor-pointer text-sm px-8 family2 
-             rounded-[10px]  text-white"
+              to={`/become-a-host/${currentUser?.id}`}
+              className="btn text-center md:block hidden text-sm md:text-base regular text-white px-4 md:px-8 py-3"
             >
-              Add a room
+              Host your Home
             </Link>
           </div>
         </div>

@@ -1,4 +1,3 @@
- 
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -45,7 +44,7 @@ export const getAllRooms = createAsyncThunk(
       }
 
       // Make the API request
-      const { data } = await axios.get(roomUrl);
+      const { data } = await axios.get(roomUrl,config);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -61,18 +60,24 @@ export const getAllRoomsForAdmin = createAsyncThunk(
   "getAllRoomsForAdmin",
   async (name, thunkAPI) => {
     try {
+         const state = thunkAPI.getState();
+         const config = {
+           headers: {
+             authorization: `Bearer ${state.auth.token}`,
+           },
+         };
       const { page, search, limit } = thunkAPI.getState().room;
       let roomUrl = `${import.meta.env.VITE_API_BASE_URLS}/room/admin`;
       if (page) {
         roomUrl = roomUrl + `?page=${page}`;
-        const { data } = await axios.get(roomUrl);
+        const { data } = await axios.get(roomUrl,config);
         return data;
       } else if (search) {
         roomUrl = roomUrl + `?search=${search}`;
-        const { data } = await axios.get(roomUrl);
+        const { data } = await axios.get(roomUrl,config);
         return data;
       } else {
-        const { data } = await axios.get(roomUrl);
+        const { data } = await axios.get(roomUrl,config);
         return data;
       }
     } catch (error) {
@@ -141,7 +146,7 @@ export const CreateRoom = createAsyncThunk(
         roomdata,
         config
       );
-
+      localStorage.removeItem("listing");
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(

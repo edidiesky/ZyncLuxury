@@ -82,10 +82,10 @@ const Profile = ({ setBar, bar }) => {
                       My Profile
                     </Link>
                     <Link
-                      to={"/dashboard/menu"}
+                      to={"/dashboard/rooms"}
                       className="text-sm block font-normal px-4 py-2 hover:bg-[#fafafa] text-[#000]"
                     >
-                      My Menus
+                      My Listings
                     </Link>
                     <Link
                       to={"/dashboard/orders"}
