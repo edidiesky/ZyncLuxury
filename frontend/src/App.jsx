@@ -184,7 +184,7 @@ export default function App() {
             }
           />
           <Route
-            path="TitleOfPlace"
+            path="title"
             element={
               <Suspense fallback={<></>}>
                 <TitleOfPlace />

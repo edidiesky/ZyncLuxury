@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-// import TitleofPlace from "../components/listing/title";
+import TitleofPlaceComponent from "../../components/create_listings/title";
 
 export default function TitleOfplace() {
   return (
     <>
       <TitleOfplaceContainer className="flex items-center justify-center">
-        {/* <TitleofPlace /> */}
+        <TitleofPlaceComponent />
       </TitleOfplaceContainer>
     </>
   );
@@ -15,6 +15,4 @@ export default function TitleOfplace() {
 const TitleOfplaceContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  min-height: 100vh;
-  /* padding-top: 4rem; */
 `;

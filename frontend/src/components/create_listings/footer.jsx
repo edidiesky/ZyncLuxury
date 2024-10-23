@@ -29,7 +29,12 @@ export default function FooterHosting({ next, prev, text, active, submit }) {
 
   return (
     <>
-      <div className="fixed bottom-0 w-full bg-white shadow border-t h-[80px] flex items-center">
+      <div
+        style={{
+          backdropFilter: "blur(14px)",
+        }}
+        className="fixed bottom-0 w-full bg-[#ffffff78] shadow z-[4000] border-t h-[80px] flex items-center"
+      >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           {!text && (
             <Link

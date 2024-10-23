@@ -23,26 +23,26 @@ export default function TitleofPlace() {
   return (
     <>
       <TitleofPlaceContainer>
-        <div className="w-full hidden">
+        <div className="w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex flex-col justify-center items-center w-[90%]  max-w-custom mx-auto"
+            className="aboutCenter gap-8 flex flex-col justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
             <h2 className="family2 w-full text-start text-dark">
               Add some Title of your boat
-              <span className="block py-1 text-sm regular text-grey">
+              <span className="block py-1 text-sm md:text-base regular text-grey">
                 Short titles work best. Have fun with it—you can always change
                 it later.
               </span>
             </h2>
             <div className="grid w-[90%]  max-w-custom mx-auto">
               <textarea
-                placeholder="fun boat"
+                placeholder="Haven Paradise"
                 value={title}
                 name="title"
                 onChange={handleListingTitles}
-                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
+                className="uploadWrapper mx-auto flex items-center justify-center flex-col gap-1"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function TitleofPlace() {
 
 const TitleofPlaceContainer = styled.div`
   width: 100%;
-  padding-bottom: 6rem;
+  padding: 6rem 0;
   @media (max-width: 780px) {
     padding-top: 2.5rem;
   }
@@ -82,10 +82,8 @@ const TitleofPlaceContainer = styled.div`
     outline: none;
     font-size: 1.2rem;
     font-weight: 500;
-    font-family: inherit;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.4);
-    color: var(--grey-1);
     @media (max-width: 780px) {
       width: 100%;
       /* padding: 0; */
