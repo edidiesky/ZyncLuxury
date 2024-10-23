@@ -9,8 +9,7 @@ export default function AboutPlace() {
     <>
       <AboutPlaceContainer>
         <div
-          data-aos="fade-up"
-          data-aos-duration="1400"
+        
           className="aboutCenter flex items-center gap-3 justify-center w-[90%]  max-w-custom mx-auto"
         >
           <div className="aboutC_right flex flex-col flex-1">

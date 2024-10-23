@@ -9,8 +9,7 @@ export default function Starting() {
     <>
       <StartingContainer>
         <div
-          data-aos="fade-up"
-          data-aos-duration="1400"
+        
           className="authCenter flex items-center gap-3 justify-center w-[90%]  max-w-custom mx-auto"
         >
           <div className="flex-1 flex flex-col ">

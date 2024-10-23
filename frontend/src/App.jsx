@@ -152,7 +152,7 @@ export default function App() {
             }
           />
           <Route
-            path="LocationOfplace"
+            path="location"
             element={
               <Suspense fallback={<></>}>
                 <LocationOfplace />

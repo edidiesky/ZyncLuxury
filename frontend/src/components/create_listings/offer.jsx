@@ -68,8 +68,7 @@ export default function OfferofPlace() {
     <>
       <OfferofPlaceContainer>
         <div
-          data-aos="fade-up"
-          data-aos-duration="1400"
+        
           className="aboutCenter flex flex-col gap-3 justify-center items-center w-[90%]  max-w-custom mx-auto"
         >
           <h2 className="text-extra-bold w-full text-start text-dark">

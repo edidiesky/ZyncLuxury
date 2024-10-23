@@ -107,8 +107,9 @@ export const roomSlice = createSlice({
     handleListingLocation: (state, action) => {
       state.listing = {
         ...state.listing,
-        location: action.payload.location,
-        region: action.payload.region,
+        latitude: action.payload.latitude,
+        longitude: action.payload.longitude,
+        country: action.payload.country,
       };
       localStorage.setItem("listing", JSON.stringify(state.listing));
     },

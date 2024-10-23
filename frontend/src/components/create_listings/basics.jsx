@@ -34,8 +34,7 @@ export default function BasicInfoAboutPlace() {
     <>
       <BasicInfoAboutPlaceContainer>
         <div
-          data-aos="fade-up"
-          data-aos-duration="1400"
+        
           className="aboutCenter flex flex-col gap-2 justify-center items-center"
         >
           <h2 className="family2 w-full text-start text-dark">
