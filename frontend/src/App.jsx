@@ -128,7 +128,7 @@ export default function App() {
           }
         >
           <Route
-            path="Basic-Information"
+            path="floor-plan"
             element={
               <Suspense fallback={<></>}>
                 <BasicInfoAboutPlace />

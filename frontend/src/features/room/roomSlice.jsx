@@ -17,7 +17,7 @@ const initialState = {
         country: "",
         guests: 0,
         bedrooms: 0,
-        bedroom: 0,
+        bathroom: 0,
         images: [],
         title: [],
         description: "",

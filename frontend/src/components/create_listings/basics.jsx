@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import FooterHosting from "./footer";
-import Map from "../forms/map";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -13,29 +12,29 @@ export default function BasicInfoAboutPlace() {
   const dispatch = useDispatch();
   const [guests, setGuests] = useState(2);
   const [bedrooms, setBedRooms] = useState(2);
-  const [beds, setBeds] = useState(1);
+  const [bathroom, setBathroom] = useState(1);
 
   useEffect(() => {
     dispatch(
-      handleBasicListing({ beds: beds, bedrooms: bedrooms, guests: guests })
+      handleBasicListing({ bathroom: bathroom, bedrooms: bedrooms, guests: guests })
     );
-  }, [guests, bedrooms, beds]);
+  }, [guests, bedrooms, bathroom]);
 
   useEffect(() => {
     if (listing) {
       setGuests(listing.guests);
       setBedRooms(listing.bedrooms);
-      setBeds(listing.beds);
+      setBathroom(listing.bathroom);
     }
-  }, [listing, setGuests, setBeds, setBedRooms]);
-  const active = beds && bedrooms && guests;
+  }, [listing, setGuests, setBathroom, setBedRooms]);
+  const active = bathroom && bedrooms && guests;
 
   return (
     <>
       <BasicInfoAboutPlaceContainer>
         <div
         
-          className="aboutCenter flex flex-col gap-2 justify-center items-center"
+          className="aboutCenter flex flex-col gap-8 justify-center items-center"
         >
           <h2 className="family2 w-full text-start text-dark">
             Share some basics about your place
@@ -43,9 +42,9 @@ export default function BasicInfoAboutPlace() {
               You'll add more details later, like bed types.
             </span>
           </h2>
-          <div className="flex typeContainer auto flex flex-col gap-2">
+          <div className="flex typeContainer mx-auto flex-col gap-8">
             {/* guest */}
-            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
+            <div className="w-full text-sm regular pb-6 border-b typewrapper flex items-center justify-between">
               Guests
               <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
@@ -66,7 +65,7 @@ export default function BasicInfoAboutPlace() {
               </div>
             </div>{" "}
             {/* bedrooms */}
-            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
+            <div className="w-full text-sm regular pb-6 border-b typewrapper flex items-center justify-between">
               Bedrooms
               <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
@@ -86,20 +85,20 @@ export default function BasicInfoAboutPlace() {
                 </button>
               </div>
             </div>{" "}
-            <div className="w-full text-sm regular bottom typewrapper flex items-center justify-between">
-              Beds
+            <div className="w-full text-sm regular pb-6 border-b typewrapper flex items-center justify-between">
+              Bathrooms
               <div className="flex items-center" style={{ gap: "1.2rem" }}>
                 <button
-                  onClick={() => setBeds(beds + 1)}
-                  disabled={beds >= 12}
+                  onClick={() => setBathroom(bathroom + 1)}
+                  disabled={bathroom >= 12}
                   className="icons flex items-center justify-center"
                 >
                   <BiPlus fontSize={"20px"} />
                 </button>{" "}
-                <h4 className="text-smfamily2">{beds}</h4>
+                <h4 className="text-smfamily2">{bathroom}</h4>
                 <button
-                  onClick={() => setBeds(beds - 1)}
-                  disabled={beds === 0}
+                  onClick={() => setBathroom(bathroom - 1)}
+                  disabled={bathroom === 0}
                   className="icons flex items-center justify-center"
                 >
                   <BiMinus fontSize={"20px"} />

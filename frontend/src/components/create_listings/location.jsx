@@ -53,7 +53,7 @@ export default function Location() {
       <LocationofPlaceContainer>
         <div className="aboutCenter flex flex-col gap-2 justify-center items-start w-[90%] md:w-[780px] max-w-custom mx-auto">
           <h2 className="family2 w-full text-start text-dark">
-            Where's your place located?
+            Where's your Listing located?
             <span className="text-sm md:text-lg block py-1 regular text-grey">
               Your address is only shared with guests after they’ve made a
               reservation.
