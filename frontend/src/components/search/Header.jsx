@@ -110,7 +110,7 @@ const Header = () => {
                 <div className="flex items-center gap-8">
                   <Link
                     to={`/become-a-host/${currentUser?.id}`}
-                    className="btn text-center text-sm md:block hidden  regular text-white px-4 md:px-8 py-3"
+                    className="btn text-center text-base md:block hidden  regular text-white px-4 md:px-8 py-3"
                   >
                     Host your Home
                   </Link>
@@ -120,7 +120,7 @@ const Header = () => {
                 <div className="flex justify-end items-center">
                   <button
                     onClick={() => dispatch(onLoginModal())}
-                    className="btn min-w-[130px] text-center text-base regular text-white px-8 py-4"
+                    className="btn min-w-[100px] text-center text-sm regular text-white px-4 py-3"
                   >
                     Sign Up
                   </button>

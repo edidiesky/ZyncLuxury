@@ -190,7 +190,7 @@ const RoomCard = ({ type, apartment, index }) => {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-col  bg-[#fff]">
+        <div className="w-full flex flex-col">
           <div
             className={`${
               type === "search" ? " py-3 px-4  gap-[4px]" : "p-4 gap-2"
