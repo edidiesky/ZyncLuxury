@@ -6,12 +6,9 @@ import { GrSecure } from "react-icons/gr";
 import { MdOutlineElectricalServices } from "react-icons/md";
 import { SiInfluxdb } from "react-icons/si";
 import { MdCleaningServices } from "react-icons/md";
-import { MdPrivacyTip } from "react-icons/md";
 import { GiConsoleController } from "react-icons/gi";
 import { FaKitchenSet } from "react-icons/fa6";
 import AnimateTextWord from "../common/AnimateTextWord";
-import { motion, useInView } from "framer-motion";
-import { smallslideup2 } from "@/constants/utils/framer";
 
 const whychooseList = [
   {
@@ -60,21 +57,10 @@ const whychooseList = [
 ];
 
 const About = () => {
-  const refCard = useRef(null);
-  const inView = useInView(refCard, {
-    margin: "0px 100px -120px 0px",
-  });
+ 
   return (
     <div data-scroll-section className="w-full relative flex flex-col gap-20">
-      {/* <div
-        // style={{
-        //   transform: "scale(1,-1)",
-        //   backgroundPosition: "center center",
-        //   backgroundImage:
-        //     "url(data:image/svg+xml;utf8,%3Csvg%20width%3D%221920%22%20height%3D%22904%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url%28%23prefix__clip0_75_23031%29%22%20fill%3D%22rgba%2861%2C67%2C109%2C1%29%22%3E%3Cpath%20d%3D%22M1321.57%20538C1357.08%20287.516%201273.7%2089.91%201127-.418L1374.18-6c65.77%20100.68-15.89%20431.512-52.61%20544zM312%20905c432.242%200%20746.77-180.667%20850-271-90.34%20157.09-176.766%20246.121-208.688%20271H312z%22%20fill%3D%22rgba%2861%2C67%2C109%2C1%29%22%20fill-opacity%3D%22.25%22%2F%3E%3Cpath%20d%3D%22M1344.5%20427c0-252.4-212.67-390.833-319-428.5H1373c70%2082.4%2010.17%20320-28.5%20428.5z%22%20fill%3D%22rgba%2861%2C67%2C109%2C1%29%22%20fill-opacity%3D%22.1%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M839.644%20904C1138.37%20793.549%201337%20508.902%201337%20184.5c0-63.218-7.54-124.926-21.9-184.5H1920v904H839.644zm0%200C676.842%201041.44%20484.311%201092%20278%201092c-584.87%200-1059-406.302-1059-907.5S-306.87-723%20278-723c511.098%200%20937.63%20310.269%201037.1%20723H0v904h839.644z%22%20fill%3D%22rgba%2861%2C67%2C109%2C1%29%22%20fill-opacity%3D%22.5%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1011.55%20904C1221.42%20793.90%201353%20564.007%201353%20308.5c0-108.584-23.76-212.552-67.2-308.5H1920v904h-908.45zm0%200c-187.291%20142.83-436.933%20230-711.05%20230C-280.78%201184-752%20792.025-752%20308.5S-280.78-567%20300.5-567c450.743%200%20835.31%20235.692%20985.3%20567H0v904h1011.55z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22prefix__clip0_75_23031%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h1920v904H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E)",
-        // }}
-        className="absolute bg-no-repeat z-10 top-0 left-0 right-0 h-full w-full"
-      ></div> */}
+     
       <div className="w-full py-20">
         <div className="w-[90%] max-w-custom mx-auto flex flex-col gap-20">
           <div className="grid lg:grid-cols-2 items-start md:items-center w-full gap-8">
@@ -100,12 +86,7 @@ const About = () => {
           <div className="w-full grid md:grid-cols-3 gap-y-16 gap-x-12">
             {whychooseList?.map((data, index) => {
               return (
-                <motion.div
-                  variants={smallslideup2}
-                  initial={"initial"}
-                  animate={inView ? "animate" : "exit"}
-                  ref={refCard}
-                  custom={index / 2}
+                <div
                   className="w-full cursor-pointer flex flex-col"
                 >
                   <div
@@ -132,7 +113,7 @@ const About = () => {
                       {data?.text}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
