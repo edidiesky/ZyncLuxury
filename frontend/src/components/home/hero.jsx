@@ -77,7 +77,8 @@ const Hero = () => {
           stagger: { amount: 0.6 },
           duration: 1.6,
           ease: "power4.out",
-        },.5
+        },
+        0.5
       )
       .fromTo(
         text1?.chars,
@@ -94,7 +95,7 @@ const Hero = () => {
           duration: 1.6,
           ease: "power4.out",
         },
-      .6
+        0.6
       )
       // hero_btn
       .fromTo(
@@ -480,7 +481,12 @@ const TopContent = ({ bar, setBar, currentUser }) => {
         </div>
         <div className=" items-center z-[40000000] flex justify-end">
           {currentUser ? (
-            <Profile setBar={setBar} />
+            <div className="flex items-center gap-8">
+              <Link href={`/become-a-host/${currentUser?.id}`} className="btn text-center text-sm md:text-base regular text-white px-4 md:px-8 py-3">
+                Host your Home
+              </Link>
+              <Profile setBar={setBar} />
+            </div>
           ) : (
             <div className="flex justify-end items-center">
               <button

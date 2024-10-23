@@ -3,7 +3,7 @@ import styled from "styled-components";
 import FooterHosting from "./footer";
 import { useSelector } from "react-redux";
 export default function StandOut() {
-  const { userInfo } = useSelector((store) => store.user);
+  const { currentUser } = useSelector((store) => store.auth);
   return (
     <>
       <StandOutContainer className="w-90 auto">
@@ -35,9 +35,9 @@ export default function StandOut() {
         </div>
       </StandOutContainer>
       <FooterHosting
-      active={true}
-        prev={`${userInfo?._id}/floor-plan`}
-        next={`${userInfo?._id}/photos`}
+        active={true}
+        prev={`${currentUser?._id}/floor-plan`}
+        next={`${currentUser?._id}/photos`}
       />
     </>
   );

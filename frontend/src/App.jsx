@@ -134,7 +134,15 @@ export default function App() {
             }
           />
           <Route
-            path="Description"
+            path="PriceOfPlace"
+            element={
+              <Suspense fallback={<></>}>
+                <PriceOfPlace />
+              </Suspense>
+            }
+          />
+          <Route
+            path="DescriptionOfPlace"
             element={
               <Suspense fallback={<></>}>
                 <DescriptionOfPlace />
@@ -158,7 +166,7 @@ export default function App() {
             }
           />
           <Route
-            path="StandOut"
+            index
             element={
               <Suspense fallback={<></>}>
                 <StandOut />

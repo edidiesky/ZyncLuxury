@@ -111,7 +111,7 @@ export const DeleteRoom = createAsyncThunk(
           authorization: `Bearer ${state.auth.token}`,
         },
       };
-      const { data } = await axios.delete(
+      await axios.delete(
         `${import.meta.env.VITE_API_BASE_URLS}/room/${roomdataid}`,
         config
       );

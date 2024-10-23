@@ -8,8 +8,28 @@ import {
   UpdateRoom,
   getAllRoomsForAdmin,
 } from "./roomReducer";
+const listings = JSON.parse(localStorage.getItem("host_listing"));
 const initialState = {
   rooms: [],
+  listing: listings
+    ? listings
+    : {
+        country: "",
+        guests: 0,
+        bedrooms: 0,
+        bedroom: 0,
+        images: [],
+        title: [],
+        description: "",
+        listingType: "",
+        type: "",
+        price: "",
+        region: "",
+        features: [],
+        cautionfee: "",
+        latitude: "",
+        longitude: "",
+      },
   room: null,
   creatingRoomisLoading: false,
   creatingRoomisSuccess: false,
@@ -69,13 +89,73 @@ export const roomSlice = createSlice({
       state.creatingRoomisSuccess = false;
       state.updateRoomisSuccess = false;
       state.room = null;
-      state.country = ""
-      state.bedroom = ""
+      state.country = "";
+      state.bedroom = "";
       state.title = "";
       state.minPrice = "";
       state.maxPrice = "";
       state.startDate = "";
       state.endDate = "";
+    },
+    handleListingType: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        type: action.payload,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingLocation: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        location: action.payload.location,
+        region: action.payload.region,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleBasicListing: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        bathroom: action.payload.bathroom,
+        bedrooms: action.payload.bedrooms,
+        guests: action.payload.guests,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingImage: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        images: action.payload,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingTitle: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        title: action.payload,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingDescription: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        description: action.payload,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingDate: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        startDate: action.payload.startDate,
+        endDate: action.payload.endDate,
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
+    },
+    handleListingPrice: (state, action) => {
+      state.listing = {
+        ...state.listing,
+        price: parseInt(action.payload),
+      };
+      localStorage.setItem("host_listing", JSON.stringify(state.listing));
     },
   },
   extraReducers: (builder) => {
@@ -164,7 +244,18 @@ export const roomSlice = createSlice({
   },
 });
 
-export const { handleClearRoomAlert, handlePage, handleFilterState } =
-  roomSlice.actions;
+export const {
+  handleClearRoomAlert,
+  handlePage,
+  handleFilterState,
+  handleListingType,
+  handleListingLocation,
+  handleBasicListing,
+  handleListingImage,
+  handleListingTitle,
+  handleListingDescription,
+  handleListingDate,
+  handleListingPrice,
+} = roomSlice.actions;
 
 export default roomSlice.reducer;

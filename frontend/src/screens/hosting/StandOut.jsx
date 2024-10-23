@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-// import StandOut from "../components/listing/stand-out";
+// import StandOut from "../components/create_listings/stand-out";
 
 export default function StandOut() {
   return (

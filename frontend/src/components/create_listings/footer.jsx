@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { CreateSingleGig } from "../../Features/listing/listingReducer";
+import { CreateRoom } from "@/features/room/roomReducer";
 export default function FooterHosting({ next, prev, text, active, submit }) {
   const dispatch = useDispatch();
   const { userInfo } = useSelector((store) => store.user);
@@ -15,7 +15,7 @@ export default function FooterHosting({ next, prev, text, active, submit }) {
     navigate(`/become-a-host/${next}`);
   };
   const handleCreateListing = () => {
-    dispatch(CreateSingleGig(host_listing));
+    dispatch(CreateRoom(host_listing));
   };
 
   // navigate if the listing has been succesfully created
