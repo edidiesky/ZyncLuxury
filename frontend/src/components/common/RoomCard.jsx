@@ -1,25 +1,25 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import moment from "moment";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { addDays } from "date-fns";
-import { CiCalendar } from "react-icons/ci";
 import Heart from "../../assets/svg/heart";
-import { TbLocation } from "react-icons/tb";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
-import { CiStar } from "react-icons/ci";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import { addListToWish } from "@/features/auth/authReducer";
 import Image from "./Image";
 import DeleteModal from "../modals/DeleteModal";
+import { smallslideup2 } from "@/constants/utils/framer";
 
-const RoomCard = ({ type, apartment, inView, index }) => {
-  console.log(apartment);
+const RoomCard = ({ type, apartment, index }) => {
+  // console.log(apartment);
   const [tabindex, setTabIndex] = useState(0);
   const [userdeletemodal, setUserDeleteModal] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
-  const today = new Date();
+  const refCard = useRef(null);
+  const inView = useInView(refCard, {
+    margin: "0px 100px -120px 0px",
+  });
   const handleImagePosition = (position) => {
     if (position === "left") {
       setTabIndex(tabindex < 0 ? apartment?.images?.length - 1 : tabindex - 1);
@@ -95,7 +95,9 @@ const RoomCard = ({ type, apartment, inView, index }) => {
               } flex items-center family1 text-grey gap-1`}
             >
               {" "}
-              {apartment?.rooms?.state && <span>{apartment?.rooms?.state},</span>}{" "}
+              {apartment?.rooms?.state && (
+                <span>{apartment?.rooms?.state},</span>
+              )}{" "}
               {apartment?.rooms?.country}
             </div>
             <div
@@ -113,7 +115,6 @@ const RoomCard = ({ type, apartment, inView, index }) => {
                 </span>
               </span>
             </div>
-    
           </div>
         </Link>
       </>
@@ -121,11 +122,12 @@ const RoomCard = ({ type, apartment, inView, index }) => {
   }
 
   return (
-    <div
-      // variants={smallslideup2}
-      // initial={"initial"}
-      // animate={inView ? "animate" : "exit"}
+    <motion.div
+      variants={smallslideup2}
+      initial={"initial"}
+      animate={inView ? "animate" : "exit"}
       className="w-full"
+      ref={refCard}
       custom={index}
     >
       <Link
@@ -256,7 +258,7 @@ const RoomCard = ({ type, apartment, inView, index }) => {
           </div>
         </div>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 
