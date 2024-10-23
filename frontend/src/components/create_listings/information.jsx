@@ -23,25 +23,25 @@ export default function InformationofPlace() {
   return (
     <>
       <InformationofPlaceContainer>
-        <div className="w-full hidden">
+        <div className="w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex flex-col gap-1 justify-center items-center w-[90%]  max-w-custom mx-auto"
+            className="aboutCenter flex flex-col gap-6 justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
             <h2 className="family2 w-full text-start text-dark">
               Create your description
-              <span className="block py-1text-lg regular text-grey">
+              <span className="block py-1 text-sm md:text-base regular text-grey">
                 Share what makes your place special.
               </span>
             </h2>
-            <div className="grid w-[90%]  max-w-custom mx-auto">
+            <div className="grid w-[90%] max-w-custom mx-auto">
               <textarea
                 value={description}
                 name="description"
                 onChange={handleListingDescriptions}
                 placeholder="Feel refreshed when you stay in this rustic gem."
-                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
+                className="uploadWrapper mx-auto flex items-center justify-center flex-col gap-1"
               />
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function InformationofPlace() {
       <FooterHosting
         active={description}
         prev={`${currentUser?.id}/title`}
-        next={`${currentUser?.id}/duration`}
+        next={`${currentUser?.id}/price`}
       />
     </>
   );
@@ -58,7 +58,7 @@ export default function InformationofPlace() {
 
 const InformationofPlaceContainer = styled.div`
   width: 100%;
-  padding-bottom: 6rem;
+  padding: 4rem 0;
   @media (max-width: 780px) {
     padding-top: 2.5rem;
   }
@@ -70,7 +70,7 @@ const InformationofPlaceContainer = styled.div`
     padding: 2rem 0;
   }
   .uploadWrapper {
-    width: 70%;
+    width: 65%;
     border: 1px solid rgba(0, 0, 0, 1);
     padding: 2rem 2rem;
     height: 100%;
@@ -83,7 +83,6 @@ const InformationofPlaceContainer = styled.div`
     font-family: inherit;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.4);
-    color: var(--grey-1);
     @media (max-width: 780px) {
       width: 100%;
       /* padding: 0; */

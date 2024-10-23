@@ -18,7 +18,7 @@ import {
 router
   .route("/")
   .get(GetAllRoom)
-  .post(authMiddleware, adminMiddleware, CreateRooms);
+  .post(authMiddleware, CreateRooms);
 router.route("/admin").get(authMiddleware, adminMiddleware, GetAllSellerRooms);
 router
   .route("/room-reservation-history")

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-// import PriceofPlace from "../../components/create_listings/price";
+import Price from "../../components/create_listings/price";
 
 export default function PriceOfplace() {
   return (
     <>
       <PriceOfplaceContainer className="flex items-center justify-center">
-        {/* <PriceofPlace /> */}
+        <Price />
       </PriceOfplaceContainer>
     </>
   );
@@ -15,6 +15,4 @@ export default function PriceOfplace() {
 const PriceOfplaceContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  min-height: 100vh;
-  /* padding-top: 4rem; */
 `;

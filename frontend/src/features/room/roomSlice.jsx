@@ -16,12 +16,12 @@ const initialState = {
     : {
         country: "",
         guests: 0,
-        bedrooms: 0,
+        bedroom: 0,
         bathroom: 0,
         images: [],
         title: [],
         description: "",
-        listingType: "",
+        listingType: "RENT",
         type: "",
         price: "",
         region: "",
@@ -117,7 +117,7 @@ export const roomSlice = createSlice({
       state.listing = {
         ...state.listing,
         bathroom: action.payload.bathroom,
-        bedrooms: action.payload.bedrooms,
+        bedroom: action.payload.bedrooms,
         guests: action.payload.guests,
       };
       localStorage.setItem("listing", JSON.stringify(state.listing));

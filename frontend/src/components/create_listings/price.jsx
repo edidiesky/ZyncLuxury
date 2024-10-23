@@ -4,17 +4,15 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import FooterHosting from "./footer";
 import {
-  clearGigsAlert,
   handleListingPrice,
 } from "@/features/room/roomSlice";
-import Message from "../loaders/Message";
-import LoaderIndex from "../loaders";
+import Loader from "../home/loader";
 export default function PriceofPlace() {
   const { currentUser } = useSelector((store) => store.auth);
-  const { listing, creatingRoomisSuccess, gigsIsLoading } = useSelector(
+  const { listing, creatingRoomisLoading } = useSelector(
     (store) => store.room
   );
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState("");
   const dispatch = useDispatch();
 
   const handleListingPrices = (e) => {
@@ -30,17 +28,12 @@ export default function PriceofPlace() {
   return (
     <>
       <PriceofPlaceContainer>
-        <Message
-          alertText={"Your Listing has been succesfully created"}
-          showAlert={creatingRoomisSuccess}
-          // handleClearAlert={}
-        />
-        {gigsIsLoading && <LoaderIndex />}
-        <div className="hidden-w-full">
+        {creatingRoomisLoading && <Loader />}
+        <div className="w-full">
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex flex-col gap-1 justify-center items-center w-[90%]  max-w-custom mx-auto"
+            className="aboutCenter flex flex-col gap-4 justify-center items-start w-[90%] md:w-[500px]  max-w-custom mx-auto"
           >
             <h2 className="family2 w-full text-start text-dark">
               Now, set your price
@@ -48,27 +41,20 @@ export default function PriceofPlace() {
                 You can change it anytime.
               </span>
             </h2>
-            <div className="grid w-[90%]  max-w-custom mx-auto">
-              <div
-                placeholder="fun boat"
-                className="uploadWrapper auto flex items-center justify-center flex flex-col gap-1"
-              >
-                <input
-                  value={price}
-                  name="price"
-                  placeholder="$50"
-                  onChange={handleListingPrices}
-                  className="fs-30 family1 text-dark text-centerfamily2"
-                />
-              </div>
-            </div>
+            <input
+              value={`${price}`}
+              name="price"
+              placeholder="$50"
+              onChange={handleListingPrices}
+              className="text-5xl md:text-9xl sm:w-[500px] family1 text-dark text-center family2"
+            />
           </div>
         </div>
       </PriceofPlaceContainer>
       <FooterHosting
         submit={true}
         active={listing.price}
-        prev={`${currentUser?.id}/duration`}
+        prev={`${currentUser?.id}/description`}
         next={`${currentUser?.id}/reviews`}
       />
     </>
@@ -77,7 +63,7 @@ export default function PriceofPlace() {
 
 const PriceofPlaceContainer = styled.div`
   width: 100%;
-  padding-bottom: 6rem;
+  padding: 6rem 0;
   /* @media (max-width: 780px) {
     padding-top: 2.5rem;
   } */

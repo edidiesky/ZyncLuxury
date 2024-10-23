@@ -111,7 +111,9 @@ const GetAllSellerRooms = asyncHandler(async (req, res) => {
 const CreateRooms = asyncHandler(async (req, res) => {
   const room = await prisma.rooms.create({
     data: {
-      userid: req.user?.userId,
+      user: {
+        connect: { id: req.user.userId },
+      },
       ...req.body,
     },
   });

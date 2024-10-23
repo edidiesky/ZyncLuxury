@@ -55,7 +55,7 @@ model User {
   email           String?         @unique
   emailVerified   DateTime?
   image           String?
-  role            RoleStatus      @default(USER)
+  role            RoleStatus      @default(SELLER)
   hashedPassword  String?
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
@@ -79,26 +79,26 @@ model User {
 }
 
 model Rooms {
-  id           String       @id @default(auto()) @map("_id") @db.ObjectId
-  title        String
-  description  String
-  price        String?
-  city         String?
-  country      String
-  state      String?
-  type         RoomType?    @default(STAY)
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  price       String?
+  city        String?
+  country     String
+  state       String?
+  type        RoomType?    @default(STAY)
   listingType listingType? @default(RENT)
-  cautionfee   String?
-  guests       Int?
-  latitude     String?
-  longitude    String?
-  bedroom      Int
-  bathroom     Int
-  images       String[]
-  features     Json?
-  amenities    Json?
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
+  cautionfee  String?
+  guests      Int?
+  latitude    String?
+  longitude   String?
+  bedroom     Int
+  bathroom    Int
+  images      String[]
+  features    Json?
+  amenities   Json?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
 
   sellerid String @db.ObjectId
 
