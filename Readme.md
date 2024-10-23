@@ -2,7 +2,7 @@
 
 ZyncLuxury is a web platform that offers luxurious home listings for home lovers. It allows users to explore various homes, place orders, and leave reviews. The platform owner are given the priviledges when authenticated to see home listings, manage home listings items, see reviews, receive payment, see list of customers, and lastly see how their products(home listings items) has been purchased over a period of time
 
-![Project Screenshot](/image_2.jpg)
+![Project Screenshot](/image_1.jpg)
 
 ## Table of Contents
 
