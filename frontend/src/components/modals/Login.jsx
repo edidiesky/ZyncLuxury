@@ -155,7 +155,7 @@ const LoginModal = () => {
                       onClick={handleLoginModal}
                       style={{ textDecoration: "underline" }}
                       className="font-booking_font_bold font-bold cursor-pointer"
-                      // href={"#"}
+                      //  to={"#"}
                     >
                       Sign Up
                     </span>

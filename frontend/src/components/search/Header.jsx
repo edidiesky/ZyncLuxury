@@ -32,6 +32,8 @@ const linkData = [
 ];
 const Header = () => {
   const [country, setCountry] = useState("");
+  const [bar, setBar] = React.useState(false);
+
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   return (
@@ -57,7 +59,7 @@ const Header = () => {
                 transition: "all .4s",
               }}
               htmlFor="search"
-              className="relative w-[200px] md:w-[400px]"
+              className="relative w-[200px] md:w-[300px]"
             >
               <input
                 type="text"
@@ -87,14 +89,14 @@ const Header = () => {
             </label>
           </div>
           <div className="hidden lg:flex items-center justify-center gap-6">
-            <div className=" lg:flex hidden items-center gap-6">
+            <div className=" lg:flex hidden items-center gap-4">
               {linkData?.map((list, index) => {
                 return (
                   <NavLink
                     end
                     to={`/${list.path}`}
                     key={index}
-                    className={`text-base hover:text-grey font-normal family1 text-dark flex items-center
+                    className={`text-sm hover:text-grey font-normal family1 text-dark flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
                   >
                     {/* <img src={list?.icon} className="w-4" alt="" /> */}
@@ -105,7 +107,15 @@ const Header = () => {
             </div>
             <div className=" items-center flex justify-end">
               {currentUser ? (
-                <Profile />
+                <div className="flex items-center gap-8">
+                  <Link
+                    to={`/become-a-host/${currentUser?.id}`}
+                    className="btn text-center text-sm  regular text-white px-4 md:px-8 py-3"
+                  >
+                    Host your Home
+                  </Link>
+                  <Profile setBar={setBar} />
+                </div>
               ) : (
                 <div className="flex justify-end items-center">
                   <button
@@ -128,6 +138,7 @@ export const FilterRooms = () => {
   // filtered states
   const [country, setCountry] = useState("");
   const [typeindex, setTypeIndex] = useState(null);
+  const [bar, setBar] = React.useState(false);
   // modal
   const [property, setProperty] = useState(false);
   const dispatch = useDispatch();

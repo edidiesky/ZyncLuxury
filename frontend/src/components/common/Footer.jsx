@@ -127,21 +127,21 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-4">
               <Link
                 style={{ transition: "all .5s" }}
-                href={"github.com/edidiesky"}
+                 to={"github.com/edidiesky"}
                 className="w-16 md:w-20 h-16 md:h-20 hover:-translate-y-10 bg-[#282c48] flex text-5xl cursor-pointer md:text-6xl items-center rounded-full text-white justify-center"
               >
                 <Github />
               </Link>
               <Link
                 style={{ transition: "all .5s" }}
-                href={"https://twitter.com/edidiesky"}
+                 to={"https://twitter.com/edidiesky"}
                 className="w-16 md:w-20 h-16 md:h-20 hover:-translate-y-10 bg-[#282c48] flex text-5xl cursor-pointer md:text-6xl items-center rounded-full text-white justify-center"
               >
                 <Twitter />
               </Link>{" "}
               <Link
                 style={{ transition: "all .5s" }}
-                href={"https://www.linkedin.com/in/victor-essien-379b03319/"}
+                 to={"https://www.linkedin.com/in/victor-essien-379b03319/"}
                 className="w-16 md:w-20 h-16 md:h-20 hover:-translate-y-10 bg-[#282c48] flex text-5xl cursor-pointer md:text-6xl items-center rounded-full text-white justify-center"
               >
                 <Linkedin />

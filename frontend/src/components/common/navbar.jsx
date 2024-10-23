@@ -83,7 +83,15 @@ const Navbar = () => {
           </div>
           <div className="flex items-center justify-end gap-4">
             {currentUser ? (
-              <Profile bar={bar} setBar={setBar} />
+              <div className="flex items-center gap-8">
+                <Link
+                   to={`/become-a-host/${currentUser?.id}`}
+                  className="btn text-center text-sm md:text-base regular text-white px-4 md:px-8 py-3"
+                >
+                  Host your Home
+                </Link>
+                <Profile setBar={setBar} />
+              </div>
             ) : (
               <div className="flex justify-end items-center">
                 <button

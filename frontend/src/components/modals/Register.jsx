@@ -162,7 +162,7 @@ const RegisterModal = () => {
                       onClick={handleLoginModal}
                       style={{ textDecoration: "underline" }}
                       className="font-bold font-booking_font_bold cursor-pointer"
-                      // href={"#"}
+                      //  to={"#"}
                     >
                       Sign In
                     </span>

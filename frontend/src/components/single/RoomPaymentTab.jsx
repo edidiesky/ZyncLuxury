@@ -73,7 +73,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
   const handleReservationBooking = async () => {
     if (currentUser) {
       // console.log('Reservation has been booked')
-      // window.location.href = `/reservation/payment`;
+      // window.location. to = `/reservation/payment`;
       if (mainDiff < 2) {
         toast.error("Minimum reservation is 2 nights");
       } else {
