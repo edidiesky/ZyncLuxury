@@ -7,25 +7,25 @@ import { CreateRoom } from "@/features/room/roomReducer";
 export default function FooterHosting({ next, prev, text, active, submit }) {
   const dispatch = useDispatch();
   const { userInfo } = useSelector((store) => store.user);
-  const { host_listing, gigsIsSuccess } = useSelector((store) => store.gigs);
-  // console.log(host_listing)
+  const { listing, creatingRoomisSuccess } = useSelector((store) => store.room);
+  // console.log(listing)
 
   const navigate = useNavigate();
   const handleNextNavigation = () => {
     navigate(`/become-a-host/${next}`);
   };
   const handleCreateListing = () => {
-    dispatch(CreateRoom(host_listing));
+    dispatch(CreateRoom(listing));
   };
 
   // navigate if the listing has been succesfully created
   useEffect(() => {
-    if (gigsIsSuccess) {
+    if (creatingRoomisSuccess) {
       setTimeout(() => {
         navigate(`/become-a-host/${userInfo?._id}/reviews`);
       }, 6000);
     }
-  }, [gigsIsSuccess, navigate]);
+  }, [creatingRoomisSuccess, navigate]);
 
   return (
     <>
