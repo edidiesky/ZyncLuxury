@@ -1,4 +1,4 @@
-//  
+//
 import React, { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -221,8 +221,9 @@ const LoginModalStyles = styled(motion.div)`
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
     position: relative;
     @media (max-width: 580px) {
-      max-width: 90%;
-      min-width: 90%;
+      max-width: 100%;
+      min-width: 100%;
+      height: 100vh;
     }
     .cross {
       width: 2.3rem;
