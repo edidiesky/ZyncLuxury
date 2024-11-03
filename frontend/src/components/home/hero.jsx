@@ -185,7 +185,7 @@ const Hero = () => {
                   to={"/search"}
                   className="btn hero_btn md:text-base text-center  w-full text-sm family1 regular text-white rounded-[40px] px-4 py-4"
                 >
-                  <AnimateText children={"Book Your Home"} />
+                  Book Your Home
                 </Link>
               </div>
 
@@ -194,7 +194,7 @@ const Hero = () => {
                   to={"/search"}
                   className="btn hero_btn btn_2 md:text-base text-center w-full text-sm family1 regular text-white px-4 py-4"
                 >
-                  <AnimateText children={"Learn More"} />
+                  Learn More
                 </Link>
               </div>
             </div>
@@ -474,7 +474,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}
-                <AnimateText children={list?.title} />
+                {list?.title}
               </NavLink>
             );
           })}
