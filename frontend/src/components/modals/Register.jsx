@@ -5,7 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
-import AnimateText from "@/animations/AnimateText";
 import {
   onLoginModal,
   offRegisterModal,
