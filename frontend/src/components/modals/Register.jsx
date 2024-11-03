@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FcGoogle } from "react-icons/fc";
@@ -48,11 +47,11 @@ const RegisterModal = () => {
     email: "",
     hashedPassword: "",
   });
- const noEntry =
-   formvalue.email === "" ||
-   formvalue.hashedPassword === "" ||
-   formvalue.username === "" ||
-   formvalue.name === "";
+  const noEntry =
+    formvalue.email === "" ||
+    formvalue.hashedPassword === "" ||
+    formvalue.username === "" ||
+    formvalue.name === "";
   const [loading, setLoading] = useState(false);
 
   const handleFormChange = (e) => {
@@ -95,80 +94,79 @@ const RegisterModal = () => {
         initial="initial"
         animate={registermodal ? "enter" : "exit"}
         exit="exit"
-        className="guestModalCard"
+        className="guestModalCard justify-center items-center"
       >
-        <div className="w-full mx-auto flex flex-col">
-          <div className="w-full sticky top-0 left-0 p-8 px-8 flex  items-center justify-between">
-            <h3 className="text-2xl md:text-3xl family2">
-              Sign Up
-              <span className="block text-sm regular">
-                Register to your account and check out your bookings
-              </span>
-            </h3>
-            <div className="cross" onClick={handleClearAlert}>
-              <RxCross2 />
-            </div>
+        <div className="w-full sticky top-0 left-0 p-8 px-8 flex  items-center justify-between">
+          <h3 className="text-3xl family2">
+            Sign Up
+            <span className="block text-sm regular">
+              Register to your account and check out your bookings
+            </span>
+          </h3>
+          <div className="cross" onClick={handleClearAlert}>
+            <RxCross2 />
           </div>
-          <div className="w-full pb-6 flex">
-            <form
-              onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto max-h-[300px] md:max-h-[400px] overflow-y-scroll md:px-4 py-4 pb-4 grid md:grid-cols-1 gap-4"
-            >
-              <div className="w-full grid sm:grid-cols-1 gap-4">
-                {RegisterFormInputData?.map((input, index) => {
-                  return (
-                    <label
-                      key={index}
-                      htmlFor={input.label}
-                      className="text-sm font-booking_font flex flex-col gap-2 text-dark"
-                    >
-                      <span className="text-dark">{input.label}</span>
-                      <input
-                        className="w-full rounded-md inputs text-dark
+        </div>
+        <div className="w-full pb-6 flex">
+          <form
+            onSubmit={handleFormSubmision}
+            className="w-[90%] mx-auto max-h-[300px] md:max-h-[400px] overflow-y-scroll md:px-4 py-4 pb-4 grid md:grid-cols-1 gap-4"
+          >
+            <div className="w-full grid sm:grid-cols-1 gap-4">
+              {RegisterFormInputData?.map((input, index) => {
+                return (
+                  <label
+                    key={index}
+                    htmlFor={input.label}
+                    className="text-sm font-booking_font flex flex-col gap-2 text-dark"
+                  >
+                    <span className="text-dark">{input.label}</span>
+                    <input
+                      className="w-full rounded-md inputs text-dark
                            font-normal text-sm"
-                        required={true}
-                        name={input?.name}
-                        id={input.label}
-                        value={formvalue[input.name]}
-                        type={input.type}
-                        placeholder={input.label}
-                        onChange={handleFormChange}
-                      ></input>
-                    </label>
-                  );
-                })}
-              </div>
-              <div className="w-full mt-6 flex items-center justify-center flex-col gap-3">
-                <button
-                  data-test="registermodal_button"
-                  type="submit"
-                  disabled={registerisLoading || noEntry}
-                  className="p-4 px-8 hover:opacity-[.5] text-[#fff] flex items-center justify-center w-full cursor-pointer 
+                      required={true}
+                      name={input?.name}
+                      id={input.label}
+                      value={formvalue[input.name]}
+                      type={input.type}
+                      placeholder={input.label}
+                      onChange={handleFormChange}
+                    ></input>
+                  </label>
+                );
+              })}
+            </div>
+            <div className="w-full mt-6 flex items-center justify-center flex-col gap-3">
+              <button
+                data-test="registermodal_button"
+                type="submit"
+                disabled={registerisLoading || noEntry}
+                className="p-4 px-8 hover:opacity-[.5] text-[#fff] flex items-center justify-center w-full cursor-pointer 
                    bg-[#000] rounded-[40px] regular"
-                >
-                  {registerisLoading ? (
-                    <div className="w-full flex justify-center items-center gap-4">
-                      <Loader type="dots" /> Registration in progress
-                    </div>
-                  ) : (
-                    <AnimateText children={"Sign Up"} />
-                  )}
-                </button>
-                <div className="w-full flex items-center justify-start gap-2">
-                  <span className="text-sm font-normal text-dark">
-                    Already a Member?{" "}
-                    <span
-                      onClick={handleLoginModal}
-                      style={{ textDecoration: "underline" }}
-                      className="family2 font-booking_font_bold cursor-pointer"
-                      //  to={"#"}
-                    >
-                      Sign In
-                    </span>
+              >
+                {registerisLoading ? (
+                  <div className="w-full flex justify-center items-center gap-4">
+                    <Loader type="dots" /> Registration in progress
+                  </div>
+                ) : (
+                  <AnimateText children={"Sign Up"} />
+                )}
+              </button>
+              <div className="w-full flex items-center justify-start gap-2">
+                <span className="text-sm font-normal text-dark">
+                  Already a Member?{" "}
+                  <span
+                    onClick={handleLoginModal}
+                    style={{ textDecoration: "underline" }}
+                    className="family2 font-booking_font_bold cursor-pointer"
+                    //  to={"#"}
+                  >
+                    Sign In
                   </span>
-                </div>
+                </span>
               </div>
-              {/* <div className="option text-dark">or</div>
+            </div>
+            {/* <div className="option text-dark">or</div>
               <div
                 // onClick={() => signIn("google")}
                 className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#fff] rounded-[40px] font-booking_font_bold family2 border border-[rgba(0,0,0,.9)]"
@@ -176,12 +174,11 @@ const RegisterModal = () => {
                 <FcGoogle fontSize={"24px"} />
                 <AnimateText children={"Continue with Google"} />
               </div> */}
-              {/* <div className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#000] rounded-[10px] font-booking_font family2 border border-[rgba(0,0,0,.9)]">
+            {/* <div className="p-4 px-8 items-center flex justify-center gap-4 w-full cursor-pointer btn text-[#000] rounded-[10px] font-booking_font family2 border border-[rgba(0,0,0,.9)]">
                 <FaGithub fontSize={"28px"} />
                 Continue with Github
               </div>{" "} */}
-            </form>
-          </div>
+          </form>
         </div>
       </motion.div>
     </RegisterModalStyles>

@@ -85,84 +85,82 @@ const LoginModal = () => {
         initial="initial"
         animate={loginmodal ? "enter" : "exit"}
         exit="exit"
-        className="guestModalCard"
+        className="guestModalCard gap-8 justify-center items-center"
       >
-        <div className="w-full mx-auto relative flex gap-8 flex-col">
-          <div
-            className="cross absolute -top-5 z-[500] right-5"
-            onClick={handleClearAlert}
+        <div
+          className="cross absolute -top-5 z-[500] right-5"
+          onClick={handleClearAlert}
+        >
+          <RxCross2 />
+        </div>
+        <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
+          <h3 className="text-3xl font-booking_font4 family2">
+            Sign In
+            <span className="block text-sm font-normal max-w-[250px] pt-1 regular">
+              Login to your account and check out your bookings
+            </span>
+          </h3>
+        </div>
+        <div className="w-full overflow-auto h-[350px]  flex">
+          <form
+            onSubmit={handleFormSubmision}
+            className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-6"
           >
-            <RxCross2 />
-          </div>
-          <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
-            <h3 className="text-3xl font-booking_font4 family2">
-              Sign In
-              <span className="block text-sm font-normal max-w-[250px] pt-1 regular">
-                Login to your account and check out your bookings
-              </span>
-            </h3>
-          </div>
-          <div className="w-full overflow-auto h-[350px]  flex">
-            <form
-              onSubmit={handleFormSubmision}
-              className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-6"
-            >
-              <div className="w-full flex flex-col gap-2">
-                {LoginFormInputData?.map((input, index) => {
-                  return (
-                    <label
-                      key={index}
-                      htmlFor={input.label}
-                      className="text-sm font-booking_font flex flex-col gap-2 text-dark"
-                    >
-                      <span className="text-dark">{input.label}</span>
-                      <input
-                        className="w-full rounded-md inputs text-dark
+            <div className="w-full flex flex-col gap-2">
+              {LoginFormInputData?.map((input, index) => {
+                return (
+                  <label
+                    key={index}
+                    htmlFor={input.label}
+                    className="text-sm font-booking_font flex flex-col gap-2 text-dark"
+                  >
+                    <span className="text-dark">{input.label}</span>
+                    <input
+                      className="w-full rounded-md inputs text-dark
                            font-normal text-sm"
-                        required={true}
-                        name={input?.name}
-                        id={input.label}
-                        value={formvalue[input.name]}
-                        type={input.type}
-                        placeholder={input.label}
-                        onChange={handleFormChange}
-                      ></input>
-                    </label>
-                  );
-                })}
-              </div>
-              <div className="w-full flex items-center justify-center flex-col gap-3">
-                <button
-                  data-test="loginmodal_button"
-                  type="submit"
-                  disabled={loginisLoading}
-                  className="p-3 px-8 hover:opacity-[.5] text-[#fff] flex btn items-center justify-center w-full cursor-pointer 
+                      required={true}
+                      name={input?.name}
+                      id={input.label}
+                      value={formvalue[input.name]}
+                      type={input.type}
+                      placeholder={input.label}
+                      onChange={handleFormChange}
+                    ></input>
+                  </label>
+                );
+              })}
+            </div>
+            <div className="w-full flex items-center justify-center flex-col gap-3">
+              <button
+                data-test="loginmodal_button"
+                type="submit"
+                disabled={loginisLoading}
+                className="p-3 px-8 hover:opacity-[.5] text-[#fff] flex btn items-center justify-center w-full cursor-pointer 
                    bg-[#000] rounded-md regular"
-                >
-                  {loginisLoading ? (
-                    <div className="w-full flex justify-center items-center gap-4">
-                      <Loader type="dots" /> Login in progress
-                    </div>
-                  ) : (
-                    "Sign In"
-                  )}
-                </button>
-                <div className="w-full flex items-center justify-start gap-2">
-                  <span className="text-sm font-normal text-dark">
-                    <span className="text-grey">Not yet a Member?</span>{" "}
-                    <span
-                      onClick={handleLoginModal}
-                      style={{ textDecoration: "underline" }}
-                      className="font-booking_font_bold family2 cursor-pointer"
-                      //  to={"#"}
-                    >
-                      Sign Up
-                    </span>
+              >
+                {loginisLoading ? (
+                  <div className="w-full flex justify-center items-center gap-4">
+                    <Loader type="dots" /> Login in progress
+                  </div>
+                ) : (
+                  "Sign In"
+                )}
+              </button>
+              <div className="w-full flex items-center justify-start gap-2">
+                <span className="text-sm font-normal text-dark">
+                  <span className="text-grey">Not yet a Member?</span>{" "}
+                  <span
+                    onClick={handleLoginModal}
+                    style={{ textDecoration: "underline" }}
+                    className="font-booking_font_bold family2 cursor-pointer"
+                    //  to={"#"}
+                  >
+                    Sign Up
                   </span>
-                </div>
+                </span>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </motion.div>
     </LoginModalStyles>
