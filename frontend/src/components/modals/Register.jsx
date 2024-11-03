@@ -149,7 +149,7 @@ const RegisterModal = () => {
                     <Loader type="dots" /> Registration in progress
                   </div>
                 ) : (
-                  <AnimateText children={"Sign Up"} />
+                  "Sign Up"
                 )}
               </button>
               <div className="w-full flex items-center justify-start gap-2">
