@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import AnimateText from "@/animations/AnimateText";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import Profile from "./Profile";

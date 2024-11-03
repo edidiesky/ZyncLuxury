@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
 import Loader from "../../home/loader";
 import { useDispatch, useSelector } from "react-redux";
-import AnimateText from "@/animations/AnimateText";
+
 import {
   DeleteReservation,
   CreateReservation,

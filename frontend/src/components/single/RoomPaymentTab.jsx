@@ -22,7 +22,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../home/loader";
 import { onLoginModal } from "@/features/modals/modalSlice";
-import AnimateText from "@/animations/AnimateText";
+
 import { CreateNotifications } from "@/features/notification/notificationReducer";
 export default function RoomPaymentTab({ room, differenceinDays }) {
   // states of the reservation booking either loading or

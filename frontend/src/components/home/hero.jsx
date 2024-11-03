@@ -6,7 +6,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import moment from "moment";
-import AnimateText from "@/animations/AnimateText";
+
 import { RxCross1 } from "react-icons/rx";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { BiCheck, BiChevronDown, BiChevronUp, BiSearch } from "react-icons/bi";

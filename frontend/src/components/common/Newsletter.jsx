@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { slideup } from "@/constants/utils/framer";
-import AnimateText from "@/animations/AnimateText";
 const Newsletter = () => {
   const text_ref = useRef(null);
   const button_ref = useRef(null);

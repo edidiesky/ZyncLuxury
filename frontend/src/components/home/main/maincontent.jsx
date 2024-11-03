@@ -6,7 +6,7 @@ import RoomCard from "../../common/RoomCard";
 import { getAllRooms } from "../../../features/room/roomReducer";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { slideup, clipPathLeft, smallslideup2 } from "@/constants/utils/framer";
-import AnimateText from "@/animations/AnimateText";
+
 import { Link } from "react-router-dom";
 import Hero from "../hero";
 import Listing from "../Listing";
