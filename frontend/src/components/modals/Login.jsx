@@ -1,4 +1,4 @@
-//
+
 import React, { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -16,7 +16,6 @@ import {
 } from "../../features/modals/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { LoginUser } from "@/features/auth/authReducer";
-import AnimateText from "@/animations/AnimateText";
 
 const ModalVariants = {
   initial: {
