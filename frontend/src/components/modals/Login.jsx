@@ -85,10 +85,10 @@ const LoginModal = () => {
         initial="initial"
         animate={loginmodal ? "enter" : "exit"}
         exit="exit"
-        className="guestModalCard gap-8 justify-center items-center"
+        className="guestModalCard gap-8 relative justify-center items-center"
       >
         <div
-          className="cross absolute -top-5 z-[500] right-5"
+          className="cross absolute top-5 z-[500] right-5"
           onClick={handleClearAlert}
         >
           <RxCross2 />
@@ -217,10 +217,11 @@ const LoginModalStyles = styled(motion.div)`
     border-radius: 20px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
     position: relative;
-    @media (max-width: 580px) {
+    @media (max-width: 780px) {
       max-width: 100%;
       min-width: 100%;
       height: 100vh;
+      border-radius: 0px;
     }
     .cross {
       width: 2.3rem;
