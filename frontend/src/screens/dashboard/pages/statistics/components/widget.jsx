@@ -52,8 +52,7 @@ const Widget = () => {
         return (
           <div
             key={index}
-            className="w-full p-4 items-start  justify-center min-h-[200px] md:min-h-[200px] 
-                    border rounded-xl flex flex-col gap-4"
+            className="w-full p-4 items-start  justify-center min-h-[200px] md:min-h-[250px] border rounded-xl flex flex-col gap-4"
           >
             <div className="flex flex-col w-full gap-4">
               <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
