@@ -1,54 +1,48 @@
- 
 import React, { useState } from "react";
 import { MdHotel } from "react-icons/md";
 import { GiCash } from "react-icons/gi";
 import { LuBedDouble } from "react-icons/lu";
 import { useSelector } from "react-redux";
-import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
+import { GoArrowUpRight, GoArrowDownRight } from "react-icons/go";
+import {  FaMoneyBill } from "react-icons/fa";
 
 const Widget = () => {
-  const [widgettab, setWidgetTab] = useState(1);
   const { totalOrder, totalReservations, totalRooms } = useSelector(
     (store) => store.stat
   );
-  const { users } = useSelector((store) => store.auth);
 
   const widgetData = [
     {
       title: "Total Revenue",
       icon: <FaMoneyBill />,
-      bgColor: "#cdeed3",
-      color: "#347345",
+      bgColor: "#cdeed3b7",
+      color: "#61668E",
       subtitle: `${totalOrder}`,
-      subtext:
-        "Browse your applied jobs here and check their respective progress..",
+      trend: "+20.1",
       // subtitle: `$10K`,
     },
     {
       title: "Total Property",
       icon: <MdHotel />,
-      bgColor: "#deddff",
-      color: "#3e3aff",
-      subtext:
-        "Browse your applied jobs here and check their respective progress..",
+      bgColor: "#deddffcc",
+      color: "#F2B80F",
+      trend: "+20.1",
       subtitle: `${totalRooms}`,
     },
     {
       title: " Total Revenue",
       icon: <GiCash />,
-      bgColor: "#f3f3f1",
-      color: "#a37d18",
-      subtext:
-        "Browse your applied jobs here and check their respective progress..",
+      bgColor: "#ffeec3ca",
+      color: "#7F3CDA",
+      trend: "+20.1",
       subtitle: `$${Number(totalOrder)?.toLocaleString()}`,
     },
     {
       title: "Total Reservations",
       icon: <LuBedDouble />,
-      bgColor: "#cdeed3",
-      color: "#002b31",
-      subtext:
-        "Browse your applied jobs here and check their respective progress..",
+      bgColor: "#f3f3f1d2",
+      color: "#E3413F",
+      trend: "+20.1",
       subtitle: `${totalReservations}`,
     },
   ];
@@ -61,30 +55,33 @@ const Widget = () => {
             className="w-full p-4 items-start  justify-center min-h-[200px] md:min-h-[200px] 
                     border rounded-xl flex flex-col gap-4"
           >
-            <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
-              <div
-                style={{
-                  backgroundColor: `${data?.bgColor}`,
-                  color: `${data?.color}`,
-                }}
-                className="w-10 md:w-12 text-xl flex items-center justify-center h-10 md:h-12 rounded-md"
-              >
-                {data?.icon}
+            <div className="flex flex-col w-full gap-4">
+              <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
+                <div
+                  style={{
+                    backgroundColor: `${data?.bgColor}`,
+                    color: `${data?.color}`,
+                  }}
+                  className="w-10 md:w-12 text-xl flex items-center justify-center h-10 md:h-12 rounded-md"
+                >
+                  {data?.icon}
+                </div>
+                <h4 className="text-sm md:text-base regular">{data?.title}</h4>
               </div>
-              <h4 className="text-sm md:text-base regular">
-                {data?.title}
-              </h4>
+              <div className="w-full family1 flex flex-col">
+                <h3 className="text-3xl md:text-4xl family2">
+                  {data?.subtitle}
+                </h3>
+              </div>
             </div>
-            <div className="w-full family1 flex flex-col">
-              <h3 className="text-3xl md:text-4xl family2">{data?.subtitle}</h3>
-
-              {/* <span className="text-sm flex-1 pt-2 block font-normal">
-                {data?.subtext}
-              </span> */}
+            <div className="flex items-center gap-2 w-full">
+              <div className="w-6 text-sm text-[#000] h-6 rounded-full bg-[#4AFC4E] flex items-center justify-center">
+                <GoArrowUpRight />
+              </div>
+              <span className="text-xs lg:text-sm family2">
+                {data?.trend} from last week
+              </span>
             </div>
-            {/* <div className="pt-3">
-                    <div className="shadows py-2 bg-[#fafafa] rounded-md cursor-pointer px-4 border text-dark text-sm">Browse</div>
-                  </div> */}
           </div>
         );
       })}
