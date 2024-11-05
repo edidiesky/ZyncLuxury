@@ -96,7 +96,7 @@ const RegisterModal = () => {
         exit="exit"
         className="guestModalCard justify-center items-center"
       >
-        <div className="w-full sticky top-0 left-0 p-8 px-4 md:px-8 flex  items-center justify-between">
+        <div className="w-full sticky top-0 left-0 p-2 px-4 md:px-8 flex  items-center justify-between">
           <h3 className="text-3xl family2">
             Sign Up
             <span className="block text-sm regular">
@@ -110,9 +110,9 @@ const RegisterModal = () => {
         <div className="w-full pb-6 flex">
           <form
             onSubmit={handleFormSubmision}
-            className="w-[90%] mx-auto md:max-h-[450px] md:overflow-auto md:px-4 pb-4 grid md:grid-cols-1 gap-4"
+            className="w-[90%] mx-auto md:max-h-[480px] md:overflow-auto md:px-4 pb-4 grid md:grid-cols-1 gap-4"
           >
-            <div className="w-full grid sm:grid-cols-1 gap-4">
+            <div className="w-full grid sm:grid-cols-1 gap-2">
               {RegisterFormInputData?.map((input, index) => {
                 return (
                   <label
@@ -136,7 +136,7 @@ const RegisterModal = () => {
                 );
               })}
             </div>
-            <div className="w-full mt-6 flex items-center justify-center flex-col gap-3">
+            <div className="w-full mt-3 flex items-center justify-center flex-col gap-3">
               <button
                 data-test="registermodal_button"
                 type="submit"
