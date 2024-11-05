@@ -96,7 +96,7 @@ const RegisterModal = () => {
         exit="exit"
         className="guestModalCard justify-center items-center"
       >
-        <div className="w-full sticky top-0 left-0 p-2 px-4 md:px-8 flex  items-center justify-between">
+        <div className="w-full sticky top-0 left-0 p-2 md:pt-8 px-4 md:px-8 flex  items-center justify-between">
           <h3 className="text-3xl family2">
             Sign Up
             <span className="block text-sm regular">
@@ -107,7 +107,7 @@ const RegisterModal = () => {
             <RxCross2 />
           </div>
         </div>
-        <div className="w-full pb-6 flex">
+        <div className="w-full pb-4 flex">
           <form
             onSubmit={handleFormSubmision}
             className="w-[90%] mx-auto md:max-h-[480px] md:overflow-auto md:px-4 pb-4 grid md:grid-cols-1 gap-4"
@@ -223,8 +223,8 @@ const RegisterModalStyles = styled(motion.div)`
     }
   }
   .guestModalCard {
-    max-width: 400px;
-    min-width: 460px;
+    max-width: 420px;
+    min-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,8 +239,7 @@ const RegisterModalStyles = styled(motion.div)`
       max-width: 100%;
       min-width: 100%;
       height: 100vh;
-    border-radius: 0px;
-
+      border-radius: 0px;
     }
     .cross {
       width: 3rem;
