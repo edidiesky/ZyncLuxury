@@ -14,9 +14,9 @@ export default function UserListSelection({ handleUserSelection }) {
   const dispatch = useDispatch()
   const { users } = useSelector((store) => store.auth)
 
-  useEffect(() => {
-    dispatch(GetAllUsers())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(GetAllUsers())
+  // }, [])
   const newUser = [
     {
       name: "Null Guest",

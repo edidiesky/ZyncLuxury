@@ -14,9 +14,9 @@ export default function RoomModalSelection({handleRoomId}) {
   const dispatch = useDispatch()
   const { rooms } = useSelector((store) => store.room)
  
-  useEffect(() => {
-    dispatch(getAllRooms())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(getAllRooms())
+  // }, [])
   return (
     <Select onValueChange={(e) => handleRoomId(e)}>
       <SelectTrigger className="w-full">

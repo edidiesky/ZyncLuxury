@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import moment from "moment";
 import { addDays, format } from "date-fns";
-import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
 import Loader from "../../home/loader";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,6 +10,7 @@ import {
   DeleteReservation,
   CreateReservation,
   UpdateReservation,
+  GetSingleReservation,
 } from "@/features/reservation/reservationReducer";
 
 import CreateRoomTab from "./CreateRoomTab";
@@ -20,12 +20,18 @@ import { CreateNotifications } from "@/features/notification/notificationReducer
 import { RegisterUser } from "@/features/auth/authReducer";
 import { FaTrash } from "react-icons/fa";
 import DeleteModal from "../DeleteModal";
-export default function CreateReservationModal({ setModal, reservation }) {
+import { slideSidebarLeft } from "@/constants/utils/framer";
+export default function CreateReservationModal({
+  setModal,
+  reservationid,
+  modal,
+}) {
   // console.log(reservation)
   const {
     createReservationisLoading,
     deleteReservationisLoading,
     updateReservationisLoading,
+    reservation,
   } = useSelector((store) => store.reservation);
 
   const [price, setPrice] = useState(0);
@@ -87,38 +93,42 @@ export default function CreateReservationModal({ setModal, reservation }) {
   const handleUserSelection = (value) => {
     setUser(value);
   };
-
-  useEffect(() => {
-    if (reservation) {
-      setStatus(reservation?.status);
-      setDate({
-        from: new Date(reservation?.startDate),
-        to: new Date(reservation?.endDate),
-      });
-      setTotalReservationPrice(reservation?.totalPrice);
-      setPartPaymentPrice(reservation?.partpaymentPrice);
-      setGuests(reservation?.guests);
-      setNewGuests(reservation?.patchguests);
-      setPrice(reservation?.roomprice);
-      setUser(reservation?.user);
-    }
-    if (!reservation) {
-      if (partpaymentprice !== 0) {
-        setStatus("PARTPAYMENT");
-      }
-    }
-  }, [
-    setStatus,
-    setUser,
-    partpaymentprice,
-    setPrice,
-    setNewGuests,
-    setPartPaymentPrice,
-    reservation,
-    setDate,
-    setTotalReservationPrice,
-    setGuests,
-  ]);
+  // useEffect(() => {
+  //   if (reservationid && modal) {
+  //     dispatch(GetSingleReservation(reservationid));
+  //   }
+  // }, [reservationid, modal]);
+  // useEffect(() => {
+  //   if (reservation) {
+  //     setStatus(reservation?.status);
+  //     setDate({
+  //       from: new Date(reservation?.startDate),
+  //       to: new Date(reservation?.endDate),
+  //     });
+  //     setTotalReservationPrice(reservation?.totalPrice);
+  //     setPartPaymentPrice(reservation?.partpaymentPrice);
+  //     setGuests(reservation?.guests);
+  //     setNewGuests(reservation?.patchguests);
+  //     setPrice(reservation?.roomprice);
+  //     setUser(reservation?.user);
+  //   }
+  //   if (!reservation) {
+  //     if (partpaymentprice !== 0) {
+  //       setStatus("PARTPAYMENT");
+  //     }
+  //   }
+  // }, [
+  //   setStatus,
+  //   setUser,
+  //   partpaymentprice,
+  //   setPrice,
+  //   setNewGuests,
+  //   setPartPaymentPrice,
+  //   reservation,
+  //   setDate,
+  //   setTotalReservationPrice,
+  //   setGuests,
+  // ]);
 
   // console.log(reservationData)
   // console.log(new Date(startdate))
@@ -299,43 +309,39 @@ export default function CreateReservationModal({ setModal, reservation }) {
           />
         )}
       </AnimatePresence>
-      <ReservationModalStyles
-        as={motion.div}
+
+      <motion.div
         initial={{ opacity: 0 }}
         exit={{
           opacity: 0,
-          transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+          transition: {
+            duration: 0.6,
+          },
         }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
-        }}
+        animate={{ opacity: 1 }}
+        className={`w-screen h-[100vh] left-0 fixed z-[600] top-0 bg-[rgba(0,0,0,0.2)]`}
       >
         <motion.div
-          initial={{
-            y: "100vh",
-          }}
-          animate={{
-            y: "0",
-            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
-          }}
-          exit={{
-            y: "100vh",
-            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
-          }}
-          className={"deleteCard gap-2"}
+          variants={slideSidebarLeft}
+          initial="initial"
+          animate={modal ? "enter" : "exit"}
+          exit="exit"
+          className={`w-[100%] lg:w-[600px] h-[100vh] flex flex-col gap-8 overflow-auto absolute top-0 bg-white z-30 sidebar_shadow`}
         >
-          <div className="cross" onClick={handleClearAlert}>
+          <div
+            className="absolute z-50 right-4 top-4 w-12 h-12 rounded-full hover:bg-[#fafafa] flex items-center justify-center cursor-pointer"
+            onClick={handleClearAlert}
+          >
             <RxCross2 />
           </div>
           <div className="deleteCardTop w-full sticky top-0 left-0 border-b p-2 pb-0 md:px-8 flex flex-col gap-2">
-            <h3 className="text-2xl md:text-2xl font-semibold font-booking_font_bold">
+            <h3 className="text-2xl md:text-2xl amily2">
               {reservation ? "  Update Reservation" : "  Add a Reservation"}
             </h3>
             <div className="flex w-full items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <span
-                  className={`p-2 px-4 capitalize font-booking_font_bold rounded-[4px] 
+                  className={`p-2 px-4 capitalize family2 rounded-[4px] 
               text-center ${
                 status === "PENDING"
                   ? "bg-[#f9d955] text-[#000]"
@@ -371,7 +377,9 @@ export default function CreateReservationModal({ setModal, reservation }) {
             <div className="grid pt-4 w-full gap-4 grid-cols-2 z-[200000000] bg-[#fff] lg:grid-cols-4">
               <div
                 onClick={() => setReservationTab(1)}
-                className={`w-full cursor-pointer ${ reservationtab === 1 ? "border-b-4 border-[#0e7b10]" : "" } text-[#000]  pb-3 text-base font-booking_font_bold family2`}
+                className={`w-full cursor-pointer ${
+                  reservationtab === 1 ? "border-b-4 border-[#0e7b10]" : ""
+                } text-[#000]  pb-3 text-base family2 family2`}
               >
                 Booking Details
               </div>
@@ -379,7 +387,8 @@ export default function CreateReservationModal({ setModal, reservation }) {
               <div
                 onClick={() => setReservationTab(2)}
                 className={`w-full cursor-pointer ${
-                  reservationtab === 2 ? "border-b-4 border-[#0e7b10]" : ""}    text-[#000] pb-3 text-base font-booking_font_bold family2`}
+                  reservationtab === 2 ? "border-b-4 border-[#0e7b10]" : ""
+                }    text-[#000] pb-3 text-base family2 family2`}
               >
                 Client Profile
               </div>
@@ -434,11 +443,6 @@ export default function CreateReservationModal({ setModal, reservation }) {
                 </span>
               ) : (
                 <span className="text-white">
-                  {/* <AnimateText children={reservationtab === 2 ?
-                  <>  {
-                    reservation ? `Update` : `Save`
-                  }</>
-                  : `Next `} /> */}
                   {reservationtab === 2 ? (
                     <> {reservation ? `Update` : `Save`}</>
                   ) : (
@@ -449,103 +453,16 @@ export default function CreateReservationModal({ setModal, reservation }) {
             </button>
           </div>
         </motion.div>
-      </ReservationModalStyles>
+        <div
+          style={{
+            transition: "all .3s",
+          }}
+          onClick={() => setModal(false)}
+          className={`${
+            modal ? "opacity-100 right-[0%]" : "opacity-0 -right-[100%]"
+          } w-full top-0 absolute bg-[rgba(0,0,0,.1)] h-full z-10`}
+        ></div>
+      </motion.div>
     </>
   );
 }
-
-const ReservationModalStyles = styled(motion.div)`
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  display: flex;
-  z-index: 20000;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem 0;
-  .deleteCard {
-    max-width: 1050px;
-    min-width: 1050px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
-    position: relative;
-    padding-top: 1rem;
-    @media (max-width: 980px) {
-      max-width: 95%;
-      min-width: 95%;
-    }
-    .cross {
-      position: absolute;
-      right: 15px;
-      top: 2%;
-      width: 2.4rem;
-      height: 2.4rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 40000;
-      &:hover {
-        background: #eee;
-      }
-      svg {
-        font-size: 20px;
-      }
-    }
-    .deleteCardBottom {
-      display: flex;
-      gap: 1.5rem;
-      button {
-        padding: 0.5rem 2rem;
-        min-height: 46px;
-        border: none;
-        font-weight: 600;
-        background: #eee;
-        color: #000;
-        outline: none;
-        border-radius: 10px;
-        cursor: pointer;
-        &:disabled {
-          cursor: not-allowed;
-        }
-        &:hover {
-          background: #c4c4c4;
-        }
-        &.deleteBtn {
-          background: var(--red);
-          color: #fff;
-          &:hover {
-            opacity: 0.8;
-            color: #fff;
-          }
-        }
-      }
-    }
-    .deleteCardCenter {
-      padding: 2rem 0;
-      width: 100%;
-      background: var(--grey-3);
-      border-left: 5px solid var(--red);
-      display: flex;
-      align-items: center;
-      svg {
-        font-size: 2rem;
-        color: var(--red);
-      }
-    }
-
-    .deleteCardTop {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-`;

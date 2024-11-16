@@ -2,26 +2,22 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  GetAllRoomAndReservations,
   GetAllReservations,
 } from "@/features/reservation/reservationReducer";
 import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import {  AnimatePresence } from "framer-motion";
 import Loader from "@/components/home/loader";
-import CreateReservationModal from "@/components/modals/reservationmodal/CreateReservationModal";
-import Nav from "@/components/common/Nav";
 import { Table } from "@/components/common/styles";
 import TableCard from "@/components/common/TableCard";
 import { handlePage } from "@/features/reservation/reservationSlice";
+import CreateReservationModal from "@/components/modals/reservationmodal/CreateReservationModal";
 const DashboardIndex = () => {
-  const [reservationmodal, setReservationModal] = useState(false);
-  const [createreservationmodal, setCreateReservationModal] = useState(false);
-  const [roommodal, setRoomModal] = useState(false);
+  const [reservationdetailsidebar, setReservationDetailSidebar] = useState(false);
+  const [reservationid, setReservationId] =
+    useState("");
   const dispatch = useDispatch();
   const { reservations, getsingleReservationisLoading, page } =
     useSelector((store) => store.reservation);
-
-  const { currentUser } = useSelector((store) => store.auth);
 
   useEffect(() => {
     // dispatch(GetAllRoomAndReservations());
@@ -31,21 +27,13 @@ const DashboardIndex = () => {
     return <Loader />;
   }
   return (
-    <div className="w-full flex flex-col gap-6">
-      {/* <AnimatePresence mode="wait">
-        {reservationmodal && (
-          <ReservationRoomsModal
-            modal={reservationmodal}
-            setModal={setReservationModal}
-          />
-        )}
-      </AnimatePresence> */}
-
+    <div className="w-full flex flex-col gap-6 md:gap-12">
       <AnimatePresence mode="wait">
-        {createreservationmodal && (
+        {reservationdetailsidebar && (
           <CreateReservationModal
-            modal={createreservationmodal}
-            setModal={setCreateReservationModal}
+            reservationid={reservationid}
+            modal={reservationdetailsidebar}
+            setModal={setReservationDetailSidebar}
           />
         )}
       </AnimatePresence>
@@ -61,7 +49,7 @@ const DashboardIndex = () => {
 
         <div className="flex items-center md:justify-end gap-2">
           <div
-            onClick={() => setCreateReservationModal(true)}
+            onClick={() => setReservationDetailSidebar(true)}
             className="p-4 btn cursor-pointer text-sm
              bg-[#000] px-6 font-booking_font rounded-[10px] family2 text-white"
           >
@@ -89,7 +77,8 @@ const DashboardIndex = () => {
                   return (
                     <TableCard
                       handleModal={() => {
-                        setCreateReservationModal(true);
+                        setReservationDetailSidebar(true);
+                        setReservationId(x?.id);
                       }}
                       x={x}
                       type={"Reservation"}

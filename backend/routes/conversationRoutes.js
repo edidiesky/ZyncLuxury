@@ -1,23 +1,19 @@
 import express from "express";
 const router = express.Router();
 
-import {
-  adminMiddleware,
-  authMiddleware,
-} from "../middleware/authentication.js";
+import { authMiddleware } from "../middleware/authentication.js";
 import {
   createConversation,
-  getSingleConversation,
+  getSingleUserConversation,
   DeleteConversation,
-  getAllConversation,
-  UpdateConversation,
+  getAllUserConversation,
 } from "../controllers/conversationControllers.js";
 
 router.route("").post(authMiddleware, createConversation);
+router.route("").get(authMiddleware, getAllUserConversation);
 
 router
   .route("/:id")
-  .get(getSingleConversation)
-  .delete(authMiddleware, DeleteConversation)
-  .post(authMiddleware, UpdateConversation);
+  .get(authMiddleware, getSingleUserConversation)
+  .delete(authMiddleware, DeleteConversation);
 export default router;

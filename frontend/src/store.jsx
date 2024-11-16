@@ -7,6 +7,8 @@ import paymentSlice from "./features/payment/paymentSlice";
 import statSlice from "./features/stat/statSlice";
 import favouritesSlice from "./features/favourites/favouritesSlice";
 import notificationSlice from "./features/notification/notificationSlice";
+import messageSlice from "./features/message/messageSlice";
+import conversationSlice from "./features/conversation/conversationSlice";
 export const store = configureStore({
   reducer: {
     room: roomSlice,
@@ -17,5 +19,7 @@ export const store = configureStore({
     stat: statSlice,
     favourites: favouritesSlice,
     notification: notificationSlice,
+    conversation: conversationSlice,
+    message: messageSlice,
   },
 });

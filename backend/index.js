@@ -42,6 +42,8 @@ import orderRoute from "./routes/orderRoutes.js";
 import StatRoute from "./routes/statRoute.js";
 import FavouritesRoute from "./routes/favouriteRoute.js";
 import NotificationRoutes from "./routes/notificationRoutes.js";
+import ConversationRoute from "./routes/conversationRoutes.js";
+import messageRoute from "./routes/messageRoutes.js";
 // notificationRoutes
 
 app.use("/api/v1/auth", Auth);
@@ -53,34 +55,36 @@ app.use("/api/v1/payment", orderRoute);
 app.use("/api/v1/stat", StatRoute);
 app.use("/api/v1/favourites", FavouritesRoute);
 app.use("/api/v1/notification", NotificationRoutes);
-
+app.use("/api/v1/conversation", ConversationRoute);
+app.use("/api/v1/message", messageRoute);
 // // Middlewares
 app.use(NotFound);
 app.use(errorHandler);
 
-// function that check sif the userId is included in the users array else it add the user id and scoket Id
+// function that check sif the userId is included in the OnlineUsers array else it add the user id and scoket Id
 
-let users = [];
+let OnlineUsers = [];
 const addUserId = (userId, socketId) => {
   // check if the object: {yserId, socketId} is being found in the usres array
-  // if not found add it to the users array
-  const userExits = users.find((user) => user.userId === userId);
+  // if not found add it to the OnlineUsers array
+  const userExits = OnlineUsers.find((user) => user.userId === userId);
   if (!userExits) {
-    users.push({ userId, socketId });
+    OnlineUsers.push({ userId, socketId });
   }
 };
 
 const RemoveUser = (socketId) => {
   // check if the object: {yserId, socketId} is being found in the usres array
-  // if not found add it to the users array
-  users = users?.filter((user) => user?.socketId !== socketId);
+  // if not found add it to the OnlineUsers array
+  OnlineUsers = OnlineUsers?.filter((user) => user?.socketId !== socketId);
 };
 
 const getASpecificUser = (userId) => {
-  // console.log(users)
+  // console.log(OnlineUsers)
 
-  // return users?.filter((obj) => obj.userId === userId)
-  return users.find((user) => user.userId === userId);
+  // return OnlineUsers?.filter((obj) => obj.userId === userId)
+  const newuser = OnlineUsers.find((user) => user.userId === userId);
+  return newuser;
 };
 
 io.on("connection", (socket) => {
@@ -89,29 +93,27 @@ io.on("connection", (socket) => {
   // io.emit('message','Connected form the backend and testing sending of the data form the socket server')
   socket.on("addUserId", (id) => {
     addUserId(id, socket?.id);
-    io.emit("getAllConnectedUser", users);
+    io.emit("getAllConnectedUser", OnlineUsers);
   });
-  // socket.on('addUserId', (id) => console.log(id))
 
-  // // get the userId connected from the client and send the users back to the client
-
-  // // send message to a speco=ific user
-  socket.on("sendMessage", ({ receiverId, senderId, text }) => {
+  socket.on("sendMessage", ({ receiverid, ...data }) => {
     // get the specific usre u intend to send the message to
-    const user = getASpecificUser(receiverId);
-    // console.log(user, users)
-    // console.log(user?.socketId)
-    // console.log({ receiverId, senderId, text })
-    io.to(user?.socketId).emit("getMessage", {
-      receiverId: receiverId,
-      text: text,
-    });
+    const newuser = getASpecificUser(receiverid);
+    // console.log(newuser);
+    // console.log(newuser?.socketId)
+    console.log({ receiverid });
+    if (newuser?.socketId) {
+      io.to(newuser?.socketId).emit("getMessage", {
+        receiverid,
+        ...data,
+      });
+    }
   });
 
   socket.on("disconnect", () => {
     console.log("🔥: A user disconnected");
     RemoveUser(socket?.id);
-    io.emit("getAllConnectedUser", users);
+    io.emit("getAllConnectedUser", OnlineUsers);
   });
 });
 

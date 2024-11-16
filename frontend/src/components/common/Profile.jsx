@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
-import { ProfileDropdownStyles } from "../common/navbar";
-import { onLoginModal, onRegisterModal } from "@/features/modals/modalSlice";
-import { HiBars3BottomRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 
-const Profile = ({ setBar, bar }) => {
-  // const [bar, setBar] = React.useState(false);
+const Profile = () => {
   const [active, setActive] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();

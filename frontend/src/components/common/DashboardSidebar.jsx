@@ -84,7 +84,7 @@ const DashboardSidebar = () => {
             </div>
             <div
               className="py-2 rounded-md w-full px-3 font-normal
-                     text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]"
+                     text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]"
             >
               <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
@@ -133,9 +133,9 @@ const DashboardSidebar = () => {
         
             <div
               className="py-2 rounded-md w-full px-3 font-normal
-                     text-white flex items-center cursor-pointer gap-2 hover:bg-[#282c2b]"
+                     text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]"
             >
-              <div className="w-8 h-8 rounded-md flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
+              <div className="w-10 h-10 rounded-full flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
               </div>
               <span className="text-sm family2">
