@@ -54,7 +54,7 @@ export default function App() {
           <Route
             index
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <HomeWrapper />
               </Suspense>
             }
@@ -62,7 +62,7 @@ export default function App() {
           <Route
             path="search"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <SearchWrapper />
               </Suspense>
             }
@@ -70,7 +70,7 @@ export default function App() {
           <Route
             path="room/:id"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <SingleWrapper />
               </Suspense>
             }
@@ -78,7 +78,7 @@ export default function App() {
           <Route
             path="profile"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <ProfileWrapper />
               </Suspense>
             }
@@ -87,7 +87,7 @@ export default function App() {
           <Route
             path="savedhomes"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <SavedWrapper />
               </Suspense>
             }
@@ -95,7 +95,7 @@ export default function App() {
           <Route
             path="trips"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <TripsWrapper />
               </Suspense>
             }
@@ -103,7 +103,7 @@ export default function App() {
           <Route
             path="reservation/payment/:id"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <PaymentWrapper />
               </Suspense>
             }
@@ -111,7 +111,7 @@ export default function App() {
           <Route
             path="payment-success/:id"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <PaymentSuccess />
               </Suspense>
             }
@@ -246,7 +246,7 @@ export default function App() {
             exact
             path="rooms"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <Rooms />
               </Suspense>
             }
@@ -255,7 +255,7 @@ export default function App() {
             exact
             path="rooms/:id"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <CreateRoom />
               </Suspense>
             }
@@ -264,7 +264,7 @@ export default function App() {
             exact
             path="customers"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <Customers />
               </Suspense>
             }
@@ -274,7 +274,7 @@ export default function App() {
             exact
             index
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <Statistics />
               </Suspense>
             }
@@ -284,7 +284,7 @@ export default function App() {
             exact
             path="profile/:id"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <Settings />
               </Suspense>
             }
@@ -294,7 +294,7 @@ export default function App() {
             exact
             path="orders"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <Orders />
               </Suspense>
             }
@@ -305,7 +305,7 @@ export default function App() {
             exact
             path="rooms/create-room"
             element={
-              <Suspense fallback={<Loader />}>
+              <Suspense fallback={<></>}>
                 <CreateRoom />
               </Suspense>
             }

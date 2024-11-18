@@ -39,10 +39,10 @@ const Map = () => {
   );
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-[100vh] sticky top-0">
       <MapContainer
         center={[3.2839374, 12.4964]} // Default center point
-        zoom={4}
+        zoom={8}
         style={{
           height: "100%",
           width: "100%",

@@ -61,7 +61,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search for homes"
-              className="inputs text-base font-semibold w-full rounded-full"
+              className="inputs text-base w-full rounded-full"
             />
           </div> */}
           <div className=" lg:flex hidden items-center gap-6">
@@ -95,9 +95,9 @@ const Navbar = () => {
               <div className="flex justify-end items-center">
                 <button
                   onClick={() => dispatch(onLoginModal())}
-                  className="btn min-w-[120px] text-center text-base family1 font-semibold text-white px-6 py-3"
+                  className="btn min-w-[120px] md:min-w-[140px] text-center text-base family1 text-white px-4 py-3"
                 >
-                  Sign Up
+                 Get Started
                 </button>
               </div>
             )}

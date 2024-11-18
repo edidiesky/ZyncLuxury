@@ -15,7 +15,7 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     bedroom,
     bathroom,
     title,
-    limit = 6,
+    limit = 12,
     page = 1,
   } = req.query;
   const roomstartDate = startDate ? new Date(startDate) : null;

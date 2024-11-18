@@ -4,8 +4,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const CardLoader = () => {
     return (
       <SkeletonThemeCard>
-        <div className="w-full flex flex-col gap-6 p-3 border border-[rgba(0,0,0,.08)] rounded-xl">
-          <span className="h-[300px] w-full">
+        <div className="w-full flex flex-col gap-2">
+          <span className="h-[220px] w-full">
             <Skeleton
               style={{
                 borderRadius: "10px",
@@ -16,7 +16,16 @@ const CardLoader = () => {
           </span>
           <div className="w-full p-3 flex items-center gap-4 justify-between">
             <div className="w-full flex flex-col gap-2">
-              <span className="h-[7px] w-full">
+              <span className="h-[12px] w-full">
+                <Skeleton
+                  style={{
+                    borderRadius: "10px",
+                    width: "80%",
+                    height: "100%",
+                  }}
+                />
+              </span>
+              <span className="h-[10px]">
                 <Skeleton
                   style={{
                     borderRadius: "10px",
@@ -25,22 +34,11 @@ const CardLoader = () => {
                   }}
                 />
               </span>
-              <span className="h-[6px]">
+              <span className="h-[10px]">
                 <Skeleton
-                  height={6}
                   style={{
                     borderRadius: "10px",
-                    width: "40%",
-                    height: "100%",
-                  }}
-                />
-              </span>
-              <span className="h-[6px]">
-                <Skeleton
-                  height={6}
-                  style={{
-                    borderRadius: "10px",
-                    width: "30%",
+                    width: "50%",
                     height: "100%",
                   }}
                 />
@@ -63,7 +61,7 @@ const CardLoader = () => {
 
 const SkeletonThemeCard = ({ children }) => {
     return (
-        <SkeletonTheme baseColor="#fafafa" highlightColor="#eeeeeee3">
+        <SkeletonTheme baseColor="#eee" highlightColor="#f7f7f7">
             {children}
         </SkeletonTheme>
     )

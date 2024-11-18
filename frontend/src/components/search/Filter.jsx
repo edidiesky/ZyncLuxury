@@ -1,27 +1,15 @@
-
 import { useSelector } from "react-redux";
-import RoomCard from "../../common/RoomCard";
+import RoomCard from "../common/RoomCard";
 import Loader from "@/components/home/loader";
-import Map from "../Map";
+import Map from "./Map";
 import CardLoader from "@/components/common/CardLoader";
-const MainContent = () => {
-  return (
-    <div className="w-full relative flex flex-col gap-8">
-      <RoomLists />
-    </div>
-  );
-};
-
-const RoomLists = () => {
+const Filter = () => {
   const { rooms, getallRoomisLoading, totalRooms } = useSelector(
     (store) => store.room
   );
 
   return (
-    <div
-      className="w-[100%] mx-auto max-w-custom  z-40 relative grid grid-cols-1 items-start"
-    >
-    
+    <div className="w-[100%] mx-auto max-w-custom py-4 z-40 relative grid grid-cols-2 items-start">
       <div className="w-full py-8 bg-[#fff]">
         <div
           className="w-full relative flex px-4 flex-col
@@ -31,18 +19,16 @@ const RoomLists = () => {
             Over {totalRooms} property
           </h4>
 
-          <div
-            className="w-[100%] relative z-40 items-start lg:justify-center flex-col gap-12"
-          >
+          <div className="w-[100%] relative z-40 flex-col gap-12">
             {getallRoomisLoading ? (
-              <div className=" gap-8 w-full grid md:grid-cols-2 lg:grid-cols-3">
+              <div className="gap-8 w-full grid md:grid-cols-2">
                 {new Array(12)?.fill("")?.map((_, index) => {
                   return <CardLoader key={index} />;
                 })}
               </div>
             ) : (
-              <div className=" gap-x-2 gap-y-8 w-full grid md:grid-cols-2 lg:grid-cols-3">
-                {rooms?.slice(0, 12).map((apartment, index) => {
+              <div className="gap-x-2 gap-y-8 w-full grid items-start md:grid-cols-2">
+                {rooms?.map((apartment, index) => {
                   return (
                     <RoomCard
                       type={"search"}
@@ -56,8 +42,15 @@ const RoomLists = () => {
           </div>
         </div>
       </div>
+      <div className="w-full relative">
+        {getallRoomisLoading ? (
+          <Loader type="dots" color={"#000"} size={"60"} />
+        ) : (
+          <Map />
+        )}
+      </div>
     </div>
   );
 };
 
-export default MainContent;
+export default Filter;

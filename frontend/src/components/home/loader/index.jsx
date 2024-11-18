@@ -26,10 +26,10 @@ const Loader = ({ type, color, size }) => {
         background: "#ffffff7a",
       }}
     >
-      <div className="spinner text-xl">
+      {/* <div className="spinner text-xl">
         <CiSettings fontSize={'30px'} />
-      </div>
-      {/* <ThreeDots
+      </div> */}
+      <ThreeDots
         height="40"
         width="40"
         radius="10"
@@ -38,7 +38,7 @@ const Loader = ({ type, color, size }) => {
         wrapperStyle={{}}
         wrapperClassName=""
         visible={true}
-      /> */}
+      />
     </div>
   );
 };

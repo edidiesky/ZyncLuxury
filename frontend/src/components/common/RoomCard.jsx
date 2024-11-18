@@ -10,7 +10,9 @@ import { addListToWish } from "@/features/auth/authReducer";
 import Image from "./Image";
 import DeleteModal from "../modals/DeleteModal";
 import { smallslideup2 } from "@/constants/utils/framer";
-
+import { IoStarHalf, IoStar, IoWifi, IoBedSharp } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaBath } from "react-icons/fa6";
 const RoomCard = ({ type, apartment, index }) => {
   // console.log(apartment);
   const [tabindex, setTabIndex] = useState(0);
@@ -19,6 +21,7 @@ const RoomCard = ({ type, apartment, index }) => {
   const refCard = useRef(null);
   const inView = useInView(refCard, {
     margin: "0px 100px -120px 0px",
+    once: true,
   });
   const handleImagePosition = (position) => {
     if (position === "left") {
@@ -193,7 +196,7 @@ const RoomCard = ({ type, apartment, index }) => {
         <div className="w-full flex flex-col">
           <div
             className={`${
-              type === "search" ? " py-3 px-4  gap-[4px]" : "p-4 gap-2"
+              type === "search" ? "py-3 px-4 gap-1" : "p-4 gap-3"
             } w-full flex flex-col `}
           >
             <div className="w-full flex items-center gap-4 justify-between">
@@ -238,23 +241,53 @@ const RoomCard = ({ type, apartment, index }) => {
                 {apartment?.title}
               </h3>
             </div>
-            <div
-              className={`w-full ${
-                type === "search" ? "text-xs" : "text-base"
-              } flex items-center family1 text-grey gap-1`}
-            >
-              {" "}
-              {apartment?.state && <span>{apartment?.state},</span>}{" "}
-              {apartment?.country}
+            <div className="w-full flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                {new Array(4).fill("").map((_, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className={`${type === "search" ? "text-sm" : "text-base"}`}
+                    >
+                      <IoStar />
+                    </span>
+                  );
+                })}
+              </div>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } family2`}
+              >
+                4.7
+              </span>
+              <span className={`${type === "search" ? "text-sm" : "text-base"} text-[#777]`}>
+                87 reviews
+              </span>
             </div>
-            <ul
-              className={`${
-                type === "search" ? "text-sm" : "text-base"
-              } flex gap-3 list-disc family1 list-inside items-center regular`}
-            >
-              <li className="">{apartment?.bedroom} bedroom</li>
-              <li className="">{apartment?.bathroom} bathroom</li>
-            </ul>
+            <div className="w-full flex flex-wrap items-center gap-3">
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <FaBath /> {apartment?.bathroom} bathroom
+              </span>
+               <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <IoWifi /> Wifi
+              </span>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <IoBedSharp /> {apartment?.bedroom} bedroom
+              </span>
+            </div>
           </div>
         </div>
       </Link>
@@ -263,3 +296,4 @@ const RoomCard = ({ type, apartment, index }) => {
 };
 
 export default RoomCard;
+
