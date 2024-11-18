@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
 import { apartmentDataList } from "@/data/apartmentData";
 import AnimateTextWord from "../common/AnimateTextWord";
+import CardLoader from "../common/CardLoader";
 
 const Listing = () => {
   const dispatch = useDispatch();
@@ -37,17 +38,8 @@ const Listing = () => {
         <div className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3">
           {getallRoomisLoading ? (
             <>
-              {apartmentDataList?.slice(0, 3).map((apartment, index) => {
-                return (
-                  <div key={index} className="w-full flex flex-col gap-2">
-                    <Skeleton key={index} width={"100%"} height={200} />
-                    <div className="bg-white p-6 flex flex-col">
-                      <Skeleton key={index} width={"40%"} height={10} />
-                      <Skeleton key={index} width={"80%"} height={10} />
-                      <Skeleton key={index} width={"50%"} height={5} />
-                    </div>
-                  </div>
-                );
+              {apartmentDataList?.slice(0, 3).map((_, index) => {
+                return <CardLoader key={index} />;
               })}
             </>
           ) : (

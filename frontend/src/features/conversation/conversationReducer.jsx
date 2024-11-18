@@ -23,8 +23,8 @@ export const Createconversation = createAsyncThunk(
   }
 );
 
-export const getAllSellerConversationUsers = createAsyncThunk(
-  "getAllSellerConversationUsers",
+export const getSellersConversations = createAsyncThunk(
+  "getSellersConversations",
   async (_, { rejectWithValue }) => {
     try {
      

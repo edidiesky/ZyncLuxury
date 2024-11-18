@@ -52,6 +52,7 @@
     "react-to-print": "^2.15.1",
     "react-use": "^17.5.0",
     "redux-toolkit": "^1.1.2",
+    "socket.io-client": "^4.8.1",
     "split-type": "^0.3.4",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
