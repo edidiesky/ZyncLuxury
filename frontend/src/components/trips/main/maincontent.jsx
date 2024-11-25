@@ -38,7 +38,7 @@ const RoomLists = () => {
        gap-12"
         >
           {getsingleReservationisLoading ? (
-           {apartmentDataList.map((_, index) => {
+           {apartmentDataList?.map((_, index) => {
                 return <CardLoader key={index} />;
               })}
           ) : (
