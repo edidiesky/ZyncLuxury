@@ -3,7 +3,10 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { getAllRooms } from "@/features/room/roomReducer";
 import { useDispatch, useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
+import { apartmentDataList } from "@/data/apartmentData";
+
 import AnimateTextWord from "../common/AnimateTextWord";
+import CardLoader from "../common/CardLoader";
 
 const RecentListing = () => {
   const dispatch = useDispatch();
@@ -39,16 +42,27 @@ const RecentListing = () => {
           ref={collection_ref_1}
           className="w-full gap-4 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
         >
-          {rooms?.slice(3, 6)?.map((apartment, index) => {
-            return (
-              <RoomCard
-                index={index}
-                inView={inView1}
-                key={index}
-                apartment={apartment}
-              />
-            );
-          })}
+          {getallRoomisLoading ? (
+            <>
+              {apartmentDataList?.slice(0, 3).map((_, index) => {
+                return <CardLoader key={index} />;
+              })}
+            </>
+          ) : (
+            <>
+              {rooms?.slice(3, 6)?.map((apartment, index) => {
+                return (
+                  <RoomCard
+                    index={index}
+                    type={"Search"}
+                    apartment={apartment}
+                    // currentUser={currentUser}
+                    key={index}
+                  />
+                );
+              })}
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -10,11 +10,12 @@ const SocketContextProvider = ({ children }) => {
     setSocket(io.connect(`${import.meta.env.VITE_API_BASE_URL}`));
   }, []);
   useEffect(() => {
-    currentUser && socket?.emit("addUserId", currentUser?.id);
-    currentUser &&
+    if (currentUser) {
+      socket?.emit("addUserId", currentUser?.id);
       socket?.on("getAllConnectedUser", (users) => {
         console.log(users);
       });
+    }
   }, [socket, currentUser]);
   return (
     <SocketContext.Provider

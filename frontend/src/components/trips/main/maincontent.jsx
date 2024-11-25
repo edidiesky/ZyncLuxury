@@ -6,6 +6,7 @@ import RoomCard from "../../common/RoomCard";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import CardLoader from "@/components/common/CardLoader";
 const MainContent = () => {
   return (
     <div className="w-full relative flex flex-col">
@@ -37,28 +38,9 @@ const RoomLists = () => {
        gap-12"
         >
           {getsingleReservationisLoading ? (
-            <div className="w-full grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {Array(8)
-                .fill("")
-                .map((x, index) => {
-                  return (
-                    <div className="w-full flex flex-col gap-3">
-                      <Skeleton width={"100%"} height={240} />
-                      <div className="flex w-full gap-[2px] flex-col">
-                        <Skeleton width={"80%"} height={20} />
-                        <div className="flex w-full flex-col">
-                          <Skeleton width={"60%"} height={6} />
-                          <Skeleton width={"30%"} height={6} />
-                        </div>
-                        {/* <div className="flex w-full items-center justify-between">
-                        <Skeleton width={"60%"} height={10} />
-                        <Skeleton width={"30%"} height={10} />
-                      </div> */}
-                      </div>
-                    </div>
-                  );
-                })}
-            </div>
+           {apartmentDataList.map((_, index) => {
+                return <CardLoader key={index} />;
+              })}
           ) : (
             <div className="w-full">
               {reservations?.length === 0 ? (
