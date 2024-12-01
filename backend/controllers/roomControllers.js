@@ -15,7 +15,7 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     bedroom,
     bathroom,
     title,
-    limit = 12,
+    limit = 9,
     page = 1,
   } = req.query;
   const roomstartDate = startDate ? new Date(startDate) : null;
@@ -70,7 +70,7 @@ const GetAllRoom = asyncHandler(async (req, res) => {
     const totalRooms = await prisma.rooms.count({ where: queryObject });
     const noOfPages = Math.ceil(totalRooms / limit);
     const result = { rooms, noOfPages, totalRooms };
-    await redisClient.set(cacheKey, result, { EX: 3600 });
+    await redisClient.set(cacheKey, result, { EX: 1200 });
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
     return res.json(result);
