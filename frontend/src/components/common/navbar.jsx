@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HiBars3BottomRight } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { ClearUserInfo } from "@/features/auth/authSlice";
 import { onLoginModal } from "@/features/modals/modalSlice";
 import Profile from "./Profile";
 const linkData = [
@@ -35,10 +33,6 @@ const Navbar = () => {
   const [bar, setBar] = React.useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
-  const handleLogOut = () => {
-    dispatch(ClearUserInfo());
-    window.location.reload();
-  };
   return (
     <>
       <div className="px-4 #fff z-[400000] border-b min-h-[85px] flex items-center justify-center">
@@ -56,14 +50,6 @@ const Navbar = () => {
               ZyncLuxury
             </span>
           </Link>
-
-          {/* <div className="hidden flex-1 sm:flex items-center justify-center gap-6">
-            <input
-              type="text"
-              placeholder="Search for homes"
-              className="inputs text-base w-full rounded-full"
-            />
-          </div> */}
           <div className=" lg:flex hidden items-center gap-6">
             {linkData?.map((list, index) => {
               return (

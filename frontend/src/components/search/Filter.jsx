@@ -18,7 +18,7 @@ const Filter = () => {
 
         <div className="w-[100%] relative z-40 flex-col gap-12">
           {getallRoomisLoading ? (
-            <div className="gap-8 w-full grid md:grid-cols-2">
+            <div className="gap-8 w-full grid md:grid-cols-3">
               {new Array(12)?.fill("")?.map((_, index) => {
                 return <CardLoader key={index} />;
               })}
