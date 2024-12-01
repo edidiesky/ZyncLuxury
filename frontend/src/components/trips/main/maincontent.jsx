@@ -38,11 +38,11 @@ const RoomLists = () => {
        gap-12"
         >
           {getsingleReservationisLoading ? (
-            <>
+            <div className="w-full gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
               {apartmentDataList?.map((_, index) => {
                 return <CardLoader key={index} />;
               })}
-            </>
+            </div>
           ) : (
             <div className="w-full">
               {reservations?.length === 0 ? (
