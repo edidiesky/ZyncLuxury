@@ -27,9 +27,9 @@ const Filter = () => {
     <div className="w-[100%] mx-auto max-w-custom py-20 z-40 relative grid grid-cols-1 items-start">
       <div
         className="w-[95%] lg:w-[90%] max-w-custom mx-auto relative flex px-4 flex-col
-       gap-4 lg:gap-16"
+       gap-12 lg:gap-16"
       >
-        <h4 className="text-4xl capitalize max-w-[780px] md:text-5xl family2 text-[var(--dark-1)]">
+        <h4 className="text-3xl capitalize max-w-[780px] lg:text-5xl family2 text-[var(--dark-1)]">
           <AnimateTextWord type={"bigtext"}>
             Search our Highly curated Listings made for your Next Adventure
           </AnimateTextWord>
