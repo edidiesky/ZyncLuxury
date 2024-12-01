@@ -1,10 +1,8 @@
 import React from "react";
-import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { apartmentDataList } from "../../../data/apartmentData";
 import RoomCard from "../../common/RoomCard";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
 import CardLoader from "@/components/common/CardLoader";
 const MainContent = () => {
   return (
@@ -38,7 +36,7 @@ const RoomLists = () => {
        gap-12"
         >
           {getsingleReservationisLoading ? (
-            <div className="w-full gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
+            <div className="w-full gap-8 grid md:grid-cols-2 lg:grid-cols-3">
               {apartmentDataList?.map((_, index) => {
                 return <CardLoader key={index} />;
               })}
@@ -64,7 +62,7 @@ const RoomLists = () => {
                   </h1>
                 </div>
               ) : (
-                <div className="w-full gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
+                <div className="w-full gap-8 grid md:grid-cols-2 lg:grid-cols-3">
                   {reservations?.map((apartment, index) => {
                     return (
                       <RoomCard

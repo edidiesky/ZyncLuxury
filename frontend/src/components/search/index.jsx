@@ -7,11 +7,11 @@ import Filter from "./Filter";
 
 const HomeIndex = () => {
   const dispatch = useDispatch();
-  const { country, type } = useSelector((store) => store.room);
+  // const { country, type } = useSelector((store) => store.room);
   useEffect(() => {
     dispatch(handleClearRoomAlert());
     dispatch(getAllRooms());
-  }, [country, type]);
+  }, []);
   return (
     <div className=" w-full flex flex-col">
       <Navbar />
