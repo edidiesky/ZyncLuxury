@@ -46,7 +46,7 @@ const Filter = () => {
           ) : (
             <div className="gap-x-8 gap-y-16 w-full grid md:grid-cols-2 lg:grid-cols-3">
               {rooms?.map((apartment, index) => {
-                return <RoomCard key={index} apartment={apartment} />;
+                return <RoomCard key={index} index={index} apartment={apartment} />;
               })}
             </div>
           )}

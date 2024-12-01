@@ -72,7 +72,7 @@ const RoomCard = ({ type, apartment, index }) => {
               to={"#"}
               style={{ transition: "all .4s" }}
               onClick={() => setUserDeleteModal(true)}
-              className="absolute group-hover:scale-100 scale-0 top-5 right-5 rounded-full w-12 h-12 z-[20] bg-white shadow-lg flex
+              className="absolute group-hover:scale-100 scale-0 top-5 right-5 rounded-full w-12 h-12 z-[50] bg-white shadow-lg flex
            items-center justify-center text-xl"
             >
               <RxCross1 />
@@ -147,7 +147,7 @@ const RoomCard = ({ type, apartment, index }) => {
           <Link
             to={"#"}
             onClick={() => handleFavouriteRooms()}
-            className="absolute z-[20] top-[10%] left-[5%]"
+            className="absolute z-[50] top-[10%] left-[5%]"
           >
             <Heart active={active} />
           </Link>
