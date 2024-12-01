@@ -40,7 +40,7 @@ const RecentListing = () => {
         </div>
         <div
           ref={collection_ref_1}
-          className="w-full gap-4 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
+          className="w-full gap-x-8 gap-y-16 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3"
         >
           {getallRoomisLoading ? (
             <>

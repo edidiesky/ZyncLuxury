@@ -48,11 +48,11 @@ const linkData = [
 ];
 
 const profilesList = [
-  "/face_1.jpg",
-  "/face_2.png",
-  "/face_3.png",
-  "/face_2.png",
-  "/face_1.jpg",
+  "/user_1.jpg",
+  "/user_2.jpg",
+  "/user_3.jpg",
+  "/user_4.jpg",
+  "/user_5.jpg",
 ];
 const Hero = () => {
   const [bar, setBar] = React.useState(false);
@@ -153,7 +153,7 @@ const Hero = () => {
                         key={index}
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
-                        } w-14 md:w-16 h-14 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-4`}
+                        } w-14 md:w-16 h-14 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
                       >
                         <img
                           src={face}

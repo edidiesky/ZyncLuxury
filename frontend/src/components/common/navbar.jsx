@@ -71,10 +71,8 @@ const Navbar = () => {
                   end
                   to={`/${list.path}`}
                   key={index}
-                  className={`text-base hover:text-grey font-normal family1 text-dark flex items-center
-                     gap-2 p-3 px-3 rounded-[40px]`}
+                  className={`text-base lg:text-lg hover:text-grey family2 text-dark flex items-center gap-2 p-3 px-3 rounded-[40px]`}
                 >
-                  {/* <img src={list?.icon} className="w-4" alt="" /> */}
                   {list?.title}
                 </NavLink>
               );

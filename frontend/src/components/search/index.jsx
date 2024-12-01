@@ -13,7 +13,7 @@ const HomeIndex = () => {
     dispatch(getAllRooms());
   }, [country, type]);
   return (
-    <div className="bg-[var(--light-grey)] h-[100vh] w-full flex flex-col">
+    <div className=" w-full flex flex-col">
       <Navbar />
       <div
         style={{

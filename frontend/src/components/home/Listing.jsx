@@ -35,7 +35,7 @@ const Listing = () => {
             </button>
           </div>
         </div>
-        <div className="w-full gap-8 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3">
+        <div className="w-full gap-x-8 gap-y-16 max-w-custom_1 grid sm:grid-cols-2 lg:grid-cols-3">
           {getallRoomisLoading ? (
             <>
               {apartmentDataList?.slice(0, 3).map((_, index) => {
