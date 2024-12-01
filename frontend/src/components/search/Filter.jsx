@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import RoomCard from "../common/RoomCard";
 import CardLoader from "@/components/common/CardLoader";
 import AnimateTextWord from "../common/AnimateTextWord";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Filter = () => {
   const { rooms, getallRoomisLoading, totalRooms } = useSelector(
@@ -20,6 +20,7 @@ const Filter = () => {
     country: "",
   });
   // debounced valued
+   const [debouncedfilters, setDebouncedFilters] = useState(filters);
   // carry out a side-effect
   // handle filterChange
   // 

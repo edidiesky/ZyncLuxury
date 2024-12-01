@@ -35,9 +35,9 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="px-4 #fff z-[40] border-b min-h-[85px] flex items-center justify-center">
+      <div className="px-4 #fff border-b z-[100] min-h-[85px] flex items-center justify-center">
         <div
-          className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
+          className="w-[95%] max-w-custom mx-auto flex items-center justify-between
        gap-12"
         >
           <Link to={"/"} className="flex items-center gap-2">

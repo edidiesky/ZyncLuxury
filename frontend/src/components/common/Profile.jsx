@@ -14,7 +14,7 @@ const Profile = () => {
   return (
     <div className=" relative">
       {currentUser && (
-        <div className="flex items-center justify-end gap-8">
+        <div className="flex z-[60] items-center justify-end gap-8">
           <div className="flex items-center gap-2">
             {currentUser?.image ? (
               <img
