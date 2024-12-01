@@ -143,7 +143,7 @@ const Hero = () => {
 
           <TopContent bar={bar} setBar={setBar} currentUser={currentUser} />
 
-          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col  gap-6 md:gap-12">
+          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col  gap-8 lg:gap-16  md:gap-12">
             <div className="flex max-w-[980px] md:mx-auto flex-col md:items-center justify-center gap-8">
               <div className="w-full hero_about_text md:flex-row flex-col flex md:items-center gap-4">
                 <div className="flex items-center">

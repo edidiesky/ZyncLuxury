@@ -34,7 +34,7 @@ export default function CreateRoomTab({
         <h3 className="text-base w-full pb-2 border-b family2 ">
           Room Terms
         </h3>
-        <div className="w-full flex flex-col gap-6">
+        <div className="w-full flex flex-col gap-8 lg:gap-16 ">
           <Popover>
             <PopoverTrigger>
               <div className="w-full grid sm:grid-cols-2 gap-4">
@@ -134,7 +134,7 @@ export default function CreateRoomTab({
         </div>
       </div>
       {/* room price */}
-      <div className="w-full flex flex-col gap-6">
+      <div className="w-full flex flex-col gap-8 lg:gap-16 ">
         <div className="w-full flex flex-col gap-3 pt-2">
           <h3 className="text-base w-full pb-1 border-b family2 ">
             Rooms

@@ -43,7 +43,7 @@ const Header = () => {
           className="w-[95%] family1 max-w-custom mx-auto flex items-center justify-between
        gap-12"
         >
-          <div className="flex items-center gap-4 md:gap-6">
+          <div className="flex items-center gap-4 md:gap-8 lg:gap-16 ">
             <Link to={"/"} className="flex items-center gap-2">
               <img
                 src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
@@ -88,7 +88,7 @@ const Header = () => {
               </div>
             </label>
           </div>
-          <div className="hidden lg:flex items-center justify-center gap-6">
+          <div className="hidden lg:flex items-center justify-center gap-8 lg:gap-16 ">
             <div className=" lg:flex hidden items-center gap-4">
               {linkData?.map((list, index) => {
                 return (

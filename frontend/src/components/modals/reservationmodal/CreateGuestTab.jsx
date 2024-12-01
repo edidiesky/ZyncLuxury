@@ -34,7 +34,7 @@ export default function CreateGuestTab({
   // console.log(newguest)
   return (
     <div className="p-4 h-[270px] md:h-[350px] overflow-auto  px-4 md:px-8 grid w-full gap-8 lg:grid-cols-custom_5">
-      <div className="w-full flex flex-col gap-6 pt-3">
+      <div className="w-full flex flex-col gap-8 lg:gap-16  pt-3">
         <h3 className="text-base font-semibold w-full pb-4 border-b family1">
           Client profile
         </h3>

@@ -81,7 +81,7 @@ const Charts = () => {
     }
   }, [totalMonthBookings, totalMonth, totalMonthRevenue]);
   return (
-    <div className="py-8 border rounded-lg flex flex-col w-full gap-6">
+    <div className="py-8 border rounded-lg flex flex-col w-full gap-8 lg:gap-16 ">
       <h3 className="text-xl px-4 block lg:text-3xl text-dark family2 ">
         Growth Analysis
       </h3>

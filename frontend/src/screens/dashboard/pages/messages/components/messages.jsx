@@ -129,7 +129,7 @@ const Nessage = () => {
   return (
     <div className="w-full bg-white h-[70vh] max-h-[70vh] z-20 sticky top-0 py-4 px-4 lg:px-6">
       <div className="w-full max-w-custom h-full mx-auto grid grid-cols-custom_2 gap-8">
-        <div className="w-[320px] h-[500px] overflow-auto flex flex-col gap-6 px-4 border-r">
+        <div className="w-[320px] h-[500px] overflow-auto flex flex-col gap-8 lg:gap-16  px-4 border-r">
           <div className="flex items-center gap-4 justify-between w-full">
             <h4 className="text-2xl lg:text-3xl family6">Messages</h4>
           </div>

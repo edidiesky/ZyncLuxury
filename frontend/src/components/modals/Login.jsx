@@ -104,7 +104,7 @@ const LoginModal = () => {
         <div className="w-full overflow-auto h-[350px]  flex">
           <form
             onSubmit={handleFormSubmision}
-            className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-6"
+            className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-8 lg:gap-16 "
           >
             <div className="w-full flex flex-col gap-2">
               {LoginFormInputData?.map((input, index) => {
@@ -172,11 +172,11 @@ const LoginModalStyles = styled(motion.div)`
   position: fixed;
   left: 0;
   display: flex;
-  z-index: 4900;
+  z-index: 4900000;
   align-items: center;
   justify-content: center;
   top: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   .option {
     width: 100%;
     position: relative;
@@ -215,7 +215,7 @@ const LoginModalStyles = styled(motion.div)`
     background: #fff;
     gap: 2rem;
     border-radius: 20px;
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
     position: relative;
     @media (max-width: 780px) {
       max-width: 100%;

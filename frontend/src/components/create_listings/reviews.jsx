@@ -31,7 +31,7 @@ export default function ReviewOfPlace() {
             <div className="flex md:w-[380px] flex-col flex-1 gap-1">
               <RoomCard apartment={room} />
             </div>{" "}
-            <div className="flex w-full flex-col flex-1 gap-6">
+            <div className="flex w-full flex-col flex-1 gap-8 lg:gap-16 ">
               <h3 className="text-2xl md:text-3xl family2">What's next?</h3>
               <div className="list text-lg md:text-xl family2 text-dark">
                 Confirm a few details and publish{" "}

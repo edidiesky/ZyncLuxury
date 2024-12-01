@@ -27,7 +27,7 @@ const DashboardIndex = () => {
     return <Loader />;
   }
   return (
-    <div className="w-full flex flex-col gap-6 md:gap-12">
+    <div className="w-full flex flex-col gap-8 lg:gap-16  md:gap-12">
       <AnimatePresence mode="wait">
         {reservationdetailsidebar && (
           <CreateReservationModal
@@ -37,7 +37,7 @@ const DashboardIndex = () => {
           />
         )}
       </AnimatePresence>
-      <div className="w-full grid md:grid-cols-2 lg:items-center gap-6 justify-between">
+      <div className="w-full grid md:grid-cols-2 lg:items-center gap-8 lg:gap-16  justify-between">
         <div className="w-full flex flex-col gap-1">
           <h3 className="text-2xl block lg:text-4xl text-dark family2">
             Reservations Created

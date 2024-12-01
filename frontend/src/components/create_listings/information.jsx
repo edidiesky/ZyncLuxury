@@ -27,7 +27,7 @@ export default function InformationofPlace() {
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex flex-col gap-6 justify-center items-center w-[90%]  max-w-custom mx-auto"
+            className="aboutCenter flex flex-col gap-8 lg:gap-16  justify-center items-center w-[90%]  max-w-custom mx-auto"
           >
             <h2 className="family2 w-full text-start text-dark">
               Create your description

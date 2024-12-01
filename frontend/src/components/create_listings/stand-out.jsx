@@ -11,7 +11,7 @@ export default function StandOut() {
           <div
             data-aos="fade-up"
             data-aos-duration="1400"
-            className="aboutCenter flex items-center gap-6 justify-center w-[90%]  max-w-custom mx-auto"
+            className="aboutCenter flex items-center gap-8 lg:gap-16  justify-center w-[90%]  max-w-custom mx-auto"
           >
             <div className="flex-1 flex gap-4 flex-col">
               <h1 className="family2 text-dark">
