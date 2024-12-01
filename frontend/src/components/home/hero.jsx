@@ -143,9 +143,9 @@ const Hero = () => {
 
           <TopContent bar={bar} setBar={setBar} currentUser={currentUser} />
 
-          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex lg:items-center lg:justify-center flex-col  gap-8 lg:gap-16  md:gap-12">
+          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col  gap-8 lg:gap-16  md:gap-12">
             <div className="flex max-w-[980px] md:mx-auto flex-col md:items-center justify-center gap-8">
-              <div className="w-full hero_about_text md:flex-row flex-col flex md:items-center gap-4">
+              <div className="w-full hero_about_text flex-row flex items-center gap-4">
                 <div className="flex items-center">
                   {profilesList?.map((face, index) => {
                     return (
@@ -153,7 +153,7 @@ const Hero = () => {
                         key={index}
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
-                        } w-14 md:w-16 h-14 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
+                        } w-12 md:w-16 h-12 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
                       >
                         <img
                           src={face}
@@ -171,7 +171,7 @@ const Hero = () => {
                 <span className="text-center hero_main_text hide">
                   Find your Best Property - By Lease, or Rent with Confidence
                 </span>
-                <span className="text-base md:text-2xl hero_submain_text hide max-w-[400px] md:mx-auto md:text-center md:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
+                <span className="text-base md:text-2xl hero_submain_text hide max-w-[400px] lg:mx-auto md:text-center lg:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
