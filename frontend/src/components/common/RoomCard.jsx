@@ -65,9 +65,9 @@ const RoomCard = ({ type, apartment, index }) => {
         </AnimatePresence>
         <Link
           to={`/reservation/payment/${apartment?.id}`}
-          className="w-full border rounded-xl gap-4 flex flex-col"
+          className="w-full border rounded-xl flex flex-col"
         >
-          <div className="h-[240px] overflow-hidden rounded-t-xl group w-full relative">
+          <div className="h-[240px] lg:h-[280px] overflow-hidden rounded-t-xl group w-full relative">
             <Link
               to={"#"}
               style={{ transition: "all .4s" }}
@@ -85,10 +85,10 @@ const RoomCard = ({ type, apartment, index }) => {
                   "filter 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
               }}
               src={apartment?.rooms?.images[0]}
-              className="w-full h-[240px] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
+              className="w-full h-[100%] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
             />
           </div>
-          <div className="w-full px-4 py-4 flex flex-col bg-white">
+          <div className="w-full px-4 py-4 flex flex-col gap-2">
             <h3 className="text-lg md:text-2xl family2">
               {apartment?.rooms?.title}
             </h3>
@@ -102,6 +102,59 @@ const RoomCard = ({ type, apartment, index }) => {
                 <span>{apartment?.rooms?.state},</span>
               )}{" "}
               {apartment?.rooms?.country}
+            </div>
+            <div className="w-full flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                {new Array(4).fill("").map((_, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className={`${
+                        type === "search" ? "text-sm" : "text-base"
+                      }`}
+                    >
+                      <IoStar />
+                    </span>
+                  );
+                })}
+              </div>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } family2`}
+              >
+                4.7
+              </span>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } text-[#777]`}
+              >
+                87 reviews
+              </span>
+            </div>
+            <div className="w-full flex flex-wrap items-center gap-3">
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <FaBath /> {apartment?.bathroom} bathroom
+              </span>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <IoWifi /> Wifi
+              </span>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } flex items-center gap-2 text-[#777]`}
+              >
+                <IoBedSharp /> {apartment?.bedroom} bedroom
+              </span>
             </div>
             <div
               style={{ letterSpacing: "1px" }}
