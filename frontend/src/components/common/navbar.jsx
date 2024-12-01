@@ -35,7 +35,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="px-4 #fff z-[400000] border-b min-h-[85px] flex items-center justify-center">
+      <div className="px-4 #fff z-[40] border-b min-h-[85px] flex items-center justify-center">
         <div
           className="w-[95%] max-w-custom mx-auto z-40 flex items-center justify-between
        gap-12"
