@@ -50,7 +50,7 @@ const Navbar = () => {
               ZyncLuxury
             </span>
           </Link>
-          <div className=" lg:flex hidden items-center gap-6 lg:gap-8 ">
+          <div className=" lg:flex hidden items-center gap-4 lg:gap-6 ">
             {linkData?.map((list, index) => {
               return (
                 <NavLink

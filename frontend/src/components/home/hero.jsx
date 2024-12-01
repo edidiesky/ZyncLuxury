@@ -143,7 +143,7 @@ const Hero = () => {
 
           <TopContent bar={bar} setBar={setBar} currentUser={currentUser} />
 
-          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex md:items-center md:justify-center flex-col  gap-8 lg:gap-16  md:gap-12">
+          <div className="w-[90%] max-w-custom py-12 md:py-20 mx-auto lg:px-4 z-40 flex lg:items-center lg:justify-center flex-col  gap-8 lg:gap-16  md:gap-12">
             <div className="flex max-w-[980px] md:mx-auto flex-col md:items-center justify-center gap-8">
               <div className="w-full hero_about_text md:flex-row flex-col flex md:items-center gap-4">
                 <div className="flex items-center">
@@ -167,11 +167,11 @@ const Hero = () => {
                   5 K+ Happy Customers
                 </span>
               </div>
-              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1.15] text-4xl md:text-center sm:text-6xl md:text-7xl family2">
+              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1] text-4xl md:text-center sm:text-6xl lg:text-7xl family2">
                 <span className="text-center hero_main_text hide">
                   Find your Best Property - By Lease, or Rent with Confidence
                 </span>
-                <span className="text-base lg:text-2xl hero_submain_text hide max-w-[400px] md:mx-auto md:text-center md:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
+                <span className="text-base md:text-2xl hero_submain_text hide max-w-[400px] md:mx-auto md:text-center md:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
