@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import RoomsList from "./customerlist";
 const DashboardIndex = () => {
-  const [roommodal, setRoomModal] = useState(false);
   return (
     <div className="w-full">
       <div className="w-full pb-20 flex flex-col gap-12">

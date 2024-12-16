@@ -12,9 +12,9 @@ export default function Customers() {
   useEffect(() => {
     dispatch(GetAllUsers())
   }, [])
-  if (getallUserisLoading) {
-    return <Loader />
-  }
+  // if (getallUserisLoading) {
+  //   return <Loader />
+  // }
   return (
     <div>
       <DashboardIndex />

@@ -47,10 +47,10 @@ const DashboardIndex = () => {
               <Statistics />
             )}
           </div>
+
+          <RoomsCreated />
         </div>
         {/* widget */}
-
-        <RoomsCreated />
       </div>
     </div>
   );
