@@ -148,7 +148,7 @@ const Profile = () => {
 
               <div
                 onClick={handleLogOut}
-                className="w-full hover:bg-[#fafafa] cursor-pointer family1 text-center py-2 font-semibold text-[#d02828ed]"
+                className="w-full hover:bg-[#fafafa] cursor-pointer family2 text-center py-2 text-[#d02828ed]"
               >
                 Sign Out
               </div>

@@ -19,7 +19,7 @@ const Charts = () => {
     chart: {
       height: 350,
       type: "bar",
-      fontFamily: "Karla",
+      fontFamily: "Regular",
       foreColor: "#333",
       fontSize: "30px",
       textTransform: "capitalize",
@@ -81,7 +81,7 @@ const Charts = () => {
     }
   }, [totalMonthBookings, totalMonth, totalMonthRevenue]);
   return (
-    <div className="py-8 border rounded-lg flex flex-col w-full gap-8 lg:gap-16 ">
+    <div className="py-8 border bg-[#fff] rounded-lg flex flex-col w-full gap-8 lg:gap-16 ">
       <h3 className="text-xl px-4 block lg:text-3xl text-dark family2 ">
         Growth Analysis
       </h3>

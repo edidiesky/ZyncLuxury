@@ -57,7 +57,7 @@ const DashboardIndex = () => {
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full py-8 border bg-[#fff] rounded-lg px-6">
         <Table>
           <div className="TableContainer">
             <table className="tableWrapper">
@@ -73,7 +73,7 @@ const DashboardIndex = () => {
                 </tr>
               </thead>
               <tbody>
-                {reservations?.map((x, index) => {
+                {reservations?.map((x, _) => {
                   return (
                     <TableCard
                       handleModal={() => {

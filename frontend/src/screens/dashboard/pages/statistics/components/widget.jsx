@@ -52,10 +52,10 @@ const Widget = () => {
         return (
           <div
             key={index}
-            className="w-full p-4 items-start justify-center min-h-[200px] md:min-h-[250px] border rounded-xl flex flex-col gap-4 md:gap-8"
+            className="w-full p-4 items-start justify-center bg-[#fff] min-h-[200px] md:min-h-[250px] border rounded-xl flex flex-col gap-4 md:gap-8"
           >
             <div className="flex flex-col w-full gap-4">
-              <div className="flex md:flex-row flex-col md:items-center gap-1 md:gap-4">
+              <div className="flex flex-col gap-1 md:gap-4">
                 <div
                   style={{
                     backgroundColor: `${data?.bgColor}`,
@@ -71,14 +71,14 @@ const Widget = () => {
             <div className="w-full family1 flex flex-col">
               <h3 className="text-3xl md:text-4xl family2">{data?.subtitle}</h3>
             </div>
-            <div className="flex items-center gap-2 w-full">
+            {/* <div className="flex items-center gap-2 w-full">
               <div className="w-6 text-sm text-[#000] h-6 rounded-full bg-[#4AFC4E] flex items-center justify-center">
                 <GoArrowUpRight />
               </div>
               <span className="text-xs lg:text-sm family2">
                 {data?.trend} from last week
               </span>
-            </div>
+            </div> */}
           </div>
         );
       })}

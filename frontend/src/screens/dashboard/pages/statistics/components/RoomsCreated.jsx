@@ -8,7 +8,7 @@ const RoomsCreated = () => {
     (store) => store.room
   );
   return (
-    <div className="px-6 py-8 border rounded-lg flex flex-col w-full gap-8 lg:gap-16 ">
+    <div className="px-6 py-8 bg-[#fff] border rounded-lg flex flex-col w-full gap-8 lg:gap-16 ">
       <div className="w-full flex md:flex-row flex-col md:items-center justify-between gap-4">
         <div className="flex flex-col">
           <h3 className="text-xl block lg:text-3xl text-dark family2 family2">

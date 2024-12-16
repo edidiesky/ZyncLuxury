@@ -6,7 +6,7 @@ const DashboardLayout = () => {
   return (
     <>
       <div
-        className="w-full bg-[#fff] relative flex items-start justify-end"
+        className="w-full bg-[#FCFCF9] relative flex items-start justify-end"
       >
         <DashboardSidebar />
         <div className="flex w-full md:w-[90%] mx-auto max-w-custom relative flex-col gap-4">
