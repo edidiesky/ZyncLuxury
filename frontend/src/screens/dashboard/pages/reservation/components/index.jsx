@@ -11,6 +11,7 @@ import { Table } from "@/components/common/styles";
 import TableCard from "@/components/common/TableCard";
 import { handlePage } from "@/features/reservation/reservationSlice";
 import CreateReservationModal from "@/components/modals/reservationmodal/CreateReservationModal";
+import CardLoader from "@/components/common/CardLoader";
 const DashboardIndex = () => {
   const [reservationdetailsidebar, setReservationDetailSidebar] = useState(false);
   const [reservationid, setReservationId] =
@@ -23,9 +24,9 @@ const DashboardIndex = () => {
     // dispatch(GetAllRoomAndReservations());
     dispatch(GetAllReservations());
   }, [page]);
-  if (getsingleReservationisLoading) {
-    return <Loader />;
-  }
+  // if (getsingleReservationisLoading) {
+  //   return <Loader />;
+  // }
   return (
     <div className="w-full flex flex-col gap-8 lg:gap-16  md:gap-12">
       <AnimatePresence mode="wait">
@@ -57,61 +58,65 @@ const DashboardIndex = () => {
           </div>
         </div>
       </div>
-      <div className="w-full py-8 border bg-[#fff] rounded-lg px-6">
-        <Table>
-          <div className="TableContainer">
-            <table className="tableWrapper">
-              <thead>
-                <tr>
-                  {/* <th>Description</th> */}
-                  <th>Home Title</th>
-                  <th className="hidden lg:table-cell">User</th>
-                  <th>Date</th>
-                  <th>Price</th>
-                  <th>Status</th>
-                  <th>Manage</th>
-                </tr>
-              </thead>
-              <tbody>
-                {reservations?.map((x, _) => {
-                  return (
-                    <TableCard
-                      handleModal={() => {
-                        setReservationDetailSidebar(true);
-                        setReservationId(x?.id);
-                      }}
-                      x={x}
-                      type={"Reservation"}
-                      key={x?.id}
-                    />
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </Table>
-        {reservations?.length > 0 ? (
-          <div className="w-full mt-4 family1 flex items-center justify-end gap-4">
-            <div
-              onClick={() => dispatch(handlePage("prev"))}
-              className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
-            >
-              <BiChevronLeft />
+      {getsingleReservationisLoading ? (
+        <CardLoader type={"dashboard"} />
+      ) : (
+        <div className="w-full py-8 border bg-[#fff] rounded-lg px-6">
+          <Table>
+            <div className="TableContainer">
+              <table className="tableWrapper">
+                <thead>
+                  <tr>
+                    {/* <th>Description</th> */}
+                    <th>Home Title</th>
+                    <th className="hidden lg:table-cell">User</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Manage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {reservations?.map((x, _) => {
+                    return (
+                      <TableCard
+                        handleModal={() => {
+                          setReservationDetailSidebar(true);
+                          setReservationId(x?.id);
+                        }}
+                        x={x}
+                        type={"Reservation"}
+                        key={x?.id}
+                      />
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
-            {page}
-            <div
-              onClick={() => dispatch(handlePage("next"))}
-              className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
-            >
-              {" "}
-              <BiChevronRight />
+          </Table>
+          {reservations?.length > 0 ? (
+            <div className="w-full mt-4 family1 flex items-center justify-end gap-4">
+              <div
+                onClick={() => dispatch(handlePage("prev"))}
+                className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
+              >
+                <BiChevronLeft />
+              </div>
+              {page}
+              <div
+                onClick={() => dispatch(handlePage("next"))}
+                className="p-2 rounded-md text-lg family2 family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
+              >
+                {" "}
+                <BiChevronRight />
+              </div>
             </div>
-          </div>
-        ) : (
-          ""
-        )}
-        {/* <ReservationCalendar /> */}
-      </div>
+          ) : (
+            ""
+          )}
+          {/* <ReservationCalendar /> */}
+        </div>
+      )}
     </div>
   );
 };

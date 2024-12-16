@@ -183,7 +183,7 @@ const TableCard = ({ x, type, handleModal }) => {
               <img
                 src={x?.rooms?.images[0]}
                 alt=""
-                className="w-16 object-cover"
+                className="w-24 object-cover"
               />
               <span className="hidden text-lg family2 lg:block">
                 {" "}

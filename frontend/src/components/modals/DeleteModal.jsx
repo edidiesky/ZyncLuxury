@@ -1,4 +1,3 @@
- 
 import React, { useState, useCallback, useEffect } from "react";
 import { CiWarning } from "react-icons/ci";
 import { motion } from "framer-motion";
@@ -12,6 +11,7 @@ import { handleClearRoomAlert } from "@/features/room/roomSlice";
 import { DeleteRoom } from "@/features/room/roomReducer";
 import { DeleteReservation } from "@/features/reservation/reservationReducer";
 import { handleClearReservationAlert } from "@/features/reservation/reservationSlice";
+import { slide } from "@/constants/utils/framer";
 export default function DeleteModal({
   type,
   modal,
@@ -70,22 +70,20 @@ export default function DeleteModal({
       <DeleteContainer
         as={motion.div}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
+        exit={{
+          opacity: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
         animate={{ opacity: 1 }}
         className="z-[400000]"
       >
         <motion.div
-          initial={{
-            y: "100vh",
-          }}
-          animate={{
-            y: "0",
-            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
-          }}
-          exit={{
-            y: "100vh",
-            transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
-          }}
+          initial="initial"
+          variants={slide}
+          exit={"exit"}
+          animate={modal ? "enter" : "exit"}
           className={"deleteCard z-[400000] relative gap-2"}
         >
           <div className="cross" onClick={handleClearAlert}>
@@ -97,7 +95,7 @@ export default function DeleteModal({
             </span>
             <h3 className="text-lg md:text-2xl text-center family2">
               Delete this Reservation?
-              <span className="block text-sm w-[80%] mx-auto text-center  regular  text-dark">
+              <span className="block text-sm lg:text-base w-[80%] mx-auto text-center  regular  text-dark">
                 By deleting this reservation,It cannot be retrieved back if this
                 action you carry has been taken.
               </span>
@@ -136,21 +134,19 @@ export default function DeleteModal({
       <DeleteContainer
         as={motion.div}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
+        exit={{
+          opacity: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
         animate={{ opacity: 1 }}
       >
         <motion.div
-          initial={{
-            y: "100vh",
-          }}
-          animate={{
-            y: "0",
-            transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
-          }}
-          exit={{
-            y: "100vh",
-            transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
-          }}
+          initial="initial"
+          variants={slide}
+          animate={modal ? "enter" : "exit"}
+          exit={"exit"}
           className={"deleteCard gap-2"}
         >
           <div className="cross" onClick={handleClearAlert}>
@@ -162,7 +158,7 @@ export default function DeleteModal({
             </span>
             <h3 className="text-lg md:text-2xl text-center family2">
               Delete this room?
-              <span className="block  regular  text-sm w-[80%] mx-auto regular text-center text-dark">
+              <span className="block  regular  text-sm lg:text-base w-[80%] mx-auto regular text-center text-dark">
                 By deleting this product, It cannot be retrieved if this action
                 you carry has been taken.
               </span>
@@ -204,17 +200,10 @@ export default function DeleteModal({
       animate={{ opacity: 1 }}
     >
       <motion.div
-        initial={{
-          y: "100vh",
-        }}
-        animate={{
-          y: "0",
-          transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
-        }}
-        exit={{
-          y: "100vh",
-          transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
-        }}
+        initial="initial"
+        variants={slide}
+        animate={modal ? "enter" : "exit"}
+        exit={"exit"}
         className={"deleteCard gap-2"}
       >
         <div className="cross" onClick={handleClearAlert}>
@@ -226,7 +215,7 @@ export default function DeleteModal({
           </span>
           <h3 className="text-lg md:text-2xl text-center family2">
             Delete this user?
-            <span className="block text-sm w-[80%] regular mx-auto text-center  regular  text-dark">
+            <span className="block text-sm lg:text-base w-[80%] regular mx-auto text-center  regular  text-dark">
               By deleting this user, It cannot be retrieved if this action you
               carry has been taken.
             </span>

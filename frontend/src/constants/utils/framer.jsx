@@ -168,14 +168,14 @@ export const slide = {
     y: "100vh",
   },
   enter: {
-    y: "100vh",
+    y: "0vh",
     transition: {
       duration: 1,
       ease: [0.76, 0, 0.24, 1],
     },
   },
   exit: {
-    y: "-100vh",
+    y: "100vh",
     transition: {
       duration: 1,
       ease: [0.76, 0, 0.24, 1],

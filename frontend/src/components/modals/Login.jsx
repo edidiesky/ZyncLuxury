@@ -96,7 +96,7 @@ const LoginModal = () => {
         <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
           <h3 className="text-3xl font-booking_font4 family2">
             Sign In
-            <span className="block text-sm font-normal max-w-[250px] pt-1 regular">
+            <span className="block text-sm lg:text-base font-normal max-w-[250px] pt-1 regular">
               Login to your account and check out your bookings
             </span>
           </h3>

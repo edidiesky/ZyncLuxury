@@ -7,14 +7,13 @@ import Loader from "@/components/home/loader";
 
 export default function Orders() {
   const dispatch = useDispatch();
-  const { getpaymentisLoading } = useSelector((store) => store.payment);
   useEffect(() => {
     dispatch(GetPaymentHistory());
   }, []);
 
-  if (getpaymentisLoading) {
-    return <Loader />;
-  }
+  // if (getpaymentisLoading) {
+  //   return <Loader />;
+  // }
   return (
     <div>
       <Meta title={"My Orders Summary"} />

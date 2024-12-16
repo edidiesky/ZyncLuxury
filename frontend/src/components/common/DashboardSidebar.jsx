@@ -78,7 +78,7 @@ const DashboardSidebar = () => {
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                   alt=""
-                  className="w-10"
+                  className="w-8"
                 />
                 {/* ZyncLuxury */}
               </Link>
