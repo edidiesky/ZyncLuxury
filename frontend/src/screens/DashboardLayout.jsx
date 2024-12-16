@@ -5,13 +5,11 @@ import DashboardHeader from "@/components/common/dashboardHeader";
 const DashboardLayout = () => {
   return (
     <>
-      <div
-        className="w-full bg-[#FCFCF9] relative flex items-start justify-end"
-      >
+      <div className="w-full bg-[#FCFCF9] relative flex items-start justify-end">
         <DashboardSidebar />
-        <div className="flex w-full md:w-[90%] mx-auto max-w-custom relative flex-col gap-4">
+        <div className="flex w-full relative flex-col gap-4">
           <DashboardHeader />
-          <div className="px-4 py-8 lg:px-8 w-full">
+          <div className="px-4 py-8 md:w-[90%] mx-auto max-w-custom  lg:px-8 w-full">
             <Outlet />
           </div>
         </div>

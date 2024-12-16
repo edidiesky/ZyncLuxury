@@ -96,7 +96,7 @@ const DashboardHeader = () => {
         }}
         className="h-[85px] w-full border-b border-[rgba(0,0,0,.08)] bg-[#ffffffca] flex z-40 sticky top-0 items-center justify-between"
       >
-        <div className="Header_wrapper w-[95%] mx-auto max-w-custom flex items-center justify-between">
+        <div className="Header_wrapper px-4 w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
               onClick={() => setBar(!bar)}
