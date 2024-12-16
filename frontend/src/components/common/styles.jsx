@@ -39,13 +39,13 @@ export const Table = styled.div`
           background-color: #fafafa;
           th {
             text-align: start;
-            font-size: 14px !important;
+            font-size: 16px !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1.3rem 1rem;
             font-weight: 400;
             font-family: "Regular", sans-serif;
             background-color: #fafafa;
-            color: #969a9a;
+            color: #333;
           }
         }
       }

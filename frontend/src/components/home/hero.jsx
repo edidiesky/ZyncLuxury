@@ -153,7 +153,7 @@ const Hero = () => {
                         key={index}
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
-                        } w-12 md:w-16 h-12 md:h-16 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
+                        } w-12 md:w-12 h-12 md:h-12 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
                       >
                         <img
                           src={face}

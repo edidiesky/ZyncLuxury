@@ -7,6 +7,7 @@ import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Layout } from "lucide-react";
+import { FaUsers } from "react-icons/fa";
 
 const AdminSidebarData = [
   {
@@ -50,7 +51,7 @@ const AdminSidebarData = [
   {
     id: 4,
     tab: {
-      icon: <FaRegUser fontSize={"20px"} />,
+      icon: <FaUsers fontSize={"24px"} />,
       title: "Clients",
       path: "/customers",
     },
@@ -101,7 +102,7 @@ const DashboardSidebar = () => {
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
-                <div key={index} className="w-[100%] text-base mx-auto">
+                <div key={index} className="w-[100%] text-sm mx-auto">
                   <NavLink
                     // activeClassName="active"
                     end
@@ -111,7 +112,9 @@ const DashboardSidebar = () => {
                     <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
                       {x?.tab?.icon}
                     </span>{" "}
-                    <span className="flex-1 text-sm">{x?.tab?.title}</span>
+                    <span className="flex-1 text-xs uppercase">
+                      {x?.tab?.title}
+                    </span>
                   </NavLink>
                 </div>
               );
@@ -133,10 +136,11 @@ const DashboardSidebar = () => {
               {<span className="">Settings</span>}
             </NavLink> */}
 
-            <div
-              className="py-2 rounded-md w-full px-3 font-normal justify-center text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]"
-            >
-              <div className="w-12 h-12 rounded-full flex gap-4 items-center justify-center text-white text-lg bg-[#A1718A]">
+            <div className="py-2 rounded-md w-full px-3 font-normal justify-center text-white flex items-center cursor-pointer gap-4 hover:bg-[#ededea]">
+              <div
+                className="w-14 h-14 rounded-full flex gap-4 items-center justify-center
+               text-white text-lg lg:text-xl bg-[#A1718A]"
+              >
                 {currentUser?.name?.split("")[0]}
               </div>
               {/* <span className="text-sm family2">

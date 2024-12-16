@@ -42,7 +42,7 @@ const DashboardIndex = () => {
           <h3 className="text-2xl block lg:text-4xl text-dark family2">
             Reservations Created
           </h3>
-          <span className="block family1 text-base font-normal">
+          <span className="block family1 text-base lg:text-lg font-normal">
             Overview of your listings reservations created by your clients
           </span>
         </div>

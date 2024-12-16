@@ -16,7 +16,7 @@ const RoomsList = () => {
   return (
     <>
       {getallRoomisLoading && <Loader />}
-      <div className="w-full">
+      <div className="w-full py-8 border bg-[#fff] rounded-lg px-6">
         <Table>
           <div className="TableContainer">
             <table className="tableWrapper">
