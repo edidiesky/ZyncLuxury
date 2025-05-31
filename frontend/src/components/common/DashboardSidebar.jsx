@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { Layout } from "lucide-react";
 import { FaUsers } from "react-icons/fa";
 import { PiReceiptBold } from "react-icons/pi";
+import { BiSolidShoppingBags } from "react-icons/bi"
 
 const AdminSidebarData = [
   {
@@ -22,7 +23,7 @@ const AdminSidebarData = [
   {
     id: 61,
     tab: {
-      icon: <FaHotel fontSize={"20px"} />,
+      icon: <BiSolidShoppingBags fontSize={"24px"} />,
       title: "Rooms",
       path: "/rooms",
     },
