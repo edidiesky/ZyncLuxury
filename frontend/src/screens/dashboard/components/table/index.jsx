@@ -1,135 +1,148 @@
+// components/ui/DataTableDemo.jsx
 "use client";
 
-import { Search } from "lucide-react";
-import { useSelector } from "react-redux";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DashboardTableProps } from "@/types";
+import * as React from "react";
+import {
+  flexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import ActionButtons from "./ActionButtons";
-import ExportDropdown from "./ExportDropdown";
-import Pagination from "./Pagination.jsx";
-import TableHeader from "./TableHeader";
-import TableCard from "./TableCard";
+import { paymentcolumns } from "@/constants/table";
 
-import { AnimatePresence } from "framer-motion";
-import { renderStatus } from "@/utils/dashboardTableStatus";
-import ContentLoader from "@/components/common/ContentLoader";
-// import RemittanceModal from "../modals/RemittanceModal";
-// import PaymentModal from "../../admin/_components/AdminDashboardTable/AdminDashboardActionsModal/PaymentModal";
 
-export default function DashboardTable(props) {
-  const {
-    isDashboardActionsModal,
-    isPaymentCardModal,
-    isRemittancePaymentCardModal,
-  } = useSelector((store) => store.modal);
+export function BookingDataTable({ title, description, data = [] }) {
+  const [sorting, setSorting] = React.useState([]);
+  const [columnFilters, setColumnFilters] = React.useState([]);
+  const [columnVisibility, setColumnVisibility] = React.useState({});
+  const [rowSelection, setRowSelection] = React.useState({});
+
+  const table = useReactTable({
+    data,
+    columns: paymentcolumns,
+    onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onColumnVisibilityChange: setColumnVisibility,
+    onRowSelectionChange: setRowSelection,
+    state: {
+      sorting,
+      columnFilters,
+      columnVisibility,
+      rowSelection,
+    },
+  });
 
   return (
-    <>
-      {/* REMITTANCE PAYMENT MODAL */}
-      {/* <AnimatePresence mode="wait">
-        {isRemittancePaymentCardModal && <RemittanceModal />}
-        {isPaymentCardModal && <PaymentModal />}
-      </AnimatePresence> */}
-      <div className="relative">
-        <Card className="bg-gray-50 border-none">
-          <CardHeader className="flex flex-row justify-between items-center">
-            <CardTitle>
-              <div>
-                <p className="text-base lg:text-lg font-semibold text-gray-800">
-                  {props?.title}
-                </p>
-                <h5 className="text-sm font-normal text-[#525866]">
-                  {props?.description}
-                </h5>
-              </div>
-            </CardTitle>
-            <div className="flex gap-3">
-              <div className="relative w-20 lg:w-[300px]">
-                <Input
-                  placeholder="Search..."
-                  className="w-full h-10 rounded-md border-[#E5E7EB] bg-white text-sm pl-10"
-                  value={props?.searchQuery || ""}
-                  onChange={(e) => props?.handleSearchQuery?.(e.target.value)}
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6B7280] w-4 h-4" />
-              </div>
-              <ExportDropdown />
-            </div>
-          </CardHeader>
-          <ActionButtons
-            actionButtons={props?.actionButtons || []}
-            selectedAction={props?.selectedAction}
-            setSelectedAction={props?.setSelectedAction}
-            type={props?.type}
-          />
-          <CardContent className="p-0 w-full max-w-[1200px] mx-auto">
-            <Table>
-              <TableHeader tableHeaderData={props?.tableHeaderData} />
-
-              <TableBody>
-                {props?.loading ? (
-                  <TableRow>
-                    <TableCell
-                      colSpan={props?.tableHeaderData?.length}
-                      className="text-center"
-                    >
-                      <ContentLoader type="dashboard" />
-                    </TableCell>
-                  </TableRow>
-                ) : props?.tableRowData?.length === 0 ? (
-                  <TableRow>
-                    <TableCell
-                      colSpan={props?.tableHeaderData?.length}
-                      className="py-3 px-6 text-center"
-                    >
-                      <div className="w-full flex flex-col justify-center items-center gap-2">
-                        {/* {props?.type !== 'overview' ? (
-                          <img src="/assets/icons/stocks.png" alt="" />
-                        ) : (
-                          <img src="/assets/icons/card.png" alt="" />
-                        )} */}
-                        <div className="w-full flex flex-col justify-center items-center gap-2">
-                          <img src="/assets/icons/stocks.png" alt="" />
-                          <h4 className="text-md capitalize">
-                            No{" "}
-                            {props?.type === "employer_remittance"
-                              ? "Employer Remittance"
-                              : props?.type}{" "}
-                            Record Available...
-                          </h4>
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                ) : (
-                  props?.tableRowData?.map((tableData, index) => {
-                    return (
-                      <TableCard
-                        key={index}
-                        renderStatus={renderStatus}
-                        // getActionButtons={getActionButton}
-                        tableData={tableData}
-                        type={props?.type}
-                      />
-                    );
-                  })
-                )}
-              </TableBody>
-            </Table>
-          </CardContent>
-          <Pagination
-            currentPage={props?.currentPage ?? 1}
-            totalPages={props?.totalPages ?? 0}
-            totalRows={props?.totalRows ?? 0}
-            rowsPerPage={props?.rowsPerPage ?? 10}
-            setCurrentPage={props?.setCurrentPage || (() => {})}
-            setRowsPerPage={props?.setRowsPerPage || (() => {})}
-          />
-        </Card>
+    <div className="w-full py-6 px-8 border rounded-lg flex flex-col gap-4">
+      <div className="grid flex-1 gap-1">
+        <CardTitle className="text-3xl">{title}</CardTitle>
+        <CardDescription className="text-base">{description}</CardDescription>
       </div>
-    </>
+      <div className="flex items-center">
+        <Input
+          placeholder="Filter emails..."
+          value={table.getColumn("email")?.getFilterValue() || ""}
+          onChange={(event) =>
+            table.getColumn("email")?.setFilterValue(event.target.value)
+          }
+          className="max-w-sm"
+        />
+      </div>
+      <div className="rounded-md mt-4 border">
+        <Table>
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <TableHead
+                    className="text-[#333] family1 text-base"
+                    key={header.id}
+                  >
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows?.length ? (
+              table?.getRowModel()?.rows?.map((row) => (
+                <TableRow
+                  key={row?.id}
+                  data-state={row?.getIsSelected() && "selected"}
+                >
+                  {row?.getVisibleCells().map((cell) => (
+                    <TableCell
+                      className="text-[#777] family1 text-base"
+                      key={cell.id}
+                    >
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell
+                  colSpan={columns.length}
+                  className="h-24 text-center"
+                >
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+      <div className="flex items-center justify-end space-x-2 py-4">
+        <div className="text-muted-foreground flex-1 text-sm">
+          {table.getFilteredSelectedRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} row(s) selected.
+        </div>
+        <div className="space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 }

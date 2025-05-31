@@ -7,6 +7,7 @@ import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 import RoomsCreated from "./RoomsCreated";
 import CardLoader from "@/components/common/CardLoader";
 import { BookingAreaChart } from "@/screens/dashboard/components/charts/BookingAreaChart";
+import { BookingDataTable } from "@/screens/dashboard/components/table";
 const DashboardIndex = () => {
   const { getStatisLoading } = useSelector((store) => store.stat);
   const dispatch = useDispatch();
@@ -17,6 +18,59 @@ const DashboardIndex = () => {
   // if (getStatisLoading) {
   //   return <Loader />;
   // }
+  
+  const data = [
+    {
+      id: "m5gr84i9",
+      amount: 316,
+      status: "success",
+      email: "ken99@example.com",
+      name: "Daniel John",
+      location: "Samuel Kong",
+      nationality: "Niegria",
+      payment_ref: "N23yvdjc+-iegria",
+    },
+    {
+      id: "3u1reuv4",
+      amount: 316,
+      status: "success",
+      email: "ken99@example.com",
+      name: "Daniel John",
+      location: "Samuel Kong",
+      nationality: "Niegria",
+      payment_ref: "N23yvdjc+-iegria",
+    },
+    {
+      id: "derv1ws0",
+      amount: 316,
+      status: "success",
+      email: "ken99@example.com",
+      name: "Daniel John",
+      location: "Samuel Kong",
+      nationality: "Niegria",
+      payment_ref: "N23yvdjc+-iegria",
+    },
+    {
+      id: "5kma53ae",
+      amount: 316,
+      status: "success",
+      email: "ken99@example.com",
+      name: "Daniel John",
+      location: "Samuel Kong",
+      nationality: "Niegria",
+      payment_ref: "N23yvdjc+-iegria",
+    },
+    {
+      id: "bhqecj4p",
+      amount: 316,
+      status: "success",
+      email: "ken99@example.com",
+      name: "Daniel John",
+      location: "Samuel Kong",
+      nationality: "Niegria",
+      payment_ref: "N23yvdjc+-iegria",
+    },
+  ];
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-8">
@@ -44,15 +98,11 @@ const DashboardIndex = () => {
             />
           </div>
 
-          {/* <div className="w-full flex flex-col gap-12">
-            {getStatisLoading ? (
-              <CardLoader type={"dashboard"} />
-            ) : (
-              <Statistics />
-            )}
-          </div> */}
-
-          <RoomsCreated />
+          <BookingDataTable
+            title={"Welcome back!"}
+            data={data}
+            description={"Here's a list of your booking for this month."}
+          />
         </div>
         {/* widget */}
       </div>

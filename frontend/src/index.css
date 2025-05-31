@@ -282,41 +282,6 @@ textarea {
   border-radius: 10px;
 }
 
-form input {
-  min-height: 44px;
-  /* min-width: 130px; */
-  border-radius: 5px;
-  background-color: inherit;
-  transition: all 0.3s;
-  border: 1.5px solid #e7e7e9;
-  padding: 0 1rem;
-}
-input {
-  min-height: 44px;
-  /* min-width: 130px; */
-  border-radius: 5px;
-  background-color: inherit;
-  transition: all 0.3s;
-  border: 1.5px solid rgba(0, 0, 0, 0.2);
-  padding: 0 1rem;
-  font-family: "Regular", sans-serif !important;
-}
-form input:hover {
-  box-shadow: 0 0 0 6px #e7e7e9;
-  transition: all 0.3s;
-  outline: 1px solid #3e3aff;
-}
-input:hover {
-  box-shadow: 0 0 0 6px #e7e7e9;
-  transition: all 0.3s;
-  outline: 1px solid #3e3aff;
-}
-input:focus {
-  box-shadow: 0 0 0 6px #e7e7e9;
-  transition: all 0.3s;
-  outline: 1px solid #3e3aff;
-}
-
 .btn {
   transition: all 0.5s;
   background: var(--primary) !important;

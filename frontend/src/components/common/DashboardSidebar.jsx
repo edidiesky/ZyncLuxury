@@ -101,7 +101,7 @@ const DashboardSidebar = () => {
                   <NavLink
                     // activeClassName="active"
                     end
-                    className={`flex tab py-3 px-4 rounded-lg family2 w-full items-center gap-3`}
+                    className={`flex tab py-2 px-4 rounded-lg family2 w-full items-center gap-3`}
                     to={`/dashboard${x.tab.path}`}
                   >
                     <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
@@ -119,7 +119,7 @@ const DashboardSidebar = () => {
             <NavLink
               // activeClassName="active"
               end
-              className={`flex tab py-3 px-4 rounded-lg family2 w-full items-center gap-3`}
+              className={`flex tab py-2 px-4 rounded-lg family2 w-full items-center gap-3`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
               <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
