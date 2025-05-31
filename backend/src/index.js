@@ -118,6 +118,6 @@ io.on("connection", (socket) => {
 });
 
 // addUserId(id, socket?.id)
-server.listen(4000, () => {
-  console.log("server is listening on port 4000");
+server.listen(process.emv.PORT, () => {
+  console.log(`server is listening on port ${process.emv.PORT}`);
 });

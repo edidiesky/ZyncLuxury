@@ -5,12 +5,12 @@ export const ProtectRoute = ({ children, type }) => {
   // const navigate = useNavigate()
   const { currentUser } = useSelector((store) => store.auth);
   // console.log(currentUser.role);
-  if (!currentUser) {
-    return <Navigate to="/" />;
-  }
-  if (type === "dashboard" && currentUser?.role === "USER") {
-    return <Navigate to="/" />;
-  }
+  // if (!currentUser) {
+  //   return <Navigate to="/" />;
+  // }
+  // if (type === "dashboard" && currentUser?.role === "USER") {
+  //   return <Navigate to="/" />;
+  // }
 
   return children;
 };

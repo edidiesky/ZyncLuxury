@@ -132,7 +132,7 @@ const Hero = () => {
       <div className="w-full">
         <div
           data-scroll-section
-          className="w-full min-h-[700px] z-30 py-40 relative flex items-center justify-center gap-8"
+          className="w-full min-h-[700px] z-30 py-32 relative flex items-center justify-center gap-8"
         >
           <img
             src="/hero.jpg"
@@ -167,11 +167,11 @@ const Hero = () => {
                   5 K+ Happy Customers
                 </span>
               </div>
-              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1] text-4xl md:text-center sm:text-6xl lg:text-7xl family2">
+              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1] text-4xl md:text-center sm:text-6xl lg:text-6xl family2">
                 <span className="text-center hero_main_text hide">
                   Find your Best Property - By Lease, or Rent with Confidence
                 </span>
-                <span className="text-base md:text-2xl hero_submain_text hide max-w-[400px] lg:mx-auto md:text-center lg:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
+                <span className="text-base md:text-xl hero_submain_text hide max-w-[400px] lg:mx-auto md:text-center lg:max-w-[680px] text-[#eee] font-normal pt-4 block family3">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
@@ -183,7 +183,7 @@ const Hero = () => {
               <div className="flex flex-1">
                 <Link
                   to={"/search"}
-                  className="btn hero_btn md:text-base text-center  w-full text-sm family1 regular text-white rounded-[40px] px-4 py-4"
+                  className="btn hero_btn md:text-lg text-center  w-full text-sm family1 family1 text-white rounded-[40px] px-4 py-4"
                 >
                   Book Your Home
                 </Link>
@@ -192,7 +192,7 @@ const Hero = () => {
               <div className="flex flex-1 items-center">
                 <Link
                   to={"/search"}
-                  className="btn hero_btn btn_2 md:text-base text-center w-full text-sm family1 regular text-white px-4 py-4"
+                  className="btn hero_btn btn_2 md:text-lg text-center w-full text-sm family1 family1 text-white px-4 py-4"
                 >
                   Learn More
                 </Link>
@@ -201,7 +201,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="w-full">
-          <SearchHomes />
+          {/* <SearchHomes /> */}
         </div>
       </div>
       <Sidebar bar={bar} setBar={setBar} currentUser={currentUser} />
@@ -470,7 +470,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
                 end
                 to={`/${list.path}`}
                 key={index}
-                className={`text-lg hover:text-grey font-normal regular text-white flex items-center
+                className={`text-lg hover:text-grey family2 text-white flex items-center
                      gap-2 p-3 px-3 rounded-[40px]`}
               >
                 {/* <img src={list?.icon} className="w-4" alt="" /> */}

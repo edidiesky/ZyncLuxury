@@ -12,17 +12,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: #635BFF;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: #635BFF;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent-foreground: #635BFF;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -45,7 +45,7 @@
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: #635BFF;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -117,7 +117,7 @@ a.active {
 }
 
 .ql-container {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded img {
   width: 100% !important;
@@ -136,11 +136,24 @@ a.active {
 
 @font-face {
   font-family: "Bold";
-  src: url("./assets/fonts/ClashGrotesk-Medium.otf") format("opentype");
+  src: url("./assets/fonts/Cabinet-bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Regular";
-  src: url("./assets/fonts/ClashGrotesk-Regular.otf") format("opentype");
+  src: url("./assets/fonts/Cabinet-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("./assets/fonts/Cabinet-medium.ttf") format("truetype");
+}
+
+.bold {
+  font-family: "Bold", sans-serif !important;
+}
+
+.medium {
+  font-family: "Medium", sans-serif !important;
 }
 *,
 *::after,
@@ -165,10 +178,10 @@ button:disabled {
 .rdrMonth {
   width: 100% !important;
   font-size: 14px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 .rdrMonthAndYearPickers select {
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
   font-size: 14px !important;
   color: var(--dark-1) !important;
 }
@@ -185,7 +198,7 @@ button:disabled {
   > .MuiDataGrid-cell {
   max-height: 200px !important;
   min-height: 200px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 
 .rdrDateRangePickerWrapper {
@@ -197,17 +210,17 @@ button:disabled {
   width: 100% !important;
   color: var(--dark-1) !important;
   font-size: 15px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 /* React day picker css */
 
 .family1 {
-  font-family: "Regular", sans-serif !important;
+  font-family: "Medium", sans-serif !important;
 }
 .family2 {
   font-family: "Bold", sans-serif !important;
 }
-.regular {
+.family3 {
   font-family: "Regular", sans-serif !important;
 }
 :root {
@@ -265,7 +278,7 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
   border-radius: 10px;
 }
 
@@ -286,7 +299,7 @@ input {
   transition: all 0.3s;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
-   font-family: "Regular", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 form input:hover {
   box-shadow: 0 0 0 6px #e7e7e9;
@@ -308,7 +321,7 @@ input:focus {
   transition: all 0.5s;
   background: var(--primary) !important;
   cursor: pointer;
-  border-radius: 10px !important;
+  border-radius: 40px !important;
 }
 .btn:hover {
   background: var(--grey-1) !important;
@@ -383,7 +396,7 @@ html.lenis body {
 #reactSchedulerOutsideWrapper *,
 #reactSchedulerOutsideWrapper ::before,
 #reactSchedulerOutsideWrapper ::after {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 
 .sc-iuOPfm.eiWmqu {
@@ -393,12 +406,12 @@ html.lenis body {
 }
 
 .sc-gjLKRp.gqsWwT {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
   font-weight: 600;
 }
 
 .sc-cCzKKE.bwVOYM {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
   /* font-weight: normal !important; */
   font-size: 12px !important;
 }
@@ -414,7 +427,7 @@ html.lenis body {
 }
 
 .sc-gjLKRp.eAzhgx {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -462,7 +475,7 @@ html.lenis body {
 
 .sc-cCzKKE.bwVOYM {
   display: block !important;
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 
 .sc-cCzKKE.fOgBaC::after {
@@ -475,7 +488,7 @@ html.lenis body {
 
 .sc-cCzKKE.dxSqfu {
   display: block !important;
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "Regular", sans-serif !important;
 }
 
 .sc-cCzKKE.dxSqfw::after {

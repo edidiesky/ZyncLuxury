@@ -9,7 +9,7 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
-
+  
 enum ReservationStatus {
   PENDING
   CONFIRMED
@@ -41,6 +41,7 @@ enum RoleStatus {
   ADMIN
   USER
   SELLER
+  MODERATOR
 }
 
 model User {
