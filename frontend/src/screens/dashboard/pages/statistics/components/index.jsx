@@ -3,13 +3,10 @@ import Widget from "./widget";
 import Statistics from "./statistics";
 import { useSelector, useDispatch } from "react-redux";
 import { getAdminStat } from "@/features/stat/statReducer";
-import Loader from "@/components/home/loader";
-import { Link, NavLink } from "react-router-dom";
-import { apartmentDataList } from "@/data/apartmentData";
-import Image from "@/components/common/Image";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
 import RoomsCreated from "./RoomsCreated";
 import CardLoader from "@/components/common/CardLoader";
+import { BookingAreaChart } from "@/screens/dashboard/components/charts/BookingAreaChart";
 const DashboardIndex = () => {
   const { getStatisLoading } = useSelector((store) => store.stat);
   const dispatch = useDispatch();
@@ -38,6 +35,13 @@ const DashboardIndex = () => {
             ) : (
               <Widget />
             )}
+          </div>
+
+          <div className="w-full">
+            <BookingAreaChart
+              title={"Payment Overview"}
+              description={"Showing total visitors for the last 3 months"}
+            />
           </div>
 
           {/* <div className="w-full flex flex-col gap-12">

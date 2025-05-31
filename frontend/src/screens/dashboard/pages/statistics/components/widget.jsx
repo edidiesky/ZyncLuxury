@@ -55,10 +55,10 @@ const Widget = () => {
             className="w-full p-4 border rounded-lg items-start justify-center bg-[#fff] border-r flex flex-col gap-4 md:gap-8"
           >
             <div className="flex flex-col w-full gap-4">
-              <h4 className="text-grey w-full border-b pb-3 family1 text-lg">
+              <h4 className="text-grey w-full border-b pb-3 family1 text-base">
                 {data?.title}
               </h4>
-              <h2 className="text-3xl lg:text-5xl family2">1000</h2>
+              <h2 className="text-3xl lg:text-5xl family2">1,218</h2>
               <div className="w-full pt-3 border-t flex items-center justify-between">
                 <h4 className="flex gap-0.5 items-center text-2xl">
                   <HiMiniArrowTrendingUp />
