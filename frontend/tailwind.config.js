@@ -23,9 +23,9 @@ module.exports = {
         custom_2: "auto 1fr",
       },
       maxWidth: {
-        custom: "1404px",
-        custom_1: "1404px",
-        custom_2: "1404px",
+        custom: "1204px",
+        custom_1: "1204px",
+        custom_2: "1204px",
       },
       colors: {
         border: "hsl(var(--border))",

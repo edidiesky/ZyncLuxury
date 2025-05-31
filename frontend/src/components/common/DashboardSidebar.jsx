@@ -129,7 +129,7 @@ const DashboardSidebar = () => {
               {<span className="flex-1 text-lg">Settings</span>}
             </NavLink>
 
-            <div className="py-2 rounded-md w-full px-3 font-normal text-white flex items-center cursor-pointer gap-4 hover:bg-[var(--primary)]">
+            <div className="py-2 rounded-md w-full px-3 font-normal text-white flex items-center cursor-pointer gap-4 hover:bg-[#1f2222c8]">
               <div
                 className="w-12 h-12 rounded-full flex gap-4 items-center justify-center
                text-white text-lg lg:text-xl bg-[#A1718A]"
@@ -168,7 +168,7 @@ export const HeaderStyles = styled.div`
   .tab {
     color: #969A9A;
     &:hover {
-      background: var(--primary);
+      background: #1f2222c8;
       color: #fff;
     }
     .nav_icons:hover {

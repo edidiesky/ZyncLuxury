@@ -4,8 +4,8 @@ import { GiCash } from "react-icons/gi";
 import { LuBedDouble } from "react-icons/lu";
 import { useSelector } from "react-redux";
 import { GoArrowUpRight, GoArrowDownRight } from "react-icons/go";
-import {  FaMoneyBill } from "react-icons/fa";
-
+import { FaMoneyBill } from "react-icons/fa";
+import { HiMiniArrowTrendingUp } from "react-icons/hi2";
 const Widget = () => {
   const { totalOrder, totalReservations, totalRooms } = useSelector(
     (store) => store.stat
@@ -47,14 +47,30 @@ const Widget = () => {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4">
+    <div className="w-full grid  grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4">
       {widgetData?.map((data, index) => {
         return (
           <div
             key={index}
-            className="w-full p-4 items-start justify-center bg-[#fff] min-h-[200px] md:min-h-[250px] border rounded-xl flex flex-col gap-4 md:gap-8"
+            className="w-full p-4 border rounded-lg items-start justify-center bg-[#fff] border-r flex flex-col gap-4 md:gap-8"
           >
             <div className="flex flex-col w-full gap-4">
+              <h4 className="text-grey w-full border-b pb-3 family1 text-lg">
+                {data?.title}
+              </h4>
+              <h2 className="text-3xl lg:text-5xl family2">1000</h2>
+              <div className="w-full pt-3 border-t flex items-center justify-between">
+                <h4 className="flex gap-0.5 items-center text-2xl">
+                  <HiMiniArrowTrendingUp />
+                  <span className="text-lg">{data?.trend}</span>
+                </h4>
+                <span className="text-base text-grey">
+                  increase vs last month
+                </span>
+              </div>
+            </div>
+
+            {/* <div className="flex flex-col w-full gap-4">
               <div className="flex flex-col gap-1 md:gap-4">
                 <div
                   style={{
@@ -70,14 +86,6 @@ const Widget = () => {
             </div>
             <div className="w-full family1 flex flex-col">
               <h3 className="text-3xl md:text-4xl family2">{data?.subtitle}</h3>
-            </div>
-            {/* <div className="flex items-center gap-2 w-full">
-              <div className="w-6 text-sm text-[#000] h-6 rounded-full bg-[#4AFC4E] flex items-center justify-center">
-                <GoArrowUpRight />
-              </div>
-              <span className="text-xs lg:text-sm family2">
-                {data?.trend} from last week
-              </span>
             </div> */}
           </div>
         );

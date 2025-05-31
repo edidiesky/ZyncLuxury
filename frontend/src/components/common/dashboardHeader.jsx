@@ -1,4 +1,3 @@
- 
 import styled from "styled-components";
 import { RxCross1 } from "react-icons/rx";
 import { HiBars3BottomLeft } from "react-icons/hi2";
@@ -94,7 +93,7 @@ const DashboardHeader = () => {
         style={{
           backdropFilter: "blur(34px)",
         }}
-        className="h-[85px] w-full border-b border-[rgba(0,0,0,.08)] bg-[#ffffffca] flex z-40 sticky top-0 items-center justify-between"
+        className="h-[75px] w-full border-b border-[rgba(0,0,0,.08)] bg-[#ffffffca] flex z-40 sticky top-0 items-center justify-between"
       >
         <div className="Header_wrapper px-4 w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -108,21 +107,27 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <form
-              action=""
-              className="max-w-[140px] h-[46px] md:max-w-[180px] md:w-[160px] flex items-center relative"
-            >
-              <span className="w-4 h-4 absolute left-6">
-                <BsSearch />
-              </span>
-              <input
-                type="text"
-                placeholder="Search listings"
-                className="text-base pl-12 h-full border font-normal bg-white rounded-full w-full "
-              />
+            <form action="" className="flex items-center relative">
+              <label
+                htmlFor=""
+                className="flex items-center relative rounded-full"
+              >
+                <span className="w-8 h-8 absolute top-4 left-4">
+                  <BsSearch />
+                </span>
+                <input
+                  type="text"
+                  placeholder="Search listings"
+                  style={{
+                    outline:"none !important",
+                    border:"none !important",
+                  }}
+                  className="text-base pl-12 h-full font-normal bg-white rounded-full w-full "
+                />
+              </label>
             </form>
           </div>
-          <div className="flex flex-1 auto items-center justify-end gap-4">
+          <div className="flex flex-1 items-center justify-end gap-4">
             {/* <div
               onClick={() => setNotificationActiveBar(true)}
               className="w-10 md:w-14 hover:bg-[#f7f7f7] relative cursor-pointer h-10 md:h-14 rounded-full flex items-center justify-center text-lg"
@@ -134,10 +139,23 @@ const DashboardHeader = () => {
                 </div>
               )}
             </div> */}
-            <Profile />
+            {/* <Profile /> */}
+            <div className="py-2 rounded-md flex-1 px-3 font-normal text-white flex items-center cursor-pointer gap-4 justify-end">
+              <div
+                className="w-12 h-12 rounded-full flex gap-4 items-center justify-center
+               text-[#000] text-lg lg:text-xl bg-[#A1718A]"
+              >
+                {currentUser?.name?.split("")[0] || "AA"}
+              </div>
+              <span className="text-lg family2 text-[#000]">
+                {currentUser?.name || "Admin Admin"}
+                <span className="text-sm block font-normal text-[#969A9A]">
+                  Admin
+                </span>
+              </span>
+            </div>
           </div>
         </div>
-        
       </HeaderStyles>
       <Sidebar bar={bar} setBar={setBar} />
     </>
