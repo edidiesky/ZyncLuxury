@@ -59,10 +59,10 @@ const Widget = () => {
                 {data?.title}
               </h4>
               <h2 className="text-3xl lg:text-5xl family2">1,218</h2>
-              <div className="w-full pt-3 border-t flex items-center justify-between">
-                <h4 className="flex gap-0.5 items-center text-2xl">
+              <div className="w-full pt-3 border-t flex family1 items-center justify-between">
+                <h4 className="flex gap-1 items-center text-xl">
                   <HiMiniArrowTrendingUp />
-                  <span className="text-lg">{data?.trend}</span>
+                  <span className="text-base family2">{data?.trend}</span>
                 </h4>
                 <span className="text-base text-grey">
                   increase vs last month

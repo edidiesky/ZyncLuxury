@@ -20,6 +20,15 @@ const AdminSidebarData = [
     list: [],
   },
   {
+    id: 61,
+    tab: {
+      icon: <FaHotel fontSize={"20px"} />,
+      title: "Rooms",
+      path: "/rooms",
+    },
+    list: [],
+  },
+  {
     id: 6,
     tab: {
       icon: <LuBedDouble fontSize={"20px"} />,
@@ -29,15 +38,6 @@ const AdminSidebarData = [
     list: [],
   },
 
-  {
-    id: 61,
-    tab: {
-      icon: <FaHotel fontSize={"20px"} />,
-      title: "Rooms",
-      path: "/rooms",
-    },
-    list: [],
-  },
   {
     id: 6,
     tab: {
@@ -166,7 +166,7 @@ export const HeaderStyles = styled.div`
   }
 
   .tab {
-    color: #969A9A;
+    color: #969a9a;
     &:hover {
       background: #1f2222c8;
       color: #fff;
