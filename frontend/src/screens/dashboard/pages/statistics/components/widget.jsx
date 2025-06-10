@@ -58,7 +58,7 @@ const Widget = () => {
               <h4 className="text-grey w-full border-b pb-3 family1 text-base">
                 {data?.title}
               </h4>
-              <h2 className="text-3xl lg:text-5xl family2">1,218</h2>
+              <h2 className="text-3xl lg:text-4xl family2">1,218</h2>
               <div className="w-full pt-3 border-t flex family1 items-center justify-between">
                 <h4 className="flex gap-1 items-center text-xl">
                   <HiMiniArrowTrendingUp />

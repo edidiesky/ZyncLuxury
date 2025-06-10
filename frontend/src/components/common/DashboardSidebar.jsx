@@ -76,9 +76,9 @@ const DashboardSidebar = () => {
     <HeaderStyles
       className={`w-[320px] bg-[#121621] lg:block hidden h-[100vh] overflow-auto sticky top-0`}
     >
-      <div className="w-full h-full  py-8 px-4 justify-between flex flex-col gap-4">
+      <div className="w-full h-full  py-8 px-2 justify-between flex flex-col gap-4">
         <div className="w-full h-[90%] flex flex-col gap-4">
-          <div className="flex w-full flex-col gap-4 items-start justify-between py-1">
+          <div className="flex px-2 w-full flex-col gap-4 items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className="relative flex gap-4 items-start">
               <Link
@@ -94,7 +94,7 @@ const DashboardSidebar = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full mt-2 family1 gap-0.5 flex flex-col">
+          <div className="w-full mt-2 family1 gap-1 flex flex-col">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
@@ -105,7 +105,7 @@ const DashboardSidebar = () => {
                     className={`flex tab py-2 px-4 rounded-lg family2 w-full items-center gap-3`}
                     to={`/dashboard${x.tab.path}`}
                   >
-                    <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
+                    <span className="text-lg md:text-lg rounded-full flex items-center justify-center">
                       {x?.tab?.icon}
                     </span>{" "}
                     <span className="flex-1 text-lg">{x?.tab?.title}</span>
@@ -123,7 +123,7 @@ const DashboardSidebar = () => {
               className={`flex tab py-2 px-4 rounded-lg family2 w-full items-center gap-3`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
-              <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
+              <span className="text-lg md:text-lg rounded-full flex items-center justify-center">
                 <FiSettings fontSize={"20px"} />
               </span>
 

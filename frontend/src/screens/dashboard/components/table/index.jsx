@@ -72,7 +72,7 @@ export function BookingDataTable({ title, description, data = [] }) {
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
                   <TableHead
-                    className="text-[#333] family1 text-base"
+                    className="text-[#262626] family3 text-base"
                     key={header.id}
                   >
                     {header.isPlaceholder
@@ -95,7 +95,7 @@ export function BookingDataTable({ title, description, data = [] }) {
                 >
                   {row?.getVisibleCells().map((cell) => (
                     <TableCell
-                      className="text-[#777] family1 text-base"
+                      className="text-[#262626] family3 text-base"
                       key={cell.id}
                     >
                       {flexRender(

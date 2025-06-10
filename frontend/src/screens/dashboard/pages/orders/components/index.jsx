@@ -1,8 +1,12 @@
- 
 import React, { useState } from "react";
 import RoomsList from "./orderlist";
+import CardLoader from "@/components/common/CardLoader";
+import Widget from "../../statistics/components/widget";
+import { BookingDataTable } from "@/screens/dashboard/components/table";
+import { data } from "@/constants/data/table";
 const DashboardIndex = () => {
   const [roommodal, setRoomModal] = useState(false);
+  const getsingleReservationisLoading = false
   return (
     <div className="w-full min-h-[100vh]">
       <div className="w-full pb-20 flex flex-col gap-12">
@@ -17,7 +21,22 @@ const DashboardIndex = () => {
             </span>
           </div>
         </div>
-        <RoomsList />
+        <div className="w-full grid items-start gap-12 lg:gap-12 lg:grid-cols-1">
+          <div className="w-full">
+            {getsingleReservationisLoading ? (
+              <CardLoader type={"dashboard_overview"} />
+            ) : (
+              <Widget />
+            )}
+          </div>
+
+          <BookingDataTable
+            title={"Transactions overview!"}
+            data={data}
+            description={"Here's a list of your transactions for this month."}
+          />
+        </div>
+        {/* <RoomsList /> */}
       </div>
     </div>
   );
