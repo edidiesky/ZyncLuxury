@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
-import redisClient from "../utils/redisClient.js";
+// import redisClient from "../utils/redisClient.js";
 // @description  Get all room
 // @route  GET /room
 // @access  Public
@@ -50,31 +50,51 @@ const GetAllRoom = asyncHandler(async (req, res) => {
   // calculate the pagination
   const skip = (page - 1) * limit;
   const cacheKey = "rooms";
-  const cacheRooms = await redisClient.get(cacheKey);
-  if (cacheRooms) {
-    return res.json(cacheRooms);
-  } else {
-    const rooms = await prisma.rooms.findMany({
-      where: queryObject,
-      skip: parseInt(skip),
-      take: parseInt(limit),
-      orderBy: {
-        createdAt: "desc",
-      },
-      include: {
-        user: true,
-      },
-    });
+  const rooms = await prisma.rooms.findMany({
+    where: queryObject,
+    skip: parseInt(skip),
+    take: parseInt(limit),
+    orderBy: {
+      createdAt: "desc",
+    },
+    include: {
+      user: true,
+    },
+  });
 
-    // get the total rooms and the total pages
-    const totalRooms = await prisma.rooms.count({ where: queryObject });
-    const noOfPages = Math.ceil(totalRooms / limit);
-    const result = { rooms, noOfPages, totalRooms };
-    await redisClient.set(cacheKey, result, { EX:  1200 });
-    res.setHeader("Content-Type", "text/html");
-    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-    return res.json(result);
-  }
+  // get the total rooms and the total pages
+  const totalRooms = await prisma.rooms.count({ where: queryObject });
+  const noOfPages = Math.ceil(totalRooms / limit);
+  const result = { rooms, noOfPages, totalRooms };
+  // await redisClient.set(cacheKey, result, { EX:  1200 });
+  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  return res.json(result);
+  // const cacheRooms = await redisClient.get(cacheKey);
+  // if (cacheRooms) {
+  //   return res.json(cacheRooms);
+  // } else {
+  //   const rooms = await prisma.rooms.findMany({
+  //     where: queryObject,
+  //     skip: parseInt(skip),
+  //     take: parseInt(limit),
+  //     orderBy: {
+  //       createdAt: "desc",
+  //     },
+  //     include: {
+  //       user: true,
+  //     },
+  //   });
+
+  //   // get the total rooms and the total pages
+  //   const totalRooms = await prisma.rooms.count({ where: queryObject });
+  //   const noOfPages = Math.ceil(totalRooms / limit);
+  //   const result = { rooms, noOfPages, totalRooms };
+  //   // await redisClient.set(cacheKey, result, { EX:  1200 });
+  //   res.setHeader("Content-Type", "text/html");
+  //   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  //   return res.json(result);
+  // }
 });
 
 const GetAllRoomAndReservations = asyncHandler(async (req, res) => {});
@@ -127,32 +147,52 @@ const CreateRooms = asyncHandler(async (req, res) => {
 // @access  Public
 const GetSingleRoom = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  const cacheKey = `room_${id}`;
-  const cacheRooms = await redisClient.get(cacheKey);
-  if (cacheRooms) {
-    return res.json(cacheRooms);
-  } else {
-    const room = await prisma.rooms.findUnique({
-      where: {
-        id: id,
-      },
-      include: {
-        user: true,
-      },
-    });
+  const room = await prisma.rooms.findUnique({
+    where: {
+      id: id,
+    },
+    include: {
+      user: true,
+    },
+  });
 
-    if (!room) {
-      return NextResponse.json(
-        { message: "No room has being found" },
-        { status: 404 }
-      );
-    }
-    await redisClient.set(cacheKey, room, { EX: 60 });
-
-    res.setHeader("Content-Type", "text/html");
-    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-    return res.json(room);
+  if (!room) {
+    return NextResponse.json(
+      { message: "No room has being found" },
+      { status: 404 }
+    );
   }
+  // await redisClient.set(cacheKey, room, { EX: 60 });
+
+  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  return res.json(room);
+  // const cacheKey = `room_${id}`;
+  // const cacheRooms = await redisClient.get(cacheKey);
+  // if (cacheRooms) {
+  //   return res.json(cacheRooms);
+  // } else {
+  //   const room = await prisma.rooms.findUnique({
+  //     where: {
+  //       id: id,
+  //     },
+  //     include: {
+  //       user: true,
+  //     },
+  //   });
+
+  //   if (!room) {
+  //     return NextResponse.json(
+  //       { message: "No room has being found" },
+  //       { status: 404 }
+  //     );
+  //   }
+  //   await redisClient.set(cacheKey, room, { EX: 60 });
+
+  //   res.setHeader("Content-Type", "text/html");
+  //   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+  //   return res.json(room);
+  // }
 });
 
 // @description  Update a room for the seller

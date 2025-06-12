@@ -6,7 +6,7 @@ import logger from "./logger";
 dotenv.config();
 
 
-const IO_REDIS_URL = process.env.IO_REDIS_URL || "redis://localhost:6379";
+const IO_REDIS_URL = "redis://localhost:6379";
 
 
 if (!IO_REDIS_URL) {
