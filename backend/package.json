@@ -11,7 +11,7 @@
     "dev": "nodemon ./src/index.js",
     "postinstall": "prisma generate",
     "test:watch": "jest --watch",
-    "build": "prisma generate && npm run build"
+    "build": "prisma generate --schema=./src/prisma/schema.prisma"
   },
   "keywords": [],
   "author": "",
