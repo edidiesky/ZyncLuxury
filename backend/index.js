@@ -61,7 +61,7 @@ app.use("/api/v1/message", messageRoute);
 app.use(NotFound);
 app.use(errorHandler);
 
-// function that check sif the userId is included in the OnlineUsers array else it add the user id and scoket Id
+// function 
 
 let OnlineUsers = [];
 const addUserId = (userId, socketId) => {
