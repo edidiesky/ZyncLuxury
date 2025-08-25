@@ -13,7 +13,7 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Please fill in the valid credentails");
   }
-  // check if the user exist
+  // check if the user exists
   const userExist = await prisma.user.findUnique({
     where: {
       email: email,
