@@ -1,4 +1,3 @@
- 
 import React from "react";
 import { BiCheck, BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { apartmentDataList } from "../../../data/apartmentData";
@@ -15,9 +14,10 @@ const MainContent = () => {
   );
 };
 
-
 const RoomLists = () => {
-  const { reservations, getsingleReservationisLoading } = useSelector((store) => store.reservation);
+  const { reservations, getsingleReservationisLoading } = useSelector(
+    (store) => store.reservation
+  );
   return (
     <div
       className="w-full relative py-20 pb-12 flex items-center justify-center
@@ -38,9 +38,11 @@ const RoomLists = () => {
        gap-12"
         >
           {getsingleReservationisLoading ? (
-           {apartmentDataList?.map((_, index) => {
+            <>
+              {apartmentDataList?.map((_, index) => {
                 return <CardLoader key={index} />;
               })}
+            </>
           ) : (
             <div className="w-full">
               {reservations?.length === 0 ? (
