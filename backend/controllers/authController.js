@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
 
-// @description  Register a new User
+// @description  Register a new client
 // @route  POST /auth/register
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
@@ -13,7 +13,7 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Please fill in the valid credentails");
   }
-  // check if the user exist
+  // check if the user exists
   const userExist = await prisma.user.findUnique({
     where: {
       email: email,
