@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import prisma from "../prisma/index.js";
 
-// @description  Register a new User
+// @description  Register a new client
 // @route  POST /auth/register
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
