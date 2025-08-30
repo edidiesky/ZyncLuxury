@@ -1,4 +1,4 @@
-// "use client"
+// 
 // import Image from "next/image";
 import { motion } from 'framer-motion'
 import { RxCross1 } from 'react-icons/rx'

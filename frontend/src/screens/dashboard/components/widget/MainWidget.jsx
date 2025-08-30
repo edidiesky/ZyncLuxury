@@ -1,4 +1,4 @@
-"use client";
+;
 import ContentLoader from "@/components/common/ContentLoader";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 

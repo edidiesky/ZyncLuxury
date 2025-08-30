@@ -1,4 +1,4 @@
-"use client";
+;
 import ContentLoader from "@/components/common/ContentLoader";
 import TableCard from "@/screens/dashboard/components/table/TableCard";
 import { Input } from "@/components/ui/input";
