@@ -79,9 +79,6 @@ const DashboardIndex = () => {
             />
           </div>
         </div>
-        {getStatisLoading ? <CardLoader type={"dashboard"} /> : <Statistics />}
-        {/* widget */}
-
         <DashboardTable
           tableHeaderData={OverviewTableHeaderList}
           tableRowData={rooms?.slice(0, 5) || []}
