@@ -44,8 +44,8 @@ export default function DashboardTable({
         <div className="flex flex-col gap-4 border p-8 rounded-3xl">
           <div className="flex flex-col lg:flex-row md:justify-between lg:items-center gap-2 md:gap-4">
             <div>
-              <p className="text-lg lg:text-xl family2 text-gray-800">{title}</p>
-              <p className="text-sm lg:text-sm font-normal text-[#525866]">
+              <p className="text-xl lg:text-2xl family2 text-gray-800">{title}</p>
+              <p className="text-sm lg:text-base font-normal text-[#525866]">
                 {description}
               </p>
             </div>
