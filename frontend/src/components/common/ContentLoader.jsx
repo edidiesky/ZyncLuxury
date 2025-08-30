@@ -93,6 +93,15 @@ const ContentLoader = ({ type }) => {
                             }}
                           />
                         </span>
+                         <span className="h-[20px]  w-[40px] lg:w-[50px]">
+                          <Skeleton
+                            style={{
+                              borderRadius: "40px",
+                              width: "100%",
+                              height: "100%",
+                            }}
+                          />
+                        </span>
                         <span className="h-[20px]  w-[30px] lg:w-[120px]">
                           <Skeleton
                             style={{

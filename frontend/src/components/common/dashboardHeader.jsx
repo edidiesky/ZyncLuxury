@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { RxCross1 } from "react-icons/rx";
+import { useLocation } from "react-router-dom";
+
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { FaBars, FaMoneyBill1 } from "react-icons/fa6";
 import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
@@ -22,18 +24,30 @@ const DashboardHeader = () => {
   const [notificationactivebar, setNotificationActiveBar] =
     React.useState(false);
   const [activeindex, setActiveIndex] = useState(0);
+  const location = useLocation();
   const dispatch = useDispatch();
 
+  const pathname = location.pathname;
+  let currentPage = null;
   const handleLogOut = () => {
     dispatch(ClearUserInfo("any"));
     window.location.reload();
   };
-  const { Notifications } = useSelector((store) => store.notification);
-  const unReadNotifications = Notifications?.filter(
-    (data) => data.read === false
-  );
 
-  // console.log(unReadNotifications)
+  // console.log("location", location.pathname);
+
+  for (const item of AdminSidebarData) {
+    if (item.tab) {
+      const subMenuMatch = item.tab.path.includes(pathname);
+      //  console.log("subMenuMatch", subMenuMatch)
+      if (subMenuMatch) {
+        currentPage = item.tab;
+        break;
+      }
+    }
+  }
+
+  // console.log("currentPage:", currentPage);
   return (
     <>
       {/* <NotificationSidebar
@@ -60,9 +74,9 @@ const DashboardHeader = () => {
             </div>
             <h4 className="text-2xl family2">
               {/* {currentUser?.name} */}
-              Dashboard
+              {currentPage?.label}
               <span className="block text-sm font-normal text-gray-400">
-                {/* {currentUser?.email} */} keep Track of  your properties regarding Rentals management
+                {currentPage?.subLabel}
               </span>
             </h4>
           </div>

@@ -42,7 +42,7 @@ const DashboardSidebar = () => {
                     end
                     className={`flex tab py-2 hover:text-white medium text-[#969a9acb]
                                  rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
-                    to={`/dashboard${x.tab.path}`}
+                    to={`${x.tab.path}`}
                   >
                     <span className="text-xl">{x?.tab?.icon}</span>{" "}
                     <span className="flex-1">{x?.tab?.title}</span>
