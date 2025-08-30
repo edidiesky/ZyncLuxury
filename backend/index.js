@@ -61,63 +61,6 @@ app.use("/api/v1/message", messageRoute);
 app.use(NotFound);
 app.use(errorHandler);
 
-// function 
-
-// let OnlineUsers = [];
-// const addUserId = (userId, socketId) => {
-//   // check if the object: {yserId, socketId} is being found in the usres array
-//   // if not found add it to the OnlineUsers array
-//   const userExits = OnlineUsers.find((user) => user.userId === userId);
-//   if (!userExits) {
-//     OnlineUsers.push({ userId, socketId });
-//   }
-// };
-
-// const RemoveUser = (socketId) => {
-//   // check if the object: {yserId, socketId} is being found in the usres array
-//   // if not found add it to the OnlineUsers array
-//   OnlineUsers = OnlineUsers?.filter((user) => user?.socketId !== socketId);
-// };
-
-// const getASpecificUser = (userId) => {
-//   // console.log(OnlineUsers)
-
-//   // return OnlineUsers?.filter((obj) => obj.userId === userId)
-//   const newuser = OnlineUsers.find((user) => user.userId === userId);
-//   return newuser;
-// };
-
-// io.on("connection", (socket) => {
-//   console.log("a user connected");
-
-//   // io.emit('message','Connected form the backend and testing sending of the data form the socket server')
-//   socket.on("addUserId", (id) => {
-//     addUserId(id, socket?.id);
-//     io.emit("getAllConnectedUser", OnlineUsers);
-//   });
-
-//   socket.on("sendMessage", ({ receiverid, ...data }) => {
-//     // get the specific usre u intend to send the message to
-//     const newuser = getASpecificUser(receiverid);
-//     // console.log(newuser);
-//     // console.log(newuser?.socketId)
-//     console.log({ receiverid });
-//     if (newuser?.socketId) {
-//       io.to(newuser?.socketId).emit("getMessage", {
-//         receiverid,
-//         ...data,
-//       });
-//     }
-//   });
-
-//   socket.on("disconnect", () => {
-//     console.log("🔥: A user disconnected");
-//     RemoveUser(socket?.id);
-//     io.emit("getAllConnectedUser", OnlineUsers);
-//   });
-// });
-
-// addUserId(id, socket?.id)
 server.listen(4000, () => {
   console.log("server is listening on port 4000");
 });

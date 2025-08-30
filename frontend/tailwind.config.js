@@ -17,6 +17,7 @@ module.exports = {
       },
     },
     extend: {
+      
       gridTemplateColumns: {
         // Simple 16 column grid
         custom: "1fr auto",

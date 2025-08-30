@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { Table } from "@/components/common/styles";
-import TableCard from "@/components/common/TableCard";
+import TableCard from "@/components/table/TableCard";
 import { useSelector } from "react-redux";
 
 const RoomsList = () => {

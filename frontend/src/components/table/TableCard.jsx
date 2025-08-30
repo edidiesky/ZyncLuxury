@@ -1,14 +1,12 @@
- 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import toast from "react-hot-toast";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { MdEdit } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
 import DeleteModal from "../modals/DeleteModal";
 
-const TableCard = ({ x, type, handleModal }) => {
+const TableCard = ({ tableData, type, handleModal }) => {
   const [userdeletemodal, setUserDeleteModal] = useState(false);
 
   const handleDeleteClient = () => {
@@ -18,34 +16,30 @@ const TableCard = ({ x, type, handleModal }) => {
     return (
       <>
         {/* <Delete /> */}
-        <tr key={x?.id}>
-          <td className='text-sm font-semibold'>
-            <span className="flex items-center gap-2">
+        <tr key={tableData?.id}>
+          <td className="tetableDatat-sm font-semibold">
+            <span className="fletableData items-center gap-2">
               Payment Received from{" "}
-              <span className="font-booking_font_bold family2 text-dark">
-                {x?.user?.name}
+              <span className="font-booking_font_bold family2 tetableDatat-dark">
+                {tableData?.user?.name}
               </span>
             </span>
           </td>
-          <td className='text-sm font-semibold'>{x?.reservation?.id}</td>
-          <td className='text-sm font-semibold'>₦{Number(x?.amount).toLocaleString()}</td>
-          <td className='text-sm font-semibold'>{x?.currency}</td>
-          <td className='text-sm font-semibold'>
-            {/* <span className="p-4">
-              {x?.status}
-            </span> */}
-
-            {x?.status === "CONFIRMED" ? (
-              <span className=" font-normal text-sm font-booking_font_bold text-center success">
-                {x?.status}
-              </span>
-            ) : (
-              <span className=" font-normal text-sm font-booking_font_bold text-center danger">
-                {x?.status}
-              </span>
-            )}
+          <td className="tetableDatat-sm font-semibold">
+            {tableData?.reservation?.id}
           </td>
-          <td className='text-sm font-semibold'>{moment(x?.createdAt).format("DD MMMM YYYY")}</td>
+          <td className="tetableDatat-sm font-semibold">
+            ₦{Number(tableData?.amount).toLocaleString()}
+          </td>
+          <td className="tetableDatat-sm font-semibold">
+            {tableData?.currency}
+          </td>
+          <td className="tetableDatat-sm font-semibold">
+            {renderStatus(tableData?.status)}
+          </td>
+          <td className="tetableDatat-sm font-semibold">
+            {moment(tableData?.createdAt).format("DD MMM YYYY")}
+          </td>
 
           {/* <td>
 
@@ -60,47 +54,49 @@ const TableCard = ({ x, type, handleModal }) => {
         <AnimatePresence>
           {userdeletemodal && (
             <DeleteModal
-              id={x?.id}
+              id={tableData?.id}
               modal={userdeletemodal}
               setModal={setUserDeleteModal}
             />
           )}
         </AnimatePresence>
         {/* <Delete /> */}
-        <tr key={x?.id}>
-          <td className='text-sm font-semibold'>
-            <div className="flex flex-col">
-              <span className=" font-normal text-dark family2">
-                {x?.name}
+        <tr key={tableData?.id}>
+          <td className="tetableDatat-sm font-semibold">
+            <div className="fletableData fletableData-col">
+              <span className=" font-normal tetableDatat-dark family2">
+                {tableData?.name}
               </span>
-              {/* <span className=" font-normal family1 text-dark">{x?.email}</span> */}
+              {/* <span className=" font-normal family1 tetableDatat-dark">{tableData?.email}</span> */}
             </div>
           </td>
-          <td className='text-sm font-semibold'>
-            <span className=" font-normal family1  text-dark">{x?.email}</span>
+          <td className="tetableDatat-sm font-semibold">
+            <span className=" font-normal family1  tetableDatat-dark">
+              {tableData?.email}
+            </span>
           </td>
-          <td className='text-sm font-semibold'>
-            {x?.role === "ADMIN" ? (
-              <span className=" font-normal text-xs family1 text-center success">
+          <td className="tetableDatat-sm font-semibold">
+            {tableData?.role === "ADMIN" ? (
+              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center success">
                 Admin
               </span>
-            ) : x?.role === "SELLER" ? (
-              <span className=" font-normal text-xs family1 text-center success">
+            ) : tableData?.role === "SELLER" ? (
+              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center success">
                 SELLER
               </span>
             ) : (
-              <span className=" font-normal text-xs family1 text-center danger">
+              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center danger">
                 User
               </span>
             )}
           </td>
 
-          <td className='text-sm font-semibold'>
-            <span className="text-dark  font-normal family1 regular">
-              {moment(x?.createdAt).format("DD MMM YYYY")}
+          <td className="tetableDatat-sm font-semibold">
+            <span className="tetableDatat-dark  font-normal family1 regular">
+              {moment(tableData?.createdAt).format("DD MMM YYYY")}
             </span>
           </td>
-          <td className='text-sm font-semibold'>
+          <td className="text-sm font-semibold">
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/profile/${x?.id}`}
@@ -122,7 +118,7 @@ const TableCard = ({ x, type, handleModal }) => {
     );
   }
   if (type === "rooms") {
-    const startDate = moment(x?.createdAt).format("MMMM Do YYYY");
+    const startDate = moment(x?.createdAt).format("MMM Do YYYY");
     return (
       <>
         <AnimatePresence>
@@ -188,7 +184,10 @@ const TableCard = ({ x, type, handleModal }) => {
               <span className="hidden text-base family2 lg:block">
                 {" "}
                 {x?.rooms?.title}
-                <span className="block regular text-sm"> {x?.rooms?.country}</span>
+                <span className="block regular text-sm">
+                  {" "}
+                  {x?.rooms?.country}
+                </span>
               </span>
             </div>
           </td>
@@ -235,19 +234,7 @@ const TableCard = ({ x, type, handleModal }) => {
             <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
           </td>
           <td className="text-sm font-semibold">
-            {/* <span className="p-4">
-              {x?.status}
-            </span> */}
-
-            {x?.status === "CONFIRMED" ? (
-              <span className=" font-normal text-xs font-booking_font_bold text-center success">
-                {x?.status}
-              </span>
-            ) : (
-              <span className=" font-normal text-xs font-booking_font_bold text-center danger">
-                {x?.status}
-              </span>
-            )}
+            {renderStatus(tableData?.status)}
           </td>
 
           <td className="text-sm font-semibold">
@@ -272,30 +259,7 @@ const TableCard = ({ x, type, handleModal }) => {
     );
   }
 
-  return (
-    <>
-      {/* <Delete /> */}
-      <tr key={x?.id}>
-        <td className='text-sm font-semibold'>
-          <span className=" font-normal family1 text-dark">{x?.plan}</span>
-        </td>
-        <td className='text-sm font-semibold'>
-          <span className="text-dark  font-normal family1">$ {x?.price}</span>
-        </td>
-
-        <td className='text-sm font-semibold'>
-          <span className="text-dark  font-normal family1 regular">
-            Type 1
-          </span>
-        </td>
-        <td className='text-sm font-semibold'>
-          <span className="text-dark  font-normal family1 regular">
-            {x?.date}
-          </span>
-        </td>
-      </tr>
-    </>
-  );
+  return null;
 };
 
 export default TableCard;

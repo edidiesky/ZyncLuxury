@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "@/components/common/styles";
-import TableCard from "@/components/common/TableCard";
+import TableCard from "@/components/table/TableCard";
 import { apartmentDataList } from "@/data/apartmentData";
 import { useDispatch, useSelector } from "react-redux";
 const RoomsCreated = () => {

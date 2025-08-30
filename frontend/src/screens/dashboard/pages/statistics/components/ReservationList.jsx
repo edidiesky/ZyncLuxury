@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { Table } from "@/components/common/styles";
-import TableCard from "@/components/common/TableCard";
+import TableCard from "@/components/table/TableCard";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllReservations } from "@/features/reservation/reservationReducer";
 
