@@ -40,7 +40,7 @@ export const AdminSidebarData = [
     id: 6,
     tab: {
       icon: <FaMoneyBill fontSize={"17px"} />,
-      label: "Payments",
+      label: "Transactions List",
       subLabel: "Overview of your payments regarding your Listings created",
       title: "Transactions",
       path: "/dashboard/orders",

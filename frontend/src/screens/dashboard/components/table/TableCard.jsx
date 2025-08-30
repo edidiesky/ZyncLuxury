@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { MdEdit } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
 import DeleteModal from "../../../../components/modals/DeleteModal";
+import { renderStatus } from "@/lib/tableStatus";
 
 const TableCard = ({ tableData, type, handleModal }) => {
   const [userdeletemodal, setUserDeleteModal] = useState(false);
@@ -62,7 +63,10 @@ const TableCard = ({ tableData, type, handleModal }) => {
         </AnimatePresence>
         {/* <Delete /> */}
         <tr key={tableData?.id}>
-          <td className="tetableDatat-sm font-semibold">
+          <td className="p-3 border-b text-sm text-gray-500 font-semibold">
+            {tableData?.id}
+          </td>
+          <td className="p-3 border-b text-sm text-gray-500 font-semibold">
             <div className="fletableData fletableData-col">
               <span className=" font-normal tetableDatat-dark family2">
                 {tableData?.name}
@@ -70,31 +74,27 @@ const TableCard = ({ tableData, type, handleModal }) => {
               {/* <span className=" font-normal family1 tetableDatat-dark">{tableData?.email}</span> */}
             </div>
           </td>
-          <td className="tetableDatat-sm font-semibold">
-            <span className=" font-normal family1  tetableDatat-dark">
-              {tableData?.email}
-            </span>
+          <td className="p-3 border-b text-sm text-gray-500 font-semibold">
+            {tableData?.email}
           </td>
-          <td className="tetableDatat-sm font-semibold">
+          <td className="p-3 border-b text-sm text-gray-500 font-semibold">
             {tableData?.role === "ADMIN" ? (
-              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center success">
+              <span className=" p-3  text-sm text-gray-500 font-semibold success">
                 Admin
               </span>
             ) : tableData?.role === "SELLER" ? (
-              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center success">
+              <span className=" p-3  text-sm text-gray-500 font-semibold success">
                 SELLER
               </span>
             ) : (
-              <span className=" font-normal tetableDatat-tableDatas family1 tetableDatat-center danger">
+              <span className=" p-3  text-sm text-gray-500 font-semibold danger">
                 User
               </span>
             )}
           </td>
 
-          <td className="tetableDatat-sm font-semibold">
-            <span className="tetableDatat-dark  font-normal family1 regular">
-              {moment(tableData?.createdAt).format("DD MMM YYYY")}
-            </span>
+          <td className="p-3 border-b text-sm text-gray-500 font-semibold">
+            {moment(tableData?.createdAt).format("DD MMM YYYY")}
           </td>
           <td className="text-sm p-3 border-b font-semibold">
             <div className="flex items-center justify-center">

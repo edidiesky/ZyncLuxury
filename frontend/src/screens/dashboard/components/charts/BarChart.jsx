@@ -58,9 +58,7 @@ export function BarChartStacked({
                 />
                 <span className="text-sm medium">
                   {chartConfig[key.datakey]?.label}:{" "}
-                  {chartConfig[key.datakey]?.label.includes("Total Amount") ||
-                  chartConfig[key.datakey]?.label.includes("Total Revenue") ||
-                  chartConfig[key.datakey]?.label.includes("Total Assessment")
+                  {chartConfig[key.datakey]?.label.includes("Total Amount")
                     ? "₦ "
                     : ""}
                   {Number(payload[index].value).toLocaleString()}
@@ -90,9 +88,15 @@ export function BarChartStacked({
               <SelectValue placeholder="Select Timeframe" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem className='text-sm font-bold' value="7-days">7 Days</SelectItem>
-              <SelectItem className='text-sm font-bold' value="3-weeks">3 Weeks</SelectItem>
-              <SelectItem className='text-sm font-bold' value="3-months">3 Months</SelectItem>
+              <SelectItem className="text-sm font-bold" value="7-days">
+                7 Days
+              </SelectItem>
+              <SelectItem className="text-sm font-bold" value="3-weeks">
+                3 Weeks
+              </SelectItem>
+              <SelectItem className="text-sm font-bold" value="3-months">
+                3 Months
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>

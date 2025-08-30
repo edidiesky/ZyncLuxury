@@ -14,14 +14,7 @@ const RoomList = () => {
   const [selectedAction, setSelectedAction] = useState({
     "all-methods": "all-methods",
     "all-statuses": "all-statuses",
-    "tax-type": "all-types",
     "date-range": "3-months",
-    "remittance-date-range": "3-months",
-    granularity: "day",
-    taxOffices: "taxOffices",
-    "revenue-lines": "all-revenue-lines",
-    mdas: "all-mdas",
-    "mda-revenue-lines": "all-mda-revenue-lines",
     "payment-provider": "all-methods",
     "payment-method": "all-methods",
   });

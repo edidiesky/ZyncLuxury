@@ -41,7 +41,7 @@ export default function DashboardTable({
         {isAssessmentCardModal && <AssessmentReceiptModal />}
       </AnimatePresence> */}
       <div className="relative">
-        <div className="flex flex-col gap-4 border p-8 rounded-3xl">
+        <div className="flex flex-col max-w-[1200px] gap-4 border p-8 rounded-3xl">
           <div className="flex flex-col lg:flex-row md:justify-between lg:items-center gap-2 md:gap-4">
             <div>
               <p className="text-xl lg:text-2xl family2 text-gray-800">{title}</p>

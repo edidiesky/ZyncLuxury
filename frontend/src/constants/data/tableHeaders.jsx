@@ -15,3 +15,13 @@ export const paymwntTableHeaderList = [
   "Guests",
   "Type",
 ];
+
+
+export const customersTableHeaderList = [
+  "Customer Reference",
+  "Full Name",
+  "Email",
+  "Created At",
+  "Role",
+  "Type",
+];
