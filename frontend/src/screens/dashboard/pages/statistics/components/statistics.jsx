@@ -11,7 +11,7 @@ const Statistics = ({
     <div className="flex w-full">
       <BarChartStacked
         onFilterChange={handleChartFilterChange}
-        selectedFilter={selectedAction["date-range"]}
+        selectedFilter={selectedAction["payment-date-range"]}
         dataKeys={dataKeys}
         chartConfig={chartConfig}
         data={chartData}
