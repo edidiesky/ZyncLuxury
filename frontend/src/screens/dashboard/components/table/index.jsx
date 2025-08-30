@@ -1,12 +1,13 @@
 "use client";
 import ContentLoader from "@/components/common/ContentLoader";
-import TableCard from "@/components/table/TableCard";
+import TableCard from "@/screens/dashboard/components/table/TableCard";
 import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { renderStatus } from "@/lib/tableStatus";
 import { Search } from "lucide-react";
 import { useSelector } from "react-redux";
 import Pagination from "./pagination";
+import TableHeader from "./TableHeader";
 
 export default function DashboardTable({
   title,
@@ -20,13 +21,13 @@ export default function DashboardTable({
   type,
   tableHeaderData,
   loading,
-  tableRowData,
   currentPage,
   totalPages,
   totalRows,
   rowsPerPage,
   setCurrentPage,
   setRowsPerPage,
+  tableRowData
 }) {
   const { isRemittancePaymentCardModal, isAssessmentCardModal } = useSelector(
     (store) => store.modal
@@ -40,7 +41,7 @@ export default function DashboardTable({
         {isAssessmentCardModal && <AssessmentReceiptModal />}
       </AnimatePresence> */}
       <div className="relative">
-        <div className="flex flex-col gap-8 border p-8 rounded-3xl">
+        <div className="flex flex-col gap-4 border p-8 rounded-3xl">
           <div className="flex flex-col lg:flex-row md:justify-between lg:items-center gap-2 md:gap-4">
             <div>
               <p className="text-lg lg:text-xl family2 text-gray-800">{title}</p>
@@ -79,7 +80,7 @@ export default function DashboardTable({
                 {loading ? (
                   <TableRow>
                     <TableCell
-                      colSpan={tableHeaderData?.length}
+                      colSpan={tableRowData?.length}
                       className="text-center"
                     >
                       <ContentLoader type="dashboard" />
@@ -88,7 +89,7 @@ export default function DashboardTable({
                 ) : tableRowData?.length === 0 ? (
                   <TableRow>
                     <TableCell
-                      colSpan={tableHeaderData?.length}
+                      colSpan={tableRowData?.length}
                       className="py-3 px-6 text-center"
                     >
                       <div className="w-full flex flex-col justify-center items-center gap-2">

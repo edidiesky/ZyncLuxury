@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Widget from "./widget";
 import Statistics from "./statistics";
 import { useSelector, useDispatch } from "react-redux";
 import { getAdminStat } from "@/features/stat/statReducer";
-import Loader from "@/components/home/loader";
-import { Link, NavLink } from "react-router-dom";
-import { apartmentDataList } from "@/data/apartmentData";
-import Image from "@/components/common/Image";
 import { getAllRoomsForAdmin } from "@/features/room/roomReducer";
-import RoomsCreated from "./RoomsCreated";
 import OverviewWidget from "@/screens/dashboard/components/widget/OverviewWidget";
 import { chartData } from "@/constants/data/chartData";
-import DashboardTable from "@/components/table";
+import DashboardTable from "@/screens/dashboard/components/table";
 import { OverviewTableHeaderList } from "@/constants/data/tableHeaders";
 import { overviwActionButtons } from "@/constants/data/tableActionButtons";
 const DashboardIndex = () => {
   const { getStatisLoading } = useSelector((store) => store.stat);
-  const { rooms } = useSelector((store) => store.room);
+  const { rooms, getallRoomisLoading, page, totalCount } = useSelector(
+    (store) => store.room
+  );
   // rooms
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -87,22 +83,22 @@ const DashboardIndex = () => {
 
         <DashboardTable
           tableHeaderData={OverviewTableHeaderList}
-          tableRowData={rooms?.data?.slice(0, 5) || []}
-          title="Recent Payment History"
+          tableRowData={rooms?.slice(0, 5) || []}
+          title="Recent Booking History"
           actionButtons={overviwActionButtons}
           type="rooms"
-          loading={getStatisLoading}
+          loading={getallRoomisLoading}
           searchQuery={searchQuery}
           handleSearchQuery={setSearchQuery}
           selectedAction={selectedAction}
           setSelectedAction={handleActionChange}
           currentPage={currentPage}
-          totalPages={rooms.totalPages}
-          totalRows={rooms.totalCount}
+          totalPages={page}
+          totalRows={totalCount}
           rowsPerPage={rowsPerPage}
           setCurrentPage={setCurrentPage}
           setRowsPerPage={setRowsPerPage}
-          description={"Display the recent transactions in the table below."}
+          description={"Display the recent bookings in the table below."}
         />
 
         {/* <RoomsCreated /> */}

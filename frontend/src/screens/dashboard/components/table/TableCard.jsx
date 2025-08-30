@@ -4,7 +4,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import { MdEdit } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
-import DeleteModal from "../modals/DeleteModal";
+import DeleteModal from "../../../../components/modals/DeleteModal";
 
 const TableCard = ({ tableData, type, handleModal }) => {
   const [userdeletemodal, setUserDeleteModal] = useState(false);
@@ -17,7 +17,7 @@ const TableCard = ({ tableData, type, handleModal }) => {
       <>
         {/* <Delete /> */}
         <tr key={tableData?.id}>
-          <td className="tetableDatat-sm font-semibold">
+          <td className="tetableDatat-sm family2 text-gray-500">
             <span className="fletableData items-center gap-2">
               Payment Received from{" "}
               <span className="font-booking_font_bold family2 tetableDatat-dark">
@@ -96,10 +96,10 @@ const TableCard = ({ tableData, type, handleModal }) => {
               {moment(tableData?.createdAt).format("DD MMM YYYY")}
             </span>
           </td>
-          <td className="text-sm font-semibold">
+          <td className="text-sm p-3 border-b font-semibold">
             <div className="flex items-center justify-center">
               <Link
-                to={`/dashboard/profile/${x?.id}`}
+                to={`/dashboard/profile/${tableData?.id}`}
                 // to={"#"}
                 className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
               >
@@ -118,7 +118,7 @@ const TableCard = ({ tableData, type, handleModal }) => {
     );
   }
   if (type === "rooms") {
-    const startDate = moment(x?.createdAt).format("MMM Do YYYY");
+    const startDate = moment(tableData?.createdAt).format("MMM Do YYYY");
     return (
       <>
         <AnimatePresence>
@@ -131,26 +131,39 @@ const TableCard = ({ tableData, type, handleModal }) => {
             />
           )}
         </AnimatePresence>
-        <tr className="family1" key={x?.id}>
-          <td className="text-sm font-semibold">
-            <div className="flex w-full justify-start items-center gap-4">
-              <img src={x?.images[0]} alt="" className="w-16 object-cover" />
-              <span className="text-base family2 text-dark">
-                {x?.title}
+        <tr className="family1" key={tableData?.id}>
+          <td className="text-sm p-3 border-b font-semibold">
+            <div className="flex w-full justify-start items-center gap-3">
+              <img
+                src={tableData?.images[0]}
+                alt=""
+                className="w-16 rounded-2xl object-cover"
+              />
+              {/* <span className="text-base family2 text-dark">
+                {tableData?.title}
                 <span className="block text-xs regular">
-                  {x?.city}, {x?.country}
+                  {tableData?.city}, {tableData?.country}
                 </span>
-              </span>
+              </span> */}
             </div>
           </td>
-          <td className="text-sm font-semibold">₦{x?.price}</td>
+          <td className="text-sm p-3 border-b family2 text-gray-500">
+            {tableData?.id}
+          </td>
+          <td className="text-sm p-3 border-b family2 text-gray-500">
+            ₦{tableData?.price}
+          </td>
+          <td className="text-sm p-3 border-b family2 text-gray-500">
+            {tableData?.type}
+          </td>
+          <td className="text-sm p-3 border-b family2 text-gray-500">
+            {startDate}
+          </td>
 
-          <td className="text-sm font-semibold">{startDate}</td>
-
-          <td className="text-sm font-semibold">
+          <td className="text-sm p-3 border-b family2 text-gray-500">
             <div className="flex items-center justify-center">
               <Link
-                to={`/dashboard/rooms/${x?.id}`}
+                to={`/dashboard/rooms/${tableData?.id}`}
                 className="w-12 h-12 rounded-full flex hover:shadow-sm hover:bg-[#ddd] items-center justify-center"
               >
                 <MdEdit />
@@ -169,75 +182,75 @@ const TableCard = ({ tableData, type, handleModal }) => {
     );
   }
   if (type === "Reservation") {
-    const startDate = moment(x?.startDate).format("DD MMM YYYY");
-    const endDate = moment(x?.endDate).format("DD MMM YYYY");
+    const startDate = moment(tableData?.startDate).format("DD MMM YYYY");
+    const endDate = moment(tableData?.endDate).format("DD MMM YYYY");
     return (
       <>
-        <tr key={x?.id} className="px-4">
-          <td className="text-sm font-semibold">
+        <tr key={tableData?.id} className="px-4">
+          <td className="text-sm p-3 border-b family2 text-gray-500">
             <div className="flex items-center font-normal gap-3">
               <img
-                src={x?.rooms?.images[0]}
+                src={tableData?.rooms?.images[0]}
                 alt=""
                 className="w-16 object-cover"
               />
               <span className="hidden text-base family2 lg:block">
                 {" "}
-                {x?.rooms?.title}
+                {tableData?.rooms?.title}
                 <span className="block regular text-sm">
                   {" "}
-                  {x?.rooms?.country}
+                  {tableData?.rooms?.country}
                 </span>
               </span>
             </div>
           </td>
 
-          <td className="hidden lg:table-cell text-sm font-semibold">
+          <td className="hidden lg:table-cell text-sm family2 text-gray-500">
             <div className="flex items-center font-normal gap-3">
-              {x?.user?.image ? (
+              {tableData?.user?.image ? (
                 <div className="flex items-center gap-3">
                   <img
-                    src={x?.user?.image}
+                    src={tableData?.user?.image}
                     alt=""
                     className="w-14 h-14 rounded-full"
                   />
                   <span>
-                    {x?.user?.name}
+                    {tableData?.user?.name}
 
                     <span className="block text-sm text-grey">
                       {" "}
-                      @{x?.user?.username}
+                      @{tableData?.user?.username}
                     </span>
                   </span>
                 </div>
               ) : (
-                <div className="flex w-full items-center gap-4">
+                <div className="flex w-full items-center gap-3">
                   <span>
-                    {x?.user?.name}
+                    {tableData?.user?.name}
 
                     <span className="block text-sm text-grey">
                       {" "}
-                      @{x?.user?.username}
+                      @{tableData?.user?.username}
                     </span>
                   </span>
                 </div>
               )}
             </div>
           </td>
-          <td className="text-sm font-semibold">
+          <td className="text-sm p-3 border-b family2 text-gray-500">
             <span>
               {" "}
               {startDate} - {endDate}
             </span>
           </td>
-          <td className="text-sm font-semibold">
-            <span>₦{Number(x?.totalPrice).toLocaleString()}</span>
+          <td className="text-sm p-3 border-b family2 text-gray-500">
+            <span>₦{Number(tableData?.totalPrice).toLocaleString()}</span>
           </td>
-          <td className="text-sm font-semibold">
+          <td className="text-sm p-3 border-b family2 text-gray-500">
             {renderStatus(tableData?.status)}
           </td>
 
-          <td className="text-sm font-semibold">
+          <td className="text-sm p-3 border-b family2 text-gray-500">
             <div className="flex items-center justify-center">
               <div
                 onClick={handleModal}

@@ -1,7 +1,4 @@
 import { BarChartStacked } from "@/screens/dashboard/components/charts/BarChart";
-import React, { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
-import { useDispatch, useSelector } from "react-redux";
 
 const Statistics = ({
   chartData,

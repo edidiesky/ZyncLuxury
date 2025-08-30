@@ -8,7 +8,7 @@ import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import {  AnimatePresence } from "framer-motion";
 import Loader from "@/components/home/loader";
 import { Table } from "@/components/common/styles";
-import TableCard from "@/components/table/TableCard";
+import TableCard from "@/screens/dashboard/components/table/TableCard";
 import { handlePage } from "@/features/reservation/reservationSlice";
 import CreateReservationModal from "@/components/modals/reservationmodal/CreateReservationModal";
 const DashboardIndex = () => {

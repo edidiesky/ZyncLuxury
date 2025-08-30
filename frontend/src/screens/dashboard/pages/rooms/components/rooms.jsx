@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
 import { Table } from "@/components/common/styles";
-import TableCard from "@/components/table/TableCard";
+import TableCard from "@/screens/dashboard/components/table/TableCard";
 import Loader from "@/components/home/loader";
 import { handlePage } from "@/features/room/roomSlice";
 

@@ -41,7 +41,7 @@ const DashboardSidebar = () => {
                     // activeClassName="active"
                     end
                     className={`flex tab py-2 hover:text-white medium text-[#969a9acb]
-                                 rounded-full px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
+                                 rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
                     to={`/dashboard${x.tab.path}`}
                   >
                     <span className="text-xl">{x?.tab?.icon}</span>{" "}
@@ -59,7 +59,7 @@ const DashboardSidebar = () => {
               // activeClassName="active"
               end
               className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] text-sm
-                                 rounded-md px-3 hover:bg-[#282c2b] w-full items-center gap-4`}
+                                 rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
               <FiSettings fontSize={"18px"} />
@@ -67,14 +67,11 @@ const DashboardSidebar = () => {
               {<span className="">Settings</span>}
             </NavLink>
 
-            <div
-              className="py-2 rounded-md w-full px-3 font-normal
-                     text-white flex items-center cursor-pointer gap-4 hover:bg-[#282c2b]"
-            >
-              <div className="w-10 h-10 rounded-full flex gap-4 items-center justify-center text-white text-sm bg-[#A1718A]">
+            <div className="py-2 rounded-full w-full px-3 font-normal text-dark flex items-center cursor-pointer gap-4 hover:bg-[#d1d5db83]">
+              <div className="w-10 h-10 rounded-full flex gap-4 items-center justify-center text-dark text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
               </div>
-              <span className="text-sm">
+              <span className="text-base family2">
                 {currentUser?.name}
                 <span className="text-xs block font-normal text-[#969A9A]">
                   Admin
@@ -105,12 +102,12 @@ export const HeaderStyles = styled.div`
 
   .tab {
     &:hover {
-      background: #282c2b;
-      color: #fff;
+      background: #d1d5db83;
+      color: #000;
     }
     .nav_icons:hover {
       svg {
-        color: #fff;
+        color: #000;
       }
     }
     &.active {
