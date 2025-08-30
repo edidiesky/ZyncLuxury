@@ -10,7 +10,7 @@
     "data:import": "node seeder",
     "dev": "nodemon ./index.js",
     "postinstall": "prisma generate",
-    "build": "prisma generate && npm run build"
+    "build": "prisma generate"
   },
   "keywords": [],
   "author": "",

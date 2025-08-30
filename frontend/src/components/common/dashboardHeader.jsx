@@ -1,6 +1,7 @@
- 
 import styled from "styled-components";
 import { RxCross1 } from "react-icons/rx";
+import { useLocation } from "react-router-dom";
+
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { FaBars, FaMoneyBill1 } from "react-icons/fa6";
 import { FaRegUser, FaHotel, FaMoneyBill } from "react-icons/fa";
@@ -13,58 +14,9 @@ import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ClearUserInfo } from "@/features/auth/authSlice";
-import { Bell } from "lucide-react";
-import NotificationSidebar from "./NotificationSidebar";
 import Profile from "./Profile";
 import { BsSearch } from "react-icons/bs";
-const AdminSidebarData = [
-  {
-    id: 6,
-    tab: {
-      icon: <LuBedDouble fontSize={"14px"} />,
-      title: "Reservations",
-      path: "reservation",
-    },
-    list: [],
-  },
-  {
-    id: 1,
-    tab: {
-      title: "Overview",
-      path: "",
-      icon: <BiChart fontSize={"20px"} />,
-    },
-    list: [],
-  },
-  {
-    id: 61,
-    tab: {
-      icon: <FaHotel fontSize={"14px"} />,
-      title: "Rooms",
-      path: "/rooms",
-    },
-    list: [],
-  },
-  {
-    id: 6,
-    tab: {
-      icon: <FaMoneyBill1 fontSize={"14px"} />,
-      title: "Transactions",
-      path: "/orders",
-    },
-    list: [],
-  },
-
-  {
-    id: 4,
-    tab: {
-      icon: <FaRegUser fontSize={"14px"} />,
-      title: "Clients",
-      path: "/customers",
-    },
-    list: [],
-  },
-];
+import { AdminSidebarData } from "@/constants/data/dashboard";
 
 const DashboardHeader = () => {
   const { currentUser } = useSelector((store) => store.auth);
@@ -72,18 +24,30 @@ const DashboardHeader = () => {
   const [notificationactivebar, setNotificationActiveBar] =
     React.useState(false);
   const [activeindex, setActiveIndex] = useState(0);
+  const location = useLocation();
   const dispatch = useDispatch();
 
+  const pathname = location.pathname;
+  let currentPage = null;
   const handleLogOut = () => {
     dispatch(ClearUserInfo("any"));
     window.location.reload();
   };
-  const { Notifications } = useSelector((store) => store.notification);
-  const unReadNotifications = Notifications?.filter(
-    (data) => data.read === false
-  );
 
-  // console.log(unReadNotifications)
+  // console.log("location", location.pathname);
+
+  for (const item of AdminSidebarData) {
+    if (item.tab) {
+      const subMenuMatch = item.tab.path.includes(pathname);
+      //  console.log("subMenuMatch", subMenuMatch)
+      if (subMenuMatch) {
+        currentPage = item.tab;
+        break;
+      }
+    }
+  }
+
+  // console.log("currentPage:", currentPage);
   return (
     <>
       {/* <NotificationSidebar
@@ -92,9 +56,9 @@ const DashboardHeader = () => {
       /> */}
       <HeaderStyles
         style={{
-          backdropFilter: "blur(34px)",
+          backdropFilter: "blur(24px)",
         }}
-        className="h-[85px] w-full border-b border-[rgba(0,0,0,.08)] bg-[#ffffffca] flex z-40 sticky top-0 items-center justify-between"
+        className="h-[85px] w-full bg-[#ffffff4e] flex z-40 sticky top-0 items-center justify-between"
       >
         <div className="Header_wrapper px-4 w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -108,19 +72,13 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <form
-              action=""
-              className="max-w-[140px] h-[46px] md:max-w-[180px] md:w-[160px] flex items-center relative"
-            >
-              <span className="w-4 h-4 absolute left-6">
-                <BsSearch />
+            <h4 className="text-2xl family2">
+              {/* {currentUser?.name} */}
+              {currentPage?.label}
+              <span className="block text-sm font-normal text-gray-400">
+                {currentPage?.subLabel}
               </span>
-              <input
-                type="text"
-                placeholder="Search listings"
-                className="text-base pl-12 h-full border font-normal bg-white rounded-full w-full "
-              />
-            </form>
+            </h4>
           </div>
           <div className="flex flex-1 auto items-center justify-end gap-4">
             {/* <div
@@ -137,7 +95,6 @@ const DashboardHeader = () => {
             <Profile />
           </div>
         </div>
-        
       </HeaderStyles>
       <Sidebar bar={bar} setBar={setBar} />
     </>

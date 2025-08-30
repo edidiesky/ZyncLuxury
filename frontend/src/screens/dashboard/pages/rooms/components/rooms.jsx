@@ -1,71 +1,53 @@
- 
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import { BiSearch, BiChevronRight, BiChevronLeft } from "react-icons/bi";
-import { Table } from "@/components/common/styles";
-import TableCard from "@/components/common/TableCard";
-import Loader from "@/components/home/loader";
-import { handlePage } from "@/features/room/roomSlice";
-import CardLoader from "@/components/common/CardLoader";
-
-const RoomsList = () => {
-  const dispatch = useDispatch();
-  const { rooms, getallRoomisLoading, page } = useSelector(
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import DashboardTable from "@/screens/dashboard/components/table";
+import { OverviewTableHeaderList } from "@/constants/data/tableHeaders";
+import { overviwActionButtons } from "@/constants/data/tableActionButtons";
+const RoomList = () => {
+  const { rooms, getallRoomisLoading, page, totalCount } = useSelector(
     (store) => store.room
   );
+  // rooms
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [selectedAction, setSelectedAction] = useState({
+    "all-methods": "all-methods",
+    "all-statuses": "all-statuses",
+    "date-range": "3-months",
+    "payment-provider": "all-methods",
+    "payment-method": "all-methods",
+  });
+  const dispatch = useDispatch();
+  const handleActionChange = (value) => {
+    setSelectedAction((prev) => ({
+      ...prev,
+      "payment-date-range": value,
+    }));
+  };
   return (
-    <>
-      {getallRoomisLoading ? (
-        <CardLoader type={"dashboard"} />
-      ) : (
-        <div className="w-full py-8 border bg-[#fff] rounded-lg px-6">
-          <Table>
-            <div className="TableContainer">
-              <table className="tableWrapper">
-                <thead>
-                  <tr>
-                    {/* <th>ID</th> */}
-                    <th>Room Description</th>
-                    {/* <th>Location</th> */}
-                    {/* <th>City</th> */}
-                    <th>Price</th>
-                    <th>Date</th>
-                    <th>Manage</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rooms?.map((x, index) => {
-                    return <TableCard x={x} type={"rooms"} key={x?.id} />;
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </Table>
-          {rooms?.length > 0 ? (
-            <div className="w-full mt-4 family2 flex items-center justify-end gap-4 ">
-              <div
-                onClick={() => dispatch(handlePage("prev"))}
-                className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.2)]"
-              >
-                <BiChevronLeft />
-              </div>
-              {page}
-              <div
-                onClick={() => dispatch(handlePage("next"))}
-                className="p-2 rounded-md text-lg font-semibold family1 px-2 border hover:opacity-[.8] cursor-pointer border-[rgba(0,0,0,0.3)]"
-              >
-                {" "}
-                <BiChevronRight />
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
-      )}
-    </>
+    <div className="w-full">
+      <DashboardTable
+        tableHeaderData={OverviewTableHeaderList}
+        tableRowData={rooms?.slice(0, 5) || []}
+        title="Recent Room History"
+        actionButtons={overviwActionButtons}
+        type="rooms"
+        loading={getallRoomisLoading}
+        searchQuery={searchQuery}
+        handleSearchQuery={setSearchQuery}
+        selectedAction={selectedAction}
+        setSelectedAction={handleActionChange}
+        currentPage={currentPage}
+        totalPages={page}
+        totalRows={totalCount}
+        rowsPerPage={rowsPerPage}
+        setCurrentPage={setCurrentPage}
+        setRowsPerPage={setRowsPerPage}
+        description={"Display the recent rooms in the table below."}
+      />
+    </div>
   );
 };
 
-export default RoomsList;
+export default RoomList;

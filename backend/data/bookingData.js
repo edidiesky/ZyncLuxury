@@ -4,7 +4,7 @@ export const bookingData = [
     "endDate": "2023-12-02T04:32:53Z",
     "totalPrice": 1106,
     "guests": 3,
-    "partpaymentPrice": 2083,
+    "partpaymentPrice": 2583,
     "status": "CONFIRMED",
     "roomid": "66ec510fcc69560640705c7c",
     "userid": "66e66ede8e1900fefa77815f",

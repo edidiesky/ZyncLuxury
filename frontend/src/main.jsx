@@ -21,9 +21,11 @@ root.render(
         }}
       />
       <BrowserRouter>
-        <SocketContextProvider>
+        <App />
+        {/* Vercel does not support socket.io, I will asdd it later */}
+        {/* <SocketContextProvider>
           <App />
-        </SocketContextProvider>
+        </SocketContextProvider> */}
       </BrowserRouter>
     </Provider>
     ,
