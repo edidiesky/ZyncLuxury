@@ -32,7 +32,7 @@ const DashboardSidebar = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full mt-2 family1 flex flex-col">
+          <div className="w-full mt-2 family1 flex flex-col gap-3">
             {AdminSidebarData?.map((x, index) => {
               // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
