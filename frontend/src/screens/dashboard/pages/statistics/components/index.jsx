@@ -78,17 +78,8 @@ const DashboardIndex = () => {
               chartData={chartData}
             />
           </div>
-
-          <div className="w-full flex flex-col gap-12">
-            {getStatisLoading ? (
-              <CardLoader type={"dashboard"} />
-            ) : (
-              <Statistics />
-            )}
-          </div>
-
-          <RoomsCreated />
         </div>
+        {getStatisLoading ? <CardLoader type={"dashboard"} /> : <Statistics />}
         {/* widget */}
 
         <DashboardTable
