@@ -78,8 +78,8 @@ export function BarChartStacked({
     <div className="w-full pb-4 border rounded-2xl flex flex-col gap-8">
       <div className="w-full p-6 flex items-center justify-between">
         <div className="flex-1">
-          <h3 className="text-xl family2">{title}</h3>
-          <p className="text-xs text-gray-500">{description}</p>
+          <h3 className="text-xl lg:text-2xl family2">{title}</h3>
+          <p className="text-sm lg:text-base text-gray-500">{description}</p>
         </div>
         <div className="">
           <Select

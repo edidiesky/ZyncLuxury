@@ -15,8 +15,8 @@ const Statistics = ({
         dataKeys={dataKeys}
         chartConfig={chartConfig}
         data={chartData}
-        title={"Money flow"}
-        description="Displaying total My Tax payment trends over the selected period"
+        title={"Transaction flow"}
+        description="Displaying total transactions trends over the selected period"
       />
     </div>
   );
