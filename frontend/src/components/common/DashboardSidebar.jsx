@@ -34,14 +34,11 @@ const DashboardSidebar = () => {
           </div>
           <div className="w-full mt-2 family1 flex flex-col gap-3">
             {AdminSidebarData?.map((x, index) => {
-              // console.log(pathname, `/dashboard${x.tab.path}`);
               return (
                 <div key={index} className="w-[95%] text-base mx-auto">
                   <NavLink
-                    // activeClassName="active"
                     end
-                    className={`flex tab py-2 hover:text-white medium text-[#969a9acb]
-                                 rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
+                    className={`flex tab py-2 hover:text-white medium text-[#969a9acb] rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
                     to={`${x.tab.path}`}
                   >
                     <span className="text-xl">{x?.tab?.icon}</span>{" "}
@@ -88,8 +85,6 @@ const DashboardSidebar = () => {
 };
 
 export const HeaderStyles = styled.div`
-  /* width: 100px; */
-  /* z-index: 3000000; */
   position: sticky;
   top: 0%;
   height: 100vh;
