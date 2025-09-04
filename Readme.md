@@ -16,7 +16,7 @@ ZyncLuxury is a web platform that offers luxurious home listings for home lovers
 
 ## Technologies Used
 
-- **Backend:** Node.js, Express, Prisma, MongoDB, Socket.IO, Jest, Redis and Upstash
+- **Backend:** Node.js, Express, Typescript, MongoDB, Socket.IO, Jest, Redis
 - **Frontend:** React.js, Cypress, Framer-motion, Gsap, Tailwind.CSS.
 - **Hosting:** Vercel
 
