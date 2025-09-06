@@ -9,12 +9,26 @@ import {
   addListToWish,
   GetSingleUser,
 } from "./authReducer";
-const customerData = JSON.parse(localStorage.getItem("customer"));
 const customerToken = localStorage.getItem("customertoken");
+const getUserData = () => {
+  if (typeof window !== "undefined") {
+    const storedUser = localStorage.getItem("customer");
+    if (storedUser && storedUser !== "undefined") {
+      try {
+        return JSON.parse(storedUser);
+      } catch (error) {
+        console.error("Failed to parse user data:", error);
+        localStorage.removeItem("customer");
+      }
+    }
+  }
+  return null;
+};
+
 const initialState = {
   users: [],
   token: customerToken ? customerToken : "",
-  currentUser: customerData ? customerData : null,
+  currentUser: getUserData(),
   userInfo: null,
   alertText: "",
   showAlert: false,
@@ -70,14 +84,17 @@ export const authSlice = createSlice({
     builder.addCase(LoginUser.fulfilled, (state, action) => {
       state.loginisLoading = false;
       state.loginisSuccess = true;
-      state.currentUser = action.payload.user;
-      state.token = action.payload.token;
-      toast.success("Login sucessful!");
+      const { user, accessToken } = action.payload.data;
+      state.currentUser = user;
+      state.token = accessToken;
+      localStorage.setItem("customertoken", JSON.stringify(accessToken));
+      localStorage.setItem("customer", JSON.stringify(user));
+      toast.success(action.payload?.message || "Login sucessful!");
     });
     builder.addCase(LoginUser.rejected, (state, action) => {
       state.loginisSuccess = false;
       state.loginisLoading = false;
-      toast.error(action.payload);
+      toast.error(action.payload.message);
     });
 
     builder.addCase(RegisterUser.pending, (state, action) => {
@@ -100,8 +117,8 @@ export const authSlice = createSlice({
     builder.addCase(GetAllUsers.fulfilled, (state, action) => {
       state.getallUserisLoading = false;
       state.getallUserisSuccess = true;
-      state.users = action.payload.user;
-      state.totalUser = action.payload.totalUser;
+      state.users = action.payload.data.user;
+      state.totalUser = action.payload.data.totalUser;
     });
     builder.addCase(GetAllUsers.rejected, (state, action) => {
       state.getallUserisSuccess = false;

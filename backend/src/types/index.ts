@@ -1,7 +1,9 @@
+import { RoomMock } from "@/data/roomdata";
 import { IRoom } from "../models/Rooms";
+import { Types } from "mongoose";
 
 export interface IRoomResult {
-  data: IRoom[];
+  data: RoomMock[];
   success:boolean,
   message:string,
   pagination: {
@@ -10,4 +12,11 @@ export interface IRoomResult {
     currentPage: number;
     limit: number;
   };
+}
+
+
+export interface IToken {
+  role: string;
+  name: string;
+  userId: Types.ObjectId;
 }

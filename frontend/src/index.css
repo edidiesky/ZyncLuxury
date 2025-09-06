@@ -117,7 +117,7 @@ a.active {
 }
 
 .ql-container {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded img {
   width: 100% !important;
@@ -157,10 +157,10 @@ button:disabled {
 .rdrMonth {
   width: 100% !important;
   font-size: 14px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Sora", sans-serif !important;
 }
 .rdrMonthAndYearPickers select {
-  font-family: "Karla", sans-serif !important;
+  font-family: "Sora", sans-serif !important;
   font-size: 14px !important;
   color: var(--dark-1) !important;
 }
@@ -177,7 +177,7 @@ button:disabled {
   > .MuiDataGrid-cell {
   max-height: 200px !important;
   min-height: 200px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Sora", sans-serif !important;
 }
 
 .rdrDateRangePickerWrapper {
@@ -189,26 +189,26 @@ button:disabled {
   width: 100% !important;
   color: var(--dark-1) !important;
   font-size: 15px !important;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Sora", sans-serif !important;
 }
 /* React day picker css */
 
 .family1 {
-  font-family: "Regular", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .family2 {
-  font-family: "Bold", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .regular {
-  font-family: "Regular", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .medium {
   /* Medium */
-  font-family: "Medium", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .dashboard-font {
-  font-family: "Nunito Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 :root {
@@ -237,7 +237,7 @@ button:disabled {
   min-width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(data:image/svg+xml;utf8,%3Csvg%20width%3D%221920%22%20height%3D%22954%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url%28%23prefix__clip0_58_787%29%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22rgba%28217%2C220%2C237%2C1%29%22%3E%3Cpath%20d%3D%22M1660.78-198.081c41-37.158%20104.32-33.985%20141.42%207.087%20110.48%20122.305%20170.1%20282.332%20166.66%20447.27-3.44%20164.938-69.67%20322.331-185.14%20439.906-115.49%20117.578-271.47%20186.426-435.99%20192.395-164.52%205.968-325.06-51.397-448.719-160.304-41.528-36.574-45.591-99.941-9.074-141.535%2036.517-41.593%2099.784-45.662%20141.313-9.088%2085.25%2075.079%20195.89%20114.598%20309.23%20110.486%20113.35-4.112%20220.85-51.546%20300.47-132.611%2079.63-81.068%20125.32-189.63%20127.7-303.434%202.37-113.804-38.77-224.188-114.95-308.523-37.1-41.072-33.93-104.49%207.08-141.649z%22%2F%3E%3Cpath%20d%3D%22M1544.89%2037.429c50.71-22.192%20109.79.947%20131.97%2051.683a383.79%20383.79%200%200110.87%20279.732c-31.73%2091.288-96.71%20167.233-181.94%20212.762a384.921%20384.921%200%2001-278%2033.06c-93.53-24.262-174.53-82.823-226.82-164.088-29.965-46.559-16.532-108.606%2030-138.586%2046.53-29.979%20108.54-16.538%20138.51%2030.021%2024.99%2038.834%2063.75%2066.898%20108.61%2078.536a184.603%20184.603%200%2000133.31-15.847c40.83-21.815%2071.88-58.154%2087.03-101.727a183.148%20183.148%200%2000-5.19-133.5c-22.18-50.735.95-109.854%2051.65-132.046z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22prefix__clip0_58_787%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h1920v954H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E);
+  background-image: url(data:image/svg+xml;utf8,%3Csvg%20width%3D%221920%22%20height%3D%22954%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwwww3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url%28%23prefix__clip0_58_787%29%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22rgba%28217%2C220%2C237%2C1%29%22%3E%3Cpath%20d%3D%22M1660.78-198.081c41-37.158%20104.32-33.985%20141.42%207.087%20110.48%20122.305%20170.1%20282.332%20166.66%20447.27-3.44%20164.938-69.67%20322.331-185.14%20439.906-115.49%20117.578-271.47%20186.426-435.99%20192.395-164.52%205.968-325.06-51.397-448.719-160.304-41.528-36.574-45.591-99.941-9.074-141.535%2036.517-41.593%2099.784-45.662%20141.313-9.088%2085.25%2075.079%20195.89%20114.598%20309.23%20110.486%20113.35-4.112%20220.85-51.546%20300.47-132.611%2079.63-81.068%20125.32-189.63%20127.7-303.434%202.37-113.804-38.77-224.188-114.95-308.523-37.1-41.072-33.93-104.49%207.08-141.649z%22%2F%3E%3Cpath%20d%3D%22M1544.89%2037.429c50.71-22.192%20109.79.947%20131.97%2051.683a383.79%20383.79%200%200110.87%20279.732c-31.73%2091.288-96.71%20167.233-181.94%20212.762a384.921%20384.921%200%2001-278%2033.06c-93.53-24.262-174.53-82.823-226.82-164.088-29.965-46.559-16.532-108.606%2030-138.586%2046.53-29.979%20108.54-16.538%20138.51%2030.021%2024.99%2038.834%2063.75%2066.898%20108.61%2078.536a184.603%20184.603%200%2000133.31-15.847c40.83-21.815%2071.88-58.154%2087.03-101.727a183.148%20183.148%200%2000-5.19-133.5c-22.18-50.735.95-109.854%2051.65-132.046z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22prefix__clip0_58_787%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h1920v954H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E);
 }
 @keyframes stripes {
   0% {
@@ -256,11 +256,11 @@ body {
   background-color: #fff;
   line-height: 1.3 !important;
   color: var(--dark-1);
-  font-family: "Nunito Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: "DM Sans";
   src: url("/fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 100 1000;
   font-style: normal;
@@ -302,56 +302,49 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Karla", sans-serif !important;
+  font-family: "Sora", sans-serif !important;
   border-radius: 10px;
 }
 
-form input {
-  min-height: 44px;
-  /* min-width: 130px; */
-  border-radius: 5px;
-  background-color: inherit;
-  transition: all 0.3s;
-  border: 1.5px solid #e7e7e9;
-  padding: 0 1rem;
-}
 input {
-  min-height: 44px;
-  /* min-width: 130px; */
-  border-radius: 5px;
+  min-height: 50px;
+  border-radius: 100px !important;
+  font-weight: 600;
+  color: #000;
   background-color: inherit;
   transition: all 0.3s;
-  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border: 1.5px solid rgba(0, 0, 0, .2);
   padding: 0 1rem;
-  font-family: "Regular", sans-serif !important;
 }
 form input:hover {
-  box-shadow: 0 0 0 6px #e7e7e9;
+  box-shadow: 0 0 0 6px #ccc;
   transition: all 0.3s;
-  outline: 1px solid #3e3aff;
+  outline: 1px solid #090825;
 }
 input:hover {
-  box-shadow: 0 0 0 6px #e7e7e9;
+  box-shadow: 0 0 0 6px #ccc;
   transition: all 0.3s;
-  outline: 1px solid #3e3aff;
+  outline: 1px solid #090825;
 }
 input:focus {
-  box-shadow: 0 0 0 6px #e7e7e9;
+  box-shadow: 0 0 0 6px #ccc;
   transition: all 0.3s;
-  outline: 1px solid #3e3aff;
+  outline: 1px solid #090825;
 }
 
 .btn {
   transition: all 0.5s;
-  background: var(--primary) !important;
+  /* background: #090825 !important; */
+  background-color: #0B6A41;
   cursor: pointer;
-  border-radius: 10px !important;
+  border-radius: 100px !important;
+  min-height: 50px;
 }
 .btn:hover {
-  background: var(--grey-1) !important;
   box-shadow: 0 0 0 6px #e7e7e9;
   box-shadow: 0 0 0 6px #e7e7e9;
   transition: all 0.3s;
+  transform: scale(1.01);
 }
 
 .btn.btn_2 {
@@ -420,7 +413,7 @@ html.lenis body {
 #reactSchedulerOutsideWrapper *,
 #reactSchedulerOutsideWrapper ::before,
 #reactSchedulerOutsideWrapper ::after {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .sc-iuOPfm.eiWmqu {
@@ -430,12 +423,12 @@ html.lenis body {
 }
 
 .sc-gjLKRp.gqsWwT {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-weight: 600;
 }
 
 .sc-cCzKKE.bwVOYM {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   /* font-weight: normal !important; */
   font-size: 12px !important;
 }
@@ -451,7 +444,7 @@ html.lenis body {
 }
 
 .sc-gjLKRp.eAzhgx {
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -499,7 +492,7 @@ html.lenis body {
 
 .sc-cCzKKE.bwVOYM {
   display: block !important;
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .sc-cCzKKE.fOgBaC::after {
@@ -512,7 +505,7 @@ html.lenis body {
 
 .sc-cCzKKE.dxSqfu {
   display: block !important;
-  font-family: "Kumbh Sans", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .sc-cCzKKE.dxSqfw::after {

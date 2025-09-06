@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ClearUserInfo } from "@/features/auth/authSlice";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-const Profile = () => {
+const Profile = ({ type }) => {
   const [active, setActive] = useState(false);
   const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
@@ -16,7 +16,10 @@ const Profile = () => {
     <div className=" relative">
       {currentUser && (
         <div className="flex items-center justify-end gap-8">
-          <div className="flex p-2 px-6 border rounded-full items-center gap-2">
+          <div
+            onClick={() => setActive(!active)}
+            className="flex p-2 px-6 border rounded-full items-center gap-2"
+          >
             {currentUser?.image ? (
               <img
                 onClick={() => setActive(!active)}
@@ -26,19 +29,23 @@ const Profile = () => {
               />
             ) : (
               <img
-                onClick={() => setActive(!active)}
                 src="https://fundednext.fra1.digitaloceanspaces.com/dashboard/demo-avatar.jpg"
                 alt=""
                 className="w-10 h-10 object-cover rounded-full"
               />
             )}
-            <h4 className="text-lg family2">
+            <h4
+              style={{
+                color: type === "home" ? "#fff" : "#000",
+              }}
+              className="text-lg family2"
+            >
               {currentUser?.name}
               <span className="block text-sm text-gray-400">
                 {currentUser?.email}
               </span>
             </h4>
-            <MdOutlineKeyboardArrowDown className="text-xl"/>
+            <MdOutlineKeyboardArrowDown className="text-xl" />
           </div>
           <div
             style={{ transition: "all .4s ease" }}

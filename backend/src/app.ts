@@ -2,21 +2,19 @@ import swaggerUi from "swagger-ui-express";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import { errorHandler, NotFound } from "./middleware/error-handler";
 import rateLimit from "express-rate-limit";
 import cors from "cors";
 import authRoutes from "./routes/auth.route";
 import roomRoutes from "./routes/room.route";
 import reservationRoutes from "./routes/reservation.route";
-
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
-/** MIDDLEWARE */
-//app.use(cors());
 if (!process.env.WEB_ORIGIN) {
   throw new Error("No WEB_ORIGIN value");
 }
 app.use(helmet());
-app.use(morgan("dev"));[]
+app.use(morgan("dev"));
 const apiLimiter = rateLimit({
   windowMs: 20 * 60 * 1000,
   max: 200,
@@ -27,7 +25,7 @@ const apiLimiter = rateLimit({
 app.use(apiLimiter);
 app.use(
   cors({
-    origin: [process.env.WEB_ORIGIN, "http://localhost:3000"],
+    origin: [process.env.WEB_ORIGIN],
     credentials: true,
   })
 );

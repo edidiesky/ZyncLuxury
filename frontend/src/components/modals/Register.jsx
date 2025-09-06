@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
 import {
   onLoginModal,
   offRegisterModal,
-  offLoginModal,
 } from "../../features/modals/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../home/loader";
@@ -43,17 +40,14 @@ const RegisterModal = () => {
   const { registermodal } = useSelector((store) => store.modal);
   const [formvalue, setFormValue] = useState({
     name: "",
-    username: "",
     email: "",
-    hashedPassword: "",
+    password: "",
+    role: "SELLER",
   });
   const noEntry =
     formvalue.email === "" ||
-    formvalue.hashedPassword === "" ||
-    formvalue.username === "" ||
+    formvalue.password === "" ||
     formvalue.name === "";
-  const [loading, setLoading] = useState(false);
-
   const handleFormChange = (e) => {
     setFormValue({
       ...formvalue,
@@ -94,12 +88,12 @@ const RegisterModal = () => {
         initial="initial"
         animate={registermodal ? "enter" : "exit"}
         exit="exit"
-        className="guestModalCard justify-center items-center"
+        className="guestModalCard p-4 justify-center items-center"
       >
         <div className="w-full sticky top-0 left-0 p-2 md:pt-8 px-4 md:px-8 flex  items-center justify-between">
-          <h3 className="text-3xl family2">
-            Sign Up
-            <span className="block text-sm regular">
+          <h3 className="text-3xl font-semibold family2">
+            ZyncLuxury
+            <span className="block text-sm lg:text-base font-normal max-w-[250px] pt-1 regular">
               Register to your account and check out your bookings
             </span>
           </h3>
@@ -110,9 +104,9 @@ const RegisterModal = () => {
         <div className="w-full pb-4 flex">
           <form
             onSubmit={handleFormSubmision}
-            className="w-[90%] mx-auto md:max-h-[480px] md:overflow-auto md:px-4 pb-4 grid md:grid-cols-1 gap-4"
+            className="w-[90%] mx-auto md:max-h-[480px] md:overflow-auto md:px-4 pb-4 grid md:grid-cols-1 gap-8"
           >
-            <div className="w-full grid sm:grid-cols-1 gap-2">
+            <div className="w-full grid sm:grid-cols-1 gap-4">
               {RegisterFormInputData?.map((input, index) => {
                 return (
                   <label
@@ -122,7 +116,7 @@ const RegisterModal = () => {
                   >
                     <span className="text-dark">{input.label}</span>
                     <input
-                      className="w-full rounded-md inputs text-dark
+                      className="w-full rounded-md text-dark
                            font-normal text-sm"
                       required={true}
                       name={input?.name}
@@ -136,7 +130,7 @@ const RegisterModal = () => {
                 );
               })}
             </div>
-            <div className="w-full mt-3 flex items-center justify-center flex-col gap-3">
+            <div className="w-full mt-6 flex items-center justify-center flex-col gap-3">
               <button
                 data-test="registermodal_button"
                 type="submit"
@@ -223,8 +217,8 @@ const RegisterModalStyles = styled(motion.div)`
     }
   }
   .guestModalCard {
-    max-width: 420px;
-    min-width: 400px;
+    max-width: 500px;
+    min-width: 450px;
     display: flex;
     align-items: center;
     justify-content: center;

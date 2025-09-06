@@ -90,12 +90,12 @@ export default function DashboardTable({
                   <TableRow>
                     <TableCell
                       colSpan={tableRowData?.length}
-                      className="py-3 px-6 text-center"
+                      className="py-3 px-6"
                     >
-                      <div className="w-full flex flex-col justify-center items-center gap-2">
+                      <div className="w-full flex justify-center items-center gap-2">
                         <div className="w-full flex flex-col justify-center items-center gap-2">
                           <img className="w-36" src="/assests/icons/empty_payment.png" alt="" />
-                          <h4 className="text-lg family2 capitalize">
+                          <h4 className="text-base font-semibold capitalize">
                             No {type} Record Available...
                           </h4>
                         </div>

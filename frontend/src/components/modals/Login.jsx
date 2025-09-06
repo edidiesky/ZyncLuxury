@@ -1,12 +1,7 @@
-
 import React, { useEffect, useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
-import toast from "react-hot-toast";
 import Loader from "../home/loader";
 import { LoginFormInputData } from "@/constants/data/formdata";
 import {
@@ -43,8 +38,8 @@ const LoginModal = () => {
     dispatch(offLoginModal());
   };
   const [formvalue, setFormValue] = useState({
-    email: "victorcancode100@gmail.com",
-    hashedPassword: "12345",
+    email: "",
+    password: "",
   });
 
   const handleFormChange = (e) => {
@@ -85,7 +80,7 @@ const LoginModal = () => {
         initial="initial"
         animate={loginmodal ? "enter" : "exit"}
         exit="exit"
-        className="guestModalCard gap-8 relative justify-center items-center"
+        className="guestModalCard p-4 gap-8 relative justify-center items-center"
       >
         <div
           className="cross absolute top-5 z-[500] right-5"
@@ -94,8 +89,8 @@ const LoginModal = () => {
           <RxCross2 />
         </div>
         <div className="w-full top-0 left-0 relative px-8 flex items-center justify-between">
-          <h3 className="text-3xl font-booking_font4 family2">
-            Sign In
+          <h3 className="text-3xl font-semibold family2">
+            ZyncLuxury
             <span className="block text-sm lg:text-base font-normal max-w-[250px] pt-1 regular">
               Login to your account and check out your bookings
             </span>
@@ -104,9 +99,9 @@ const LoginModal = () => {
         <div className="w-full overflow-auto h-[350px]  flex">
           <form
             onSubmit={handleFormSubmision}
-            className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-8 lg:gap-16 "
+            className="w-[90%] mx-auto p-4 pb-8 flex flex-col gap-8"
           >
-            <div className="w-full flex flex-col gap-2">
+            <div className="w-full flex flex-col gap-4">
               {LoginFormInputData?.map((input, index) => {
                 return (
                   <label
@@ -116,8 +111,7 @@ const LoginModal = () => {
                   >
                     <span className="text-dark">{input.label}</span>
                     <input
-                      className="w-full rounded-md inputs text-dark
-                           font-normal text-sm"
+                      className="w-full rounded-md border input text-dark font-normal text-sm"
                       required={true}
                       name={input?.name}
                       id={input.label}
@@ -130,13 +124,13 @@ const LoginModal = () => {
                 );
               })}
             </div>
-            <div className="w-full flex items-center justify-center flex-col gap-3">
+            <div className="w-full flex items-center justify-center flex-col gap-6">
               <button
                 data-test="loginmodal_button"
                 type="submit"
                 disabled={loginisLoading}
                 className="p-3 px-8 hover:opacity-[.5] text-[#fff] flex btn items-center justify-center w-full cursor-pointer 
-                   bg-[#000] rounded-md regular"
+                   bg-[#000] rounded-full regular"
               >
                 {loginisLoading ? (
                   <div className="w-full flex justify-center items-center gap-4">
@@ -147,17 +141,17 @@ const LoginModal = () => {
                 )}
               </button>
               <div className="w-full flex items-center justify-start gap-2">
-                <span className="text-sm font-normal text-dark">
-                  <span className="text-grey">Not yet a Member?</span>{" "}
+                <div className="text-sm lg:text-base flex gap-2 items-center justify-center w-full font-normal text-dark">
+                  <span className="text-dark underline">Can Login?</span>{" "}
                   <span
                     onClick={handleLoginModal}
                     style={{ textDecoration: "underline" }}
-                    className="font-booking_font_bold family2 cursor-pointer"
+                    className="font-semibold underline cursor-pointer"
                     //  to={"#"}
                   >
-                    Sign Up
+                    Create an account
                   </span>
-                </span>
+                </div>
               </div>
             </div>
           </form>
@@ -205,8 +199,8 @@ const LoginModalStyles = styled(motion.div)`
     }
   }
   .guestModalCard {
-    max-width: 420px;
-    min-width: 400px;
+    max-width: 520px;
+    min-width: 450px;
     display: flex;
     height: 580px;
     align-items: center;

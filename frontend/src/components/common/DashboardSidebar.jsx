@@ -12,23 +12,23 @@ const DashboardSidebar = () => {
   const { currentUser } = useSelector((store) => store.auth);
   return (
     <HeaderStyles
-      className={`w-[300px] border-r lg:block hidden h-[100vh] overflow-auto sticky top-0`}
+      className={`w-[320px] border-r lg:block hidden h-[100vh] overflow-auto sticky top-0`}
     >
-      <div className="w-full h-full py-4 justify-between flex items-center flex-col gap-4">
+      <div className="w-full h-full py-4 px-2 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] flex flex-col gap-10">
           <div className="flex px-4 w-full flex-col gap-4 items-start justify-between py-1">
             {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
-            <div className=" w-[90%] mx-auto relative flex gap-4 items-center justify-center">
+            <div className=" w-[100%] mx-auto relative flex gap-4 items-center justify-center">
               <Link
                 to={"/"}
-                className="w-full family2 flex items-center gap-4 text-xl lg:text-2xl text-[#000]"
+                className="w-full font-bold flex items-center gap-4 text-xl lg:text-xl text-[#000]"
               >
                 <img
                   src="https://avada.website/real-estate/wp-content/uploads/sites/176/2023/10/avada-real-estate-favicon.svg"
                   alt=""
                   className="w-10"
                 />
-                {/* ZyncLuxury */}
+                ZyncLuxury
               </Link>
             </div>
           </div>

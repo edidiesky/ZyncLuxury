@@ -11,12 +11,7 @@ const NotFound = (req: Request, res: Response, next: NextFunction) => {
   next(error);
 };
 
-const errorHandler = (
-  error: Error,
-  req: Request,
-  res: Response,
-  next: NextFunction
-): void => {
+const errorHandler = (error: Error, req: Request, res: Response): void => {
   if (res.headersSent) {
     logger.warn("Headers already sent, skipping error response", {
       error: error.message,

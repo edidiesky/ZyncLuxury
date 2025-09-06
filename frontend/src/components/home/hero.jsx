@@ -153,7 +153,7 @@ const Hero = () => {
                         key={index}
                         className={`${
                           index !== 0 ? "-ml-6 " : ""
-                        } w-12 md:w-12 h-12 md:h-12 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
+                        } w-10 md:w-10 h-10 md:h-10 border-[#fff] z-20 overflow-hidden rounded-full border-2`}
                       >
                         <img
                           src={face}
@@ -167,11 +167,11 @@ const Hero = () => {
                   5 K+ Happy Customers
                 </span>
               </div>
-              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1] text-4xl md:text-center sm:text-6xl lg:text-7xl family2">
+              <h1 className="text-white hide w-full leading-[1.1] lg:leading-[1] text-3xl md:text-center sm:text-5xl lg:text-7xl family2">
                 <span className="text-center hero_main_text hide">
                   Find your Best Property - By Lease, or Rent with Confidence
                 </span>
-                <span className="text-base md:text-2xl hero_submain_text hide max-w-[400px] lg:mx-auto md:text-center lg:max-w-[680px] text-[#eee] font-normal pt-2 block family1">
+                <span className="text-base md:text-xl hero_submain_text hide max-w-[400px] lg:mx-auto md:text-center lg:max-w-[680px] text-gray-400 font-normal pt-2 block family1">
                   Explore a versed range of properties and secure your next
                   home. We are experts who set the pace Inspiring homes beyond
                   boundaries. We help you get the best out of your finance in
@@ -482,10 +482,7 @@ const TopContent = ({ bar, setBar, currentUser }) => {
         <div className=" items-center z-[40000000] flex justify-end">
           {currentUser ? (
             <div className="flex items-center gap-8">
-              <Link  to={`/become-a-host/${currentUser?.id}`} className="btn md:block hidden text-center text-sm md:text-base regular text-white px-4 md:px-8 py-3">
-                Host your Home
-              </Link>
-              <Profile setBar={setBar} />
+              <Profile type="home" setBar={setBar} />
             </div>
           ) : (
             <div className="flex justify-end items-center">

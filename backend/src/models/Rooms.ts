@@ -13,7 +13,7 @@ export enum ListingType {
   LEASE = "LEASE",
 }
 
-export interface IRoom extends Document {
+export interface IRoom {
   tenantId: string;
   title: string;
   description: string;
