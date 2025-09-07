@@ -5,7 +5,8 @@
     "dev": "ts-node-dev src/server.ts",
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch --coverage"
+    "test:watch": "jest --watch --coverage",
+    "rooms:import": "ts-node-dev src/scripts/roomSeeder.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

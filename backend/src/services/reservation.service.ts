@@ -135,7 +135,6 @@ const createUserReservation = async (
 
   // CREATE RESERVATION DATA
   const reservationData = {
-    tenantId: room.tenantId, 
     startDate: parsedStartDate,
     endDate: parsedEndDate,
     status: status || ReservationStatus.PENDING,

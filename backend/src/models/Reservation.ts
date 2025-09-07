@@ -7,7 +7,6 @@ export enum ReservationStatus {
 }
 
 export interface IReservation extends Document {
-  tenantId: string;
   startDate: Date;
   endDate: Date;
   totalPrice?: number;
@@ -28,7 +27,6 @@ export interface IReservation extends Document {
 
 const ReservationsSchema = new Schema<IReservation>(
   {
-    tenantId: { type: String, required: true },
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
     totalPrice: Number,

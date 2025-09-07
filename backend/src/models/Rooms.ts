@@ -14,7 +14,6 @@ export enum ListingType {
 }
 
 export interface IRoom {
-  tenantId: string;
   title: string;
   description: string;
   price?: string;
@@ -39,7 +38,6 @@ export interface IRoom {
 
 const RoomsSchema = new Schema<IRoom>(
   {
-    tenantId: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
     price: String,
@@ -72,6 +70,6 @@ const RoomsSchema = new Schema<IRoom>(
   }
 );
 
-RoomsSchema.index({ tenantId: 1, createdAt: -1, sellerId: 1 });
+RoomsSchema.index({ createdAt: -1, sellerId: 1, type: 1, price: 1 });
 
 export default model<IRoom>("Rooms", RoomsSchema);

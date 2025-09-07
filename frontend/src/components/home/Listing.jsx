@@ -15,6 +15,7 @@ const Listing = () => {
   useEffect(() => {
     dispatch(getAllRooms());
   }, []);
+  // console.log("room payload:", { getallRoomisLoading, rooms });
   return (
     <div data-scroll-section className="w-full flex py-32 flex-col">
       <div className="w-[90%] max-w-custom mx-auto flex flex-col gap-20">

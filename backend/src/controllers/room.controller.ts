@@ -10,6 +10,8 @@ import {
 } from "../services/room.service";
 import { IRoom, RoomType } from "../models/Rooms";
 import mongoose, { FilterQuery } from "mongoose";
+import { SUCCESSFULLY_FETCHED_STATUS_CODE } from "../constant";
+import logger from "../utils/logger";
 
 // @description  Get all rooms
 // @route  GET /room
@@ -28,6 +30,7 @@ const GetAllRoom = asyncHandler(
       bedroom,
       bathroom,
       search,
+      sellerId,
     } = req.query;
     const roomstartDate = startDate ? new Date(startDate as string) : null;
     const roomendDate = endDate ? new Date(endDate as string) : null;
@@ -42,6 +45,9 @@ const GetAllRoom = asyncHandler(
     }
     if (bedroom) {
       queryObject.bedroom = bedroom;
+    }
+    if (sellerId) {
+      queryObject.sellerId = sellerId;
     }
     if (bathroom) {
       queryObject.bathroom = bathroom;
@@ -88,8 +94,12 @@ const GetAllRoom = asyncHandler(
         $lte: maxPrice,
       };
     }
-    const result = await getAllRooms(req.query, Number(page), Number(limit));
-    res.json(result);
+
+    logger.info("queryObject:", {
+      queryObject
+    })
+    const result = await getAllRooms(queryObject, Number(page), Number(limit));
+    res.status(SUCCESSFULLY_FETCHED_STATUS_CODE).json(result);
   }
 );
 

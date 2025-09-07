@@ -165,9 +165,14 @@ export const roomSlice = createSlice({
     });
     builder.addCase(getAllRoomsForAdmin.fulfilled, (state, action) => {
       state.getallRoomisLoading = false;
-      state.rooms = action.payload.rooms;
-      state.noOfPages = action.payload.noOfPages;
-      state.totalRooms = action.payload.totalRooms;
+      // console.log("payload data:", {
+      //   data: action.payload
+      // })
+      const { data, pagination } = action.payload;
+      state.rooms = data;
+      state.noOfPages = pagination?.noOfPages;
+      state.totalRooms = pagination?.totalRooms;
+      state.getallRoomisLoading = false;
     });
     builder.addCase(getAllRoomsForAdmin.rejected, (state, action) => {
       state.getallRoomisSuccess = false;
@@ -180,9 +185,14 @@ export const roomSlice = createSlice({
     });
     builder.addCase(getAllRooms.fulfilled, (state, action) => {
       state.getallRoomisLoading = false;
-      state.rooms = action.payload.rooms;
-      state.noOfPages = action.payload.noOfPages;
-      state.totalRooms = action.payload.totalRooms;
+      // console.log("payload data:", {
+      //   data: action.payload
+      // })
+      const { data, pagination } = action.payload;
+      state.rooms = data;
+      state.noOfPages = pagination?.noOfPages;
+      state.totalRooms = pagination?.totalRooms;
+      state.getallRoomisLoading = false;
     });
     builder.addCase(getAllRooms.rejected, (state, action) => {
       state.getallRoomisSuccess = false;
@@ -208,7 +218,7 @@ export const roomSlice = createSlice({
     builder.addCase(CreateRoom.fulfilled, (state, action) => {
       state.creatingRoomisSuccess = true;
       state.creatingRoomisLoading = false;
-      state.room = action.payload
+      state.room = action.payload;
       toast.success("Room has been created succesfully");
     });
     builder.addCase(CreateRoom.rejected, (state, action) => {

@@ -49,7 +49,6 @@ const RoomCard = ({ type, apartment, index }) => {
   const active = customerData?.favourites?.includes(apartment?.id);
   if (type == "trips") {
     const startDate = moment(apartment?.startDate).format("MMMM Do");
-
     const endDate = moment(apartment?.endDate).format("MMMM Do");
     return (
       <>
@@ -64,7 +63,7 @@ const RoomCard = ({ type, apartment, index }) => {
           )}
         </AnimatePresence>
         <Link
-          to={`/reservation/payment/${apartment?.id}`}
+          to={`/reservation/payment/${apartment?._id}`}
           className="w-full border rounded-xl flex flex-col"
         >
           <div className="h-[240px] lg:h-[280px] overflow-hidden rounded-t-xl group w-full relative">
@@ -187,7 +186,7 @@ const RoomCard = ({ type, apartment, index }) => {
       custom={index}
     >
       <Link
-        to={`/room/${apartment?.id}`}
+        to={`/room/${apartment?._id}`}
         className="w-full rounded-xl border flex flex-col"
       >
         <div
@@ -300,7 +299,9 @@ const RoomCard = ({ type, apartment, index }) => {
                   return (
                     <span
                       key={index}
-                      className={`${type === "search" ? "text-sm" : "text-base"}`}
+                      className={`${
+                        type === "search" ? "text-sm" : "text-base"
+                      }`}
                     >
                       <IoStar />
                     </span>
@@ -314,7 +315,11 @@ const RoomCard = ({ type, apartment, index }) => {
               >
                 4.7
               </span>
-              <span className={`${type === "search" ? "text-sm" : "text-base"} text-[#777]`}>
+              <span
+                className={`${
+                  type === "search" ? "text-sm" : "text-base"
+                } text-[#777]`}
+              >
                 87 reviews
               </span>
             </div>
@@ -326,7 +331,7 @@ const RoomCard = ({ type, apartment, index }) => {
               >
                 <FaBath /> {apartment?.bathroom} bathroom
               </span>
-               <span
+              <span
                 className={`${
                   type === "search" ? "text-sm" : "text-base"
                 } flex items-center gap-2 text-[#777]`}
@@ -349,4 +354,3 @@ const RoomCard = ({ type, apartment, index }) => {
 };
 
 export default RoomCard;
-
