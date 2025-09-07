@@ -142,7 +142,7 @@ const LoginModal = () => {
               </button>
               <div className="w-full flex items-center justify-start gap-2">
                 <div className="text-sm lg:text-base flex gap-2 items-center justify-center w-full font-normal text-dark">
-                  <span className="text-dark underline">Can Login?</span>{" "}
+                  <span className="text-dark underline">Can't Login?</span>{" "}
                   <span
                     onClick={handleLoginModal}
                     style={{ textDecoration: "underline" }}
