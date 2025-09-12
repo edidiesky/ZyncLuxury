@@ -2,7 +2,7 @@
   "name": "zyncluxury-backend",
   "version": "1.0.0",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts",
+    "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
