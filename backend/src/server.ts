@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { errorHandler, NotFound } from "./middleware/error-handler";
 import { connectMongoDB } from "./utils/connectDB";
 import logger from "./utils/logger";
-import { app } from "./app";
+import app from "./app";
 const PORT = process.env.PORT || 3000;
 async function GracefulShutdown() {
   logger.info("Shutting down gracefully!!");
@@ -16,18 +16,16 @@ async function GracefulShutdown() {
   }
 }
 
+const mongoUrl = process.env.DATABASE_URL;
+if (!mongoUrl) {
+  throw new Error("MongoDB connection string is not defined.");
+}
+
+// Connecting to MongoDB
+connectMongoDB(mongoUrl).catch((err) =>
+  logger.error("MongoDB connection error:", err)
+);
+
 /** ERROR MIDDLEWARE */
 app.use(NotFound);
 app.use(errorHandler);
-app.listen(PORT, async () => {
-  const mongoUrl = process.env.DATABASE_URL;
-  if (!mongoUrl) {
-    throw new Error("MongoDB connection string is not defined.");
-  }
-  try {
-    await connectMongoDB(mongoUrl);
-  } catch (error) {}
-});
-
-process.on("SIGINT", GracefulShutdown);
-process.on("SIGTERM", GracefulShutdown);

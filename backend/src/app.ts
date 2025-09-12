@@ -51,4 +51,4 @@ app.get("/health", (_req, res) => {
 //   res.send(specs);
 // });
 
-export { app };
+export default app;
