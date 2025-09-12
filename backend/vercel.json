@@ -2,51 +2,51 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/auth/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/user/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/room/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
 
     {
       "src": "/api/v1/upload/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/reservation/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/payment/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/stat/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/api/v1/favourites/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "server.js"
     }
   ]
 }
