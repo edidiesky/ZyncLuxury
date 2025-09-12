@@ -12,18 +12,6 @@
       "dest": "dist/app.js"
     },
     {
-      "src": "/api/v1/auth/(.*)",
-      "dest": "dist/app.js"
-    },
-    {
-      "src": "/api/v1/room/(.*)",
-      "dest": "dist/app.js"
-    },
-    {
-      "src": "/api/v1/reservation/(.*)",
-      "dest": "dist/app.js"
-    },
-    {
       "src": "/(.*)",
       "dest": "dist/app.js"
     }
