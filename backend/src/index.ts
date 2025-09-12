@@ -44,10 +44,10 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/reservation", reservationRoutes);
 
 /** HEALTH CHECK */
-app.get("/health", (_req, res) => {
-  res.json({ message: "API is running fine!!!", status: "succes" });
+app.get("/", (req, res) => {
+  res.json({ message: "API is running fine!!!" });
 });
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 
 /** ERROR MIDDLEWARE */
 app.use(NotFound);
