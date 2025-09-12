@@ -51,20 +51,20 @@ export default function RoomPaymentTab() {
           <img
             alt="Cotion"
             loading="lazy"
-            src={reservation?.rooms?.images[0]}
+            src={reservation?.roomId?.images[0]}
             className="image object-cover w-full h-[300px]"
           />
           <div className="w-full flex flex-col gap-2">
             <div className="flex p-8 pb-6 border-b-4 flex-col w-full gap-2">
-              <span className="text-sm font-booking_font regular">
-                {reservation?.rooms?.bedroom} Bedroom |{" "}
-                {reservation?.rooms?.guests} Guests
+              <span className="text-sm font-semibold regular">
+                {reservation?.roomId?.bedroom} Bedroom |{" "}
+                {reservation?.roomId?.guests} Guests
               </span>
               <h1 className="text-2xl w-full family2 font-booking_font4">
-                {reservation?.rooms?.title}
+                {reservation?.roomId?.title}
               </h1>
-              <span className="text-sm font-booking_font regular">
-                {reservation?.rooms?.city}
+              <span className="text-sm font-semibold regular">
+                {reservation?.roomId?.city}
               </span>
               {/* date and guests */}
               <div className="py-3 flex items-center justify-between w-full">
@@ -73,7 +73,7 @@ export default function RoomPaymentTab() {
                   <span className="text-base font-booking_font_bold family2">
                     Dates
                   </span>
-                  <span className="text-base font-booking_font regular">
+                  <span className="text-base font-semibold regular">
                     {startDate} - {endDate}
                   </span>
                 </div>
@@ -83,7 +83,7 @@ export default function RoomPaymentTab() {
                   <span className="text-base font-booking_font_bold family2">
                     Guests
                   </span>
-                  <span className="text-base font-booking_font regular">
+                  <span className="text-base font-semibold regular">
                     {reservation?.guests} guest
                   </span>
                 </div>
@@ -91,9 +91,9 @@ export default function RoomPaymentTab() {
             </div>
             <div className="w-full flex p-4 pb-6 px-8 border-b-4 flex-col gap-2">
               {/* price */}
-              <div className="w-full text-base regular font-booking_font flex items-center justify-between">
+              <div className="w-full text-base regular font-semibold flex items-center justify-between">
                 <span>
-                  {reservation?.rooms?.price} x {differenceInDays} nights
+                  {reservation?.roomId?.price} x {differenceInDays} nights
                 </span>
                 <span>
                   <span className="text-base">₦</span>
@@ -101,7 +101,7 @@ export default function RoomPaymentTab() {
                 </span>
               </div>
               {/* taxes */}
-              <div className="w-full text-base pb-4 regular font-booking_font flex items-center justify-between">
+              <div className="w-full text-base pb-4 regular font-semibold flex items-center justify-between">
                 <span>Fees and taxess</span>
                 <span>
                   <span className="text-base">₦</span>
@@ -109,12 +109,12 @@ export default function RoomPaymentTab() {
                 </span>
               </div>
               {/* total */}
-              <div className="w-full text-lg regular font-booking_font pt-4 border-t flex items-center justify-between">
+              <div className="w-full text-lg regular font-semibold pt-4 border-t flex items-center justify-between">
                 <span className="family2 font-booking_font_bold">
                   Total Cash
                 </span>
                 <span className="family2 font-booking_font_bold">
-                  <span className="text-base regular font-booking_font">
+                  <span className="text-base regular font-semibold">
                     ₦
                   </span>
                   {Number(reservation?.totalPrice).toLocaleString()}{" "}
@@ -123,12 +123,12 @@ export default function RoomPaymentTab() {
             </div>
             <div className="w-full flex p-4 px-8 flex-col gap-2">
               {/* price */}
-              <div className="w-full text-lg regular font-booking_font flex items-center justify-between">
+              <div className="w-full text-lg regular font-semibold flex items-center justify-between">
                 <span className="family2 font-booking_font_bold">
                   Total Cash
                 </span>
                 <span className="family2 font-booking_font_bold">
-                  <span className="text-base regular font-booking_font">
+                  <span className="text-base regular font-semibold">
                     ₦
                   </span>
                   {Number(reservation?.totalPrice).toLocaleString()}{" "}

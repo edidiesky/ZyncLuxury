@@ -38,10 +38,10 @@ const Profile = ({ type }) => {
               style={{
                 color: type === "home" ? "#fff" : "#000",
               }}
-              className="text-lg family2"
+              className="text-lg family2 font-semibold"
             >
               {currentUser?.name}
-              <span className="block text-sm text-gray-400">
+              <span className="block text-sm font-semibold text-gray-400">
                 {currentUser?.email}
               </span>
             </h4>

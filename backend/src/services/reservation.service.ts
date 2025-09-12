@@ -62,9 +62,9 @@ const getSingleReservation = async (reservationId: string, userId: string) => {
 
   // Check Redis cache
   const cachedReservation = await redisClient.get(cacheKey);
-  if (cachedReservation) {
-    return JSON.parse(cachedReservation);
-  }
+  // if (cachedReservation) {
+  //   return JSON.parse(cachedReservation);
+  // }
 
   // Query Mongoose
   const reservation = await Reservations.findOne({
@@ -72,7 +72,7 @@ const getSingleReservation = async (reservationId: string, userId: string) => {
     userId: new Types.ObjectId(userId),
   })
     .populate("userId", "name email")
-    .populate("roomId", "title price");
+    .populate("roomId", "title price images");
 
   if (!reservation) {
     throw new Error("No reservation found");
@@ -152,8 +152,8 @@ const createUserReservation = async (
     await session.commitTransaction();
     await session.endSession();
     return {
-      success: false,
-      message: "",
+      success: true,
+      message: "Your Booking has been succesfully created!!",
       data: reservation,
     };
   } catch (error) {

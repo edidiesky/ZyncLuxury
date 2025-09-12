@@ -87,7 +87,7 @@ const CreateUserReservation = asyncHandler(
 // @access  Public
 const DeleteReservations = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {
-    const result = await deleteReservation(req.params.roomId);
+    const result = await deleteReservation(req.params.id);
     res.status(SUCCESSFULLY_FETCHED_STATUS_CODE).json(result);
   }
 );
@@ -99,7 +99,7 @@ const UpdateReservations = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {
     const { roomid } = req.query;
     const updatedReservation = await updateReservation(
-      req.params.roomId,
+      req.params.id,
       roomid as string,
       req.body as Partial<IReservation>
     );

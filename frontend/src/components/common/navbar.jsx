@@ -45,7 +45,7 @@ const Navbar = () => {
               alt=""
               className="w-8"
             />
-            <span className="text-2xl md:text-2xl family2 text-dark">
+            <span className="text-2xl md:text-2xl font-semibold family2 text-dark">
               ZyncLuxury
             </span>
           </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
                   end
                   to={`/${list.path}`}
                   key={index}
-                  className={`text-base lg:text-lg hover:text-grey family2 text-dark flex items-center gap-2 p-3 px-3 rounded-[40px]`}
+                  className={`text-base lg:text-lg hover:text-grey font-semibold text-dark flex items-center gap-2 p-3 px-3 rounded-[40px]`}
                 >
                   {list?.title}
                 </NavLink>

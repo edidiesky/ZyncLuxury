@@ -19,11 +19,16 @@ router
   .get(authenticate, authorization(["ADMIN", "SELLER"]), GetAllReservation);
 router
   .route("/:roomId")
-  .post(authenticate, validateRequest(reservationSchema), CreateUserReservation)
+  .post(
+    authenticate,
+    validateRequest(reservationSchema),
+    CreateUserReservation
+  );
+
+router
+  .route("/:id")
   .get(authenticate, GetSingleReservation)
   .delete(authenticate, DeleteReservations)
   .put(authenticate, UpdateReservations);
-
-
 
 export default router;
