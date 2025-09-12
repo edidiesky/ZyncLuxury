@@ -1,10 +1,16 @@
 {
   "name": "zyncluxury-backend",
   "version": "1.0.0",
+   "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ],
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
-    "build": "tsc",
-    "test": "jest",
+    "start": "ts-node-dev src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "test:watch": "jest --watch --coverage",
     "rooms:import": "ts-node-dev src/scripts/roomSeeder.ts"
   },
