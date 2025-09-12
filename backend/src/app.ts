@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import cors from "cors";
+import cookieParser from 'cookie-parser'
 import authRoutes from "./routes/auth.route";
 import roomRoutes from "./routes/room.route";
 import reservationRoutes from "./routes/reservation.route";
@@ -13,6 +14,7 @@ const app = express();
 if (!process.env.WEB_ORIGIN) {
   throw new Error("No WEB_ORIGIN value");
 }
+app.use(cookieParser())
 app.use(helmet());
 app.use(morgan("dev"));
 const apiLimiter = rateLimit({

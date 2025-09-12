@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,7 +18,7 @@ const linkData = [
     path: "savedhomes",
   },
   {
-    title: "My Trips",
+    title: "My Bookings",
     path: "trips",
   },
 
@@ -75,7 +74,7 @@ const Navbar = () => {
                   onClick={() => dispatch(onLoginModal())}
                   className="btn min-w-[120px] md:min-w-[140px] text-center text-base family1 text-white px-4 py-3"
                 >
-                 Get Started
+                  Get Started
                 </button>
               </div>
             )}

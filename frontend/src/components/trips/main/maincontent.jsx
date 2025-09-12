@@ -23,9 +23,9 @@ const RoomLists = () => {
     >
       <div className="w-[90%] max-w-custom_1 relative mx-auto flex flex-col gap-12">
         {reservations?.length !== 0 && (
-          <h3 className="text-3xl md:text-5xl family2">
+          <h3 className="text-3xl md:text-4xl font-bold">
             My Reservations
-            <span className="block pt-3 regular text-base md:text-xl">
+            <span className="block pt-3 font-normal text-base md:text-xl">
               Here is your list of your luxurious booked homes
             </span>
           </h3>
@@ -50,7 +50,7 @@ const RoomLists = () => {
                     alt=""
                     className="w-[300px] md:w-[400px]"
                   />
-                  <h1 className="text-dark leading-[1.3] text-3xl md:text-3xl text-center family2">
+                  <h1 className="text-dark leading-[1.3] text-3xl md:text-2xl text-center family2">
                     You have an empty reserved Rooms
                     <Link
                       to={"/search"}

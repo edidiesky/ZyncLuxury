@@ -124,7 +124,7 @@ const LoginUser = asyncHandler(async (req: Request, res: Response) => {
     },
     success: true,
     message:
-      "Your Zync Agent has been created succesfully!. You can proceed to your dashboard to track your sales.",
+      "Welcome, you have login succesfully!. You can proceed to your dashboard to track your sales.",
   });
 });
 

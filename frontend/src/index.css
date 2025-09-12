@@ -65,9 +65,6 @@
   }
 }
 
-a.active {
-  /* color: var(--primary); */
-}
 /* leaflet styles start */
 .leaflet-container a {
   color: #000 !important;
@@ -157,10 +154,10 @@ button:disabled {
 .rdrMonth {
   width: 100% !important;
   font-size: 14px !important;
-  font-family: "Sora", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .rdrMonthAndYearPickers select {
-  font-family: "Sora", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 14px !important;
   color: var(--dark-1) !important;
 }
@@ -177,7 +174,7 @@ button:disabled {
   > .MuiDataGrid-cell {
   max-height: 200px !important;
   min-height: 200px !important;
-  font-family: "Sora", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .rdrDateRangePickerWrapper {
@@ -189,7 +186,7 @@ button:disabled {
   width: 100% !important;
   color: var(--dark-1) !important;
   font-size: 15px !important;
-  font-family: "Sora", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 /* React day picker css */
 
@@ -259,41 +256,6 @@ body {
   font-family: "DM Sans", sans-serif !important;
 }
 
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
-  font-weight: 100 1000;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bold";
-  src: url("/fonts/Cabinet-bold.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Medium";
-  src: url("/fonts/Cabinet-medium.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Regular";
-  src: url("/fonts/Cabinet-regular.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Instrument";
-  src: url("/fonts/InstrumentSans-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 100 1000;
-  font-style: normal;
-  font-display: swap;
-}
 
 .hide {
   overflow: hidden !important;
@@ -302,7 +264,7 @@ body {
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   padding: 0.6rem;
-  font-family: "Sora", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   border-radius: 10px;
 }
 

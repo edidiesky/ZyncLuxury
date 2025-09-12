@@ -83,24 +83,24 @@ const RoomCard = ({ type, apartment, index }) => {
                 transition:
                   "filter 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
               }}
-              src={apartment?.rooms?.images[0]}
+              src={apartment?.roomId?.images[0]}
               className="w-full h-[100%] z-20 absolute object-cover hover:grayscale-[1] grayscale-0"
             />
           </div>
-          <div className="w-full px-4 py-4 flex flex-col gap-2">
-            <h3 className="text-lg md:text-2xl family2">
-              {apartment?.rooms?.title}
+          <div className="w-full p-6 flex flex-col gap-1">
+            <h3 className="text-lg md:text-2xl font-semibold">
+              {apartment?.roomId?.title}
             </h3>
             <div
               className={`w-full ${
                 type === "search" ? "text-xs" : "text-base"
-              } flex items-center family1 text-grey gap-1`}
+              } flex items-center family1 text-grey gap-3`}
             >
               {" "}
-              {apartment?.rooms?.state && (
-                <span>{apartment?.rooms?.state},</span>
+              {apartment?.roomId?.state && (
+                <span>{apartment?.roomId?.state},</span>
               )}{" "}
-              {apartment?.rooms?.country}
+              {apartment?.roomId?.country}
             </div>
             <div className="w-full flex items-center gap-2">
               <div className="flex items-center gap-1">
@@ -160,13 +160,13 @@ const RoomCard = ({ type, apartment, index }) => {
               className="flex items-center justify-between gap-2 uppercase 
             text-xs regular"
             >
-              <span className="flex uppercase items-center">
+              <span className="flex uppercase underline font-semibold text-[#000] items-center">
                 <span>{startDate}</span> - <span>{endDate}</span>
               </span>
 
               <span className="flex text-xs font-normal font-booking_font flex-col">
                 <span className="block text-lg md:text-xl family2 font-booking_font_bold">
-                  ₦{apartment?.rooms?.price}
+                  ₦{apartment?.roomId?.price}
                 </span>
               </span>
             </div>
@@ -257,7 +257,7 @@ const RoomCard = ({ type, apartment, index }) => {
                   type === "search"
                     ? "md:text-lg text-base"
                     : "md:text-3xl family1 text-2xl"
-                }  family2 flex-1`}
+                }  family2 flex-1 text-lg md:text-2xl font-semibold`}
               >
                 ${apartment?.price}.00
               </h3>
@@ -288,7 +288,7 @@ const RoomCard = ({ type, apartment, index }) => {
                   type === "search"
                     ? "md:text-base text-base"
                     : "md:text-2xl text-lg"
-                }  flex-1 family2`}
+                }  flex-1 font-semibold`}
               >
                 {apartment?.title}
               </h3>

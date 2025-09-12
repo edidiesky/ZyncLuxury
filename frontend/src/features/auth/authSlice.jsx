@@ -27,7 +27,7 @@ const getUserData = () => {
 
 const initialState = {
   users: [],
-  token: customerToken ? customerToken : "",
+  token: customerToken ? JSON.parse(customerToken) : "",
   currentUser: getUserData(),
   userInfo: null,
   alertText: "",

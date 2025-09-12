@@ -1,4 +1,4 @@
-import { Types } from "mongoose";
+import mongoose, { Types } from "mongoose";
 import Reservations, {
   IReservation,
   ReservationStatus,
@@ -13,7 +13,7 @@ const getUserReservations = async (userId: string) => {
     userId: new Types.ObjectId(userId),
   })
     .populate("userId", "name email")
-    .populate("roomId", "title price")
+    .populate("roomId", "title price images")
     .populate("sellerId", "name email")
     .sort({ createdAt: -1 });
   return reservations;
@@ -89,67 +89,87 @@ const createUserReservation = async (
   roomId: string,
   userId: string,
   data: Partial<IReservation>
-) => {
-  const {
-    startDate,
-    endDate,
-    status,
-    totalPrice,
-    guests,
-  } = data;
+): Promise<{
+  success: boolean;
+  data: IReservation | null;
+  message: string;
+}> => {
+  const session = await mongoose.startSession();
+  session.startTransaction();
+  try {
+    const { startDate, endDate, status, totalPrice, guests } = data;
 
-  // Parse and format dates
-  const parsedStartDate = startDate ? new Date(startDate) : new Date();
-  const parsedEndDate = endDate ? new Date(endDate) : new Date();
+    // Parse and format dates
+    const parsedStartDate = startDate ? new Date(startDate) : new Date();
+    const parsedEndDate = endDate ? new Date(endDate) : new Date();
 
-  // Check for room availability
-  const overlappingReservations = await Reservations.find({
-    roomId: new Types.ObjectId(roomId),
-    $or: [
-      {
-        $and: [
-          { startDate: { $lte: parsedStartDate } },
-          { endDate: { $gte: parsedStartDate } },
-        ],
-      },
-      {
-        $and: [
-          { startDate: { $lte: parsedEndDate } },
-          { endDate: { $gte: parsedEndDate } },
-        ],
-      },
-    ],
-  });
+    // Check for room availability
+    const overlappingReservations = await Reservations.find({
+      roomId: new Types.ObjectId(roomId),
+      $or: [
+        {
+          $and: [
+            { startDate: { $lte: parsedStartDate } },
+            { endDate: { $gte: parsedStartDate } },
+          ],
+        },
+        {
+          $and: [
+            { startDate: { $lte: parsedEndDate } },
+            { endDate: { $gte: parsedEndDate } },
+          ],
+        },
+      ],
+    }).session(session);
 
-  if (overlappingReservations.length > 0) {
-    throw new Error(
-      "This Room has already been booked for one or more days in your selected period!"
-    );
+    if (overlappingReservations.length > 0) {
+      throw new Error(
+        "This Room has already been booked for one or more days in your selected period!"
+      );
+    }
+
+    // Get sellerId from the room
+    const room = await Rooms.findById(roomId).session(session);
+    if (!room) {
+      throw new Error("Room not found");
+    }
+
+    // CREATE RESERVATION DATA
+    const reservationData = {
+      startDate: parsedStartDate,
+      endDate: parsedEndDate,
+      status: status || ReservationStatus.PENDING,
+      totalPrice: Number(totalPrice),
+      guests: Number(guests),
+      userId: new Types.ObjectId(userId),
+      roomId: new Types.ObjectId(roomId),
+      sellerId: room.sellerId,
+    };
+
+    const [reservation] = await Reservations.create([reservationData], {
+      session,
+    });
+    await session.commitTransaction();
+    await session.endSession();
+    return {
+      success: false,
+      message: "",
+      data: reservation,
+    };
+  } catch (error) {
+    if (session.inTransaction()) {
+      await session.abortTransaction();
+    }
+    await session.endSession();
+    return {
+      success: false,
+      message:
+        error instanceof Error
+          ? error.message
+          : "An unkown error occurred. Please you can further reach out to the support team",
+      data: null,
+    };
   }
-
-  // Get sellerId from the room
-  const room = await Rooms.findById(roomId);
-  if (!room) {
-    throw new Error("Room not found");
-  }
-
-  // CREATE RESERVATION DATA
-  const reservationData = {
-    startDate: parsedStartDate,
-    endDate: parsedEndDate,
-    status: status || ReservationStatus.PENDING,
-    totalPrice: Number(totalPrice),
-    guests: Number(guests),
-    // patchguests: patchguests ? Number(patchguests) : undefined,
-    // partpaymentPrice: partpaymentPrice ? Number(partpaymentPrice) : undefined,
-    userId: new Types.ObjectId(userId),
-    roomId: new Types.ObjectId(roomId),
-    sellerId: room.sellerId,
-  };
-
-  const reservation = await Reservations.create(reservationData);
-
-  return reservation;
 };
 
 // Delete a reservation
@@ -176,13 +196,7 @@ const updateReservation = async (
   roomId: string,
   data: Partial<IReservation>
 ) => {
-  const {
-    startDate,
-    endDate,
-    status,
-    totalPrice,
-    guests,
-  } = data;
+  const { startDate, endDate, status, totalPrice, guests } = data;
 
   // Parse and format dates
   const parsedStartDate = startDate ? new Date(startDate) : undefined;

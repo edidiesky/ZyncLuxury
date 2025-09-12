@@ -6,7 +6,7 @@ export enum ReservationStatus {
   PARTPAYMENT = "PARTPAYMENT",
 }
 
-export interface IReservation extends Document {
+export interface IReservation {
   startDate: Date;
   endDate: Date;
   totalPrice?: number;
@@ -17,7 +17,6 @@ export interface IReservation extends Document {
   roomId: Types.ObjectId;
   userId: Types.ObjectId;
   sellerId?: Types.ObjectId;
-  bookingId: string;
   queuePosition?: number;
   joinTime?: Date;
   paymentExpiresAt?: Date;
@@ -41,7 +40,6 @@ const ReservationsSchema = new Schema<IReservation>(
     roomId: { type: Schema.Types.ObjectId, ref: "Rooms", required: true },
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
     sellerId: { type: Schema.Types.ObjectId, ref: "User" },
-    bookingId: { type: String, unique: true },
     queuePosition: Number,
     joinTime: Date,
     paymentExpiresAt: Date,
@@ -52,7 +50,6 @@ const ReservationsSchema = new Schema<IReservation>(
 );
 
 ReservationsSchema.index({
-  tenantId: 1,
   roomId: 1,
   status: 1,
   createdAt: 1,

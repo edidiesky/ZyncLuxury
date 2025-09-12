@@ -130,7 +130,7 @@ export default function RoomPaymentTab({ room, differenceinDays }) {
       >
         <div className="w-[90%] mx-auto flex items-center justify-between">
           <div className="flex flex-1 flex-col">
-            <h4 className="text-lg family2">
+            <h4 className="text-lg font-bold">
               ₦{room?.price} <span className="font-normal text-xs">/night</span>
             </h4>
             <div className="">

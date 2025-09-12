@@ -18,8 +18,6 @@ export const paymentSchema = Joi.object({
   partPaymentPercentage: Joi.number().optional(),
   installmentNumber: Joi.number().optional(),
   amount: Joi.number().optional(),
-  remittanceId: Joi.string().trim().optional(),
-  assessmentId: Joi.string().trim().optional(),
   paymentChannel: Joi.string()
     .valid(...Object.values(PaymentChannel))
     .required(),

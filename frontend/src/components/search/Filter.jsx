@@ -41,7 +41,7 @@ const Filter = () => {
   return (
     <div className="w-[100%] mx-auto max-w-custom py-20 z-40 relative grid grid-cols-1 items-start">
       <div
-        className="w-[95%] lg:w-[90%] max-w-custom mx-auto relative flex px-4 flex-col
+        className="max-w-custom mx-auto relative flex px-4 flex-col
        gap-12 lg:gap-16"
       >
         <div className="w-full relative flex flex-col gap-6 lg:gap-8">

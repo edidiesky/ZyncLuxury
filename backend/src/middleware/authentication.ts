@@ -22,10 +22,7 @@ export const authenticate = (
   res: Response,
   next: NextFunction
 ): void => {
-  const token =
-    req.cookies.jwt ||
-    req.cookies.jwt ||
-    req.headers.authorization?.split(" ")[1];
+  const token = req.cookies.jwt || req.headers.authorization?.split(" ")[1];
 
   if (!token) {
     logger.warn("Authentication failed: No token provided", {
