@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 let app: express.Application | null = null;
-let isDbConnected = false;
+let isDbConnected: boolean = false;
 
 const initializeApp = async () => {
   if (app) return app;
@@ -29,7 +29,6 @@ const initializeApp = async () => {
       })
     );
 
-    // Database connection with timeout
     if (!isDbConnected) {
       try {
         console.log("Attempting database connection...");
@@ -55,13 +54,12 @@ const initializeApp = async () => {
       }
     }
 
-    // Health check routes
+    // Health check routes (keep these working first)
     app.get("/", (req, res) => {
       res.json({
         message: "ZyncLuxury API is running fine!",
         timestamp: new Date().toISOString(),
         environment: process.env.NODE_ENV || "development",
-        database: isDbConnected ? "connected" : "disconnected",
       });
     });
 
@@ -69,60 +67,37 @@ const initializeApp = async () => {
       res.json({
         status: "healthy",
         timestamp: new Date().toISOString(),
-        database: isDbConnected ? "connected" : "disconnected",
       });
     });
 
-    // Test auth routes first (likely to work)
+    // Test route imports one by one
     try {
-      console.log("Loading auth routes...");
+      console.log("Testing auth route import...");
       const authRoutes = (await import("../src/routes/auth.route")).default;
       app.use("/api/v1/auth", authRoutes);
-      console.log("✅ Auth routes loaded");
+      console.log("Auth routes imported successfully");
     } catch (importError) {
-      console.error("❌ Auth route import failed:", importError);
+      console.error("Auth route import failed:", importError);
     }
 
-    // Add a simple test room route first
-    app.get("/api/v1/room/test", (req, res) => {
-      res.json({
-        message: "Room test endpoint working",
-        timestamp: new Date().toISOString(),
-        database: isDbConnected ? "connected" : "disconnected",
-      });
-    });
-
-    // Load room routes with error handling
     try {
-      console.log("Loading room routes...");
+      console.log("Testing room route import...");
       const roomRoutes = (await import("../src/routes/room.route")).default;
       app.use("/api/v1/room", roomRoutes);
-      console.log("✅ Room routes loaded");
+      console.log("Room routes imported successfully");
     } catch (importError) {
-      console.error("❌ Room route import failed:", importError);
-      // Add fallback route to show the error
-      app.get("/api/v1/room/*", (req, res) => {
-        res.status(503).json({
-          error: "Room routes unavailable",
-          message: "Room service is temporarily unavailable",
-          details:
-            importError instanceof Error
-              ? importError.message
-              : "Unknown error",
-        });
-      });
+      console.error("Room route import failed:", importError);
     }
 
-    // Load reservation routes
     try {
-      console.log("Loading reservation routes...");
+      console.log("Testing reservation route import...");
       const reservationRoutes = (
         await import("../src/routes/reservation.route")
       ).default;
       app.use("/api/v1/reservation", reservationRoutes);
-      console.log("✅ Reservation routes loaded");
+      console.log("Reservation routes imported successfully");
     } catch (importError) {
-      console.error("❌ Reservation route import failed:", importError);
+      console.error("Reservation route import failed:", importError);
     }
 
     // Error handlers
@@ -133,7 +108,7 @@ const initializeApp = async () => {
       app.use(NotFound);
       app.use(errorHandler);
     } catch (importError) {
-      console.error("❌ Error handler import failed:", importError);
+      console.error("Error handler import failed:", importError);
       // Fallback error handlers
       app.use("*", (req, res) => {
         res.status(404).json({
@@ -143,37 +118,23 @@ const initializeApp = async () => {
       });
     }
 
-    console.log("✅ Express app initialized successfully");
+    console.log("Express app initialized successfully");
     return app;
   } catch (error) {
-    console.error("❌ Error initializing app:", error);
+    console.error("Error initializing app:", error);
     throw error;
   }
 };
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   try {
-    // Add timeout for the entire request
-    const requestTimeout = new Promise(
-      (_, reject) =>
-        setTimeout(() => reject(new Error("Request timeout")), 25000) // 25 seconds (Vercel has 30s limit)
-    );
-
-    const appPromise = (async () => {
-      await initializeApp();
-    })();
-
-    await Promise.race([appPromise, requestTimeout]);
+    const appInstance = await initializeApp();
+    return appInstance(req, res);
   } catch (error) {
-    console.error("❌ Function invocation error:", error);
-
-    // Make sure we always send a response
-    if (!res.headersSent) {
-      res.status(500).json({
-        error: "Internal server error",
-        message: error instanceof Error ? error.message : "Unknown error",
-        timestamp: new Date().toISOString(),
-      });
-    }
+    console.error("Function invocation error:", error);
+    res.status(500).json({
+      error: "Internal server error",
+      message: error instanceof Error ? error.message : "Unknown error",
+    });
   }
 };
