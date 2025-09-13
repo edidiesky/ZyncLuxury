@@ -26,9 +26,7 @@ const initializeApp = async () => {
       credentials: true,
     }));
 
-    console.log('✅ Basic middleware added');
-
-    // Test routes
+    // Health check routes (keep these working first)
     app.get("/", (req, res) => {
       res.json({ 
         message: "ZyncLuxury API is running fine!", 
@@ -40,37 +38,50 @@ const initializeApp = async () => {
     app.get("/health", (req, res) => {
       res.json({ 
         status: "healthy", 
-        timestamp: new Date().toISOString(),
-        mongodb: "not connected (debug mode)"
+        timestamp: new Date().toISOString()
       });
     });
 
-    // Test import of error handler middleware
+    // Test route imports one by one
     try {
-      console.log('Testing error handler import...');
+      console.log('Testing auth route import...');
+      const authRoutes = (await import("../src/routes/auth.route")).default;
+      app.use("/api/v1/auth", authRoutes);
+      console.log('✅ Auth routes imported successfully');
+    } catch (importError) {
+      console.error('❌ Auth route import failed:', importError);
+    }
+
+    try {
+      console.log('Testing room route import...');
+      const roomRoutes = (await import("../src/routes/room.route")).default;
+      app.use("/api/v1/room", roomRoutes);
+      console.log('✅ Room routes imported successfully');
+    } catch (importError) {
+      console.error('❌ Room route import failed:', importError);
+    }
+
+    try {
+      console.log('Testing reservation route import...');
+      const reservationRoutes = (await import("../src/routes/reservation.route")).default;
+      app.use("/api/v1/reservation", reservationRoutes);
+      console.log('✅ Reservation routes imported successfully');
+    } catch (importError) {
+      console.error('❌ Reservation route import failed:', importError);
+    }
+
+    // Error handlers
+    try {
       const { NotFound, errorHandler } = await import("../src/middleware/error-handler");
-      
-      // Add 404 handler
       app.use(NotFound);
       app.use(errorHandler);
-      
-      console.log('✅ Error handlers imported successfully');
     } catch (importError) {
       console.error('❌ Error handler import failed:', importError);
-      
       // Fallback error handlers
       app.use("*", (req, res) => {
         res.status(404).json({ 
           error: "Route not found",
           path: req.originalUrl 
-        });
-      });
-      
-      app.use((error: any, req: any, res: any, next: any) => {
-        console.error('Error:', error);
-        res.status(500).json({
-          error: "Internal server error",
-          message: error.message
         });
       });
     }
