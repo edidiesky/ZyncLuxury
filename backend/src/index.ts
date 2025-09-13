@@ -1,26 +1,29 @@
-import swaggerUi from "swagger-ui-express";
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import authRoutes from "./routes/auth.route";
-import roomRoutes from "./routes/room.route";
-import reservationRoutes from "./routes/reservation.route";
+import authRoutes from "../src/routes/auth.route";
+import roomRoutes from "../src/routes/room.route";
+import reservationRoutes from "../src/routes/reservation.route";
 import dotenv from "dotenv";
-import logger from "./utils/logger";
-import mongoose from "mongoose";
-import { errorHandler, NotFound } from "./middleware/error-handler";
-import { connectMongoDB } from "./utils/connectDB";
+import { errorHandler, NotFound } from "../src/middleware/error-handler";
+import { connectMongoDB } from "../src/utils/connectDB";
+
 dotenv.config();
+
 const app = express();
+
 if (!process.env.WEB_ORIGIN) {
   throw new Error("No WEB_ORIGIN value");
 }
+
 app.use(cookieParser());
 app.use(helmet());
 app.use(morgan("dev"));
+
 const apiLimiter = rateLimit({
   windowMs: 20 * 60 * 1000,
   max: 200,
@@ -28,6 +31,7 @@ const apiLimiter = rateLimit({
   legacyHeaders: false,
   message: "Too many requests from this IP, please try again after 20 minutes",
 });
+
 app.use(apiLimiter);
 app.use(
   cors({
@@ -47,17 +51,22 @@ app.use("/api/v1/reservation", reservationRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "API is running fine!!!" });
 });
-const PORT = process.env.PORT;
+
+app.get("/api", (req, res) => {
+  res.json({ message: "API is running fine!!!" });
+});
 
 /** ERROR MIDDLEWARE */
 app.use(NotFound);
 app.use(errorHandler);
-app.listen(PORT, async () => {
-  const mongoUrl = process.env.DATABASE_URL;
-  if (!mongoUrl) {
-    throw new Error("MongoDB connection string is not defined.");
-  }
-  try {
-    await connectMongoDB(mongoUrl);
-  } catch (error) {}
-});
+
+// Connect to MongoDB
+const mongoUrl = process.env.DATABASE_URL;
+if (mongoUrl) {
+  connectMongoDB(mongoUrl).catch(console.error);
+}
+
+// Export the Express app as a serverless function
+export default (req: VercelRequest, res: VercelResponse) => {
+  return app(req, res);
+};
