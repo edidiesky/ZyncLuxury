@@ -29,7 +29,7 @@ export enum MethodType {
   OFFLINE = "BANK",
 }
 
-interface IPayment extends Document {
+export interface IPayment extends Document {
   amount?: number;
   guests?: number;
   status: PaymentStatus;

@@ -1,29 +1,8 @@
 import mongoose, { Types } from "mongoose";
 import { IRoom, ListingType, RoomType } from "../models/Rooms";
+import { RoomMock } from "../types";
 
-export interface RoomMock {
-  _id?: Types.ObjectId;
-  sellerId: Types.ObjectId;
-  bedroom: number;
-  bathroom: number;
-  images: string[];
-  title: string;
-  description: string;
-  price?: string;
-  cautionfee?: string;
-  guests?: number;
-  latitude?: string;
-  longitude?: string;
-  country: string;
-  city?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  state?: string;
-  type: string;
-  listingType: string;
-  features?: any;
-  amenities?: any;
-}
+
 
 export const apartmentDataList: RoomMock[] = [
   // seller 1 Mellisa
