@@ -1,7 +1,6 @@
 import { Document, model, Schema, Types } from "mongoose";
 
-interface IReview extends Document {
-  tenantId: string;
+export interface IReview extends Document {
   review: number;
   description: string;
   roomId: Types.ObjectId;
@@ -13,7 +12,6 @@ interface IReview extends Document {
 
 const ReviewSchema = new Schema<IReview>(
   {
-    tenantId: { type: String, required: true },
     review: { type: Number, required: true },
     description: { type: String, required: true },
     roomId: { type: Schema.Types.ObjectId, ref: "Rooms", required: true },
@@ -25,5 +23,5 @@ const ReviewSchema = new Schema<IReview>(
   }
 );
 
-ReviewSchema.index({ tenantId: 1, createdAt: -1, userId: 1, sellerId: 1 });
+ReviewSchema.index({ createdAt: -1, userId: 1, sellerId: 1 });
 export default model<IReview>("Review", ReviewSchema);

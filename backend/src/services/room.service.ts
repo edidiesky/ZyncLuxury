@@ -2,8 +2,7 @@ import mongoose, { FilterQuery, Types } from "mongoose";
 import Rooms, { IRoom, RoomType } from "../models/Rooms";
 import redisClient from "../config/redisClient";
 import { IRoomResult } from "../types";
-
-// Build query object for filtering rooms
+import logger from "../utils/logger";
 
 // Get all rooms with pagination and caching
 const getAllRooms = async (
@@ -12,7 +11,7 @@ const getAllRooms = async (
   limit: number = 9
 ): Promise<IRoomResult> => {
   const skip = (page - 1) * limit;
-  const cacheKey = `rooms_${JSON.stringify(queryObject)}`;
+  const cacheKey = `rooms:${queryObject.sellerId}:${JSON.stringify(queryObject)}`;
 
   // Check Redis cache
   const cacheRooms = await redisClient.get(cacheKey);
@@ -25,7 +24,8 @@ const getAllRooms = async (
     .populate("sellerId", "name email")
     .skip(skip)
     .limit(limit)
-    .sort({ createdAt: -1 }).lean();
+    .sort({ createdAt: -1 })
+    .lean();
 
   // Get total rooms and pages
   const totalRooms = await Rooms.countDocuments(queryObject);
@@ -71,6 +71,15 @@ const getSellerRooms = async (
 const createRoom = async (roomData: Partial<IRoom>, sellerId: string) => {
   const data = { ...roomData, sellerId: new Types.ObjectId(sellerId) };
   const room = await Rooms.create(data);
+  const redisRoomsKeyPattern = `rooms:${sellerId}:*`;
+  const roomRedisKeys = await redisClient.keys(redisRoomsKeyPattern);
+  if (roomRedisKeys.length > 0) {
+    await redisClient.del(roomRedisKeys);
+    logger.info("Room cache has been invalidated:", {
+      roomRedisKeys,
+      redisRoomsKeyPattern,
+    });
+  }
   return room;
 };
 

@@ -61,10 +61,7 @@ export interface IRoomResult {
 export interface ICreatePaymentService {
   gateway: IPaymentGateway;
   paystackSecretKey: string;
-  paystackPublicKey: string;
   flutterWaveSecretKey: string;
-  flutterWavePublicKey: string;
-  flutterWaveEncryptionKey: string;
 }
 
 export type IPaymentGateway =

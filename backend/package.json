@@ -2,8 +2,8 @@
   "name": "zyncluxury-backend",
   "version": "1.0.0",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev src/index.ts",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev src/server.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
@@ -16,6 +16,7 @@
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-async-handler": "^1.2.0",

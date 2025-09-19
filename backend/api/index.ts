@@ -46,11 +46,10 @@ const initializeApp = async () => {
         if (mongoUrl) {
           await Promise.race([connectMongoDB(mongoUrl), dbTimeout]);
           isDbConnected = true;
-          console.log("✅ Database connected successfully");
+          console.log("Database connected successfully");
         }
       } catch (dbError) {
-        console.error("❌ Database connection failed:", dbError);
-        // Continue without database - don't crash the whole function
+        console.error("Database connection failed:", dbError);
       }
     }
 
@@ -70,14 +69,29 @@ const initializeApp = async () => {
       });
     });
 
-    // Test route imports one by one
     try {
-      console.log("Testing auth route import...");
       const authRoutes = (await import("../src/routes/auth.route")).default;
       app.use("/api/v1/auth", authRoutes);
       console.log("Auth routes imported successfully");
     } catch (importError) {
       console.error("Auth route import failed:", importError);
+    }
+
+    try {
+      const paymentRoutes = (await import("../src/routes/payment.route"))
+        .default;
+      app.use("/api/v1/payment", paymentRoutes);
+      console.log("Payment routes imported successfully");
+    } catch (importError) {
+      console.error("Payment route import failed:", importError);
+    }
+
+    try {
+      const { WebhookHandler } = await import("../src/webhook");
+      app.get("/api/v1/payment/webhook", WebhookHandler);
+      console.log("Payment webhook route imported successfully");
+    } catch (importError) {
+      console.error("Payment webhook route import failed:", importError);
     }
 
     try {

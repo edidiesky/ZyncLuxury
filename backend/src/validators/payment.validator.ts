@@ -9,9 +9,13 @@ import Joi from "joi";
 export const paymentSchema = Joi.object({
   idempotencyKey: Joi.string().trim().optional(),
   userId: Joi.string().trim().required(),
-  sellerId: Joi.string().trim().required(),
+  sellerId: Joi.string().trim().required(), //name
+  name: Joi.string().trim().required(), //currency
+  email: Joi.string().trim().required(),
+  phone: Joi.string().trim().required(),
   reservationId: Joi.string().trim().required(),
-  paymentMethodType: Joi.string()
+  roomId: Joi.string().trim().required(),
+  paymentMethod: Joi.string()
     .trim()
     .valid(...Object.values(MethodType))
     .required(),

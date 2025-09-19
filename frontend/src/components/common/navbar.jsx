@@ -56,7 +56,7 @@ const Navbar = () => {
                   end
                   to={`/${list.path}`}
                   key={index}
-                  className={`text-base lg:text-lg hover:text-grey font-semibold text-dark flex items-center gap-2 p-3 px-3 rounded-[40px]`}
+                  className={`text-base lg:text-base hover:text-grey font-normal text-dark flex items-center hover:bg-gray-300 gap-2 p-2 px-4 rounded-[40px]`}
                 >
                   {list?.title}
                 </NavLink>

@@ -19,7 +19,6 @@ interface IUser extends Document {
   location?: string;
   about?: string;
   phone?: string;
-  favourites: string[];
   email?: string;
   emailVerified?: boolean;
   image?: string;
@@ -29,6 +28,7 @@ interface IUser extends Document {
   updatedAt: Date;
   conversationIds: Types.ObjectId[];
   seenMessageIds: Types.ObjectId[];
+  favourites: Types.ObjectId[],
   ratings?: number;
   tenantId?: string;
   permissions: IPermissions;
@@ -40,7 +40,7 @@ const UserSchema = new Schema<IUser>(
     location: String,
     about: String,
     phone: String,
-    favourites: [String],
+    favourites: [{ type: Schema.Types.ObjectId, ref: "Rooms" }],
     email: { type: String, unique: true, sparse: true },
     emailVerified: {
       type: Boolean,

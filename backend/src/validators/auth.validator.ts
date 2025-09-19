@@ -7,10 +7,7 @@ export const signinSchema = Joi.object({
 
 export const passwordResetSchema = Joi.object({
   token: Joi.string().required(),
-  newPassword: Joi.string().min(5).required(),
-});
-export const requestPasswordResetSchema = Joi.object({
-  tin: Joi.string().min(5).required(),
+  password: Joi.string().min(5).required(),
 });
 
 export const signupSchema = Joi.object({

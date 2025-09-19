@@ -13,17 +13,14 @@ import { StripeAdapter } from "../adapters/StripeAdapter";
 
 const createPaymentService = ({
   gateway,
-  flutterWaveEncryptionKey,
-  flutterWavePublicKey,
   flutterWaveSecretKey,
-  paystackPublicKey,
   paystackSecretKey,
 }: ICreatePaymentService) => {
   switch (gateway) {
     case "PAYPAL":
       return PaystackAdapter(paystackSecretKey);
     case "FLUTTERWAVE":
-      return FlutterWaveAdapter(paystackSecretKey);
+      return FlutterWaveAdapter(flutterWaveSecretKey);
     case "INTERSWITCH":
       return InterswitchAdapter(paystackSecretKey);
     case "STRIPE":
@@ -40,8 +37,9 @@ const getAllPayments = async (
   limit: number = 9
 ): Promise<IPaymentResult> => {
   const skip = (page - 1) * limit;
-  const cacheKey = `Payments_${JSON.stringify(queryObject)}`;
-
+  const cacheKey = `payments:${queryObject.userId}:${JSON.stringify(
+    queryObject
+  )}`;
   // Check Redis cache
   const cachePayments = await redisClient.get(cacheKey);
   if (cachePayments) {
@@ -156,8 +154,8 @@ const deletePayment = async (id: string) => {
 export {
   getAllPayments,
   getSellerPayments,
-  createPayment,
   getSinglePayment,
   updatePayment,
   deletePayment,
+  createPaymentService,
 };

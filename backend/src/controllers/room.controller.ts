@@ -43,9 +43,6 @@ const GetAllRoom = asyncHandler(
           : undefined,
       };
     }
-    if (bedroom) {
-      queryObject.bedroom = bedroom;
-    }
     if (sellerId) {
       queryObject.sellerId = sellerId;
     }
@@ -96,8 +93,8 @@ const GetAllRoom = asyncHandler(
     }
 
     logger.info("queryObject:", {
-      queryObject
-    })
+      queryObject,
+    });
     const result = await getAllRooms(queryObject, Number(page), Number(limit));
     res.status(SUCCESSFULLY_FETCHED_STATUS_CODE).json(result);
   }

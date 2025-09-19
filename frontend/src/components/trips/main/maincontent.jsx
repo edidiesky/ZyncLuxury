@@ -46,20 +46,22 @@ const RoomLists = () => {
               {reservations?.length === 0 ? (
                 <div className="w-full flex flex-col gap-4 justify-center items-center">
                   <img
-                    src="/no_result.jpg"
+                    src="/assests/icons/empty_payment.png"
                     alt=""
-                    className="w-[300px] md:w-[400px]"
+                    className="w-[200px] md:w-[200px]"
                   />
-                  <h1 className="text-dark leading-[1.3] text-3xl md:text-2xl text-center family2">
+                 <div className="flex flex-col w-full gap-3 justify-center items-center">
+                   <h1 className="text-dark leading-[1.3] text-2xl md:text-3xl text-center font-bold">
                     You have an empty reserved Rooms
-                    <Link
-                      to={"/search"}
-                      style={{ letterSpacing: "2px" }}
-                      className="text-[9px] md:text-xs font-normal pb-1 pt-3 w-fit border-b border-[rgba(0,0,0,.5)] uppercase flex items-center gap-4 regular"
-                    >
-                      Visit our rooms collections
-                    </Link>
                   </h1>
+                  <Link
+                    to={"/search"}
+                    style={{ letterSpacing: "2px" }}
+                    className="text-xs md:text-sm font-normal pb-1 pt-3 w-fit border-b border-[rgba(0,0,0,.5)] uppercase flex items-center gap-4 regular"
+                  >
+                    Visit our rooms collections
+                  </Link>
+                 </div>
                 </div>
               ) : (
                 <div className="w-full gap-8 grid md:grid-cols-2 lg:grid-cols-3">

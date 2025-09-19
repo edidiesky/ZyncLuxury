@@ -35,8 +35,8 @@ export interface IPayment extends Document {
   status: PaymentStatus;
   userId: Types.ObjectId;
   sellerId: Types.ObjectId;
-  reservationId: Types.ObjectId;
-  cartItems?: any;
+  reservationId: Types.ObjectId; //roomId
+  roomId: Types.ObjectId; //roomId
   createdAt: Date;
   updatedAt: Date;
   paymentChannel: PaymentChannel;
@@ -78,7 +78,11 @@ const PaymentSchema = new Schema<IPayment>(
       ref: "Reservations",
       required: true,
     },
-    cartItems: Schema.Types.Mixed,
+    roomId: {
+      type: Schema.Types.ObjectId,
+      ref: "Rooms",
+      required: true,
+    },
   },
   {
     timestamps: true,
