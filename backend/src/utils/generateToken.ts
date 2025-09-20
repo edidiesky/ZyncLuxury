@@ -4,7 +4,8 @@ import logger from "./logger";
 import { Response } from "express";
 import redisClient from "../config/redisClient";
 import dotenv from "dotenv";
-import { v4 } from "uuid";
+const { v4: uuidv4 } = require("uuid");
+
 dotenv.config();
 
 export const signJWT = (payload: IToken) => {
@@ -21,7 +22,6 @@ export const generateToken = async (
   res: Response,
   payload: IToken
 ): Promise<{ refreshToken: string; accessToken: string }> => {
-  const { v4: uuidv4 } = await import("uuid");
   try {
     const accessToken = signJWT(payload);
     const refreshToken = uuidv4();
