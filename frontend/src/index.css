@@ -256,6 +256,51 @@ body {
   font-family: "DM Sans", sans-serif !important;
 }
 
+/* styles/CustomToast.css */
+.custom-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  min-width: 380px;
+  max-width: 450px;
+  font-family: "DM Sans" sans-serif;
+}
+
+/* Icon styling */
+.toast-icon {
+  font-size: 24px; /* Icon size */
+}
+
+.toast-icon.success {
+  color: #28a745; /* Green for success */
+}
+
+.toast-icon.error {
+  color: #dc3545; /* Red for error */
+}
+
+.toast-icon.info {
+  color: #17a2b8; /* Cyan for info */
+}
+
+/* Background colors based on type */
+.custom-toast.success {
+  background-color: #e6f4ea;
+}
+
+.custom-toast.error {
+  background-color: #f8d7da;
+}
+
+.custom-toast.info {
+  background-color: #d1ecf1; /* Light cyan background */
+}
 
 .hide {
   overflow: hidden !important;
@@ -275,7 +320,7 @@ input {
   color: #000;
   background-color: inherit;
   transition: all 0.3s;
-  border: 1.5px solid rgba(0, 0, 0, .2);
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
 }
 form input:hover {
@@ -297,7 +342,7 @@ input:focus {
 .btn {
   transition: all 0.5s;
   /* background: #090825 !important; */
-  background-color: #0B6A41;
+  background-color: #0b6a41;
   cursor: pointer;
   border-radius: 100px !important;
   min-height: 50px;

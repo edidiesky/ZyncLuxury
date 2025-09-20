@@ -17,11 +17,9 @@ import mongoose from "mongoose";
 // @route POST /favorites
 // @access Private
 const AddFavorite = asyncHandler(async (req: Request, res: Response) => {
-  const session = await mongoose.startSession();
-  session.startTransaction();
   const { userId } = req.user as { userId: string };
   const { roomId } = req.body;
-  const result = await addFavorite(userId, roomId, session);
+  const result = await addFavorite(userId, roomId);
   res
     .status(
       result.success

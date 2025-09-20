@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import toast from "react-hot-toast";
 import {
   LoginUser,
   RegisterUser,
@@ -9,6 +8,7 @@ import {
   addListToWish,
   GetSingleUser,
 } from "./authReducer";
+import { showCustomToast } from "@/components/common/CustomToast";
 const customerToken = localStorage.getItem("customertoken");
 const getUserData = () => {
   if (typeof window !== "undefined") {
@@ -89,12 +89,13 @@ export const authSlice = createSlice({
       state.token = accessToken;
       localStorage.setItem("customertoken", JSON.stringify(accessToken));
       localStorage.setItem("customer", JSON.stringify(user));
-      toast.success(action.payload?.message || "Login sucessful!");
+      showCustomToast(action.payload?.message || "Login sucessful!", "success");
     });
     builder.addCase(LoginUser.rejected, (state, action) => {
       state.loginisSuccess = false;
       state.loginisLoading = false;
-      toast.error(action.payload.message);
+      showCustomToast(action.payload.message, "error"); //
+      // showCustomToast("Login in Progress... Kindly wait!!", "info");
     });
 
     builder.addCase(RegisterUser.pending, (state, action) => {
@@ -103,12 +104,12 @@ export const authSlice = createSlice({
     builder.addCase(RegisterUser.fulfilled, (state, action) => {
       state.registerisLoading = false;
       state.registerisSuccess = true;
-      toast.success("registration sucessful");
+      showCustomToast("registration sucessful", "success");
     });
     builder.addCase(RegisterUser.rejected, (state, action) => {
       state.registerisSuccess = false;
       state.registerisLoading = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
     // GetSingleUser
     builder.addCase(GetAllUsers.pending, (state, action) => {
@@ -122,7 +123,7 @@ export const authSlice = createSlice({
     });
     builder.addCase(GetAllUsers.rejected, (state, action) => {
       state.getallUserisSuccess = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
 
     builder.addCase(GetSingleUser.pending, (state, action) => {
@@ -135,7 +136,7 @@ export const authSlice = createSlice({
     });
     builder.addCase(GetSingleUser.rejected, (state, action) => {
       state.getallUserisSuccess = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
 
     builder.addCase(DeleteSingleUser.pending, (state, action) => {
@@ -145,12 +146,12 @@ export const authSlice = createSlice({
       state.deleteUserisLoading = false;
       state.deleteUserisSuccess = true;
       state.users = state.users.filter((user) => user?.id !== action.payload);
-      toast.success("deleted user sucessfully!!!!");
+      showCustomToast("deleted user sucessfully!!!!", "success");
     });
     builder.addCase(DeleteSingleUser.rejected, (state, action) => {
       state.deleteUserisSuccess = false;
       state.deleteUserisLoading = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
 
     builder.addCase(UpdateSingleUser.pending, (state, action) => {
@@ -159,12 +160,12 @@ export const authSlice = createSlice({
     builder.addCase(UpdateSingleUser.fulfilled, (state, action) => {
       state.updateUserisLoading = false;
       state.updateUserisSuccess = true;
-      toast.success("updated user sucessfully!!!!");
+      showCustomToast("updated user sucessfully!!!!", "success");
     });
     builder.addCase(UpdateSingleUser.rejected, (state, action) => {
       state.updateUserisSuccess = false;
       state.updateUserisLoading = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
 
     builder.addCase(addListToWish.pending, (state, action) => {
@@ -173,12 +174,12 @@ export const authSlice = createSlice({
     builder.addCase(addListToWish.fulfilled, (state, action) => {
       state.wishisSuccess = true;
       state.wishisLoading = false;
-      state.currentUser = action.payload.user;
-      toast.success(action.payload.message);
+      state.currentUser = action.payload.data;
+      showCustomToast(action.payload.message, "success");
     });
     builder.addCase(addListToWish.rejected, (state, action) => {
       state.wishisSuccess = false;
-      toast.error(action.payload);
+      showCustomToast(action.payload, "error");
     });
   },
 });

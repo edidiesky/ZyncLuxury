@@ -38,7 +38,7 @@ const Newsletter = () => {
         >
           <span
             style={{ letterSpacing: "4px" }}
-            className="text-base pb-5 font-semibold uppercase block font-booking_font"
+            className="text-base pb-5 font-bold uppercase block font-booking_font"
           >
             <span className="w-full gap-x-[5px] flex md:justify-center items-center flex-wrap ">
               {["GET", "UPDATES", "REGULARY"].map((x, index) => {

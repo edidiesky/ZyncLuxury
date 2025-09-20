@@ -19,7 +19,7 @@ const getAllRooms = async (
     return JSON.parse(cacheRooms);
   }
 
-  // Query Mongoose
+  // Querying Mongoose
   const rooms = await Rooms.find(queryObject)
     .populate("sellerId", "name email")
     .skip(skip)
@@ -42,7 +42,7 @@ const getAllRooms = async (
     },
   };
 
-  // Cache result (30 minutes)
+  // Caching result (30 minutes)
   await redisClient.set(cacheKey, JSON.stringify(result), "EX", 60 * 30);
 
   return result;
@@ -92,13 +92,13 @@ const getSingleRoom = async (id: string) => {
   if (cacheRoom) {
     return JSON.parse(cacheRoom);
   }
-  // Query Mongoose
+  // Querying Mongoose
   const room = await Rooms.findById(id).populate("sellerId", "name email");
   if (!room) {
     throw new Error("No room found");
   }
 
-  // Cache result
+  // Caching result
   await redisClient.set(cacheKey, JSON.stringify(room), "EX", 5 * 60);
   return room;
 };

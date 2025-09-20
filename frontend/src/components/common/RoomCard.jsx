@@ -39,14 +39,14 @@ const RoomCard = ({ type, apartment, index }) => {
     if (!currentUser) {
       dispatch(onLoginModal());
     } else {
-      dispatch(addListToWish(apartment?.id));
+      dispatch(addListToWish(apartment?._id));
       // router.refresh();
     }
   }, [currentUser]);
   // DeleteReservation
 
   const customerData = JSON.parse(localStorage.getItem("customer"));
-  const active = customerData?.favourites?.includes(apartment?.id);
+  const active = customerData?.favourites?.includes(apartment?._id);
   if (type == "trips") {
     const startDate = moment(apartment?.startDate).format("MMMM Do");
     const endDate = moment(apartment?.endDate).format("MMMM Do");

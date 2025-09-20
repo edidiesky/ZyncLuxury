@@ -1,6 +1,6 @@
 import { jest, describe, it, afterAll, expect } from "@jest/globals";
 import Rooms, { IRoom } from "../../models/Rooms";
-import { apartmentDataList, RoomMock } from "../../data/roomdata";
+import { apartmentDataList } from "../../data/roomdata";
 import redisClient from "../../config/redisClient";
 import mongoose, { FilterQuery, Types } from "mongoose";
 import { getAllRooms } from "../room.service";
@@ -30,10 +30,10 @@ const MockedRedis = redisClient as any;
 // DESCRIBING THE TESTS SUITE
 describe("ROOM SERVICE API TESTS", () => {
   const sellerId = new Types.ObjectId("66c0a27e71a3ea08d6a26f8f");
-  afterAll(async() => {
+  afterAll(async () => {
     jest.clearAllMocks();
-    await redisClient.quit()
-    await mongoose.connection.close()
+    await redisClient.quit();
+    await mongoose.connection.close();
   });
   // DESCRIBE GET ROOM SERVICE
   describe("GET ROOM SERVICE", () => {
@@ -53,7 +53,7 @@ describe("ROOM SERVICE API TESTS", () => {
       const limit = 10;
       const skip = (page - 1) * 10;
       const sort = { createdAt: -1 };
-      const cacheKey = `rooms_${JSON.stringify(queryObject)}`;
+      const cacheKey = `rooms:${sellerId}:${JSON.stringify(queryObject)}`;
       MockedRooms.find.mockReturnValue(queryChain as any);
       MockedRooms.countDocuments.mockResolvedValue(apartmentDataList.length);
       MockedRedis.set.mockResolvedValue("OK");
@@ -96,12 +96,12 @@ describe("ROOM SERVICE API TESTS", () => {
       };
       const page = 1;
       const limit = 10;
-      const cacheKey = `rooms_${JSON.stringify(queryObject)}`;
-      const cachedResult:IRoomResult = {
-        data: apartmentDataList.map((room)=> ({
+      const cacheKey = `rooms:${sellerId}:${JSON.stringify(queryObject)}`;
+      const cachedResult: IRoomResult = {
+        data: apartmentDataList.map((room) => ({
           ...room,
-          createdAt:new Date(room.createdAt),
-          updatedAt:new Date(room.updatedAt),
+          createdAt: new Date(room.createdAt),
+          updatedAt: new Date(room.updatedAt),
         })),
         success: true,
         message: "Rooms has been fetched succesfully!",
@@ -113,14 +113,14 @@ describe("ROOM SERVICE API TESTS", () => {
         },
       };
       // ACT
-      MockedRedis.get.mockResolvedValue(JSON.stringify(cachedResult))
-        const result = await getAllRooms(queryObject, page, limit);
+      MockedRedis.get.mockResolvedValue(JSON.stringify(cachedResult));
+      const result = await getAllRooms(queryObject, page, limit);
       // ASSERT
-      expect(MockedRedis.get).toHaveBeenCalledWith(cacheKey)
-      expect(MockedRooms.find).not.toHaveBeenCalled()
-      expect(MockedRooms.countDocuments).not.toHaveBeenCalled()
-      expect(MockedRedis.set).not.toHaveBeenCalled()
-      expect(result).toEqual(cachedResult)
+      expect(MockedRedis.get).toHaveBeenCalledWith(cacheKey);
+      expect(MockedRooms.find).not.toHaveBeenCalled();
+      expect(MockedRooms.countDocuments).not.toHaveBeenCalled();
+      expect(MockedRedis.set).not.toHaveBeenCalled();
+      expect(result).toEqual(cachedResult);
     });
   });
   // DESCRIBE CREATE ROOM SERVICE

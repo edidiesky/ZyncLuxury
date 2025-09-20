@@ -13,10 +13,10 @@ export const GetUserFavouriteRooms = createAsyncThunk(
          },
        };
       const { data } = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URLS}/favourites/user`,
+        `${import.meta.env.VITE_API_BASE_URLS}/favourite`,
         config
       );
-      return data;
+      return data?.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
         error.response && error.response.data.message

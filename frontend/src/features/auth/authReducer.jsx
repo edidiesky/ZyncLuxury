@@ -1,4 +1,3 @@
- 
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -128,11 +127,13 @@ export const UpdateSingleUser = createAsyncThunk(
       };
       // console.log(user);
       const { data } = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URLS}/user/${state.auth.currentUser?.id}`,
+        `${import.meta.env.VITE_API_BASE_URLS}/user/${
+          state.auth.currentUser?.id
+        }`,
         user,
         config
       );
-      
+
       return data.user;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -154,12 +155,15 @@ export const addListToWish = createAsyncThunk(
           authorization: `Bearer ${state.auth.token}`,
         },
       };
+      console.log("Favourites logs:", {
+        name
+      })
       const { data } = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URLS}/favourites/${name}`,
-        name,
+        `${import.meta.env.VITE_API_BASE_URLS}/favourite`,
+        { roomId: name },
         config
       );
-      localStorage.setItem("customer", JSON.stringify(data.user));
+      localStorage.setItem("customer", JSON.stringify(data.data));
 
       return data;
     } catch (error) {

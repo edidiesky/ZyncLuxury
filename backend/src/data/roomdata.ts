@@ -2,8 +2,6 @@ import mongoose, { Types } from "mongoose";
 import { IRoom, ListingType, RoomType } from "../models/Rooms";
 import { RoomMock } from "../types";
 
-
-
 export const apartmentDataList: RoomMock[] = [
   // seller 1 Mellisa
   {
@@ -30,8 +28,8 @@ export const apartmentDataList: RoomMock[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     state: "District of Columbia",
-    type: RoomType.STAY,
-    listingType: ListingType.LEASE,
+    type: "STAY",
+    listingType: "LEASE",
   },
   // seller 4 Jonas Sheffield
   {
@@ -52,9 +50,8 @@ export const apartmentDataList: RoomMock[] = [
     price: "30,000",
     cautionfee: "100,000",
     guests: 4,
-    // location: "Geyre, Karacasu, Aydın, Aegean Region, Sheffield",
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
     latitude: "35.22",
     longitude: "-80.83",
     country: "United States",
@@ -87,8 +84,8 @@ export const apartmentDataList: RoomMock[] = [
     longitude: "-97.3354531",
     country: "United States",
     city: "Fort Worth",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
   },
   // lewis Saudi Araabia
   {
@@ -114,15 +111,15 @@ export const apartmentDataList: RoomMock[] = [
     longitude: "6.9490955",
     country: "Nigeria",
     city: "Ogurugu",
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
   },
   {
     title: "Silkhaus Near South Ridge Park | Unique Vibes",
     description:
       "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.RENT,
+    type: "HOTEL",
+    listingType: "RENT",
     price: "50,000",
     sellerId: new Types.ObjectId("68bd073d6738e83f39b51aed"),
     // beds: 6,
@@ -148,8 +145,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Luttrellstown Castles",
     description:
       "Welcome to Silkhaus! This large and modern one bedroom is located at the edge of Downtown and Business Bay. It offers exclusive access to the building's resort-style amenities and is perfect for couples, business travelers, and even solo tourists. Enjoy privacy, complimentary WiFi, close proximity to popular attractions, and experience Dubai like a local.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.SALE,
+    type: "HOTEL",
+    listingType: "SALE",
     // price: 44.,
     latitude: "38.92",
     longitude: "-76.99",
@@ -197,8 +194,8 @@ export const apartmentDataList: RoomMock[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     state: "Colorado",
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
   },
   // seller 2 Laurel Damson
 
@@ -206,8 +203,8 @@ export const apartmentDataList: RoomMock[] = [
     sellerId: new Types.ObjectId("68bd073d6738e83f39b51aed"),
     bedroom: 2,
     bathroom: 4,
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
     images: [
       "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/farmland-minutes-away-from-bustling-houston.jpg",
       "https://avada.website/real-estate/wp-content/uploads/sites/176/2023/07/07-outdoor-pool.jpg",
@@ -256,8 +253,8 @@ export const apartmentDataList: RoomMock[] = [
     country: "United States",
     city: "Midland",
     state: "Texas",
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
   },
   // seller 4 Jonas Saudi
 
@@ -285,8 +282,8 @@ export const apartmentDataList: RoomMock[] = [
     createdAt: new Date(),
     updatedAt: new Date(),
     state: "Washington",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
   },
 
   // HOTEL
@@ -296,8 +293,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Tente Glamping du 3",
     description:
       "Bivouac Joudour Sahara; is a place that offers an unusual experience for a camp in the Moroccan desert between sand dunes and oasis.Located 5 km south of M 'hamid in the middle of the dunes. Here you will find the desert myth with starry skies. Unique sunsets and sunrise.Bivouac to the Moroccan Sahara an opportunity to live and a unique experience of ",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     price: "50,000",
     latitude: " 7.8941941",
     longitude: " 7.0659783",
@@ -322,8 +319,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Experience luxury and comfort in our spacious accommodation.",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 64327,
     price: "23,000",
     latitude: "39.7443294",
@@ -347,8 +344,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Luxurious front Villa",
     description:
       "Stay in the heart of the city and explore all the nearby attractions.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.RENT,
+    type: "HOTEL",
+    listingType: "RENT",
     // price: 83997,
     price: "50,000",
     latitude: "40.7132136",
@@ -373,8 +370,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Experience luxury and comfort in our spacious accommodation.",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 50.9,
     price: "50,000",
     latitude: "41.6517775",
@@ -398,8 +395,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Relax and unwind in our peaceful and serene retreat.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 30859,
     price: "55,000",
     latitude: "33.7746886",
@@ -420,8 +417,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Experience luxury and comfort in our spacious accommodation.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     bathroom: 4,
     bedroom: 8,
     price: "50,000",
@@ -444,8 +441,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Rustic Mountain Cabin",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 17097,
     price: "50,000",
     bathroom: 4,
@@ -466,8 +463,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Luxurious HOTELfront Villa",
     description: "Relax and unwind in our peaceful and serene retreat.",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 51903,
     price: "22,000",
     latitude: "35.99",
@@ -488,8 +485,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Modern City Oasis",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 34878,
     price: "34,000",
     latitude: "33.6061462",
@@ -511,8 +508,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Rustic Mountain Cabin",
     description:
       "Stay in the heart of the city and explore all the nearby attractions.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 13.6,
     price: "34,000",
     latitude: "37.3510878",
@@ -533,8 +530,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Charming Urban Loft",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 8844,
     price: "74,000",
     latitude: "26.8844636",
@@ -557,8 +554,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Tente Glamping du APARTMENT 3",
     description:
       "Bivouac Joudour Sahara; is a place that offers an unusual experience for a camp in the Moroccan desert between sand dunes and oasis.Located 5 km south of M 'hamid in the middle of the dunes. Here you will find the desert myth with starry skies. Unique sunsets and sunrise.Bivouac to the Moroccan Sahara an opportunity to live and a unique experience of ",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 24.,
     price: "34,000",
     latitude: "35.1241195",
@@ -583,8 +580,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Luxury redefined with our 5 bedroom getaway palace",
     description:
       "Tuns Palace is a stylishly designed luxury home with extra modern facilities. It is located in a serene and secure estate just before banana island, it is a fully automated smart home with voice activated lights and A.C, fitted with a family sized Cinema room, outdoor Jacuzzi with a view that overlooks the lagoon.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 1048,
     price: "50,000",
     sellerId: new Types.ObjectId("68bd070c6738e83f39b51aea"),
@@ -608,8 +605,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Villa Mirabelle",
     description:
       "Tuns Palace is a stylishly designed luxury home with extra modern facilities. It is located in a serene and secure estate just before banana island, it is a fully automated smart home with voice activated lights and A.C, fitted with a family sized Cinema room, outdoor Jacuzzi with a view that overlooks the lagoon.",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 120.8,
     price: "50,000",
     sellerId: new Types.ObjectId("68bd073d6738e83f39b51aed"),
@@ -636,8 +633,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Modern Ocean View Villa North Santa-Walk To Surf",
     description:
       "Tuns Palace is a stylishly designed luxury home with extra modern facilities. It is located in a serene and secure estate just before banana island, it is a fully automated smart home with voice activated lights and A.C, fitted with a family sized Cinema room, outdoor Jacuzzi with a view that overlooks the lagoon.",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 120.8,
     price: "1,00,000",
     latitude: "31.77",
@@ -663,8 +660,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.APARTMENT,
-    listingType: ListingType.LEASE,
+    type: "APARTMENT",
+    listingType: "LEASE",
     // price: 44.,
 
     price: "50,000",
@@ -691,8 +688,8 @@ export const apartmentDataList: RoomMock[] = [
     title: "Cozy Cottage Retreat",
     description:
       "Enjoy breathtaking views from our beautiful and modern rental.",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 11376,
     price: "50,000",
     latitude: "51.683696",
@@ -717,8 +714,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Rustic Mountain Cabin",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     // price: 63048,
     price: "50,000",
     latitude: "34.7746886",
@@ -745,8 +742,8 @@ export const apartmentDataList: RoomMock[] = [
   {
     title: "Cozy Cottage Retreat",
     description: "Welcome to our cozy and stylish Airbnb listing!",
-    type: RoomType.HOTEL,
-    listingType: ListingType.LEASE,
+    type: "HOTEL",
+    listingType: "LEASE",
     price: "50,000",
     sellerId: new Types.ObjectId("68bd073d6738e83f39b51aed"),
     // beds: 12,
@@ -782,8 +779,8 @@ export const apartmentDataList: RoomMock[] = [
     longitude: " 47.1578436844247",
     // location: "As Salam, الديره, Sahna, Riyadh Region, 16231, Saudi Arabia",
     city: "Sahna",
-    type: RoomType.VILLA,
-    listingType: ListingType.SALE,
+    type: "VILLA",
+    listingType: "SALE",
     country: "Saudi Arabia",
     images: [
       "https://a0.muscache.com/im/pictures/miso/Hosting-52313793/original/6005df3e-de4c-4020-b1c9-c12b46a46991.jpeg?im_w=720",

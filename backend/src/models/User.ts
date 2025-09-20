@@ -12,7 +12,7 @@ interface IPermissions {
   users: string[];
 }
 
-interface IUser extends Document {
+export interface IUser extends Document {
   name: string;
   _id: Types.ObjectId;
   username: string;
