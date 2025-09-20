@@ -16,18 +16,15 @@ export const signJWT = (payload: IToken) => {
     expiresIn: "3d",
   });
 };
+
 export const generateToken = async (
   res: Response,
   payload: IToken
 ): Promise<{ refreshToken: string; accessToken: string }> => {
-  // create the access token
-  // create the refresh token
-  // perisst the refresh token as a token with the payload as a value
-  // store it on a cookie
+  const { v4: uuidv4 } = await import("uuid");
   try {
     const accessToken = signJWT(payload);
-    const refreshToken = v4();
-    // PERSISTING THE REFRESH TOKEN FOR 3 DAYS
+    const refreshToken = uuidv4();
     await redisClient.set(
       `refresh:token:${refreshToken}`,
       JSON.stringify(payload),
@@ -37,7 +34,7 @@ export const generateToken = async (
     await res.cookie("jwt", payload, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 7 days
+      expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
       path: "/",
     });
     return {

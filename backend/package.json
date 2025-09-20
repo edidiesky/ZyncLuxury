@@ -1,7 +1,6 @@
 {
   "name": "zyncluxury-backend",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
