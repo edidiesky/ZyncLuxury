@@ -2,9 +2,9 @@ import { IToken } from "../types";
 import jwt from "jsonwebtoken";
 import logger from "./logger";
 import { Response } from "express";
-import { v4 } from "uuid";
 import redisClient from "../config/redisClient";
 import dotenv from "dotenv";
+import { v4 } from "uuid";
 dotenv.config();
 
 export const signJWT = (payload: IToken) => {
