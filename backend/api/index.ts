@@ -110,9 +110,9 @@ const initializeApp = async () => {
       const favouritesRoutes = (await import("../src/routes/favourite.route"))
         .default;
       app.use("/api/v1/favourites", favouritesRoutes);
-      console.log("Room routes imported successfully");
+      console.log("favourites routes imported successfully");
     } catch (importError) {
-      console.error("Room route import failed:", importError);
+      console.error("favourites route import failed:", importError);
     }
 
      // review route
@@ -121,9 +121,9 @@ const initializeApp = async () => {
       const reviewRoutes = (await import("../src/routes/review.route"))
         .default;
       app.use("/api/v1/review", reviewRoutes);
-      console.log("Room routes imported successfully");
+      console.log("review routes imported successfully");
     } catch (importError) {
-      console.error("Room route import failed:", importError);
+      console.error("review route import failed:", importError);
     }
 
     try {
