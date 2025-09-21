@@ -78,6 +78,7 @@ const initializeApp = async () => {
     }
 
     try {
+      // payment route
       const paymentRoutes = (await import("../src/routes/payment.route"))
         .default;
       app.use("/api/v1/payment", paymentRoutes);
@@ -86,6 +87,7 @@ const initializeApp = async () => {
       console.error("Payment route import failed:", importError);
     }
 
+    // webhook route
     try {
       const { WebhookHandler } = await import("../src/webhook");
       app.get("/api/v1/payment/webhook", WebhookHandler);
@@ -109,17 +111,16 @@ const initializeApp = async () => {
       console.log("Testing favourites route import...");
       const favouritesRoutes = (await import("../src/routes/favourite.route"))
         .default;
-      app.use("/api/v1/favourites", favouritesRoutes);
+      app.use("/api/v1/favourite", favouritesRoutes);
       console.log("favourites routes imported successfully");
     } catch (importError) {
       console.error("favourites route import failed:", importError);
     }
 
-     // review route
+    // review route
     try {
       console.log("Testing review route import...");
-      const reviewRoutes = (await import("../src/routes/review.route"))
-        .default;
+      const reviewRoutes = (await import("../src/routes/review.route")).default;
       app.use("/api/v1/review", reviewRoutes);
       console.log("review routes imported successfully");
     } catch (importError) {
