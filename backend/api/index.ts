@@ -94,10 +94,33 @@ const initializeApp = async () => {
       console.error("Payment webhook route import failed:", importError);
     }
 
+    // room route
     try {
       console.log("Testing room route import...");
       const roomRoutes = (await import("../src/routes/room.route")).default;
       app.use("/api/v1/room", roomRoutes);
+      console.log("Room routes imported successfully");
+    } catch (importError) {
+      console.error("Room route import failed:", importError);
+    }
+
+    // favourites route
+    try {
+      console.log("Testing favourites route import...");
+      const favouritesRoutes = (await import("../src/routes/favourite.route"))
+        .default;
+      app.use("/api/v1/favourites", favouritesRoutes);
+      console.log("Room routes imported successfully");
+    } catch (importError) {
+      console.error("Room route import failed:", importError);
+    }
+
+     // review route
+    try {
+      console.log("Testing review route import...");
+      const reviewRoutes = (await import("../src/routes/review.route"))
+        .default;
+      app.use("/api/v1/review", reviewRoutes);
       console.log("Room routes imported successfully");
     } catch (importError) {
       console.error("Room route import failed:", importError);
