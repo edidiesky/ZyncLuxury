@@ -45,7 +45,6 @@ import HostingLayout from "./screens/hosting/HostingLayout";
 // PaymentSuccess
 export default function App() {
   const [height, setHeight] = useState(0);
-
   return (
     <div className="based" style={{ height }}>
       {/* <Preloader/> */}

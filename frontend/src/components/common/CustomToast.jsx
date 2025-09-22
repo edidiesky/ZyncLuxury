@@ -20,7 +20,7 @@ export default function CustomToast({ message, type }) {
   return (
     <div className={`custom-toast border ${type}`}>
       <Icon />
-      <span className="toast-message bold">{message}</span>
+      <span className="toast-message flex-1 bold">{message}</span>
     </div>
   );
 }

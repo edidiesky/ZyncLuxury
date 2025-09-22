@@ -72,7 +72,7 @@ const DashboardHeader = () => {
                 <HiBars3BottomLeft fontSize={"30px"} />
               )}
             </div>
-            <h4 className="text-2xl family2">
+            <h4 className="text-xl lg:text-2xl font-semibold">
               {/* {currentUser?.name} */}
               {currentPage?.label}
               <span className="block text-sm font-normal text-gray-400">

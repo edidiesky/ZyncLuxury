@@ -34,7 +34,7 @@ const initializeApp = async () => {
         console.log("Attempting database connection...");
         const { connectMongoDB } = await import("../src/utils/connectDB");
 
-        // Add timeout to database connection
+        // Adding timeout to database connection
         const dbTimeout = new Promise((_, reject) =>
           setTimeout(
             () => reject(new Error("Database connection timeout")),

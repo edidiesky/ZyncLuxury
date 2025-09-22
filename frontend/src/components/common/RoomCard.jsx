@@ -194,7 +194,6 @@ const RoomCard = ({ type, apartment, index }) => {
             type === "search" ? "h-[170px]" : "h-[230px] md:h-[280px]"
           }  rounded-t-xl overflow-hidden relative`}
         >
-          {/* <div className="w-full h-full absolute bg-[rgba(0,0,0,.3)] z-[30]"></div> */}
 
           <Link
             to={"#"}

@@ -17,7 +17,8 @@ import {
 } from "../constant";
 import logger from "../utils/logger";
 import redisClient from "../config/redisClient";
-import { v4 } from "uuid";
+const { v4 } = require("uuid");
+
 
 // @description  Create a Payment for the seller
 // @route  POST /Payment
@@ -33,6 +34,7 @@ const CreatePayment = asyncHandler(
       phone,
       gateway,
       paymentMethod,
+
       amount,
       name,
       currency,

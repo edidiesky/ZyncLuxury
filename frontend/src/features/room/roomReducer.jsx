@@ -18,6 +18,7 @@ export const getAllRooms = createAsyncThunk(
         search,
         limit,
         page,
+        sellerId,
       } = thunkAPI.getState().room;
       // set a variable for the url
       let roomUrl = `${import.meta.env.VITE_API_BASE_URLS}/room`;
@@ -29,6 +30,7 @@ export const getAllRooms = createAsyncThunk(
       if (page) params.append("page", page);
       if (limit) params.append("limit", limit);
       if (search) params.append("title", title);
+      if (sellerId) params.append("sellerId", sellerId);
       if (maxPrice) params.append("maxPrice", maxPrice);
       if (minPrice) params.append("minPrice", minPrice);
       if (startDate) params.append("startDate", startDate);
@@ -89,6 +91,30 @@ export const getAllRoomsForAdmin = createAsyncThunk(
     }
   }
 );
+
+export const getAllSellersListingsStats = createAsyncThunk(
+  "getAllSellersListingsStats",
+  async (name, thunkAPI) => {
+    try {
+      const state = thunkAPI.getState();
+      const config = {
+        headers: {
+          authorization: `Bearer ${state.auth.token}`,
+        },
+      };
+      let roomUrl = `${import.meta.env.VITE_API_BASE_URLS}/room/stats`;
+      const { data } = await axios.get(roomUrl, config);
+      console.log("getAllSellersListingsStats data:", data)
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+      );
+    }
+  }
+);
 export const getSingleRooms = createAsyncThunk(
   "getSingleRooms",
   async (roomid, thunkAPI) => {
@@ -131,6 +157,7 @@ export const DeleteRoom = createAsyncThunk(
     }
   }
 );
+
 export const CreateRoom = createAsyncThunk(
   "CreateRoom",
   async (roomdata, thunkAPI) => {
@@ -161,7 +188,7 @@ export const UpdateRoom = createAsyncThunk(
   "UpdateRoom",
   async (roomdata, thunkAPI) => {
     try {
-      const state = thunkAPI.getState();
+      const state = thunkAPI.getStat1e();
       const config = {
         headers: {
           authorization: `Bearer ${state.auth.token}`,

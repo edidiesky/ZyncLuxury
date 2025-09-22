@@ -7,6 +7,7 @@ import {
   CreateRoom,
   UpdateRoom,
   getAllRoomsForAdmin,
+  getAllSellersListingsStats,
 } from "./roomReducer";
 const listings = JSON.parse(localStorage.getItem("listing"));
 const initialState = {
@@ -30,6 +31,13 @@ const initialState = {
         longitude: "",
       },
   room: null,
+  stats: {
+    villa: 0,
+    hotel: 0,
+    apartment: 0,
+    stay: 0,
+    totalListings: 0,
+  },
   creatingRoomisLoading: false,
   creatingRoomisSuccess: false,
   creatingRoomisError: false,
@@ -49,6 +57,10 @@ const initialState = {
   getsingleRoomisLoading: false,
   getsingleRoomisSuccess: false,
   getsingleRoomisError: false,
+
+  getSellerStatsisLoading: false,
+  getSellerStatsisSuccess: false,
+  getSellerStatsisError: false,
   page: 1,
   search: "",
   limit: "",
@@ -168,10 +180,10 @@ export const roomSlice = createSlice({
       // console.log("payload data:", {
       //   data: action.payload
       // })
-      const { data, pagination } = action.payload;
-      state.rooms = data;
-      state.noOfPages = pagination?.noOfPages;
-      state.totalRooms = pagination?.totalRooms;
+      const { rooms, noOfPages, totalRooms } = action.payload;
+      state.rooms = rooms;
+      state.noOfPages = noOfPages;
+      state.totalRooms = totalRooms;
       state.getallRoomisLoading = false;
     });
     builder.addCase(getAllRoomsForAdmin.rejected, (state, action) => {
@@ -179,6 +191,22 @@ export const roomSlice = createSlice({
       state.getallRoomisLoading = false;
       // toast.error(action.payload);
     });
+
+    builder.addCase(getAllSellersListingsStats.pending, (state, action) => {
+      state.getSellerStatsisLoading = true;
+    });
+    builder.addCase(getAllSellersListingsStats.fulfilled, (state, action) => {
+      state.getSellerStatsisLoading = false;
+      state.stats = action.payload;
+      state.getSellerStatsisLoading = false;
+    });
+    builder.addCase(getAllSellersListingsStats.rejected, (state, action) => {
+      state.getSellerStatsisSuccess = false;
+      state.getSellerStatsisLoading = false;
+      // toast.error(action.payload);
+    });
+
+    // getAllSellersListingsStats getSellerStatsisLoading
 
     builder.addCase(getAllRooms.pending, (state, action) => {
       state.getallRoomisLoading = true;

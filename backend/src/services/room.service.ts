@@ -1,7 +1,7 @@
 import mongoose, { FilterQuery, Types } from "mongoose";
 import Rooms, { IRoom, RoomType } from "../models/Rooms";
 import redisClient from "../config/redisClient";
-import { IRoomResult } from "../types";
+import { IAggregatedRoom, IRoomResult } from "../types";
 import logger from "../utils/logger";
 
 // Get all rooms with pagination and caching
@@ -11,7 +11,9 @@ const getAllRooms = async (
   limit: number = 9
 ): Promise<IRoomResult> => {
   const skip = (page - 1) * limit;
-  const cacheKey = `rooms:${queryObject.sellerId}:${JSON.stringify(queryObject)}`;
+  const cacheKey = `rooms:${queryObject.sellerId}:${JSON.stringify(
+    queryObject
+  )}`;
 
   // Check Redis cache
   const cacheRooms = await redisClient.get(cacheKey);
@@ -73,11 +75,16 @@ const createRoom = async (roomData: Partial<IRoom>, sellerId: string) => {
   const room = await Rooms.create(data);
   const redisRoomsKeyPattern = `rooms:${sellerId}:*`;
   const roomRedisKeys = await redisClient.keys(redisRoomsKeyPattern);
+
+  const listingStats = `seller:listing:stat:${sellerId}`;
+  const listingKeys = await redisClient.keys(listingStats);
   if (roomRedisKeys.length > 0) {
     await redisClient.del(roomRedisKeys);
+    await redisClient.del(listingKeys);
     logger.info("Room cache has been invalidated:", {
       roomRedisKeys,
       redisRoomsKeyPattern,
+      listingKeys,
     });
   }
   return room;
@@ -126,6 +133,102 @@ const deleteRoom = async (id: string) => {
   return { message: "The room has been successfully deleted" };
 };
 
+// get seller aggregated rooms
+const getSellerAggregatedRoom = async ({ queryObject }: IAggregatedRoom) => {
+  try {
+    const cacheKey = `seller:listing:stat:${queryObject.sellerId}`;
+
+    const testCount = await Rooms.countDocuments({
+      sellerId: new Types.ObjectId(queryObject.sellerId),
+    });
+
+    // Check cache first
+    const cachedResult = await redisClient.get(cacheKey);
+    if (cachedResult) {
+      logger.info("Returning cached seller listing stats", { cacheKey });
+      return JSON.parse(cachedResult);
+    }
+
+    const roomPipeline = [
+      {
+        $match: {
+          sellerId: new Types.ObjectId(queryObject.sellerId),
+        },
+      },
+      {
+        $group: {
+          _id: "$type",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $group: {
+          _id: null,
+          villa: {
+            $sum: { $cond: [{ $eq: ["$_id", "VILLA"] }, "$count", 0] },
+          },
+          hotel: {
+            $sum: { $cond: [{ $eq: ["$_id", "HOTEL"] }, "$count", 0] },
+          },
+          apartment: {
+            $sum: { $cond: [{ $eq: ["$_id", "APARTMENT"] }, "$count", 0] },
+          },
+          stay: {
+            $sum: { $cond: [{ $eq: ["$_id", "STAY"] }, "$count", 0] },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          villa: 1,
+          hotel: 1,
+          apartment: 1,
+          stay: 1,
+          totalListings: { $add: ["$villa", "$hotel", "$apartment", "$stay"] },
+        },
+      },
+    ];
+
+    logger.info("seller's id:", {
+      sellerId: queryObject.sellerId,
+    });
+
+    logger.info("seller's objectId:", {
+      sellerId: new Types.ObjectId(queryObject.sellerId),
+    });
+    const listingStats = await Rooms.aggregate(roomPipeline).exec();
+    const result = listingStats[0] || {
+      villa: 0,
+      hotel: 0,
+      apartment: 0,
+      stay: 0,
+      totalListings: 0,
+    };
+
+    // Cache for 5 minutes
+    await redisClient.set(cacheKey, JSON.stringify(result), "EX", 300);
+    logger.info("User chart data calculated and cached", {
+      cacheKey,
+      listingStats,
+      testCount,
+    });
+    return result;
+  } catch (error) {
+    logger.error("Failed to aggregate seller's listings", {
+      message:
+        error instanceof Error
+          ? error.message
+          : "An unknown server error occurred",
+      stack:
+        error instanceof Error
+          ? error.stack
+          : "An unknown server error occurred",
+    });
+    throw error; // Re-throw to be handled by the controller
+  }
+};
+
 export {
   getAllRooms,
   getSellerRooms,
@@ -133,4 +236,5 @@ export {
   getSingleRoom,
   updateRoom,
   deleteRoom,
+  getSellerAggregatedRoom,
 };

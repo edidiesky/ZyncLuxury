@@ -6,6 +6,7 @@ import Star from "@/assets/svg/star";
 import { useParams } from "react-router-dom";
 import { getSingleRooms } from "@/features/room/roomReducer";
 import RoomCard from "../common/RoomCard";
+
 export default function ReviewOfPlace() {
   const { apartmentid } = useParams();
   const dispatch = useDispatch();

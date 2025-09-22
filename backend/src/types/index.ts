@@ -112,3 +112,9 @@ export interface IToken {
   name: string;
   userId: Types.ObjectId;
 }
+
+export interface IAggregatedRoom {
+  queryObject: {
+    sellerId:string
+  };
+}

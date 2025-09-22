@@ -1,10 +1,10 @@
 export const OverviewTableHeaderList = [
   "Room",
-  "Transaction ID",
   "Amount",
   "Type",
   "Guests",
   "Created At",
+  "Actions"
 ];
 
 export const paymwntTableHeaderList = [

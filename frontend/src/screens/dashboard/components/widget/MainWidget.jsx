@@ -17,13 +17,13 @@ export default function Widget({ data, loading }) {
             return (
               <div
                 key={index}
-                className="lg:py-4 p-6 rounded-3xl border py-2 min-h-[220px] bg-white flex flex-col justify-center gap-6 w-full"
+                className="lg:py-4 p-6 rounded-3xl border py-2 min-h-[180px] lg:min-h-[200px] bg-white flex flex-col justify-center gap-6 w-full"
               >
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-base medium text-gray-400">
+                  <h4 className="text-base font-semibold text-gray-400">
                     {stat.title}
                   </h4>
-                  <h3 className="text-2xl lg:text-5xl font-bold text-gray-900">
+                  <h3 className="text-4xl lg:text-5xl font-bold text-gray-900">
                     {stat.value || 0}{" "}
                   </h3>
                 </div>

@@ -17,7 +17,6 @@ const DashboardSidebar = () => {
       <div className="w-full h-full py-4 px-2 justify-between flex items-center flex-col gap-4">
         <div className="w-full h-[90%] flex flex-col gap-10">
           <div className="flex px-4 w-full flex-col gap-4 items-start justify-between py-1">
-            {/* <h4 className="text-sm text-[#000]">RockTrading</h4> */}
             <div className=" w-[100%] mx-auto relative flex gap-4 items-center justify-center">
               <Link
                 to={"/"}
@@ -55,8 +54,7 @@ const DashboardSidebar = () => {
              <NavLink
               // activeClassName="active"
               end
-              className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] text-sm
-                                 rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
+              className={`flex tab family1 py-3 hover:text-white text-[#969a9acb] text-sm rounded-full px-3 hover:bg-[#d1d5db83] w-full items-center gap-4`}
               to={`/dashboard/profile/${currentUser?.id}`}
             >
               <span className="text-lg md:text-xl rounded-full flex items-center justify-center">
@@ -66,11 +64,11 @@ const DashboardSidebar = () => {
               {<span className="">Settings</span>}
             </NavLink>
 
-            <div className="py-2 rounded-full w-full px-3 font-normal text-dark flex items-center cursor-pointer gap-4 hover:bg-[#d1d5db83]">
+            <div className="py-2 rounded-full w-full px-2 font-normal text-dark flex items-center cursor-pointer gap-4 hover:bg-[#d1d5db83]">
               <div className="w-10 h-10 rounded-full flex gap-4 items-center justify-center text-dark text-sm bg-[#A1718A]">
                 {currentUser?.name?.split("")[0]}
               </div>
-              <span className="text-base family2">
+              <span className="text-base font-semibold">
                 {currentUser?.name}
                 <span className="text-xs block font-normal text-[#969A9A]">
                   Admin

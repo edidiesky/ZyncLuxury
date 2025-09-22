@@ -38,7 +38,7 @@ const Profile = ({ type }) => {
               style={{
                 color: type === "home" ? "#fff" : "#000",
               }}
-              className="text-lg family2 font-semibold"
+              className="text-lg lg:flex hidden flex-col family2 font-semibold"
             >
               {currentUser?.name}
               <span className="block text-sm font-semibold text-gray-400">

@@ -14,6 +14,7 @@ const TitleOfPlace = lazy(() => import("./TitleOfPlace"));
 const Starting = lazy(() => import("./Starting"));
 // Starting
 
+
 export {
   AboutPlace,
   BasicInfoAboutPlace,

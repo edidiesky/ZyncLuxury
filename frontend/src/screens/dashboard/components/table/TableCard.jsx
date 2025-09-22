@@ -96,7 +96,7 @@ const TableCard = ({ tableData, type, handleModal }) => {
           <td className="p-3 border-b text-sm text-gray-500 font-semibold">
             {moment(tableData?.createdAt).format("DD MMM YYYY")}
           </td>
-          <td className="text-sm p-3 border-b font-semibold">
+          <td className="text-sm p-3 text-center border-b font-semibold">
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/profile/${tableData?.id}`}
@@ -132,12 +132,12 @@ const TableCard = ({ tableData, type, handleModal }) => {
           )}
         </AnimatePresence>
         <tr className="family1" key={tableData?.id}>
-          <td className="text-sm p-3 border-b font-semibold">
-            <div className="flex w-full justify-start items-center gap-3">
+          <td className="text-sm p-3 text-center border-b font-semibold">
+            <div className="flex w-full justify-center items-center gap-3">
               <img
                 src={tableData?.images[0]}
                 alt=""
-                className="w-16 rounded-2xl object-cover"
+                className="w-[100px] h-[80px] rounded-2xl object-cover"
               />
               {/* <span className="text-base family2 text-dark">
                 {tableData?.title}
@@ -147,20 +147,21 @@ const TableCard = ({ tableData, type, handleModal }) => {
               </span> */}
             </div>
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
-            {tableData?.id}
-          </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             ₦{tableData?.price}
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
+            {tableData?.listingType}
+          </td>
+
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             {tableData?.type}
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             {startDate}
           </td>
 
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             <div className="flex items-center justify-center">
               <Link
                 to={`/dashboard/rooms/${tableData?.id}`}
@@ -187,7 +188,7 @@ const TableCard = ({ tableData, type, handleModal }) => {
     return (
       <>
         <tr key={tableData?.id} className="px-4">
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             <div className="flex items-center font-normal gap-3">
               <img
                 src={tableData?.rooms?.images[0]}
@@ -237,20 +238,20 @@ const TableCard = ({ tableData, type, handleModal }) => {
               )}
             </div>
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             <span>
               {" "}
               {startDate} - {endDate}
             </span>
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             <span>₦{Number(tableData?.totalPrice).toLocaleString()}</span>
           </td>
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             {renderStatus(tableData?.status)}
           </td>
 
-          <td className="text-sm p-3 border-b family2 text-gray-500">
+          <td className="text-sm p-3 text-center border-b family2 text-gray-500">
             <div className="flex items-center justify-center">
               <div
                 onClick={handleModal}

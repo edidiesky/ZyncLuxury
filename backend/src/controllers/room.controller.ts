@@ -7,6 +7,7 @@ import {
   getSingleRoom,
   updateRoom,
   deleteRoom,
+  getSellerAggregatedRoom,
 } from "../services/room.service";
 import { IRoom, RoomType } from "../models/Rooms";
 import mongoose, { FilterQuery } from "mongoose";
@@ -100,13 +101,18 @@ const GetAllRoom = asyncHandler(
   }
 );
 
-// @description  Get all rooms and reservations (placeholder)
-// @route  GET /rooms/reservations
-// @access  Public
-const GetAllRoomAndReservations = asyncHandler(
+// @description  Get a seller's rooms
+// @route  GET /rooms/seller
+// @access  Private
+const GetSellerAggregatedRoom = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {
-    //
-    res.status(501).json({ message: "Not implemented" });
+    const { limit = 6, page = 1 } = req.query;
+    const { userId } = req.user as { userId: string };
+    const result = await getSellerAggregatedRoom({
+      queryObject: { sellerId: userId },
+    });
+    res.status(SUCCESSFULLY_FETCHED_STATUS_CODE).json(result);
+    return;
   }
 );
 
@@ -169,10 +175,10 @@ const DeleteRoom = asyncHandler(
 
 export {
   GetAllRoom,
-  GetAllRoomAndReservations,
   CreateRooms,
   GetSingleRoom,
   DeleteRoom,
   GetAllSellerRooms,
   UpdateRoom,
+  GetSellerAggregatedRoom
 };

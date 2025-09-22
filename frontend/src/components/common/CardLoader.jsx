@@ -281,7 +281,7 @@ const CardLoader = ({ type }) => {
 
 const SkeletonThemeCard = ({ children }) => {
   return (
-    <SkeletonTheme baseColor="#F3F3EE" highlightColor="#fff">
+    <SkeletonTheme baseColor="#E9EAF2" highlightColor="#fff">
       {children}
     </SkeletonTheme>
   );

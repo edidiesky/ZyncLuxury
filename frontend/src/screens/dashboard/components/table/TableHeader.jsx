@@ -13,7 +13,7 @@ export default function TableHeader({ tableHeaderData }) {
           return (
             <TableHead
               key={index}
-              className={`py-3 px-2 border-b pb-4 md:px-6 text-sm uppercase font-bold text-[#000] whitespace-nowrap overflow-hidden text-start`}
+              className={`py-3 px-2 border-b pb-4 md:px-6 text-sm uppercase font-bold text-[#000] whitespace-nowrap overflow-hidden text-center`}
             >
               {header}
             </TableHead>

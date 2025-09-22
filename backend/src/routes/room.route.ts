@@ -7,25 +7,32 @@ import {
   GetSingleRoom,
   DeleteRoom,
   GetAllSellerRooms,
-  GetAllRoomAndReservations,
   UpdateRoom,
+  GetSellerAggregatedRoom,
 } from "../controllers/room.controller";
 import { authenticate, authorization } from "../middleware/authentication";
+import { validateRequest } from "../middleware/validate.middleware";
+import { createRoomSchema } from "../validators/room.validator";
 
 router
-  .route("/")
-  .get(GetAllRoom)
-  .post(authenticate, authorization(["ADMIN", "SELLER"]), CreateRooms);
-router
-  .route("/admin")
-  .get(authenticate, authorization(["ADMIN", "SELLER"]), GetAllSellerRooms);
-router
-  .route("/room-reservation-history")
+  .route("/stats")
   .get(
     authenticate,
     authorization(["ADMIN", "SELLER"]),
-    GetAllRoomAndReservations
+    GetSellerAggregatedRoom
   );
+router
+  .route("/")
+  .get(GetAllRoom)
+  .post(
+    authenticate,
+    authorization(["ADMIN", "SELLER"]),
+    validateRequest(createRoomSchema),
+    CreateRooms
+  );
+router
+  .route("/admin")
+  .get(authenticate, authorization(["ADMIN", "SELLER"]), GetAllSellerRooms);
 router
   .route("/:id")
   .get(GetSingleRoom)
